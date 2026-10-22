@@ -1,0 +1,1824 @@
+[
+  {
+    "id": "basic_infected",
+    "folder": "BasicInfected",
+    "frame": 64,
+    "body": [
+      34,
+      28
+    ],
+    "identity": "The LEFT BASIC INFECTED in image 2. Warm medium skin, torn beige long shirt, muted red/bone checked neck scarf, olive water satchel behind LEFT shoulder, wrapped forearms, dark cropped hair, two small rust-red radiation burn marks. Medium rounded shoulder silhouette, slightly shambling, forward clawing arms. Keep each item on the same anatomical side.",
+    "action": "idle",
+    "count": 4,
+    "cols": 2,
+    "rows": 2,
+    "fps": 5,
+    "loop": true,
+    "version": 1,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for basic_infected idle, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The LEFT BASIC INFECTED in image 2. Warm medium skin, torn beige long shirt, muted red/bone checked neck scarf, olive water satchel behind LEFT shoulder, wrapped forearms, dark cropped hair, two small rust-red radiation burn marks. Medium rounded shoulder silhouette, slightly shambling, forward clawing arms. Keep each item on the same anatomical side.\nGenerate exactly 4 animation frames arranged 2 equal columns by 2 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x1024. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation idle: 1 neutral ready; 2 slight inhale shoulders widen; 3 small forward shoulder sway; 4 return toward neutral. Barely moving feet, subtle four-pose breathing loop. Keep scale and center fixed. \nABSOLUTE frame consistency: identical crown diameter 48 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 210 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 64x64 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_basic_infected_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_idle_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_idle_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_basic_infected_idle_v001.prompt.txt",
+    "exportScale": 0.08130081300813008,
+    "scaleBasis": {
+      "crownTargetPixels": 10,
+      "medianNativeCrownWidth": 123.0,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        363,
+        195,
+        482,
+        304
+      ],
+      [
+        319,
+        195,
+        442,
+        306
+      ],
+      [
+        381,
+        146,
+        507,
+        257
+      ],
+      [
+        313,
+        140,
+        436,
+        250
+      ]
+    ],
+    "crownTargets": [
+      [
+        35.0,
+        30.0
+      ],
+      [
+        35.0,
+        30.0
+      ],
+      [
+        35.0,
+        31.0
+      ],
+      [
+        35.0,
+        30.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        385.6,
+        274.1
+      ],
+      [
+        343.6,
+        275.1
+      ],
+      [
+        407.1,
+        213.8
+      ],
+      [
+        337.6,
+        219.6
+      ]
+    ]
+  },
+  {
+    "id": "basic_infected",
+    "folder": "BasicInfected",
+    "frame": 64,
+    "body": [
+      34,
+      28
+    ],
+    "identity": "The LEFT BASIC INFECTED in image 2. Warm medium skin, torn beige long shirt, muted red/bone checked neck scarf, olive water satchel behind LEFT shoulder, wrapped forearms, dark cropped hair, two small rust-red radiation burn marks. Medium rounded shoulder silhouette, slightly shambling, forward clawing arms. Keep each item on the same anatomical side.",
+    "action": "walk",
+    "count": 8,
+    "cols": 4,
+    "rows": 2,
+    "fps": 8,
+    "loop": true,
+    "version": 1,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for basic_infected walk, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The LEFT BASIC INFECTED in image 2. Warm medium skin, torn beige long shirt, muted red/bone checked neck scarf, olive water satchel behind LEFT shoulder, wrapped forearms, dark cropped hair, two small rust-red radiation burn marks. Medium rounded shoulder silhouette, slightly shambling, forward clawing arms. Keep each item on the same anatomical side.\nGenerate exactly 8 animation frames arranged 4 equal columns by 2 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x1024. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation walk: 1 left foot forward/right arm forward contact; 2 weight over left foot; 3 feet passing; 4 right leg swinging forward; 5 right foot forward/left arm forward contact; 6 weight over right foot; 7 feet passing; 8 left leg swinging toward next contact. Clear alternating limbs. Same body size and fixed pelvis position; no translation across each cell. A smooth looping gait. Uneven shambling WALK with clearly alternating feet and arms.\nABSOLUTE frame consistency: identical crown diameter 48 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 210 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 64x64 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_basic_infected_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_walk_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_walk_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_basic_infected_walk_v001.prompt.txt",
+    "exportScale": 0.10362694300518134,
+    "scaleBasis": {
+      "crownTargetPixels": 10,
+      "medianNativeCrownWidth": 96.5,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        188,
+        191,
+        285,
+        282
+      ],
+      [
+        193,
+        191,
+        290,
+        280
+      ],
+      [
+        190,
+        190,
+        288,
+        280
+      ],
+      [
+        183,
+        190,
+        278,
+        280
+      ],
+      [
+        191,
+        125,
+        287,
+        216
+      ],
+      [
+        194,
+        124,
+        290,
+        216
+      ],
+      [
+        190,
+        124,
+        285,
+        216
+      ],
+      [
+        174,
+        125,
+        275,
+        221
+      ]
+    ],
+    "crownTargets": [
+      [
+        35.0,
+        30.0
+      ],
+      [
+        35.0,
+        30.0
+      ],
+      [
+        35.0,
+        29.0
+      ],
+      [
+        35.0,
+        30.0
+      ],
+      [
+        35.0,
+        30.0
+      ],
+      [
+        35.0,
+        30.0
+      ],
+      [
+        35.0,
+        29.0
+      ],
+      [
+        35.0,
+        30.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        207.55,
+        255.8
+      ],
+      [
+        212.55,
+        254.8
+      ],
+      [
+        210.05,
+        263.95
+      ],
+      [
+        201.55,
+        254.3
+      ],
+      [
+        210.05,
+        189.8
+      ],
+      [
+        213.05,
+        189.3
+      ],
+      [
+        208.55,
+        198.95
+      ],
+      [
+        195.55,
+        192.3
+      ]
+    ]
+  },
+  {
+    "id": "basic_infected",
+    "folder": "BasicInfected",
+    "frame": 64,
+    "body": [
+      34,
+      28
+    ],
+    "identity": "The LEFT BASIC INFECTED in image 2. Warm medium skin, torn beige long shirt, muted red/bone checked neck scarf, olive water satchel behind LEFT shoulder, wrapped forearms, dark cropped hair, two small rust-red radiation burn marks. Medium rounded shoulder silhouette, slightly shambling, forward clawing arms. Keep each item on the same anatomical side.",
+    "action": "attack",
+    "count": 6,
+    "cols": 3,
+    "rows": 2,
+    "fps": 10,
+    "loop": false,
+    "version": 1,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for basic_infected attack, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The LEFT BASIC INFECTED in image 2. Warm medium skin, torn beige long shirt, muted red/bone checked neck scarf, olive water satchel behind LEFT shoulder, wrapped forearms, dark cropped hair, two small rust-red radiation burn marks. Medium rounded shoulder silhouette, slightly shambling, forward clawing arms. Keep each item on the same anatomical side.\nGenerate exactly 6 animation frames arranged 3 equal columns by 2 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x1024. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation attack: 1 ready; 2 shoulders recoil and right arm curls back to anticipate; 3 rotate shoulders slightly and right arm begins forward; 4 right arm fully strikes toward EAST at maximum reach; 5 arm withdraws; 6 back to ready. Left arm supports pose. No weapon, impact effect, target or projectile; no gameplay event. \nABSOLUTE frame consistency: identical crown diameter 48 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 210 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 64x64 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_basic_infected_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_attack_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_attack_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_basic_infected_attack_v001.prompt.txt",
+    "exportScale": 0.09900990099009901,
+    "scaleBasis": {
+      "crownTargetPixels": 10,
+      "medianNativeCrownWidth": 101.0,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        231,
+        190,
+        332,
+        282
+      ],
+      [
+        253,
+        191,
+        348,
+        283
+      ],
+      [
+        223,
+        192,
+        324,
+        287
+      ],
+      [
+        209,
+        172,
+        310,
+        264
+      ],
+      [
+        235,
+        177,
+        332,
+        268
+      ],
+      [
+        227,
+        186,
+        328,
+        278
+      ]
+    ],
+    "crownTargets": [
+      [
+        35.0,
+        30.0
+      ],
+      [
+        34.0,
+        30.0
+      ],
+      [
+        35.0,
+        30.0
+      ],
+      [
+        37.0,
+        30.0
+      ],
+      [
+        36.0,
+        30.0
+      ],
+      [
+        35.0,
+        30.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        251.2,
+        256.2
+      ],
+      [
+        280.3,
+        257.2
+      ],
+      [
+        243.2,
+        259.7
+      ],
+      [
+        209.0,
+        238.2
+      ],
+      [
+        243.1,
+        242.7
+      ],
+      [
+        247.2,
+        252.2
+      ]
+    ]
+  },
+  {
+    "id": "basic_infected",
+    "folder": "BasicInfected",
+    "frame": 64,
+    "body": [
+      34,
+      28
+    ],
+    "identity": "The LEFT BASIC INFECTED in image 2. Warm medium skin, torn beige long shirt, muted red/bone checked neck scarf, olive water satchel behind LEFT shoulder, wrapped forearms, dark cropped hair, two small rust-red radiation burn marks. Medium rounded shoulder silhouette, slightly shambling, forward clawing arms. Keep each item on the same anatomical side.",
+    "action": "hit",
+    "count": 2,
+    "cols": 2,
+    "rows": 1,
+    "fps": 10,
+    "loop": false,
+    "version": 1,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for basic_infected hit, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The LEFT BASIC INFECTED in image 2. Warm medium skin, torn beige long shirt, muted red/bone checked neck scarf, olive water satchel behind LEFT shoulder, wrapped forearms, dark cropped hair, two small rust-red radiation burn marks. Medium rounded shoulder silhouette, slightly shambling, forward clawing arms. Keep each item on the same anatomical side.\nGenerate exactly 2 animation frames arranged 2 equal columns by 1 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x768. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation hit: 1 head and shoulders recoil slightly west, arms flare from the received hit; 2 settle halfway back toward the normal ready pose. Keep both head and outfit identical, no flash overlay, no gore particle effect. \nABSOLUTE frame consistency: identical crown diameter 48 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 210 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 64x64 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_basic_infected_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_hit_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_hit_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_basic_infected_hit_v001.prompt.txt",
+    "exportScale": 0.05747126436781609,
+    "scaleBasis": {
+      "crownTargetPixels": 10,
+      "medianNativeCrownWidth": 174.0,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        415,
+        341,
+        589,
+        498
+      ],
+      [
+        372,
+        341,
+        546,
+        498
+      ]
+    ],
+    "crownTargets": [
+      [
+        33.0,
+        29.0
+      ],
+      [
+        34.0,
+        30.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        484.6,
+        471.7
+      ],
+      [
+        424.2,
+        454.3
+      ]
+    ]
+  },
+  {
+    "id": "basic_infected",
+    "folder": "BasicInfected",
+    "frame": 64,
+    "body": [
+      34,
+      28
+    ],
+    "identity": "The LEFT BASIC INFECTED in image 2. Warm medium skin, torn beige long shirt, muted red/bone checked neck scarf, olive water satchel behind LEFT shoulder, wrapped forearms, dark cropped hair, two small rust-red radiation burn marks. Medium rounded shoulder silhouette, slightly shambling, forward clawing arms. Keep each item on the same anatomical side.",
+    "action": "death",
+    "count": 8,
+    "cols": 4,
+    "rows": 2,
+    "fps": 9,
+    "loop": false,
+    "version": 1,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for basic_infected death, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The LEFT BASIC INFECTED in image 2. Warm medium skin, torn beige long shirt, muted red/bone checked neck scarf, olive water satchel behind LEFT shoulder, wrapped forearms, dark cropped hair, two small rust-red radiation burn marks. Medium rounded shoulder silhouette, slightly shambling, forward clawing arms. Keep each item on the same anatomical side.\nGenerate exactly 8 animation frames arranged 4 equal columns by 2 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x1024. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation death: 1 alive staggering ready; 2 shoulders sag and arms lose strength; 3 knees buckle; 4 torso begins tipping forward east; 5 body lands forward with arms out; 6 body drops fully prone with legs extending west; 7 limbs settle; 8 motionless prone corpse. Show clear transition from standing overhead to fallen horizontal body while camera stays directly above. Ground plane and body material scale fixed. Head same diameter every frame, clothing/gear retained. No melting, vanishing, skeleton, gore puddle or duplicate character. \nABSOLUTE frame consistency: identical crown diameter 48 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 210 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 64x64 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_basic_infected_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_death_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_death_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_basic_infected_death_v001.prompt.txt",
+    "exportScale": 0.12345679012345678,
+    "scaleBasis": {
+      "crownTargetPixels": 10,
+      "medianNativeCrownWidth": 81.0,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        166,
+        236,
+        250,
+        312
+      ],
+      [
+        185,
+        256,
+        267,
+        334
+      ],
+      [
+        183,
+        267,
+        262,
+        344
+      ],
+      [
+        177,
+        263,
+        257,
+        342
+      ],
+      [
+        221,
+        176,
+        301,
+        253
+      ],
+      [
+        226,
+        183,
+        305,
+        259
+      ],
+      [
+        211,
+        184,
+        290,
+        263
+      ],
+      [
+        208,
+        188,
+        286,
+        266
+      ]
+    ],
+    "crownTargets": [
+      [
+        35.0,
+        30.0
+      ],
+      [
+        35.0,
+        31.0
+      ],
+      [
+        36.0,
+        32.0
+      ],
+      [
+        37.0,
+        33.0
+      ],
+      [
+        40.0,
+        33.0
+      ],
+      [
+        42.0,
+        33.0
+      ],
+      [
+        43.0,
+        33.0
+      ],
+      [
+        43.0,
+        33.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        183.7,
+        290.2
+      ],
+      [
+        201.7,
+        303.1
+      ],
+      [
+        190.1,
+        305.5
+      ],
+      [
+        176.5,
+        294.4
+      ],
+      [
+        196.2,
+        206.4
+      ],
+      [
+        184.5,
+        212.9
+      ],
+      [
+        161.4,
+        215.4
+      ],
+      [
+        157.9,
+        218.9
+      ]
+    ]
+  },
+  {
+    "id": "runner",
+    "folder": "Runner",
+    "frame": 64,
+    "body": [
+      32,
+      22
+    ],
+    "identity": "The CENTER RUNNER in image 2. Lean dark brown former West African urban delivery worker, faded blue-gray short-sleeved work shirt, narrow ochre shoulder stripe textile, tiny rust-red travel sling at left rear, charcoal trousers, worn running shoes, close dark cropped hair. Narrow fast silhouette, agile forward posture, bare slim forearms; minimal baggage, no armor. Keep each item on the same anatomical side.",
+    "action": "idle",
+    "count": 4,
+    "cols": 2,
+    "rows": 2,
+    "fps": 5,
+    "loop": true,
+    "version": 1,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for runner idle, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The CENTER RUNNER in image 2. Lean dark brown former West African urban delivery worker, faded blue-gray short-sleeved work shirt, narrow ochre shoulder stripe textile, tiny rust-red travel sling at left rear, charcoal trousers, worn running shoes, close dark cropped hair. Narrow fast silhouette, agile forward posture, bare slim forearms; minimal baggage, no armor. Keep each item on the same anatomical side.\nGenerate exactly 4 animation frames arranged 2 equal columns by 2 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x1024. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation idle: 1 neutral ready; 2 slight inhale shoulders widen; 3 small forward shoulder sway; 4 return toward neutral. Barely moving feet, subtle four-pose breathing loop. Keep scale and center fixed. \nABSOLUTE frame consistency: identical crown diameter 48 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 210 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 64x64 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_runner_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_idle_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_idle_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_runner_idle_v001.prompt.txt",
+    "exportScale": 0.08695652173913043,
+    "scaleBasis": {
+      "crownTargetPixels": 9,
+      "medianNativeCrownWidth": 103.5,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        404,
+        197,
+        507,
+        295
+      ],
+      [
+        348,
+        198,
+        452,
+        296
+      ],
+      [
+        410,
+        153,
+        512,
+        251
+      ],
+      [
+        348,
+        153,
+        452,
+        253
+      ]
+    ],
+    "crownTargets": [
+      [
+        36.0,
+        30.0
+      ],
+      [
+        36.0,
+        30.0
+      ],
+      [
+        36.0,
+        31.0
+      ],
+      [
+        36.0,
+        30.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        409.5,
+        269.0
+      ],
+      [
+        354.0,
+        270.0
+      ],
+      [
+        415.0,
+        213.5
+      ],
+      [
+        354.0,
+        226.0
+      ]
+    ]
+  },
+  {
+    "id": "runner",
+    "folder": "Runner",
+    "frame": 64,
+    "body": [
+      32,
+      22
+    ],
+    "identity": "The CENTER RUNNER in image 2. Lean dark brown former West African urban delivery worker, faded blue-gray short-sleeved work shirt, narrow ochre shoulder stripe textile, tiny rust-red travel sling at left rear, charcoal trousers, worn running shoes, close dark cropped hair. Narrow fast silhouette, agile forward posture, bare slim forearms; minimal baggage, no armor. Keep each item on the same anatomical side.",
+    "action": "run",
+    "count": 8,
+    "cols": 4,
+    "rows": 2,
+    "fps": 12,
+    "loop": true,
+    "version": 2,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for runner run, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The CENTER RUNNER in image 2. Lean dark brown former West African urban delivery worker, faded blue-gray short-sleeved work shirt, narrow ochre shoulder stripe textile, tiny rust-red travel sling at left rear, charcoal trousers, worn running shoes, close dark cropped hair. Narrow fast silhouette, agile forward posture, bare slim forearms; minimal baggage, no armor. Keep each item on the same anatomical side.\nGenerate exactly 8 animation frames arranged 4 equal columns by 2 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x1024. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation run: 1 left foot forward/right arm forward contact; 2 weight over left foot; 3 feet passing; 4 right leg swinging forward; 5 right foot forward/left arm forward contact; 6 weight over right foot; 7 feet passing; 8 left leg swinging toward next contact. Clear alternating limbs. Same body size and fixed pelvis position; no translation across each cell. A smooth looping gait. Fast agile RUN, long alternating strides and strong arm drive.\nABSOLUTE frame consistency: identical crown diameter 48 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 210 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 64x64 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.\nCRITICAL CORRECTION TO FIRST ATTEMPT: All EIGHT poses must face RIGHT, including every bottom-row pose. Never mirror or reverse the character. Bottom row continues the SAME EASTWARD gait, not a westward directional variant. Bag stays on character's left rear, stripe stays on same shoulder. Draw clear alternating arm swing: left arm forward while right arm backward, then the opposite phase, keeping torso oriented east. Both feet should alternate ahead/behind from the overhead view. Every head is in the RIGHT half of its torso silhouette, every pair of feet behind toward the LEFT. No directional turnaround.\n",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_runner_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_run_e_sheet_v002.png",
+    "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_run_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_runner_run_v002.prompt.txt",
+    "exportScale": 0.1125,
+    "scaleBasis": {
+      "crownTargetPixels": 9,
+      "medianNativeCrownWidth": 80.0,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        190,
+        238,
+        271,
+        315
+      ],
+      [
+        232,
+        239,
+        312,
+        316
+      ],
+      [
+        199,
+        246,
+        280,
+        326
+      ],
+      [
+        204,
+        237,
+        284,
+        315
+      ],
+      [
+        219,
+        132,
+        299,
+        210
+      ],
+      [
+        221,
+        124,
+        301,
+        206
+      ],
+      [
+        196,
+        132,
+        267,
+        210
+      ],
+      [
+        198,
+        135,
+        279,
+        215
+      ]
+    ],
+    "crownTargets": [
+      [
+        36.0,
+        30.0
+      ],
+      [
+        36.0,
+        30.0
+      ],
+      [
+        36.0,
+        29.0
+      ],
+      [
+        36.0,
+        30.0
+      ],
+      [
+        36.0,
+        30.0
+      ],
+      [
+        36.0,
+        30.0
+      ],
+      [
+        36.0,
+        29.0
+      ],
+      [
+        36.0,
+        30.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        194.94444,
+        294.27778
+      ],
+      [
+        236.44444,
+        295.27778
+      ],
+      [
+        203.94444,
+        312.66667
+      ],
+      [
+        208.44444,
+        293.77778
+      ],
+      [
+        223.44444,
+        188.77778
+      ],
+      [
+        225.44444,
+        182.77778
+      ],
+      [
+        195.94444,
+        197.66667
+      ],
+      [
+        202.94444,
+        192.77778
+      ]
+    ]
+  },
+  {
+    "id": "runner",
+    "folder": "Runner",
+    "frame": 64,
+    "body": [
+      32,
+      22
+    ],
+    "identity": "The CENTER RUNNER in image 2. Lean dark brown former West African urban delivery worker, faded blue-gray short-sleeved work shirt, narrow ochre shoulder stripe textile, tiny rust-red travel sling at left rear, charcoal trousers, worn running shoes, close dark cropped hair. Narrow fast silhouette, agile forward posture, bare slim forearms; minimal baggage, no armor. Keep each item on the same anatomical side.",
+    "action": "attack",
+    "count": 6,
+    "cols": 3,
+    "rows": 2,
+    "fps": 10,
+    "loop": false,
+    "version": 1,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for runner attack, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The CENTER RUNNER in image 2. Lean dark brown former West African urban delivery worker, faded blue-gray short-sleeved work shirt, narrow ochre shoulder stripe textile, tiny rust-red travel sling at left rear, charcoal trousers, worn running shoes, close dark cropped hair. Narrow fast silhouette, agile forward posture, bare slim forearms; minimal baggage, no armor. Keep each item on the same anatomical side.\nGenerate exactly 6 animation frames arranged 3 equal columns by 2 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x1024. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation attack: 1 ready; 2 shoulders recoil and right arm curls back to anticipate; 3 rotate shoulders slightly and right arm begins forward; 4 right arm fully strikes toward EAST at maximum reach; 5 arm withdraws; 6 back to ready. Left arm supports pose. No weapon, impact effect, target or projectile; no gameplay event. \nABSOLUTE frame consistency: identical crown diameter 48 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 210 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 64x64 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_runner_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_attack_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_attack_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_runner_attack_v001.prompt.txt",
+    "sourceRects": [
+      [
+        0,
+        0,
+        512,
+        512
+      ],
+      [
+        512,
+        0,
+        1024,
+        512
+      ],
+      [
+        1024,
+        0,
+        1536,
+        512
+      ],
+      [
+        0,
+        512,
+        560,
+        1024
+      ],
+      [
+        560,
+        512,
+        1024,
+        1024
+      ],
+      [
+        1024,
+        512,
+        1536,
+        1024
+      ]
+    ],
+    "exportScale": 0.09137055837563451,
+    "scaleBasis": {
+      "crownTargetPixels": 9,
+      "medianNativeCrownWidth": 98.5,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        238,
+        206,
+        333,
+        309
+      ],
+      [
+        252,
+        211,
+        354,
+        308
+      ],
+      [
+        243,
+        211,
+        341,
+        309
+      ],
+      [
+        233,
+        174,
+        332,
+        270
+      ],
+      [
+        187,
+        164,
+        287,
+        266
+      ],
+      [
+        225,
+        164,
+        319,
+        267
+      ]
+    ],
+    "crownTargets": [
+      [
+        36.0,
+        30.0
+      ],
+      [
+        35.0,
+        30.0
+      ],
+      [
+        36.0,
+        30.0
+      ],
+      [
+        38.0,
+        30.0
+      ],
+      [
+        37.0,
+        30.0
+      ],
+      [
+        36.0,
+        30.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        241.72222,
+        279.38889
+      ],
+      [
+        270.16667,
+        281.38889
+      ],
+      [
+        248.22222,
+        281.88889
+      ],
+      [
+        216.83333,
+        243.88889
+      ],
+      [
+        182.27778,
+        236.88889
+      ],
+      [
+        228.22222,
+        237.38889
+      ]
+    ]
+  },
+  {
+    "id": "runner",
+    "folder": "Runner",
+    "frame": 64,
+    "body": [
+      32,
+      22
+    ],
+    "identity": "The CENTER RUNNER in image 2. Lean dark brown former West African urban delivery worker, faded blue-gray short-sleeved work shirt, narrow ochre shoulder stripe textile, tiny rust-red travel sling at left rear, charcoal trousers, worn running shoes, close dark cropped hair. Narrow fast silhouette, agile forward posture, bare slim forearms; minimal baggage, no armor. Keep each item on the same anatomical side.",
+    "action": "hit",
+    "count": 2,
+    "cols": 2,
+    "rows": 1,
+    "fps": 10,
+    "loop": false,
+    "version": 1,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for runner hit, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The CENTER RUNNER in image 2. Lean dark brown former West African urban delivery worker, faded blue-gray short-sleeved work shirt, narrow ochre shoulder stripe textile, tiny rust-red travel sling at left rear, charcoal trousers, worn running shoes, close dark cropped hair. Narrow fast silhouette, agile forward posture, bare slim forearms; minimal baggage, no armor. Keep each item on the same anatomical side.\nGenerate exactly 2 animation frames arranged 2 equal columns by 1 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x768. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation hit: 1 head and shoulders recoil slightly west, arms flare from the received hit; 2 settle halfway back toward the normal ready pose. Keep both head and outfit identical, no flash overlay, no gore particle effect. \nABSOLUTE frame consistency: identical crown diameter 48 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 210 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 64x64 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_runner_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_hit_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_hit_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_runner_hit_v001.prompt.txt",
+    "exportScale": 0.05625,
+    "scaleBasis": {
+      "crownTargetPixels": 9,
+      "medianNativeCrownWidth": 160.0,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        448,
+        362,
+        607,
+        512
+      ],
+      [
+        400,
+        354,
+        561,
+        517
+      ]
+    ],
+    "crownTargets": [
+      [
+        34.0,
+        29.0
+      ],
+      [
+        35.0,
+        30.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        491.94444,
+        490.33333
+      ],
+      [
+        427.16667,
+        471.05556
+      ]
+    ]
+  },
+  {
+    "id": "runner",
+    "folder": "Runner",
+    "frame": 64,
+    "body": [
+      32,
+      22
+    ],
+    "identity": "The CENTER RUNNER in image 2. Lean dark brown former West African urban delivery worker, faded blue-gray short-sleeved work shirt, narrow ochre shoulder stripe textile, tiny rust-red travel sling at left rear, charcoal trousers, worn running shoes, close dark cropped hair. Narrow fast silhouette, agile forward posture, bare slim forearms; minimal baggage, no armor. Keep each item on the same anatomical side.",
+    "action": "death",
+    "count": 8,
+    "cols": 4,
+    "rows": 2,
+    "fps": 9,
+    "loop": false,
+    "version": 1,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for runner death, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The CENTER RUNNER in image 2. Lean dark brown former West African urban delivery worker, faded blue-gray short-sleeved work shirt, narrow ochre shoulder stripe textile, tiny rust-red travel sling at left rear, charcoal trousers, worn running shoes, close dark cropped hair. Narrow fast silhouette, agile forward posture, bare slim forearms; minimal baggage, no armor. Keep each item on the same anatomical side.\nGenerate exactly 8 animation frames arranged 4 equal columns by 2 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x1024. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation death: 1 alive staggering ready; 2 shoulders sag and arms lose strength; 3 knees buckle; 4 torso begins tipping forward east; 5 body lands forward with arms out; 6 body drops fully prone with legs extending west; 7 limbs settle; 8 motionless prone corpse. Show clear transition from standing overhead to fallen horizontal body while camera stays directly above. Ground plane and body material scale fixed. Head same diameter every frame, clothing/gear retained. No melting, vanishing, skeleton, gore puddle or duplicate character. \nABSOLUTE frame consistency: identical crown diameter 48 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 210 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 64x64 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_runner_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_death_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_death_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_runner_death_v001.prompt.txt",
+    "exportScale": 0.13636363636363635,
+    "scaleBasis": {
+      "crownTargetPixels": 9,
+      "medianNativeCrownWidth": 66.0,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        194,
+        223,
+        261,
+        283
+      ],
+      [
+        175,
+        230,
+        240,
+        293
+      ],
+      [
+        173,
+        263,
+        236,
+        334
+      ],
+      [
+        179,
+        266,
+        246,
+        335
+      ],
+      [
+        194,
+        192,
+        264,
+        256
+      ],
+      [
+        240,
+        193,
+        302,
+        256
+      ],
+      [
+        237,
+        192,
+        300,
+        256
+      ],
+      [
+        240,
+        193,
+        307,
+        257
+      ]
+    ],
+    "crownTargets": [
+      [
+        36.0,
+        30.0
+      ],
+      [
+        36.0,
+        31.0
+      ],
+      [
+        37.0,
+        32.0
+      ],
+      [
+        38.0,
+        33.0
+      ],
+      [
+        41.0,
+        33.0
+      ],
+      [
+        43.0,
+        33.0
+      ],
+      [
+        44.0,
+        33.0
+      ],
+      [
+        44.0,
+        33.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        198.16667,
+        267.66667
+      ],
+      [
+        178.16667,
+        268.83333
+      ],
+      [
+        167.83333,
+        298.5
+      ],
+      [
+        168.5,
+        293.16667
+      ],
+      [
+        163.0,
+        216.66667
+      ],
+      [
+        190.33333,
+        217.16667
+      ],
+      [
+        180.5,
+        216.66667
+      ],
+      [
+        185.5,
+        217.66667
+      ]
+    ]
+  },
+  {
+    "id": "brute",
+    "folder": "Brute",
+    "frame": 96,
+    "body": [
+      54,
+      46
+    ],
+    "identity": "The RIGHT BRUTE in image 2. Broad medium-brown former North African industrial worker, torn sand-colored hooded outer garment with hood DOWN, exposed crown with cropped hair, olive salvaged LEFT shoulder plate, rope straps, small canister behind left shoulder, charcoal work trousers. Heavy shoulders and enlarged RIGHT forearm with dirty wraps and small rust-red burns. Grounded deformed human anatomy without fantasy spikes. Keep each item on same anatomical side.",
+    "action": "idle",
+    "count": 4,
+    "cols": 2,
+    "rows": 2,
+    "fps": 5,
+    "loop": true,
+    "version": 1,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for brute idle, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The RIGHT BRUTE in image 2. Broad medium-brown former North African industrial worker, torn sand-colored hooded outer garment with hood DOWN, exposed crown with cropped hair, olive salvaged LEFT shoulder plate, rope straps, small canister behind left shoulder, charcoal work trousers. Heavy shoulders and enlarged RIGHT forearm with dirty wraps and small rust-red burns. Grounded deformed human anatomy without fantasy spikes. Keep each item on same anatomical side.\nGenerate exactly 4 animation frames arranged 2 equal columns by 2 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x1024. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation idle: 1 neutral ready; 2 slight inhale shoulders widen; 3 small forward shoulder sway; 4 return toward neutral. Barely moving feet, subtle four-pose breathing loop. Keep scale and center fixed. \nABSOLUTE frame consistency: identical crown diameter 55 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 230 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 96x96 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_brute_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_idle_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_idle_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_brute_idle_v001.prompt.txt",
+    "exportScale": 0.13023255813953488,
+    "scaleBasis": {
+      "crownTargetPixels": 14,
+      "medianNativeCrownWidth": 107.5,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        421,
+        182,
+        524,
+        284
+      ],
+      [
+        377,
+        175,
+        482,
+        280
+      ],
+      [
+        429,
+        172,
+        539,
+        282
+      ],
+      [
+        361,
+        156,
+        473,
+        276
+      ]
+    ],
+    "crownTargets": [
+      [
+        55.0,
+        44.0
+      ],
+      [
+        55.0,
+        44.0
+      ],
+      [
+        55.0,
+        45.0
+      ],
+      [
+        55.0,
+        44.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        418.75,
+        263.71429
+      ],
+      [
+        375.75,
+        258.21429
+      ],
+      [
+        430.25,
+        250.03571
+      ],
+      [
+        363.25,
+        246.71429
+      ]
+    ]
+  },
+  {
+    "id": "brute",
+    "folder": "Brute",
+    "frame": 96,
+    "body": [
+      54,
+      46
+    ],
+    "identity": "The RIGHT BRUTE in image 2. Broad medium-brown former North African industrial worker, torn sand-colored hooded outer garment with hood DOWN, exposed crown with cropped hair, olive salvaged LEFT shoulder plate, rope straps, small canister behind left shoulder, charcoal work trousers. Heavy shoulders and enlarged RIGHT forearm with dirty wraps and small rust-red burns. Grounded deformed human anatomy without fantasy spikes. Keep each item on same anatomical side.",
+    "action": "walk",
+    "count": 8,
+    "cols": 4,
+    "rows": 2,
+    "fps": 6,
+    "loop": true,
+    "version": 1,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for brute walk, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The RIGHT BRUTE in image 2. Broad medium-brown former North African industrial worker, torn sand-colored hooded outer garment with hood DOWN, exposed crown with cropped hair, olive salvaged LEFT shoulder plate, rope straps, small canister behind left shoulder, charcoal work trousers. Heavy shoulders and enlarged RIGHT forearm with dirty wraps and small rust-red burns. Grounded deformed human anatomy without fantasy spikes. Keep each item on same anatomical side.\nGenerate exactly 8 animation frames arranged 4 equal columns by 2 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x1024. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation walk: 1 left foot forward/right arm forward contact; 2 weight over left foot; 3 feet passing; 4 right leg swinging forward; 5 right foot forward/left arm forward contact; 6 weight over right foot; 7 feet passing; 8 left leg swinging toward next contact. Clear alternating limbs. Same body size and fixed pelvis position; no translation across each cell. A smooth looping gait. Slow heavy WALK, weight shifting visibly through broad shoulders.\nABSOLUTE frame consistency: identical crown diameter 55 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 230 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 96x96 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_brute_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_walk_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_walk_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_brute_walk_v001.prompt.txt",
+    "exportScale": 0.19047619047619047,
+    "scaleBasis": {
+      "crownTargetPixels": 14,
+      "medianNativeCrownWidth": 73.5,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        211,
+        212,
+        284,
+        289
+      ],
+      [
+        220,
+        209,
+        291,
+        285
+      ],
+      [
+        207,
+        218,
+        282,
+        289
+      ],
+      [
+        200,
+        214,
+        274,
+        289
+      ],
+      [
+        211,
+        165,
+        285,
+        244
+      ],
+      [
+        219,
+        167,
+        292,
+        239
+      ],
+      [
+        205,
+        166,
+        271,
+        244
+      ],
+      [
+        197,
+        165,
+        274,
+        244
+      ]
+    ],
+    "crownTargets": [
+      [
+        55.0,
+        44.0
+      ],
+      [
+        55.0,
+        44.0
+      ],
+      [
+        55.0,
+        43.0
+      ],
+      [
+        55.0,
+        44.0
+      ],
+      [
+        55.0,
+        44.0
+      ],
+      [
+        55.0,
+        44.0
+      ],
+      [
+        55.0,
+        43.0
+      ],
+      [
+        55.0,
+        44.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        210.75,
+        271.5
+      ],
+      [
+        218.75,
+        268.0
+      ],
+      [
+        207.75,
+        279.75
+      ],
+      [
+        200.25,
+        272.5
+      ],
+      [
+        211.25,
+        225.5
+      ],
+      [
+        218.75,
+        224.0
+      ],
+      [
+        201.25,
+        231.25
+      ],
+      [
+        198.75,
+        225.5
+      ]
+    ]
+  },
+  {
+    "id": "brute",
+    "folder": "Brute",
+    "frame": 96,
+    "body": [
+      54,
+      46
+    ],
+    "identity": "The RIGHT BRUTE in image 2. Broad medium-brown former North African industrial worker, torn sand-colored hooded outer garment with hood DOWN, exposed crown with cropped hair, olive salvaged LEFT shoulder plate, rope straps, small canister behind left shoulder, charcoal work trousers. Heavy shoulders and enlarged RIGHT forearm with dirty wraps and small rust-red burns. Grounded deformed human anatomy without fantasy spikes. Keep each item on same anatomical side.",
+    "action": "attack",
+    "count": 6,
+    "cols": 3,
+    "rows": 2,
+    "fps": 10,
+    "loop": false,
+    "version": 1,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for brute attack, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The RIGHT BRUTE in image 2. Broad medium-brown former North African industrial worker, torn sand-colored hooded outer garment with hood DOWN, exposed crown with cropped hair, olive salvaged LEFT shoulder plate, rope straps, small canister behind left shoulder, charcoal work trousers. Heavy shoulders and enlarged RIGHT forearm with dirty wraps and small rust-red burns. Grounded deformed human anatomy without fantasy spikes. Keep each item on same anatomical side.\nGenerate exactly 6 animation frames arranged 3 equal columns by 2 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x1024. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation attack: 1 ready; 2 shoulders recoil and right arm curls back to anticipate; 3 rotate shoulders slightly and right arm begins forward; 4 right arm fully strikes toward EAST at maximum reach; 5 arm withdraws; 6 back to ready. Left arm supports pose. No weapon, impact effect, target or projectile; no gameplay event. \nABSOLUTE frame consistency: identical crown diameter 55 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 230 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 96x96 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_brute_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_attack_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_attack_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_brute_attack_v001.prompt.txt",
+    "sourceRects": [
+      [
+        0,
+        0,
+        512,
+        512
+      ],
+      [
+        512,
+        0,
+        1024,
+        512
+      ],
+      [
+        1024,
+        0,
+        1536,
+        512
+      ],
+      [
+        0,
+        512,
+        565,
+        1024
+      ],
+      [
+        565,
+        512,
+        1024,
+        1024
+      ],
+      [
+        1024,
+        512,
+        1536,
+        1024
+      ]
+    ],
+    "exportScale": 0.16,
+    "scaleBasis": {
+      "crownTargetPixels": 14,
+      "medianNativeCrownWidth": 87.5,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        267,
+        191,
+        356,
+        285
+      ],
+      [
+        246,
+        199,
+        334,
+        285
+      ],
+      [
+        250,
+        194,
+        335,
+        284
+      ],
+      [
+        245,
+        139,
+        333,
+        222
+      ],
+      [
+        216,
+        145,
+        300,
+        235
+      ],
+      [
+        244,
+        154,
+        331,
+        239
+      ]
+    ],
+    "crownTargets": [
+      [
+        55.0,
+        44.0
+      ],
+      [
+        54.0,
+        44.0
+      ],
+      [
+        55.0,
+        44.0
+      ],
+      [
+        52.0,
+        44.0
+      ],
+      [
+        56.0,
+        44.0
+      ],
+      [
+        55.0,
+        44.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        267.75,
+        263.0
+      ],
+      [
+        252.5,
+        267.0
+      ],
+      [
+        248.75,
+        264.0
+      ],
+      [
+        264.0,
+        205.5
+      ],
+      [
+        208.0,
+        215.0
+      ],
+      [
+        243.75,
+        221.5
+      ]
+    ]
+  },
+  {
+    "id": "brute",
+    "folder": "Brute",
+    "frame": 96,
+    "body": [
+      54,
+      46
+    ],
+    "identity": "The RIGHT BRUTE in image 2. Broad medium-brown former North African industrial worker, torn sand-colored hooded outer garment with hood DOWN, exposed crown with cropped hair, olive salvaged LEFT shoulder plate, rope straps, small canister behind left shoulder, charcoal work trousers. Heavy shoulders and enlarged RIGHT forearm with dirty wraps and small rust-red burns. Grounded deformed human anatomy without fantasy spikes. Keep each item on same anatomical side.",
+    "action": "hit",
+    "count": 2,
+    "cols": 2,
+    "rows": 1,
+    "fps": 10,
+    "loop": false,
+    "version": 1,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for brute hit, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The RIGHT BRUTE in image 2. Broad medium-brown former North African industrial worker, torn sand-colored hooded outer garment with hood DOWN, exposed crown with cropped hair, olive salvaged LEFT shoulder plate, rope straps, small canister behind left shoulder, charcoal work trousers. Heavy shoulders and enlarged RIGHT forearm with dirty wraps and small rust-red burns. Grounded deformed human anatomy without fantasy spikes. Keep each item on same anatomical side.\nGenerate exactly 2 animation frames arranged 2 equal columns by 1 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x768. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation hit: 1 head and shoulders recoil slightly west, arms flare from the received hit; 2 settle halfway back toward the normal ready pose. Keep both head and outfit identical, no flash overlay, no gore particle effect. \nABSOLUTE frame consistency: identical crown diameter 55 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 230 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 96x96 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_brute_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_hit_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_hit_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_brute_hit_v001.prompt.txt",
+    "exportScale": 0.1,
+    "scaleBasis": {
+      "crownTargetPixels": 14,
+      "medianNativeCrownWidth": 140.0,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        461,
+        320,
+        602,
+        458
+      ],
+      [
+        450,
+        358,
+        589,
+        495
+      ]
+    ],
+    "crownTargets": [
+      [
+        53.0,
+        43.0
+      ],
+      [
+        54.0,
+        44.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        481.5,
+        439.0
+      ],
+      [
+        459.5,
+        466.5
+      ]
+    ]
+  },
+  {
+    "id": "brute",
+    "folder": "Brute",
+    "frame": 96,
+    "body": [
+      54,
+      46
+    ],
+    "identity": "The RIGHT BRUTE in image 2. Broad medium-brown former North African industrial worker, torn sand-colored hooded outer garment with hood DOWN, exposed crown with cropped hair, olive salvaged LEFT shoulder plate, rope straps, small canister behind left shoulder, charcoal work trousers. Heavy shoulders and enlarged RIGHT forearm with dirty wraps and small rust-red burns. Grounded deformed human anatomy without fantasy spikes. Keep each item on same anatomical side.",
+    "action": "death",
+    "count": 8,
+    "cols": 4,
+    "rows": 2,
+    "fps": 9,
+    "loop": false,
+    "version": 1,
+    "prompt": "Use case: stylized-concept. Asset: ONE production source sprite sheet for brute death, Border Defenders. Input1 is approved Danube STYLE anchor. Input2 is selected shared LINEUP. Input3 is the EXACT INDIVIDUAL CHARACTER DESIGN. Preserve character clothes, skin, hair, silhouette, proportions and gear sides. The RIGHT BRUTE in image 2. Broad medium-brown former North African industrial worker, torn sand-colored hooded outer garment with hood DOWN, exposed crown with cropped hair, olive salvaged LEFT shoulder plate, rope straps, small canister behind left shoulder, charcoal work trousers. Heavy shoulders and enlarged RIGHT forearm with dirty wraps and small rust-red burns. Grounded deformed human anatomy without fantasy spikes. Keep each item on same anatomical side.\nGenerate exactly 8 animation frames arranged 4 equal columns by 2 equal rows, row-major left-to-right then top-to-bottom. Canvas 1536x1024. Each cell contains ONE full character. Invisible uniform grid: NO drawn grid, borders, numbers, labels or swatches. Source backing MUST be one perfectly flat saturated magenta #FF00FF across every empty pixel, including between arms and torso. Do NOT paint a checkerboard or transparency simulation. This is a keyed SOURCE; exports will replace backing with true alpha. No magenta on the character, no drop shadows or colored glow.\nSTRICT PERPENDICULAR VERTICAL OVERHEAD camera. Every living pose faces EAST/screen RIGHT, crowns and shoulder tops dominate. No front-facing faces, no side view, no 3/4 view. Match the reference look, but draw crisp deliberate coarse pixel clusters, simple material shades, no blur/antialiasing. Ambient overhead lighting and consistent dark outlines. Human anatomy, grounded infection burns; no fantasy/comic additions.\nAnimation death: 1 alive staggering ready; 2 shoulders sag and arms lose strength; 3 knees buckle; 4 torso begins tipping forward east; 5 body lands forward with arms out; 6 body drops fully prone with legs extending west; 7 limbs settle; 8 motionless prone corpse. Show clear transition from standing overhead to fallen horizontal body while camera stays directly above. Ground plane and body material scale fixed. Head same diameter every frame, clothing/gear retained. No melting, vanishing, skeleton, gore puddle or duplicate character. \nABSOLUTE frame consistency: identical crown diameter 55 native pixels and shoulder width across every frame, fixed anatomical pelvis/torso pivot centered at the exact center of each equal cell. Standing full silhouette width about 230 native pixels. Death can extend in X through pose change but never scale the body. Keep at least 35 native pixels between artwork and cell edges. Movement/attack limb changes must be visible. No per-frame character redesign, no extra accessories, no duplicated limbs. At least 96x96 logical frame readability. Maintain dull bone, olive, charcoal, blue-gray and restrained rust-red palette.",
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_enemy_brute_v001.png"
+    ],
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_death_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_death_e_sheet_v001.png",
+    "promptPath": "Docs/Art/Batches/bd_enemy_brute_death_v001.prompt.txt",
+    "exportScale": 0.21374045801526717,
+    "scaleBasis": {
+      "crownTargetPixels": 14,
+      "medianNativeCrownWidth": 65.5,
+      "method": "one scale per action; no per-frame resizing"
+    },
+    "measuredCrownRects": [
+      [
+        207,
+        184,
+        273,
+        251
+      ],
+      [
+        204,
+        198,
+        269,
+        265
+      ],
+      [
+        218,
+        219,
+        284,
+        286
+      ],
+      [
+        203,
+        218,
+        268,
+        286
+      ],
+      [
+        236,
+        182,
+        300,
+        249
+      ],
+      [
+        252,
+        184,
+        318,
+        250
+      ],
+      [
+        242,
+        185,
+        307,
+        251
+      ],
+      [
+        251,
+        188,
+        315,
+        255
+      ]
+    ],
+    "crownTargets": [
+      [
+        55.0,
+        44.0
+      ],
+      [
+        55.0,
+        45.0
+      ],
+      [
+        57.0,
+        46.0
+      ],
+      [
+        59.0,
+        47.0
+      ],
+      [
+        61.0,
+        47.0
+      ],
+      [
+        64.0,
+        47.0
+      ],
+      [
+        65.0,
+        47.0
+      ],
+      [
+        65.0,
+        47.0
+      ]
+    ],
+    "sourcePivots": [
+      [
+        207.25,
+        236.21429
+      ],
+      [
+        203.75,
+        245.53571
+      ],
+      [
+        208.89286,
+        261.85714
+      ],
+      [
+        184.03571,
+        256.67857
+      ],
+      [
+        207.17857,
+        220.17857
+      ],
+      [
+        210.14286,
+        221.67857
+      ],
+      [
+        194.96429,
+        222.67857
+      ],
+      [
+        203.46429,
+        226.17857
+      ]
+    ]
+  }
+]

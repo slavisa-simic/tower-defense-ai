@@ -1,0 +1,19 @@
+# Phase 4A money batch p4a_money_001
+Scope: banknote icon (32 logical pixels), bundle icon (32), money panel (160x64). Real alpha; Point/uncompressed imports, UI 100 PPU; panel 16px nine-slice. Approved direction master v002 plus ref_gameplay_integrated_01. User explicitly authorized autonomous generation, consistency iteration, replacement of coin presentation and integration. This is selection authorization, not retrospective approval of an unseen candidate. Raw sources retained byte-identical; final paths recorded after visual inspection. Border redesign reuses existing overhead props.
+
+## Generation, selection and imports
+The user explicitly requested direct image generation and autonomous consistency review/integration in Phase 4A. Built-in image_gen was used, with local approved master v002 and the actual integrated gameplay capture inspected beforehand. Agent selected the three displayed candidates under that authorization; no separate retrospective human approval is asserted. Exact prompts: p4a_money.prompt.txt, p4a_bundle.prompt.txt, p4a_panel.prompt.txt. Tool does not expose seed/model identity. Raw and export dimensions/hashes: p4a_money_dimensions.json; original hashes p4a_money_source_hashes.json.
+
+| Raw source | Native size | Runtime export | Size / use |
+|---|---|---|---|
+| SourceSheets/p4a_money_001/bd_src_money_rsd_v001.png | 1263x1246 | UI/ui_icon_money_rsd.png | 32x32; money HUD |
+| SourceSheets/p4a_money_001/bd_src_money_bundle_rsd_v001.png | 1254x1254 | UI/ui_icon_money_bundle_rsd.png | 32x32; retained inventory |
+| SourceSheets/p4a_money_001/bd_src_money_panel_rsd_v001.png | 1983x793 | UI/ui_money_panel_rsd.png | 160x64; money HUD backing |
+
+All paths above are below Assets/Game/Art. Raw copies remain byte-identical. Exact game-ready pixel export authorization is recorded in ART_BIBLE.md; current request requires small pixel HUD exports. Author.cs samples nearest neighbor within alpha bounds; keeps 2px margins, preserves icon aspect, fits panel to canvas, alpha >=240 becomes 255, lower alpha becomes 0, channels floor to multiples of 8, no interpolation/dither. Runtime PNGs have real binary alpha, centered Sprite Single at UI 100 PPU, Point/uncompressed, no mipmaps, Clamp, NPOT None, max4096. Panel uses existing 16px UI Toolkit slice borders; actual 1080 HUD reviewed. Center remains quiet with no baked text; live icon appears at 24px. All sprites are fictional beige/olive paper notes with rust security accents. No existing real denomination/design was reproduced.
+
+Replacement reason: user explicitly rejected coin/circular money language. Old bd_ui_money_icon_v001.png and metadata were moved through AssetDatabase to UI/Archive; GUID preserved, retained historical rollback with no primary UI/runtime consumer. New filenames follow the user's requested ui_*_rsd names. Money, build and reward values remain live UI Toolkit text and existing EconomyManager transactions. New border dressing reuses accepted overhead assets rather than generating unrelated content.
+
+A first stylesheet import occurred before generated export PNGs existed and cached invalid-path warning art; explicit targeted USS/UXML reimport after export corrected it. Sniper currency suffix clipping was fixed by a 10px build-label font and wider build strip. Final captures supersede early cached-warning screenshots. Compilation/test, final Console, natural walkthrough and performance evidence are referenced in PHASE_4A_REPORT.md and Docs/Validation/Phase4A. No claim of native generator-perfect 32px dimensions or human-only playtest.
+
+Final validation: 71/71 EditMode and 39/39 PlayMode tests passed; the final HUD re-enable regression passed 1/1 after the small presentation correction. Final Console had zero errors/warnings. Seven natural-update gameplay waves and 1920x1080 screenshots were reviewed; the saved scene is clean. Full evidence and limits are recorded in PHASE_4A_REPORT.md.

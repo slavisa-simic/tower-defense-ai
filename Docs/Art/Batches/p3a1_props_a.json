@@ -1,0 +1,114 @@
+[
+  {
+    "subject": "rubber_boat",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_rubber_boat_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_rubber_boat_v001.png",
+    "size": [
+      192,
+      96
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One intact military rubber inflatable river boat, strict overhead plan view, bow pointing RIGHT. Dark charcoal inflated side tubes, muted olive interior, two simple transverse seats, compact outboard at LEFT stern. No occupants, water, wake, shadow, ground or loose separate objects. Long horizontal silhouette, about twice as wide as tall, 192x96 logical canvas.\nOutput one isolated sprite on a genuinely transparent PNG alpha background, no checkerboard, matte, terrain base or cast shadow. Center the entire silhouette with 5% transparent margin. Match approved master materials but strictly remove all perspective side faces. Crisp deliberate pixel clusters, a single dark pixel outline at logical scale. Native image may be larger but do not add micro-detail; sprite must remain recognizable at its stated logical size.",
+    "matte": "bright_neutral"
+  },
+  {
+    "subject": "destroyed_rubber_boat",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_destroyed_rubber_boat_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_destroyed_rubber_boat_v001.png",
+    "size": [
+      192,
+      96
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One destroyed rubber inflatable of the same charcoal/olive military language and horizontal scale, bow RIGHT, stern LEFT. Deflated torn side tube, folded rubber, broken seat and breached interior, with recognizable boat outline. No flames, blood, water, ground, wake or detached unrelated debris. Flat overhead plan, 192x96 logical canvas.\nOutput one isolated sprite on a genuinely transparent PNG alpha background, no checkerboard, matte, terrain base or cast shadow. Center the entire silhouette with 5% transparent margin. Match approved master materials but strictly remove all perspective side faces. Crisp deliberate pixel clusters, a single dark pixel outline at logical scale. Native image may be larger but do not add micro-detail; sprite must remain recognizable at its stated logical size.",
+    "matte": "bright_neutral"
+  },
+  {
+    "subject": "sandbag_segment",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_sandbag_segment_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_sandbag_segment_v001.png",
+    "size": [
+      64,
+      32
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One short horizontal wall segment of 4 weathered sandbags in two staggered rows, seen from directly overhead, tan-olive fabric, broad rectangular stuffed tops and dark seams. No side facade or ground shadow. Ends connect to adjacent segments, 64x32 logical canvas.\nOutput one isolated sprite on a genuinely transparent PNG alpha background, no checkerboard, matte, terrain base or cast shadow. Center the entire silhouette with 5% transparent margin. Match approved master materials but strictly remove all perspective side faces. Crisp deliberate pixel clusters, a single dark pixel outline at logical scale. Native image may be larger but do not add micro-detail; sprite must remain recognizable at its stated logical size.",
+    "matte": "bright_neutral"
+  },
+  {
+    "subject": "wooden_crate",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_wooden_crate_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_wooden_crate_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One square wooden military supply crate seen exactly vertically down: only square lid with diagonal wooden reinforcing brace and dull metal corner straps. Desaturated brown wood. No side faces, writing, ground, shadow or perspective. 64x64 logical canvas.\nOutput one isolated sprite on a genuinely transparent PNG alpha background, no checkerboard, matte, terrain base or cast shadow. Center the entire silhouette with 5% transparent margin. Match approved master materials but strictly remove all perspective side faces. Crisp deliberate pixel clusters, a single dark pixel outline at logical scale. Native image may be larger but do not add micro-detail; sprite must remain recognizable at its stated logical size.",
+    "matte": "bright_neutral"
+  },
+  {
+    "subject": "metal_crate",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_metal_crate_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_metal_crate_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One square military metal supply crate viewed straight down: olive steel lid, sturdy rim, simple latch hints on edges, a few restrained worn highlights. Only lid/top surface, no visible front or side. No text, ground, shadow. 64x64 logical canvas.\nOutput one isolated sprite on a genuinely transparent PNG alpha background, no checkerboard, matte, terrain base or cast shadow. Center the entire silhouette with 5% transparent margin. Match approved master materials but strictly remove all perspective side faces. Crisp deliberate pixel clusters, a single dark pixel outline at logical scale. Native image may be larger but do not add micro-detail; sprite must remain recognizable at its stated logical size.",
+    "matte": "bright_neutral"
+  },
+  {
+    "subject": "oil_barrel",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_oil_barrel_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_oil_barrel_v001.png",
+    "size": [
+      32,
+      32
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One upright oil barrel seen exactly vertically from above: a CIRCLE only, rust-brown circular lid with thin dark circular rim and two small bung caps on that top. No cylindrical side, no ellipse, no perspective, no drop shadow, no writing. Centered circular footprint, 32x32 logical canvas.\nOutput one isolated sprite on a genuinely transparent PNG alpha background, no checkerboard, matte, terrain base or cast shadow. Center the entire silhouette with 5% transparent margin. Match approved master materials but strictly remove all perspective side faces. Crisp deliberate pixel clusters, a single dark pixel outline at logical scale. Native image may be larger but do not add micro-detail; sprite must remain recognizable at its stated logical size.",
+    "matte": "bright_neutral"
+  },
+  {
+    "subject": "military_barrel",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_military_barrel_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_military_barrel_v001.png",
+    "size": [
+      32,
+      32
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One upright military drum viewed exactly vertically down: a CIRCLE only, muted olive circular lid and ring rim, one small filler cap, restrained scratches. No side height, no ellipse, no perspective, no cast shadow, no writing. 32x32 logical canvas.\nOutput one isolated sprite on a genuinely transparent PNG alpha background, no checkerboard, matte, terrain base or cast shadow. Center the entire silhouette with 5% transparent margin. Match approved master materials but strictly remove all perspective side faces. Crisp deliberate pixel clusters, a single dark pixel outline at logical scale. Native image may be larger but do not add micro-detail; sprite must remain recognizable at its stated logical size.",
+    "matte": "bright_neutral"
+  },
+  {
+    "subject": "spotlight",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_spotlight_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One compact military searchlight on a small mounting pad, seen exactly from vertically overhead: narrow rectangular olive lamp housing with glass nose pointing RIGHT, small swiveling support footprint. Only upper surfaces. No emitted beam, glow, light cone, people or ground. 64x64 logical canvas.\nOutput one isolated sprite on a genuinely transparent PNG alpha background, no checkerboard, matte, terrain base or cast shadow. Center the entire silhouette with 5% transparent margin. Match approved master materials but strictly remove all perspective side faces. Crisp deliberate pixel clusters, a single dark pixel outline at logical scale. Native image may be larger but do not add micro-detail; sprite must remain recognizable at its stated logical size.",
+    "matte": "bright_neutral"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "subject": "rubber_boat",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-65d08827-a865-4c1f-b576-6d4a0327fc74.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_rubber_boat_v001.png"
+  },
+  {
+    "subject": "destroyed_rubber_boat",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-c9a1257b-6d5b-4608-a50b-4b293bf5b10c.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_destroyed_rubber_boat_v001.png"
+  },
+  {
+    "subject": "sandbag_segment",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-ec3bbe49-e935-4331-9a3a-c8fcab3081ea.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_sandbag_segment_v001.png"
+  },
+  {
+    "subject": "wooden_crate",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-83297854-e825-431f-ae21-6483d32d9ca3.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_wooden_crate_v001.png"
+  },
+  {
+    "subject": "metal_crate",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-4510dde1-2de5-4996-b047-8d7cc06da5c7.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_metal_crate_v001.png"
+  },
+  {
+    "subject": "oil_barrel",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-04b69b32-68f3-4f4d-bc71-98b5e7c41544.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_oil_barrel_v001.png"
+  },
+  {
+    "subject": "military_barrel",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-6801ac34-327d-4917-9d4a-52cbc2a7e5c5.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_military_barrel_v001.png"
+  },
+  {
+    "subject": "spotlight",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-c097700a-4134-42aa-9299-58d628527180.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v001.png"
+  }
+]

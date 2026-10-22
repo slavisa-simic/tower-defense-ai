@@ -1,0 +1,623 @@
+[
+  {
+    "path": "Assets/Game/Art/Defenses/AutoCannon/defense_autocannon_base_idle.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "710d9327e693378a785b7865b4f6d3cf9055be60e5de71fcb21a9bf884252b94"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/AutoCannon/defense_autocannon_damaged.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "a046dcb2709915a65592ffb40b8a4817f22649be56f86b2c0b4b9704327f8eb8"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/AutoCannon/defense_autocannon_destroyed.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "234c166a7962b33f8e0652a1b3c07aa00f8923b07434ec43370aab83bb81306b"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/AutoCannon/defense_autocannon_fire_sheet.png",
+    "size": [
+      512,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "ac17ca2a88746453c5621e625a296af231ab881a2ba5da3efb3f0e2e92083d15"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/AutoCannon/defense_autocannon_weapon_idle.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "ccf5371837b0da92a4cc8549870db8d02323b517282b8d5c518537e2096762a4"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/FlamethrowerPosition/defense_flamethrower_base_idle.png",
+    "size": [
+      64,
+      64
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "cf99e666b9101acf6d025503a99ad52cc2ec2dcf8d1215962a70ec24b2c697fe"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/FlamethrowerPosition/defense_flamethrower_damaged.png",
+    "size": [
+      64,
+      64
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "21436ec9b7132eb0729c99cb7d1c0a36e99819695514833e91ef0ec944a5d15b"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/FlamethrowerPosition/defense_flamethrower_destroyed.png",
+    "size": [
+      64,
+      64
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "454c042e205826f285ad29c298ee3d08a3cc359d0e3044305fb259d598444e48"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/FlamethrowerPosition/defense_flamethrower_fire_sheet.png",
+    "size": [
+      256,
+      64
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "789860f4dba5d3eb5bc0fd8388906651633f965cd3d9336356c02d0e24474279"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/FlamethrowerPosition/defense_flamethrower_weapon_idle.png",
+    "size": [
+      64,
+      64
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "34f31ee6b1bdb56ae4b002549147efe40de61a3f0590d03777de286bf89aa437"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MortarPosition/defense_mortar_base_idle.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "c5455da87045b81816b0149bc51c2ff98a24b9313547fa3196f9d3ec32f54d74"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MortarPosition/defense_mortar_damaged.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "ab40c8bab17a3a6db1268caf04a83a53c5d4705f9f173c54bf0ba56f31a08f0f"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MortarPosition/defense_mortar_destroyed.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "bdbbe767f22977e7c69272babc378cb15cbb688e7012be44717505aee4b0f48a"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MortarPosition/defense_mortar_fire_sheet.png",
+    "size": [
+      512,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "a444fff81870a2b42d53f585aa48d9acb7fcf72cbe62259d856d7e6408dd6c99"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MortarPosition/defense_mortar_weapon_idle.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "6a528f045a70ae8bfef082af82fc1d190d9ad496b429d54c16dce5b543e2309b"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/RocketLauncherPosition/defense_rocket_base_idle.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "18c09a783a7fddd5c8b2d8f4af65950c283a6d195a5cf60034ac0013ccf53474"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/RocketLauncherPosition/defense_rocket_damaged.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "7ce6708319abadb9be53cb4e0bc1e7056acc48347ddbd18265ed3d776831b9f2"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/RocketLauncherPosition/defense_rocket_destroyed.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "c09dae904b1043b0873956e3aef9c406793ef6017967dc0335b2b3ea904507c6"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/RocketLauncherPosition/defense_rocket_fire_sheet.png",
+    "size": [
+      512,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "c09f751916198d4164021ac22371116b825364e6c44e36012913a6bb580dd1d2"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/RocketLauncherPosition/defense_rocket_launcher_idle.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "aca728861e1e967bfa65f068536c3eedd8a7021d175358af808b73cf2edc3630"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Heavy/fx_burn_sheet.png",
+    "size": [
+      256,
+      64
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "69e7859b0e62fe15925e0bb8484c3d5a245ec43efa2ac45f23c0cba72faa9348"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Heavy/fx_burningoverlay_sheet.png",
+    "size": [
+      256,
+      64
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "3beb05668dae22e9bdd139e6c7cf85b97d09d973cc50ce2d81dce0ca503c2541"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Heavy/fx_cannonimpact_sheet.png",
+    "size": [
+      256,
+      64
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "acd7b7fdcacd395f0e9717ddcd941b87377ad5986afe6f9c3d952eebbfd32664"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Heavy/fx_cannonmuzzle_sheet.png",
+    "size": [
+      256,
+      64
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "6151c68cdfaa116799b4ee8ddc75e89ad868e5872c692b48e549ac853d8f6557"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Heavy/fx_cannontracer_sheet.png",
+    "size": [
+      256,
+      64
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "788d5e5b5701f4ca1b39b9ad78d4f2399b2f4b7e77ef3dc16cca1d94bc11c085"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Heavy/fx_flamecone_sheet.png",
+    "size": [
+      256,
+      64
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "185b3fa21936720354bbc507d0567b440127a5a3b9e4351c0c220ac175d66d3e"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Heavy/fx_mortarexplosion_sheet.png",
+    "size": [
+      512,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "e95ae5bf3d08ac4ec89f336dbd70441ccab48a7908266dcde0a0cac1c21e87d6"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Heavy/fx_mortarmuzzle_sheet.png",
+    "size": [
+      512,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "85de349ee36d6188802b3ea264b25438aebd33de01b1611efda5cab9754db58e"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Heavy/fx_mortarshell_sheet.png",
+    "size": [
+      512,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "8615c03ed9a4befe8f63dc9a7e362f4a962501abd53735a5711cfd9fb1c0813a"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Heavy/fx_rocketexplosion_sheet.png",
+    "size": [
+      512,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "3ea320df97f12e9fb2483ba1c178a0298b2e32f21cf880e03b6c34f66edbf479"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Heavy/fx_rocketprojectile_sheet.png",
+    "size": [
+      512,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "422c1bcb023677509f9d05d4c3bffa3ed4a38dd3c27e77f1f0a4a94abb00b287"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Heavy/fx_rocketsmoke_sheet.png",
+    "size": [
+      512,
+      128
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "14b393c8d91be0cabd47ef7abc58643eb535be673d100d8a009c788fea002b1d"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/ref_heavy_defense_lineup_01.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "alpha": null,
+    "sha256": "7204a282533af09c3d8856576b9da7137f2b4de6bca4ae28e62564a80055a2cf"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p4b_heavy_001/defense_autocannon_pack.png",
+    "size": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "2631690028be092bc37aa15761ba6fb11b2c6e375b6ed295f9f652c0fdfba342"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p4b_heavy_001/defense_flamethrower_pack.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      254
+    ],
+    "sha256": "a788cbbafec491c964eadcd012e1b114c0a766ec6df86e9b07cc4c789162c4c5"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p4b_heavy_001/defense_flamethrower_pack_rejected_v001.png",
+    "size": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "37d2e98ca3a2fe72b92b0500d5cd888f064269c79ccd476f66263d6aaacdf2a0"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p4b_heavy_001/defense_mortar_pack.png",
+    "size": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "492d6745af24bc5e2d34cd6c9f4b0fde25d0e602ed4b7970ef2d815892abe08f"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p4b_heavy_001/defense_rocket_pack.png",
+    "size": [
+      1774,
+      887
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "a99f3b2084810f1e34bb5599b9a7b79c1cc2e8e97e953150ea72305dc17bdf10"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p4b_heavy_001/fx_autocannon_pack.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "6f4dda846e50bce7019f7251fbf7fee6657d50dc817f9d3d480670251834a88c"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p4b_heavy_001/fx_flamethrower_pack.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "243adfec7215ed8bc3046a2af06d9a3b09ee816b66f54cb3b57273c7aaad131e"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p4b_heavy_001/fx_flamethrower_pack_rejected_v001.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "50a140df0a094018572f40718e2f7221c85f26887aa5256819c71c83fa149a9c"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p4b_heavy_001/fx_mortar_pack.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "2774d73c4ceacf4fd14433108fc05bfea6fb46715529d9a69f53811b98879421"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p4b_heavy_001/fx_rocket_pack.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "cd9cdfe8cf8c81d16f49ed4263cfec29ee6cc27d15480e5b0bab2fe629bb32f1"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p4b_heavy_001/fx_rocket_pack_rejected_v001.png",
+    "size": [
+      1448,
+      1086
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "0e5ef0516035299ce07306f6f612e91a44fd28caf3e240fa84644ab2d1597732"
+  },
+  {
+    "path": "Assets/Game/Art/UI/ui_icon_autocannon.png",
+    "size": [
+      32,
+      32
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "6ff7e6e119875987032447b33ded219693f3e5ccd0f7e35456fa494fe5c007d5"
+  },
+  {
+    "path": "Assets/Game/Art/UI/ui_icon_flamethrower.png",
+    "size": [
+      32,
+      32
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "78144a386a2975dc558be97348cc4b302879515e5ff464725daf76544a3dc9ab"
+  },
+  {
+    "path": "Assets/Game/Art/UI/ui_icon_mortar.png",
+    "size": [
+      32,
+      32
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "9a66950c0cf75530e17b7edefbef64e7b3078e49937d338dfd3ff461c3093a9e"
+  },
+  {
+    "path": "Assets/Game/Art/UI/ui_icon_rocket.png",
+    "size": [
+      32,
+      32
+    ],
+    "mode": "RGBA",
+    "alpha": [
+      0,
+      255
+    ],
+    "sha256": "7a583075fab7ccf69a2c47cce5fe8e2fbf1ed5937853d635609ab5d85447a3e7"
+  }
+]

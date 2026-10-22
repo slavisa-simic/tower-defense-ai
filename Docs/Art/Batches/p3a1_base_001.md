@@ -1,0 +1,9 @@
+# Phase 3A-1 base and fortification batch 001
+
+Completed 2026-09-19: 10/10. Each separate ImageGen request used the inspected, user-selected master v002. Exact executed prompts are in p3a1_base_001.json and the canonical p3a1_final_manifest.json. The earlier .specs.json is a planning draft; its transparent-background wording was replaced by the actual magenta-source contract before generation. Native returned paths, sizes/modes and unchanged hashes are in p3a1_all_native_receipts.json.
+
+All native sources are preserved under SourceSheets/p3a1_base_001. The user-authorized exporter keys magenta including open centers, removes dark chroma spill, zeros removed RGB before palette mapping, fits aspect ratio with nearest sampling, quantizes without dithering and writes binary-alpha runtime PNGs. All ten runtime files are in Art/Base at their exact manifest sizes, 51.2 PPU, centered Full Rect, Point, Uncompressed, no mipmaps, Clamp, NPOT None, sRGB, read/write off and no fallback physics.
+
+Visual review confirmed plan-view roofs, no tall facade, an empty right-opening nest and a three-cell command-post canvas. The concrete corner and segment share the material ramp. Actual corner-right section [2,19) is 17 pixels; straight-wall section [8,24) is 16. Align wall origin at (57,-6) pixels relative to the unrotated corner origin for the reviewed three-pixel overlap. Pixel coordinates run from each export's top-left. Use 90-degree corner rotations and visual-child offsets, without redefining gameplay footprints. Evidence: base-connection-qa.json and wall-connection-preview.png.
+
+This is imported visual inventory. No base/defense prefab was replaced. Current source/export/import evidence is p3a1_final_manifest-exports.json and p3a1_final_manifest-imports.json under Docs/Validation/Phase3A1; older batch export reports are historical.

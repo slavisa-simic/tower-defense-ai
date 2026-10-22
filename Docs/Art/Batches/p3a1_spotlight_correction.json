@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "spotlight",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v002.png",
+    "output": "Assets/Game/Art/Props/bd_prop_spotlight_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One compact military searchlight on a small mounting pad, seen exactly from vertically overhead: narrow rectangular olive lamp housing with glass nose pointing RIGHT, small swiveling support footprint. Only upper surfaces. No emitted beam, glow, light cone, people or ground. 64x64 logical canvas.\nOutput ONE isolated sprite on a perfectly uniform SOLID MAGENTA #FF00FF background, including any holes and open center. This is a chroma-key production source. No checkerboard, gray matte, magenta reflected light or edge glow. Center complete silhouette with 5% breathing room. Exact overhead, bold 64x64 logical pixel structure. Only one spotlight, full object fills frame, no beam or ground shadow.",
+    "matte": "magenta"
+  }
+]

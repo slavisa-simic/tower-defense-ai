@@ -1,0 +1,172 @@
+[
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_deep_danube_water_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_deep_danube_water_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#153239",
+      "#17444C",
+      "#1D4850",
+      "#245058"
+    ]
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_shallow_water_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_shallow_water_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#21484C",
+      "#295458",
+      "#2D5C5D",
+      "#396666"
+    ]
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_muddy_shore_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#493B2D",
+      "#55412F",
+      "#5A4633",
+      "#6C5137",
+      "#795C3E"
+    ]
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_wet_bank_transition_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_wet_bank_transition_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "y",
+    "palette": [
+      "#21484C",
+      "#295458",
+      "#2D5C5D",
+      "#396666",
+      "#44524A",
+      "#493B2D",
+      "#55412F",
+      "#5A4633",
+      "#6C5137",
+      "#795C3E"
+    ]
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_grass_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_grass_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#3D4630",
+      "#454F34",
+      "#4B5538",
+      "#555D3C",
+      "#5E643E"
+    ]
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_dirt_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#6D533A",
+      "#795D40",
+      "#816445",
+      "#907251"
+    ]
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_cracked_ground_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_cracked_ground_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#473E32",
+      "#61523F",
+      "#6B5B44",
+      "#706049",
+      "#7C6C51"
+    ]
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_bunker_floor_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_bunker_floor_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#4D5953",
+      "#657067",
+      "#747C70",
+      "#858B7C"
+    ]
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_concrete_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_concrete_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#666E64",
+      "#7E8277",
+      "#939486",
+      "#A1A295"
+    ]
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_road_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_road_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "x",
+    "palette": [
+      "#343E39",
+      "#414944",
+      "#50554B",
+      "#696A59",
+      "#B7B09A"
+    ]
+  }
+]

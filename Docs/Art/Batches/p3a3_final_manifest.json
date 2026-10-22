@@ -1,0 +1,1232 @@
+{
+  "reference": "Assets/Game/Art/MasterReferences/ref_defense_lineup_core_01.png",
+  "reference_source": "bd_src_defense_lineup_v002.png",
+  "approved_style": "Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+  "raw_sources": [
+    {
+      "id": "defense_lineup_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_defense_lineup_v001.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "sha256": "2ffdae7be2d395917ab54c19c7111a47824415c5018b4a6386f2ffeff0daa174",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-1acec2a3-3307-4eee-be8a-ae33095bcf28.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_lineup_prompt.txt"
+    },
+    {
+      "id": "defense_lineup_v002",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_defense_lineup_v002.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "sha256": "a43278a750acf045c9b8a6d2f28029e5245b11be02d60ad9ad0343a497fa4e73",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-d1924a98-aeb7-459c-b39e-d9a581a4ba0b.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/defense_lineup_v002.txt"
+    },
+    {
+      "id": "mg_base_damaged_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_base_damaged_v001.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "490b62990a41ebb0934b72c77022b203a9428ee382cf8e9a3fd5245ee7a7ad01",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-5a15de5f-54db-48d1-986b-f615badf4b33.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/mg_base_damaged_v001.txt"
+    },
+    {
+      "id": "mg_base_destroyed_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_base_destroyed_v001.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "fa1cb08dee50334afbd3eb62427c904bc5ed799e2d9a6cbfca4153464a86419f",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-ec7ed41f-e2a7-4780-b5a0-2ec3f40c42f0.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/mg_base_destroyed_v001.txt"
+    },
+    {
+      "id": "mg_base_idle_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_base_idle_v001.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "3bbfde72fcedb6a138378a97141ec2c72c97319b7d12e71979afe6bbeb257575",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-17478547-48cc-424e-bccc-ec4997155475.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/mg_base_idle_v001.txt"
+    },
+    {
+      "id": "mg_base_idle_v002",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_base_idle_v002.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "5268201944cb70ec98886b338860a8d8f6242fd5979e79ee961922941d7ad8c8",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-14c3aa2b-1f92-418e-a981-5877cd02b8e4.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/mg_base_idle_v002.txt"
+    },
+    {
+      "id": "mg_reference_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_reference_v001.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "820472afd24433404e987105fe89f464b8849b5edb2faf64ae819efc86e574d5",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-8003c1f3-1e1a-4688-8b04-26e29746462a.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/mg_reference_v001.txt"
+    },
+    {
+      "id": "mg_weapon_fire_sheet_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_weapon_fire_sheet_v001.png",
+      "size": [
+        1983,
+        793
+      ],
+      "mode": "RGB",
+      "sha256": "76595bf2ca522782e8222a32d7bbc1794e09623a8c9eda2b4f0ae4adcc4b4ab5",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-29c0322b-e4c2-4697-a977-3ccff60a1adc.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/mg_weapon_fire_sheet_v001.txt"
+    },
+    {
+      "id": "mine_armed_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mine_armed_v001.png",
+      "size": [
+        1295,
+        1215
+      ],
+      "mode": "RGB",
+      "sha256": "26d588587a2c6fabb7d1ecf169d811ee65ff2b3ee676f4abaa19bb64c9b89ec8",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-3ee9d8b3-a419-49da-ab78-c648189c5e8f.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/mine_armed_v001.txt"
+    },
+    {
+      "id": "mine_idle_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mine_idle_v001.png",
+      "size": [
+        1295,
+        1215
+      ],
+      "mode": "RGB",
+      "sha256": "d78bcfe0e04724e1f5b72f52d4f1792413e1e9266c59bd5affc4ff548590cd57",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-30992ba0-5d19-40c8-8789-9ddde3e22070.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/mine_idle_v001.txt"
+    },
+    {
+      "id": "mine_idle_v002",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mine_idle_v002.png",
+      "size": [
+        1295,
+        1215
+      ],
+      "mode": "RGB",
+      "sha256": "a277fdba2e35a90b10de994d30269512045e6c43181d9402d919b250d983ef41",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-fd8b3113-9105-405f-8cb4-7b1abef7f4e8.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/mine_idle_v002.txt"
+    },
+    {
+      "id": "mine_reference_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mine_reference_v001.png",
+      "size": [
+        1295,
+        1214
+      ],
+      "mode": "RGB",
+      "sha256": "a505e301821eda75aec8ae30e4b89fba6f5577d7aa40b8ee67f80150c9c842bb",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-bc45f86b-64c8-40aa-af04-23fda1de89c2.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/mine_reference_v001.txt"
+    },
+    {
+      "id": "sniper_aim_fire_sheet_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_aim_fire_sheet_v001.png",
+      "size": [
+        2172,
+        724
+      ],
+      "mode": "RGB",
+      "sha256": "bcaa472caea8bd8e2bbab599489913f8ad7bb2e946e5f64a426535fbca2938c1",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-f961fa3e-9c42-49f7-8913-8d856ab4d11d.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/sniper_aim_fire_sheet_v001.txt"
+    },
+    {
+      "id": "sniper_base_damaged_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_base_damaged_v001.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "1c28a002ecaf1703c2b95ac4b2a02aa1b0872c456ac98600dc4e29e0ce6b3704",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-07f71b58-84c7-4daa-a0e3-1948f772d19d.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/sniper_base_damaged_v001.txt"
+    },
+    {
+      "id": "sniper_base_destroyed_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_base_destroyed_v001.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "d5c59595a9ed192c8bd2d3219dffc70b4d05f8f78c5b583b8acf02a23f72ddc6",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-300445a9-9230-40b5-8df6-74943dfa80c3.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/sniper_base_destroyed_v001.txt"
+    },
+    {
+      "id": "sniper_base_idle_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_base_idle_v001.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "c9ab078b37b8a11c89295e8ab39cf507d6aeb156e925cd934b643aee96f8000a",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-544845f2-431f-4303-a4dc-18d5f23d2dd6.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/sniper_base_idle_v001.txt"
+    },
+    {
+      "id": "sniper_icon_v002",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_icon_v002.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "2130360398f5436d2554d2a10febc77748b52496bd2c74e8514add648aced820",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-91ed9222-d942-4704-aff0-9ae82538e5d3.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/sniper_icon_v002.txt"
+    },
+    {
+      "id": "sniper_reference_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_reference_v001.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "5d5e0f92a50ed8458d22c6d9c94048b068a8744364f6d628bb06144418ed5670",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-be2796ef-d193-411b-9b6a-f48833c37485.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/sniper_reference_v001.txt"
+    },
+    {
+      "id": "sniper_reference_v002",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_reference_v002.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "6a3e227e20d6c944fe1d8b7f7072ce5021d9a3e699dda119ec7c8fbc6d8ce1e3",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-ffae378e-81bf-4376-9b88-9719a5362d16.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/sniper_reference_v002.txt"
+    },
+    {
+      "id": "wire_corner_ne_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_corner_ne_v001.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "e658e279812d26b19b4ba413cb1412870d1b6df80f34047f0bfd0d92a562cd92",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-b110e97a-d0f4-4be8-98ef-8eb1d1768812.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/wire_corner_ne_v001.txt"
+    },
+    {
+      "id": "wire_corner_nw_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_corner_nw_v001.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "d9a4ea7388251ba50b8951034aacfb2b31a523beeedc1a7f9865b27a67221181",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-7f4d5df3-793d-4903-9f89-e2f084e0e68c.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/wire_corner_nw_v001.txt"
+    },
+    {
+      "id": "wire_corner_se_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_corner_se_v001.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "2450bdd89d8f9bc422f00c01d00ac3d0ee6812c5c9f42d9a43bbfa38e7bc819e",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-9d1d0ff9-1937-4c6a-8afa-069857047950.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/wire_corner_se_v001.txt"
+    },
+    {
+      "id": "wire_corner_sw_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_corner_sw_v001.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "997aeda2e7ae719367881bdd9bba0090ca513384f09fd46217ae53c71d2b23c8",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-3bf856a3-7ef6-4736-8b07-c2813c380d89.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/wire_corner_sw_v001.txt"
+    },
+    {
+      "id": "wire_damaged_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_damaged_v001.png",
+      "size": [
+        1746,
+        901
+      ],
+      "mode": "RGB",
+      "sha256": "466b7a081cc6253235b88ae810eea8e83e4daf63db82d87d86c770bb3a1005a3",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-26a4d58d-b653-48d2-8376-4cefa2c9bbfe.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/wire_damaged_v001.txt"
+    },
+    {
+      "id": "wire_destroyed_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_destroyed_v001.png",
+      "size": [
+        1746,
+        901
+      ],
+      "mode": "RGB",
+      "sha256": "6f66aba5fb3f0393b88ed3c6fa82847c4e2f225223c0c5c0c53c7b1aedc6db69",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-bc3a11b0-0781-48ae-bf38-33654fa71536.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/wire_destroyed_v001.txt"
+    },
+    {
+      "id": "wire_horizontal_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_horizontal_v001.png",
+      "size": [
+        1904,
+        826
+      ],
+      "mode": "RGB",
+      "sha256": "753c9f423ac893c9d6a53b402b870d04098bcfe022d7de28b5ac5bd1649c5bb0",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-8a45450a-09f8-49e9-b65f-755932e2d4a1.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/wire_horizontal_v001.txt"
+    },
+    {
+      "id": "wire_reference_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_reference_v001.png",
+      "size": [
+        1746,
+        901
+      ],
+      "mode": "RGB",
+      "sha256": "6aa7195d645baacc50fbf6b57bd4a29e07b447d9704d34a95f8bc431c4f5be18",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-587fdf5a-de64-461a-b771-a5087e283e6b.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/wire_reference_v001.txt"
+    },
+    {
+      "id": "wire_single_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_single_v001.png",
+      "size": [
+        1747,
+        900
+      ],
+      "mode": "RGB",
+      "sha256": "ffe14a232e0042815da53f3d03394608f431fc366b40e938a68c3877da66db19",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-c58c4459-12e4-4407-b166-aae26aa821f3.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/wire_single_v001.txt"
+    },
+    {
+      "id": "wire_vertical_v001",
+      "path": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_vertical_v001.png",
+      "size": [
+        1024,
+        1536
+      ],
+      "mode": "RGB",
+      "sha256": "1ebc7fab2a31cf0d601a4efe9758ff186b6e936dd4f1f9fc8438361b5c76e988",
+      "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0be46-b2d3-7510-84e8-13d5aad27c10\\exec-bbbb178a-db6d-4c8a-925f-3ee3c76fd1a6.png",
+      "byte_identical": true,
+      "prompt": "Docs/Art/Batches/p3a3_prompts/wire_vertical_v001.txt"
+    }
+  ],
+  "runtime": [
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_ne_v001.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          26,
+          2,
+          62,
+          38
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "0f6a91f54a140a358ababc35661369b378038b2a189454ca99b4bc5faefe86d3",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_corner_ne_v001.png",
+      "fps": 0,
+      "status": "validated inventory",
+      "consumer": "Future wire connection presentation; no autotiling added"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_nw_v001.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          2,
+          2,
+          38,
+          38
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "3149d999a55676108733261ea32ab108157dba42c6fb30c1925bfe4a25304e3f",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_corner_nw_v001.png",
+      "fps": 0,
+      "status": "validated inventory",
+      "consumer": "Future wire connection presentation; no autotiling added"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_se_v001.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          26,
+          26,
+          62,
+          61
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "c619cd24483affbc95c3473e6a3f83b3898198f0adc146dfbdb531350ae11728",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_corner_se_v001.png",
+      "fps": 0,
+      "status": "validated inventory",
+      "consumer": "Future wire connection presentation; no autotiling added"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_sw_v001.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          2,
+          26,
+          37,
+          61
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "2c4231da90ba6d1c83e3b279dbe5b551d90d679e36f4c0dc9f7754abf8f47617",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_corner_sw_v001.png",
+      "fps": 0,
+      "status": "validated inventory",
+      "consumer": "Future wire connection presentation; no autotiling added"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_damaged_v001.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          3,
+          20,
+          61,
+          44
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "726ce9c35ac1aa28dea1f934fd0d83fb10eaf4bf3c2f9f8e0727fd537a73f4ad",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_damaged_v001.png",
+      "fps": 0,
+      "status": "integrated and validated",
+      "consumer": "Assets/Game/Prefabs/Defenses/BarbedWire.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_destroyed_v001.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          3,
+          20,
+          61,
+          44
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "1c5819a689e90c34592263530185dc7913b05aaf9967d6fc2b760d5babac8e10",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_destroyed_v001.png",
+      "fps": 0,
+      "status": "imported; death-frame binding only; no persistent wreck",
+      "consumer": "Assets/Game/Prefabs/Defenses/BarbedWire.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_horizontal_v001.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          2,
+          23,
+          62,
+          41
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "44ab800ba4d3a8dc228abbdc2b618586300d7f0c05172d77c18b1e8c885d0aad",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_horizontal_v001.png",
+      "fps": 0,
+      "status": "validated inventory",
+      "consumer": "Future wire connection presentation; no autotiling added"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_single_v001.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          3,
+          19,
+          61,
+          45
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "219123f0782ff8e146d8d1f75a5ae6307636a5273cbdb4899b5eeb514f512a7f",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_single_v001.png",
+      "fps": 0,
+      "status": "integrated and validated",
+      "consumer": "Assets/Game/Prefabs/Defenses/BarbedWire.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_vertical_v001.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          21,
+          2,
+          43,
+          62
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "ee6a6dde8c573c7a1b9001021b53c1f027616b2649e7419871a1c8c8bebc9a73",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_vertical_v001.png",
+      "fps": 0,
+      "status": "validated inventory",
+      "consumer": "Future wire connection presentation; no autotiling added"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/LandMine/bd_defense_mine_armed_v001.png",
+      "size": [
+        32,
+        32
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          4,
+          4,
+          28,
+          28
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "431647e3ebed977ff359532e3aadc7633d78c7b5e6cf2e7745382e12d1d243d3",
+      "ppu": 51.2,
+      "pivot": [
+        16.0,
+        16.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mine_armed_v001.png",
+      "fps": 0,
+      "status": "integrated and validated",
+      "consumer": "Assets/Game/Prefabs/Defenses/LandMine.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/LandMine/bd_defense_mine_idle_v001.png",
+      "size": [
+        32,
+        32
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          4,
+          4,
+          28,
+          28
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "f8314a9d96efc964534a052badf181da044bcefffd08c71713abb2b79adc722a",
+      "ppu": 51.2,
+      "pivot": [
+        16.0,
+        16.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mine_idle_v002.png",
+      "fps": 0,
+      "status": "integrated and validated",
+      "consumer": "Assets/Game/Prefabs/Defenses/LandMine.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_base_damaged_v001.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          2,
+          4,
+          53,
+          58
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "ae6fc6b04cd5f68c68e77575712f28f14e88dc21a5f8fa52f2caf8eebebf8ed8",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_base_damaged_v001.png",
+      "fps": 0,
+      "status": "integrated and validated",
+      "consumer": "Assets/Game/Prefabs/Defenses/MachineGunNest.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_base_destroyed_v001.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          2,
+          4,
+          53,
+          58
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "24da0603dcb79c9882cbbc0faa570aad7d5d6f6e12c4e0c1cbe9258c179a8c01",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_base_destroyed_v001.png",
+      "fps": 0,
+      "status": "imported; death-frame binding only; no persistent wreck",
+      "consumer": "Assets/Game/Prefabs/Defenses/MachineGunNest.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_base_idle_v001.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          2,
+          4,
+          53,
+          58
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "80c973aa273351ef53a556cf5bdd102a185ddd76fe9498f0721e171155ac14b9",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_base_idle_v002.png",
+      "fps": 0,
+      "status": "integrated and validated",
+      "consumer": "Assets/Game/Prefabs/Defenses/MachineGunNest.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_preview_v001.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          2,
+          4,
+          58,
+          58
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "b46d2eb53505be30b0b53aea7179930429ab262857b92e7a072c2778d0557122",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Composite of registered base idle + weapon/aim idle exports",
+      "fps": 0,
+      "status": "integrated and validated",
+      "consumer": "Assets/Game/Prefabs/Defenses/MachineGunNest.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_weapon_fire_sheet_v001.png",
+      "size": [
+        256,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          18,
+          24,
+          58,
+          47
+        ],
+        [
+          18,
+          24,
+          56,
+          47
+        ],
+        [
+          18,
+          24,
+          56,
+          47
+        ],
+        [
+          18,
+          24,
+          56,
+          47
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "a00b63c69bd4b9b5d9e385a2dabf50c21822ff426bcd0eae3f82e1317525edf6",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 4,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_weapon_fire_sheet_v001.png",
+      "fps": 20,
+      "status": "integrated and validated",
+      "consumer": "Assets/Game/Prefabs/Defenses/MachineGunNest.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_weapon_idle_v001.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          18,
+          24,
+          58,
+          47
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "5a20476508219d322240a0c5c5692e040415451c80401e5463b01c009c08a6e5",
+      "ppu": 51.2,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_weapon_fire_sheet_v001.png",
+      "fps": 0,
+      "status": "integrated and validated",
+      "consumer": "Assets/Game/Prefabs/Defenses/MachineGunNest.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_aim_fire_sheet_v001.png",
+      "size": [
+        288,
+        96
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          36,
+          40,
+          82,
+          56
+        ],
+        [
+          35,
+          40,
+          79,
+          56
+        ],
+        [
+          35,
+          40,
+          81,
+          56
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "6ef0d6b2f08f8a5c687c1dab57d590a33a67f7a111a9d799cb1a81678b59503b",
+      "ppu": 51.2,
+      "pivot": [
+        48.0,
+        48.0
+      ],
+      "count": 3,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_aim_fire_sheet_v001.png",
+      "fps": 12,
+      "status": "integrated and validated",
+      "consumer": "Assets/Game/Prefabs/Defenses/SniperTower.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_aim_idle_v001.png",
+      "size": [
+        96,
+        96
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          36,
+          40,
+          82,
+          56
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "cc674a1231ac765115077d6b8c5639baf474191bb665d0d01a5cc3ddaae6556c",
+      "ppu": 51.2,
+      "pivot": [
+        48.0,
+        48.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_aim_fire_sheet_v001.png",
+      "fps": 0,
+      "status": "integrated and validated",
+      "consumer": "Assets/Game/Prefabs/Defenses/SniperTower.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_base_damaged_v001.png",
+      "size": [
+        96,
+        96
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          20,
+          19,
+          76,
+          77
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "192ab7466a9b88f5425ff74f525a1fc36ee2f8929c1f40ea3794230ddf9381aa",
+      "ppu": 51.2,
+      "pivot": [
+        48.0,
+        48.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_base_damaged_v001.png",
+      "fps": 0,
+      "status": "integrated and validated",
+      "consumer": "Assets/Game/Prefabs/Defenses/SniperTower.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_base_destroyed_v001.png",
+      "size": [
+        96,
+        96
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          20,
+          19,
+          76,
+          78
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "619810029ecb5323dc2eb54c0b1679e3fe6a9ebab886e6fed6c6393b4f8f6666",
+      "ppu": 51.2,
+      "pivot": [
+        48.0,
+        48.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_base_destroyed_v001.png",
+      "fps": 0,
+      "status": "imported; death-frame binding only; no persistent wreck",
+      "consumer": "Assets/Game/Prefabs/Defenses/SniperTower.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_base_idle_v001.png",
+      "size": [
+        96,
+        96
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          20,
+          19,
+          76,
+          77
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "15929ca2ac5b8bf2f548f0ea2bcea9f13984ce8d6ef2933646ec7c7312a911dd",
+      "ppu": 51.2,
+      "pivot": [
+        48.0,
+        48.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_base_idle_v001.png",
+      "fps": 0,
+      "status": "integrated and validated",
+      "consumer": "Assets/Game/Prefabs/Defenses/SniperTower.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_preview_v001.png",
+      "size": [
+        96,
+        96
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          20,
+          19,
+          82,
+          77
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "1f5b554479b40936f5f9abf8ad691522b542fe433c58f8b7468c0360bb29fda4",
+      "ppu": 51.2,
+      "pivot": [
+        48.0,
+        48.0
+      ],
+      "count": 1,
+      "source": "Composite of registered base idle + weapon/aim idle exports",
+      "fps": 0,
+      "status": "integrated and validated",
+      "consumer": "Assets/Game/Prefabs/Defenses/SniperTower.prefab"
+    },
+    {
+      "path": "Assets/Game/Art/UI/bd_ui_sniper_tower_icon_v002.png",
+      "size": [
+        64,
+        64
+      ],
+      "alpha": [
+        0,
+        255
+      ],
+      "transparent_rgb_zero": true,
+      "bounds": [
+        [
+          4,
+          5,
+          60,
+          59
+        ]
+      ],
+      "border_pass": true,
+      "alpha_pass": true,
+      "no_magenta": true,
+      "sha256": "65b3a2ab2c5886e51b2bb129bc921d3a379a16d8ff0577152c5eabd92cae0ccb",
+      "ppu": 100,
+      "pivot": [
+        32.0,
+        32.0
+      ],
+      "count": 1,
+      "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_icon_v002.png",
+      "fps": 0,
+      "status": "validated inventory",
+      "consumer": "Future UI icon inventory (v001 preserved)"
+    }
+  ]
+}

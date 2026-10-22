@@ -1,0 +1,16 @@
+[
+  {
+    "subject": "money_icon",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_money_icon_v002.png",
+    "output": "Assets/Game/Art/UI/bd_ui_money_icon_v001.png",
+    "size": [
+      32,
+      32
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "prompt": "Create ONE extremely simple pixel-art MONEY ICON for Border Defenders, final logical32x32pixels. Approved master input is palette/style only. Three overlapping ROUND FLAT COINS seen directly from above, bronze/bone gold in 3 flat tones, dark charcoal outline. Large recognizably CIRCULAR silhouettes, one small simple rectangular stamped groove on front coin. No crates, dogtags, letters, text, numbers or rectangle tokens. Chunky arcade readability, restrained military amber #C18A3E bone #C1B19E shadow #1F292C. Exactly3tonesplusoutline, no speckled texture, no perspective side. Center on uniform SOLID MAGENTA #FF00FF background with5%margin. No panel or other assets."
+  }
+]

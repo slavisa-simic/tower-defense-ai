@@ -1,0 +1,634 @@
+[
+  {
+    "id": "mg_base_idle_v002",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_base_idle_v002.png",
+    "output": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_base_idle_v001.png",
+    "frame": 64,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.05625,
+    "source_pivots": [
+      [
+        631,
+        627
+      ]
+    ],
+    "target_pivot": [
+      32.0,
+      32.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        2,
+        4,
+        53,
+        58
+      ]
+    ],
+    "sha256": "80c973aa273351ef53a556cf5bdd102a185ddd76fe9498f0721e171155ac14b9"
+  },
+  {
+    "id": "sniper_base_idle_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_base_idle_v001.png",
+    "output": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_base_idle_v001.png",
+    "frame": 96,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.07764390896921017,
+    "source_pivots": [
+      [
+        626,
+        578
+      ]
+    ],
+    "target_pivot": [
+      48.0,
+      48.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        20,
+        19,
+        76,
+        77
+      ]
+    ],
+    "sha256": "15929ca2ac5b8bf2f548f0ea2bcea9f13984ce8d6ef2933646ec7c7312a911dd"
+  },
+  {
+    "id": "mg_base_damaged_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_base_damaged_v001.png",
+    "output": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_base_damaged_v001.png",
+    "frame": 64,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.05625,
+    "source_pivots": [
+      [
+        631,
+        627
+      ]
+    ],
+    "target_pivot": [
+      32.0,
+      32.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        2,
+        4,
+        53,
+        58
+      ]
+    ],
+    "sha256": "ae6fc6b04cd5f68c68e77575712f28f14e88dc21a5f8fa52f2caf8eebebf8ed8"
+  },
+  {
+    "id": "sniper_base_damaged_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_base_damaged_v001.png",
+    "output": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_base_damaged_v001.png",
+    "frame": 96,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.07764390896921017,
+    "source_pivots": [
+      [
+        626,
+        578
+      ]
+    ],
+    "target_pivot": [
+      48.0,
+      48.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        20,
+        19,
+        76,
+        77
+      ]
+    ],
+    "sha256": "192ab7466a9b88f5425ff74f525a1fc36ee2f8929c1f40ea3794230ddf9381aa"
+  },
+  {
+    "id": "mg_base_destroyed_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_base_destroyed_v001.png",
+    "output": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_base_destroyed_v001.png",
+    "frame": 64,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.05625,
+    "source_pivots": [
+      [
+        631,
+        627
+      ]
+    ],
+    "target_pivot": [
+      32.0,
+      32.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        2,
+        4,
+        53,
+        58
+      ]
+    ],
+    "sha256": "24da0603dcb79c9882cbbc0faa570aad7d5d6f6e12c4e0c1cbe9258c179a8c01"
+  },
+  {
+    "id": "sniper_base_destroyed_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_base_destroyed_v001.png",
+    "output": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_base_destroyed_v001.png",
+    "frame": 96,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.07764390896921017,
+    "source_pivots": [
+      [
+        626,
+        578
+      ]
+    ],
+    "target_pivot": [
+      48.0,
+      48.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        20,
+        19,
+        76,
+        78
+      ]
+    ],
+    "sha256": "619810029ecb5323dc2eb54c0b1679e3fe6a9ebab886e6fed6c6393b4f8f6666"
+  },
+  {
+    "id": "mg_weapon_fire_sheet_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mg_weapon_fire_sheet_v001.png",
+    "output": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_weapon_fire_sheet_v001.png",
+    "frame": 64,
+    "count": 4,
+    "ppu": 51.2,
+    "scale": 0.09523809523809523,
+    "source_pivots": [
+      [
+        211,
+        347
+      ],
+      [
+        708,
+        347
+      ],
+      [
+        1204,
+        347
+      ],
+      [
+        1702,
+        347
+      ]
+    ],
+    "target_pivot": [
+      32.0,
+      32.0
+    ],
+    "fps": 20,
+    "bounds": [
+      [
+        18,
+        24,
+        58,
+        47
+      ],
+      [
+        18,
+        24,
+        56,
+        47
+      ],
+      [
+        18,
+        24,
+        56,
+        47
+      ],
+      [
+        18,
+        24,
+        56,
+        47
+      ]
+    ],
+    "sha256": "a00b63c69bd4b9b5d9e385a2dabf50c21822ff426bcd0eae3f82e1317525edf6",
+    "idle_output": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_weapon_idle_v001.png"
+  },
+  {
+    "id": "sniper_aim_fire_sheet_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_aim_fire_sheet_v001.png",
+    "output": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_aim_fire_sheet_v001.png",
+    "frame": 96,
+    "count": 3,
+    "ppu": 51.2,
+    "scale": 0.07876712328767123,
+    "source_pivots": [
+      [
+        247,
+        350
+      ],
+      [
+        971,
+        350
+      ],
+      [
+        1695,
+        350
+      ]
+    ],
+    "target_pivot": [
+      48.0,
+      48.0
+    ],
+    "fps": 12,
+    "bounds": [
+      [
+        36,
+        40,
+        82,
+        56
+      ],
+      [
+        35,
+        40,
+        79,
+        56
+      ],
+      [
+        35,
+        40,
+        81,
+        56
+      ]
+    ],
+    "sha256": "6ef0d6b2f08f8a5c687c1dab57d590a33a67f7a111a9d799cb1a81678b59503b",
+    "idle_output": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_aim_idle_v001.png"
+  },
+  {
+    "id": "wire_single_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_single_v001.png",
+    "output": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_single_v001.png",
+    "frame": 64,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.05829145728643216,
+    "source_pivots": [
+      [
+        873,
+        444
+      ]
+    ],
+    "target_pivot": [
+      32.0,
+      32.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        3,
+        19,
+        61,
+        45
+      ]
+    ],
+    "sha256": "219123f0782ff8e146d8d1f75a5ae6307636a5273cbdb4899b5eeb514f512a7f"
+  },
+  {
+    "id": "wire_damaged_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_damaged_v001.png",
+    "output": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_damaged_v001.png",
+    "frame": 64,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.05829145728643216,
+    "source_pivots": [
+      [
+        873,
+        444
+      ]
+    ],
+    "target_pivot": [
+      32.0,
+      32.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        3,
+        20,
+        61,
+        44
+      ]
+    ],
+    "sha256": "726ce9c35ac1aa28dea1f934fd0d83fb10eaf4bf3c2f9f8e0727fd537a73f4ad"
+  },
+  {
+    "id": "wire_destroyed_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_destroyed_v001.png",
+    "output": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_destroyed_v001.png",
+    "frame": 64,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.05829145728643216,
+    "source_pivots": [
+      [
+        873,
+        444
+      ]
+    ],
+    "target_pivot": [
+      32.0,
+      32.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        3,
+        20,
+        61,
+        44
+      ]
+    ],
+    "sha256": "1c5819a689e90c34592263530185dc7913b05aaf9967d6fc2b760d5babac8e10"
+  },
+  {
+    "id": "wire_horizontal_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_horizontal_v001.png",
+    "output": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_horizontal_v001.png",
+    "frame": 64,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.03807106598984772,
+    "source_pivots": [
+      [
+        952,
+        409
+      ]
+    ],
+    "target_pivot": [
+      32.0,
+      32.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        2,
+        23,
+        62,
+        41
+      ]
+    ],
+    "sha256": "44ab800ba4d3a8dc228abbdc2b618586300d7f0c05172d77c18b1e8c885d0aad"
+  },
+  {
+    "id": "wire_vertical_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_vertical_v001.png",
+    "output": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_vertical_v001.png",
+    "frame": 64,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.04184100418410042,
+    "source_pivots": [
+      [
+        512,
+        756
+      ]
+    ],
+    "target_pivot": [
+      32.0,
+      32.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        21,
+        2,
+        43,
+        62
+      ]
+    ],
+    "sha256": "ee6a6dde8c573c7a1b9001021b53c1f027616b2649e7419871a1c8c8bebc9a73"
+  },
+  {
+    "id": "wire_corner_ne_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_corner_ne_v001.png",
+    "output": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_ne_v001.png",
+    "frame": 64,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.041666666666666664,
+    "source_pivots": [
+      [
+        445,
+        820
+      ]
+    ],
+    "target_pivot": [
+      32.0,
+      32.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        26,
+        2,
+        62,
+        38
+      ]
+    ],
+    "sha256": "0f6a91f54a140a358ababc35661369b378038b2a189454ca99b4bc5faefe86d3"
+  },
+  {
+    "id": "wire_corner_nw_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_corner_nw_v001.png",
+    "output": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_nw_v001.png",
+    "frame": 64,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.041666666666666664,
+    "source_pivots": [
+      [
+        802,
+        820
+      ]
+    ],
+    "target_pivot": [
+      32.0,
+      32.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        2,
+        2,
+        38,
+        38
+      ]
+    ],
+    "sha256": "3149d999a55676108733261ea32ab108157dba42c6fb30c1925bfe4a25304e3f"
+  },
+  {
+    "id": "wire_corner_se_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_corner_se_v001.png",
+    "output": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_se_v001.png",
+    "frame": 64,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.041666666666666664,
+    "source_pivots": [
+      [
+        445,
+        411
+      ]
+    ],
+    "target_pivot": [
+      32.0,
+      32.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        26,
+        26,
+        62,
+        61
+      ]
+    ],
+    "sha256": "c619cd24483affbc95c3473e6a3f83b3898198f0adc146dfbdb531350ae11728"
+  },
+  {
+    "id": "wire_corner_sw_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_wire_corner_sw_v001.png",
+    "output": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_sw_v001.png",
+    "frame": 64,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.04097222222222222,
+    "source_pivots": [
+      [
+        816,
+        411
+      ]
+    ],
+    "target_pivot": [
+      32.0,
+      32.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        2,
+        26,
+        37,
+        61
+      ]
+    ],
+    "sha256": "2c4231da90ba6d1c83e3b279dbe5b551d90d679e36f4c0dc9f7754abf8f47617"
+  },
+  {
+    "id": "mine_idle_v002",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mine_idle_v002.png",
+    "output": "Assets/Game/Art/Defenses/LandMine/bd_defense_mine_idle_v001.png",
+    "frame": 32,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.03125,
+    "source_pivots": [
+      [
+        646,
+        593
+      ]
+    ],
+    "target_pivot": [
+      16.0,
+      16.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        4,
+        4,
+        28,
+        28
+      ]
+    ],
+    "sha256": "f8314a9d96efc964534a052badf181da044bcefffd08c71713abb2b79adc722a"
+  },
+  {
+    "id": "mine_armed_v001",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_mine_armed_v001.png",
+    "output": "Assets/Game/Art/Defenses/LandMine/bd_defense_mine_armed_v001.png",
+    "frame": 32,
+    "count": 1,
+    "ppu": 51.2,
+    "scale": 0.03125,
+    "source_pivots": [
+      [
+        646,
+        593
+      ]
+    ],
+    "target_pivot": [
+      16.0,
+      16.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        4,
+        4,
+        28,
+        28
+      ]
+    ],
+    "sha256": "431647e3ebed977ff359532e3aadc7633d78c7b5e6cf2e7745382e12d1d243d3"
+  },
+  {
+    "id": "sniper_icon_v002",
+    "source": "Assets/Game/Art/SourceSheets/p3a3_defenses_001/bd_src_sniper_icon_v002.png",
+    "output": "Assets/Game/Art/UI/bd_ui_sniper_tower_icon_v002.png",
+    "frame": 64,
+    "count": 1,
+    "ppu": 100,
+    "scale": 0.07207207207207207,
+    "source_pivots": [
+      [
+        649,
+        579
+      ]
+    ],
+    "target_pivot": [
+      32.0,
+      32.0
+    ],
+    "fps": 0,
+    "bounds": [
+      [
+        4,
+        5,
+        60,
+        59
+      ]
+    ],
+    "sha256": "65b3a2ab2c5886e51b2bb129bc921d3a379a16d8ff0577152c5eabd92cae0ccb"
+  }
+]

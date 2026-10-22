@@ -1,0 +1,30 @@
+[
+  {
+    "id": "lineup",
+    "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-c02ccdfb-be9d-4e64-9da4-624386eded9b.png",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_lineup_core_v001.png",
+    "reference": "Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+    "prompt": "Docs/Art/Batches/p3a2_lineup_v001.prompt.txt"
+  },
+  {
+    "id": "basic_infected_ref",
+    "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-63be36d6-0a87-4d9e-a8dc-d1813b16e990.png",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_ref_v001.png",
+    "reference": "Assets/Game/Art/MasterReferences/bd_ref_enemy_basic_infected_v001.png",
+    "prompt": "Docs/Art/Batches/bd_ref_enemy_basic_infected_v001.prompt.txt"
+  },
+  {
+    "id": "runner_ref",
+    "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-a773db4f-d3f0-44e0-933f-906d265b1905.png",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_ref_v001.png",
+    "reference": "Assets/Game/Art/MasterReferences/bd_ref_enemy_runner_v001.png",
+    "prompt": "Docs/Art/Batches/bd_ref_enemy_runner_v001.prompt.txt"
+  },
+  {
+    "id": "brute_ref",
+    "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-c6c7450a-e50d-4723-bc65-991122bbb4bf.png",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_ref_v001.png",
+    "reference": "Assets/Game/Art/MasterReferences/bd_ref_enemy_brute_v001.png",
+    "prompt": "Docs/Art/Batches/bd_ref_enemy_brute_v001.prompt.txt"
+  }
+]

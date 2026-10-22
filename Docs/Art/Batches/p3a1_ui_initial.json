@@ -1,0 +1,220 @@
+[
+  {
+    "subject": "hud_panel_small",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_hud_panel_small_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_hud_panel_small_v001.png",
+    "size": [
+      128,
+      64
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "border": [
+      8,
+      8,
+      8,
+      8
+    ],
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: A horizontal 2:1 small HUD panel. Narrow riveted muted steel frame with clipped pixel corners, simple charcoal inner fill. Interior completely empty and quiet.\nThis is a production pixel-art UI asset for a 128x64 logical canvas. Match master military material palette. Every edge is a square pixel step; broad clean color fields, no microtexture, dirt speckle or beveled photographic lighting. No text, numerals, watermark, mockup or extra assets. Leave panel/button centers dark solid opaque, with no decoration where live text goes.\nOutput just ONE asset on perfectly uniform solid MAGENTA #FF00FF background, with magenta in icon gaps. The background will be removed by chroma key. No checkerboard, magenta spill, shadows or glow. Fill 90% of the canvas with the complete object and keep it centered."
+  },
+  {
+    "subject": "hud_panel_medium",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_hud_panel_medium_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_hud_panel_medium_v001.png",
+    "size": [
+      256,
+      96
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "border": [
+      8,
+      8,
+      8,
+      8
+    ],
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: A horizontal 8:3 medium HUD panel. Narrow riveted muted steel frame with clipped pixel corners, simple charcoal inner fill. Interior completely empty and quiet.\nThis is a production pixel-art UI asset for a 256x96 logical canvas. Match master military material palette. Every edge is a square pixel step; broad clean color fields, no microtexture, dirt speckle or beveled photographic lighting. No text, numerals, watermark, mockup or extra assets. Leave panel/button centers dark solid opaque, with no decoration where live text goes.\nOutput just ONE asset on perfectly uniform solid MAGENTA #FF00FF background, with magenta in icon gaps. The background will be removed by chroma key. No checkerboard, magenta spill, shadows or glow. Fill 90% of the canvas with the complete object and keep it centered."
+  },
+  {
+    "subject": "hud_panel_large",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_hud_panel_large_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_hud_panel_large_v001.png",
+    "size": [
+      384,
+      128
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "border": [
+      8,
+      8,
+      8,
+      8
+    ],
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: A horizontal 3:1 large HUD panel. Narrow riveted muted steel frame with clipped pixel corners, simple charcoal inner fill. Interior completely empty and quiet.\nThis is a production pixel-art UI asset for a 384x128 logical canvas. Match master military material palette. Every edge is a square pixel step; broad clean color fields, no microtexture, dirt speckle or beveled photographic lighting. No text, numerals, watermark, mockup or extra assets. Leave panel/button centers dark solid opaque, with no decoration where live text goes.\nOutput just ONE asset on perfectly uniform solid MAGENTA #FF00FF background, with magenta in icon gaps. The background will be removed by chroma key. No checkerboard, magenta spill, shadows or glow. Fill 90% of the canvas with the complete object and keep it centered."
+  },
+  {
+    "subject": "build_button_empty",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_build_button_empty_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_build_button_empty_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "border": [
+      8,
+      8,
+      8,
+      8
+    ],
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: ONE square EMPTY build-button backing. Steel olive 4 logical pixel thin frame, square 2-pixel clipped corners, four restrained corner bolts. Dark charcoal plain central field. Neutral idle state, no amber selection markers, no icon.\nThis is a production pixel-art UI asset for a 64x64 logical canvas. Match master military material palette. Every edge is a square pixel step; broad clean color fields, no microtexture, dirt speckle or beveled photographic lighting. No text, numerals, watermark, mockup or extra assets. Leave panel/button centers dark solid opaque, with no decoration where live text goes.\nOutput just ONE asset on perfectly uniform solid MAGENTA #FF00FF background, with magenta in icon gaps. The background will be removed by chroma key. No checkerboard, magenta spill, shadows or glow. Fill 90% of the canvas with the complete object and keep it centered."
+  },
+  {
+    "subject": "start_wave_button",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_start_wave_button_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_start_wave_button_v001.png",
+    "size": [
+      192,
+      64
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "border": [
+      8,
+      8,
+      8,
+      8
+    ],
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: ONE horizontal 3:1 empty start-wave button backing. Restrained amber rim and steel frame, charcoal olive empty center that will hold live UI label. No arrow, text or pictogram. Flat crisp square clipped corners.\nThis is a production pixel-art UI asset for a 192x64 logical canvas. Match master military material palette. Every edge is a square pixel step; broad clean color fields, no microtexture, dirt speckle or beveled photographic lighting. No text, numerals, watermark, mockup or extra assets. Leave panel/button centers dark solid opaque, with no decoration where live text goes.\nOutput just ONE asset on perfectly uniform solid MAGENTA #FF00FF background, with magenta in icon gaps. The background will be removed by chroma key. No checkerboard, magenta spill, shadows or glow. Fill 90% of the canvas with the complete object and keep it centered."
+  },
+  {
+    "subject": "small_status_panel",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_small_status_panel_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_small_status_panel_v001.png",
+    "size": [
+      128,
+      48
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "border": [
+      8,
+      8,
+      8,
+      8
+    ],
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: ONE horizontal 8:3 small status panel. Simple 3 logical pixel steel rim, charcoal empty center, sparse restrained rivets. No bars or gauges, no icon.\nThis is a production pixel-art UI asset for a 128x48 logical canvas. Match master military material palette. Every edge is a square pixel step; broad clean color fields, no microtexture, dirt speckle or beveled photographic lighting. No text, numerals, watermark, mockup or extra assets. Leave panel/button centers dark solid opaque, with no decoration where live text goes.\nOutput just ONE asset on perfectly uniform solid MAGENTA #FF00FF background, with magenta in icon gaps. The background will be removed by chroma key. No checkerboard, magenta spill, shadows or glow. Fill 90% of the canvas with the complete object and keep it centered."
+  },
+  {
+    "subject": "money_icon",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_money_icon_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_money_icon_v001.png",
+    "size": [
+      32,
+      32
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: ONE simple economy pictogram: three overlapping bone-olive military supply tokens seen flat, one restrained amber stripe on foremost token. Bold compact silhouette, roughly 6 colors, no currency letters or numerals. No panel frame.\nThis is a production pixel-art UI asset for a 32x32 logical canvas. Match master military material palette. Every edge is a square pixel step; broad clean color fields, no microtexture, dirt speckle or beveled photographic lighting. No text, numerals, watermark, mockup or extra assets. Leave panel/button centers dark solid opaque, with no decoration where live text goes.\nOutput just ONE asset on perfectly uniform solid MAGENTA #FF00FF background, with magenta in icon gaps. The background will be removed by chroma key. No checkerboard, magenta spill, shadows or glow. Fill 90% of the canvas with the complete object and keep it centered."
+  },
+  {
+    "subject": "base_hp_icon",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_base_hp_icon_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_base_hp_icon_v001.png",
+    "size": [
+      32,
+      32
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: ONE simple base-health pictogram: bold concrete bunker roof silhouette with a clear bone plus symbol in its center. Flat icon, readable at 32 pixels, roughly 6 colors. No text or panel frame.\nThis is a production pixel-art UI asset for a 32x32 logical canvas. Match master military material palette. Every edge is a square pixel step; broad clean color fields, no microtexture, dirt speckle or beveled photographic lighting. No text, numerals, watermark, mockup or extra assets. Leave panel/button centers dark solid opaque, with no decoration where live text goes.\nOutput just ONE asset on perfectly uniform solid MAGENTA #FF00FF background, with magenta in icon gaps. The background will be removed by chroma key. No checkerboard, magenta spill, shadows or glow. Fill 90% of the canvas with the complete object and keep it centered."
+  },
+  {
+    "subject": "wave_icon",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_wave_icon_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_wave_icon_v001.png",
+    "size": [
+      32,
+      32
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: ONE wave/advance pictogram: three chunky amber military chevrons pointing RIGHT, stacked horizontally. Flat symbol with dark charcoal outline, simple at 32 pixels. No panel frame.\nThis is a production pixel-art UI asset for a 32x32 logical canvas. Match master military material palette. Every edge is a square pixel step; broad clean color fields, no microtexture, dirt speckle or beveled photographic lighting. No text, numerals, watermark, mockup or extra assets. Leave panel/button centers dark solid opaque, with no decoration where live text goes.\nOutput just ONE asset on perfectly uniform solid MAGENTA #FF00FF background, with magenta in icon gaps. The background will be removed by chroma key. No checkerboard, magenta spill, shadows or glow. Fill 90% of the canvas with the complete object and keep it centered."
+  },
+  {
+    "subject": "mg_nest_icon",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_mg_nest_icon_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_mg_nest_icon_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: ONE build-menu icon for a machine-gun nest: overhead U-shaped tan sandbag rim, compact olive MG receiver inside, bold single barrel pointing RIGHT. No person. Use large simple forms and dark outline readable at 64 logical pixels. No panel frame.\nThis is a production pixel-art UI asset for a 64x64 logical canvas. Match master military material palette. Every edge is a square pixel step; broad clean color fields, no microtexture, dirt speckle or beveled photographic lighting. No text, numerals, watermark, mockup or extra assets. Leave panel/button centers dark solid opaque, with no decoration where live text goes.\nOutput just ONE asset on perfectly uniform solid MAGENTA #FF00FF background, with magenta in icon gaps. The background will be removed by chroma key. No checkerboard, magenta spill, shadows or glow. Fill 90% of the canvas with the complete object and keep it centered."
+  },
+  {
+    "subject": "barbed_wire_icon",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_barbed_wire_icon_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_barbed_wire_icon_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: ONE build-menu icon for barbed wire: exactly two thick intersecting silver-gray wire loops with six large clear barbs, two compact olive anchor caps. Strict overhead stylized plan symbol, lines at least 3 logical pixels thick, must remain continuous at 64x64. No front-facing fence. No panel frame.\nThis is a production pixel-art UI asset for a 64x64 logical canvas. Match master military material palette. Every edge is a square pixel step; broad clean color fields, no microtexture, dirt speckle or beveled photographic lighting. No text, numerals, watermark, mockup or extra assets. Leave panel/button centers dark solid opaque, with no decoration where live text goes.\nOutput just ONE asset on perfectly uniform solid MAGENTA #FF00FF background, with magenta in icon gaps. The background will be removed by chroma key. No checkerboard, magenta spill, shadows or glow. Fill 90% of the canvas with the complete object and keep it centered."
+  },
+  {
+    "subject": "land_mine_icon",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_land_mine_icon_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_land_mine_icon_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: ONE build-menu icon for a land mine: circular olive disk TOP seen vertically down, central pressure cap, four bolt marks, small restrained amber caution tab. Bold round silhouette, no perspective sides. No explosion, text or panel frame.\nThis is a production pixel-art UI asset for a 64x64 logical canvas. Match master military material palette. Every edge is a square pixel step; broad clean color fields, no microtexture, dirt speckle or beveled photographic lighting. No text, numerals, watermark, mockup or extra assets. Leave panel/button centers dark solid opaque, with no decoration where live text goes.\nOutput just ONE asset on perfectly uniform solid MAGENTA #FF00FF background, with magenta in icon gaps. The background will be removed by chroma key. No checkerboard, magenta spill, shadows or glow. Fill 90% of the canvas with the complete object and keep it centered."
+  },
+  {
+    "subject": "sniper_tower_icon",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_sniper_tower_icon_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_sniper_tower_icon_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: ONE build-menu icon for sniper tower: overhead square watch-tower ROOF with crossed structural roof struts and a slim long rifle silhouette pointing RIGHT across the roof edge. Distinct from U-shaped MG nest. No visible tall sidewalls or facade. Bold simple shapes. No person or panel frame.\nThis is a production pixel-art UI asset for a 64x64 logical canvas. Match master military material palette. Every edge is a square pixel step; broad clean color fields, no microtexture, dirt speckle or beveled photographic lighting. No text, numerals, watermark, mockup or extra assets. Leave panel/button centers dark solid opaque, with no decoration where live text goes.\nOutput just ONE asset on perfectly uniform solid MAGENTA #FF00FF background, with magenta in icon gaps. The background will be removed by chroma key. No checkerboard, magenta spill, shadows or glow. Fill 90% of the canvas with the complete object and keep it centered."
+  }
+]

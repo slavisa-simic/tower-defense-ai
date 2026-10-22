@@ -1,0 +1,50 @@
+[
+  {
+    "subject": "build_button_selected",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_build_button_selected_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_build_button_selected_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "border": [
+      8,
+      8,
+      8,
+      8
+    ],
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_build_button_empty_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png"
+    ],
+    "prompt": "Use case: precise-edit. Input1 is the exact neutral build-button backing to edit. Input2 is the approved Border Defenders master reference, style only. Preserve input1 canvas, square silhouette, exact outer shape, corner positions, frame thickness, bolts, empty charcoal center and SOLID MAGENTA #FF00FF background. Produce the selected state of this SAME button, no new panel design, no resize/recomposition. Add strong AMBER L-shaped corner brackets INSIDE the existing frame at all four corners. They must each be about 8 logical pixels long and2pixelswide on a64x64 export. Make innerframeamber. Center remains emptydarkcharcoal. No text or icons, no glow, no dropshadow, no gradients. Flat crisp pixel art. One button only."
+  },
+  {
+    "subject": "build_button_disabled",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_build_button_disabled_v001.png",
+    "output": "Assets/Game/Art/UI/bd_ui_build_button_disabled_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "matte": "magenta",
+    "margin": 2,
+    "colors": 16,
+    "border": [
+      8,
+      8,
+      8,
+      8
+    ],
+    "references": [
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_build_button_empty_v001.png",
+      "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png"
+    ],
+    "prompt": "Use case: precise-edit. Input1 is the exact neutral build-button backing to edit. Input2 is the approved Border Defenders master reference, style only. Preserve input1 canvas, square silhouette, exact outer shape, corner positions, frame thickness, bolts, empty charcoal center and SOLID MAGENTA #FF00FF background. Produce the disabled state of this SAME button, no new panel design, no resize/recomposition. Dim all olive highlights to low-contrast coldcharcoalgray. Distinct disabled border treatment: narrow broken/dashed inner border with regular gaps. Retain same outer silhouette, bolts and corner shape. Empty center remains charcoalgray. No diagonal bars that obscure future icons. No text or icons, no glow, no dropshadow, no gradients. Flat crisp pixel art. One button only."
+  }
+]

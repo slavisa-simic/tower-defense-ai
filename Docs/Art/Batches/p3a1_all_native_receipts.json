@@ -1,0 +1,572 @@
+[
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_ammo_supply_crate_cluster_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-fd53883e-2e41-40cd-bf16-3ac101426ff4.png",
+    "sha256": "e2cda8f88a2ae38b46209bee8140444fefc222d04df4dc050517fb8ac0574269",
+    "native_size": [
+      1536,
+      1024
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_corner_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-b8ebf62d-73fe-4616-8aff-e0763f242cf3.png",
+    "sha256": "09c03ea11e645c3f74eaee0b2c5e3240d29993e8a55e31b1409d628411c9a507",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_gate_piece_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-fa473910-6a8a-4481-a185-7c0937567699.png",
+    "sha256": "04dac566ba965f5baee0339a73bc19a03690e7c7c515aca5d8e555770b26ace5",
+    "native_size": [
+      1774,
+      887
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_wall_segment_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-8dc1cc54-0cf0-4350-8989-6dc0efd3d9cf.png",
+    "sha256": "f47878a9670133ae928d15cf4668ea262a77bac44c7ce549adec2095ecfd8f65",
+    "native_size": [
+      1774,
+      887
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_command_post_object_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-57c973e4-ef7a-48e8-a95a-6e5ae5f2d0e6.png",
+    "sha256": "f41be4298664b4491ffdd88c84b8063d79dd042910efc69444e18380e7ee50e1",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_defensive_sandbag_nest_base_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-bffe8ed4-7478-428d-a4a7-fbb26d5f6f48.png",
+    "sha256": "5ab7b61995edecd84e843e091196d440b5344e997de0d91b208a6f647ce691be",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_generator_unit_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-3875931c-97ba-437e-b302-3112756063c2.png",
+    "sha256": "2745ed0d4c3dfcbe82dfe3b6c0d7068374f74a0073bc93ffe0b18549c130b3cc",
+    "native_size": [
+      1536,
+      1024
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_military_tent_topdown_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-fd096c3b-6374-4e26-a303-b09000d55cd2.png",
+    "sha256": "ee1591acb0e16b78865184efce879f3ac35746faaae2007d1fb98c2db41e7bc7",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_river_checkpoint_marker_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-e9d452ed-584c-4c5c-8f11-2e84928f5f52.png",
+    "sha256": "367f3cbf7a6173f559087d2ae76df7a15fdab152ed7fba4fefe0798e86ccaf89",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_watch_post_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-ba84fd2a-6523-4003-9bcb-0e873c8b3d4d.png",
+    "sha256": "f7c4acdfb5715595f748eb3e9d3f511853db4a3d889a6746f77a4ca2c4041ebb",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_bunker_floor_tile_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-2ebd2d00-40ed-4926-ab1e-2231299bf76a.png",
+    "sha256": "4df4df29aea4658c1fda7d6adfc1065bce26a26b3cbb3d770c117132e115a1ad",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_concrete_tile_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-1c3aeca2-c3fd-4686-a123-52afa963603d.png",
+    "sha256": "b496de623f03e6e860f024954ced412ca515c1c1b8626616f9b225c0c0afc14e",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_cracked_ground_tile_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-929e718b-0e65-4e35-b82a-8afa1a1a4dfc.png",
+    "sha256": "60a94cbfefa7f0952551207d72d4e004becca8dae4143d3e62587c2a312418d5",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_deep_danube_water_tile_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-446fafdd-9be4-4cbf-a3d4-afdaae2e07b7.png",
+    "sha256": "23add93a301b2cf2a4e778ce489ff994865d9393922fdc9e65a5d0b6980bbc7e",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_dirt_tile_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-43afba0a-3309-431b-97a0-bf8641185689.png",
+    "sha256": "a8bd19b5d8872bb747b04e746b789906551914543e41161d0a9805eac0dc99b2",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_grass_tile_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-55c3466f-ff8e-4d96-bb05-55328fe262d6.png",
+    "sha256": "5bac713d49ffbe2a30aa50cd5ef076159590d7ef6a91c43a3dfb898bdcf84688",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_muddy_shore_tile_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-1e18a9f8-1b9b-4152-bc09-0102efaf910f.png",
+    "sha256": "476fa5a4601dce144cf463219ee6b2294f64ef7bd43962bb58e55fcfa79babb8",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_road_tile_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-13c1fc1f-3a45-4e28-bf97-3f9e5f7a2c9b.png",
+    "sha256": "a909d50e691cca11d445c5d178a2296fb84b5999d1c3c4bde04a2876ffb0ec80",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_shallow_water_tile_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-e342375f-e603-4bd1-a204-02ab2d538c85.png",
+    "sha256": "e46773b9271938072c729ef49719dc4e156181cb411ee37e618c62b556b38413",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_wet_bank_transition_tile_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-ff48d046-a797-4ef5-9d71-7ec63d8aa2e5.png",
+    "sha256": "dfdc45721ca79f7fff1cdf0671aa40f1611cdaac0ec5c0526a0a82431cd53fd8",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_master_001/bd_src_danube_master_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-318df4e2-6888-4846-bab0-8ad97a96510d.png",
+    "sha256": "6d846f1eb59d21a1b1c0cc216f351c13c69349ede99061aee9e663e584aab393",
+    "native_size": [
+      1536,
+      1024
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_master_001/bd_src_danube_master_v002.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-f28ba272-cce6-4fbc-adfe-23befc23b4d7.png",
+    "sha256": "354421e55c341bfbcc65993ba20c644842eec44073cd3bbb7eb3b7794f7d7e45",
+    "native_size": [
+      1536,
+      1024
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_antenna_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-e7dd6c8c-502b-4c3a-943a-4a59b09f5895.png",
+    "sha256": "fb9e6d1b8e3973e3907cc36a18c7fbc6bb116c103418f26392b70c69a86edc76",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_barbed_barrier_segment_visual_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-a0b40134-9244-44f1-85ef-dd836083a384.png",
+    "sha256": "990ed76b69e0d6e1f07729f521a0885e5429bc4bb35548d6bad24f278e574ec7",
+    "native_size": [
+      1774,
+      887
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_czech_hedgehog_obstacle_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-f33df25f-b67c-43c8-9580-e3217e250a3a.png",
+    "sha256": "3a7377e3f130553b28dfcce05447f871c870c4e7c8109ec2a94e6599348dde63",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_debris_scrap_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-7ab377b2-70df-42f0-9f2b-6fe0d37958a8.png",
+    "sha256": "2df702d56348bd4c54350ab2d81213f77dadbe1b3aece462e6b9078e2e32aa10",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_destroyed_rubber_boat_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-c9a1257b-6d5b-4608-a50b-4b293bf5b10c.png",
+    "sha256": "eb3d38faa17d3a4ee138c57074ee4c68278d7f8271c2dc5c710f904a4d9e3d7e",
+    "native_size": [
+      1774,
+      887
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_floodlight_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-756c9028-120f-40e1-8bb8-dbb6f5bde7a9.png",
+    "sha256": "d99827714d140e5a23883797dcadbbaf7658008c8e06a3193f5ff44c0bf11615",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_metal_crate_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-4510dde1-2de5-4996-b047-8d7cc06da5c7.png",
+    "sha256": "7439ba891ce121cd99fd2a680b795482aaaf3960817f7b4f85dee4193420c7e6",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_military_barrel_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-6801ac34-327d-4917-9d4a-52cbc2a7e5c5.png",
+    "sha256": "d372f94b6957e09dc8e9811b57c469e7f01f501819f2748b253f0e662492a2b2",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_oil_barrel_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-04b69b32-68f3-4f4d-bc71-98b5e7c41544.png",
+    "sha256": "1520161637ce741c9d64eecc700231e2bf44fb90d6212826f0b08cdaaa7232ce",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_quarantine_fence_segment_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-ab91bd96-5e62-4236-bbb0-7f43f6b923f3.png",
+    "sha256": "d7dd17700aad8caec95f44ae2caa81500250148023177ef9ae1a6e777c5ebe9a",
+    "native_size": [
+      1774,
+      887
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_radar_device_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-c5f1b8c3-828b-4137-ac68-54c64275c23a.png",
+    "sha256": "d045ff2be237ece3b2b7370ded061b8bbc65c9a51e16cdcf62ad80feb2e7bc29",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_rubber_boat_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-65d08827-a865-4c1f-b576-6d4a0327fc74.png",
+    "sha256": "ca077b41b8fcd4fc155a7b857122650f58c43f5059bef80aa343ebe42d5de613",
+    "native_size": [
+      1774,
+      887
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_sandbag_segment_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-ec3bbe49-e935-4331-9a3a-c8fcab3081ea.png",
+    "sha256": "166662e3a5f9b60655277f32d2a7590f8c3d658d4958e0ffe1e85c0227ecc84f",
+    "native_size": [
+      1774,
+      887
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-c097700a-4134-42aa-9299-58d628527180.png",
+    "sha256": "bf2251e2180fded52a714ef4bc38959f6ccd6ebe2318502003dd7f5f37e336b5",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v002.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-52e313cf-d425-4e7d-8f8a-31f4968d0111.png",
+    "sha256": "e0f567826cb38286fd1325570c0b510de2484ac0f866561045ffae6ddff8470b",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v003.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-04ced337-e030-4070-9e64-9b11d590653f.png",
+    "sha256": "a825feaba1e969a8b8b228974e65deaed6715e96d3e5573b87f4087d0be7d176",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_warning_sign_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-a40a86b6-7a64-4e95-a922-5ba76ad0e9b9.png",
+    "sha256": "71aa54487d9c3f1102c05f37c2bff8d327f68792d751358b38002605f732979b",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_wooden_crate_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-83297854-e825-431f-ae21-6483d32d9ca3.png",
+    "sha256": "08d776016eda8817df2f5b943c30b93a70272a2ccb5f5abedf3dc5d45c21d4f1",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_wrecked_supply_box_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-a0ff147c-a1e5-45e7-8161-7b8088fcf5bf.png",
+    "sha256": "2bff4ce86fd4911e326f40b474a915dd15e8774022c3f909b63b2218383df504",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_barbed_wire_icon_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-9656c28f-8f46-4a30-94d3-0b691e25cd4d.png",
+    "sha256": "5caaab01bf99e4ca607f7a0bd7ce78bec4da86d2af9fc002ef5771ca1ea75dd5",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_base_hp_icon_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-831e39de-bcb5-48c0-9482-89f4a616d390.png",
+    "sha256": "1a43c9a31687c780d8ee4675083462e2e8e17a9a5ffc4ae9af328a704c83be52",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_build_button_disabled_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-9f678bc7-12d2-4d4d-80ae-e04c76147123.png",
+    "sha256": "a238c78d25d9325d2e7094eadc3e8ed5841ee060bda1278aa649b106b8c9cbb7",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_build_button_empty_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-51d32d46-8182-45ce-b240-1c91491a27de.png",
+    "sha256": "bb71b97c86ea011505a46ec21756778d0afeddc60848ccfa5079c25a36a83ee7",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_build_button_selected_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-79907ea6-51f7-45b0-80c0-119e1a95473f.png",
+    "sha256": "8a66a54ff89b04b50ba82256ac2b484de93d8d4c605f55143797d052662a8e72",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_hud_panel_large_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-1e013a15-97d2-43fe-918d-10d4aad75b6c.png",
+    "sha256": "06dbf5b773a10a2d4579688856bcfc41bb32d9ae750e6e67f0612c17fd5364a1",
+    "native_size": [
+      2172,
+      724
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_hud_panel_medium_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-34374617-b031-4762-8cf7-6b1ad0f7ecee.png",
+    "sha256": "0230c77a30a0aaacd2776b3cfbbc05ffaf5f3da40294da4c211b54d217c5203c",
+    "native_size": [
+      2048,
+      768
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_hud_panel_small_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-421b85f4-f920-43cf-bbe5-e0e55bb7b81e.png",
+    "sha256": "49305b8a0662b8f7bf95f8a70cdfba677bccafb51739b2444b32fa937d2d8b29",
+    "native_size": [
+      1774,
+      887
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_land_mine_icon_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-87831e1c-adfb-44da-9bee-a4cf4300506b.png",
+    "sha256": "9a09505d95f26756fa82edff211ca23499a22610db8ff7fbc842798d1bcb226c",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_mg_nest_icon_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-65f2c524-8293-4950-acf1-25a6abe1c95f.png",
+    "sha256": "98544731efd9920c5104c47ac77011ebffd22bb303a16128a0c0e0f5f337beb7",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_money_icon_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-fedb7992-f8b5-427c-9f4c-a9a5bf9c4d91.png",
+    "sha256": "6ec7f220b8437d140e6f99bdf6aa8ea5e45d0a2e4f958fa135cd0b555df7031a",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_money_icon_v002.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-e8254dfe-52b0-43cd-8a94-31a3f11521c1.png",
+    "sha256": "e2a87b9de69e9860060f7d8fc873c0d444b98c295b25f3f503440f402601fd48",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_small_status_panel_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-8f95bc16-6058-4221-8937-60723d8c306c.png",
+    "sha256": "5d7745ea20c2856cbfddb0f481a5422cdf07ba7a2a846cf9a24b2407d49e1acc",
+    "native_size": [
+      2048,
+      768
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_sniper_tower_icon_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-961922bc-36bb-4923-acf5-d6ed9d2899f0.png",
+    "sha256": "7970b7a78ad921e8acc1a3965edacc751dc34faa256dc613dea92d721ee5f5ab",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_start_wave_button_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-35a6c4b1-2b9b-4677-a0c3-0be6bd5151c3.png",
+    "sha256": "db82b0554f46480de87ad5c282881e22c718ea018205b8b41ac05e7fb887a147",
+    "native_size": [
+      2172,
+      724
+    ],
+    "native_mode": "RGB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_wave_icon_v001.png",
+    "returned_path": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-3ea23e31-577f-4fda-a41d-49839ee96c65.png",
+    "sha256": "3ae9bf258df9c31337455d0edaad66f947758d250b89ec0cf128b6dd4ee9df54",
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB"
+  }
+]

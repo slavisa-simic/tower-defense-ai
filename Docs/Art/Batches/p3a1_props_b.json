@@ -1,0 +1,128 @@
+[
+  {
+    "subject": "antenna",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_antenna_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_antenna_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One field-radio antenna assembly viewed exactly vertically down: compact square olive base plate and a thin cross of metal aerial arms centered above it. Overlapping top silhouettes only, no vertical mast elevation or perspective. No cables outside frame, ground or shadow. 64x64 logical canvas.\nOutput ONE isolated overhead pixel-art sprite on a perfectly uniform solid vivid magenta #FF00FF background. This is a chroma-key SOURCE for a deterministic transparent PNG export. Absolutely no checkerboard, gradient, white matte, shadow or magenta on the object. Center the entire silhouette with 5% margin. Match approved master materials while eliminating all perspective side faces. Clean dark silhouette edges, deliberate logical pixels, recognizable at stated logical size.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "radar_device",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_radar_device_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_radar_device_v001.png",
+    "size": [
+      96,
+      96
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One compact field radar device seen exactly vertically down: squat olive equipment base, round shallow dish seen as circular top footprint with a small central feed structure. No side-facing dish, vertical pole, beam, UI, neon or shadow. Realistic utilitarian Balkan military equipment, 96x96 logical canvas.\nOutput ONE isolated overhead pixel-art sprite on a perfectly uniform solid vivid magenta #FF00FF background. This is a chroma-key SOURCE for a deterministic transparent PNG export. Absolutely no checkerboard, gradient, white matte, shadow or magenta on the object. Center the entire silhouette with 5% margin. Match approved master materials while eliminating all perspective side faces. Clean dark silhouette edges, deliberate logical pixels, recognizable at stated logical size.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "czech_hedgehog_obstacle",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_czech_hedgehog_obstacle_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_czech_hedgehog_obstacle_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One Czech hedgehog steel obstacle, exact 90-degree overhead plan view: dark worn steel crossing bars with compact central hub and symmetric angular top silhouette, restrained dull highlights and rust. Not isometric, no vertical projected legs, no ground patch or shadow. 64x64 logical canvas.\nOutput ONE isolated overhead pixel-art sprite on a perfectly uniform solid vivid magenta #FF00FF background. This is a chroma-key SOURCE for a deterministic transparent PNG export. Absolutely no checkerboard, gradient, white matte, shadow or magenta on the object. Center the entire silhouette with 5% margin. Match approved master materials while eliminating all perspective side faces. Clean dark silhouette edges, deliberate logical pixels, recognizable at stated logical size.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "barbed_barrier_segment_visual",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_barbed_barrier_segment_visual_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_barbed_barrier_segment_visual_v001.png",
+    "size": [
+      64,
+      32
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One short horizontal military barbed-wire barrier visual, directly overhead: two dark small support feet with sparse twisted gray wire coils and sharp little barbs stretched LEFT to RIGHT. Readable silhouette, not a tangled scribble, no side-on fence elevation or ground. 64x32 logical canvas.\nOutput ONE isolated overhead pixel-art sprite on a perfectly uniform solid vivid magenta #FF00FF background. This is a chroma-key SOURCE for a deterministic transparent PNG export. Absolutely no checkerboard, gradient, white matte, shadow or magenta on the object. Center the entire silhouette with 5% margin. Match approved master materials while eliminating all perspective side faces. Clean dark silhouette edges, deliberate logical pixels, recognizable at stated logical size.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "debris_scrap",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_debris_scrap_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_debris_scrap_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One compact cluster of 3 to 5 discarded rusty steel scraps seen straight down: bent narrow plate, short beam, broken metal pieces. Muted rust and gray; sparse and coherent with open transparent gaps. No ground patch, smoke, gore, perspective or shadows. 64x64 logical canvas.\nOutput ONE isolated overhead pixel-art sprite on a perfectly uniform solid vivid magenta #FF00FF background. This is a chroma-key SOURCE for a deterministic transparent PNG export. Absolutely no checkerboard, gradient, white matte, shadow or magenta on the object. Center the entire silhouette with 5% margin. Match approved master materials while eliminating all perspective side faces. Clean dark silhouette edges, deliberate logical pixels, recognizable at stated logical size.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "wrecked_supply_box",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_wrecked_supply_box_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_wrecked_supply_box_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One smashed wooden military supply box from directly overhead: broken square lid, split boards and a few retained contents in dark interior, muted wood and metal straps. No upright facade or perspective, no scattering outside bounds or ground. 64x64 logical canvas.\nOutput ONE isolated overhead pixel-art sprite on a perfectly uniform solid vivid magenta #FF00FF background. This is a chroma-key SOURCE for a deterministic transparent PNG export. Absolutely no checkerboard, gradient, white matte, shadow or magenta on the object. Center the entire silhouette with 5% margin. Match approved master materials while eliminating all perspective side faces. Clean dark silhouette edges, deliberate logical pixels, recognizable at stated logical size.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "floodlight",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_floodlight_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_floodlight_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One portable military twin-head floodlight assembly from exactly vertically overhead: two broader lamp housings adjacent on a short crossbar above a compact support footprint. Olive steel, dull pale lamp lenses, oriented RIGHT. Distinct from a single searchlight. No beams, bloom, tall front-facing stand, ground or shadow. 64x64 logical canvas.\nOutput ONE isolated overhead pixel-art sprite on a perfectly uniform solid vivid magenta #FF00FF background. This is a chroma-key SOURCE for a deterministic transparent PNG export. Absolutely no checkerboard, gradient, white matte, shadow or magenta on the object. Center the entire silhouette with 5% margin. Match approved master materials while eliminating all perspective side faces. Clean dark silhouette edges, deliberate logical pixels, recognizable at stated logical size.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "warning_sign",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_warning_sign_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_warning_sign_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One flat rectangular quarantine warning placard lying horizontally on the ground, viewed exactly vertically down: weathered amber plate, dark border and a simple dark radiation trefoil symbol, no words. It is a flat ground-facing sign, not an upright sign viewed from the front. Transparent outside the rectangular board; no ground patch. 64x64 logical canvas.\nOutput ONE isolated overhead pixel-art sprite on a perfectly uniform solid vivid magenta #FF00FF background. This is a chroma-key SOURCE for a deterministic transparent PNG export. Absolutely no checkerboard, gradient, white matte, shadow or magenta on the object. Center the entire silhouette with 5% margin. Match approved master materials while eliminating all perspective side faces. Clean dark silhouette edges, deliberate logical pixels, recognizable at stated logical size.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "quarantine_fence_segment",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_quarantine_fence_segment_v001.png",
+    "output": "Assets/Game/Art/Props/bd_prop_quarantine_fence_segment_v001.png",
+    "size": [
+      64,
+      32
+    ],
+    "alpha": true,
+    "colors": 24,
+    "margin": 2,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One horizontal quarantine wire-fence segment viewed exactly vertically down: two compact square post tops linked by a narrow gray metal mesh/wire top footprint, a restrained amber clip. Do not draw a front-facing tall fence rectangle. Distinct from loose barbed wire; no ground, shadow or new gameplay. 64x32 logical canvas.\nOutput ONE isolated overhead pixel-art sprite on a perfectly uniform solid vivid magenta #FF00FF background. This is a chroma-key SOURCE for a deterministic transparent PNG export. Absolutely no checkerboard, gradient, white matte, shadow or magenta on the object. Center the entire silhouette with 5% margin. Match approved master materials while eliminating all perspective side faces. Clean dark silhouette edges, deliberate logical pixels, recognizable at stated logical size.",
+    "matte": "magenta"
+  }
+]

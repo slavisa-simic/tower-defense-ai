@@ -1,0 +1,142 @@
+[
+  {
+    "subject": "bunker_corner",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_corner_v001.png",
+    "output": "Assets/Game/Art/Base/bd_base_bunker_corner_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "margin": 2,
+    "colors": 24,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One L-shaped corner of a low concrete bunker wall seen exactly vertically down, ONLY the flat wall top. Right angle, outer silhouette square, each arm about 26 logical pixels thick within a 64x64 canvas. Worn muted gray concrete with restrained dark outline. No floor inside the L, no front or side vertical walls, no roof across the open corner, no ground/shadow.\nOutput ONE isolated sprite on a perfectly uniform SOLID MAGENTA #FF00FF background, including any holes and open center. This is a chroma-key production source. No checkerboard, gray matte, magenta reflected light or edge glow. Center complete silhouette with 5% breathing room. Use deliberate large logical pixels and restrained 3-5-tone ramps per material; keep readable at stated logical dimensions. Exact overhead orthographic XY, only horizontal upper surfaces. No montage, ground patch, base pedestal, cinematic shadow or extruded sidewalls.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "bunker_wall_segment",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_wall_segment_v001.png",
+    "output": "Assets/Game/Art/Base/bd_base_bunker_wall_segment_v001.png",
+    "size": [
+      64,
+      32
+    ],
+    "alpha": true,
+    "margin": 2,
+    "colors": 24,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One horizontal straight concrete bunker-wall segment in exact overhead plan view, ONLY rectangular top cap. About 60x26 logical pixels within a 64x32 canvas, matching concrete and thickness of the corner pieces. Worn gray-green top, few hairline cracks, dark one-pixel edge. No front/side facade, no ground or cast shadow.\nOutput ONE isolated sprite on a perfectly uniform SOLID MAGENTA #FF00FF background, including any holes and open center. This is a chroma-key production source. No checkerboard, gray matte, magenta reflected light or edge glow. Center complete silhouette with 5% breathing room. Use deliberate large logical pixels and restrained 3-5-tone ramps per material; keep readable at stated logical dimensions. Exact overhead orthographic XY, only horizontal upper surfaces. No montage, ground patch, base pedestal, cinematic shadow or extruded sidewalls.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "bunker_gate_piece",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_gate_piece_v001.png",
+    "output": "Assets/Game/Art/Base/bd_base_bunker_gate_piece_v001.png",
+    "size": [
+      128,
+      64
+    ],
+    "alpha": true,
+    "margin": 2,
+    "colors": 24,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One military checkpoint gate module from exactly vertically above: two small concrete mounting blocks at LEFT and RIGHT ends with a closed horizontal dark olive sliding barrier between, a few restrained amber safety tabs. Only top surfaces, never a tall front-facing gate. Horizontal 128x64 logical canvas. Match bunker concrete and dark steel. No floor/ground or shadows.\nOutput ONE isolated sprite on a perfectly uniform SOLID MAGENTA #FF00FF background, including any holes and open center. This is a chroma-key production source. No checkerboard, gray matte, magenta reflected light or edge glow. Center complete silhouette with 5% breathing room. Use deliberate large logical pixels and restrained 3-5-tone ramps per material; keep readable at stated logical dimensions. Exact overhead orthographic XY, only horizontal upper surfaces. No montage, ground patch, base pedestal, cinematic shadow or extruded sidewalls.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "watch_post",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_watch_post_v001.png",
+    "output": "Assets/Game/Art/Base/bd_base_watch_post_v001.png",
+    "size": [
+      96,
+      96
+    ],
+    "alpha": true,
+    "margin": 2,
+    "colors": 24,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One small military observation post ROOF in exact vertical overhead plan: square weathered olive roof with simple center ridge and compact perimeter frame, a small radio aerial footprint on one corner. No visible walls, ladder elevation, window facade, occupants or tall shadow. 96x96 logical canvas.\nOutput ONE isolated sprite on a perfectly uniform SOLID MAGENTA #FF00FF background, including any holes and open center. This is a chroma-key production source. No checkerboard, gray matte, magenta reflected light or edge glow. Center complete silhouette with 5% breathing room. Use deliberate large logical pixels and restrained 3-5-tone ramps per material; keep readable at stated logical dimensions. Exact overhead orthographic XY, only horizontal upper surfaces. No montage, ground patch, base pedestal, cinematic shadow or extruded sidewalls.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "command_post_object",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_command_post_object_v001.png",
+    "output": "Assets/Game/Art/Base/bd_base_command_post_object_v001.png",
+    "size": [
+      192,
+      192
+    ],
+    "alpha": true,
+    "margin": 2,
+    "colors": 24,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One quarantine command bunker seen exactly vertically down, square concrete flat roof with perimeter rim, small circular vent and compact antenna top. Small simple muted red-blue-white tricolor recognition patch on roof, no text or emblem detail. ONLY roof/top cap, absolutely no front/side walls, no stairs, no surrounding floor. Strong 3x3-cell base silhouette in a 192x192 logical canvas.\nOutput ONE isolated sprite on a perfectly uniform SOLID MAGENTA #FF00FF background, including any holes and open center. This is a chroma-key production source. No checkerboard, gray matte, magenta reflected light or edge glow. Center complete silhouette with 5% breathing room. Use deliberate large logical pixels and restrained 3-5-tone ramps per material; keep readable at stated logical dimensions. Exact overhead orthographic XY, only horizontal upper surfaces. No montage, ground patch, base pedestal, cinematic shadow or extruded sidewalls.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "military_tent_topdown",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_military_tent_topdown_v001.png",
+    "output": "Assets/Game/Art/Base/bd_base_military_tent_topdown_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "alpha": true,
+    "margin": 2,
+    "colors": 24,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One military canvas tent from exact vertical overhead: square/rectangular olive canvas roof, simple ridge and diagonal roof seams, subtle patch repair, dark outline. Symmetric plan shape, no front opening or sidewalls, no ropes reaching far outside, no ground or cast shadow. 128x128 logical canvas.\nOutput ONE isolated sprite on a perfectly uniform SOLID MAGENTA #FF00FF background, including any holes and open center. This is a chroma-key production source. No checkerboard, gray matte, magenta reflected light or edge glow. Center complete silhouette with 5% breathing room. Use deliberate large logical pixels and restrained 3-5-tone ramps per material; keep readable at stated logical dimensions. Exact overhead orthographic XY, only horizontal upper surfaces. No montage, ground patch, base pedestal, cinematic shadow or extruded sidewalls.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "generator_unit",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_generator_unit_v001.png",
+    "output": "Assets/Game/Art/Base/bd_base_generator_unit_v001.png",
+    "size": [
+      96,
+      64
+    ],
+    "alpha": true,
+    "margin": 2,
+    "colors": 24,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One squat military generator from exactly overhead: horizontal olive rectangular top panel, dark ventilation grille, one filler cap and thin steel frame on upper surface. No readable text, front control panel perspective, wheels viewed from side, attached cables or shadow. 96x64 logical canvas.\nOutput ONE isolated sprite on a perfectly uniform SOLID MAGENTA #FF00FF background, including any holes and open center. This is a chroma-key production source. No checkerboard, gray matte, magenta reflected light or edge glow. Center complete silhouette with 5% breathing room. Use deliberate large logical pixels and restrained 3-5-tone ramps per material; keep readable at stated logical dimensions. Exact overhead orthographic XY, only horizontal upper surfaces. No montage, ground patch, base pedestal, cinematic shadow or extruded sidewalls.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "ammo_supply_crate_cluster",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_ammo_supply_crate_cluster_v001.png",
+    "output": "Assets/Game/Art/Base/bd_base_ammo_supply_crate_cluster_v001.png",
+    "size": [
+      96,
+      64
+    ],
+    "alpha": true,
+    "margin": 2,
+    "colors": 24,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One compact group of 3 military ammunition supply crates from exact overhead: olive rectangular LID tops, one overlapping smaller crate, metal straps and restrained amber ammunition markings with no words. No side faces, perspective, ground or shadow. Horizontal compact cluster 96x64 logical canvas.\nOutput ONE isolated sprite on a perfectly uniform SOLID MAGENTA #FF00FF background, including any holes and open center. This is a chroma-key production source. No checkerboard, gray matte, magenta reflected light or edge glow. Center complete silhouette with 5% breathing room. Use deliberate large logical pixels and restrained 3-5-tone ramps per material; keep readable at stated logical dimensions. Exact overhead orthographic XY, only horizontal upper surfaces. No montage, ground patch, base pedestal, cinematic shadow or extruded sidewalls.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "defensive_sandbag_nest_base",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_defensive_sandbag_nest_base_v001.png",
+    "output": "Assets/Game/Art/Base/bd_base_defensive_sandbag_nest_base_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "margin": 2,
+    "colors": 24,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One U-shaped sandbag nest BASE viewed directly from above, muted tan-olive bag tops, opening to RIGHT, clear EMPTY SOLID MAGENTA center for a future weapon. No gun, unit, concrete floor or ground. 64x64 logical canvas, single chunky pixel outline, enough open central area.\nOutput ONE isolated sprite on a perfectly uniform SOLID MAGENTA #FF00FF background, including any holes and open center. This is a chroma-key production source. No checkerboard, gray matte, magenta reflected light or edge glow. Center complete silhouette with 5% breathing room. Use deliberate large logical pixels and restrained 3-5-tone ramps per material; keep readable at stated logical dimensions. Exact overhead orthographic XY, only horizontal upper surfaces. No montage, ground patch, base pedestal, cinematic shadow or extruded sidewalls.",
+    "matte": "magenta"
+  },
+  {
+    "subject": "river_checkpoint_marker",
+    "source": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_river_checkpoint_marker_v001.png",
+    "output": "Assets/Game/Art/Base/bd_base_river_checkpoint_marker_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": true,
+    "margin": 2,
+    "colors": 24,
+    "prompt": "Use case: stylized-concept. Create ONE production asset for the strict overhead pixel-art game Border Defenders.\nInput image 1 is the APPROVED MASTER STYLE REFERENCE v002, style/palette only, NOT an edit target. Match its restrained gritty Danube quarantine-line pixel art.\nPalette anchors: shadow #1F292C, river deep #17444C, shallow #2D5C5D, wet mud #5A4633, dry soil #816445, grass #4B5538, olive #636B44, concrete #939486, steel #5A615D, rust #7F4833, bone #C1B19E, amber #C18A3E. Use only the relevant material ramp, roughly 3-5 shades. Keep terrain less contrasted than props. Flat square pixel clusters; no blur, antialiasing, photographic texture, fine noise, isometric geometry or perspective. View exactly vertically down. No long baked shadows. No labels, captions, watermark, board borders, grid lines, mockup, montage or additional assets.\nSubject: One flat military river-checkpoint ground marker from strict vertical overhead: compact olive/gray square metal plate with a bold weathered bone chevron pointing LEFT toward the river and small amber corner tabs. No text, pole, front-facing sign, flag, shadow or ground. 64x64 logical canvas.\nOutput ONE isolated sprite on a perfectly uniform SOLID MAGENTA #FF00FF background, including any holes and open center. This is a chroma-key production source. No checkerboard, gray matte, magenta reflected light or edge glow. Center complete silhouette with 5% breathing room. Use deliberate large logical pixels and restrained 3-5-tone ramps per material; keep readable at stated logical dimensions. Exact overhead orthographic XY, only horizontal upper surfaces. No montage, ground patch, base pedestal, cinematic shadow or extruded sidewalls.",
+    "matte": "magenta"
+  }
+]

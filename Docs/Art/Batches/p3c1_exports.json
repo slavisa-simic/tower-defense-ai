@@ -1,0 +1,222 @@
+[
+  {
+    "path": "Assets/Game/Art/Environment/Vegetation/bd_env_reeds_v001.png",
+    "source": "reeds v002",
+    "width": 48,
+    "height": 48,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 93
+  },
+  {
+    "path": "Assets/Game/Art/Environment/Vegetation/bd_env_shrub_v001.png",
+    "source": "shrub v001",
+    "width": 48,
+    "height": 48,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 65
+  },
+  {
+    "path": "Assets/Game/Art/Environment/Vegetation/bd_env_grass_tuft_v001.png",
+    "source": "grass v001",
+    "width": 32,
+    "height": 32,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 71
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_00_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 84
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_01_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 114
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_02_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 127
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_03_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 111
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_04_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 115
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_05_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 101
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_06_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 115
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_07_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 98
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_08_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 101
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_09_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 101
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_10_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 101
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_11_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 98
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_12_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 93
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_13_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 93
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_14_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 93
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_15_v002.png",
+    "source": "wire cross v001 canonical arm/center",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "binary",
+    "colors": 90
+  },
+  {
+    "path": "Assets/Game/Art/Effects/ContactShadow/bd_fx_contact_shadow_v001.png",
+    "source": "shared code-native pixel contact ellipse; no generated source",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "pivot": "center",
+    "filter": "Point",
+    "alpha": "clustered 0/100/180",
+    "colors": 2
+  }
+]

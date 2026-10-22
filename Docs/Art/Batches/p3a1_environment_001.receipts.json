@@ -1,0 +1,37 @@
+[
+  {
+    "subject": "wet_bank_transition_tile",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-ff48d046-a797-4ef5-9d71-7ec63d8aa2e5.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_wet_bank_transition_tile_v001.png"
+  },
+  {
+    "subject": "grass_tile",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-55c3466f-ff8e-4d96-bb05-55328fe262d6.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_grass_tile_v001.png"
+  },
+  {
+    "subject": "dirt_tile",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-43afba0a-3309-431b-97a0-bf8641185689.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_dirt_tile_v001.png"
+  },
+  {
+    "subject": "cracked_ground_tile",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-929e718b-0e65-4e35-b82a-8afa1a1a4dfc.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_cracked_ground_tile_v001.png"
+  },
+  {
+    "subject": "bunker_floor_tile",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-2ebd2d00-40ed-4926-ab1e-2231299bf76a.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_bunker_floor_tile_v001.png"
+  },
+  {
+    "subject": "concrete_tile",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-1c3aeca2-c3fd-4686-a123-52afa963603d.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_concrete_tile_v001.png"
+  },
+  {
+    "subject": "road_tile",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-13c1fc1f-3a45-4e28-bf97-3f9e5f7a2c9b.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_road_tile_v001.png"
+  }
+]

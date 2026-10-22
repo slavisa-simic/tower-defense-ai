@@ -1,0 +1,47 @@
+[
+  {
+    "subject": "antenna",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-e7dd6c8c-502b-4c3a-943a-4a59b09f5895.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_antenna_v001.png"
+  },
+  {
+    "subject": "radar_device",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-c5f1b8c3-828b-4137-ac68-54c64275c23a.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_radar_device_v001.png"
+  },
+  {
+    "subject": "czech_hedgehog_obstacle",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-f33df25f-b67c-43c8-9580-e3217e250a3a.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_czech_hedgehog_obstacle_v001.png"
+  },
+  {
+    "subject": "barbed_barrier_segment_visual",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-a0b40134-9244-44f1-85ef-dd836083a384.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_barbed_barrier_segment_visual_v001.png"
+  },
+  {
+    "subject": "debris_scrap",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-7ab377b2-70df-42f0-9f2b-6fe0d37958a8.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_debris_scrap_v001.png"
+  },
+  {
+    "subject": "wrecked_supply_box",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-a0ff147c-a1e5-45e7-8161-7b8088fcf5bf.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_wrecked_supply_box_v001.png"
+  },
+  {
+    "subject": "floodlight",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-756c9028-120f-40e1-8bb8-dbb6f5bde7a9.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_floodlight_v001.png"
+  },
+  {
+    "subject": "warning_sign",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-a40a86b6-7a64-4e95-a922-5ba76ad0e9b9.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_warning_sign_v001.png"
+  },
+  {
+    "subject": "quarantine_fence_segment",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-ab91bd96-5e62-4236-bbb0-7f43f6b923f3.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_quarantine_fence_segment_v001.png"
+  }
+]

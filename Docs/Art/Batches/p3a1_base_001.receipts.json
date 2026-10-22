@@ -1,0 +1,57 @@
+[
+  {
+    "subject": "bunker_corner",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-b8ebf62d-73fe-4616-8aff-e0763f242cf3.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_corner_v001.png"
+  },
+  {
+    "subject": "bunker_wall_segment",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-8dc1cc54-0cf0-4350-8989-6dc0efd3d9cf.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_wall_segment_v001.png"
+  },
+  {
+    "subject": "bunker_gate_piece",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-fa473910-6a8a-4481-a185-7c0937567699.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_gate_piece_v001.png"
+  },
+  {
+    "subject": "watch_post",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-ba84fd2a-6523-4003-9bcb-0e873c8b3d4d.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_watch_post_v001.png"
+  },
+  {
+    "subject": "command_post_object",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-57c973e4-ef7a-48e8-a95a-6e5ae5f2d0e6.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_command_post_object_v001.png"
+  },
+  {
+    "subject": "military_tent_topdown",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-fd096c3b-6374-4e26-a303-b09000d55cd2.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_military_tent_topdown_v001.png"
+  },
+  {
+    "subject": "generator_unit",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-3875931c-97ba-437e-b302-3112756063c2.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_generator_unit_v001.png"
+  },
+  {
+    "subject": "ammo_supply_crate_cluster",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-fd53883e-2e41-40cd-bf16-3ac101426ff4.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_ammo_supply_crate_cluster_v001.png"
+  },
+  {
+    "subject": "defensive_sandbag_nest_base",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-bffe8ed4-7478-428d-a4a7-fbb26d5f6f48.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_defensive_sandbag_nest_base_v001.png"
+  },
+  {
+    "subject": "river_checkpoint_marker",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-e9d452ed-584c-4c5c-8f11-2e84928f5f52.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_river_checkpoint_marker_v001.png"
+  },
+  {
+    "subject": "spotlight",
+    "source": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0b1b5-5187-73b1-ab47-d87b085ef564\\exec-52e313cf-d425-4e7d-8f8a-31f4968d0111.png",
+    "dest": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v002.png"
+  }
+]

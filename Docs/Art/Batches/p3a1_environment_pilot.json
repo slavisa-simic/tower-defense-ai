@@ -1,0 +1,5 @@
+[
+  {"source":"Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_deep_danube_water_tile_v001.png","output":"Assets/Game/Art/Environment/bd_env_deep_danube_water_tile_v001.png","size":[64,64],"alpha":false,"repeat":"xy","palette":["#153239","#17444C","#1D4850","#245058"]},
+  {"source":"Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_shallow_water_tile_v001.png","output":"Assets/Game/Art/Environment/bd_env_shallow_water_tile_v001.png","size":[64,64],"alpha":false,"repeat":"xy","palette":["#21484C","#295458","#2D5C5D","#396666"]},
+  {"source":"Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_muddy_shore_tile_v001.png","output":"Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png","size":[64,64],"alpha":false,"repeat":"xy","palette":["#493B2D","#55412F","#5A4633","#6C5137","#795C3E"]}
+]

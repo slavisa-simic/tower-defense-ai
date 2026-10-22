@@ -1,0 +1,2226 @@
+[
+  {
+    "id": "MgMuzzle",
+    "name": "mg_muzzle",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_mg_muzzle_v002.png",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "sourceHash": "d9cb3a551da16129cc640eb6eea1a81d2134b6d933bb0a1e4950cfdb7ee4ad4c",
+    "path": "Assets/Game/Art/Effects/Combat/MachineGun/bd_fx_mg_muzzle_sheet_v001.png",
+    "count": 4,
+    "frame": 32,
+    "dimensions": [
+      128,
+      32
+    ],
+    "fps": 48,
+    "channel": "Burst",
+    "layer": "Effects",
+    "order": 10,
+    "lifetime": 0,
+    "opacity": 1,
+    "fade": 0.15,
+    "pivot": [
+      0.375,
+      0.53125
+    ],
+    "sourceCenters": [
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ]
+    ],
+    "sourceCropSide": 579,
+    "crops": [
+      [
+        -18,
+        72,
+        561,
+        651
+      ],
+      [
+        -18,
+        72,
+        561,
+        651
+      ],
+      [
+        -18,
+        72,
+        561,
+        651
+      ],
+      [
+        -18,
+        72,
+        561,
+        651
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        5,
+        8,
+        28,
+        23
+      ],
+      [
+        5,
+        8,
+        27,
+        23
+      ],
+      [
+        8,
+        10,
+        27,
+        22
+      ],
+      [
+        8,
+        11,
+        25,
+        21
+      ]
+    ]
+  },
+  {
+    "id": "SniperMuzzle",
+    "name": "sniper_muzzle",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_sniper_muzzle_v001.png",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "sourceHash": "933ce9bacccf8887f1932ee34ca81ac3fbcfbb0e597e1225016e1151edf9fdd6",
+    "path": "Assets/Game/Art/Effects/Combat/Sniper/bd_fx_sniper_muzzle_sheet_v001.png",
+    "count": 3,
+    "frame": 48,
+    "dimensions": [
+      144,
+      48
+    ],
+    "fps": 40,
+    "channel": "Burst",
+    "layer": "Effects",
+    "order": 10,
+    "lifetime": 0,
+    "opacity": 1,
+    "fade": 0.15,
+    "pivot": [
+      0.33333,
+      0.52083
+    ],
+    "sourceCenters": [
+      [
+        362.0,
+        362.0
+      ],
+      [
+        362.0,
+        362.0
+      ],
+      [
+        362.0,
+        362.0
+      ]
+    ],
+    "sourceCropSide": 685,
+    "crops": [
+      [
+        20,
+        20,
+        705,
+        705
+      ],
+      [
+        20,
+        20,
+        705,
+        705
+      ],
+      [
+        20,
+        20,
+        705,
+        705
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        13,
+        17,
+        29,
+        30
+      ],
+      [
+        6,
+        11,
+        43,
+        36
+      ],
+      [
+        9,
+        15,
+        38,
+        30
+      ]
+    ]
+  },
+  {
+    "id": "ImpactDirt",
+    "name": "impact_dirt",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_impact_dirt_v001.png",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "sourceHash": "8c4e56fc182cd3eee9e1ebf62a6b9e50b4d530fff6ff0073e24247a0b6fd653a",
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_dirt_sheet_v001.png",
+    "count": 4,
+    "frame": 32,
+    "dimensions": [
+      128,
+      32
+    ],
+    "fps": 20,
+    "channel": "Burst",
+    "layer": "Effects",
+    "order": 3,
+    "lifetime": 0,
+    "opacity": 0.85,
+    "fade": 0.4,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ]
+    ],
+    "sourceCropSide": 490,
+    "crops": [
+      [
+        26,
+        117,
+        516,
+        607
+      ],
+      [
+        26,
+        117,
+        516,
+        607
+      ],
+      [
+        26,
+        117,
+        516,
+        607
+      ],
+      [
+        26,
+        117,
+        516,
+        607
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        10,
+        9,
+        23,
+        23
+      ],
+      [
+        5,
+        5,
+        26,
+        25
+      ],
+      [
+        4,
+        5,
+        26,
+        28
+      ],
+      [
+        6,
+        7,
+        24,
+        25
+      ]
+    ]
+  },
+  {
+    "id": "ImpactMud",
+    "name": "impact_mud",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_impact_mud_v001.png",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "sourceHash": "dc12e7cd5d13c8908893ba8793c7f75c21833ddbc6fae5ac52c4c5b6a8188253",
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_mud_sheet_v001.png",
+    "count": 4,
+    "frame": 32,
+    "dimensions": [
+      128,
+      32
+    ],
+    "fps": 20,
+    "channel": "Burst",
+    "layer": "Effects",
+    "order": 3,
+    "lifetime": 0,
+    "opacity": 0.9,
+    "fade": 0.4,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ]
+    ],
+    "sourceCropSide": 561,
+    "crops": [
+      [
+        -9,
+        82,
+        552,
+        643
+      ],
+      [
+        -9,
+        82,
+        552,
+        643
+      ],
+      [
+        -9,
+        82,
+        552,
+        643
+      ],
+      [
+        -9,
+        82,
+        552,
+        643
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        17,
+        13,
+        23,
+        20
+      ],
+      [
+        11,
+        10,
+        23,
+        21
+      ],
+      [
+        5,
+        9,
+        21,
+        24
+      ],
+      [
+        4,
+        9,
+        16,
+        21
+      ]
+    ]
+  },
+  {
+    "id": "ImpactConcrete",
+    "name": "impact_concrete",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_impact_concrete_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceHash": "d3c7f13eb0231e010c46f0ee0642e0ce4896c35776c12a741cd8996892dcd8b1",
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_concrete_sheet_v001.png",
+    "count": 4,
+    "frame": 32,
+    "dimensions": [
+      128,
+      32
+    ],
+    "fps": 24,
+    "channel": "Burst",
+    "layer": "Effects",
+    "order": 3,
+    "lifetime": 0,
+    "opacity": 0.9,
+    "fade": 0.4,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        192.0,
+        512.0
+      ],
+      [
+        192.0,
+        512.0
+      ],
+      [
+        192.0,
+        512.0
+      ],
+      [
+        192.0,
+        512.0
+      ]
+    ],
+    "sourceCropSide": 324,
+    "crops": [
+      [
+        30,
+        350,
+        354,
+        674
+      ],
+      [
+        30,
+        350,
+        354,
+        674
+      ],
+      [
+        30,
+        350,
+        354,
+        674
+      ],
+      [
+        30,
+        350,
+        354,
+        674
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        12,
+        9,
+        24,
+        23
+      ],
+      [
+        5,
+        5,
+        26,
+        25
+      ],
+      [
+        4,
+        5,
+        26,
+        27
+      ],
+      [
+        4,
+        7,
+        24,
+        25
+      ]
+    ]
+  },
+  {
+    "id": "ImpactMetal",
+    "name": "impact_metal",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_impact_metal_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceHash": "d420080e31defe50bc27406edec6f079c6e057119e2532639b1758517eb09c3f",
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_metal_sheet_v001.png",
+    "count": 4,
+    "frame": 32,
+    "dimensions": [
+      128,
+      32
+    ],
+    "fps": 24,
+    "channel": "Burst",
+    "layer": "Effects",
+    "order": 3,
+    "lifetime": 0,
+    "opacity": 1,
+    "fade": 0.4,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        192.0,
+        512.0
+      ],
+      [
+        192.0,
+        512.0
+      ],
+      [
+        192.0,
+        512.0
+      ],
+      [
+        192.0,
+        512.0
+      ]
+    ],
+    "sourceCropSide": 403,
+    "crops": [
+      [
+        -10,
+        310,
+        393,
+        713
+      ],
+      [
+        -10,
+        310,
+        393,
+        713
+      ],
+      [
+        -10,
+        310,
+        393,
+        713
+      ],
+      [
+        -10,
+        310,
+        393,
+        713
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        9,
+        7,
+        25,
+        21
+      ],
+      [
+        10,
+        9,
+        25,
+        22
+      ],
+      [
+        10,
+        8,
+        22,
+        20
+      ],
+      [
+        9,
+        9,
+        20,
+        19
+      ]
+    ]
+  },
+  {
+    "id": "ImpactFlesh",
+    "name": "impact_flesh",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_impact_flesh_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceHash": "653332157cc4ab6dd05011232f3af09d6d8a8a86197d37b1e8eb223a2107b3c7",
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_flesh_sheet_v001.png",
+    "count": 4,
+    "frame": 32,
+    "dimensions": [
+      128,
+      32
+    ],
+    "fps": 24,
+    "channel": "Burst",
+    "layer": "Effects",
+    "order": 3,
+    "lifetime": 0,
+    "opacity": 0.7,
+    "fade": 0.4,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        192.0,
+        512.0
+      ],
+      [
+        192.0,
+        512.0
+      ],
+      [
+        192.0,
+        512.0
+      ],
+      [
+        192.0,
+        512.0
+      ]
+    ],
+    "sourceCropSide": 321,
+    "crops": [
+      [
+        32,
+        352,
+        353,
+        673
+      ],
+      [
+        32,
+        352,
+        353,
+        673
+      ],
+      [
+        32,
+        352,
+        353,
+        673
+      ],
+      [
+        32,
+        352,
+        353,
+        673
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        11,
+        10,
+        23,
+        23
+      ],
+      [
+        8,
+        7,
+        28,
+        24
+      ],
+      [
+        5,
+        9,
+        22,
+        21
+      ],
+      [
+        6,
+        13,
+        23,
+        18
+      ]
+    ]
+  },
+  {
+    "id": "BloodHit",
+    "name": "blood_hit",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_blood_hit_v001.png",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "sourceHash": "a6144efaa877aebac1adf94342209f519e88de708d59f4b1697716112513f90b",
+    "path": "Assets/Game/Art/Effects/Blood/Hits/bd_fx_blood_hit_sheet_v001.png",
+    "count": 4,
+    "frame": 32,
+    "dimensions": [
+      128,
+      32
+    ],
+    "fps": 20,
+    "channel": "Burst",
+    "layer": "Effects",
+    "order": 2,
+    "lifetime": 0,
+    "opacity": 0.9,
+    "fade": 0.35,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ]
+    ],
+    "sourceCropSide": 394,
+    "crops": [
+      [
+        74,
+        165,
+        468,
+        559
+      ],
+      [
+        74,
+        165,
+        468,
+        559
+      ],
+      [
+        74,
+        165,
+        468,
+        559
+      ],
+      [
+        74,
+        165,
+        468,
+        559
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        12,
+        14,
+        20,
+        18
+      ],
+      [
+        5,
+        8,
+        26,
+        25
+      ],
+      [
+        5,
+        8,
+        27,
+        24
+      ],
+      [
+        5,
+        9,
+        20,
+        25
+      ]
+    ]
+  },
+  {
+    "id": "BloodDecal",
+    "name": "blood_decal",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_blood_decal_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceHash": "eda42538a9b2ed38c3877214c49385769d2778c66b52dd38fd5dbc17d2f354d4",
+    "path": "Assets/Game/Art/Effects/Blood/Death/bd_fx_blood_decal_v001.png",
+    "count": 1,
+    "frame": 32,
+    "dimensions": [
+      32,
+      32
+    ],
+    "fps": 1,
+    "channel": "Decal",
+    "layer": "GroundObjects",
+    "order": 0,
+    "lifetime": 12,
+    "opacity": 0.7,
+    "fade": 0.5,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        768.0,
+        512.0
+      ]
+    ],
+    "sourceCropSide": 429,
+    "crops": [
+      [
+        554,
+        298,
+        983,
+        727
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        4,
+        7,
+        28,
+        26
+      ]
+    ]
+  },
+  {
+    "id": "BloodDecalMedium",
+    "name": "blood_decal_medium",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_blood_decal_medium_v001.png",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "sourceHash": "28a5a210f779fc930c5c3daf3529d958aefb4148f5781ae3218f619310fd9fb9",
+    "path": "Assets/Game/Art/Effects/Blood/Death/bd_fx_blood_decal_medium_v001.png",
+    "count": 1,
+    "frame": 48,
+    "dimensions": [
+      48,
+      48
+    ],
+    "fps": 1,
+    "channel": "Decal",
+    "layer": "GroundObjects",
+    "order": 0,
+    "lifetime": 12,
+    "opacity": 0.65,
+    "fade": 0.5,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        627.0,
+        627.0
+      ]
+    ],
+    "sourceCropSide": 754,
+    "crops": [
+      [
+        250,
+        250,
+        1004,
+        1004
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        5,
+        11,
+        43,
+        38
+      ]
+    ]
+  },
+  {
+    "id": "MineExplosion",
+    "name": "mine_explosion",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_mine_explosion_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceHash": "1f415ef409800422e3c75fe1ac2b5f87d6e97922544481a7088ee661a127e2b9",
+    "path": "Assets/Game/Art/Effects/Explosions/Mine/bd_fx_mine_explosion_sheet_v001.png",
+    "count": 8,
+    "frame": 128,
+    "dimensions": [
+      1024,
+      128
+    ],
+    "fps": 16,
+    "channel": "Burst",
+    "layer": "Effects",
+    "order": 8,
+    "lifetime": 0,
+    "opacity": 0.95,
+    "fade": 0.4,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        204,
+        280
+      ],
+      [
+        198,
+        280
+      ],
+      [
+        180,
+        280
+      ],
+      [
+        178,
+        280
+      ],
+      [
+        204,
+        216
+      ],
+      [
+        198,
+        216
+      ],
+      [
+        180,
+        216
+      ],
+      [
+        178,
+        216
+      ]
+    ],
+    "sourceCropSide": 453,
+    "crops": [
+      [
+        -22,
+        54,
+        431,
+        507
+      ],
+      [
+        -28,
+        54,
+        425,
+        507
+      ],
+      [
+        -46,
+        54,
+        407,
+        507
+      ],
+      [
+        -48,
+        54,
+        405,
+        507
+      ],
+      [
+        -22,
+        -10,
+        431,
+        443
+      ],
+      [
+        -28,
+        -10,
+        425,
+        443
+      ],
+      [
+        -46,
+        -10,
+        407,
+        443
+      ],
+      [
+        -48,
+        -10,
+        405,
+        443
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        45,
+        42,
+        88,
+        83
+      ],
+      [
+        25,
+        28,
+        96,
+        98
+      ],
+      [
+        16,
+        20,
+        110,
+        110
+      ],
+      [
+        21,
+        23,
+        109,
+        105
+      ],
+      [
+        20,
+        13,
+        112,
+        110
+      ],
+      [
+        20,
+        19,
+        106,
+        100
+      ],
+      [
+        25,
+        25,
+        102,
+        99
+      ],
+      [
+        28,
+        34,
+        98,
+        92
+      ]
+    ]
+  },
+  {
+    "id": "ExplosionSmall",
+    "name": "explosion_small",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_explosion_small_v001.png",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "sourceHash": "983241cc9f367afca4f0affec00b51352e31c0ad4eb0b86fed0fd7b6a2b7417d",
+    "path": "Assets/Game/Art/Effects/Explosions/Generic/bd_fx_explosion_small_sheet_v001.png",
+    "count": 6,
+    "frame": 64,
+    "dimensions": [
+      384,
+      64
+    ],
+    "fps": 18,
+    "channel": "Burst",
+    "layer": "Effects",
+    "order": 8,
+    "lifetime": 0,
+    "opacity": 0.9,
+    "fade": 0.4,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ]
+    ],
+    "sourceCropSide": 413,
+    "crops": [
+      [
+        -26,
+        156,
+        387,
+        569
+      ],
+      [
+        -26,
+        156,
+        387,
+        569
+      ],
+      [
+        -26,
+        156,
+        387,
+        569
+      ],
+      [
+        -26,
+        156,
+        387,
+        569
+      ],
+      [
+        -26,
+        156,
+        387,
+        569
+      ],
+      [
+        -26,
+        156,
+        387,
+        569
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        32,
+        22,
+        49,
+        41
+      ],
+      [
+        19,
+        19,
+        49,
+        47
+      ],
+      [
+        11,
+        13,
+        53,
+        53
+      ],
+      [
+        10,
+        13,
+        49,
+        50
+      ],
+      [
+        10,
+        15,
+        43,
+        50
+      ],
+      [
+        7,
+        17,
+        36,
+        44
+      ]
+    ]
+  },
+  {
+    "id": "SmokeSmall",
+    "name": "smoke_small",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_smoke_small_v001.png",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "sourceHash": "16ff7ec895ec71e128ee094e161ba94d695e06e56e35256f3f66f982fe1387fe",
+    "path": "Assets/Game/Art/Effects/Smoke/bd_fx_smoke_small_sheet_v001.png",
+    "count": 6,
+    "frame": 48,
+    "dimensions": [
+      288,
+      48
+    ],
+    "fps": 6,
+    "channel": "Smoke",
+    "layer": "Effects",
+    "order": 1,
+    "lifetime": 0,
+    "opacity": 0.32,
+    "fade": 0.5,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ]
+    ],
+    "sourceCropSide": 306,
+    "crops": [
+      [
+        28,
+        209,
+        334,
+        515
+      ],
+      [
+        28,
+        209,
+        334,
+        515
+      ],
+      [
+        28,
+        209,
+        334,
+        515
+      ],
+      [
+        28,
+        209,
+        334,
+        515
+      ],
+      [
+        28,
+        209,
+        334,
+        515
+      ],
+      [
+        28,
+        209,
+        334,
+        515
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        20,
+        15,
+        40,
+        30
+      ],
+      [
+        13,
+        10,
+        40,
+        35
+      ],
+      [
+        6,
+        5,
+        41,
+        39
+      ],
+      [
+        8,
+        7,
+        41,
+        39
+      ],
+      [
+        13,
+        11,
+        40,
+        35
+      ],
+      [
+        11,
+        15,
+        34,
+        32
+      ]
+    ]
+  },
+  {
+    "id": "SmokeMedium",
+    "name": "smoke_medium",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_smoke_medium_v001.png",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "sourceHash": "3c5dc65a7d07cf9cfdecb3a6abf29201e8b7b19d7af8d53bba7faa83ee000c96",
+    "path": "Assets/Game/Art/Effects/Smoke/bd_fx_smoke_medium_sheet_v001.png",
+    "count": 6,
+    "frame": 64,
+    "dimensions": [
+      384,
+      64
+    ],
+    "fps": 6,
+    "channel": "Smoke",
+    "layer": "Effects",
+    "order": 1,
+    "lifetime": 0,
+    "opacity": 0.28,
+    "fade": 0.6,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ]
+    ],
+    "sourceCropSide": 393,
+    "crops": [
+      [
+        -16,
+        166,
+        377,
+        559
+      ],
+      [
+        -16,
+        166,
+        377,
+        559
+      ],
+      [
+        -16,
+        166,
+        377,
+        559
+      ],
+      [
+        -16,
+        166,
+        377,
+        559
+      ],
+      [
+        -16,
+        166,
+        377,
+        559
+      ],
+      [
+        -16,
+        166,
+        377,
+        559
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        9,
+        9,
+        56,
+        53
+      ],
+      [
+        9,
+        8,
+        56,
+        54
+      ],
+      [
+        9,
+        7,
+        53,
+        53
+      ],
+      [
+        8,
+        8,
+        54,
+        54
+      ],
+      [
+        7,
+        9,
+        53,
+        55
+      ],
+      [
+        13,
+        13,
+        42,
+        50
+      ]
+    ]
+  },
+  {
+    "id": "SplashSmall",
+    "name": "water_splash_small",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_water_splash_small_v001.png",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "sourceHash": "eef8d77a716bf99599848d5a5f1feaffc17306e1e63a42744e855e5cb222c3c0",
+    "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_small_sheet_v001.png",
+    "count": 6,
+    "frame": 48,
+    "dimensions": [
+      288,
+      48
+    ],
+    "fps": 16,
+    "channel": "Burst",
+    "layer": "GroundObjects",
+    "order": 3,
+    "lifetime": 0,
+    "opacity": 0.75,
+    "fade": 0.5,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ]
+    ],
+    "sourceCropSide": 357,
+    "crops": [
+      [
+        2,
+        184,
+        359,
+        541
+      ],
+      [
+        2,
+        184,
+        359,
+        541
+      ],
+      [
+        2,
+        184,
+        359,
+        541
+      ],
+      [
+        2,
+        184,
+        359,
+        541
+      ],
+      [
+        2,
+        184,
+        359,
+        541
+      ],
+      [
+        2,
+        184,
+        359,
+        541
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        17,
+        20,
+        31,
+        28
+      ],
+      [
+        11,
+        10,
+        37,
+        37
+      ],
+      [
+        8,
+        7,
+        41,
+        39
+      ],
+      [
+        6,
+        6,
+        42,
+        41
+      ],
+      [
+        7,
+        7,
+        40,
+        39
+      ],
+      [
+        5,
+        6,
+        41,
+        41
+      ]
+    ]
+  },
+  {
+    "id": "SplashMedium",
+    "name": "water_splash_medium",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_water_splash_medium_v002.png",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "sourceHash": "2a0f26fd3d045dedb40253a598666069016cb89a89b82269635775eeed45526f",
+    "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_medium_sheet_v001.png",
+    "count": 6,
+    "frame": 64,
+    "dimensions": [
+      384,
+      64
+    ],
+    "fps": 16,
+    "channel": "Burst",
+    "layer": "GroundObjects",
+    "order": 3,
+    "lifetime": 0,
+    "opacity": 0.7,
+    "fade": 0.5,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ]
+    ],
+    "sourceCropSide": 370,
+    "crops": [
+      [
+        -4,
+        177,
+        366,
+        547
+      ],
+      [
+        -4,
+        177,
+        366,
+        547
+      ],
+      [
+        -4,
+        177,
+        366,
+        547
+      ],
+      [
+        -4,
+        177,
+        366,
+        547
+      ],
+      [
+        -4,
+        177,
+        366,
+        547
+      ],
+      [
+        -4,
+        177,
+        366,
+        547
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        19,
+        17,
+        49,
+        47
+      ],
+      [
+        10,
+        12,
+        54,
+        51
+      ],
+      [
+        6,
+        7,
+        55,
+        56
+      ],
+      [
+        8,
+        9,
+        53,
+        54
+      ],
+      [
+        7,
+        10,
+        52,
+        54
+      ],
+      [
+        10,
+        13,
+        49,
+        51
+      ]
+    ]
+  },
+  {
+    "id": "SplashLarge",
+    "name": "water_splash_large",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_water_splash_large_v001.png",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "sourceHash": "6e288287cc93d6de371e454ad95583ebcf9d3c4124da3000ef3dbffb9c695647",
+    "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_large_sheet_v001.png",
+    "count": 6,
+    "frame": 96,
+    "dimensions": [
+      576,
+      96
+    ],
+    "fps": 14,
+    "channel": "Burst",
+    "layer": "GroundObjects",
+    "order": 3,
+    "lifetime": 0,
+    "opacity": 0.65,
+    "fade": 0.5,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ]
+    ],
+    "sourceCropSide": 385,
+    "crops": [
+      [
+        -12,
+        170,
+        373,
+        555
+      ],
+      [
+        -12,
+        170,
+        373,
+        555
+      ],
+      [
+        -12,
+        170,
+        373,
+        555
+      ],
+      [
+        -12,
+        170,
+        373,
+        555
+      ],
+      [
+        -12,
+        170,
+        373,
+        555
+      ],
+      [
+        -12,
+        170,
+        373,
+        555
+      ]
+    ],
+    "loop": false,
+    "frameBounds": [
+      [
+        26,
+        23,
+        72,
+        71
+      ],
+      [
+        11,
+        12,
+        84,
+        83
+      ],
+      [
+        10,
+        10,
+        87,
+        84
+      ],
+      [
+        13,
+        12,
+        84,
+        83
+      ],
+      [
+        15,
+        17,
+        82,
+        81
+      ],
+      [
+        16,
+        17,
+        79,
+        80
+      ]
+    ]
+  },
+  {
+    "id": "WaterWake",
+    "name": "water_wake",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_water_wake_v001.png",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "sourceHash": "ad508aefdae68d4bf8588d04395af4b2ddb8dfd7947a4a0a07216d43ed20a15d",
+    "path": "Assets/Game/Art/Effects/Water/Wake/bd_fx_water_wake_sheet_v001.png",
+    "count": 4,
+    "frame": 48,
+    "dimensions": [
+      192,
+      48
+    ],
+    "fps": 6,
+    "channel": "Burst",
+    "layer": "GroundObjects",
+    "order": 2,
+    "lifetime": 0,
+    "opacity": 0.45,
+    "fade": 0.4,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ],
+      [
+        271.5,
+        362.0
+      ]
+    ],
+    "sourceCropSide": 492,
+    "crops": [
+      [
+        26,
+        116,
+        518,
+        608
+      ],
+      [
+        26,
+        116,
+        518,
+        608
+      ],
+      [
+        26,
+        116,
+        518,
+        608
+      ],
+      [
+        26,
+        116,
+        518,
+        608
+      ]
+    ],
+    "loop": true,
+    "frameBounds": [
+      [
+        9,
+        13,
+        33,
+        35
+      ],
+      [
+        6,
+        11,
+        34,
+        37
+      ],
+      [
+        5,
+        11,
+        34,
+        37
+      ],
+      [
+        6,
+        13,
+        33,
+        35
+      ]
+    ]
+  },
+  {
+    "id": "WaterRipple",
+    "name": "water_ripple",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_water_ripple_v001.png",
+    "sourceSize": [
+      2172,
+      724
+    ],
+    "sourceHash": "3a7e736418d25af44a58c5e4d3bb51dc151afe97d7625aaa3cfe69b69ddfaaaa",
+    "path": "Assets/Game/Art/Effects/World/bd_fx_water_ripple_sheet_v001.png",
+    "count": 6,
+    "frame": 64,
+    "dimensions": [
+      384,
+      64
+    ],
+    "fps": 5,
+    "channel": "Burst",
+    "layer": "Environment",
+    "order": 6,
+    "lifetime": 0,
+    "opacity": 0.28,
+    "fade": 0.6,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ],
+      [
+        181.0,
+        362.0
+      ]
+    ],
+    "sourceCropSide": 365,
+    "crops": [
+      [
+        -2,
+        180,
+        363,
+        545
+      ],
+      [
+        -2,
+        180,
+        363,
+        545
+      ],
+      [
+        -2,
+        180,
+        363,
+        545
+      ],
+      [
+        -2,
+        180,
+        363,
+        545
+      ],
+      [
+        -2,
+        180,
+        363,
+        545
+      ],
+      [
+        -2,
+        180,
+        363,
+        545
+      ]
+    ],
+    "loop": true,
+    "frameBounds": [
+      [
+        23,
+        22,
+        43,
+        40
+      ],
+      [
+        17,
+        18,
+        43,
+        44
+      ],
+      [
+        10,
+        13,
+        47,
+        48
+      ],
+      [
+        6,
+        10,
+        53,
+        53
+      ],
+      [
+        9,
+        12,
+        52,
+        52
+      ],
+      [
+        10,
+        14,
+        52,
+        52
+      ]
+    ]
+  },
+  {
+    "id": "ShoreFoam",
+    "name": "shore_foam",
+    "source": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_shore_foam_v001.png",
+    "sourceSize": [
+      1983,
+      793
+    ],
+    "sourceHash": "c2f15732dfb890f1164a940e7e09fcf17cd566cb8fff86168230dc9bd4bb6ab8",
+    "path": "Assets/Game/Art/Effects/World/bd_fx_shore_foam_sheet_v001.png",
+    "count": 4,
+    "frame": 64,
+    "dimensions": [
+      256,
+      64
+    ],
+    "fps": 3,
+    "channel": "Burst",
+    "layer": "Environment",
+    "order": 8,
+    "lifetime": 0,
+    "opacity": 0.2,
+    "fade": 0.4,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "sourceCenters": [
+      [
+        248.0,
+        396.5
+      ],
+      [
+        248.0,
+        396.5
+      ],
+      [
+        247.5,
+        396.5
+      ],
+      [
+        248.0,
+        396.5
+      ]
+    ],
+    "sourceCropSide": 599,
+    "crops": [
+      [
+        -52,
+        97,
+        547,
+        696
+      ],
+      [
+        -52,
+        97,
+        547,
+        696
+      ],
+      [
+        -52,
+        97,
+        547,
+        696
+      ],
+      [
+        -52,
+        97,
+        547,
+        696
+      ]
+    ],
+    "loop": true,
+    "frameBounds": [
+      [
+        30,
+        7,
+        42,
+        58
+      ],
+      [
+        27,
+        7,
+        38,
+        57
+      ],
+      [
+        24,
+        7,
+        37,
+        58
+      ],
+      [
+        21,
+        7,
+        33,
+        58
+      ]
+    ]
+  },
+  {
+    "id": "MgTracer",
+    "name": "mg_tracer",
+    "source": "code-native pixel streak: Docs/Art/export_phase3b.py",
+    "path": "Assets/Game/Art/Effects/Combat/MachineGun/bd_fx_mg_tracer_v001.png",
+    "count": 1,
+    "frame": 64,
+    "dimensions": [
+      64,
+      3
+    ],
+    "fps": 1,
+    "channel": "Tracer",
+    "layer": "Effects",
+    "order": 9,
+    "lifetime": 0.045,
+    "opacity": 0.8,
+    "fade": 0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "loop": false
+  },
+  {
+    "id": "SniperTracer",
+    "name": "sniper_tracer",
+    "source": "code-native pixel streak: Docs/Art/export_phase3b.py",
+    "path": "Assets/Game/Art/Effects/Combat/Sniper/bd_fx_sniper_tracer_v001.png",
+    "count": 1,
+    "frame": 64,
+    "dimensions": [
+      64,
+      5
+    ],
+    "fps": 1,
+    "channel": "Tracer",
+    "layer": "Effects",
+    "order": 9,
+    "lifetime": 0.06,
+    "opacity": 1,
+    "fade": 0,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "loop": false
+  }
+]
