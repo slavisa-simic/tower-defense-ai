@@ -1,0 +1,133 @@
+{
+  "requested": 100,
+  "setupMs": 34.2379,
+  "pathRequests": 675,
+  "actualSearches": 255,
+  "CacheHits": 420,
+  "CreatedEnemies": 135,
+  "ReusedEnemies": 0,
+  "PooledEnemies": 28,
+  "samples": 1494,
+  "medianMs": 3.2352961134165525,
+  "p95Ms": 4.0014032274484634,
+  "maxMs": 58.398902416229248,
+  "activeMin": 100,
+  "activeMax": 135,
+  "boats": 0,
+  "shots": [
+    {
+      "id": "rocket",
+      "turretShots": null,
+      "areaShots": 1
+    },
+    {
+      "id": "autocannon",
+      "turretShots": 11,
+      "areaShots": null
+    },
+    {
+      "id": "flamethrower",
+      "turretShots": null,
+      "areaShots": null
+    },
+    {
+      "id": "autocannon",
+      "turretShots": 11,
+      "areaShots": null
+    },
+    {
+      "id": "machine-gun-nest",
+      "turretShots": 21,
+      "areaShots": null
+    },
+    {
+      "id": "autocannon",
+      "turretShots": 11,
+      "areaShots": null
+    },
+    {
+      "id": "flamethrower",
+      "turretShots": null,
+      "areaShots": null
+    },
+    {
+      "id": "rocket",
+      "turretShots": null,
+      "areaShots": 1
+    },
+    {
+      "id": "barbed-wire",
+      "turretShots": null,
+      "areaShots": null
+    },
+    {
+      "id": "machine-gun-nest",
+      "turretShots": 21,
+      "areaShots": null
+    },
+    {
+      "id": "sniper-tower",
+      "turretShots": 3,
+      "areaShots": null
+    },
+    {
+      "id": "sniper-tower",
+      "turretShots": 3,
+      "areaShots": null
+    },
+    {
+      "id": "machine-gun-nest",
+      "turretShots": 21,
+      "areaShots": null
+    },
+    {
+      "id": "sniper-tower",
+      "turretShots": 3,
+      "areaShots": null
+    },
+    {
+      "id": "rocket",
+      "turretShots": null,
+      "areaShots": 1
+    },
+    {
+      "id": "flamethrower",
+      "turretShots": null,
+      "areaShots": null
+    },
+    {
+      "id": "barbed-wire",
+      "turretShots": null,
+      "areaShots": null
+    },
+    {
+      "id": "mortar",
+      "turretShots": null,
+      "areaShots": 2
+    },
+    {
+      "id": "barbed-wire",
+      "turretShots": null,
+      "areaShots": null
+    },
+    {
+      "id": "mortar",
+      "turretShots": null,
+      "areaShots": 2
+    },
+    {
+      "id": "mortar",
+      "turretShots": null,
+      "areaShots": 2
+    }
+  ],
+  "renderers": 1115,
+  "projectiles": 0,
+  "gc0": 0,
+  "gc1": 0,
+  "gc2": 0,
+  "managedMemoryDelta": 5656576,
+  "gcRecorderValid": true,
+  "gcAllocationAverage": 10932.074898785426,
+  "gcAllocationMax": 34781
+}

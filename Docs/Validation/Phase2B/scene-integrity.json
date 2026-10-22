@@ -1,0 +1,56 @@
+{
+  "diagnostics": [],
+  "compileMs": 67,
+  "executeMs": 8,
+  "assemblyName": "PipelineRunScript_phase2b-integrity_daaa8bad26764c0d85ecaf98ffa1a961",
+  "success": true,
+  "result": {
+    "scene": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+    "rootCount": 15,
+    "missingScripts": 0,
+    "brokenReferences": [],
+    "managers": [
+      {
+        "name": "GridManager",
+        "count": 1
+      },
+      {
+        "name": "GameStateController",
+        "count": 1
+      },
+      {
+        "name": "EnemySpawner",
+        "count": 1
+      },
+      {
+        "name": "EconomyManager",
+        "count": 1
+      },
+      {
+        "name": "EnemyRegistry",
+        "count": 1
+      },
+      {
+        "name": "EnemyRewardService",
+        "count": 1
+      },
+      {
+        "name": "BuildManager",
+        "count": 1
+      },
+      {
+        "name": "PlacementController",
+        "count": 1
+      },
+      {
+        "name": "PlacementInput",
+        "count": 1
+      }
+    ],
+    "definitionValid": true,
+    "startingCamera": "(0.00000, 0.00000, 0.00000, 1.00000)",
+    "plane": "XY",
+    "firstBuildScene": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+    "previewInstances": 1
+  }
+}

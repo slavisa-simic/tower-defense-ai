@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase5C\\PlayerSnapshot.cs"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "{\"saveVersion\":1,\"runId\":\"7e548815-d098-41c6-9f48-974715811b98\",\"savedUtc\":\"\",\"wave\":1,\"completedWaves\":0,\"seed\":-654804197,\"money\":49,\"maxHomicides\":1000,\"duration\":252.78330347221346,\"earned\":0,\"spent\":451,\"refunds\":0,\"dismantled\":0,\"statistics\":{\"kills\":[0,0,0,0,0,0,0,0,0],\"homicides\":0,\"breaches\":0,\"bossesBreached\":0,\"highestWave\":0,\"peakEnemies\":0,\"peakBoats\":0,\"built\":1,\"upgraded\":2,\"repaired\":0},\"events\":{\"currentId\":\"\",\"mostRecent\":\"\",\"nextWave\":5,\"wave\":0,\"sector\":0,\"wavesRemaining\":0,\"supplyReceived\":0,\"secondsRemaining\":0.0,\"warningRemaining\":0.0,\"active\":false,\"experienced\":0,\"recent\":[],\"cooldowns\":[],\"counts\":[],\"history\":[]},\"structures\":[{\"defenseId\":\"machine-gun-nest\",\"x\":12,\"y\":8,\"level\":3,\"health\":420,\"maxHealth\":450,\"constructionCost\":150,\"investment\":451,\"mineArmingRemaining\":0.0}]}"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7900,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Builds\\Phase5C-QA"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

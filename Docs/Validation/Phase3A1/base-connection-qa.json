@@ -1,0 +1,26 @@
+{
+  "coordinate_system": "Pixels from top-left of each export; values are visual attachment guides, not gameplay cells",
+  "corner_right_port": [
+    62,
+    10.5
+  ],
+  "wall_left_port": [
+    2,
+    16.0
+  ],
+  "corner_right_section": [
+    2,
+    19
+  ],
+  "wall_left_section": [
+    8,
+    24
+  ],
+  "wall_offset_relative_to_corner": [
+    57,
+    -6
+  ],
+  "overlap_pixels": 3,
+  "ppu": 51.2,
+  "placement": "Use visual child offsets; preserve root/grid footprint; corner can be rotated in 90-degree increments"
+}

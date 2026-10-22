@@ -1,0 +1,19 @@
+{
+  "requested": 200,
+  "samples": 1049,
+  "medianMs": 4.6285996213555336,
+  "p95Ms": 5.5999006144702435,
+  "maxMs": 120.9041029214859,
+  "activeMin": 200,
+  "activeMax": 235,
+  "boats": 0,
+  "renderers": 1565,
+  "projectiles": 0,
+  "gc0": 0,
+  "gc1": 0,
+  "gc2": 0,
+  "managedMemoryDelta": 3268608,
+  "gcRecorderValid": true,
+  "gcAllocationAverage": 11642.183673469388,
+  "gcAllocationMax": 34621
+}

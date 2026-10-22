@@ -1,0 +1,44 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": ".utmp/phase2c-interactions.cs",
+      "entry": "Phase2CInteractions.EnterWire"
+    },
+    "result": {
+      "diagnostics": [
+        {
+          "severity": "warning",
+          "message": "Possible unintended reference comparison; to get a value comparison, cast the left hand side to type 'Object'",
+          "line": 34,
+          "column": 54,
+          "id": "CS0252",
+          "source": "wire = wire.Anchor.ToString(), occupied = wire.Grid.OccupantAt(wire.Anchor) == wire,"
+        }
+      ],
+      "compileMs": 223,
+      "executeMs": 24,
+      "assemblyName": "PipelineRunScript_phase2c-interactions_527c83f996814602baaf4c13523ec9d3",
+      "success": true,
+      "result": {
+        "speed": 1.25,
+        "definitionSpeed": 2.5,
+        "hp": 100,
+        "position": "(11.25, 0.63, 0.00)",
+        "wire": "(25, 9)",
+        "occupied": true,
+        "walkable": true,
+        "cost": 2
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

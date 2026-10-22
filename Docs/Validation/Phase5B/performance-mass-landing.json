@@ -1,0 +1,18 @@
+{
+  "id": "mass-landing",
+  "fixtureMoney": 50000,
+  "unlimitedBreaches": true,
+  "sampleSeconds": 3,
+  "cpuValid": true,
+  "gcValid": true,
+  "frames": 1169,
+  "medianMs": 2.5269,
+  "p95Ms": 3.2085,
+  "maxMs": 9.8646,
+  "meanGcBytes": 10301.562874251496,
+  "enemies": 70,
+  "boats": 13,
+  "createdBoats": 15,
+  "renderers": 1055,
+  "eventRenderers": 2
+}

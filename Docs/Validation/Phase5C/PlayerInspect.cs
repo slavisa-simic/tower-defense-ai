@@ -1,0 +1,3 @@
+var assembly = System.Array.Find(System.AppDomain.CurrentDomain.GetAssemblies(), a => a.GetName().Name == "ShorelineDefense.Runtime");
+var settingsType = assembly.GetType("ShorelineDefense.Persistence.SettingsService"); var service = settingsType.GetProperty("Instance").GetValue(null);
+return "scene=" + UnityEngine.SceneManagement.SceneManager.GetActiveScene().name + "; actual=" + UnityEngine.Screen.width + "x" + UnityEngine.Screen.height + "; mode=" + UnityEngine.Screen.fullScreenMode + "; vsync=" + UnityEngine.QualitySettings.vSyncCount + "; settings=" + UnityEngine.JsonUtility.ToJson(settingsType.GetProperty("Current").GetValue(service));

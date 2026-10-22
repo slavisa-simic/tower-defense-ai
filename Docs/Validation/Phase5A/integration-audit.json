@@ -1,0 +1,237 @@
+{
+  "scene": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+  "isDirty": false,
+  "missing": 0,
+  "selection": 1,
+  "speed": 1,
+  "hud": 1,
+  "defenses": [
+    {
+      "Id": "autocannon",
+      "valid": true,
+      "prefab": "Assets/Game/Prefabs/Defenses/AutoCannon.prefab",
+      "guid": "9034f1f0d30eaa4469ac5dcb1badac88",
+      "upgradeObserver": true,
+      "ii": 450,
+      "iii": 750,
+      "iiOverlay": "upgrade_12",
+      "iiiOverlay": "upgrade_13"
+    },
+    {
+      "Id": "barbed-wire",
+      "valid": true,
+      "prefab": "Assets/Game/Prefabs/Defenses/BarbedWire.prefab",
+      "guid": "82f4e568363d89d4ebbc7ce1f8cd067f",
+      "upgradeObserver": true,
+      "ii": 38,
+      "iii": 63,
+      "iiOverlay": "upgrade_4",
+      "iiiOverlay": "upgrade_5"
+    },
+    {
+      "Id": "flamethrower",
+      "valid": true,
+      "prefab": "Assets/Game/Prefabs/Defenses/FlamethrowerPosition.prefab",
+      "guid": "955f0e0829ef37b4ca7cb1b1d6028ca3",
+      "upgradeObserver": true,
+      "ii": 225,
+      "iii": 375,
+      "iiOverlay": "upgrade_10",
+      "iiiOverlay": "upgrade_11"
+    },
+    {
+      "Id": "land-mine",
+      "valid": true,
+      "prefab": "Assets/Game/Prefabs/Defenses/LandMine.prefab",
+      "guid": "0ab4dc049833ee24d8b0edbd22fd89be",
+      "upgradeObserver": true,
+      "ii": 57,
+      "iii": 94,
+      "iiOverlay": "upgrade_6",
+      "iiiOverlay": "upgrade_7"
+    },
+    {
+      "Id": "machine-gun-nest",
+      "valid": true,
+      "prefab": "Assets/Game/Prefabs/Defenses/MachineGunNest.prefab",
+      "guid": "1d194432f8863b24ba6f2192469cdfa0",
+      "upgradeObserver": true,
+      "ii": 113,
+      "iii": 188,
+      "iiOverlay": "upgrade_0",
+      "iiiOverlay": "upgrade_1"
+    },
+    {
+      "Id": "mortar",
+      "valid": true,
+      "prefab": "Assets/Game/Prefabs/Defenses/MortarPosition.prefab",
+      "guid": "e8859a82c2f1a9141a4f97ef310f987c",
+      "upgradeObserver": true,
+      "ii": 300,
+      "iii": 500,
+      "iiOverlay": "upgrade_8",
+      "iiiOverlay": "upgrade_9"
+    },
+    {
+      "Id": "rocket",
+      "valid": true,
+      "prefab": "Assets/Game/Prefabs/Defenses/RocketLauncherPosition.prefab",
+      "guid": "3dc59514e6df8a5428860ff33dfeccd1",
+      "upgradeObserver": true,
+      "ii": 675,
+      "iii": 1125,
+      "iiOverlay": "upgrade_14",
+      "iiiOverlay": "upgrade_15"
+    },
+    {
+      "Id": "sniper-tower",
+      "valid": true,
+      "prefab": "Assets/Game/Prefabs/Defenses/SniperTower.prefab",
+      "guid": "1b5d3a115e5d1cf42b7bdf94d45445ff",
+      "upgradeObserver": true,
+      "ii": 225,
+      "iii": 375,
+      "iiOverlay": "upgrade_2",
+      "iiiOverlay": "upgrade_3"
+    }
+  ],
+  "texture": {
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "wrap": "Clamp",
+    "npotScale": 0,
+    "maxTextureSize": 2048
+  },
+  "sprites": [
+    {
+      "name": "upgrade_13",
+      "x": 64.0,
+      "y": 0.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_1",
+      "x": 64.0,
+      "y": 192.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_4",
+      "x": 0.0,
+      "y": 128.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_9",
+      "x": 64.0,
+      "y": 64.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_12",
+      "x": 0.0,
+      "y": 0.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_8",
+      "x": 0.0,
+      "y": 64.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_11",
+      "x": 192.0,
+      "y": 64.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_6",
+      "x": 128.0,
+      "y": 128.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_3",
+      "x": 192.0,
+      "y": 192.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_10",
+      "x": 128.0,
+      "y": 64.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_2",
+      "x": 128.0,
+      "y": 192.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_0",
+      "x": 0.0,
+      "y": 192.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_14",
+      "x": 128.0,
+      "y": 0.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_7",
+      "x": 192.0,
+      "y": 128.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_15",
+      "x": 192.0,
+      "y": 0.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    },
+    {
+      "name": "upgrade_5",
+      "x": 64.0,
+      "y": 128.0,
+      "w": 64.0,
+      "h": 64.0,
+      "pixelsPerUnit": 51.2
+    }
+  ]
+}

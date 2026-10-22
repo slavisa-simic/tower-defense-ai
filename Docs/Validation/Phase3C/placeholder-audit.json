@@ -1,0 +1,279 @@
+{
+  "scene": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+  "dirty": false,
+  "visible": 0,
+  "retainedScene": [
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 6",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 7",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 8",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 9",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 10",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 11",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 12",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 13",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 14",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 15",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 16",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 17",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 18",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 19",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 20",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 21",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 22",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 23",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 24",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 25",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 26",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 27",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 28",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 29",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 30",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 31",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Column 32",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 0",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 1",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 2",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 3",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 4",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 5",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 6",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 7",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 8",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 9",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 10",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 11",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 12",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 13",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 14",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 15",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 16",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 17",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Top-Down Coastal Graybox/Ground Cell Guides/Row 18",
+      "enabled": true,
+      "active": false
+    },
+    {
+      "path": "Placement Preview",
+      "enabled": true,
+      "active": false
+    }
+  ],
+  "prefabFallbacks": [
+    {
+      "path": "MachineGunNest/Rotating Weapon/Muzzle/Muzzle Flash",
+      "enabled": false
+    },
+    {
+      "path": "MachineGunNest/Reusable Tracer",
+      "enabled": false
+    },
+    {
+      "path": "SniperTower/Rotating Weapon/Muzzle/Muzzle Flash",
+      "enabled": false
+    },
+    {
+      "path": "SniperTower/Reusable Tracer",
+      "enabled": false
+    },
+    {
+      "path": "LandMine/Mine Explosion Flash",
+      "enabled": false
+    }
+  ],
+  "camera": {
+    "orthographicSize": 11.85,
+    "rect": "(x:0.00, y:0.17, width:1.00, height:0.69)",
+    "rotation": "(0.00, 0.00, 0.00)"
+  },
+  "sortingLayers": [
+    "Default",
+    "Environment",
+    "GroundObjects",
+    "Enemies",
+    "Defenses",
+    "Effects"
+  ],
+  "rendererCount": 208,
+  "productionSprites": 258
+}

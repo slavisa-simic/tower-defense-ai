@@ -1,0 +1,978 @@
+[
+  {
+    "path": "Assets/Game/Art/Effects/Combat/MachineGun/bd_fx_mg_muzzle_sheet_v001.png",
+    "size": [
+      128,
+      32
+    ],
+    "expectedSize": [
+      128,
+      32
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        5,
+        8,
+        28,
+        23
+      ],
+      [
+        5,
+        8,
+        27,
+        23
+      ],
+      [
+        8,
+        10,
+        27,
+        22
+      ],
+      [
+        8,
+        11,
+        25,
+        21
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "d2d4ee6da8b7f01e5a35cc0315f7360390e273d863182a789ab20bcb8c273aed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Sniper/bd_fx_sniper_muzzle_sheet_v001.png",
+    "size": [
+      144,
+      48
+    ],
+    "expectedSize": [
+      144,
+      48
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        13,
+        17,
+        29,
+        30
+      ],
+      [
+        6,
+        11,
+        43,
+        36
+      ],
+      [
+        9,
+        15,
+        38,
+        30
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "f0125c1d987e3167d44bbbde8b08b1b445b30cae12315c72577f74222f4df0e3"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_dirt_sheet_v001.png",
+    "size": [
+      128,
+      32
+    ],
+    "expectedSize": [
+      128,
+      32
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        10,
+        9,
+        23,
+        23
+      ],
+      [
+        5,
+        5,
+        26,
+        25
+      ],
+      [
+        4,
+        5,
+        26,
+        28
+      ],
+      [
+        6,
+        7,
+        24,
+        25
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "7faa8a045d3cea7fd2e11196a1ac0b83fd82c14f7afe59b0e97efe2c3bd745d9"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_mud_sheet_v001.png",
+    "size": [
+      128,
+      32
+    ],
+    "expectedSize": [
+      128,
+      32
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        17,
+        13,
+        23,
+        20
+      ],
+      [
+        11,
+        10,
+        23,
+        21
+      ],
+      [
+        5,
+        9,
+        21,
+        24
+      ],
+      [
+        4,
+        9,
+        16,
+        21
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "aac0576a87c446dcdc84ca0ea33adadc7fa3c7172505306ab8fdb5a15b92afcf"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_concrete_sheet_v001.png",
+    "size": [
+      128,
+      32
+    ],
+    "expectedSize": [
+      128,
+      32
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        12,
+        9,
+        24,
+        23
+      ],
+      [
+        5,
+        5,
+        26,
+        25
+      ],
+      [
+        4,
+        5,
+        26,
+        27
+      ],
+      [
+        4,
+        7,
+        24,
+        25
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "3bcfaa6c63b21294846e6929c7283a07dca98bc05fd019f119096ea62cffeaa4"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_metal_sheet_v001.png",
+    "size": [
+      128,
+      32
+    ],
+    "expectedSize": [
+      128,
+      32
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        9,
+        7,
+        25,
+        21
+      ],
+      [
+        10,
+        9,
+        25,
+        22
+      ],
+      [
+        10,
+        8,
+        22,
+        20
+      ],
+      [
+        9,
+        9,
+        20,
+        19
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "83d473d79a822fc074d7f75d13d5f07baffefceeb9daa432df61263293ca1392"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_flesh_sheet_v001.png",
+    "size": [
+      128,
+      32
+    ],
+    "expectedSize": [
+      128,
+      32
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        11,
+        10,
+        23,
+        23
+      ],
+      [
+        8,
+        7,
+        28,
+        24
+      ],
+      [
+        5,
+        9,
+        22,
+        21
+      ],
+      [
+        6,
+        13,
+        23,
+        18
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "547f852ff55f7b3535e5d4e12a6c0cf3f55ca457b618670dcbe916422133c550"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Blood/Hits/bd_fx_blood_hit_sheet_v001.png",
+    "size": [
+      128,
+      32
+    ],
+    "expectedSize": [
+      128,
+      32
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        12,
+        14,
+        20,
+        18
+      ],
+      [
+        5,
+        8,
+        26,
+        25
+      ],
+      [
+        5,
+        8,
+        27,
+        24
+      ],
+      [
+        5,
+        9,
+        20,
+        25
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "ca86992a3fe3e045f2d9a9fb8826aba2c9304b87ec88d5a2ab0915d51c089e9c"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Blood/Death/bd_fx_blood_decal_v001.png",
+    "size": [
+      32,
+      32
+    ],
+    "expectedSize": [
+      32,
+      32
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        4,
+        7,
+        28,
+        26
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "8aaab0d4fbd71f5545e21f590e9c16d0613c760e967a7199daae8d94902cea1c"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Blood/Death/bd_fx_blood_decal_medium_v001.png",
+    "size": [
+      48,
+      48
+    ],
+    "expectedSize": [
+      48,
+      48
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        5,
+        11,
+        43,
+        38
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "acf5a57eada374e80bc478aa81cae6a79736e598e1c29affb598da19531597d4"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Explosions/Mine/bd_fx_mine_explosion_sheet_v001.png",
+    "size": [
+      1024,
+      128
+    ],
+    "expectedSize": [
+      1024,
+      128
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        45,
+        42,
+        88,
+        83
+      ],
+      [
+        25,
+        28,
+        96,
+        98
+      ],
+      [
+        16,
+        20,
+        110,
+        110
+      ],
+      [
+        21,
+        23,
+        109,
+        105
+      ],
+      [
+        20,
+        13,
+        112,
+        110
+      ],
+      [
+        20,
+        19,
+        106,
+        100
+      ],
+      [
+        25,
+        25,
+        102,
+        99
+      ],
+      [
+        28,
+        34,
+        98,
+        92
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "b68b492204dd4e3169f8c47ed6b6add7fe5487ef43b4e60943716c6de0ed65b0"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Explosions/Generic/bd_fx_explosion_small_sheet_v001.png",
+    "size": [
+      384,
+      64
+    ],
+    "expectedSize": [
+      384,
+      64
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        32,
+        22,
+        49,
+        41
+      ],
+      [
+        19,
+        19,
+        49,
+        47
+      ],
+      [
+        11,
+        13,
+        53,
+        53
+      ],
+      [
+        10,
+        13,
+        49,
+        50
+      ],
+      [
+        10,
+        15,
+        43,
+        50
+      ],
+      [
+        7,
+        17,
+        36,
+        44
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "734ef792de6057b93af74c06858a105b699f4fe47d7d1ae670a38f58c3e8c989"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Smoke/bd_fx_smoke_small_sheet_v001.png",
+    "size": [
+      288,
+      48
+    ],
+    "expectedSize": [
+      288,
+      48
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        20,
+        15,
+        40,
+        30
+      ],
+      [
+        13,
+        10,
+        40,
+        35
+      ],
+      [
+        6,
+        5,
+        41,
+        39
+      ],
+      [
+        8,
+        7,
+        41,
+        39
+      ],
+      [
+        13,
+        11,
+        40,
+        35
+      ],
+      [
+        11,
+        15,
+        34,
+        32
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "10e004d9b23791deb3945ae6e3e09aa1512e8283e24080466b21d4d7fbdeff07"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Smoke/bd_fx_smoke_medium_sheet_v001.png",
+    "size": [
+      384,
+      64
+    ],
+    "expectedSize": [
+      384,
+      64
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        9,
+        9,
+        56,
+        53
+      ],
+      [
+        9,
+        8,
+        56,
+        54
+      ],
+      [
+        9,
+        7,
+        53,
+        53
+      ],
+      [
+        8,
+        8,
+        54,
+        54
+      ],
+      [
+        7,
+        9,
+        53,
+        55
+      ],
+      [
+        13,
+        13,
+        42,
+        50
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "ba621abc0103fde5599d11de094c7bff5eb1786eb8cbf3e1afff934c686e01fc"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_small_sheet_v001.png",
+    "size": [
+      288,
+      48
+    ],
+    "expectedSize": [
+      288,
+      48
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        17,
+        20,
+        31,
+        28
+      ],
+      [
+        11,
+        10,
+        37,
+        37
+      ],
+      [
+        8,
+        7,
+        41,
+        39
+      ],
+      [
+        6,
+        6,
+        42,
+        41
+      ],
+      [
+        7,
+        7,
+        40,
+        39
+      ],
+      [
+        5,
+        6,
+        41,
+        41
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "c80eebe2ec01077f5385e937298c0a10413e72ad3ef81143d507dd52ae80689a"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_medium_sheet_v001.png",
+    "size": [
+      384,
+      64
+    ],
+    "expectedSize": [
+      384,
+      64
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        19,
+        17,
+        49,
+        47
+      ],
+      [
+        10,
+        12,
+        54,
+        51
+      ],
+      [
+        6,
+        7,
+        55,
+        56
+      ],
+      [
+        8,
+        9,
+        53,
+        54
+      ],
+      [
+        7,
+        10,
+        52,
+        54
+      ],
+      [
+        10,
+        13,
+        49,
+        51
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "453951ff244f6a204e7c82d9bbe5211cb224829d7485ff8d70a5df58835800ea"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_large_sheet_v001.png",
+    "size": [
+      576,
+      96
+    ],
+    "expectedSize": [
+      576,
+      96
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        26,
+        23,
+        72,
+        71
+      ],
+      [
+        11,
+        12,
+        84,
+        83
+      ],
+      [
+        10,
+        10,
+        87,
+        84
+      ],
+      [
+        13,
+        12,
+        84,
+        83
+      ],
+      [
+        15,
+        17,
+        82,
+        81
+      ],
+      [
+        16,
+        17,
+        79,
+        80
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "cb931612a7a00737df9a840ba421a7f6a8073b7ea4dbf70c6be40b883f40c3a7"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Water/Wake/bd_fx_water_wake_sheet_v001.png",
+    "size": [
+      192,
+      48
+    ],
+    "expectedSize": [
+      192,
+      48
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        9,
+        13,
+        33,
+        35
+      ],
+      [
+        6,
+        11,
+        34,
+        37
+      ],
+      [
+        5,
+        11,
+        34,
+        37
+      ],
+      [
+        6,
+        13,
+        33,
+        35
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "3fa720006484e337a7c2e161ab48043c64a44a273014f9e9ba68c8f80470a5af"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/World/bd_fx_water_ripple_sheet_v001.png",
+    "size": [
+      384,
+      64
+    ],
+    "expectedSize": [
+      384,
+      64
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        23,
+        22,
+        43,
+        40
+      ],
+      [
+        17,
+        18,
+        43,
+        44
+      ],
+      [
+        10,
+        13,
+        47,
+        48
+      ],
+      [
+        6,
+        10,
+        53,
+        53
+      ],
+      [
+        9,
+        12,
+        52,
+        52
+      ],
+      [
+        10,
+        14,
+        52,
+        52
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "e4a3725002874c667b2ffa1c4807d9577b5bd830af3060762bd38fc211c66af2"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/World/bd_fx_shore_foam_sheet_v001.png",
+    "size": [
+      256,
+      64
+    ],
+    "expectedSize": [
+      256,
+      64
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        30,
+        7,
+        42,
+        58
+      ],
+      [
+        27,
+        7,
+        38,
+        57
+      ],
+      [
+        24,
+        7,
+        37,
+        58
+      ],
+      [
+        21,
+        7,
+        33,
+        58
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "334350e0fa9760b91c4075fae5711c6e78676db487187a2a6bb62a37fd136666"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/MachineGun/bd_fx_mg_tracer_v001.png",
+    "size": [
+      64,
+      3
+    ],
+    "expectedSize": [
+      64,
+      3
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        1,
+        1,
+        63,
+        3
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "4961e39de743521d89179046870495be14f4d4f1a78810a23301a730b53bdef1"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Sniper/bd_fx_sniper_tracer_v001.png",
+    "size": [
+      64,
+      5
+    ],
+    "expectedSize": [
+      64,
+      5
+    ],
+    "rgba": true,
+    "binaryAlpha": true,
+    "transparentRgbZero": true,
+    "chromaPixels": 0,
+    "frameBounds": [
+      [
+        1,
+        1,
+        63,
+        4
+      ]
+    ],
+    "framesClean": true,
+    "sha256": "085795c3aabb75b7590f85de5393be6008fae2b7f3208d88d22d149c13152e28"
+  }
+]

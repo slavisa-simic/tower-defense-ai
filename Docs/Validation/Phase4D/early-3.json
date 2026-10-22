@@ -1,0 +1,20 @@
+{
+  "externalMoney": 0,
+  "startingMoney": 500,
+  "rows": [
+    {
+      "wave": 1,
+      "planned": 160,
+      "peak": 126,
+      "bpeak": 6,
+      "kills": 1,
+      "homicides": 1000,
+      "income": 25,
+      "seconds": 19.055720999999949,
+      "state": "GameOver"
+    }
+  ],
+  "Homicides": 1000,
+  "HighestWaveReached": 1,
+  "balance": 25
+}

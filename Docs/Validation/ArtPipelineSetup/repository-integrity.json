@@ -1,0 +1,14 @@
+{
+  "inspectedExistingFiles": 264,
+  "changedExistingFiles": [
+    "Packages\\manifest.json",
+    "Packages\\packages-lock.json"
+  ],
+  "missingExistingFiles": [],
+  "unexpectedExistingChanges": [],
+  "currentArtImages": [
+    "Assets\\Game\\Art\\Placeholders\\Square.png",
+    "Assets\\Game\\Art\\Placeholders\\Triangle.png"
+  ],
+  "customSkillCopiesMatch": true
+}

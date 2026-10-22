@@ -1,0 +1,20 @@
+{
+  "baselineFiles": 913,
+  "unchanged": 901,
+  "changed": [
+    "Assets/Game/UI/TopDownHud.uxml",
+    "Assets/Game/UI/TopDownHud.uss",
+    "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+    "Assets/Game/Scripts/UI/CombatFeedbackHud.cs",
+    "Assets/Game/Scripts/UI/BuildHud.cs",
+    "Assets/Game/Prefabs/Gameplay/PlayerBase_TopDown.prefab",
+    "Assets/Game/Scripts/Presentation/EnemySpritePresentation.cs",
+    "Assets/Game/Prefabs/Enemies/Crawler_TopDown.prefab",
+    "Assets/Game/Prefabs/Defenses/SniperTower.prefab",
+    "Assets/Game/Prefabs/Defenses/MachineGunNest.prefab",
+    "Assets/Game/Prefabs/Defenses/LandMine.prefab",
+    "Assets/Game/Prefabs/Defenses/BarbedWire.prefab"
+  ],
+  "missing": [],
+  "timeSettingsRestored": true
+}

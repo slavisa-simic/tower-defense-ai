@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase6A/Live.cs",
+      "entry": "Phase6ALive.WireRoundTrip"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 1751,
+      "executeMs": 1873,
+      "assemblyName": "PipelineRunScript_Live_9f09aa51aad543a9a826692e6d39f097",
+      "success": true,
+      "result": "Port wire cross=15, T=14, III upgrade, exact money/T restore through Continue, corner=6 and straight=5 passed; disclosed 5000 RSD fixture."
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

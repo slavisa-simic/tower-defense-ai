@@ -1,0 +1,111 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": ".utmp/phase2c-play-inspection.cs",
+      "entry": "Phase2CInspection.Snapshot"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 34,
+      "executeMs": 3,
+      "assemblyName": "PipelineRunScript_phase2c-play-inspection_af213e0ecf1b484789e8eb33178fa591",
+      "success": true,
+      "result": {
+        "time": 162.266037,
+        "timeScale": 1,
+        "money": 400,
+        "baseHP": 0,
+        "state": "GameOver",
+        "wave": 1,
+        "remaining": 8,
+        "pending": 0,
+        "alive": 8,
+        "completed": 0,
+        "spawned": 10,
+        "selection": null,
+        "preview": false,
+        "previewResult": "Valid",
+        "paths": 10,
+        "enemies": [
+          {
+            "id": -12030,
+            "hp": 100,
+            "position": "(16.875, -0.975, 0.000)",
+            "speed": 2.5,
+            "progress": 0
+          },
+          {
+            "id": -12066,
+            "hp": 100,
+            "position": "(15.876, -0.625, 0.000)",
+            "speed": 2.5,
+            "progress": 0
+          },
+          {
+            "id": -12102,
+            "hp": 100,
+            "position": "(15.275, 0.625, 0.000)",
+            "speed": 2.5,
+            "progress": 0
+          },
+          {
+            "id": -12138,
+            "hp": 100,
+            "position": "(15.276, 0.625, 0.000)",
+            "speed": 2.5,
+            "progress": 0
+          },
+          {
+            "id": -12210,
+            "hp": 100,
+            "position": "(16.875, -0.975, 0.000)",
+            "speed": 2.5,
+            "progress": 0
+          },
+          {
+            "id": -12246,
+            "hp": 100,
+            "position": "(15.879, -0.625, 0.000)",
+            "speed": 2.5,
+            "progress": 0
+          },
+          {
+            "id": -12282,
+            "hp": 100,
+            "position": "(13.387, 0.625, 0.000)",
+            "speed": 2.5,
+            "progress": 1.88829172
+          },
+          {
+            "id": -12318,
+            "hp": 100,
+            "position": "(7.759, 0.625, 0.000)",
+            "speed": 2.5,
+            "progress": 7.51592875
+          }
+        ],
+        "defenses": [
+          {
+            "type": "MG Nest",
+            "anchor": "(23, 0)",
+            "health": 300,
+            "shots": 10,
+            "range": 6.25,
+            "target": null,
+            "weaponRotation": 120.3912
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

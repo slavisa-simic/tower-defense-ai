@@ -1,0 +1,51 @@
+{
+  "success": true,
+  "command": "command console",
+  "data": {
+    "command": "console",
+    "parameters": {
+      "level": "warn",
+      "tail": "100"
+    },
+    "result": {
+      "entries": [
+        {
+          "seq": 1,
+          "timestampUtc": "2026-10-01T18:40:54.5522539Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "This project uses Input Manager, which is marked for deprecation. To manage input in your project, use the <a href=\"https://docs.unity3d.com/Packages/com.unity.inputsystem@latest\">Input System package</a> instead.",
+          "stackTrace": "",
+          "seeded": false
+        }
+      ],
+      "cursor": 1,
+      "session": "03e464984d1b48a0a887d91e072eaa6d",
+      "returned": 1,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 0,
+        "warn": 1,
+        "log": 0
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-10-01T18:41:52.735721Z",
+        "ageMs": 121,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 0,
+        "consoleWarnings": 1,
+        "consoleLogs": 0,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

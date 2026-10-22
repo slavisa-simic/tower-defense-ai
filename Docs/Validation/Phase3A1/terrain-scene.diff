@@ -1,0 +1,132 @@
+--- before
++++ after
+@@ -328,7 +328,7 @@
+   serializedVersion: 2
+   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+   m_LocalPosition: {x: 3.75, y: 0, z: 0}
+-  m_LocalScale: {x: 32.5, y: 22.5, z: 1}
++  m_LocalScale: {x: 1, y: 1, z: 1}
+   m_ConstrainProportionsScale: 0
+   m_Children: []
+   m_Father: {fileID: 1832781420}
+@@ -382,12 +382,12 @@
+   m_SortingLayer: 1
+   m_SortingOrder: 0
+   m_MaskInteraction: 0
+-  m_Sprite: {fileID: 21300000, guid: a891a3ab1bdbe91489a2cde4806a2e47, type: 3}
+-  m_Color: {r: 0.31, g: 0.43, b: 0.27, a: 1}
++  m_Sprite: {fileID: 21300000, guid: 9fcb535317f9de34483321f123213dbc, type: 3}
++  m_Color: {r: 1, g: 1, b: 1, a: 1}
+   m_FlipX: 0
+   m_FlipY: 0
+-  m_DrawMode: 0
+-  m_Size: {x: 1, y: 1}
++  m_DrawMode: 2
++  m_Size: {x: 32.5, y: 22.5}
+   m_AdaptiveModeThreshold: 0.5
+   m_SpriteTileMode: 0
+   m_WasSpriteAssigned: 1
+@@ -905,7 +905,7 @@
+   serializedVersion: 2
+   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+   m_LocalPosition: {x: -15.3, y: 0, z: 0}
+-  m_LocalScale: {x: 0.6, y: 22.5, z: 1}
++  m_LocalScale: {x: 1, y: 1, z: 1}
+   m_ConstrainProportionsScale: 0
+   m_Children: []
+   m_Father: {fileID: 1832781420}
+@@ -959,12 +959,12 @@
+   m_SortingLayer: 1
+   m_SortingOrder: 1
+   m_MaskInteraction: 0
+-  m_Sprite: {fileID: 21300000, guid: a891a3ab1bdbe91489a2cde4806a2e47, type: 3}
+-  m_Color: {r: 0.24, g: 0.53, b: 0.64, a: 1}
++  m_Sprite: {fileID: 21300000, guid: a8093355b73b6d9499b94a3376d6a018, type: 3}
++  m_Color: {r: 1, g: 1, b: 1, a: 1}
+   m_FlipX: 0
+   m_FlipY: 0
+-  m_DrawMode: 0
+-  m_Size: {x: 1, y: 1}
++  m_DrawMode: 2
++  m_Size: {x: 0.6, y: 22.5}
+   m_AdaptiveModeThreshold: 0.5
+   m_SpriteTileMode: 0
+   m_WasSpriteAssigned: 1
+@@ -2047,7 +2047,7 @@
+   serializedVersion: 2
+   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+   m_LocalPosition: {x: -17.5, y: 0, z: 0}
+-  m_LocalScale: {x: 5, y: 22.5, z: 1}
++  m_LocalScale: {x: 1, y: 1, z: 1}
+   m_ConstrainProportionsScale: 0
+   m_Children: []
+   m_Father: {fileID: 1832781420}
+@@ -2101,12 +2101,12 @@
+   m_SortingLayer: 1
+   m_SortingOrder: 0
+   m_MaskInteraction: 0
+-  m_Sprite: {fileID: 21300000, guid: a891a3ab1bdbe91489a2cde4806a2e47, type: 3}
+-  m_Color: {r: 0.13, g: 0.39, b: 0.55, a: 1}
++  m_Sprite: {fileID: 21300000, guid: 2c2b56c6ab23af642a5fc3c8901ac71d, type: 3}
++  m_Color: {r: 1, g: 1, b: 1, a: 1}
+   m_FlipX: 0
+   m_FlipY: 0
+-  m_DrawMode: 0
+-  m_Size: {x: 1, y: 1}
++  m_DrawMode: 2
++  m_Size: {x: 5, y: 22.5}
+   m_AdaptiveModeThreshold: 0.5
+   m_SpriteTileMode: 0
+   m_WasSpriteAssigned: 1
+@@ -3796,7 +3796,7 @@
+   serializedVersion: 2
+   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+   m_LocalPosition: {x: -15.055, y: 0, z: 0}
+-  m_LocalScale: {x: 0.11, y: 22.5, z: 1}
++  m_LocalScale: {x: 1, y: 1, z: 1}
+   m_ConstrainProportionsScale: 0
+   m_Children: []
+   m_Father: {fileID: 1832781420}
+@@ -3850,12 +3850,12 @@
+   m_SortingLayer: 1
+   m_SortingOrder: 2
+   m_MaskInteraction: 0
+-  m_Sprite: {fileID: 21300000, guid: a891a3ab1bdbe91489a2cde4806a2e47, type: 3}
+-  m_Color: {r: 0.72, g: 0.84, b: 0.76, a: 1}
++  m_Sprite: {fileID: 21300000, guid: 1a455390a0251f940bffb76915bea481, type: 3}
++  m_Color: {r: 1, g: 1, b: 1, a: 1}
+   m_FlipX: 0
+   m_FlipY: 0
+-  m_DrawMode: 0
+-  m_Size: {x: 1, y: 1}
++  m_DrawMode: 2
++  m_Size: {x: 1.25, y: 22.5}
+   m_AdaptiveModeThreshold: 0.5
+   m_SpriteTileMode: 0
+   m_WasSpriteAssigned: 1
+@@ -5406,7 +5406,7 @@
+   serializedVersion: 2
+   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+   m_LocalPosition: {x: -13.75, y: 0, z: 0}
+-  m_LocalScale: {x: 2.5, y: 22.5, z: 1}
++  m_LocalScale: {x: 1, y: 1, z: 1}
+   m_ConstrainProportionsScale: 0
+   m_Children: []
+   m_Father: {fileID: 1832781420}
+@@ -5460,12 +5460,12 @@
+   m_SortingLayer: 1
+   m_SortingOrder: 0
+   m_MaskInteraction: 0
+-  m_Sprite: {fileID: 21300000, guid: a891a3ab1bdbe91489a2cde4806a2e47, type: 3}
+-  m_Color: {r: 0.78, g: 0.69, b: 0.45, a: 1}
++  m_Sprite: {fileID: 21300000, guid: 346cce2ebd5d083469945dffc0a20870, type: 3}
++  m_Color: {r: 1, g: 1, b: 1, a: 1}
+   m_FlipX: 0
+   m_FlipY: 0
+-  m_DrawMode: 0
+-  m_Size: {x: 1, y: 1}
++  m_DrawMode: 2
++  m_Size: {x: 2.5, y: 22.5}
+   m_AdaptiveModeThreshold: 0.5
+   m_SpriteTileMode: 0
+   m_WasSpriteAssigned: 1

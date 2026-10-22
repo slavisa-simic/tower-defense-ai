@@ -1,0 +1,47 @@
+{
+  "runtime_size": [
+    256,
+    256
+  ],
+  "mode": "RGBA",
+  "alpha_values": [
+    0,
+    255
+  ],
+  "center_alpha": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "sources": [
+    {
+      "path": "Assets\\Game\\Art\\SourceSheets\\p5a_upgrades_001\\bd_src_upgrade_overlays_v001.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "b79a1880b6d81dd129e44eec617f77c04e4b9939d5f29cc9218201f6e6b6555d"
+    },
+    {
+      "path": "Assets\\Game\\Art\\SourceSheets\\p5a_upgrades_001\\bd_src_upgrade_overlays_v002.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "sha256": "166088da98f4f264a83e385a447e8abe5b08951936f1530c292e96843babdd72"
+    }
+  ]
+}

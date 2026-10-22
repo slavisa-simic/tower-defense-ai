@@ -1,0 +1,42 @@
+[
+  {
+    "id": "mortar",
+    "width": 2560,
+    "height": 1440,
+    "title": "MORTAR / III",
+    "stats": "HP 188 / 375\nDamage 192 / Reload 2,40s\nRange 12,0 cells\nBlast 2,7 / Min 3,0 cells",
+    "repair": 225,
+    "mappedCell": "(21, 8)",
+    "panelMaxY": 414.0
+  },
+  {
+    "id": "flamethrower",
+    "width": 2560,
+    "height": 1440,
+    "title": "FLAMETHROWER / III",
+    "stats": "HP 263 / 525\nDPS 95 / Burn 3,0s\nRange 4,0 cells",
+    "repair": 169,
+    "mappedCell": "(20, 7)",
+    "panelMaxY": 399.0
+  },
+  {
+    "id": "barbed-wire",
+    "width": 2560,
+    "height": 1440,
+    "title": "BARBED WIRE / III",
+    "stats": "HP 200 / 400\nSlow 70%",
+    "repair": 29,
+    "mappedCell": "(20, 7)",
+    "panelMaxY": 383.5
+  },
+  {
+    "id": "land-mine",
+    "width": 2560,
+    "height": 1440,
+    "title": "LAND MINE / III",
+    "stats": "HP 1 / 1\nDamage 240 / Blast 2,1 cells",
+    "repair": 0,
+    "mappedCell": "(20, 7)",
+    "panelMaxY": 384.5
+  }
+]

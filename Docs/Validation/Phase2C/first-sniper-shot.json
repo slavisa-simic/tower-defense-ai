@@ -1,0 +1,108 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": ".utmp/phase2c-play-inspection.cs",
+      "entry": "Phase2CInspection.Snapshot"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 30,
+      "executeMs": 2,
+      "assemblyName": "PipelineRunScript_phase2c-play-inspection_6daa3b90376144a7832bdb75af6c8fd7",
+      "success": true,
+      "result": {
+        "time": 223.721848,
+        "timeScale": 0,
+        "money": 25,
+        "baseHP": 100,
+        "state": "Spawning",
+        "wave": 1,
+        "remaining": 9,
+        "pending": 4,
+        "alive": 5,
+        "completed": 0,
+        "spawned": 6,
+        "selection": null,
+        "preview": false,
+        "previewResult": "Occupied",
+        "paths": 6,
+        "enemies": [
+          {
+            "id": -11776,
+            "hp": 100,
+            "position": "(-8.882, -3.125, 0.000)",
+            "speed": 2.5,
+            "progress": 27.9074364
+          },
+          {
+            "id": -11812,
+            "hp": 100,
+            "position": "(-10.758, -0.625, 0.000)",
+            "speed": 2.5,
+            "progress": 27.2827911
+          },
+          {
+            "id": -11848,
+            "hp": 100,
+            "position": "(-13.887, 1.875, 0.000)",
+            "speed": 2.5,
+            "progress": 30.4119587
+          },
+          {
+            "id": -11884,
+            "hp": 100,
+            "position": "(-18.125, 3.262, 0.000)",
+            "speed": 2.5,
+            "progress": 36.0373726
+          },
+          {
+            "id": -11920,
+            "hp": 100,
+            "position": "(-16.388, -6.875, 0.000)",
+            "speed": 2.5,
+            "progress": 39.1628571
+          }
+        ],
+        "defenses": [
+          {
+            "type": "Sniper Tower",
+            "anchor": "(19, 9)",
+            "health": 250,
+            "shots": 1,
+            "range": 13.75,
+            "target": null,
+            "weaponRotation": 213.372162
+          },
+          {
+            "type": "Barbed Wire",
+            "anchor": "(25, 9)",
+            "health": 200,
+            "shots": 0,
+            "range": 1.25,
+            "target": null,
+            "weaponRotation": 0
+          },
+          {
+            "type": "MG Nest",
+            "anchor": "(23, 9)",
+            "health": 300,
+            "shots": 0,
+            "range": 6.25,
+            "target": null,
+            "weaponRotation": 0
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

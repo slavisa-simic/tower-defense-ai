@@ -1,0 +1,49 @@
+{
+  "rows": [
+    {
+      "wave": 23,
+      "planned": 107,
+      "peak": 29,
+      "peakBoats": 5,
+      "startBalance": 43870,
+      "endBalance": 48270,
+      "kills": 107,
+      "newHomicides": 0,
+      "homicides": 225,
+      "state": "Preparation",
+      "realSeconds": 8.46437700000024
+    },
+    {
+      "wave": 24,
+      "planned": 97,
+      "peak": 33,
+      "peakBoats": 6,
+      "startBalance": 48270,
+      "endBalance": 52820,
+      "kills": 97,
+      "newHomicides": 0,
+      "homicides": 225,
+      "state": "Preparation",
+      "realSeconds": 8.5403486000000157
+    },
+    {
+      "wave": 25,
+      "planned": 139,
+      "peak": 47,
+      "peakBoats": 6,
+      "startBalance": 52820,
+      "endBalance": 57910,
+      "kills": 117,
+      "newHomicides": 1000,
+      "homicides": 1225,
+      "state": "GameOver",
+      "realSeconds": 8.7226426999995965
+    }
+  ],
+  "externalMoney": 0,
+  "totalEarned": 64385,
+  "totalSpent": 6975,
+  "HighestWaveReached": 25,
+  "Homicides": 1225,
+  "gameOver": true
+}

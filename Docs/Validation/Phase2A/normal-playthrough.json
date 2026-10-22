@@ -1,0 +1,312 @@
+[
+  {
+    "time": 3.063672,
+    "health": 100,
+    "spawns": 1,
+    "state": "Playing",
+    "hud": "BASE HP: 100 / 100",
+    "gameOverVisible": false,
+    "pathRequests": 1,
+    "enemies": [
+      {
+        "id": -6430,
+        "x": -12.915906,
+        "y": -6.875,
+        "z": 0,
+        "reached": false
+      }
+    ],
+    "capture": "play-start"
+  },
+  {
+    "time": 9.125919,
+    "health": 100,
+    "spawns": 3,
+    "state": "Playing",
+    "hud": "BASE HP: 100 / 100",
+    "gameOverVisible": false,
+    "pathRequests": 3,
+    "enemies": [
+      {
+        "id": -6506,
+        "x": -12.7617588,
+        "y": -0.625,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6470,
+        "x": -5.261556,
+        "y": -3.125,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6430,
+        "x": 2.239721,
+        "y": -6.875,
+        "z": 0,
+        "reached": false
+      }
+    ],
+    "capture": "play-travel"
+  },
+  {
+    "time": 19.8855114,
+    "health": 70,
+    "spawns": 7,
+    "state": "Playing",
+    "hud": "BASE HP: 70 / 100",
+    "gameOverVisible": false,
+    "pathRequests": 7,
+    "enemies": [
+      {
+        "id": -6654,
+        "x": -15.8621445,
+        "y": -3.125,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6618,
+        "x": -8.401229,
+        "y": -6.875,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6582,
+        "x": -7.11206627,
+        "y": 0.625,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6546,
+        "x": 4.135438,
+        "y": 0.625,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6506,
+        "x": 14.1372356,
+        "y": -0.625,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6470,
+        "x": 16.875,
+        "y": -0.9758928,
+        "z": 0,
+        "reached": true
+      },
+      {
+        "id": -6430,
+        "x": 16.875,
+        "y": -0.9744273,
+        "z": 0,
+        "reached": true
+      }
+    ],
+    "capture": "play-damage"
+  },
+  {
+    "time": 21.5823975,
+    "health": 30,
+    "spawns": 7,
+    "state": "Playing",
+    "hud": "BASE HP: 30 / 100",
+    "gameOverVisible": false,
+    "pathRequests": 7,
+    "enemies": [
+      {
+        "id": -6654,
+        "x": -11.6199255,
+        "y": -3.125,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6618,
+        "x": -4.15902233,
+        "y": -6.875,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6582,
+        "x": -2.869855,
+        "y": 0.625,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6546,
+        "x": 8.377649,
+        "y": 0.625,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6506,
+        "x": 15.8786325,
+        "y": -0.625,
+        "z": 0,
+        "reached": true
+      },
+      {
+        "id": -6470,
+        "x": 16.875,
+        "y": -0.9758928,
+        "z": 0,
+        "reached": true
+      },
+      {
+        "id": -6430,
+        "x": 16.875,
+        "y": -0.9744273,
+        "z": 0,
+        "reached": true
+      }
+    ],
+    "capture": "play-attacks"
+  },
+  {
+    "time": 25.8814583,
+    "health": 0,
+    "spawns": 8,
+    "state": "GameOver",
+    "hud": "BASE HP: 0 / 100",
+    "gameOverVisible": true,
+    "pathRequests": 8,
+    "enemies": [
+      {
+        "id": -6694,
+        "x": -16.6254253,
+        "y": -0.625,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6654,
+        "x": -9.123813,
+        "y": -3.125,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6618,
+        "x": -1.66291213,
+        "y": -6.875,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6582,
+        "x": -0.373743773,
+        "y": 0.625,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6546,
+        "x": 10.8737621,
+        "y": 0.625,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6506,
+        "x": 15.8786325,
+        "y": -0.625,
+        "z": 0,
+        "reached": true
+      },
+      {
+        "id": -6470,
+        "x": 16.875,
+        "y": -0.9758928,
+        "z": 0,
+        "reached": true
+      },
+      {
+        "id": -6430,
+        "x": 16.875,
+        "y": -0.9744273,
+        "z": 0,
+        "reached": true
+      }
+    ],
+    "capture": "game-over"
+  },
+  {
+    "time": 30.1418438,
+    "health": 0,
+    "spawns": 8,
+    "state": "GameOver",
+    "hud": "BASE HP: 0 / 100",
+    "gameOverVisible": true,
+    "pathRequests": 8,
+    "enemies": [
+      {
+        "id": -6694,
+        "x": -16.6254253,
+        "y": -0.625,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6654,
+        "x": -9.123813,
+        "y": -3.125,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6618,
+        "x": -1.66291213,
+        "y": -6.875,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6582,
+        "x": -0.373743773,
+        "y": 0.625,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6546,
+        "x": 10.8737621,
+        "y": 0.625,
+        "z": 0,
+        "reached": false
+      },
+      {
+        "id": -6506,
+        "x": 15.8786325,
+        "y": -0.625,
+        "z": 0,
+        "reached": true
+      },
+      {
+        "id": -6470,
+        "x": 16.875,
+        "y": -0.9758928,
+        "z": 0,
+        "reached": true
+      },
+      {
+        "id": -6430,
+        "x": 16.875,
+        "y": -0.9744273,
+        "z": 0,
+        "reached": true
+      }
+    ],
+    "capture": "stopped"
+  }
+]

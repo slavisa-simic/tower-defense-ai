@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "command": "command build",
+  "data": {
+    "command": "build",
+    "parameters": {
+      "target": "StandaloneWindows64",
+      "outputPath": "Builds/Phase5C/BorderDefenders.exe",
+      "options": "[\"DetailedBuildReport\"]",
+      "confirm": "true"
+    },
+    "result": {
+      "status": "queued",
+      "buildId": "build_cd0779f9743c"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

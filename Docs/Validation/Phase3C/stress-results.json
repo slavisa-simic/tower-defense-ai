@@ -1,0 +1,112 @@
+{
+  "date": "2026-10-01",
+  "unity": "6000.3.24f1",
+  "platform": "Windows 11  (10.0.26300)",
+  "cpu": "AMD Ryzen 5 5500 ",
+  "gpu": "AMD Radeon RX 6600",
+  "context": "Unity Editor, 1920x1080 Game View; unique rendered-frame delta samples observed through EditorApplication.update. Includes editor overhead. Not a Player benchmark.",
+  "runs": [
+    {
+      "requestedEnemies": 100,
+      "activeEnemies": 100,
+      "turrets": 33,
+      "shots": 255,
+      "samples": 1055,
+      "medianMs": 2.7194018475711346,
+      "p95Ms": 3.6342970561236143,
+      "maxMs": 13.001899234950542,
+      "allocationCounter": true,
+      "medianFrameGcBytes": 9833,
+      "p95FrameGcBytes": 9885,
+      "drawCounter": true,
+      "medianDrawCalls": 390
+    },
+    {
+      "requestedEnemies": 200,
+      "activeEnemies": 200,
+      "turrets": 33,
+      "shots": 628,
+      "samples": 787,
+      "medianMs": 3.674305509775877,
+      "p95Ms": 5.0755953416228294,
+      "maxMs": 8.0711944028735161,
+      "allocationCounter": true,
+      "medianFrameGcBytes": 9833,
+      "p95FrameGcBytes": 9889,
+      "drawCounter": true,
+      "medianDrawCalls": 508
+    }
+  ],
+  "natural": [
+    {
+      "channel": "Burst",
+      "ActiveCount": 50,
+      "PeakCount": 77,
+      "RecycledCount": 0
+    },
+    {
+      "channel": "Tracer",
+      "ActiveCount": 2,
+      "PeakCount": 19,
+      "RecycledCount": 0
+    },
+    {
+      "channel": "Smoke",
+      "ActiveCount": 0,
+      "PeakCount": 1,
+      "RecycledCount": 0
+    },
+    {
+      "channel": "Decal",
+      "ActiveCount": 0,
+      "PeakCount": 0,
+      "RecycledCount": 0
+    },
+    {
+      "channel": "Corpse",
+      "ActiveCount": 0,
+      "PeakCount": 0,
+      "RecycledCount": 0
+    }
+  ],
+  "dispatch": {
+    "requests": 10000,
+    "elapsedMs": 6.8473000000000006,
+    "managedAllocatedBytes": 0
+  },
+  "caps": [
+    {
+      "channel": "Burst",
+      "Capacity": 96,
+      "ActiveCount": 96,
+      "RecycledCount": 10160
+    },
+    {
+      "channel": "Tracer",
+      "Capacity": 64,
+      "ActiveCount": 64,
+      "RecycledCount": 12
+    },
+    {
+      "channel": "Smoke",
+      "Capacity": 16,
+      "ActiveCount": 16,
+      "RecycledCount": 10
+    },
+    {
+      "channel": "Decal",
+      "Capacity": 48,
+      "ActiveCount": 48,
+      "RecycledCount": 10
+    },
+    {
+      "channel": "Corpse",
+      "Capacity": 32,
+      "ActiveCount": 32,
+      "RecycledCount": 10
+    }
+  ],
+  "renderersBefore": 274,
+  "renderersAfter": 274,
+  "cleared": true
+}

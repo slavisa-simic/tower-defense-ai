@@ -1,0 +1,74 @@
+[
+  {
+    "wave": 1,
+    "count": 16,
+    "budget": 16,
+    "boss": null,
+    "interval": 2.2,
+    "concurrency": 2
+  },
+  {
+    "wave": 3,
+    "count": 22,
+    "budget": 32,
+    "boss": null,
+    "interval": 2.01834869,
+    "concurrency": 2
+  },
+  {
+    "wave": 5,
+    "count": 38,
+    "budget": 49,
+    "boss": null,
+    "interval": 1.86440682,
+    "concurrency": 3
+  },
+  {
+    "wave": 10,
+    "count": 52,
+    "budget": 94,
+    "boss": null,
+    "interval": 1.56583631,
+    "concurrency": 4
+  },
+  {
+    "wave": 20,
+    "count": 87,
+    "budget": 196,
+    "boss": null,
+    "interval": 1.18598378,
+    "concurrency": 6
+  },
+  {
+    "wave": 25,
+    "count": 139,
+    "budget": 254,
+    "boss": "UNDEAD OSAMA BIN LADEN",
+    "interval": 1.05769229,
+    "concurrency": 8
+  },
+  {
+    "wave": 30,
+    "count": 156,
+    "budget": 315,
+    "boss": null,
+    "interval": 0.954446852,
+    "concurrency": 8
+  },
+  {
+    "wave": 50,
+    "count": 289,
+    "budget": 600,
+    "boss": "SOMALI PIRATE WARLORD",
+    "interval": 0.6864275,
+    "concurrency": 8
+  },
+  {
+    "wave": 100,
+    "count": 289,
+    "budget": 1592,
+    "boss": "SOMALI PIRATE WARLORD",
+    "interval": 0.65,
+    "concurrency": 8
+  }
+]

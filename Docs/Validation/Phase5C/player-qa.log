@@ -1,0 +1,113 @@
+Mono path[0] = 'C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Builds/Phase5C-QA/BorderDefenders_Data/Managed'
+Mono config path = 'C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Builds/Phase5C-QA/MonoBleedingEdge/etc'
+Found 1 interfaces on host : 0) 192.168.1.3
+Player connection [18808]  Target information:
+
+Player connection [18808]  * "[IP] 192.168.1.3 [Port] 55000 [Flags] 2 [Guid] 3913131832 [EditorId] 88139053 [Version] 1048832 [Id] WindowsPlayer(2,DESKTOP-MBEH9F2) [Debug] 0 [PackageName] WindowsPlayer [ProjectName] Shoreline Defense" 
+
+Player connection [18808] Started UDP target info broadcast (1) on [225.0.0.222:54997].
+
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Initialize engine version: 6000.3.24f1 (4e7b9b5b6244)
+[Subsystems] Discovering subsystems at path C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Builds/Phase5C-QA/BorderDefenders_Data/UnitySubsystems
+[D3D12 Device Filter] Vendor Name: ATI
+[D3D12 Device Filter] Device Name: AMD Radeon RX 6600
+[D3D12 Device Filter] Driver Version: 32.0.21045.1000
+[D3D12 Device Filter] Feature Level: 12.2
+[D3D12 Device Filter] Graphics Memory: 8147 MB
+[D3D12 Device Filter] Processor Count: 12
+[D3D12 Device Filter] Device Type: Discrete
+GfxDevice: creating device client; kGfxThreadingModeSplitJobs
+d3d12: failed to query info queue interface (0x80004002).
+Direct3D:
+    Version:         Direct3D 12 [level 12.2]
+    Renderer:        AMD Radeon RX 6600 (ID=0x73ff)
+    Vendor:          ATI
+    VRAM:            8147 MB
+    App VRAM Budget: 7379 MB
+    Driver:          32.0.21045.1000
+Begin MonoManager ReloadAssembly
+- Loaded All Assemblies, in  4.852 seconds
+- Finished resetting the current domain, in  0.003 seconds
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+D3D11 device created for Microsoft Media Foundation video decoding.
+<RI> Initializing input.
+<RI> Input initialized.
+UnloadTime: 2.812300 ms
+Pipeline: Starting runtime server from RuntimePipelineDriver...
+Start HTTP server: port:7900
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime server started successfully on port 7900
+Pipeline: PlayerConnection code-reload receiver ready — signed pushes only (key 309ddda58396fdb3, verify self-test OK). Push IL from the editor via 'reload_file_player_interpreter'.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at C:/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[]) (at C:/build/output/unity/unity/Runtime/Export/Logging/DebugLogHandler.cs:9)
+UnityEngine.Logger:Log (UnityEngine.LogType,object) (at C:/build/output/unity/unity/Runtime/Export/Logging/Logger.cs:60)
+UnityEngine.Debug:Log (object) (at C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs:123)
+Unity.Pipeline.RuntimePipelineDriver:RegisterReloadReceiver () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/PlayerSupport/RuntimePipelineDriver.cs:321)
+Unity.Pipeline.RuntimePipelineDriver:Start () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/PlayerSupport/RuntimePipelineDriver.cs:130)
+
+(Filename: C:/build/output/unity/unity/Runtime/Export/Debug/Debug.bindings.cs Line: 123)
+
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+dxgi: swapchain SetFullscreenState failed (887a0022).
+Failed to change display to ExclusiveFullscreen...reverting to FullscreenWindow
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Direct3D: detected that IDXGISwapChain::GetFrameStatistics is broken (it does not return proper timestamps). Delta time will now be calculated using cpu-side time stampling until the game window is moved.
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+UnloadTime: 4.575100 ms
+Unloading 4 unused Assets / (0 B). Loaded Objects now: 4896.
+Memory consumption went from 106.1 MB to 106.1 MB.
+Total: 19.649100 ms (FindLiveObjects: 0.285000 ms CreateObjectMapping: 0.131500 ms MarkObjects: 19.203000 ms  DeleteObjects: 0.028900 ms)
+
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.322200 ms
+Unloading 672 unused Assets / (0.5 MB). Loaded Objects now: 3144.
+Memory consumption went from 104.1 MB to 103.5 MB.
+Total: 19.419200 ms (FindLiveObjects: 0.292300 ms CreateObjectMapping: 0.146500 ms MarkObjects: 18.244700 ms  DeleteObjects: 0.734600 ms)
+
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.307100 ms
+Unloading 1 unused Assets / (0 B). Loaded Objects now: 4920.
+Memory consumption went from 106.1 MB to 106.1 MB.
+Total: 18.020000 ms (FindLiveObjects: 0.279100 ms CreateObjectMapping: 0.131500 ms MarkObjects: 17.597800 ms  DeleteObjects: 0.011200 ms)
+
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Runtime descriptor written to C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Builds\Phase5C-QA\.unity-pipeline-runtime-port
+Pipeline: Stopping runtime server...
+Pipeline Server stopped
+[Physics::Module] Cleanup current backend.
+[Physics::Module] Id: 0xf2b8ea05
+Input System module state changed to: ShutdownInProgress.
+Input System polling thread exited.
+Input System module state changed to: Shutdown.
+PlayerConnection::Cleanup##utp:{"type":"MemoryLeaks","version":2,"phase":"Immediate","time":1791041437424,"processId":26520,"allocatedMemory":897100,"memoryLabels":[{"Default":136},{"NewDelete":776},{"Thread":9664},{"Manager":533910},{"Shader":2376},{"GfxDevice":2128},{"GfxThread":6144},{"Audio":752},{"Serialization":520},{"JobScheduler":32768},{"String":522},{"HashMap":5120},{"PoolAlloc":288},{"CloudService":144},{"VR":1872},{"Video":144},{"NativeArray":299724},{"Subsystems":96},{"CoreBusinessMetrics":120}]}

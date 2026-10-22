@@ -1,0 +1,53 @@
+{
+  "diagnostics": [],
+  "compileMs": 21,
+  "executeMs": 2,
+  "assemblyName": "PipelineRunScript_phase2b-snapshot_53877fa2e002484a849b4d4c0728ef13",
+  "success": true,
+  "result": {
+    "money": 150,
+    "moneyText": "Money: $150",
+    "buildAvailable": true,
+    "placementActive": false,
+    "previewVisible": false,
+    "previewCell": "(8, 13)",
+    "previewResult": "Occupied",
+    "state": "Playing",
+    "timeScale": 0,
+    "baseHealth": 100,
+    "totalSpawned": 5,
+    "registeredEnemies": 1,
+    "pathRequests": 5,
+    "defenses": [
+      {
+        "anchor": "(8, 13)",
+        "shots": 1,
+        "health": 300,
+        "target": false,
+        "weaponAngle": 235.4896
+      },
+      {
+        "anchor": "(8, 8)",
+        "shots": 12,
+        "health": 300,
+        "target": false,
+        "weaponAngle": 160.018188
+      },
+      {
+        "anchor": "(8, 3)",
+        "shots": 7,
+        "health": 300,
+        "target": false,
+        "weaponAngle": 138.3061
+      }
+    ],
+    "enemies": [
+      {
+        "hp": 100,
+        "position": "(-18.13, 6.56, 0.00)",
+        "targetable": true,
+        "attacks": 0
+      }
+    ]
+  }
+}

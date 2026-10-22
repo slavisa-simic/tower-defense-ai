@@ -1,0 +1,60 @@
+{
+  "success": true,
+  "command": "command console",
+  "data": {
+    "command": "console",
+    "parameters": {
+      "level": "warn",
+      "tail": "20"
+    },
+    "result": {
+      "entries": [
+        {
+          "seq": 1,
+          "timestampUtc": "2026-09-20T22:10:38.3089337Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "This project uses Input Manager, which is marked for deprecation. To manage input in your project, use the <a href=\"https://docs.unity3d.com/Packages/com.unity.inputsystem@latest\">Input System package</a> instead.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 4,
+          "timestampUtc": "2026-09-20T22:33:51.2493317Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "InvalidOperationException: Expected observer failure",
+          "stackTrace": "ShorelineDefense.Tests.EconomyAndPlacementTests+<>c.<BrokenObserverCannotTurnCommittedPaymentIntoFailure>b__0_0 (System.Int32 _) (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:18)\nShorelineDefense.Economy.EconomyManager.NotifyMoneyChanged () (at Assets/Game/Scripts/Economy/EconomyManager.cs:43)\nUnityEngine.Debug:LogException(Exception, Object)\nShorelineDefense.Economy.EconomyManager:NotifyMoneyChanged() (at Assets/Game/Scripts/Economy/EconomyManager.cs:44)\nShorelineDefense.Economy.EconomyManager:TrySpend(Int32) (at Assets/Game/Scripts/Economy/EconomyManager.cs:24)\nShorelineDefense.Tests.EconomyAndPlacementTests:BrokenObserverCannotTurnCommittedPaymentIntoFailure() (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:21)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+          "seeded": false
+        }
+      ],
+      "cursor": 13,
+      "session": "9964c0861d4e474fa37add03e2311aac",
+      "returned": 2,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 1,
+        "warn": 1,
+        "log": 11
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-09-20T22:49:03.1804189Z",
+        "ageMs": 181,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 0,
+        "consoleWarnings": 0,
+        "consoleLogs": 0,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

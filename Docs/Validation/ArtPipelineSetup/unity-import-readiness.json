@@ -1,0 +1,112 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": ".utmp/art-pipeline-setup/InspectSetup.cs",
+      "entry": "InspectArtPipelineSetup.Run"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 1365,
+      "executeMs": 17,
+      "assemblyName": "PipelineRunScript_InspectSetup_3febc9c02fc14b74a03a786d8b5440b4",
+      "success": true,
+      "result": {
+        "editorVersion": "6000.3.24f1",
+        "folders": [
+          {
+            "path": "Assets/Game/Art/MasterReferences",
+            "valid": true,
+            "guid": "b15ca8d9bfd1cc04190269121448683e"
+          },
+          {
+            "path": "Assets/Game/Art/Environment",
+            "valid": true,
+            "guid": "3f950c5f779b8c94ba51e272e05fea76"
+          },
+          {
+            "path": "Assets/Game/Art/Enemies",
+            "valid": true,
+            "guid": "86b0f4240752b514e8ae9e353f62cb28"
+          },
+          {
+            "path": "Assets/Game/Art/Defenses",
+            "valid": true,
+            "guid": "67ba21c7de441ab4d9b7a96734a49271"
+          },
+          {
+            "path": "Assets/Game/Art/Effects",
+            "valid": true,
+            "guid": "a2e887afda22cf449819e13bb25cd921"
+          },
+          {
+            "path": "Assets/Game/Art/UI",
+            "valid": true,
+            "guid": "ff1ddd933c9ffd94a92237abe571e3a1"
+          },
+          {
+            "path": "Assets/Game/Art/Props",
+            "valid": true,
+            "guid": "867f452978d79644788ac9f6ac45ff1f"
+          },
+          {
+            "path": "Assets/Game/Art/Base",
+            "valid": true,
+            "guid": "bdaaef52142d75b4ea2789a441672806"
+          },
+          {
+            "path": "Assets/Game/Art/SourceSheets",
+            "valid": true,
+            "guid": "5d00a4a20a28c3a4e844af34a7736f52"
+          },
+          {
+            "path": "Assets/Game/Animations",
+            "valid": true,
+            "guid": "1eb5c6c8d2ab8a3468a863069eba7a24"
+          },
+          {
+            "path": "Assets/Game/Prefabs",
+            "valid": true,
+            "guid": "592aa75f1f8f9594db3cd1c01952dad3"
+          },
+          {
+            "path": "Assets/Game/UI",
+            "valid": true,
+            "guid": "69ff68b5790650940a0da32796ab943a"
+          },
+          {
+            "path": "Assets/Game/Data",
+            "valid": true,
+            "guid": "6d6d170a9c7dfe24aba3e0a5d0573caa"
+          }
+        ],
+        "spritePackage": [
+          {
+            "name": "com.unity.2d.sprite",
+            "version": "1.0.0"
+          }
+        ],
+        "animationModule": [
+          {
+            "name": "com.unity.modules.animation",
+            "version": "1.0.0"
+          }
+        ],
+        "animationClipType": "UnityEngine.AnimationClip",
+        "animatorType": "UnityEngine.Animator",
+        "spriteEditorLoaded": true,
+        "isPlaying": false,
+        "compilationFailed": false
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

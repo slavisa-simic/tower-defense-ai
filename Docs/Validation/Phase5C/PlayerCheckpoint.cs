@@ -1,0 +1,10 @@
+var assembly = System.Array.Find(System.AppDomain.CurrentDomain.GetAssemblies(), a => a.GetName().Name == "ShorelineDefense.Runtime");
+var hudType = assembly.GetType("ShorelineDefense.UI.BuildHud"); var hud = UnityEngine.Object.FindFirstObjectByType(hudType);
+object definition = null; foreach (var d in (System.Collections.IEnumerable)hudType.GetProperty("Defenses").GetValue(hud)) if ((string)d.GetType().GetProperty("Id").GetValue(d) == "machine-gun-nest") definition = d;
+var builderType = assembly.GetType("ShorelineDefense.Building.BuildManager"); var builder = UnityEngine.Object.FindFirstObjectByType(builderType);
+object[] args = { definition, new UnityEngine.Vector2Int(12,8), null }; var placement = builderType.GetMethod("TryPlaceDefense").Invoke(builder, args);
+if (placement.ToString() != "Valid") throw new System.Exception("Native placement rejected: " + placement);
+var defense = args[2]; builderType.GetMethod("TryUpgrade").Invoke(builder, new object[] { defense }); builderType.GetMethod("TryUpgrade").Invoke(builder, new object[] { defense }); defense.GetType().GetMethod("TakeDamage").Invoke(defense, new object[] { 30 });
+var sessionType = assembly.GetType("ShorelineDefense.Persistence.RunSession"); var session = UnityEngine.Object.FindFirstObjectByType(sessionType); sessionType.GetMethod("SaveNow").Invoke(session, null);
+var snapshot = sessionType.GetMethod("Capture").Invoke(session, null);
+return UnityEngine.JsonUtility.ToJson(snapshot);

@@ -1,0 +1,48 @@
+{
+  "status": "completed",
+  "duration": 2.38,
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "ShorelineDefense.Tests.Phase4CPlayTests.BossKillArmorHudRewardAndBreachResolveOnce",
+      "Status": "Passed",
+      "Duration": 0.9452047,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase4CPlayTests.DismantleEveryDefenseRefundsPaidCostOnceAndClearsFootprint",
+      "Status": "Passed",
+      "Duration": 0.3495957,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase4CPlayTests.InvalidConsumedAndGameOverTargetsCannotRefund",
+      "Status": "Passed",
+      "Duration": 0.3241785,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase4CPlayTests.OverlappingBoatsRespectCapAndWaitForCargo",
+      "Status": "Passed",
+      "Duration": 0.3903816,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase4CPlayTests.WireNeighborsNavigationAndSelectionCleanUpDuringCombat",
+      "Status": "Passed",
+      "Duration": 0.3224398,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

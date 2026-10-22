@@ -1,0 +1,287 @@
+{
+  "scene": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+  "isDirty": false,
+  "missingScripts": 0,
+  "imports": [
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\IsisBreacher_attack_v002.png",
+      "guid": "2cea067f9e6342548abbd584c04068cf",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\IsisBreacher_death_v002.png",
+      "guid": "c454ea35e82c86749926ffd559622609",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\IsisBreacher_hit_v002.png",
+      "guid": "2e903c84bb5d6404ebd34f4169361b8c",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\IsisBreacher_idle_v002.png",
+      "guid": "eeedb071d69d3c040b4ec362da7d6382",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\IsisBreacher_move_v002.png",
+      "guid": "f3038e506fb20c849877dc61f5e4b204",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\IsisHeavy_attack_v002.png",
+      "guid": "4bdbaea24dcc48a4c8fdaf554e725b74",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\IsisHeavy_death_v002.png",
+      "guid": "eed0882f0a74e3543b19e34b20321f1b",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\IsisHeavy_hit_v002.png",
+      "guid": "720249d33463c6b47adda3a9dbd01e4b",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\IsisHeavy_idle_v002.png",
+      "guid": "b59e4d72adb94374593dbf52dda897af",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\IsisHeavy_move_v002.png",
+      "guid": "7f3aea5d2c9df5a43981eae1ce30fa65",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateRaider_attack_v002.png",
+      "guid": "a5fe15ab360b7a34ea492e2c9312e5b4",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateRaider_death_v002.png",
+      "guid": "44adef572de2c594aaf4b4c08683c04f",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateRaider_hit_v002.png",
+      "guid": "e6ba519652748ca41aa4ea4c6a19bea4",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateRaider_idle_v002.png",
+      "guid": "452f2a3fbfc77b2458b60cca5d1290c6",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateRaider_move_v002.png",
+      "guid": "951daf4d9e316a243a55a7f442ec8728",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateRunner_attack_v002.png",
+      "guid": "eacf9d4c1cb5a224699e355ac9a8ac0d",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateRunner_death_v002.png",
+      "guid": "6d44b2e913535004e928f1699f256210",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateRunner_hit_v002.png",
+      "guid": "5467fe1ee73abb34c904354ad7610b59",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateRunner_idle_v002.png",
+      "guid": "5e16f1f0694267e48b71eb739086e18a",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateRunner_move_v002.png",
+      "guid": "b1fc31a99c3a60e49bb5658ddd61eebb",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateWarlord_attack_v002.png",
+      "guid": "7c8cc0d24f69b874686e2984a771e5ea",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateWarlord_death_v002.png",
+      "guid": "aa4f1e52c4055f14f81b73f128fc96a5",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateWarlord_hit_v002.png",
+      "guid": "75428e174956ae748a0b751b60b8e5dd",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateWarlord_idle_v002.png",
+      "guid": "bfb18a99fa86bb64c86b30c882a8b455",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Special\\PirateWarlord_move_v002.png",
+      "guid": "b66c720e739d4da47b5b3e58ed7f4107",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 4
+    },
+    {
+      "path": "Assets/Game/Art/Props/MilitantBossTransport_v001.png",
+      "guid": "bc5aac77341f8744d916b4fad161780c",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 1
+    },
+    {
+      "path": "Assets/Game/Art/Props/PirateBossTransport_v001.png",
+      "guid": "f1b233fdf02c8ad4aa89cc948141a462",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 1
+    },
+    {
+      "path": "Assets/Game/Art/UI/ui_icon_dismantle.png",
+      "guid": "e67ea460289363a479bfabd386874a5d",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mips": false,
+      "ppu": 51.2,
+      "mesh": "FullRect",
+      "sprites": 1
+    }
+  ]
+}

@@ -1,0 +1,597 @@
+{
+  "scene": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+  "isDirty": false,
+  "missing": 0,
+  "definitions": [
+    {
+      "Id": "machine-gun-nest",
+      "IsValid": true,
+      "Cost": 150,
+      "MaxHealth": 300,
+      "Damage": 20,
+      "RangeInCells": 5.0,
+      "FireRate": 4.0,
+      "footprint": "(1, 1)",
+      "target": "Closest",
+      "prefab": "Assets/Game/Prefabs/Defenses/MachineGunNest.prefab"
+    },
+    {
+      "Id": "barbed-wire",
+      "IsValid": true,
+      "Cost": 50,
+      "MaxHealth": 200,
+      "Damage": 0,
+      "RangeInCells": 1.0,
+      "FireRate": 1.0,
+      "footprint": "(1, 1)",
+      "target": "Closest",
+      "prefab": "Assets/Game/Prefabs/Defenses/BarbedWire.prefab"
+    },
+    {
+      "Id": "land-mine",
+      "IsValid": true,
+      "Cost": 75,
+      "MaxHealth": 1,
+      "Damage": 150,
+      "RangeInCells": 1.75,
+      "FireRate": 1.0,
+      "footprint": "(1, 1)",
+      "target": "Closest",
+      "prefab": "Assets/Game/Prefabs/Defenses/LandMine.prefab"
+    },
+    {
+      "Id": "sniper-tower",
+      "IsValid": true,
+      "Cost": 300,
+      "MaxHealth": 250,
+      "Damage": 100,
+      "RangeInCells": 11.0,
+      "FireRate": 0.5,
+      "footprint": "(1, 1)",
+      "target": "ClosestToBase",
+      "prefab": "Assets/Game/Prefabs/Defenses/SniperTower.prefab"
+    },
+    {
+      "Id": "mortar",
+      "IsValid": true,
+      "Cost": 400,
+      "MaxHealth": 250,
+      "Damage": 120,
+      "RangeInCells": 12.0,
+      "FireRate": 0.333333343,
+      "footprint": "(2, 2)",
+      "target": "BestCluster",
+      "prefab": "Assets/Game/Prefabs/Defenses/MortarPosition.prefab"
+    },
+    {
+      "Id": "flamethrower",
+      "IsValid": true,
+      "Cost": 300,
+      "MaxHealth": 350,
+      "Damage": 12,
+      "RangeInCells": 3.5,
+      "FireRate": 5.0,
+      "footprint": "(1, 1)",
+      "target": "Closest",
+      "prefab": "Assets/Game/Prefabs/Defenses/FlamethrowerPosition.prefab"
+    },
+    {
+      "Id": "autocannon",
+      "IsValid": true,
+      "Cost": 600,
+      "MaxHealth": 450,
+      "Damage": 55,
+      "RangeInCells": 7.5,
+      "FireRate": 2.0,
+      "footprint": "(2, 2)",
+      "target": "HighestHealth",
+      "prefab": "Assets/Game/Prefabs/Defenses/AutoCannon.prefab"
+    },
+    {
+      "Id": "rocket",
+      "IsValid": true,
+      "Cost": 900,
+      "MaxHealth": 300,
+      "Damage": 250,
+      "RangeInCells": 10.0,
+      "FireRate": 0.2,
+      "footprint": "(2, 2)",
+      "target": "BestCluster",
+      "prefab": "Assets/Game/Prefabs/Defenses/RocketLauncherPosition.prefab"
+    }
+  ],
+  "imports": [
+    {
+      "path": "Assets/Game/Art/Defenses\\AutoCannon\\defense_autocannon_base_idle.png",
+      "width": 128,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\AutoCannon\\defense_autocannon_damaged.png",
+      "width": 128,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\AutoCannon\\defense_autocannon_destroyed.png",
+      "width": 128,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\AutoCannon\\defense_autocannon_fire_sheet.png",
+      "width": 512,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\AutoCannon\\defense_autocannon_weapon_idle.png",
+      "width": 128,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\FlamethrowerPosition\\defense_flamethrower_base_idle.png",
+      "width": 64,
+      "height": 64,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\FlamethrowerPosition\\defense_flamethrower_damaged.png",
+      "width": 64,
+      "height": 64,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\FlamethrowerPosition\\defense_flamethrower_destroyed.png",
+      "width": 64,
+      "height": 64,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\FlamethrowerPosition\\defense_flamethrower_fire_sheet.png",
+      "width": 256,
+      "height": 64,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\FlamethrowerPosition\\defense_flamethrower_weapon_idle.png",
+      "width": 64,
+      "height": 64,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\MortarPosition\\defense_mortar_base_idle.png",
+      "width": 128,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\MortarPosition\\defense_mortar_damaged.png",
+      "width": 128,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\MortarPosition\\defense_mortar_destroyed.png",
+      "width": 128,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\MortarPosition\\defense_mortar_fire_sheet.png",
+      "width": 512,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\MortarPosition\\defense_mortar_weapon_idle.png",
+      "width": 128,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\RocketLauncherPosition\\defense_rocket_base_idle.png",
+      "width": 128,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\RocketLauncherPosition\\defense_rocket_damaged.png",
+      "width": 128,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\RocketLauncherPosition\\defense_rocket_destroyed.png",
+      "width": 128,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\RocketLauncherPosition\\defense_rocket_fire_sheet.png",
+      "width": 512,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Defenses\\RocketLauncherPosition\\defense_rocket_launcher_idle.png",
+      "width": 128,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Heavy\\fx_burningoverlay_sheet.png",
+      "width": 256,
+      "height": 64,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Heavy\\fx_burn_sheet.png",
+      "width": 256,
+      "height": 64,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Heavy\\fx_cannonimpact_sheet.png",
+      "width": 256,
+      "height": 64,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Heavy\\fx_cannonmuzzle_sheet.png",
+      "width": 256,
+      "height": 64,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Heavy\\fx_cannontracer_sheet.png",
+      "width": 256,
+      "height": 64,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Heavy\\fx_flamecone_sheet.png",
+      "width": 256,
+      "height": 64,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Heavy\\fx_mortarexplosion_sheet.png",
+      "width": 512,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Heavy\\fx_mortarmuzzle_sheet.png",
+      "width": 512,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Heavy\\fx_mortarshell_sheet.png",
+      "width": 512,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Heavy\\fx_rocketexplosion_sheet.png",
+      "width": 512,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Heavy\\fx_rocketprojectile_sheet.png",
+      "width": 512,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Heavy\\fx_rocketsmoke_sheet.png",
+      "width": 512,
+      "height": 128,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 51.2,
+      "frames": 4
+    },
+    {
+      "path": "Assets/Game/Art/UI\\ui_icon_autocannon.png",
+      "width": 32,
+      "height": 32,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 100.0,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/UI\\ui_icon_flamethrower.png",
+      "width": 32,
+      "height": 32,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 100.0,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/UI\\ui_icon_money_bundle_rsd.png",
+      "width": 32,
+      "height": 32,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 100.0,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/UI\\ui_icon_money_rsd.png",
+      "width": 32,
+      "height": 32,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 100.0,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/UI\\ui_icon_mortar.png",
+      "width": 32,
+      "height": 32,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 100.0,
+      "frames": 1
+    },
+    {
+      "path": "Assets/Game/Art/UI\\ui_icon_rocket.png",
+      "width": 32,
+      "height": 32,
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "wrap": "Clamp",
+      "spritePixelsPerUnit": 100.0,
+      "frames": 1
+    }
+  ],
+  "vfx": [
+    {
+      "id": "MortarMuzzle",
+      "frames": 4,
+      "fps": 16.0,
+      "lifetime": 0.3
+    },
+    {
+      "id": "MortarShell",
+      "frames": 4,
+      "fps": 16.0,
+      "lifetime": 0.3
+    },
+    {
+      "id": "MortarExplosion",
+      "frames": 4,
+      "fps": 16.0,
+      "lifetime": 0.3
+    },
+    {
+      "id": "FlameCone",
+      "frames": 4,
+      "fps": 16.0,
+      "lifetime": 0.3
+    },
+    {
+      "id": "Burn",
+      "frames": 4,
+      "fps": 16.0,
+      "lifetime": 0.3
+    },
+    {
+      "id": "BurningOverlay",
+      "frames": 4,
+      "fps": 16.0,
+      "lifetime": 0.3
+    },
+    {
+      "id": "CannonMuzzle",
+      "frames": 4,
+      "fps": 16.0,
+      "lifetime": 0.3
+    },
+    {
+      "id": "CannonTracer",
+      "frames": 4,
+      "fps": 16.0,
+      "lifetime": 0.3
+    },
+    {
+      "id": "CannonImpact",
+      "frames": 4,
+      "fps": 16.0,
+      "lifetime": 0.3
+    },
+    {
+      "id": "RocketProjectile",
+      "frames": 4,
+      "fps": 16.0,
+      "lifetime": 0.3
+    },
+    {
+      "id": "RocketSmoke",
+      "frames": 4,
+      "fps": 16.0,
+      "lifetime": 0.45
+    },
+    {
+      "id": "RocketExplosion",
+      "frames": 4,
+      "fps": 16.0,
+      "lifetime": 0.3
+    }
+  ]
+}

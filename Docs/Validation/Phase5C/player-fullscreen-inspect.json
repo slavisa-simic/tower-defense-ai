@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command eval_file",
+  "data": {
+    "command": "eval_file",
+    "parameters": {
+      "file": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase5C\\PlayerInspect.cs"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "scene=MainMenu; actual=1920x1080; mode=FullScreenWindow; vsync=1; settings={\"saveVersion\":1,\"width\":1920,\"height\":1080,\"vfxDensity\":1,\"fullscreen\":true,\"vsync\":true,\"rewardPopups\":true}"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7900,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Builds\\Phase5C-QA"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

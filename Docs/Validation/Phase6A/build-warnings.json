@@ -1,0 +1,23 @@
+{
+  "success": true,
+  "command": "command eval",
+  "data": {
+    "command": "eval",
+    "parameters": {
+      "code": "return string.Join(\" | \", UnityEditor.Build.Reporting.BuildReport.GetLatestReport().steps.SelectMany(s => s.messages).Where(m => m.type == UnityEngine.LogType.Warning).Select(m => m.content));"
+    },
+    "result": {
+      "output": null,
+      "diagnostics": [],
+      "success": true,
+      "result": "Pipeline: RuntimePipelineConfig found, but enableInBuilds = false. Pipeline will be disabled in Player builds."
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

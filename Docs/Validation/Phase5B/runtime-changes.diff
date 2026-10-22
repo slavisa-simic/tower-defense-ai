@@ -1,0 +1,758 @@
+diff --git a/Docs/Validation/Phase5B/baseline-scripts/Building/BuildManager.cs b/Assets/Game/Scripts/Building/BuildManager.cs
+index cfa3064..5653e22 100644
+--- a/Docs/Validation/Phase5B/baseline-scripts/Building/BuildManager.cs
++++ b/Assets/Game/Scripts/Building/BuildManager.cs
+@@ -22,8 +22,9 @@ namespace ShorelineDefense.Building
+         [SerializeField, Min(.01f)] private float preparationRepairMultiplier = .75f;
+         [SerializeField, Min(.01f)] private float waveRepairMultiplier = 1.25f;
+         public void ConfigureWaves(ShorelineDefense.Waves.WaveManager manager) => waves = manager;
+-        public float RepairMultiplier => waves != null && (waves.State == ShorelineDefense.Waves.WaveState.Spawning || waves.State == ShorelineDefense.Waves.WaveState.Combat) ? waveRepairMultiplier : preparationRepairMultiplier;
+-        public int UpgradeCost(DefenseBase defense) => defense != null && defense.Level < 3 ? defense.Definition.LevelData(defense.Level + 1)?.cost ?? 0 : 0;
++        public ShorelineDefense.Waves.EndlessEventManager Events => waves?.Events;
++        public float RepairMultiplier => waves != null && (waves.State == ShorelineDefense.Waves.WaveState.Spawning || waves.State == ShorelineDefense.Waves.WaveState.Combat) ? waveRepairMultiplier * (Events?.Modifiers.combatRepair ?? 1) : preparationRepairMultiplier * (Events?.Modifiers.preparationRepair ?? 1);
++        public int UpgradeCost(DefenseBase defense) => defense != null && defense.Level < 3 ? (int)Math.Min(int.MaxValue, Math.Ceiling((defense.Definition.LevelData(defense.Level + 1)?.cost ?? 0) * Math.Round((double)(Events?.Modifiers.upgradeCost ?? 1), 6))) : 0;
+         public int RepairCost(DefenseBase defense) => defense != null && defense.IsAlive && defense.CurrentHealth < defense.MaxHealth ?
+             Math.Max(1, (int)Math.Min(int.MaxValue, Math.Ceiling(defense.TotalInvestment * (double)repairBasisFraction * (defense.MaxHealth - defense.CurrentHealth) / defense.MaxHealth * RepairMultiplier))) : 0;
+         public bool CanUpgrade(DefenseBase defense) => CanDismantle(defense) && defense.Level < 3 && UpgradeCost(defense) > 0 && economy.CanAfford(UpgradeCost(defense));
+@@ -66,6 +67,10 @@ namespace ShorelineDefense.Building
+         {
+             if (game == null || !game.IsPlaying) return PlacementResult.NotPlaying;
+             if (definition == null || !definition.IsValid || economy == null || enemies == null) return PlacementResult.InvalidDefinition;
++            if (grid?.Grid != null && Events?.Modifiers.floodedColumns > 0 && grid.Grid.Plane == GameplayPlane.XY) {
++                int first = grid.Definition.WaterBandCells + grid.Definition.BeachBandCells;
++                if (cell.x < first + Events.Modifiers.floodedColumns && cell.x + definition.Footprint.x > first) return PlacementResult.NotBuildable;
++            }
+             return PlacementRules.Validate(grid?.Grid, cell, definition.Footprint, definition.Cost, economy.Money);
+         }
+ 
+diff --git a/Docs/Validation/Phase5B/baseline-scripts/Core/RunStatistics.cs b/Assets/Game/Scripts/Core/RunStatistics.cs
+index 04d30f9..cd82bfa 100644
+--- a/Docs/Validation/Phase5B/baseline-scripts/Core/RunStatistics.cs
++++ b/Assets/Game/Scripts/Core/RunStatistics.cs
+@@ -36,6 +36,10 @@ namespace ShorelineDefense.Core
+         public long RunnerKills => kills[1];
+         public long BruteKills => kills[2];
+         public int CurrentWave => waves != null ? waves.CurrentWaveNumber : 0;
++        public long EventsExperienced => waves?.Events?.EventsExperienced ?? 0;
++        public string CurrentEvent => waves?.Events?.Current?.Definition.id;
++        public string MostRecentEvent => waves?.Events?.MostRecentEvent;
++        public int EventCount(string id) => waves?.Events?.Count(id) ?? 0;
+         public int HighestWaveReached { get; private set; }
+         public long TotalMoneyEarned => economy != null ? economy.TotalEarned : 0;
+         public long TotalMoneySpent => economy != null ? economy.TotalSpent : 0;
+diff --git a/Docs/Validation/Phase5B/baseline-scripts/Defenses/DefenseBase.cs b/Assets/Game/Scripts/Defenses/DefenseBase.cs
+index bbcb73c..2f2f2f1 100644
+--- a/Docs/Validation/Phase5B/baseline-scripts/Defenses/DefenseBase.cs
++++ b/Assets/Game/Scripts/Defenses/DefenseBase.cs
+@@ -52,7 +52,8 @@ namespace ShorelineDefense.Defenses
+         public Vector2Int Anchor { get; private set; }
+         public bool IsAlive => health != null && health.IsAlive && !Dismantled && !removed;
+         public int CurrentHealth => health?.CurrentHealth ?? 0;
+-        public float Range => Definition.RangeInCells * (LevelStats?.range ?? 1) * grid.CellSize;
++        public float Range => Definition.RangeInCells * (LevelStats?.range ?? 1) * grid.CellSize *
++            (Definition.Id == "land-mine" || Definition.Id == "barbed-wire" ? 1 : Owner?.Events?.Modifiers.defenseRange ?? 1);
+         public BattlefieldGrid Grid => grid;
+         public event Action Died;
+ 
+diff --git a/Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs b/Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs
+new file mode 100644
+index 0000000..28b9a23
+--- /dev/null
++++ b/Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs
+@@ -0,0 +1,49 @@
++using ShorelineDefense.Grid;
++using ShorelineDefense.Waves;
++using UnityEngine;
++
++namespace ShorelineDefense.Presentation
++{
++    /// <summary>Two bounded tiled overlays. No terrain, navigation or gameplay ownership.</summary>
++    public sealed class EndlessEventPresentation : MonoBehaviour
++    {
++        [SerializeField] private WaveManager waves;
++        [SerializeField] private GridManager battlefield;
++        [SerializeField] private Sprite fogSprite, wetSprite;
++        private SpriteRenderer fog, wet;
++        public bool FogVisible => fog != null && fog.enabled;
++        public bool FloodVisible => wet != null && wet.enabled;
++        public void Configure(WaveManager manager, GridManager grid, Sprite mist, Sprite bank)
++        { waves = manager; battlefield = grid; fogSprite = mist; wetSprite = bank; }
++        private void Start()
++        {
++            if (waves == null || battlefield?.Grid == null) return;
++            fog = Make("Event Mist", fogSprite, "Effects", 18, false);
++            wet = Make("Flooded No Build Strip", wetSprite, "GroundObjects", 1, true);
++            waves.EventChanged += Refresh; Refresh();
++        }
++        private void OnEnable() { if (fog != null && waves != null) { waves.EventChanged += Refresh; Refresh(); } }
++        private SpriteRenderer Make(string label, Sprite sprite, string layer, int order, bool tiled)
++        {
++            var go = new GameObject(label); go.transform.SetParent(transform, false);
++            var renderer = go.AddComponent<SpriteRenderer>(); renderer.sprite = sprite;
++            renderer.drawMode = tiled ? SpriteDrawMode.Tiled : SpriteDrawMode.Simple; renderer.sortingLayerName = layer; renderer.sortingOrder = order;
++            renderer.enabled = false; return renderer;
++        }
++        private void Refresh()
++        {
++            if (fog == null) return;
++            var grid = battlefield.Grid; var modifiers = waves.Events?.Modifiers;
++            fog.enabled = modifiers?.fog ?? false;
++            fog.size = new Vector2(grid.Width * grid.CellSize, grid.Height * grid.CellSize);
++            fog.transform.localScale = new Vector3(fog.size.x / fogSprite.bounds.size.x, fog.size.y / fogSprite.bounds.size.y, 1);
++            fog.transform.position = grid.Origin + new Vector3(fog.size.x / 2, fog.size.y / 2, -.1f);
++            fog.color = new Color(.76f, .82f, .81f, .24f);
++            wet.enabled = modifiers?.floodedColumns > 0;
++            wet.size = new Vector2((modifiers?.floodedColumns ?? 0) * grid.CellSize, grid.Height * grid.CellSize);
++            wet.transform.position = grid.Origin + new Vector3((battlefield.Definition.WaterBandCells + battlefield.Definition.BeachBandCells) * grid.CellSize + wet.size.x / 2, wet.size.y / 2, -.02f);
++            wet.color = new Color(.22f, .52f, .57f, .64f);
++        }
++        private void OnDisable() { if (waves != null) waves.EventChanged -= Refresh; if (fog != null) fog.enabled = false; if (wet != null) wet.enabled = false; }
++    }
++}
+diff --git a/Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs.meta b/Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs.meta
+new file mode 100644
+index 0000000..ffda4d9
+--- /dev/null
++++ b/Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: 29f69f51d29d2114d8b5a1b7e24aafca
+\ No newline at end of file
+diff --git a/Assets/Game/Scripts/UI/EndlessEventHud.cs b/Assets/Game/Scripts/UI/EndlessEventHud.cs
+new file mode 100644
+index 0000000..98331c5
+--- /dev/null
++++ b/Assets/Game/Scripts/UI/EndlessEventHud.cs
+@@ -0,0 +1,43 @@
++using ShorelineDefense.Waves;
++using UnityEngine;
++using UnityEngine.UIElements;
++
++namespace ShorelineDefense.UI
++{
++    [RequireComponent(typeof(UIDocument))]
++    public sealed class EndlessEventHud : MonoBehaviour
++    {
++        [SerializeField] private WaveManager waves;
++        private VisualElement panel, icon, wavePanel;
++        private Label title, effect, waveStatus;
++        public void Configure(WaveManager manager) => waves = manager;
++        private void OnEnable()
++        {
++            if (waves == null) return;
++            var root = GetComponent<UIDocument>().rootVisualElement;
++            panel = root.Q("event-panel"); icon = root.Q("event-icon"); title = root.Q<Label>("event-title"); effect = root.Q<Label>("event-effect");
++            wavePanel = root.Q("wave-panel"); waveStatus = root.Q<Label>("wave-status");
++            if (panel == null) return;
++            waves.EventChanged += Refresh; waves.Changed += WaveChanged; Refresh();
++        }
++        private WaveState previousState;
++        private void WaveChanged() { if (previousState == waves.State) return; previousState = waves.State; Refresh(); }
++        private void OnDisable() { if (waves != null) { waves.EventChanged -= Refresh; waves.Changed -= WaveChanged; } }
++        private void Refresh()
++        {
++            if (panel == null) return;
++            var current = waves.Events?.Current;
++            panel.style.display = current != null ? DisplayStyle.Flex : DisplayStyle.None;
++            wavePanel.EnableInClassList("has-event", current != null);
++            waveStatus.style.display = current != null ? DisplayStyle.None : DisplayStyle.Flex;
++            if (current == null) return;
++            bool preparation = waves.State == WaveState.Preparation;
++            title.text = (preparation ? "EVENT: " : "ACTIVE: ") + current.Definition.displayName;
++            effect.text = current.Definition.description;
++            if (current.Definition.modifiers.landingPattern == LandingPattern.Concentrated) effect.text += " / " + current.Sector.ToString().ToUpperInvariant() + " SECTOR";
++            if (current.SupplyReceived > 0) effect.text += " / +" + current.SupplyReceived + " RSD RECEIVED";
++            if (current.WarningRemaining > 0) effect.text += " / PREPARATION WARNING";
++            icon.style.backgroundImage = current.Definition.uiIcon != null ? new StyleBackground(current.Definition.uiIcon) : StyleKeyword.None;
++        }
++    }
++}
+diff --git a/Assets/Game/Scripts/UI/EndlessEventHud.cs.meta b/Assets/Game/Scripts/UI/EndlessEventHud.cs.meta
+new file mode 100644
+index 0000000..9e10115
+--- /dev/null
++++ b/Assets/Game/Scripts/UI/EndlessEventHud.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: 9ca97d7221af78a48ad3963d5ce3456d
+\ No newline at end of file
+diff --git a/Docs/Validation/Phase5B/baseline-scripts/UI/StructureHud.cs b/Assets/Game/Scripts/UI/StructureHud.cs
+index df7d488..5148339 100644
+--- a/Docs/Validation/Phase5B/baseline-scripts/UI/StructureHud.cs
++++ b/Assets/Game/Scripts/UI/StructureHud.cs
+@@ -30,6 +30,8 @@ namespace ShorelineDefense.UI
+             pause.clicked += Pause; normal.clicked += Normal; fast.clicked += Fast;
+             selection.Changed += Refresh; builder.Economy.MoneyChanged += MoneyChanged; builder.Game.StateChanged += GameChanged; speed.Changed += Refresh;
+             previousWaveState = waves.State;
++            waves.EventChanged += Refresh;
++            waves.Changed += WaveChanged;
+             Refresh();
+         }
+         private void OnDisable()
+@@ -38,10 +40,12 @@ namespace ShorelineDefense.UI
+             upgrade.clicked -= Upgrade; repair.clicked -= Repair; dismantle.clicked -= Dismantle;
+             pause.clicked -= Pause; normal.clicked -= Normal; fast.clicked -= Fast;
+             selection.Changed -= Refresh; builder.Economy.MoneyChanged -= MoneyChanged; builder.Game.StateChanged -= GameChanged; speed.Changed -= Refresh;
++            waves.EventChanged -= Refresh;
++            waves.Changed -= WaveChanged;
+             panel = null;
+         }
+         // WaveManager.Changed also fires for every passenger. Observe only its cheap state value.
+-        private void Update() { if (panel != null && previousWaveState != waves.State) { previousWaveState = waves.State; Refresh(); } }
++        private void WaveChanged() { if (panel != null && previousWaveState != waves.State) { previousWaveState = waves.State; Refresh(); } }
+         private void MoneyChanged(int money) => Refresh();
+         private void GameChanged(GameState state) => Refresh();
+         private void Upgrade() => builder.TryUpgrade(selection.Selected);
+diff --git a/Docs/Validation/Phase5B/baseline-scripts/UI/WaveHud.cs b/Assets/Game/Scripts/UI/WaveHud.cs
+index b66c43a..43cb27c 100644
+--- a/Docs/Validation/Phase5B/baseline-scripts/UI/WaveHud.cs
++++ b/Assets/Game/Scripts/UI/WaveHud.cs
+@@ -44,6 +44,7 @@ namespace ShorelineDefense.UI
+             waveLabel.text = $"WAVE {waves.CurrentWaveNumber}";
+             remaining.text = $"Enemies Remaining: {waves.EnemiesRemaining}";
+             start.SetEnabled(waves.CanStart);
++            start.text = waves.Events?.Current != null ? (waves.Events.CanStart ? "EVENT WAVE" : "ASSAULT WARNING") : "START WAVE";
+             start.style.opacity = start.enabledSelf ? 1 : 0.4f;
+             switch (waves.State)
+             {
+diff --git a/Docs/Validation/Phase5B/baseline-scripts/Waves/AssaultPressureDirector.cs b/Assets/Game/Scripts/Waves/AssaultPressureDirector.cs
+index 076bdf8..39bf211 100644
+--- a/Docs/Validation/Phase5B/baseline-scripts/Waves/AssaultPressureDirector.cs
++++ b/Assets/Game/Scripts/Waves/AssaultPressureDirector.cs
+@@ -16,12 +16,12 @@ namespace ShorelineDefense.Waves
+         public bool DeploymentPaused { get; private set; }
+         public void Reset() { untilEvaluation = elapsed = 0; Mode = AssaultPressure.Normal; Surging = DeploymentPaused = false; }
+         public bool Tick(float dt, EndlessWaveSettings settings, int wave, int activeEnemies,
+-            int pendingEnemies, int activeBoats, int incomingPassengers, bool bossPendingOrAlive)
++            int pendingEnemies, int activeBoats, int incomingPassengers, bool bossPendingOrAlive, EventModifiers modifiers = null)
+         {
+             elapsed += dt; untilEvaluation -= dt;
+             if (untilEvaluation > 0) return false;
+             untilEvaluation = Mathf.Clamp(settings.directorEvaluationInterval, .1f, .25f);
+-            Target = settings.PressureTarget(wave);
++            Target = Mathf.Clamp(Mathf.CeilToInt(settings.PressureTarget(wave) * (modifiers?.pressure ?? 1)), 1, Mathf.Min(400, settings.maximumActiveEnemies));
+             float band = Mathf.Clamp(settings.pressureHysteresis, .05f, .4f);
+             // Cargo committed to the river is pressure in flight: do not overfill a full battlefield.
+             int committed = activeEnemies + incomingPassengers;
+@@ -34,12 +34,13 @@ namespace ShorelineDefense.Waves
+             float period = Mathf.Max(1, settings.surgePeriod);
+             Surging = settings.assaultSurgesEnabled && wave >= 5 && pendingEnemies > incomingPassengers &&
+                 elapsed >= period && elapsed % period < Mathf.Min(period * .5f, Mathf.Max(1, settings.surgeDuration));
+-            BoatLimit = Mathf.Clamp(settings.BoatConcurrency(wave) + (Surging ? settings.surgeExtraBoats : 0), 1, 32);
++            BoatLimit = Mathf.Clamp(Mathf.CeilToInt(settings.BoatConcurrency(wave) * (modifiers?.boatConcurrency ?? 1)) + (Surging ? settings.surgeExtraBoats : 0), 1, 32);
+             ArrivalInterval = settings.ArrivalInterval(wave);
+             if (bossPendingOrAlive) ArrivalInterval *= .8f;
+             if ((Mode == AssaultPressure.Accelerated || Surging) && activeBoats < BoatLimit)
+                 ArrivalInterval = Mathf.Min(ArrivalInterval, Mathf.Max(.05f, settings.acceleratedArrivalInterval));
+             else if (Mode == AssaultPressure.Throttled) ArrivalInterval *= 1.5f;
++            ArrivalInterval = Mathf.Max(.05f, ArrivalInterval * (modifiers?.boatInterval ?? 1));
+             return true;
+         }
+     }
+diff --git a/Docs/Validation/Phase5B/baseline-scripts/Waves/BoatLandingSystem.cs b/Assets/Game/Scripts/Waves/BoatLandingSystem.cs
+index 2d2ef7e..fd1fb7b 100644
+--- a/Docs/Validation/Phase5B/baseline-scripts/Waves/BoatLandingSystem.cs
++++ b/Assets/Game/Scripts/Waves/BoatLandingSystem.cs
+@@ -45,6 +45,18 @@ namespace ShorelineDefense.Waves
+         private readonly Dictionary<GameObject, GameObject> visualSources = new Dictionary<GameObject, GameObject>();
+         private int[] recentLandings;
+         private int landingSequence;
++        private EventModifiers eventModifiers;
++        private LandingSector targetSector;
++        private readonly int[] sectorArrivals = new int[3];
++        public IReadOnlyList<int> SectorArrivals => sectorArrivals;
++        public void ConfigureEvent(EventModifiers modifiers, LandingSector sector = LandingSector.Center)
++        { eventModifiers = modifiers; targetSector = sector; }
++        public LandingSector SectorFor(RiverLandingPoint point)
++        {
++            var grid = spawner.Battlefield.Grid;
++            float fraction = (point.berth.y - grid.Origin.y) / (grid.Height * grid.CellSize);
++            return fraction < 1f / 3 ? LandingSector.South : fraction > 2f / 3 ? LandingSector.North : LandingSector.Center;
++        }
+         public int CreatedBoatVisuals { get; private set; }
+         public int ReusedBoatVisuals { get; private set; }
+         private VfxService effects;
+@@ -92,6 +104,9 @@ namespace ShorelineDefense.Waves
+             {
+                 var point = landingPoints[index];
+                 if (!IsRiverLane(point)) continue;
++                // Four of five dispatches wait for the announced sector instead of silently spilling
++                // into every free lane. The fifth allows supporting landings elsewhere.
++                if (eventModifiers?.landingPattern == LandingPattern.Concentrated && landingSequence % 5 != 4 && SectorFor(point) != targetSector) continue;
+                 bool entryOccupied = false; int laneCount = 0;
+                 foreach (var active in boats) if (active.point == index) {
+                     laneCount++;
+@@ -100,14 +115,19 @@ namespace ShorelineDefense.Waves
+                 if (entryOccupied) continue;
+                 float score = laneCount * 4 + recentLandings[index] / (float)Mathf.Max(1, landingSequence) +
+                     ((index * 17 + landingSequence * 13) % 23) * .025f;
++                if (eventModifiers?.landingPattern == LandingPattern.Distributed)
++                    score += (int)SectorFor(point) == landingSequence % 3 ? -20 : 0;
++                if (eventModifiers?.landingPattern == LandingPattern.Concentrated)
++                    score += SectorFor(point) == targetSector ? -20 : 0;
+                 if (score < best) { best = score; chosen = index; }
+             }
+             if (chosen >= 0)
+             {
+                 int index = chosen; var point = landingPoints[index]; recentLandings[index] = ++landingSequence;
++                sectorArrivals[(int)SectorFor(point)]++;
+                 BossDefinition boss = null;
+                 foreach (var passenger in cargo) if (passenger.Definition is BossDefinition special) { boss = special; break; }
+-                var source = boss != null && boss.BossBoat != null ? boss.BossBoat : boatPrefab;
++                var source = boss != null && boss.BossBoat != null ? boss.BossBoat : eventModifiers?.boatVisual != null ? eventModifiers.boatVisual : boatPrefab;
+                 if (!visualPools.TryGetValue(source, out var pool)) visualPools[source] = pool = new Stack<GameObject>();
+                 GameObject visual;
+                 if (pool.Count > 0) { visual = pool.Pop(); ReusedBoatVisuals++; }
+@@ -176,7 +196,7 @@ namespace ShorelineDefense.Waves
+                     var direction = destination - boat.visual.transform.position;
+                     if (direction.sqrMagnitude > .0001f)
+                         boat.visual.transform.GetChild(0).rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
+-                    boat.visual.transform.position = Vector3.MoveTowards(boat.visual.transform.position, destination, moveSpeed * boat.speedMultiplier * deltaTime);
++                    boat.visual.transform.position = Vector3.MoveTowards(boat.visual.transform.position, destination, moveSpeed * boat.speedMultiplier * (eventModifiers?.boatSpeed ?? 1) * deltaTime);
+                     boat.wakeTimer -= deltaTime;
+                     if (boat.wakeTimer <= 0 && effects != null)
+                     {
+diff --git a/Assets/Game/Scripts/Waves/EndlessEventDefinition.cs b/Assets/Game/Scripts/Waves/EndlessEventDefinition.cs
+new file mode 100644
+index 0000000..45dbf8c
+--- /dev/null
++++ b/Assets/Game/Scripts/Waves/EndlessEventDefinition.cs
+@@ -0,0 +1,60 @@
++using System;
++using ShorelineDefense.Enemies;
++using UnityEngine;
++
++namespace ShorelineDefense.Waves
++{
++    public enum EventDuration { NextWave, EntireWave, Timed, Preparation, MultiWave }
++    public enum EventCategory { Challenge, Relief, Pattern }
++    public enum LandingPattern { Normal, Distributed, Concentrated }
++    public enum LandingSector { South, Center, North }
++
++    [Serializable]
++    public sealed class CompositionBias
++    {
++        public EnemyKind kind;
++        [Min(0)] public float multiplier = 1;
++    }
++
++    [Serializable]
++    public sealed class EventModifiers
++    {
++        [Min(.1f)] public float quantity = 1, pressure = 1, boatSpeed = 1, boatInterval = 1, boatConcurrency = 1;
++        [Range(.5f, 1)] public float defenseRange = 1;
++        [Min(.1f)] public float upgradeCost = 1, combatRepair = 1, preparationRepair = 1;
++        [Range(0, 3)] public int floodedColumns;
++        public bool fog;
++        public GameObject boatVisual;
++        public LandingPattern landingPattern;
++        public CompositionBias[] composition = Array.Empty<CompositionBias>();
++        public float Weight(EnemyKind kind)
++        {
++            foreach (var bias in composition) if (bias != null && bias.kind == kind) return Mathf.Max(0, bias.multiplier);
++            return 1;
++        }
++    }
++
++    [CreateAssetMenu(menuName = "Shoreline Defense/Endless Event")]
++    public sealed class EndlessEventDefinition : ScriptableObject
++    {
++        public string id, displayName;
++        [TextArea] public string description;
++        public EventCategory category;
++        [Min(1)] public int minimumWave = 5;
++        [Min(0)] public int maximumWave;
++        [Min(0)] public float weight = 1;
++        public EventDuration durationType = EventDuration.EntireWave;
++        [Min(1)] public float duration = 1;
++        [Min(1)] public int cooldown = 8;
++        public bool allowBossWave, preparationEffects;
++        public string[] incompatibleEvents = Array.Empty<string>();
++        public Sprite uiIcon;
++        public EventModifiers modifiers = new EventModifiers();
++        [Min(0)] public int supplyBase, supplyPerWave, supplyMaximum = 500;
++        [Min(0)] public float preparationWarningSeconds;
++        public bool Eligible(int wave, bool boss) => !string.IsNullOrWhiteSpace(id) && weight > 0 && wave >= minimumWave &&
++            (maximumWave == 0 || wave <= maximumWave) && (!boss || allowBossWave);
++        public bool Compatible(EndlessEventDefinition other) => other == null ||
++            other != this && Array.IndexOf(incompatibleEvents, other.id) < 0 && Array.IndexOf(other.incompatibleEvents, id) < 0;
++    }
++}
+diff --git a/Assets/Game/Scripts/Waves/EndlessEventDefinition.cs.meta b/Assets/Game/Scripts/Waves/EndlessEventDefinition.cs.meta
+new file mode 100644
+index 0000000..f6c1fa8
+--- /dev/null
++++ b/Assets/Game/Scripts/Waves/EndlessEventDefinition.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: 8595f4b8de5845d43ba7c711c60cb4df
+\ No newline at end of file
+diff --git a/Assets/Game/Scripts/Waves/EndlessEventManager.cs b/Assets/Game/Scripts/Waves/EndlessEventManager.cs
+new file mode 100644
+index 0000000..8f9400c
+--- /dev/null
++++ b/Assets/Game/Scripts/Waves/EndlessEventManager.cs
+@@ -0,0 +1,140 @@
++using System;
++using System.Collections.Generic;
++using ShorelineDefense.Economy;
++using UnityEngine;
++
++namespace ShorelineDefense.Waves
++{
++    public sealed class ActiveEventContext
++    {
++        public EndlessEventDefinition Definition { get; internal set; }
++        public int Wave { get; internal set; }
++        public LandingSector Sector { get; internal set; }
++        public bool Active { get; internal set; }
++        public float SecondsRemaining { get; internal set; }
++        public float WarningRemaining { get; internal set; }
++        public int WavesRemaining { get; internal set; }
++        public int SupplyReceived { get; internal set; }
++    }
++
++    public readonly struct EventHistoryEntry
++    {
++        public readonly int Wave;
++        public readonly string Id;
++        public EventHistoryEntry(int wave, string id) { Wave = wave; Id = id; }
++        public override string ToString() => "Wave " + Wave + " — " + Id;
++    }
++
++    /// <summary>Run-owned event policy/lifecycle. Never writes permanent tuning or owns wave scheduling.</summary>
++    public sealed class EndlessEventManager
++    {
++        private static readonly EventModifiers normal = new EventModifiers();
++        private readonly EndlessEventSettings settings;
++        private readonly int seed;
++        private readonly Dictionary<string, int> lastWave = new Dictionary<string, int>();
++        private readonly List<string> recent = new List<string>();
++        private readonly List<EventHistoryEntry> history = new List<EventHistoryEntry>();
++        private readonly Dictionary<string, int> counts = new Dictionary<string, int>();
++        private bool preparation;
++        private int nextEventWave;
++        public ActiveEventContext Current { get; private set; }
++        public EventModifiers Modifiers => Current != null && Current.Active ? Current.Definition.modifiers : normal;
++        public IReadOnlyList<EventHistoryEntry> History => history;
++        public long EventsExperienced { get; private set; }
++        public string MostRecentEvent { get; private set; }
++        public int Count(string id) => counts.TryGetValue(id, out int value) ? value : 0;
++        public bool CanStart => Current == null || Current.WarningRemaining <= 0;
++        public event Action Changed;
++        public EndlessEventManager(EndlessEventSettings tuning, int runSeed)
++        { settings = tuning; seed = runSeed; nextEventWave = tuning != null ? Mathf.Max(5, tuning.firstEventWave) : int.MaxValue; }
++
++        public EndlessEventDefinition Select(int wave, bool boss, EndlessEventDefinition existing = null)
++        {
++            if (settings == null || wave < nextEventWave || existing != null) return null; // one major event
++            var eligible = new List<EndlessEventDefinition>();
++            var totals = new float[3];
++            foreach (var e in settings.events)
++            {
++                if (e == null || !e.Eligible(wave, boss) || !e.Compatible(existing) || recent.Contains(e.id) ||
++                    lastWave.TryGetValue(e.id, out int last) && (long)wave - last < Mathf.Max(1, e.cooldown)) continue;
++                eligible.Add(e); totals[(int)e.category] += e.weight;
++            }
++            float[] categories = { settings.challengeWeight, settings.reliefWeight, settings.patternWeight };
++            float total = 0;
++            for (int i = 0; i < 3; i++) if (totals[i] > 0) total += Mathf.Max(0, categories[i]);
++            if (total <= 0) return null;
++            var random = RandomFor(wave);
++            double roll = random.NextDouble() * total; int category = 0;
++            for (int i = 0; i < 3; i++) if (totals[i] > 0) { category = i; roll -= Mathf.Max(0, categories[i]); if (roll < 0) break; }
++            roll = random.NextDouble() * totals[category];
++            foreach (var e in eligible) if ((int)e.category == category) { roll -= e.weight; if (roll < 0) return e; }
++            return null;
++        }
++
++        public void Prepare(int wave, bool boss, EconomyManager economy)
++        {
++            preparation = true;
++            if (Current != null && Current.WavesRemaining > 0 && (!boss || Current.Definition.allowBossWave))
++            { Current.Wave = wave; Current.Active = Current.Definition.preparationEffects; Changed?.Invoke(); return; }
++            Cancel();
++            Queue(Select(wave, boss), wave, economy);
++        }
++        private System.Random RandomFor(int wave) => new System.Random(unchecked(seed * 7919 ^ wave * 104729 ^ 0x5b));
++        private void Queue(EndlessEventDefinition definition, int wave, EconomyManager economy)
++        {
++            if (definition == null) return;
++            var random = RandomFor(wave);
++            Current = new ActiveEventContext { Definition = definition, Wave = wave, Sector = (LandingSector)random.Next(3),
++                Active = definition.preparationEffects || definition.durationType == EventDuration.Preparation,
++                WavesRemaining = definition.durationType == EventDuration.MultiWave ? Mathf.Max(1, Mathf.CeilToInt(definition.duration)) : 1,
++                SecondsRemaining = definition.duration, WarningRemaining = definition.preparationWarningSeconds };
++            lastWave[definition.id] = wave; recent.Add(definition.id);
++            while (recent.Count > Mathf.Max(0, settings != null ? settings.recentExclusion : 0)) recent.RemoveAt(0);
++            MostRecentEvent = definition.id; EventsExperienced++; counts[definition.id] = Count(definition.id) + 1;
++            history.Add(new EventHistoryEntry(wave, definition.id)); if (history.Count > 128) history.RemoveAt(0);
++            bool late = settings != null && wave >= settings.laterFrequencyWave;
++            int min = Mathf.Max(2, settings == null ? 2 : late ? settings.laterMinimumGap : settings.minimumGap);
++            int max = Mathf.Max(min, settings == null ? 4 : late ? settings.laterMaximumGap : settings.maximumGap);
++            nextEventWave = (int)Math.Min(int.MaxValue, (long)wave + random.Next(min, max + 1));
++            if (definition.supplyBase > 0 || definition.supplyPerWave > 0)
++            {
++                int grant = (int)Math.Min(Mathf.Max(0, definition.supplyMaximum), Math.Max(0, (long)definition.supplyBase + (long)wave * definition.supplyPerWave));
++                var context = Current;
++                int before = economy != null ? economy.Money : 0; economy?.AddMoney(grant);
++                context.SupplyReceived = economy != null ? economy.Money - before : 0;
++                if (Current != context) return; // A money observer may end the run and cancel the event.
++            }
++            Changed?.Invoke();
++        }
++        public void BeginWave()
++        {
++            preparation = false;
++            if (Current == null) return;
++            if (Current.Definition.durationType == EventDuration.Preparation) { Cancel(); return; }
++            Current.Active = true; Changed?.Invoke();
++        }
++        public void CompleteWave()
++        {
++            if (Current == null) return;
++            Current.Active = false; Current.WavesRemaining--;
++            if (Current.WavesRemaining <= 0) Current = null;
++            Changed?.Invoke();
++        }
++        public void Tick(float dt)
++        {
++            if (dt <= 0 || Current == null) return;
++            if (preparation && Current.WarningRemaining > 0)
++            { Current.WarningRemaining = Mathf.Max(0, Current.WarningRemaining - dt); if (Current.WarningRemaining == 0) Changed?.Invoke(); }
++            if (!preparation && Current.Active && Current.Definition.durationType == EventDuration.Timed)
++            { Current.SecondsRemaining -= dt; if (Current.SecondsRemaining <= 0) Cancel(); }
++        }
++        public void Cancel() { if (Current == null) return; Current = null; Changed?.Invoke(); }
++#if UNITY_EDITOR || DEVELOPMENT_BUILD
++        public bool Force(EndlessEventDefinition definition, int wave, bool boss, EconomyManager economy)
++        {
++            if (!preparation || definition == null || !definition.Eligible(wave, boss)) return false;
++            Cancel(); Queue(definition, wave, economy); return true;
++        }
++#endif
++    }
++}
+diff --git a/Assets/Game/Scripts/Waves/EndlessEventManager.cs.meta b/Assets/Game/Scripts/Waves/EndlessEventManager.cs.meta
+new file mode 100644
+index 0000000..cf239ac
+--- /dev/null
++++ b/Assets/Game/Scripts/Waves/EndlessEventManager.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: 6a5206335a2f48e4ca1a20db1352a93c
+\ No newline at end of file
+diff --git a/Assets/Game/Scripts/Waves/EndlessEventSettings.cs b/Assets/Game/Scripts/Waves/EndlessEventSettings.cs
+new file mode 100644
+index 0000000..61c5dfb
+--- /dev/null
++++ b/Assets/Game/Scripts/Waves/EndlessEventSettings.cs
+@@ -0,0 +1,17 @@
++using System;
++using UnityEngine;
++
++namespace ShorelineDefense.Waves
++{
++    [CreateAssetMenu(menuName = "Shoreline Defense/Endless Event Settings")]
++    public sealed class EndlessEventSettings : ScriptableObject
++    {
++        public EndlessEventDefinition[] events = Array.Empty<EndlessEventDefinition>();
++        [Min(5)] public int firstEventWave = 5;
++        [Min(2)] public int minimumGap = 2, maximumGap = 4;
++        [Min(5)] public int laterFrequencyWave = 30;
++        [Min(2)] public int laterMinimumGap = 2, laterMaximumGap = 3;
++        [Min(0)] public int recentExclusion = 2;
++        [Min(0)] public float challengeWeight = .7f, reliefWeight = .2f, patternWeight = .1f;
++    }
++}
+diff --git a/Assets/Game/Scripts/Waves/EndlessEventSettings.cs.meta b/Assets/Game/Scripts/Waves/EndlessEventSettings.cs.meta
+new file mode 100644
+index 0000000..cc7c18d
+--- /dev/null
++++ b/Assets/Game/Scripts/Waves/EndlessEventSettings.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: 48cc16b12056781418d8b6b44e05cc2d
+\ No newline at end of file
+diff --git a/Docs/Validation/Phase5B/baseline-scripts/Waves/EndlessWaveGenerator.cs b/Assets/Game/Scripts/Waves/EndlessWaveGenerator.cs
+index e4490c8..8a17d07 100644
+--- a/Docs/Validation/Phase5B/baseline-scripts/Waves/EndlessWaveGenerator.cs
++++ b/Assets/Game/Scripts/Waves/EndlessWaveGenerator.cs
+@@ -16,7 +16,7 @@ namespace ShorelineDefense.Waves
+             double budget = Math.Max(1, settings.baseBudget) + age * Safe(settings.linearGrowth, 3) + age * age * Safe(settings.nonlinearGrowth, .015f);
+             return (int)Math.Min(100000000, Math.Max(1, (int)Math.Min(100000000, budget)) * (long)Mathf.Clamp(settings.enemyQuantityMultiplier, 1, 20));
+         }
+-        public WaveDefinition Generate(int number)
++        public WaveDefinition Generate(int number, EventModifiers modifiers = null)
+         {
+             if (number < 1) throw new ArgumentOutOfRangeException(nameof(number));
+             var available = new List<EnemyController>();
+@@ -27,20 +27,22 @@ namespace ShorelineDefense.Waves
+             int quantity = Mathf.Clamp(settings.enemyQuantityMultiplier, 1, 20);
+             int remaining = Budget(number) / quantity, cap = Mathf.Clamp(settings.maximumEnemiesPerWave / quantity, 1, 300);
+             var groups = new List<WaveEnemyGroup>();
++            int eventQuantitySoFar = 0;
+             // Small shuffled groups vary both boat cargo and successive landing pressure.
+             for (int count = 0; count < cap; count++)
+             {
+                 int totalWeight = 0;
+-                foreach (var p in available) if (p.Definition.DifficultyCost <= remaining) totalWeight += Weight(p.Definition.Kind, number);
++                foreach (var p in available) if (p.Definition.DifficultyCost <= remaining) totalWeight += EffectiveWeight(p.Definition.Kind, number, modifiers);
+                 if (totalWeight == 0) break;
+                 int roll = random.Next(totalWeight); EnemyController selected = null;
+                 foreach (var p in available)
+                 {
+                     if (p.Definition.DifficultyCost > remaining) continue;
+-                    roll -= Weight(p.Definition.Kind, number); if (roll < 0) { selected = p; break; }
++                    roll -= EffectiveWeight(p.Definition.Kind, number, modifiers); if (roll < 0) { selected = p; break; }
+                 }
+                 remaining -= selected.Definition.DifficultyCost;
+-                groups.Add(new WaveEnemyGroup(selected, quantity));
++                int expanded = Mathf.Max(eventQuantitySoFar + 1, Mathf.RoundToInt((count + 1) * quantity * (modifiers?.quantity ?? 1)));
++                groups.Add(new WaveEnemyGroup(selected, expanded - eventQuantitySoFar)); eventQuantitySoFar = expanded;
+             }
+             if (groups.Count == 0) throw new InvalidOperationException("Wave budget cannot afford an unlocked enemy.");
+             double age = Math.Max(0, (double)number - Math.Max(1, settings.scalingStartWave));
+@@ -77,6 +79,8 @@ namespace ShorelineDefense.Waves
+                 default: return 0;
+             }
+         }
++        private static int EffectiveWeight(EnemyKind kind, int wave, EventModifiers modifiers) =>
++            Mathf.RoundToInt(Weight(kind, wave) * Mathf.Clamp(modifiers?.Weight(kind) ?? 1, 0, 20));
+         internal static float Safe(float value, float fallback) => float.IsNaN(value) || float.IsInfinity(value) ? fallback : Mathf.Max(0, value);
+     }
+ }
+diff --git a/Docs/Validation/Phase5B/baseline-scripts/Waves/EndlessWaveSettings.cs b/Assets/Game/Scripts/Waves/EndlessWaveSettings.cs
+index 534f2f6..5b647d0 100644
+--- a/Docs/Validation/Phase5B/baseline-scripts/Waves/EndlessWaveSettings.cs
++++ b/Assets/Game/Scripts/Waves/EndlessWaveSettings.cs
+@@ -28,6 +28,7 @@ namespace ShorelineDefense.Waves
+         [Range(1,32)] public int maximumConcurrentBoats = 8;
+         [Min(1)] public int initialConcurrentBoats = 2;
+         public BossEncounterDefinition bossEncounters;
++        public EndlessEventSettings eventSettings;
+         [Header("Assault difficulty (legacy formations are the reference)")]
+         [Range(1, 20)] public int enemyQuantityMultiplier = 1;
+         [Min(1)] public float globalEnemyHealthMultiplier = 1;
+diff --git a/Docs/Validation/Phase5B/baseline-scripts/Waves/WaveManager.cs b/Assets/Game/Scripts/Waves/WaveManager.cs
+index 4e3f37e..b37f009 100644
+--- a/Docs/Validation/Phase5B/baseline-scripts/Waves/WaveManager.cs
++++ b/Assets/Game/Scripts/Waves/WaveManager.cs
+@@ -23,16 +23,49 @@ namespace ShorelineDefense.Waves
+         public int RunSeed { get; private set; }
+         public bool IsEndless => endless != null;
+         public EndlessWaveSettings EndlessSettings => endless;
++        public EndlessEventManager Events { get; private set; }
++        public event Action EventChanged;
++        private void NotifyEventChanged() {
++            // An unstarted assault is only a preview. Canceling it must restore the seeded
++            // baseline plan as well as live modifiers, or its extra cargo becomes hidden pressure.
++            if (generated != null && generator != null && State == WaveState.Preparation && Events?.Current == null) {
++                var replacement = generator.Generate(waveIndex + 1);
++                ReleaseGenerated(); generated = replacement;
++            }
++            if (generated != null && endless != null) {
++                var modifiers = Events?.Modifiers;
++                landings?.ConfigureEvent(modifiers, Events?.Current?.Sector ?? LandingSector.Center);
++                landings?.ConfigurePressure(endless.ArrivalInterval(generated.WaveNumber) * (generated.Encounter != null ? generated.Encounter.ArrivalMultiplier : 1) * (modifiers?.boatInterval ?? 1),
++                    Mathf.CeilToInt(endless.BoatConcurrency(generated.WaveNumber) * (modifiers?.boatConcurrency ?? 1)));
++            }
++            EventChanged?.Invoke(); if (generated != null) Changed?.Invoke();
++        }
++        private void ReleaseEvents() { if (Events != null) { Events.Cancel(); Events.Changed -= NotifyEventChanged; Events = null; } }
+         public void ConfigureEndless(EndlessWaveSettings settings)
+-        { ReleaseGenerated(); endless = settings; generator = null; waveIndex = 0; EnsureGenerated(); Changed?.Invoke(); }
++        { ReleaseEvents(); ReleaseGenerated(); endless = settings; generator = null; waveIndex = 0; EnsureGenerated(); Changed?.Invoke(); }
+         private void EnsureGenerated()
+         {
+             if (endless == null || generated != null) return;
+-            if (generator == null) { RunSeed = endless.randomizeSeed ? Guid.NewGuid().GetHashCode() : endless.seed; generator = new EndlessWaveGenerator(endless, RunSeed); }
+-            generated = generator.Generate(waveIndex + 1);
++            if (generator == null) {
++                RunSeed = endless.randomizeSeed ? Guid.NewGuid().GetHashCode() : endless.seed; generator = new EndlessWaveGenerator(endless, RunSeed);
++                Events = new EndlessEventManager(endless.eventSettings, RunSeed); Events.Changed += NotifyEventChanged;
++            }
++            bool boss = endless.bossEncounters != null && endless.bossEncounters.ForWave(waveIndex + 1) != null;
++            Events.Prepare(waveIndex + 1, boss, economy);
++            generated = generator.Generate(waveIndex + 1, Events.Current?.Definition.modifiers);
+         }
++#if UNITY_EDITOR || DEVELOPMENT_BUILD
++        public bool ForceEvent(string id)
++        {
++            if (State != WaveState.Preparation || endless?.eventSettings == null) return false;
++            var definition = Array.Find(endless.eventSettings.events, e => e != null && e.id == id);
++            if (!Events.Force(definition, CurrentWaveNumber, CurrentWave.Encounter != null, economy)) return false;
++            ReleaseGenerated(); generated = generator.Generate(waveIndex + 1, definition.modifiers);
++            Changed?.Invoke(); return true;
++        }
++#endif
+         private void ReleaseGenerated() { if (generated != null) { if (Application.isPlaying) Destroy(generated); else DestroyImmediate(generated); generated = null; } }
+-        private void OnDestroy() => ReleaseGenerated();
++        private void OnDestroy() { ReleaseEvents(); ReleaseGenerated(); }
+         [SerializeField, Min(0)] private float completionDisplaySeconds = 1.5f;
+         private readonly HashSet<EnemyController> alive = new HashSet<EnemyController>();
+         private int waveIndex;
+@@ -56,7 +89,7 @@ namespace ShorelineDefense.Waves
+         public int AliveCount => alive.Count;
+         public int PendingCount => pending;
+         public int CompletedWaves { get; private set; }
+-        public bool CanStart => isActiveAndEnabled && game != null && game.IsPlaying && State == WaveState.Preparation && CurrentWave != null && CurrentWave.IsValid;
++        public bool CanStart => isActiveAndEnabled && game != null && game.IsPlaying && State == WaveState.Preparation && CurrentWave != null && CurrentWave.IsValid && (Events?.CanStart ?? true);
+         public event Action Changed;
+         public void ConfigureLandings(BoatLandingSystem transport)
+         {
+@@ -85,7 +118,7 @@ namespace ShorelineDefense.Waves
+             subscribed = true;
+             OnGameState(game.CurrentState);
+         }
+-        private void OnDisable() { Unsubscribe(); landings?.Cancel(); }
++        private void OnDisable() { Unsubscribe(); Events?.Cancel(); landings?.ConfigureEvent(null); landings?.Cancel(); }
+         private void Unsubscribe()
+         {
+             if (!subscribed) return;
+@@ -107,11 +140,13 @@ namespace ShorelineDefense.Waves
+         {
+             if (!CanStart) return false;
+             alive.Clear();
++            Events?.BeginWave();
++            landings?.ConfigureEvent(Events?.Modifiers, Events?.Current?.Sector ?? LandingSector.Center);
+             if (IsEndless)
+             {
+                 spawner.ConfigureWave(endless.maximumActiveEnemies, endless.RuntimeHealthMultiplier(CurrentWave.HealthMultiplier, false), CurrentWave.SpeedMultiplier,
+                     endless.RuntimeHealthMultiplier(CurrentWave.HealthMultiplier, true));
+-                landings?.ConfigurePressure(endless.ArrivalInterval(CurrentWaveNumber) * (generated.Encounter != null ? generated.Encounter.ArrivalMultiplier : 1), endless.BoatConcurrency(CurrentWaveNumber));
++                landings?.ConfigurePressure(endless.ArrivalInterval(CurrentWaveNumber) * (generated.Encounter != null ? generated.Encounter.ArrivalMultiplier : 1) * (Events?.Modifiers.boatInterval ?? 1), Mathf.CeilToInt(endless.BoatConcurrency(CurrentWaveNumber) * (Events?.Modifiers.boatConcurrency ?? 1)));
+                 if (endless.pressureDirectorEnabled) {
+                     landings?.ConfigureMotion(endless.boatCapacity, endless.boatSpeed, endless.unloadInterval, endless.departureDelay);
+                     spawner.ConfigureDeployment(endless.disembarkSeparation);
+@@ -130,6 +165,7 @@ namespace ShorelineDefense.Waves
+         public void Tick(float deltaTime)
+         {
+             if (game == null || !game.IsPlaying || deltaTime <= 0) return;
++            Events?.Tick(deltaTime);
+             landings?.Tick(deltaTime);
+             statistics?.RecordPressure(registry.Count, landings != null ? landings.ActiveBoats : 0);
+             if (!game.IsPlaying) return;
+@@ -144,7 +180,7 @@ namespace ShorelineDefense.Waves
+             }
+             if (State != WaveState.Spawning) return;
+             if (IsEndless && endless.pressureDirectorEnabled && landings != null && director.Tick(deltaTime, endless, CurrentWaveNumber,
+-                registry.Count, pending, landings.ActiveBoats, landings.IncomingPassengers, bossAwaitingDeployment || deployedBoss != null && deployedBoss.IsTargetable))
++                registry.Count, pending, landings.ActiveBoats, landings.IncomingPassengers, bossAwaitingDeployment || deployedBoss != null && deployedBoss.IsTargetable, Events?.Modifiers))
+             {
+                 landings.ConfigurePressure(director.ArrivalInterval, director.BoatLimit);
+                 if (landings.TotalArrivals > 0 && director.Mode == AssaultPressure.Accelerated)
+@@ -231,6 +267,12 @@ namespace ShorelineDefense.Waves
+             if (state == GameState.GameOver) SetState(WaveState.GameOver);
+             else Changed?.Invoke();
+         }
+-        private void SetState(WaveState state) { State = state; Changed?.Invoke(); }
++        private void SetState(WaveState state) {
++            State = state;
++            if (state == WaveState.WaveComplete) Events?.CompleteWave();
++            if (state == WaveState.GameOver) Events?.Cancel();
++            if (state == WaveState.WaveComplete || state == WaveState.GameOver) landings?.ConfigureEvent(null);
++            Changed?.Invoke();
++        }
+     }
+ }

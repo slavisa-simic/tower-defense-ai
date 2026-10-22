@@ -1,0 +1,114 @@
+[
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_hud_panel_small_v001.png",
+    "border": [
+      16,
+      16,
+      16,
+      16
+    ],
+    "preview_size": [
+      192,
+      96
+    ],
+    "corners_identical": true
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_hud_panel_medium_v001.png",
+    "border": [
+      16,
+      16,
+      16,
+      16
+    ],
+    "preview_size": [
+      320,
+      128
+    ],
+    "corners_identical": true
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_hud_panel_large_v001.png",
+    "border": [
+      16,
+      16,
+      16,
+      16
+    ],
+    "preview_size": [
+      448,
+      160
+    ],
+    "corners_identical": true
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_build_button_empty_v001.png",
+    "border": [
+      16,
+      16,
+      16,
+      16
+    ],
+    "preview_size": [
+      96,
+      96
+    ],
+    "corners_identical": true
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_start_wave_button_v001.png",
+    "border": [
+      16,
+      16,
+      16,
+      16
+    ],
+    "preview_size": [
+      256,
+      96
+    ],
+    "corners_identical": true
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_small_status_panel_v001.png",
+    "border": [
+      16,
+      16,
+      16,
+      16
+    ],
+    "preview_size": [
+      192,
+      80
+    ],
+    "corners_identical": true
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_build_button_selected_v001.png",
+    "border": [
+      16,
+      16,
+      16,
+      16
+    ],
+    "preview_size": [
+      96,
+      96
+    ],
+    "corners_identical": true
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_build_button_disabled_v001.png",
+    "border": [
+      16,
+      16,
+      16,
+      16
+    ],
+    "preview_size": [
+      96,
+      96
+    ],
+    "corners_identical": true
+  }
+]

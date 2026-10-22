@@ -1,0 +1,93 @@
+[
+  {
+    "material": "shadow",
+    "x": 424,
+    "y": 768,
+    "hex": "#1F292C",
+    "alpha": 255
+  },
+  {
+    "material": "deep_water",
+    "x": 487,
+    "y": 768,
+    "hex": "#17444C",
+    "alpha": 255
+  },
+  {
+    "material": "shallow_water",
+    "x": 551,
+    "y": 768,
+    "hex": "#2D5C5D",
+    "alpha": 255
+  },
+  {
+    "material": "wet_mud",
+    "x": 614,
+    "y": 768,
+    "hex": "#5A4633",
+    "alpha": 255
+  },
+  {
+    "material": "dry_soil",
+    "x": 676,
+    "y": 768,
+    "hex": "#816445",
+    "alpha": 255
+  },
+  {
+    "material": "grass",
+    "x": 740,
+    "y": 768,
+    "hex": "#4B5538",
+    "alpha": 255
+  },
+  {
+    "material": "olive",
+    "x": 804,
+    "y": 768,
+    "hex": "#636B44",
+    "alpha": 255
+  },
+  {
+    "material": "concrete",
+    "x": 868,
+    "y": 768,
+    "hex": "#939486",
+    "alpha": 255
+  },
+  {
+    "material": "steel",
+    "x": 930,
+    "y": 768,
+    "hex": "#5A615D",
+    "alpha": 255
+  },
+  {
+    "material": "rust",
+    "x": 993,
+    "y": 768,
+    "hex": "#7F4833",
+    "alpha": 255
+  },
+  {
+    "material": "bone",
+    "x": 1055,
+    "y": 768,
+    "hex": "#C1B19E",
+    "alpha": 255
+  },
+  {
+    "material": "amber",
+    "x": 1120,
+    "y": 768,
+    "hex": "#C18A3E",
+    "alpha": 255
+  },
+  {
+    "material": "danger",
+    "x": 1182,
+    "y": 768,
+    "hex": "#934433",
+    "alpha": 255
+  }
+]

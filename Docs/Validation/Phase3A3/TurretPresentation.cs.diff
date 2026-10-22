@@ -1,0 +1,52 @@
+--- before/TurretPresentation.cs
++++ Assets\Game\Scripts\Presentation\TurretPresentation.cs
+@@ -12,17 +12,39 @@
+         [SerializeField] private SpriteRenderer tracer;
+         [SerializeField, Min(0.01f)] private float flashDuration = 0.075f;
+         [SerializeField, Min(0.01f)] private float tracerWidth = 0.055f;
++        [Header("Weapon sprite recoil (presentation only)")]
++        [SerializeField] private SpriteRenderer weaponRenderer;
++        [SerializeField] private Sprite idleSprite;
++        [SerializeField] private Sprite[] firingFrames;
++        [SerializeField, Min(1)] private float firingFramesPerSecond = 20;
+         private TurretCombat combat;
+         private float visibleUntil;
++        private float shotStarted = float.NegativeInfinity;
+         public void Configure(Transform rotatingWeapon, Transform muzzlePoint, SpriteRenderer muzzleFlash, SpriteRenderer shotTracer)
+         { weapon = rotatingWeapon; muzzle = muzzlePoint; flash = muzzleFlash; tracer = shotTracer; }
++        public void ConfigureSprites(SpriteRenderer renderer, Sprite idle, Sprite[] frames, float framesPerSecond)
++        { weaponRenderer = renderer; idleSprite = idle; firingFrames = frames; firingFramesPerSecond = Mathf.Max(1, framesPerSecond); }
+         protected void Awake() => combat = GetComponent<TurretCombat>();
+-        protected void OnEnable() { combat.Fired += OnFired; Hide(); }
+-        protected void OnDisable() { if (combat != null) combat.Fired -= OnFired; Hide(); }
++        protected void OnEnable() { combat.Fired += OnFired; ResetSprite(); Hide(); }
++        protected void OnDisable() { if (combat != null) combat.Fired -= OnFired; ResetSprite(); Hide(); }
+         protected void LateUpdate()
+         {
+             if (combat.Target != null) Aim(combat.Target.transform.position);
+             if (Time.time >= visibleUntil) Hide();
++            UpdateSprite();
++        }
++        private void ResetSprite()
++        {
++            shotStarted = float.NegativeInfinity;
++            if (weaponRenderer != null && idleSprite != null) weaponRenderer.sprite = idleSprite;
++        }
++        private void UpdateSprite()
++        {
++            if (weaponRenderer == null || idleSprite == null) return;
++            float frame = (Time.time - shotStarted) * firingFramesPerSecond;
++            Sprite sprite = firingFrames != null && frame >= 0 && frame < firingFrames.Length
++                ? firingFrames[(int)frame] : idleSprite;
++            if (sprite != null && weaponRenderer.sprite != sprite) weaponRenderer.sprite = sprite;
+         }
+         private void Aim(Vector3 point)
+         {
+@@ -31,6 +53,7 @@
+         }
+         private void OnFired(Vector3 impact)
+         {
++            shotStarted = Time.time;
+             Aim(impact);
+             Vector3 direction = impact - muzzle.position;
+             tracer.transform.position = (impact + muzzle.position) * 0.5f;

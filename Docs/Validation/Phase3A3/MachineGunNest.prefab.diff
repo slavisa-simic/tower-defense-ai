@@ -1,0 +1,145 @@
+--- before/MachineGunNest.prefab
++++ Assets\Game\Prefabs\Defenses\MachineGunNest.prefab
+@@ -118,7 +118,7 @@
+   serializedVersion: 2
+   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+   m_LocalPosition: {x: 0, y: 0, z: 0}
+-  m_LocalScale: {x: 1.08, y: 0.95, z: 1}
++  m_LocalScale: {x: 1, y: 1, z: 1}
+   m_ConstrainProportionsScale: 0
+   m_Children: []
+   m_Father: {fileID: 9138688820302986989}
+@@ -172,8 +172,8 @@
+   m_SortingLayer: 4
+   m_SortingOrder: 0
+   m_MaskInteraction: 0
+-  m_Sprite: {fileID: 21300000, guid: a891a3ab1bdbe91489a2cde4806a2e47, type: 3}
+-  m_Color: {r: 0.76, g: 0.69, b: 0.44, a: 1}
++  m_Sprite: {fileID: 21300000, guid: 9c636f808adf9134c921a0d68b9853cd, type: 3}
++  m_Color: {r: 1, g: 1, b: 1, a: 1}
+   m_FlipX: 0
+   m_FlipY: 0
+   m_DrawMode: 0
+@@ -285,6 +285,7 @@
+   - component: {fileID: 1712949689384735145}
+   - component: {fileID: 6807428468749278292}
+   - component: {fileID: 4189862802620532017}
++  - component: {fileID: 3375822482747230641}
+   m_Layer: 0
+   m_Name: MachineGunNest
+   m_TagString: Untagged
+@@ -353,6 +354,33 @@
+   flash: {fileID: 5515634972873169657}
+   tracer: {fileID: 2446505579709889717}
+   flashDuration: 0.075
++  tracerWidth: 0.055
++  weaponRenderer: {fileID: 1085477755416182621}
++  idleSprite: {fileID: 21300000, guid: 767e31b1d62232c44a6af31a97e06b05, type: 3}
++  firingFrames:
++  - {fileID: 2088677434, guid: f19c74d8b9f666540b33526833e115e8, type: 3}
++  - {fileID: 1484055781, guid: f19c74d8b9f666540b33526833e115e8, type: 3}
++  - {fileID: 1802728721, guid: f19c74d8b9f666540b33526833e115e8, type: 3}
++  - {fileID: 1951820015, guid: f19c74d8b9f666540b33526833e115e8, type: 3}
++  firingFramesPerSecond: 20
++--- !u!114 &3375822482747230641
++MonoBehaviour:
++  m_ObjectHideFlags: 0
++  m_CorrespondingSourceObject: {fileID: 0}
++  m_PrefabInstance: {fileID: 0}
++  m_PrefabAsset: {fileID: 0}
++  m_GameObject: {fileID: 5152082514140486377}
++  m_Enabled: 1
++  m_EditorHideFlags: 0
++  m_Script: {fileID: 11500000, guid: 41ecc54432518044d88a09081e29ef8a, type: 3}
++  m_Name: 
++  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Presentation.DefenseSpritePresentation
++  baseRenderer: {fileID: 5221722483430251050}
++  idle: {fileID: 21300000, guid: 9c636f808adf9134c921a0d68b9853cd, type: 3}
++  damaged: {fileID: 21300000, guid: a19f94389b27d0b47a3507d567c94f54, type: 3}
++  destroyed: {fileID: 21300000, guid: dc8ffae57e4e845489c84b28d25c3f09, type: 3}
++  armed: {fileID: 0}
++  preview: {fileID: 21300000, guid: 84784bf411476e449b76ce1087224dfe, type: 3}
+ --- !u!1 &6329453003583255843
+ GameObject:
+   m_ObjectHideFlags: 0
+@@ -393,7 +421,7 @@
+   m_PrefabInstance: {fileID: 0}
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 6329453003583255843}
+-  m_Enabled: 1
++  m_Enabled: 0
+   m_CastShadows: 0
+   m_ReceiveShadows: 0
+   m_DynamicOccludee: 1
+@@ -434,7 +462,7 @@
+   m_SortingLayer: 4
+   m_SortingOrder: 3
+   m_MaskInteraction: 0
+-  m_Sprite: {fileID: 21300000, guid: a891a3ab1bdbe91489a2cde4806a2e47, type: 3}
++  m_Sprite: {fileID: 0}
+   m_Color: {r: 0.12, g: 0.16, b: 0.17, a: 1}
+   m_FlipX: 0
+   m_FlipY: 0
+@@ -442,7 +470,7 @@
+   m_Size: {x: 1, y: 1}
+   m_AdaptiveModeThreshold: 0.5
+   m_SpriteTileMode: 0
+-  m_WasSpriteAssigned: 1
++  m_WasSpriteAssigned: 0
+   m_SpriteSortPoint: 0
+ --- !u!1 &7282485498601163170
+ GameObject:
+@@ -471,7 +499,7 @@
+   serializedVersion: 2
+   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+   m_LocalPosition: {x: 0, y: 0, z: 0}
+-  m_LocalScale: {x: 0.48, y: 0.35, z: 1}
++  m_LocalScale: {x: 1, y: 1, z: 1}
+   m_ConstrainProportionsScale: 0
+   m_Children: []
+   m_Father: {fileID: 2175574990512264676}
+@@ -525,8 +553,8 @@
+   m_SortingLayer: 4
+   m_SortingOrder: 2
+   m_MaskInteraction: 0
+-  m_Sprite: {fileID: 21300000, guid: a891a3ab1bdbe91489a2cde4806a2e47, type: 3}
+-  m_Color: {r: 0.55, g: 0.64, b: 0.58, a: 1}
++  m_Sprite: {fileID: 21300000, guid: 767e31b1d62232c44a6af31a97e06b05, type: 3}
++  m_Color: {r: 1, g: 1, b: 1, a: 1}
+   m_FlipX: 0
+   m_FlipY: 0
+   m_DrawMode: 0
+@@ -560,7 +588,7 @@
+   m_GameObject: {fileID: 8074705463391804557}
+   serializedVersion: 2
+   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+-  m_LocalPosition: {x: 0.78, y: 0, z: 0}
++  m_LocalPosition: {x: 0.5078125, y: 0, z: 0}
+   m_LocalScale: {x: 1, y: 1, z: 1}
+   m_ConstrainProportionsScale: 0
+   m_Children:
+@@ -641,7 +669,7 @@
+   m_PrefabInstance: {fileID: 0}
+   m_PrefabAsset: {fileID: 0}
+   m_GameObject: {fileID: 8849883540121340743}
+-  m_Enabled: 1
++  m_Enabled: 0
+   m_CastShadows: 0
+   m_ReceiveShadows: 0
+   m_DynamicOccludee: 1
+@@ -682,7 +710,7 @@
+   m_SortingLayer: 4
+   m_SortingOrder: 1
+   m_MaskInteraction: 0
+-  m_Sprite: {fileID: 21300000, guid: a891a3ab1bdbe91489a2cde4806a2e47, type: 3}
++  m_Sprite: {fileID: 0}
+   m_Color: {r: 0.18, g: 0.25, b: 0.21, a: 1}
+   m_FlipX: 0
+   m_FlipY: 0
+@@ -690,5 +718,5 @@
+   m_Size: {x: 1, y: 1}
+   m_AdaptiveModeThreshold: 0.5
+   m_SpriteTileMode: 0
+-  m_WasSpriteAssigned: 1
++  m_WasSpriteAssigned: 0
+   m_SpriteSortPoint: 0

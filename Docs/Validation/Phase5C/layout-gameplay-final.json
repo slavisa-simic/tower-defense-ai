@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase5C/Live.cs",
+      "entry": "Phase5CLive.RefreshGameplay"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 63,
+      "executeMs": 5542,
+      "assemblyName": "PipelineRunScript_Live_a292837c3bb54ebc930d51f5fa8ef27b",
+      "success": true,
+      "result": "Final HUD/event/selection/tooltip/pause captures passed at all four resolutions; summary/history checked"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

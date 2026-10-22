@@ -1,0 +1,459 @@
+{
+  "counts": [
+    {
+      "wave": 1,
+      "count": 16
+    },
+    {
+      "wave": 5,
+      "count": 38
+    },
+    {
+      "wave": 10,
+      "count": 52
+    },
+    {
+      "wave": 20,
+      "count": 87
+    },
+    {
+      "wave": 25,
+      "count": 139
+    },
+    {
+      "wave": 50,
+      "count": 289
+    }
+  ],
+  "peak": 16,
+  "average": 7.6166666666666663,
+  "MoveSpeed": 5.0,
+  "Capacity": 7,
+  "ConcurrencyLimit": 2,
+  "ArrivalInterval": 2.2,
+  "activeLimit": 200,
+  "health": 1.0,
+  "frameTimeMs": 1.5870961,
+  "samples": [
+    {
+      "seconds": 0.5,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 16,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 1.0,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 16,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 1.5,
+      "enemies": 1,
+      "boats": 1,
+      "pending": 15,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 2.0,
+      "enemies": 2,
+      "boats": 1,
+      "pending": 14,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 2.5,
+      "enemies": 3,
+      "boats": 2,
+      "pending": 13,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 3.0,
+      "enemies": 4,
+      "boats": 2,
+      "pending": 12,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 3.5,
+      "enemies": 5,
+      "boats": 2,
+      "pending": 11,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 4.0,
+      "enemies": 8,
+      "boats": 2,
+      "pending": 8,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 4.5,
+      "enemies": 10,
+      "boats": 2,
+      "pending": 6,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 5.0,
+      "enemies": 11,
+      "boats": 2,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 5.5,
+      "enemies": 12,
+      "boats": 2,
+      "pending": 4,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 6.0,
+      "enemies": 13,
+      "boats": 1,
+      "pending": 3,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 6.5,
+      "enemies": 14,
+      "boats": 2,
+      "pending": 2,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 7.0,
+      "enemies": 14,
+      "boats": 2,
+      "pending": 2,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 7.5,
+      "enemies": 15,
+      "boats": 2,
+      "pending": 1,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 8.0,
+      "enemies": 16,
+      "boats": 1,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 8.5,
+      "enemies": 16,
+      "boats": 1,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 9.0,
+      "enemies": 16,
+      "boats": 1,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 9.5,
+      "enemies": 16,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 10.0,
+      "enemies": 16,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 10.5,
+      "enemies": 16,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 11.0,
+      "enemies": 16,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 11.5,
+      "enemies": 16,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 12.0,
+      "enemies": 16,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 12.5,
+      "enemies": 16,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 13.0,
+      "enemies": 16,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 13.5,
+      "enemies": 16,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 14.0,
+      "enemies": 16,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 14.5,
+      "enemies": 16,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 15.0,
+      "enemies": 16,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 15.5,
+      "enemies": 16,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 16.0,
+      "enemies": 15,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 16.5,
+      "enemies": 14,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 17.0,
+      "enemies": 13,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 17.5,
+      "enemies": 12,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 18.0,
+      "enemies": 10,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 18.5,
+      "enemies": 8,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 19.0,
+      "enemies": 5,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 19.5,
+      "enemies": 4,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 20.0,
+      "enemies": 3,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 20.5,
+      "enemies": 2,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 21.0,
+      "enemies": 2,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 21.5,
+      "enemies": 1,
+      "boats": 0,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 22.0,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "WaveComplete"
+    },
+    {
+      "seconds": 22.5,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "WaveComplete"
+    },
+    {
+      "seconds": 23.0,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "WaveComplete"
+    },
+    {
+      "seconds": 23.5,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "Preparation"
+    },
+    {
+      "seconds": 24.0,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "Preparation"
+    },
+    {
+      "seconds": 24.5,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "Preparation"
+    },
+    {
+      "seconds": 25.0,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "Preparation"
+    },
+    {
+      "seconds": 25.5,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "Preparation"
+    },
+    {
+      "seconds": 26.0,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "Preparation"
+    },
+    {
+      "seconds": 26.5,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "Preparation"
+    },
+    {
+      "seconds": 27.0,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "Preparation"
+    },
+    {
+      "seconds": 27.5,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "Preparation"
+    },
+    {
+      "seconds": 28.0,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "Preparation"
+    },
+    {
+      "seconds": 28.5,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "Preparation"
+    },
+    {
+      "seconds": 29.0,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "Preparation"
+    },
+    {
+      "seconds": 29.5,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "Preparation"
+    },
+    {
+      "seconds": 30.0,
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "state": "Preparation"
+    }
+  ]
+}

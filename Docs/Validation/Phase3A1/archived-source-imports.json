@@ -1,0 +1,37 @@
+[
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_master_001/bd_src_danube_master_v001.png",
+    "guid": "4e78a28b01ed9ac45855cade102bc22f",
+    "type": "Default",
+    "filter": "Point",
+    "mipmapEnabled": false
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_master_001/bd_src_danube_master_v002.png",
+    "guid": "f8f96b6f6b6a19a4194f4c966801a6d5",
+    "type": "Default",
+    "filter": "Point",
+    "mipmapEnabled": false
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v001.png",
+    "guid": "b7fda94e004421e42b97636dc3528500",
+    "type": "Default",
+    "filter": "Point",
+    "mipmapEnabled": false
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v002.png",
+    "guid": "8a6cf1b0e9c9a4d4aac2294c1308fbce",
+    "type": "Default",
+    "filter": "Point",
+    "mipmapEnabled": false
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_money_icon_v001.png",
+    "guid": "33b5558a899a9db4fa94960063db07ef",
+    "type": "Default",
+    "filter": "Point",
+    "mipmapEnabled": false
+  }
+]

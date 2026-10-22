@@ -1,0 +1,30 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": ".utmp/phase2c-interactions.cs",
+      "entry": "Phase2CInteractions.LeaveWire"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 30,
+      "executeMs": 974,
+      "assemblyName": "PipelineRunScript_phase2c-interactions_4f26bea362a0434f9d0e3d5d12054f32",
+      "success": true,
+      "result": {
+        "speed": 2.5,
+        "definitionSpeed": 2.5,
+        "position": "(12.52, 0.63, 0.00)"
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,15 @@
+{
+  "status": "completed",
+  "result": "Succeeded",
+  "platform": "StandaloneWindows64",
+  "totalSizeBytes": 100548000,
+  "totalErrors": 0,
+  "totalWarnings": 1,
+  "buildTimeMs": 3873,
+  "warnings": [
+    {
+      "message": "Pipeline: RuntimePipelineConfig found, but enableInBuilds = false. Pipeline will be disabled in Player builds."
+    }
+  ],
+  "errors": []
+}

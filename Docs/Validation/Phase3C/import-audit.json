@@ -1,0 +1,1019 @@
+[
+  {
+    "path": "Assets/Game/Art/Base/bd_base_ammo_supply_crate_cluster_v001.png",
+    "width": 96,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_bunker_corner_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_bunker_gate_piece_v001.png",
+    "width": 128,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_bunker_wall_segment_v001.png",
+    "width": 64,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_command_post_object_v001.png",
+    "width": 192,
+    "height": 192,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_defensive_sandbag_nest_base_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_generator_unit_v001.png",
+    "width": 96,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_military_tent_topdown_v001.png",
+    "width": 128,
+    "height": 128,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_river_checkpoint_marker_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_watch_post_v001.png",
+    "width": 96,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_bunker_floor_tile_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_concrete_tile_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_cracked_ground_tile_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_deep_danube_water_tile_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_grass_tile_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_road_tile_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_shallow_water_tile_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_wet_bank_transition_tile_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_antenna_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_barbed_barrier_segment_visual_v001.png",
+    "width": 64,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_czech_hedgehog_obstacle_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_debris_scrap_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_destroyed_rubber_boat_v001.png",
+    "width": 192,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_floodlight_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_metal_crate_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_military_barrel_v001.png",
+    "width": 32,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_oil_barrel_v001.png",
+    "width": 32,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_quarantine_fence_segment_v001.png",
+    "width": 64,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_radar_device_v001.png",
+    "width": 96,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_rubber_boat_v001.png",
+    "width": 192,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_sandbag_segment_v001.png",
+    "width": 64,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_spotlight_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_warning_sign_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_wooden_crate_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_wrecked_supply_box_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_barbed_wire_icon_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_base_hp_icon_v001.png",
+    "width": 32,
+    "height": 32,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_build_button_disabled_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_build_button_empty_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_build_button_selected_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_hud_panel_large_v001.png",
+    "width": 384,
+    "height": 128,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_hud_panel_medium_v001.png",
+    "width": 256,
+    "height": 96,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_hud_panel_small_v001.png",
+    "width": 128,
+    "height": 64,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_land_mine_icon_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_mg_nest_icon_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_money_icon_v001.png",
+    "width": 32,
+    "height": 32,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_small_status_panel_v001.png",
+    "width": 128,
+    "height": 48,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_sniper_tower_icon_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_sniper_tower_icon_v002.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_start_wave_button_v001.png",
+    "width": 192,
+    "height": 64,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_wave_icon_v001.png",
+    "width": 32,
+    "height": 32,
+    "spritePixelsPerUnit": 100.0,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_ne_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_nw_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_se_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_sw_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_damaged_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_destroyed_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_horizontal_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_single_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_vertical_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/LandMine/bd_defense_mine_armed_v001.png",
+    "width": 32,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/LandMine/bd_defense_mine_idle_v001.png",
+    "width": 32,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_base_damaged_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_base_destroyed_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_base_idle_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_preview_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_weapon_fire_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 4,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_weapon_idle_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_aim_fire_sheet_v001.png",
+    "width": 288,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 3,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_aim_idle_v001.png",
+    "width": 96,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_base_damaged_v001.png",
+    "width": 96,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_base_destroyed_v001.png",
+    "width": 96,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_base_idle_v001.png",
+    "width": 96,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_preview_v001.png",
+    "width": 96,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Smoke/bd_fx_smoke_medium_sheet_v001.png",
+    "width": 384,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 6,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Smoke/bd_fx_smoke_small_sheet_v001.png",
+    "width": 288,
+    "height": 48,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 6,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/World/bd_fx_shore_foam_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 4,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/World/bd_fx_water_ripple_sheet_v001.png",
+    "width": 384,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 6,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_attack_e_sheet_v001.png",
+    "width": 384,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 6,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_death_e_sheet_v001.png",
+    "width": 512,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 8,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_hit_e_sheet_v001.png",
+    "width": 128,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 2,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_idle_e_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 4,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_walk_e_sheet_v001.png",
+    "width": 512,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 8,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_attack_e_sheet_v001.png",
+    "width": 576,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 6,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_death_e_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 8,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_hit_e_sheet_v001.png",
+    "width": 192,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 2,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_idle_e_sheet_v001.png",
+    "width": 384,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 4,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_walk_e_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 8,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_attack_e_sheet_v001.png",
+    "width": 384,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 6,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_death_e_sheet_v001.png",
+    "width": 512,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 8,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_hit_e_sheet_v001.png",
+    "width": 128,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 2,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_idle_e_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 4,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_run_e_sheet_v001.png",
+    "width": 512,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 8,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Blood/Death/bd_fx_blood_decal_medium_v001.png",
+    "width": 48,
+    "height": 48,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Blood/Death/bd_fx_blood_decal_v001.png",
+    "width": 32,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Blood/Hits/bd_fx_blood_hit_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 4,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_concrete_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 4,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_dirt_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 4,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_flesh_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 4,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_metal_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 4,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_mud_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 4,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/MachineGun/bd_fx_mg_muzzle_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 4,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/MachineGun/bd_fx_mg_tracer_v001.png",
+    "width": 64,
+    "height": 3,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Sniper/bd_fx_sniper_muzzle_sheet_v001.png",
+    "width": 144,
+    "height": 48,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 3,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Sniper/bd_fx_sniper_tracer_v001.png",
+    "width": 64,
+    "height": 5,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 1,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Explosions/Generic/bd_fx_explosion_small_sheet_v001.png",
+    "width": 384,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 6,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Explosions/Mine/bd_fx_mine_explosion_sheet_v001.png",
+    "width": 1024,
+    "height": 128,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 8,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_large_sheet_v001.png",
+    "width": 576,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 6,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_medium_sheet_v001.png",
+    "width": 384,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 6,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_small_sheet_v001.png",
+    "width": 288,
+    "height": 48,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 6,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Water/Wake/bd_fx_water_wake_sheet_v001.png",
+    "width": 192,
+    "height": 48,
+    "spritePixelsPerUnit": 51.2,
+    "sprites": 4,
+    "filter": "Point",
+    "compression": "Uncompressed"
+  }
+]

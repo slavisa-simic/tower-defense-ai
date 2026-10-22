@@ -1,0 +1,55 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="TopDownHud.uss" />
+    <ui:VisualElement name="hud-shell" picking-mode="Ignore">
+        <ui:VisualElement name="top-strip" picking-mode="Ignore">
+            <ui:VisualElement name="money-panel" class="hud-panel side-panel" picking-mode="Ignore">
+                <ui:VisualElement class="stat-row" picking-mode="Ignore">
+                    <ui:VisualElement class="stat-icon money-icon" picking-mode="Ignore" />
+                    <ui:Label name="money" text="RSD 500" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="wave-panel" class="hud-panel" picking-mode="Ignore">
+                <ui:VisualElement class="stat-row" picking-mode="Ignore">
+                    <ui:VisualElement class="stat-icon wave-icon" picking-mode="Ignore" />
+                    <ui:Label name="wave-number" text="WAVE 1" />
+                    <ui:Label name="enemies-remaining" text="Enemies Remaining: 10" />
+                </ui:VisualElement>
+                <ui:Label name="wave-status" text="WAVE READY — prepare defenses" />
+            </ui:VisualElement>
+            <ui:VisualElement name="health-panel" class="hud-panel side-panel" picking-mode="Ignore">
+                <ui:VisualElement class="stat-row" picking-mode="Ignore">
+                    <ui:VisualElement class="stat-icon breach-icon" picking-mode="Ignore" />
+                    <ui:Label name="base-hp" text="HOMICIDES 0 / 1,000" />
+                </ui:VisualElement>
+                <ui:VisualElement name="health-track" picking-mode="Ignore">
+                    <ui:VisualElement name="health-fill" picking-mode="Ignore" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="build-panel" class="hud-panel" picking-mode="Ignore">
+            <ui:VisualElement name="build-controls" picking-mode="Ignore">
+                <ui:VisualElement name="defense-buttons" picking-mode="Ignore">
+                    <ui:Button name="build-mg" text="MG Nest 150 RSD" />
+                </ui:VisualElement>
+                <ui:VisualElement name="wave-actions" picking-mode="Ignore"><ui:Button name="start-wave" text="START WAVE" /></ui:VisualElement>
+            </ui:VisualElement>
+            <ui:Label name="build-hint" text="Select a defense to build" picking-mode="Ignore" />
+        </ui:VisualElement>
+        <ui:Label name="game-over" text="GAME OVER" picking-mode="Ignore" />
+        <ui:VisualElement name="speed-controls">
+            <ui:Button name="speed-pause" class="management-button" text="PAUSE" />
+            <ui:Button name="speed-normal" class="management-button" text="x1" />
+            <ui:Button name="speed-double" class="management-button" text="x2" />
+        </ui:VisualElement>
+        <ui:VisualElement name="structure-panel" class="hud-panel">
+            <ui:Label name="structure-title" />
+            <ui:Label name="structure-stats" />
+            <ui:Button name="structure-upgrade" class="management-button" text="UPGRADE" />
+            <ui:Button name="structure-repair" class="management-button" text="REPAIR" />
+            <ui:Button name="structure-dismantle" class="management-button" text="DISMANTLE" />
+            <ui:Label name="structure-status" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
+
+

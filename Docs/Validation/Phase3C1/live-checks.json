@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Base HP bar follows gameplay",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Game Over closes build and wave controls",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Game Over clears pooled effects",
+    "pass": true,
+    "detail": null
+  }
+]

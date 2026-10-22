@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase6A/Build.cs",
+      "entry": "Phase6ABuild.Run",
+      "timeout_ms": "300000"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 1216,
+      "executeMs": 23987,
+      "assemblyName": "PipelineRunScript_Build_28c5cfaf90cb42579178c06119680203",
+      "success": true,
+      "result": "Succeeded; errors=0; warnings=1; bytes=121360927; time=23,97s"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

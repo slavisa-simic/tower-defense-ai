@@ -1,0 +1,20 @@
+{
+  "edit": {
+    "total": 46,
+    "passed": 46,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "play": {
+    "total": 27,
+    "passed": 27,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "liveChecks": 1207,
+  "liveFailures": 0,
+  "vfxChecks": 21,
+  "vfxFailures": 0
+}

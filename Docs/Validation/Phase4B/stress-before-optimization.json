@@ -1,0 +1,14 @@
+{
+  "spawned": 300,
+  "clusterQueries": 1000,
+  "clusterTotalMs": 2711.6378,
+  "clusterMeanMs": 2.7116378,
+  "clusterAllocatedBytes": 0,
+  "samples": 461,
+  "medianMs": 6.1461026780307293,
+  "p95Ms": 8.9756026864051819,
+  "maximumMs": 3053.5728931427,
+  "enemiesAtEnd": 237,
+  "projectiles": 3,
+  "vfxCapacity": 256
+}

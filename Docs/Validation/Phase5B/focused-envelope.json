@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "command": "command test_status",
+  "data": {
+    "command": "test_status",
+    "parameters": {},
+    "result": "{\r\n  \"status\": \"completed\",\r\n  \"duration\": 25.07,\r\n  \"summary\": {\r\n    \"total\": 6,\r\n    \"passed\": 6,\r\n    \"failed\": 0,\r\n    \"skipped\": 0,\r\n    \"inconclusive\": 0\r\n  },\r\n  \"results\": [\r\n    {\r\n      \"FullName\": \"ShorelineDefense.Tests.EndlessEventPlayTests.CostEventsRefreshPanelAndDeductExactlyWithoutChangingRefundRules\",\r\n      \"Status\": \"Passed\",\r\n      \"Duration\": 1.3857513,\r\n      \"Message\": null,\r\n      \"StackTrace\": null\r\n    },\r\n    {\r\n      \"FullName\": \"ShorelineDefense.Tests.EndlessEventPlayTests.EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats\",\r\n      \"Status\": \"Passed\",\r\n      \"Duration\": 6.6726597,\r\n      \"Message\": null,\r\n      \"StackTrace\": null\r\n    },\r\n    {\r\n      \"FullName\": \"ShorelineDefense.Tests.EndlessEventPlayTests.FogRestoresUpgradedRangeAndFloodNeverChangesTerrainOrExistingStructures\",\r\n      \"Status\": \"Passed\",\r\n      \"Duration\": 0.7690044,\r\n      \"Message\": null,\r\n      \"StackTrace\": null\r\n    },\r\n    {\r\n      \"FullName\": \"ShorelineDefense.Tests.EndlessEventPlayTests.LandingPatternsChangeActualDispatchSectorsAndMassConcurrency\",\r\n      \"Status\": \"Passed\",\r\n      \"Duration\": 2.502067,\r\n      \"Message\": null,\r\n      \"StackTrace\": null\r\n    },\r\n    {\r\n      \"FullName\": \"ShorelineDefense.Tests.EndlessEventPlayTests.ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage\",\r\n      \"Status\": \"Passed\",\r\n      \"Duration\": 12.0663303,\r\n      \"Message\": null,\r\n      \"StackTrace\": null\r\n    },\r\n    {\r\n      \"FullName\": \"ShorelineDefense.Tests.EndlessEventPlayTests.TimedEventsAndCalmWarningsUsePauseAndDoubleSpeedAndGameOverClears\",\r\n      \"Status\": \"Passed\",\r\n      \"Duration\": 1.6359154,\r\n      \"Message\": null,\r\n      \"StackTrace\": null\r\n    }\r\n  ]\r\n}",
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

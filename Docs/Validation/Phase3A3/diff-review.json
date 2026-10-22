@@ -1,0 +1,51 @@
+{
+  "missing_files_or_doc_links": [],
+  "prefabs": [
+    {
+      "prefab": "MachineGunNest",
+      "existing_gameplay_components_unchanged": 2,
+      "root_and_guid_unchanged": true,
+      "removed_blocks": 0,
+      "changed_block_types": [
+        "1",
+        "114",
+        "212",
+        "4"
+      ]
+    },
+    {
+      "prefab": "SniperTower",
+      "existing_gameplay_components_unchanged": 2,
+      "root_and_guid_unchanged": true,
+      "removed_blocks": 0,
+      "changed_block_types": [
+        "1",
+        "114",
+        "212",
+        "4"
+      ]
+    },
+    {
+      "prefab": "BarbedWire",
+      "existing_gameplay_components_unchanged": 2,
+      "root_and_guid_unchanged": true,
+      "removed_blocks": 0,
+      "changed_block_types": [
+        "1",
+        "212",
+        "4"
+      ]
+    },
+    {
+      "prefab": "LandMine",
+      "existing_gameplay_components_unchanged": 2,
+      "root_and_guid_unchanged": true,
+      "removed_blocks": 0,
+      "changed_block_types": [
+        "1",
+        "212",
+        "4"
+      ]
+    }
+  ]
+}

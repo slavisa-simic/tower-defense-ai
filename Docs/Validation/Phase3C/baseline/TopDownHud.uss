@@ -1,0 +1,12 @@
+.defense-button {
+    font-size: 21px;
+    height: 42px;
+    margin-top: 6px;
+    margin-right: 8px;
+    padding-left: 14px;
+    padding-right: 14px;
+    color: white;
+    background-color: rgb(52, 76, 57);
+}
+.defense-button:hover { background-color: rgb(69, 97, 72); }
+.defense-button:focus { border-color: rgb(255, 226, 151); }

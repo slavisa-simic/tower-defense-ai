@@ -1,0 +1,75 @@
+{
+  "diagnostics": [],
+  "compileMs": 21,
+  "executeMs": 3,
+  "assemblyName": "PipelineRunScript_phase2b-snapshot_647aa6c8e14e4507a98ddeb47875a710",
+  "success": true,
+  "result": {
+    "money": 375,
+    "moneyText": "Money: $375",
+    "buildAvailable": false,
+    "placementActive": false,
+    "previewVisible": false,
+    "previewCell": "(23, 0)",
+    "previewResult": "Occupied",
+    "state": "GameOver",
+    "timeScale": 1,
+    "baseHealth": 0,
+    "totalSpawned": 8,
+    "registeredEnemies": 7,
+    "pathRequests": 8,
+    "defenses": [
+      {
+        "anchor": "(23, 0)",
+        "shots": 5,
+        "health": 300,
+        "target": false,
+        "weaponAngle": 119.577026
+      }
+    ],
+    "enemies": [
+      {
+        "hp": 100,
+        "position": "(-10.98, -0.63, 0.00)",
+        "targetable": false,
+        "attacks": 0
+      },
+      {
+        "hp": 100,
+        "position": "(-3.48, -3.13, 0.00)",
+        "targetable": false,
+        "attacks": 0
+      },
+      {
+        "hp": 100,
+        "position": "(4.02, -6.88, 0.00)",
+        "targetable": false,
+        "attacks": 0
+      },
+      {
+        "hp": 100,
+        "position": "(5.27, 0.63, 0.00)",
+        "targetable": false,
+        "attacks": 0
+      },
+      {
+        "hp": 100,
+        "position": "(15.28, 0.63, 0.00)",
+        "targetable": false,
+        "attacks": 0
+      },
+      {
+        "hp": 100,
+        "position": "(15.88, -0.63, 0.00)",
+        "targetable": false,
+        "attacks": 4
+      },
+      {
+        "hp": 100,
+        "position": "(16.88, -0.97, 0.00)",
+        "targetable": false,
+        "attacks": 6
+      }
+    ]
+  }
+}

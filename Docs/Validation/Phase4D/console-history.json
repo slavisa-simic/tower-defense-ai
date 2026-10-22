@@ -1,0 +1,725 @@
+{
+  "success": true,
+  "command": "command console",
+  "data": {
+    "command": "console",
+    "parameters": {
+      "tail": "100"
+    },
+    "result": {
+      "entries": [
+        {
+          "seq": 1,
+          "timestampUtc": "2026-10-02T08:04:22.6928106Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "This project uses Input Manager, which is marked for deprecation. To manage input in your project, use the <a href=\"https://docs.unity3d.com/Packages/com.unity.inputsystem@latest\">Input System package</a> instead.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 2,
+          "timestampUtc": "2026-10-02T08:09:56.2816894Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 3,
+          "timestampUtc": "2026-10-02T08:11:50.0489931Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 4,
+          "timestampUtc": "2026-10-02T08:13:41.9142507Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 5,
+          "timestampUtc": "2026-10-02T08:13:42.1727108Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 96 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 6,
+          "timestampUtc": "2026-10-02T08:13:42.6617103Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "InvalidOperationException: Expected observer failure",
+          "stackTrace": "ShorelineDefense.Tests.EconomyAndPlacementTests+<>c.<BrokenObserverCannotTurnCommittedPaymentIntoFailure>b__0_0 (System.Int32 _) (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:18)\nShorelineDefense.Economy.EconomyManager.NotifyMoneyChanged () (at Assets/Game/Scripts/Economy/EconomyManager.cs:58)\nUnityEngine.Debug:LogException(Exception, Object)\nShorelineDefense.Economy.EconomyManager:NotifyMoneyChanged() (at Assets/Game/Scripts/Economy/EconomyManager.cs:59)\nShorelineDefense.Economy.EconomyManager:TrySpend(Int32) (at Assets/Game/Scripts/Economy/EconomyManager.cs:37)\nShorelineDefense.Tests.EconomyAndPlacementTests:BrokenObserverCannotTurnCommittedPaymentIntoFailure() (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:21)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+          "seeded": false
+        },
+        {
+          "seq": 7,
+          "timestampUtc": "2026-10-02T08:13:43.7025746Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 8,
+          "timestampUtc": "2026-10-02T08:13:43.7528272Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 96 total, 96 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 9,
+          "timestampUtc": "2026-10-02T08:13:43.8778584Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 10,
+          "timestampUtc": "2026-10-02T08:14:01.8275709Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 11,
+          "timestampUtc": "2026-10-02T08:14:06.0911013Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 12,
+          "timestampUtc": "2026-10-02T08:14:06.1314526Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 51 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 13,
+          "timestampUtc": "2026-10-02T08:18:00.9294818Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 14,
+          "timestampUtc": "2026-10-02T08:18:00.9718828Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 51 total, 42 passed, 9 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 15,
+          "timestampUtc": "2026-10-02T08:18:01.4715675Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 16,
+          "timestampUtc": "2026-10-02T08:23:10.284508Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 17,
+          "timestampUtc": "2026-10-02T08:23:14.3998128Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 18,
+          "timestampUtc": "2026-10-02T08:23:14.4324702Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 51 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 19,
+          "timestampUtc": "2026-10-02T08:23:15.3609192Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 20,
+          "timestampUtc": "2026-10-02T08:23:15.3913079Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 1 total, 0 passed, 1 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 21,
+          "timestampUtc": "2026-10-02T08:23:15.8355746Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 22,
+          "timestampUtc": "2026-10-02T08:23:42.4051225Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 23,
+          "timestampUtc": "2026-10-02T08:23:42.4051225Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(1,26): error CS1056: Unexpected character '\\'",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 24,
+          "timestampUtc": "2026-10-02T08:23:42.4051225Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(1,45): error CS1003: Syntax error, '(' expected",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 25,
+          "timestampUtc": "2026-10-02T08:23:42.4051225Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(1,45): error CS1026: ) expected",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 26,
+          "timestampUtc": "2026-10-02T08:23:42.4051225Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(2,1): error CS1529: A using clause must precede all other elements defined in the namespace except extern alias declarations",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 27,
+          "timestampUtc": "2026-10-02T08:23:42.4056321Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(3,1): error CS1529: A using clause must precede all other elements defined in the namespace except extern alias declarations",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 28,
+          "timestampUtc": "2026-10-02T08:23:42.4056321Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(4,1): error CS1529: A using clause must precede all other elements defined in the namespace except extern alias declarations",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 29,
+          "timestampUtc": "2026-10-02T08:23:42.4056321Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(5,1): error CS1529: A using clause must precede all other elements defined in the namespace except extern alias declarations",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 30,
+          "timestampUtc": "2026-10-02T08:23:42.4056321Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(6,1): error CS1529: A using clause must precede all other elements defined in the namespace except extern alias declarations",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 31,
+          "timestampUtc": "2026-10-02T08:23:42.4056321Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(7,1): error CS1529: A using clause must precede all other elements defined in the namespace except extern alias declarations",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 32,
+          "timestampUtc": "2026-10-02T08:23:42.4056321Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(8,1): error CS1529: A using clause must precede all other elements defined in the namespace except extern alias declarations",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 33,
+          "timestampUtc": "2026-10-02T08:23:42.4056321Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(9,1): error CS1529: A using clause must precede all other elements defined in the namespace except extern alias declarations",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 34,
+          "timestampUtc": "2026-10-02T08:23:42.4056321Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(10,1): error CS1529: A using clause must precede all other elements defined in the namespace except extern alias declarations",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 35,
+          "timestampUtc": "2026-10-02T08:23:42.4056321Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(11,1): error CS1529: A using clause must precede all other elements defined in the namespace except extern alias declarations",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 36,
+          "timestampUtc": "2026-10-02T08:23:42.4056321Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(12,1): error CS1529: A using clause must precede all other elements defined in the namespace except extern alias declarations",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 37,
+          "timestampUtc": "2026-10-02T08:23:42.4056321Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(13,1): error CS1529: A using clause must precede all other elements defined in the namespace except extern alias declarations",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 38,
+          "timestampUtc": "2026-10-02T08:23:42.4056321Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(14,1): error CS1529: A using clause must precede all other elements defined in the namespace except extern alias declarations",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 39,
+          "timestampUtc": "2026-10-02T08:23:42.4056321Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Tests\\PlayMode\\Phase2CPlayTests.cs(15,1): error CS1529: A using clause must precede all other elements defined in the namespace except extern alias declarations",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 40,
+          "timestampUtc": "2026-10-02T08:23:56.4433638Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 41,
+          "timestampUtc": "2026-10-02T08:23:56.7523916Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "All compiler errors have to be fixed before you can enter playmode!",
+          "stackTrace": "UnityEditor.SceneView:ShowCompileErrorNotification ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 42,
+          "timestampUtc": "2026-10-02T08:24:05.4298852Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Invalidated previous test run",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:InvalidatePreviousRun () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:646)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:809)\nUnity.Pipeline.Editor.Commands.TestCommands:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/TestCommands.cs:112)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 43,
+          "timestampUtc": "2026-10-02T08:24:05.4323944Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Test run cancelled",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:819)\nUnity.Pipeline.Editor.Commands.TestCommands:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/TestCommands.cs:112)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 44,
+          "timestampUtc": "2026-10-02T08:24:15.1826001Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 45,
+          "timestampUtc": "2026-10-02T08:24:15.684807Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 46,
+          "timestampUtc": "2026-10-02T08:24:56.4433453Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 47,
+          "timestampUtc": "2026-10-02T08:25:00.8495198Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 48,
+          "timestampUtc": "2026-10-02T08:25:00.8998336Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 51 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 49,
+          "timestampUtc": "2026-10-02T08:25:01.6618864Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 50,
+          "timestampUtc": "2026-10-02T08:25:01.6930496Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 1 total, 0 passed, 1 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 51,
+          "timestampUtc": "2026-10-02T08:25:02.1444801Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 52,
+          "timestampUtc": "2026-10-02T08:25:42.7334144Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 53,
+          "timestampUtc": "2026-10-02T08:26:12.8980172Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 54,
+          "timestampUtc": "2026-10-02T08:26:29.2422481Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 55,
+          "timestampUtc": "2026-10-02T08:26:33.4081059Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 56,
+          "timestampUtc": "2026-10-02T08:26:33.4405185Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 51 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 57,
+          "timestampUtc": "2026-10-02T08:29:59.6714927Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase4A 100 real boat waves: breaches=184604, homicides=10152400, earned=34750, peak enemies=5, peak boats=31",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.SurvivalPlayTests/<HundredAcceleratedBoatWavesCompleteAndReleaseTransientObjects>d__11:MoveNext () (at Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs:70)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 58,
+          "timestampUtc": "2026-10-02T08:30:13.1366966Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 59,
+          "timestampUtc": "2026-10-02T08:30:13.1780188Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 51 total, 51 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 60,
+          "timestampUtc": "2026-10-02T08:30:13.6678823Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 61,
+          "timestampUtc": "2026-10-02T08:32:46.7373421Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 62,
+          "timestampUtc": "2026-10-02T08:38:55.8470735Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 63,
+          "timestampUtc": "2026-10-02T08:41:34.0956681Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 64,
+          "timestampUtc": "2026-10-02T08:54:58.3037678Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 65,
+          "timestampUtc": "2026-10-02T08:54:58.5229281Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 97 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 66,
+          "timestampUtc": "2026-10-02T08:54:58.9749505Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "InvalidOperationException: Expected observer failure",
+          "stackTrace": "ShorelineDefense.Tests.EconomyAndPlacementTests+<>c.<BrokenObserverCannotTurnCommittedPaymentIntoFailure>b__0_0 (System.Int32 _) (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:18)\nShorelineDefense.Economy.EconomyManager.NotifyMoneyChanged () (at Assets/Game/Scripts/Economy/EconomyManager.cs:58)\nUnityEngine.Debug:LogException(Exception, Object)\nShorelineDefense.Economy.EconomyManager:NotifyMoneyChanged() (at Assets/Game/Scripts/Economy/EconomyManager.cs:59)\nShorelineDefense.Economy.EconomyManager:TrySpend(Int32) (at Assets/Game/Scripts/Economy/EconomyManager.cs:37)\nShorelineDefense.Tests.EconomyAndPlacementTests:BrokenObserverCannotTurnCommittedPaymentIntoFailure() (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:21)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+          "seeded": false
+        },
+        {
+          "seq": 67,
+          "timestampUtc": "2026-10-02T08:54:59.9061366Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 68,
+          "timestampUtc": "2026-10-02T08:54:59.9529547Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 97 total, 97 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 69,
+          "timestampUtc": "2026-10-02T08:55:00.1109912Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 70,
+          "timestampUtc": "2026-10-02T08:56:56.2739798Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 71,
+          "timestampUtc": "2026-10-02T08:57:00.7116138Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 72,
+          "timestampUtc": "2026-10-02T08:57:00.7521355Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 51 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 73,
+          "timestampUtc": "2026-10-02T09:00:14.3744634Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase4A 100 real boat waves: breaches=184294, homicides=10110550, earned=34750, peak enemies=5, peak boats=31",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.SurvivalPlayTests/<HundredAcceleratedBoatWavesCompleteAndReleaseTransientObjects>d__11:MoveNext () (at Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs:70)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 74,
+          "timestampUtc": "2026-10-02T09:00:27.6418984Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 75,
+          "timestampUtc": "2026-10-02T09:00:27.6853843Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 51 total, 51 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 76,
+          "timestampUtc": "2026-10-02T09:00:28.0464457Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        }
+      ],
+      "cursor": 76,
+      "session": "c4cdfde8df444a4d807d9c99611d0876",
+      "returned": 76,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 20,
+        "warn": 9,
+        "log": 47
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-10-02T09:03:40.5642377Z",
+        "ageMs": 47,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 0,
+        "consoleWarnings": 0,
+        "consoleLogs": 0,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

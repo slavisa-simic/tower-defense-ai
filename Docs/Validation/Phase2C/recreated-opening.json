@@ -1,0 +1,72 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": ".utmp/phase2c-play-inspection.cs",
+      "entry": "Phase2CInspection.PrepareOpeningAndWatchCompletion"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 1492,
+      "executeMs": 10,
+      "assemblyName": "PipelineRunScript_phase2c-play-inspection_60045292d6ec4110a50702e94873d77f",
+      "success": true,
+      "result": {
+        "time": 7.01646137,
+        "timeScale": 1,
+        "money": 0,
+        "baseHP": 100,
+        "state": "Spawning",
+        "wave": 1,
+        "remaining": 10,
+        "pending": 10,
+        "alive": 0,
+        "completed": 0,
+        "spawned": 0,
+        "selection": null,
+        "preview": false,
+        "previewResult": "Valid",
+        "paths": 0,
+        "enemies": [],
+        "defenses": [
+          {
+            "type": "MG Nest",
+            "anchor": "(23, 9)",
+            "health": 300,
+            "shots": 0,
+            "range": 6.25,
+            "target": null,
+            "weaponRotation": 0
+          },
+          {
+            "type": "Barbed Wire",
+            "anchor": "(25, 9)",
+            "health": 200,
+            "shots": 0,
+            "range": 1.25,
+            "target": null,
+            "weaponRotation": 0
+          },
+          {
+            "type": "Sniper Tower",
+            "anchor": "(19, 9)",
+            "health": 250,
+            "shots": 0,
+            "range": 13.75,
+            "target": null,
+            "weaponRotation": 0
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

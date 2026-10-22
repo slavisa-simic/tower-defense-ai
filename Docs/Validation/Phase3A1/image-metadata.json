@@ -1,0 +1,38 @@
+[
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_danube_master_v001.png",
+    "width": 1536,
+    "height": 1024,
+    "pixelFormat": "Format24bppRgb",
+    "pngColorType": 2,
+    "bytes": 2237857,
+    "sha256": "6D846F1EB59D21A1B1C0CC216F351C13C69349EDE99061AEE9E663E584AAB393"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+    "width": 1536,
+    "height": 1024,
+    "pixelFormat": "Format24bppRgb",
+    "pngColorType": 2,
+    "bytes": 1971434,
+    "sha256": "354421E55C341BFBCC65993BA20C644842EEC44073CD3BBB7EB3B7794F7D7E45"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_master_001/bd_src_danube_master_v001.png",
+    "width": 1536,
+    "height": 1024,
+    "pixelFormat": "Format24bppRgb",
+    "pngColorType": 2,
+    "bytes": 2237857,
+    "sha256": "6D846F1EB59D21A1B1C0CC216F351C13C69349EDE99061AEE9E663E584AAB393"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_master_001/bd_src_danube_master_v002.png",
+    "width": 1536,
+    "height": 1024,
+    "pixelFormat": "Format24bppRgb",
+    "pngColorType": 2,
+    "bytes": 1971434,
+    "sha256": "354421E55C341BFBCC65993BA20C644842EEC44073CD3BBB7EB3B7794F7D7E45"
+  }
+]

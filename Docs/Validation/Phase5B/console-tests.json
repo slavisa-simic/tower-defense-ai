@@ -1,0 +1,150 @@
+{
+  "success": true,
+  "command": "command console",
+  "data": {
+    "command": "console",
+    "parameters": {
+      "level": "warn",
+      "tail": "12"
+    },
+    "result": {
+      "entries": [
+        {
+          "seq": 177,
+          "timestampUtc": "2026-10-03T13:14:40.7598061Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 178,
+          "timestampUtc": "2026-10-03T13:14:48.9809417Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 179,
+          "timestampUtc": "2026-10-03T13:14:49.3211766Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 180,
+          "timestampUtc": "2026-10-03T13:14:49.6406278Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 181,
+          "timestampUtc": "2026-10-03T13:14:49.971214Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 182,
+          "timestampUtc": "2026-10-03T13:14:50.2884935Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 183,
+          "timestampUtc": "2026-10-03T13:14:50.6103097Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 184,
+          "timestampUtc": "2026-10-03T13:14:51.8765672Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 185,
+          "timestampUtc": "2026-10-03T13:14:52.2178963Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 186,
+          "timestampUtc": "2026-10-03T13:14:52.546608Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 187,
+          "timestampUtc": "2026-10-03T13:14:52.8773837Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 188,
+          "timestampUtc": "2026-10-03T13:14:53.1983226Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        }
+      ],
+      "cursor": 188,
+      "session": "e6f4bc4f23854900a5191611c681e01a",
+      "returned": 12,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 1,
+        "warn": 65,
+        "log": 79
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-10-03T13:15:04.5466419Z",
+        "ageMs": 3,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 0,
+        "consoleWarnings": 50,
+        "consoleLogs": 24,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "duration": 13.26,
+  "summary": {
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "ShorelineDefense.Tests.IndustrialPortPlayTests.AllDefensesManageSaveAndContinueOnSelectedMap",
+      "Status": "Passed",
+      "Duration": 1.9330891,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.IndustrialPortPlayTests.AllLandingPathsAndBothBossCargoBreachThroughSharedService",
+      "Status": "Passed",
+      "Duration": 0.7141159,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.IndustrialPortPlayTests.EarlyAndMidgameWavesCompleteWithRealBoatsAndSharedBreach",
+      "Status": "Passed",
+      "Duration": 5.7767344,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.IndustrialPortPlayTests.EveryEventWorksAndFloodUsesAuthoredDockCells",
+      "Status": "Passed",
+      "Duration": 4.7952909,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

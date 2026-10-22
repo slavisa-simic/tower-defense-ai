@@ -1,0 +1,231 @@
+[
+  {
+    "name": "MachineGunNest selection",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "MachineGunNest valid actual-art ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "MachineGunNest invalid red ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "MachineGunNest placement",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "MachineGunNest grid/root",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "SniperTower selection",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "SniperTower valid actual-art ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "SniperTower invalid red ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "SniperTower placement",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "SniperTower grid/root",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "BarbedWire selection",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "BarbedWire valid actual-art ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "BarbedWire invalid red ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "BarbedWire placement",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "BarbedWire grid/root",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "LandMine selection",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "LandMine valid actual-art ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "LandMine invalid red ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "LandMine placement",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "LandMine grid/root",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Economy charged original costs",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 MachineGunNest no visible shape placeholders",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 SniperTower no visible shape placeholders",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 BarbedWire no visible shape placeholders",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 LandMine no visible shape placeholders",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "MG/sniper original damage",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 MachineGunNest base fixed and weapon aims",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 MachineGunNest recoil frame plays",
+    "pass": true,
+    "detail": "bd_defense_mg_weapon_fire__f001"
+  },
+  {
+    "name": "P3A3 MachineGunNest muzzle follows weapon",
+    "pass": true,
+    "detail": "(0.51, 0.00, 0.00)"
+  },
+  {
+    "name": "P3A3 SniperTower base fixed and weapon aims",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 SniperTower recoil frame plays",
+    "pass": true,
+    "detail": "bd_defense_sniper_aim_fire__f001"
+  },
+  {
+    "name": "P3A3 SniperTower muzzle follows weapon",
+    "pass": true,
+    "detail": "(0.66, 0.00, 0.00)"
+  },
+  {
+    "name": "P3A3 MachineGunNest returns to idle",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 SniperTower returns to idle",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 MachineGunNest damaged state",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 SniperTower damaged state",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 BarbedWire damaged state",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wire remains walkable and slows",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Leaving wire restores speed",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Mine uses existing armed state",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Mine triggers and releases occupancy",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Consumed mine removed",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Start Wave works",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave counts/spawn still work",
+    "pass": true,
+    "detail": {
+      "PendingCount": 9,
+      "AliveCount": 1,
+      "EnemiesRemaining": 10
+    }
+  },
+  {
+    "name": "Game Over stops building/waves",
+    "pass": true,
+    "detail": null
+  }
+]

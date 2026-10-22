@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase6A/Cleanup.cs",
+      "entry": "Phase6ACleanup.Run"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 64,
+      "executeMs": 340,
+      "assemblyName": "PipelineRunScript_Cleanup_d5915f93a469438d9884b5918bdbafaf",
+      "success": true,
+      "result": "Saved port: all sixteen unloading paths valid. Editor stopped on port scene; stray capture removed via AssetDatabase."
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

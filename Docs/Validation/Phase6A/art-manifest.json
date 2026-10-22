@@ -1,0 +1,338 @@
+[
+  {
+    "path": "Assets\\Game\\Art\\MasterReferences\\ref_industrial_port_map_01.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "mode": "RGB",
+    "sha256": "4cae8b82f768f3c8c7f6bb346e142c323bef7a215451210147b55c43365ca1b2",
+    "alpha_extrema": null
+  },
+  {
+    "path": "Assets\\Game\\Art\\SourceSheets\\p6a_port_001\\map_preview_industrial_port_raw_v001.png",
+    "size": [
+      1672,
+      941
+    ],
+    "mode": "RGB",
+    "sha256": "160287da7debd6d7c5050bbb89ef42763583bc79655005cfb9483ac5c9e5cc28",
+    "alpha_extrema": null
+  },
+  {
+    "path": "Assets\\Game\\Art\\SourceSheets\\p6a_port_001\\port_props_raw_v001.png",
+    "size": [
+      1261,
+      1247
+    ],
+    "mode": "RGBA",
+    "sha256": "64f5b57808322b7323ccfa98c885cbf18a2b619a0a8828e4f6ce3cb0d577ea01",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\SourceSheets\\p6a_port_001\\port_props_raw_v002.png",
+    "size": [
+      1261,
+      1247
+    ],
+    "mode": "RGBA",
+    "sha256": "f83d7b9418173daa258930317c4872d7d1486227f1a99b59bf7eff7c1d61586f",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\SourceSheets\\p6a_port_001\\port_terrain_raw_v001.png",
+    "size": [
+      1272,
+      1236
+    ],
+    "mode": "RGB",
+    "sha256": "c2fe1e3ecb5aec518a12b2c8a994284d5d20d8653352b477ec3cc4f04267635d",
+    "alpha_extrema": null
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_00_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "991d10b04708078f9888416d8898fb5934848af9d8a8bcc97094cadc096fcc5e",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_01_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "41e33924dfc7517173b8be8208b71e01fda8150bee50e7ebe478d3bedbc50d9e",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_02_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "a9c5c5be4969754a8b939edcc452b902874679c75f144c23bce75fd9062d5ca2",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_03_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "06fc807f9cc84ecab4cf0465368e03ec52874fd34117e1094b100c337d11a8d1",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_04_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "38169bcda665944017a62f4af66b12f7bcc09a30f9798d41fc6b3cf78d95119c",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_05_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "6a8cfd7d07930ae5ed86a57e36b465ae6582ed5e6ac923f1b039dfdef97ca7df",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_06_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "3b062657a2ae99304816c4b304d199e3b85d557989662259d3b5896ea9ee8023",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_07_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "49b4206477d61dbec6900258ba9756bf244b004e2bca5c98bb66c7fbb6af784e",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_08_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "8e5207ec7dfd963cb3ec1bc8c3df457a4d3d5e8c9eaf97b4d5780a108b894c32",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_09_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "17509155ce01460c74facbc24f20811f28511abeddda6d3286a85ee774cbec7c",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_10_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "7685295e1785d2de6a7a54bd736ac64e03df288994d878d2edb1558025978dde",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_11_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "c3c65369efe8f7e6909c712733f260076e8f40d256dc6fbac83515a845d70d26",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_12_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "1b662a947d4472266635df3fcf74abc78bff6fec064509a72124bdb6b1f18561",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_13_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "caf93f5e65f9810b7180b1b680522b7bea04ba1047dd362b971d239b9ab2cdcc",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_14_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "f8d10af5662e09607324f98064c23b913c19df7f108f02ccc0dce26f52c5844d",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Props\\bd_prop_port_15_v001.png",
+    "size": [
+      128,
+      128
+    ],
+    "mode": "RGBA",
+    "sha256": "10396bb186860e88fc8267c8e4d606612d32576e7771882bb5dbae1ff7335aee",
+    "alpha_extrema": [
+      0,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Environment\\bd_env_port_00_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "mode": "RGBA",
+    "sha256": "4bac494acf5bddc83d32aff8b5c4c88d6b723f2635c613346c31f0a17d114542",
+    "alpha_extrema": [
+      255,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Environment\\bd_env_port_01_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "mode": "RGBA",
+    "sha256": "0decec1a23d0477f969c1cb52372a54fddeac2667522794df51b07086888bfb9",
+    "alpha_extrema": [
+      255,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Environment\\bd_env_port_02_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "mode": "RGBA",
+    "sha256": "cf5a618a94e12f461c19218e11b23caee4be56b726af080caabae4dc9613718a",
+    "alpha_extrema": [
+      255,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\Environment\\bd_env_port_03_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "mode": "RGBA",
+    "sha256": "e19958b55b22b3131763f4decb6e63acc31555aa79b053326d10818170c48c66",
+    "alpha_extrema": [
+      255,
+      255
+    ]
+  },
+  {
+    "path": "Assets\\Game\\Art\\UI\\map_preview_danube_border.png",
+    "size": [
+      960,
+      540
+    ],
+    "mode": "RGB",
+    "sha256": "49d193c68888ef82dc9709b841831b2d2dd7dbf54aa579cdef3e29a6bb96e5b9",
+    "alpha_extrema": null
+  },
+  {
+    "path": "Assets\\Game\\Art\\UI\\map_preview_industrial_port.png",
+    "size": [
+      1672,
+      941
+    ],
+    "mode": "RGB",
+    "sha256": "160287da7debd6d7c5050bbb89ef42763583bc79655005cfb9483ac5c9e5cc28",
+    "alpha_extrema": null
+  }
+]

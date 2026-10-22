@@ -1,0 +1,7 @@
+{
+  "before": 100,
+  "after": 90,
+  "AttackDamage": 10,
+  "pose": "bd_enemy_basic_infected_attack_e__f004",
+  "rootRotation": "(0.00000, 0.00000, 0.00000, 1.00000)"
+}

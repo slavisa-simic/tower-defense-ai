@@ -1,0 +1,16 @@
+var assembly = System.Array.Find(System.AppDomain.CurrentDomain.GetAssemblies(), a => a.GetName().Name == "ShorelineDefense.Runtime");
+var gameType = assembly.GetType("ShorelineDefense.Core.GameStateController");
+var game = UnityEngine.Object.FindFirstObjectByType(gameType);
+gameType.GetMethod("EndRun").Invoke(game, null);
+gameType.GetMethod("EndRun").Invoke(game, null);
+var localType = assembly.GetType("ShorelineDefense.Persistence.LocalGameData");
+var files = localType.GetProperty("Files").GetValue(null);
+var historyType = assembly.GetType("ShorelineDefense.Persistence.RunHistoryService");
+var history = System.Activator.CreateInstance(historyType, new object[] { files });
+var data = historyType.GetMethod("Load").Invoke(history, null);
+var runs = (System.Collections.ICollection)data.GetType().GetField("runs").GetValue(data);
+var saveType = assembly.GetType("ShorelineDefense.Persistence.SaveGameService");
+var saves = System.Activator.CreateInstance(saveType, new object[] { files, null });
+object[] args = { null, null }; var canContinue = (bool)saveType.GetMethod("Load").Invoke(saves, args);
+if (runs.Count != 1 || canContinue) throw new System.Exception("History/Continue invariant failed");
+return "GameOver twice: history count 1, Continue false; " + UnityEngine.JsonUtility.ToJson(data);

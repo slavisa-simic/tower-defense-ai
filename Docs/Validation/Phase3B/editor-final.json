@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "command": "command editor_status",
+  "data": {
+    "command": "editor_status",
+    "parameters": {},
+    "result": {
+      "status": "ready",
+      "compiling": false,
+      "domainReloadInProgress": false,
+      "playMode": "stopped",
+      "lastHeartbeat": "2026-10-01T17:03:13.4527982Z",
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders",
+      "unityVersion": "6000.3.24f1"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

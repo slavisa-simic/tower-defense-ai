@@ -1,0 +1,197 @@
+{
+  "horizontalSeamPairs": 64,
+  "verticalSeamPairs": 64,
+  "allEdgePixelsMatch": true,
+  "assets": [
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_00_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 128,
+      "transparent": 3968
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_01_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 253,
+      "transparent": 3843
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_02_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 252,
+      "transparent": 3844
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_03_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 375,
+      "transparent": 3721
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_04_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 253,
+      "transparent": 3843
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_05_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 378,
+      "transparent": 3718
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_06_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 376,
+      "transparent": 3720
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_07_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 499,
+      "transparent": 3597
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_08_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 254,
+      "transparent": 3842
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_09_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 377,
+      "transparent": 3719
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_10_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 378,
+      "transparent": 3718
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_11_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 499,
+      "transparent": 3597
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_12_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 376,
+      "transparent": 3720
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_13_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 499,
+      "transparent": 3597
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_14_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 499,
+      "transparent": 3597
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_mask_15_v002.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 620,
+      "transparent": 3476
+    },
+    {
+      "path": "Assets/Game/Art/Environment/Vegetation\\bd_env_grass_tuft_v001.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:32.00, height:32.00)",
+      "ppu": 51.2,
+      "opaque": 316,
+      "transparent": 708
+    },
+    {
+      "path": "Assets/Game/Art/Environment/Vegetation\\bd_env_reeds_v001.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:48.00, height:48.00)",
+      "ppu": 51.2,
+      "opaque": 871,
+      "transparent": 1433
+    },
+    {
+      "path": "Assets/Game/Art/Environment/Vegetation\\bd_env_shrub_v001.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:48.00, height:48.00)",
+      "ppu": 51.2,
+      "opaque": 1081,
+      "transparent": 1223
+    },
+    {
+      "path": "Assets/Game/Art/Effects/ContactShadow/bd_fx_contact_shadow_v001.png",
+      "pass": true,
+      "dimensions": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+      "ppu": 51.2,
+      "opaque": 0,
+      "transparent": 1452
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3c1_polish_001\\bd_src_grass_v001.png",
+      "width": 1536,
+      "height": 1024,
+      "hash": "5AD18468DE9791A4CA19EC8E4E87BEA80FF00641684AA8442E460242B2CA635A"
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3c1_polish_001\\bd_src_reeds_v001.png",
+      "width": 1536,
+      "height": 1024,
+      "hash": "AFC3C5BD84E4BD0BF16D14A3162C2DF6CB4AE66C99A9B154536287DE6CC695DA"
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3c1_polish_001\\bd_src_reeds_v002.png",
+      "width": 1254,
+      "height": 1254,
+      "hash": "7C5B4D8B4A55AAAB67EADAB905A6C0BFF13578DC59B594BCD4B9BD4A66BBCF36"
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3c1_polish_001\\bd_src_shrub_v001.png",
+      "width": 1278,
+      "height": 1230,
+      "hash": "35722DCC92EFDF685F536A6E7443B3D7659C665F22581C1C37CB7250171993CE"
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3c1_polish_001\\bd_src_wire_cross_v001.png",
+      "width": 1254,
+      "height": 1254,
+      "hash": "5AE7CE951D57A5190E4A121F5A9AEAA46E31A6FD85B6FF815F2212353AC0F287"
+    }
+  ]
+}

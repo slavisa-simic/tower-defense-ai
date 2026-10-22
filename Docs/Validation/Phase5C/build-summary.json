@@ -1,0 +1,13 @@
+{
+  "result": "Succeeded",
+  "outputPath": "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Builds/Phase5C/BorderDefenders.exe",
+  "totalSizeBytes": 113651283,
+  "buildTimeMs": 31679,
+  "totalWarnings": 1,
+  "totalErrors": 0,
+  "warnings": [
+    {
+      "message": "Pipeline: RuntimePipelineConfig found, but enableInBuilds = false. Pipeline will be disabled in Player builds."
+    }
+  ]
+}

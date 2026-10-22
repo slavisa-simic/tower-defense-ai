@@ -1,0 +1,494 @@
+{
+  "unityVersion": "6000.3.24f1",
+  "scene": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+  "dirty": false,
+  "playing": false,
+  "roots": [
+    "Battlefield Grid",
+    "Top-Down Coastal Graybox",
+    "Player Base",
+    "Game State",
+    "Coastline Spawn Points",
+    "Enemies",
+    "Enemy Spawner",
+    "Top-Down Camera",
+    "Prototype HUD",
+    "Economy",
+    "Enemy Registry",
+    "Enemy Rewards",
+    "Defenses",
+    "Defense Placement",
+    "Placement Preview",
+    "Wave Manager"
+  ],
+  "cameras": [
+    {
+      "name": "Top-Down Camera",
+      "orthographic": true,
+      "orthographicSize": 11.85,
+      "aspect": 1.77777779,
+      "position": "(0.000, 0.000, -10.000)",
+      "rotation": "(0.000, 0.000, 0.000)"
+    }
+  ],
+  "grids": [
+    {
+      "name": "Battlefield Grid",
+      "definition": "Assets/Game/Data/Game/Battlefield_TopDown.asset",
+      "Width": 32,
+      "Height": 18,
+      "CellSize": 1.25,
+      "plane": "XY"
+    }
+  ],
+  "sortingLayers": [
+    "Default",
+    "Environment",
+    "GroundObjects",
+    "Enemies",
+    "Defenses",
+    "Effects"
+  ],
+  "renderers": [
+    {
+      "name": "Roof",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "GroundObjects",
+      "sortingOrder": 2,
+      "tint": "RGBA(0.300, 0.450, 0.490, 1.000)",
+      "scale": "(1.500, 1.500, 1.000)"
+    },
+    {
+      "name": "Column 31",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 9",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Row 14",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Column 14",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 12",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Row 7",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Column 22",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Roof Stripe",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "GroundObjects",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.900, 0.900, 0.700, 1.000)",
+      "scale": "(0.220, 1.500, 1.000)"
+    },
+    {
+      "name": "Column 23",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Row 13",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Row 8",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Row 15",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Column 11",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 28",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Row 9",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Column 21",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Row 12",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Column 19",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Row 4",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Row 10",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Column 13",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 15",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 25",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 18",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 20",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 6",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Row 6",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Grass Combat Field",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 0,
+      "tint": "RGBA(0.310, 0.430, 0.270, 1.000)",
+      "scale": "(32.500, 22.500, 1.000)"
+    },
+    {
+      "name": "Shoreline",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 2,
+      "tint": "RGBA(0.720, 0.840, 0.760, 1.000)",
+      "scale": "(0.110, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 10",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 8",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 32",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Row 2",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Footprint",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "GroundObjects",
+      "sortingOrder": 0,
+      "tint": "RGBA(0.100, 0.200, 0.220, 1.000)",
+      "scale": "(2.500, 2.500, 1.000)"
+    },
+    {
+      "name": "Column 24",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Beach",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 0,
+      "tint": "RGBA(0.780, 0.690, 0.450, 1.000)",
+      "scale": "(2.500, 22.500, 1.000)"
+    },
+    {
+      "name": "Row 1",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Ocean",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 0,
+      "tint": "RGBA(0.130, 0.390, 0.550, 1.000)",
+      "scale": "(5.000, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 30",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 17",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 7",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Shallow Water",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 1,
+      "tint": "RGBA(0.240, 0.530, 0.640, 1.000)",
+      "scale": "(0.600, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 27",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Row 18",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Column 26",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Column 29",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Row 17",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Row 16",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Row 5",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Row 0",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Column 16",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(0.018, 22.500, 1.000)"
+    },
+    {
+      "name": "Row 3",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    },
+    {
+      "name": "Base",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "GroundObjects",
+      "sortingOrder": 1,
+      "tint": "RGBA(0.800, 0.850, 0.770, 1.000)",
+      "scale": "(2.160, 2.160, 1.000)"
+    },
+    {
+      "name": "Row 11",
+      "sprite": "Assets/Game/Art/Placeholders/Square.png",
+      "sortingLayerName": "Environment",
+      "sortingOrder": 3,
+      "tint": "RGBA(0.740, 0.820, 0.570, 0.090)",
+      "scale": "(32.500, 0.018, 1.000)"
+    }
+  ]
+}

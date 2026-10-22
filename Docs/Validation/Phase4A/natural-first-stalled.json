@@ -1,0 +1,19 @@
+[
+  {
+    "number": 1,
+    "seed": -269002539,
+    "count": 10,
+    "completed": false,
+    "gamePlaying": true,
+    "kills": 0,
+    "basicKills": 0,
+    "runnerKills": 0,
+    "bruteKills": 0,
+    "homicides": 0,
+    "homicideIncrease": 0,
+    "balance": 0,
+    "earned": 0,
+    "bonus": 100,
+    "seconds": 65.0011753
+  }
+]

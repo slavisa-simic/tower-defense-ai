@@ -1,0 +1,32 @@
+diff --git a/Docs/Validation/Phase5B/baseline-ui/TopDownHud.uss b/Assets/Game/UI/TopDownHud.uss
+index 9526da6..ad4d8c2 100644
+--- a/Docs/Validation/Phase5B/baseline-ui/TopDownHud.uss
++++ b/Assets/Game/UI/TopDownHud.uss
+@@ -78,3 +78,9 @@
+ #dismantle { width:150px; height:58px; margin-left:6px; margin-top:4px; padding-top:30px; color:rgb(211,207,183); font-size:12px; border-radius:0; background-color:rgba(0,0,0,0); background-image:url("../Art/UI/bd_ui_build_button_empty_v001.png"); -unity-slice-left:16; -unity-slice-right:16; -unity-slice-top:16; -unity-slice-bottom:16; }
+ #dismantle > .build-icon { position:absolute; top:2px; left:60px; width:28px; height:28px; background-image:url("../Art/UI/ui_icon_dismantle.png"); }
+ #dismantle.selected { border-color:rgb(193,138,62); border-width:2px; }
++#wave-panel.has-event { padding: 8px 16px; }
++#event-panel { flex-direction: row; align-items: center; margin-top: 4px; display: none; max-width: 450px; }
++#event-icon { width: 24px; height: 24px; margin-right: 8px; flex-shrink: 0; -unity-background-scale-mode: scale-to-fit; }
++#event-copy { flex-shrink: 1; }
++#event-title { color: rgb(220, 175, 100); font-size: 12px; white-space: normal; }
++#event-effect { color: rgb(210, 209, 190); font-size: 10px; white-space: normal; }
+diff --git a/Docs/Validation/Phase5B/baseline-ui/TopDownHud.uxml b/Assets/Game/UI/TopDownHud.uxml
+index 9f01e21..810fe6e 100644
+--- a/Docs/Validation/Phase5B/baseline-ui/TopDownHud.uxml
++++ b/Assets/Game/UI/TopDownHud.uxml
+@@ -15,6 +15,13 @@
+                     <ui:Label name="enemies-remaining" text="Enemies Remaining: 10" />
+                 </ui:VisualElement>
+                 <ui:Label name="wave-status" text="WAVE READY — prepare defenses" />
++                <ui:VisualElement name="event-panel" picking-mode="Ignore">
++                    <ui:VisualElement name="event-icon" picking-mode="Ignore" />
++                    <ui:VisualElement name="event-copy" picking-mode="Ignore">
++                        <ui:Label name="event-title" />
++                        <ui:Label name="event-effect" />
++                    </ui:VisualElement>
++                </ui:VisualElement>
+             </ui:VisualElement>
+             <ui:VisualElement name="health-panel" class="hud-panel side-panel" picking-mode="Ignore">
+                 <ui:VisualElement class="stat-row" picking-mode="Ignore">

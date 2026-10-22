@@ -1,0 +1,160 @@
+[
+  {
+    "name": "MG and sniper preserve hitscan damage",
+    "pass": true,
+    "detail": {
+      "before": 10000,
+      "after": 9880
+    }
+  },
+  {
+    "name": "Both muzzle sprites spawned",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Both tracers spawned",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Hit tint visible",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Hit tint restored",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Tracers expire",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Several turrets fire repeatedly",
+    "pass": true,
+    "detail": 54
+  },
+  {
+    "name": "Frequent effects stay capped",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Death removes target immediately",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Kill reward exactly once",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Reward popup value",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Death animation survives gameplay removal",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wake visible in water",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wake stops after river exit",
+    "pass": true,
+    "detail": "(-15.00, 0.63, 0.00)"
+  },
+  {
+    "name": "River exit splash uses small sheet",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Mine detonates through gameplay",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Mine AOE stays authoritative",
+    "pass": true,
+    "detail": {
+      "radius": 2.1875,
+      "hpIn": 10000,
+      "insideHp": 9850,
+      "hpOut": 10000,
+      "outsideHp": 10000
+    }
+  },
+  {
+    "name": "Mine occupancy released immediately",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Mine smoke dissipates",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Full-health structures have no smoke",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Heavy damage emits restrained smoke",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave starts",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave incoming banner",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave completion reward exactly once",
+    "pass": true,
+    "detail": {
+      "before": 5500,
+      "after": 5600,
+      "completion": 100
+    }
+  },
+  {
+    "name": "Wave complete banner",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Game Over stops waves/build",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Game Over clears effects",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Game Over rejects new effects",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Existing Game Over HUD stays visible",
+    "pass": true,
+    "detail": null
+  }
+]

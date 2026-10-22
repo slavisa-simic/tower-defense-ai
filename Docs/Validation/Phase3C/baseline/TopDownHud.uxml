@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements">
+    <Style src="TopDownHud.uss" />
+    <ui:VisualElement picking-mode="Ignore" style="flex-grow: 1; padding-right: 24px; padding-top: 20px;">
+        <ui:VisualElement name="build-panel" style="position: absolute; left: 24px; bottom: 16px; padding-left: 14px; padding-right: 14px; padding-top: 10px; padding-bottom: 12px; background-color: rgba(15, 23, 30, 0.92);">
+            <ui:Label name="money" text="Money: $500" style="font-size: 25px; color: rgb(255, 226, 151); -unity-font-style: bold;" />
+            <ui:VisualElement name="defense-buttons" style="flex-direction: row;">
+                <ui:Button name="build-mg" text="MG Nest $150" />
+            </ui:VisualElement>
+            <ui:Label name="build-hint" text="Select a defense to build" style="font-size: 16px; color: rgb(220, 228, 226); margin-top: 6px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="wave-panel" style="position: absolute; left: 24px; top: 20px; padding-left: 14px; padding-right: 14px; padding-top: 10px; padding-bottom: 12px; background-color: rgba(15, 23, 30, 0.92); color: white;">
+            <ui:Label name="wave-number" text="WAVE 1 / 5" style="font-size: 25px; -unity-font-style: bold;" />
+            <ui:Label name="enemies-remaining" text="Enemies Remaining: 10" style="font-size: 20px;" />
+            <ui:Label name="wave-status" text="WAVE READY" style="font-size: 18px; color: rgb(160, 224, 187); margin-top: 4px;" />
+            <ui:Button name="start-wave" text="START WAVE" class="defense-button" />
+        </ui:VisualElement>
+        <ui:Label name="base-hp" text="BASE HP: 100 / 100" picking-mode="Ignore" style="font-size: 24px; color: white; -unity-font-style: bold; background-color: rgba(15, 23, 30, 0.85); padding-left: 14px; padding-right: 14px; padding-top: 8px; padding-bottom: 8px; align-self: flex-end;" />
+        <ui:Label name="game-over" text="GAME OVER" picking-mode="Ignore" style="display: none; position: absolute; left: 0; right: 0; top: 45%; font-size: 44px; color: white; -unity-font-style: bold; -unity-text-align: middle-center; background-color: rgba(15, 23, 30, 0.85); padding-top: 16px; padding-bottom: 16px;" />
+    </ui:VisualElement>
+</ui:UXML>

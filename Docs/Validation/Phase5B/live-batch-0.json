@@ -1,0 +1,112 @@
+{
+  "fixtureMoney": 50000,
+  "unlimitedBreaches": true,
+  "scriptAssisted": true,
+  "secondsPerAssault": 6,
+  "rows": [
+    {
+      "id": "mass-landing",
+      "wave": 24,
+      "planned": 728,
+      "prepUpgrade": 225,
+      "prepRepair": 45,
+      "combatRepair": 75,
+      "supplied": 0,
+      "previewRange": 13.75,
+      "activeRange": 13.75,
+      "boats": 12,
+      "peakBoats": 15,
+      "ConcurrencyLimit": 26,
+      "sector": "North",
+      "sectors": [
+        11,
+        8,
+        5
+      ],
+      "enemies": 85,
+      "kills": 85,
+      "fog": false,
+      "flood": false,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "pirate-raid",
+      "wave": 24,
+      "planned": 430,
+      "prepUpgrade": 225,
+      "prepRepair": 45,
+      "combatRepair": 75,
+      "supplied": 0,
+      "previewRange": 13.75,
+      "activeRange": 13.75,
+      "boats": 8,
+      "peakBoats": 13,
+      "ConcurrencyLimit": 17,
+      "sector": "North",
+      "sectors": [
+        9,
+        9,
+        6
+      ],
+      "enemies": 97,
+      "kills": 85,
+      "fog": false,
+      "flood": false,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "militant-assault",
+      "wave": 24,
+      "planned": 350,
+      "prepUpgrade": 225,
+      "prepRepair": 45,
+      "combatRepair": 75,
+      "supplied": 0,
+      "previewRange": 13.75,
+      "activeRange": 13.75,
+      "boats": 9,
+      "peakBoats": 13,
+      "ConcurrencyLimit": 17,
+      "sector": "North",
+      "sectors": [
+        9,
+        8,
+        5
+      ],
+      "enemies": 93,
+      "kills": 59,
+      "fog": false,
+      "flood": false,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "id": "heavy-assault",
+      "wave": 24,
+      "planned": 230,
+      "prepUpgrade": 225,
+      "prepRepair": 45,
+      "combatRepair": 75,
+      "supplied": 0,
+      "previewRange": 13.75,
+      "activeRange": 13.75,
+      "boats": 11,
+      "peakBoats": 12,
+      "ConcurrencyLimit": 17,
+      "sector": "North",
+      "sectors": [
+        11,
+        10,
+        5
+      ],
+      "enemies": 74,
+      "kills": 38,
+      "fog": false,
+      "flood": false,
+      "width": 1920,
+      "height": 1080
+    }
+  ]
+}

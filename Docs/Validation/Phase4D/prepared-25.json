@@ -1,0 +1,322 @@
+{
+  "number": 25,
+  "externalMoney": 18000,
+  "planned": 1381,
+  "peak": 279,
+  "bpeak": 13,
+  "Homicides": 1040,
+  "TotalKills": 36,
+  "BossesKilled": 0,
+  "BossesBreached": 0,
+  "income": 1190,
+  "seconds": 16.269236399999954,
+  "state": "GameOver",
+  "samples": [
+    {
+      "enemies": 0,
+      "boats": 1,
+      "pending": 1381,
+      "boss": null
+    },
+    {
+      "enemies": 0,
+      "boats": 3,
+      "pending": 1381,
+      "boss": null
+    },
+    {
+      "enemies": 0,
+      "boats": 5,
+      "pending": 1381,
+      "boss": null
+    },
+    {
+      "enemies": 4,
+      "boats": 7,
+      "pending": 1377,
+      "boss": null
+    },
+    {
+      "enemies": 13,
+      "boats": 9,
+      "pending": 1368,
+      "boss": null
+    },
+    {
+      "enemies": 20,
+      "boats": 10,
+      "pending": 1361,
+      "boss": null
+    },
+    {
+      "enemies": 24,
+      "boats": 12,
+      "pending": 1357,
+      "boss": null
+    },
+    {
+      "enemies": 28,
+      "boats": 13,
+      "pending": 1353,
+      "boss": null
+    },
+    {
+      "enemies": 34,
+      "boats": 11,
+      "pending": 1347,
+      "boss": null
+    },
+    {
+      "enemies": 41,
+      "boats": 12,
+      "pending": 1340,
+      "boss": null
+    },
+    {
+      "enemies": 46,
+      "boats": 13,
+      "pending": 1335,
+      "boss": null
+    },
+    {
+      "enemies": 56,
+      "boats": 11,
+      "pending": 1325,
+      "boss": null
+    },
+    {
+      "enemies": 63,
+      "boats": 10,
+      "pending": 1318,
+      "boss": null
+    },
+    {
+      "enemies": 66,
+      "boats": 12,
+      "pending": 1315,
+      "boss": null
+    },
+    {
+      "enemies": 77,
+      "boats": 13,
+      "pending": 1304,
+      "boss": 25500
+    },
+    {
+      "enemies": 90,
+      "boats": 11,
+      "pending": 1291,
+      "boss": 25500
+    },
+    {
+      "enemies": 101,
+      "boats": 11,
+      "pending": 1280,
+      "boss": 25500
+    },
+    {
+      "enemies": 112,
+      "boats": 12,
+      "pending": 1269,
+      "boss": 25500
+    },
+    {
+      "enemies": 124,
+      "boats": 12,
+      "pending": 1257,
+      "boss": 25500
+    },
+    {
+      "enemies": 139,
+      "boats": 11,
+      "pending": 1242,
+      "boss": 25500
+    },
+    {
+      "enemies": 150,
+      "boats": 11,
+      "pending": 1230,
+      "boss": 25500
+    },
+    {
+      "enemies": 158,
+      "boats": 13,
+      "pending": 1222,
+      "boss": 25500
+    },
+    {
+      "enemies": 165,
+      "boats": 12,
+      "pending": 1215,
+      "boss": 25500
+    },
+    {
+      "enemies": 176,
+      "boats": 11,
+      "pending": 1204,
+      "boss": 25500
+    },
+    {
+      "enemies": 184,
+      "boats": 11,
+      "pending": 1196,
+      "boss": 25500
+    },
+    {
+      "enemies": 187,
+      "boats": 11,
+      "pending": 1192,
+      "boss": 25500
+    },
+    {
+      "enemies": 196,
+      "boats": 11,
+      "pending": 1183,
+      "boss": 25500
+    },
+    {
+      "enemies": 205,
+      "boats": 10,
+      "pending": 1174,
+      "boss": 25500
+    },
+    {
+      "enemies": 208,
+      "boats": 11,
+      "pending": 1171,
+      "boss": 25500
+    },
+    {
+      "enemies": 210,
+      "boats": 13,
+      "pending": 1169,
+      "boss": 25500
+    },
+    {
+      "enemies": 217,
+      "boats": 11,
+      "pending": 1162,
+      "boss": 25500
+    },
+    {
+      "enemies": 223,
+      "boats": 9,
+      "pending": 1155,
+      "boss": 25500
+    },
+    {
+      "enemies": 227,
+      "boats": 10,
+      "pending": 1151,
+      "boss": 25500
+    },
+    {
+      "enemies": 229,
+      "boats": 11,
+      "pending": 1148,
+      "boss": 25500
+    },
+    {
+      "enemies": 240,
+      "boats": 10,
+      "pending": 1137,
+      "boss": 25500
+    },
+    {
+      "enemies": 249,
+      "boats": 6,
+      "pending": 1128,
+      "boss": 25500
+    },
+    {
+      "enemies": 259,
+      "boats": 6,
+      "pending": 1118,
+      "boss": 25500
+    },
+    {
+      "enemies": 268,
+      "boats": 6,
+      "pending": 1109,
+      "boss": 25500
+    },
+    {
+      "enemies": 274,
+      "boats": 6,
+      "pending": 1102,
+      "boss": 25500
+    },
+    {
+      "enemies": 276,
+      "boats": 5,
+      "pending": 1098,
+      "boss": 25500
+    },
+    {
+      "enemies": 275,
+      "boats": 6,
+      "pending": 1093,
+      "boss": 25500
+    },
+    {
+      "enemies": 277,
+      "boats": 5,
+      "pending": 1088,
+      "boss": 25500
+    },
+    {
+      "enemies": 274,
+      "boats": 4,
+      "pending": 1086,
+      "boss": 25500
+    },
+    {
+      "enemies": 278,
+      "boats": 4,
+      "pending": 1081,
+      "boss": 25500
+    },
+    {
+      "enemies": 277,
+      "boats": 3,
+      "pending": 1077,
+      "boss": 25500
+    },
+    {
+      "enemies": 279,
+      "boats": 3,
+      "pending": 1073,
+      "boss": 25500
+    },
+    {
+      "enemies": 279,
+      "boats": 3,
+      "pending": 1069,
+      "boss": 25500
+    },
+    {
+      "enemies": 276,
+      "boats": 3,
+      "pending": 1066,
+      "boss": 25500
+    },
+    {
+      "enemies": 276,
+      "boats": 3,
+      "pending": 1065,
+      "boss": 25500
+    },
+    {
+      "enemies": 276,
+      "boats": 3,
+      "pending": 1063,
+      "boss": 25500
+    },
+    {
+      "enemies": 275,
+      "boats": 0,
+      "pending": 1059,
+      "boss": null
+    }
+  ]
+}

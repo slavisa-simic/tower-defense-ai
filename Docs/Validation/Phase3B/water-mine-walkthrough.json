@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase3B/Walkthrough.cs",
+      "entry": "VfxWalkthrough.WaterAndMine",
+      "timeout_ms": "60000"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 80,
+      "executeMs": 3555,
+      "assemblyName": "PipelineRunScript_Walkthrough_6309b7d9ad5a44b99035c3f4d130cae2",
+      "success": true,
+      "result": "Water, mine, and smoke checks passed"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

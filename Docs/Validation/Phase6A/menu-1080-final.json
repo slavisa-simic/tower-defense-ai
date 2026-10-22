@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase6A/Live.cs",
+      "entry": "Phase6ALive.Resolution"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 143,
+      "executeMs": 4809,
+      "assemblyName": "PipelineRunScript_Live_19e8e4845b904761b097a98c88b7f559",
+      "success": true,
+      "result": "Both New Game cards, both scene launches, both-map history, port Game Over and port Continue passed at 1920x1080"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

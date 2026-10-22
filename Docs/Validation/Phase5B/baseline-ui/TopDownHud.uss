@@ -1,0 +1,80 @@
+#hud-shell { flex-grow: 1; color: rgb(210, 204, 177); font-size: 18px; }
+#structure-panel { display: none; position: absolute; right: 16px; top: 135px; width: 260px; padding: 16px; }
+#structure-title { font-size: 14px; color: rgb(227, 197, 123); margin-bottom: 8px; white-space: normal; }
+#structure-stats { font-size: 13px; white-space: normal; margin-bottom: 8px; }
+#structure-status { font-size: 10px; white-space: normal; margin-top: 6px; }
+#speed-controls { position: absolute; left: 18px; top: 94px; flex-direction: row; }
+.management-button { height: 32px; margin: 2px; padding: 5px 10px; border-radius: 0; border-width: 1px; border-color: rgb(93, 105, 76); background-color: rgb(33, 41, 36); color: rgb(211, 207, 183); font-size: 12px; }
+.management-button:hover, .management-button:focus { border-color: rgb(227, 197, 123); }
+.management-button.selected { border-width: 2px; border-color: rgb(193, 138, 62); background-color: rgb(58, 62, 40); }
+.management-button:disabled { opacity: 0.4; border-color: rgb(66, 68, 61); }
+.hud-panel {
+    background-image: url("../Art/UI/bd_ui_hud_panel_medium_v001.png");
+    -unity-slice-left: 16; -unity-slice-right: 16; -unity-slice-top: 16; -unity-slice-bottom: 16;
+    padding: 16px 20px;
+}
+#top-strip { position: absolute; left: 16px; right: 16px; top: 12px; flex-direction: row; justify-content: space-between; align-items: flex-start; }
+.side-panel { min-width: 235px; }
+#money-panel { background-image: url("../Art/UI/ui_money_panel_rsd.png"); }
+#money { color: rgb(227, 197, 123); }
+#wave-panel { align-items: center; flex-grow: 1; max-width: 490px; margin-left: 12px; margin-right: 12px; }
+.stat-row { flex-direction: row; align-items: center; }
+.stat-icon { width: 24px; height: 24px; margin-right: 8px; }
+.money-icon { background-image: url("../Art/UI/ui_icon_money_rsd.png"); }
+.hp-icon { background-image: url("../Art/UI/bd_ui_base_hp_icon_v001.png"); }
+.wave-icon { background-image: url("../Art/UI/bd_ui_wave_icon_v001.png"); }
+#wave-number { color: rgb(227, 197, 123); }
+#enemies-remaining { margin-left: 16px; font-size: 15px; }
+#wave-status { font-size: 14px; color: rgb(164, 180, 139); margin-top: 4px; }
+#health-track { height: 5px; margin-left: 32px; margin-top: 5px; background-color: rgb(39, 43, 37); }
+#health-fill { height: 5px; width: 100%; background-color: rgb(144, 162, 111); }
+#build-panel { position: absolute; left: 8%; right: 8%; bottom: 12px; background-image: url("../Art/UI/bd_ui_hud_panel_large_v001.png"); }
+#build-controls { flex-direction: row; align-items: center; }
+#defense-buttons { flex-direction: row; flex-grow: 1; flex-wrap: wrap; }
+.defense-button {
+    flex-grow: 0; flex-shrink: 0; flex-basis: 24%; height: 68px; min-width: 116px;
+    margin: 0 1% 4px 0; padding: 39px 5px 7px 5px;
+    border-width: 1px; border-color: rgba(147, 148, 134, 0.25); border-radius: 0;
+    color: rgb(211, 207, 183); font-size: 10px; background-color: rgba(0, 0, 0, 0);
+    background-image: url("../Art/UI/bd_ui_build_button_empty_v001.png");
+    -unity-slice-left: 16; -unity-slice-right: 16; -unity-slice-top: 16; -unity-slice-bottom: 16;
+}
+.defense-button > .build-icon { position: absolute; width: 36px; height: 36px; top: 4px; left: 38%; }
+.defense-button:hover { border-color: rgb(175, 166, 112); color: rgb(236, 226, 190); }
+.defense-button.selected { background-image: url("../Art/UI/bd_ui_build_button_selected_v001.png"); border-color: rgb(193, 138, 62); }
+.defense-button:disabled { background-image: url("../Art/UI/bd_ui_build_button_disabled_v001.png"); }
+.defense-button:focus { border-color: rgb(227, 197, 123); }
+.defense-machine-gun-nest > .build-icon { background-image: url("../Art/UI/bd_ui_mg_nest_icon_v001.png"); }
+.defense-sniper-tower > .build-icon { background-image: url("../Art/UI/bd_ui_sniper_tower_icon_v002.png"); }
+.defense-barbed-wire > .build-icon { background-image: url("../Art/UI/bd_ui_barbed_wire_icon_v001.png"); }
+.defense-land-mine > .build-icon { background-image: url("../Art/UI/bd_ui_land_mine_icon_v001.png"); }
+.defense-mortar > .build-icon { background-image: url("../Art/UI/ui_icon_mortar.png"); }
+.defense-flamethrower > .build-icon { background-image: url("../Art/UI/ui_icon_flamethrower.png"); }
+.defense-autocannon > .build-icon { background-image: url("../Art/UI/ui_icon_autocannon.png"); }
+.defense-rocket > .build-icon { background-image: url("../Art/UI/ui_icon_rocket.png"); }
+#start-wave {
+    width: 150px; height: 60px; margin-left: 6px; padding: 16px;
+    color: rgb(236, 219, 166); font-size: 16px; border-width: 0; border-radius: 0;
+    background-color: rgba(0, 0, 0, 0); background-image: url("../Art/UI/bd_ui_start_wave_button_v001.png");
+    -unity-slice-left: 16; -unity-slice-right: 16; -unity-slice-top: 16; -unity-slice-bottom: 16;
+}
+#start-wave:hover { color: rgb(255, 240, 203); }
+#build-hint { margin-top: 8px; font-size: 12px; -unity-text-align: middle-center; color: rgb(166, 171, 147); }
+#game-over {
+    display: none; position: absolute; left: 24%; right: 24%; top: 32%; padding: 28px 20px;
+    font-size: 18px; -unity-text-align: middle-center; color: rgb(223, 198, 166);
+    background-image: url("../Art/UI/bd_ui_hud_panel_large_v001.png");
+    -unity-slice-left: 16; -unity-slice-right: 16; -unity-slice-top: 16; -unity-slice-bottom: 16;
+}
+.money-gain { color: rgb(184, 220, 153); }
+.money-spent { opacity: 0.75; }
+.health-hit { opacity: 0.65; }
+.wave-banner { background-image: url("../Art/UI/bd_ui_small_status_panel_v001.png"); -unity-slice-left: 16; -unity-slice-right: 16; -unity-slice-top: 16; -unity-slice-bottom: 16; }
+
+#base-hp { color: rgb(232, 106, 91); font-size: 16px; }
+#health-fill { background-color: rgb(183, 72, 56); }
+
+
+#dismantle { width:150px; height:58px; margin-left:6px; margin-top:4px; padding-top:30px; color:rgb(211,207,183); font-size:12px; border-radius:0; background-color:rgba(0,0,0,0); background-image:url("../Art/UI/bd_ui_build_button_empty_v001.png"); -unity-slice-left:16; -unity-slice-right:16; -unity-slice-top:16; -unity-slice-bottom:16; }
+#dismantle > .build-icon { position:absolute; top:2px; left:60px; width:28px; height:28px; background-image:url("../Art/UI/ui_icon_dismantle.png"); }
+#dismantle.selected { border-color:rgb(193,138,62); border-width:2px; }

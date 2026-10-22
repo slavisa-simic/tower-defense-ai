@@ -1,0 +1,29 @@
+{
+  "width": 2560,
+  "height": 1440,
+  "panel": "(1280.00, 720.00)",
+  "camera": 11.85,
+  "viewport": "(x:0.00, y:0.17, width:1.00, height:0.69)",
+  "elements": [
+    {
+      "name": "money-panel",
+      "bounds": "(x:16.00, y:12.00, width:235.00, height:64.50)"
+    },
+    {
+      "name": "wave-panel",
+      "bounds": "(x:375.00, y:12.00, width:490.00, height:93.00)"
+    },
+    {
+      "name": "health-panel",
+      "bounds": "(x:988.50, y:12.00, width:275.50, height:74.50)"
+    },
+    {
+      "name": "build-panel",
+      "bounds": "(x:230.50, y:577.50, width:819.00, height:130.50)"
+    },
+    {
+      "name": "start-wave",
+      "bounds": "(x:875.50, y:597.50, width:150.00, height:60.00)"
+    }
+  ]
+}

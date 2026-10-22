@@ -1,0 +1,156 @@
+{
+  "success": true,
+  "command": "command console",
+  "data": {
+    "command": "console",
+    "parameters": {},
+    "result": {
+      "entries": [
+        {
+          "seq": 270,
+          "timestampUtc": "2026-10-03T14:39:06.7306046Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 271,
+          "timestampUtc": "2026-10-03T14:44:43.4974792Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 272,
+          "timestampUtc": "2026-10-03T14:44:43.5650931Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 119 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 273,
+          "timestampUtc": "2026-10-03T14:44:43.6896523Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "InvalidOperationException: Expected observer failure",
+          "stackTrace": "ShorelineDefense.Tests.EconomyAndPlacementTests+<>c.<BrokenObserverCannotTurnCommittedPaymentIntoFailure>b__0_0 (System.Int32 _) (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:18)\nShorelineDefense.Economy.EconomyManager.NotifyMoneyChanged () (at Assets/Game/Scripts/Economy/EconomyManager.cs:60)\nUnityEngine.Debug:LogException(Exception, Object)\nShorelineDefense.Economy.EconomyManager:NotifyMoneyChanged() (at Assets/Game/Scripts/Economy/EconomyManager.cs:61)\nShorelineDefense.Economy.EconomyManager:TrySpend(Int32) (at Assets/Game/Scripts/Economy/EconomyManager.cs:39)\nShorelineDefense.Tests.EconomyAndPlacementTests:BrokenObserverCannotTurnCommittedPaymentIntoFailure() (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:21)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+          "seeded": false
+        },
+        {
+          "seq": 274,
+          "timestampUtc": "2026-10-03T14:44:44.2999162Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 275,
+          "timestampUtc": "2026-10-03T14:44:44.3495332Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 119 total, 119 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 276,
+          "timestampUtc": "2026-10-03T14:44:44.3710076Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 277,
+          "timestampUtc": "2026-10-03T14:45:30.8455626Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 278,
+          "timestampUtc": "2026-10-03T14:45:34.8630182Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 279,
+          "timestampUtc": "2026-10-03T14:45:34.8924767Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 69 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 280,
+          "timestampUtc": "2026-10-03T14:45:39.389677Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 281,
+          "timestampUtc": "2026-10-03T14:45:39.4204575Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 4 total, 2 passed, 2 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 282,
+          "timestampUtc": "2026-10-03T14:45:39.7751891Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        }
+      ],
+      "cursor": 282,
+      "session": "e6f4bc4f23854900a5191611c681e01a",
+      "returned": 13,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 1,
+        "warn": 1,
+        "log": 11
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-10-03T14:46:23.8135298Z",
+        "ageMs": 6,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 0,
+        "consoleWarnings": 0,
+        "consoleLogs": 5,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

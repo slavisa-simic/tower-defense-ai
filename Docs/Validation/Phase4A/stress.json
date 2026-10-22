@@ -1,0 +1,15 @@
+{
+  "spawned": 150,
+  "capBlocked": true,
+  "spawnMs": 49.8271,
+  "sampledEnemies": 141,
+  "frames": 887,
+  "medianMs": 3.26079917,
+  "p95Ms": 4.0714,
+  "maxMs": 128.305115,
+  "renderersBefore": 672,
+  "renderersAfter": 672,
+  "remainingEnemies": 0,
+  "uiPopups": 0,
+  "effectCapacity": 256
+}

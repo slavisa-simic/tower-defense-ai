@@ -1,0 +1,16 @@
+[
+  {
+    "path": "Assets/Game/Scenes/MainMenu.unity",
+    "missing": 0,
+    "menus": 1,
+    "sessions": 0,
+    "dirty": false
+  },
+  {
+    "path": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+    "missing": 0,
+    "menus": 1,
+    "sessions": 1,
+    "dirty": false
+  }
+]

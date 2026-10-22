@@ -1,0 +1,2075 @@
+{
+  "success": true,
+  "command": "command console",
+  "data": {
+    "command": "console",
+    "parameters": {
+      "tail": "500"
+    },
+    "result": {
+      "entries": [
+        {
+          "seq": 44,
+          "timestampUtc": "2026-10-03T13:01:47.26112Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 45,
+          "timestampUtc": "2026-10-03T13:04:17.09789Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 46,
+          "timestampUtc": "2026-10-03T13:09:28.3095365Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 47,
+          "timestampUtc": "2026-10-03T13:09:28.5378435Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 113 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 48,
+          "timestampUtc": "2026-10-03T13:09:29.0418031Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "InvalidOperationException: Expected observer failure",
+          "stackTrace": "ShorelineDefense.Tests.EconomyAndPlacementTests+<>c.<BrokenObserverCannotTurnCommittedPaymentIntoFailure>b__0_0 (System.Int32 _) (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:18)\nShorelineDefense.Economy.EconomyManager.NotifyMoneyChanged () (at Assets/Game/Scripts/Economy/EconomyManager.cs:58)\nUnityEngine.Debug:LogException(Exception, Object)\nShorelineDefense.Economy.EconomyManager:NotifyMoneyChanged() (at Assets/Game/Scripts/Economy/EconomyManager.cs:59)\nShorelineDefense.Economy.EconomyManager:TrySpend(Int32) (at Assets/Game/Scripts/Economy/EconomyManager.cs:37)\nShorelineDefense.Tests.EconomyAndPlacementTests:BrokenObserverCannotTurnCommittedPaymentIntoFailure() (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:21)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+          "seeded": false
+        },
+        {
+          "seq": 49,
+          "timestampUtc": "2026-10-03T13:09:30.2915442Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 50,
+          "timestampUtc": "2026-10-03T13:09:30.3400715Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 113 total, 113 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 51,
+          "timestampUtc": "2026-10-03T13:09:30.4697589Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 52,
+          "timestampUtc": "2026-10-03T13:09:50.1266738Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 53,
+          "timestampUtc": "2026-10-03T13:09:55.1899646Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 54,
+          "timestampUtc": "2026-10-03T13:09:55.2241849Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 65 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 55,
+          "timestampUtc": "2026-10-03T13:09:55.7328741Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 56,
+          "timestampUtc": "2026-10-03T13:09:56.4308166Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 57,
+          "timestampUtc": "2026-10-03T13:09:57.3271451Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: mass-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:77)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 58,
+          "timestampUtc": "2026-10-03T13:09:57.8227472Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: pirate-raid",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:77)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 59,
+          "timestampUtc": "2026-10-03T13:09:58.1952069Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: militant-assault",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:77)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 60,
+          "timestampUtc": "2026-10-03T13:09:58.4529066Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: heavy-assault",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:77)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 61,
+          "timestampUtc": "2026-10-03T13:09:59.0275427Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: runner-swarm",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:77)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 62,
+          "timestampUtc": "2026-10-03T13:09:59.5071433Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:77)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 63,
+          "timestampUtc": "2026-10-03T13:09:59.9752335Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: flooded-shore",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:77)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 64,
+          "timestampUtc": "2026-10-03T13:10:00.4790785Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:77)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 65,
+          "timestampUtc": "2026-10-03T13:10:00.9389713Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:77)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 66,
+          "timestampUtc": "2026-10-03T13:10:01.3839221Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: field-engineers",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:77)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 67,
+          "timestampUtc": "2026-10-03T13:10:02.0707725Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: calm-before-storm",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:77)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 68,
+          "timestampUtc": "2026-10-03T13:10:02.6536175Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:77)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 69,
+          "timestampUtc": "2026-10-03T13:10:03.2900406Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: concentrated-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:77)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 70,
+          "timestampUtc": "2026-10-03T13:10:03.5857809Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 71,
+          "timestampUtc": "2026-10-03T13:10:04.3773778Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 72,
+          "timestampUtc": "2026-10-03T13:10:05.9314309Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 73,
+          "timestampUtc": "2026-10-03T13:10:06.4738707Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 5: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:148)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 74,
+          "timestampUtc": "2026-10-03T13:10:06.8519555Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 7: mass-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:148)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 75,
+          "timestampUtc": "2026-10-03T13:10:07.9975893Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 76,
+          "timestampUtc": "2026-10-03T13:10:09.3662171Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 77,
+          "timestampUtc": "2026-10-03T13:10:09.4008454Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 6 total, 3 passed, 3 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 78,
+          "timestampUtc": "2026-10-03T13:10:09.7826443Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 79,
+          "timestampUtc": "2026-10-03T13:11:06.8530636Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 80,
+          "timestampUtc": "2026-10-03T13:11:43.9338243Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 81,
+          "timestampUtc": "2026-10-03T13:11:47.8942093Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 82,
+          "timestampUtc": "2026-10-03T13:11:47.9256368Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 65 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 83,
+          "timestampUtc": "2026-10-03T13:11:48.4254912Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 84,
+          "timestampUtc": "2026-10-03T13:11:49.6183952Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 85,
+          "timestampUtc": "2026-10-03T13:11:50.3847411Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: mass-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 86,
+          "timestampUtc": "2026-10-03T13:11:50.8447725Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: pirate-raid",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 87,
+          "timestampUtc": "2026-10-03T13:11:51.1285155Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: militant-assault",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 88,
+          "timestampUtc": "2026-10-03T13:11:51.3556756Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: heavy-assault",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 89,
+          "timestampUtc": "2026-10-03T13:11:51.8502945Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: runner-swarm",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 90,
+          "timestampUtc": "2026-10-03T13:11:52.3034064Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 91,
+          "timestampUtc": "2026-10-03T13:11:52.7648098Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: flooded-shore",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 92,
+          "timestampUtc": "2026-10-03T13:11:53.2230529Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 93,
+          "timestampUtc": "2026-10-03T13:11:53.6651996Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 94,
+          "timestampUtc": "2026-10-03T13:11:54.1175405Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: field-engineers",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 95,
+          "timestampUtc": "2026-10-03T13:11:54.720452Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: calm-before-storm",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 96,
+          "timestampUtc": "2026-10-03T13:11:55.2220809Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 97,
+          "timestampUtc": "2026-10-03T13:11:56.0165794Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: concentrated-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 98,
+          "timestampUtc": "2026-10-03T13:11:56.3009294Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 99,
+          "timestampUtc": "2026-10-03T13:11:57.0676334Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 100,
+          "timestampUtc": "2026-10-03T13:11:59.5763983Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 101,
+          "timestampUtc": "2026-10-03T13:12:00.1065871Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 5: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 102,
+          "timestampUtc": "2026-10-03T13:12:00.4836473Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 7: mass-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 103,
+          "timestampUtc": "2026-10-03T13:12:01.3521145Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 10: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 104,
+          "timestampUtc": "2026-10-03T13:12:02.4443393Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 14: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 105,
+          "timestampUtc": "2026-10-03T13:12:03.4437282Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 17: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 106,
+          "timestampUtc": "2026-10-03T13:12:04.5457111Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 20: concentrated-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 107,
+          "timestampUtc": "2026-10-03T13:12:07.1112125Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 24: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 108,
+          "timestampUtc": "2026-10-03T13:12:08.8642453Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 27: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 109,
+          "timestampUtc": "2026-10-03T13:12:11.3545998Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 30 waves: Wave 5 — fog, Wave 7 — mass-landing, Wave 10 — ammunition-shortage, Wave 14 — fog, Wave 17 — emergency-supply, Wave 20 — concentrated-landing, Wave 24 — multi-sector, Wave 27 — ammunition-shortage, Wave 31 — heavy-assault",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:156)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 110,
+          "timestampUtc": "2026-10-03T13:12:11.6408365Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 111,
+          "timestampUtc": "2026-10-03T13:12:13.002044Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 112,
+          "timestampUtc": "2026-10-03T13:12:13.0373702Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 6 total, 6 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 113,
+          "timestampUtc": "2026-10-03T13:12:13.409204Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 114,
+          "timestampUtc": "2026-10-03T13:13:40.6214627Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 115,
+          "timestampUtc": "2026-10-03T13:13:44.5879924Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 116,
+          "timestampUtc": "2026-10-03T13:13:44.6197665Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 65 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 117,
+          "timestampUtc": "2026-10-03T13:13:44.9977132Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 118,
+          "timestampUtc": "2026-10-03T13:13:45.9071227Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 119,
+          "timestampUtc": "2026-10-03T13:13:46.239199Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 120,
+          "timestampUtc": "2026-10-03T13:13:46.5568562Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 121,
+          "timestampUtc": "2026-10-03T13:13:46.8824675Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 122,
+          "timestampUtc": "2026-10-03T13:13:54.502991Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 123,
+          "timestampUtc": "2026-10-03T13:13:54.8237341Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 124,
+          "timestampUtc": "2026-10-03T13:13:58.2546185Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 125,
+          "timestampUtc": "2026-10-03T13:13:59.6702845Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 126,
+          "timestampUtc": "2026-10-03T13:14:00.5549709Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 127,
+          "timestampUtc": "2026-10-03T13:14:01.3673882Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: mass-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 128,
+          "timestampUtc": "2026-10-03T13:14:01.838528Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: pirate-raid",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 129,
+          "timestampUtc": "2026-10-03T13:14:02.1831667Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: militant-assault",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 130,
+          "timestampUtc": "2026-10-03T13:14:02.4262817Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: heavy-assault",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 131,
+          "timestampUtc": "2026-10-03T13:14:02.9545242Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: runner-swarm",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 132,
+          "timestampUtc": "2026-10-03T13:14:03.44447Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 133,
+          "timestampUtc": "2026-10-03T13:14:03.9219187Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: flooded-shore",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 134,
+          "timestampUtc": "2026-10-03T13:14:04.4013541Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 135,
+          "timestampUtc": "2026-10-03T13:14:04.8922227Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 136,
+          "timestampUtc": "2026-10-03T13:14:05.3692531Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: field-engineers",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 137,
+          "timestampUtc": "2026-10-03T13:14:05.9955445Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: calm-before-storm",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 138,
+          "timestampUtc": "2026-10-03T13:14:06.5706471Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 139,
+          "timestampUtc": "2026-10-03T13:14:08.0411907Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: concentrated-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 140,
+          "timestampUtc": "2026-10-03T13:14:08.3186391Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 141,
+          "timestampUtc": "2026-10-03T13:14:09.1145504Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 142,
+          "timestampUtc": "2026-10-03T13:14:11.6359553Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 143,
+          "timestampUtc": "2026-10-03T13:14:12.1772394Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 5: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 144,
+          "timestampUtc": "2026-10-03T13:14:12.5510473Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 7: mass-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 145,
+          "timestampUtc": "2026-10-03T13:14:13.4202907Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 10: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 146,
+          "timestampUtc": "2026-10-03T13:14:14.4876573Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 14: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 147,
+          "timestampUtc": "2026-10-03T13:14:15.4592312Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 17: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 148,
+          "timestampUtc": "2026-10-03T13:14:16.5626517Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 20: concentrated-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 149,
+          "timestampUtc": "2026-10-03T13:14:18.9194297Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 24: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 150,
+          "timestampUtc": "2026-10-03T13:14:20.4546524Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 27: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 151,
+          "timestampUtc": "2026-10-03T13:14:22.729511Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 30 waves: Wave 5 — fog, Wave 7 — mass-landing, Wave 10 — ammunition-shortage, Wave 14 — fog, Wave 17 — emergency-supply, Wave 20 — concentrated-landing, Wave 24 — multi-sector, Wave 27 — ammunition-shortage, Wave 31 — heavy-assault",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:156)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 152,
+          "timestampUtc": "2026-10-03T13:14:23.0319206Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 153,
+          "timestampUtc": "2026-10-03T13:14:24.5359411Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 154,
+          "timestampUtc": "2026-10-03T13:14:24.8541934Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 155,
+          "timestampUtc": "2026-10-03T13:14:25.1696844Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 156,
+          "timestampUtc": "2026-10-03T13:14:25.493369Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 157,
+          "timestampUtc": "2026-10-03T13:14:25.8194606Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 158,
+          "timestampUtc": "2026-10-03T13:14:26.1442497Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 159,
+          "timestampUtc": "2026-10-03T13:14:26.4754699Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 160,
+          "timestampUtc": "2026-10-03T13:14:26.8322288Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 161,
+          "timestampUtc": "2026-10-03T13:14:27.1560379Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 162,
+          "timestampUtc": "2026-10-03T13:14:27.4761204Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 163,
+          "timestampUtc": "2026-10-03T13:14:27.8271233Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 164,
+          "timestampUtc": "2026-10-03T13:14:34.2177018Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 165,
+          "timestampUtc": "2026-10-03T13:14:34.5468475Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 166,
+          "timestampUtc": "2026-10-03T13:14:34.866011Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 167,
+          "timestampUtc": "2026-10-03T13:14:35.1814174Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 168,
+          "timestampUtc": "2026-10-03T13:14:35.5112754Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 169,
+          "timestampUtc": "2026-10-03T13:14:35.8269639Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 170,
+          "timestampUtc": "2026-10-03T13:14:38.3362123Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 171,
+          "timestampUtc": "2026-10-03T13:14:38.6512247Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 172,
+          "timestampUtc": "2026-10-03T13:14:39.0026296Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 173,
+          "timestampUtc": "2026-10-03T13:14:39.3305888Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 174,
+          "timestampUtc": "2026-10-03T13:14:39.685019Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 175,
+          "timestampUtc": "2026-10-03T13:14:40.0262874Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 176,
+          "timestampUtc": "2026-10-03T13:14:40.3444992Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 177,
+          "timestampUtc": "2026-10-03T13:14:40.7598061Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 178,
+          "timestampUtc": "2026-10-03T13:14:48.9809417Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 179,
+          "timestampUtc": "2026-10-03T13:14:49.3211766Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 180,
+          "timestampUtc": "2026-10-03T13:14:49.6406278Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 181,
+          "timestampUtc": "2026-10-03T13:14:49.971214Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 182,
+          "timestampUtc": "2026-10-03T13:14:50.2884935Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 183,
+          "timestampUtc": "2026-10-03T13:14:50.6103097Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 184,
+          "timestampUtc": "2026-10-03T13:14:51.8765672Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 185,
+          "timestampUtc": "2026-10-03T13:14:52.2178963Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 186,
+          "timestampUtc": "2026-10-03T13:14:52.546608Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 187,
+          "timestampUtc": "2026-10-03T13:14:52.8773837Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 188,
+          "timestampUtc": "2026-10-03T13:14:53.1983226Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 189,
+          "timestampUtc": "2026-10-03T13:15:38.3738489Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 190,
+          "timestampUtc": "2026-10-03T13:15:38.7103944Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 191,
+          "timestampUtc": "2026-10-03T13:15:39.1471126Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 192,
+          "timestampUtc": "2026-10-03T13:15:39.6243832Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 193,
+          "timestampUtc": "2026-10-03T13:15:39.9531979Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 194,
+          "timestampUtc": "2026-10-03T13:15:40.2707411Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 195,
+          "timestampUtc": "2026-10-03T13:15:42.4165187Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 196,
+          "timestampUtc": "2026-10-03T13:15:52.3691727Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 197,
+          "timestampUtc": "2026-10-03T13:15:53.7095544Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 198,
+          "timestampUtc": "2026-10-03T13:15:54.0189107Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 199,
+          "timestampUtc": "2026-10-03T13:15:54.3333445Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Sprite Tiling might not appear correctly because the Sprite used is not generated with Full Rect. To fix this, change the Mesh Type in the Sprite's import setting to Full Rect",
+          "stackTrace": "UnityEngine.SpriteRenderer:set_drawMode (UnityEngine.SpriteDrawMode)\nShorelineDefense.Presentation.EndlessEventPresentation:Make (string,UnityEngine.Sprite,string,int) (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:30)\nShorelineDefense.Presentation.EndlessEventPresentation:Start () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:21)\n",
+          "seeded": false
+        },
+        {
+          "seq": 200,
+          "timestampUtc": "2026-10-03T13:15:54.3901629Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 201,
+          "timestampUtc": "2026-10-03T13:15:54.4379155Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 65 total, 62 passed, 3 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 202,
+          "timestampUtc": "2026-10-03T13:15:54.7980188Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 203,
+          "timestampUtc": "2026-10-03T13:16:49.0051363Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 204,
+          "timestampUtc": "2026-10-03T13:20:18.1528878Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 205,
+          "timestampUtc": "2026-10-03T13:24:24.3703292Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 206,
+          "timestampUtc": "2026-10-03T13:24:28.593458Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 207,
+          "timestampUtc": "2026-10-03T13:24:28.6261338Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 65 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 208,
+          "timestampUtc": "2026-10-03T13:24:45.4906788Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: mass-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 209,
+          "timestampUtc": "2026-10-03T13:24:45.8919413Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: pirate-raid",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 210,
+          "timestampUtc": "2026-10-03T13:24:46.192862Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: militant-assault",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 211,
+          "timestampUtc": "2026-10-03T13:24:46.4101798Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: heavy-assault",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 212,
+          "timestampUtc": "2026-10-03T13:24:46.9009204Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: runner-swarm",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 213,
+          "timestampUtc": "2026-10-03T13:24:47.3221103Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 214,
+          "timestampUtc": "2026-10-03T13:24:47.7469886Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: flooded-shore",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 215,
+          "timestampUtc": "2026-10-03T13:24:48.1729312Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 216,
+          "timestampUtc": "2026-10-03T13:24:48.5901504Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 217,
+          "timestampUtc": "2026-10-03T13:24:49.0129058Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: field-engineers",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 218,
+          "timestampUtc": "2026-10-03T13:24:49.7008357Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: calm-before-storm",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 219,
+          "timestampUtc": "2026-10-03T13:24:50.1846545Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 220,
+          "timestampUtc": "2026-10-03T13:24:50.9121393Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: concentrated-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 221,
+          "timestampUtc": "2026-10-03T13:24:55.6712699Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 5: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 222,
+          "timestampUtc": "2026-10-03T13:24:56.0427213Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 7: mass-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 223,
+          "timestampUtc": "2026-10-03T13:24:56.9131203Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 10: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 224,
+          "timestampUtc": "2026-10-03T13:24:57.9983214Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 14: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 225,
+          "timestampUtc": "2026-10-03T13:24:59.000734Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 17: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 226,
+          "timestampUtc": "2026-10-03T13:25:00.1067901Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 20: concentrated-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 227,
+          "timestampUtc": "2026-10-03T13:25:02.4471574Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 24: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 228,
+          "timestampUtc": "2026-10-03T13:25:03.9765522Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 27: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:149)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 229,
+          "timestampUtc": "2026-10-03T13:25:06.2561536Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 30 waves: Wave 5 — fog, Wave 7 — mass-landing, Wave 10 — ammunition-shortage, Wave 14 — fog, Wave 17 — emergency-supply, Wave 20 — concentrated-landing, Wave 24 — multi-sector, Wave 27 — ammunition-shortage, Wave 31 — heavy-assault",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:156)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 230,
+          "timestampUtc": "2026-10-03T13:27:14.3696943Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 231,
+          "timestampUtc": "2026-10-03T13:27:14.4130119Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 65 total, 64 passed, 1 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 232,
+          "timestampUtc": "2026-10-03T13:27:14.7693897Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 233,
+          "timestampUtc": "2026-10-03T13:28:45.1169919Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "Assets\\Game\\Scripts\\UI\\BossHUDController.cs(8,56): warning CS0108: 'BossHUDController.name' hides inherited member 'Object.name'. Use the new keyword if hiding was intended.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 234,
+          "timestampUtc": "2026-10-03T13:29:17.1399072Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Running 113 tests (explicit tests excluded)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner/<>c__DisplayClass8_0:<ExecuteTestsInternal>b__0 (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:340)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 235,
+          "timestampUtc": "2026-10-03T13:29:17.3574253Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 236,
+          "timestampUtc": "2026-10-03T13:29:17.3799002Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 113 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 237,
+          "timestampUtc": "2026-10-03T13:29:17.4659481Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "InvalidOperationException: Expected observer failure",
+          "stackTrace": "ShorelineDefense.Tests.EconomyAndPlacementTests+<>c.<BrokenObserverCannotTurnCommittedPaymentIntoFailure>b__0_0 (System.Int32 _) (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:18)\nShorelineDefense.Economy.EconomyManager.NotifyMoneyChanged () (at Assets/Game/Scripts/Economy/EconomyManager.cs:58)\nUnityEngine.Debug:LogException(Exception, Object)\nShorelineDefense.Economy.EconomyManager:NotifyMoneyChanged() (at Assets/Game/Scripts/Economy/EconomyManager.cs:59)\nShorelineDefense.Economy.EconomyManager:TrySpend(Int32) (at Assets/Game/Scripts/Economy/EconomyManager.cs:37)\nShorelineDefense.Tests.EconomyAndPlacementTests:BrokenObserverCannotTurnCommittedPaymentIntoFailure() (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:21)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+          "seeded": false
+        },
+        {
+          "seq": 238,
+          "timestampUtc": "2026-10-03T13:29:17.6815419Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 239,
+          "timestampUtc": "2026-10-03T13:29:17.7297502Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 113 total, 113 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 240,
+          "timestampUtc": "2026-10-03T13:29:17.7433328Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 241,
+          "timestampUtc": "2026-10-03T13:29:18.9283218Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 242,
+          "timestampUtc": "2026-10-03T13:29:22.9313692Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 243,
+          "timestampUtc": "2026-10-03T13:29:22.9663904Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 65 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 244,
+          "timestampUtc": "2026-10-03T13:29:39.6392372Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: mass-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 245,
+          "timestampUtc": "2026-10-03T13:29:40.1131247Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: pirate-raid",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 246,
+          "timestampUtc": "2026-10-03T13:29:40.4651253Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: militant-assault",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 247,
+          "timestampUtc": "2026-10-03T13:29:40.7041061Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: heavy-assault",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 248,
+          "timestampUtc": "2026-10-03T13:29:41.2121463Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: runner-swarm",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 249,
+          "timestampUtc": "2026-10-03T13:29:41.6585158Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 250,
+          "timestampUtc": "2026-10-03T13:29:42.1305009Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: flooded-shore",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 251,
+          "timestampUtc": "2026-10-03T13:29:42.5726393Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 252,
+          "timestampUtc": "2026-10-03T13:29:43.02435Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 253,
+          "timestampUtc": "2026-10-03T13:29:43.4696848Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: field-engineers",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 254,
+          "timestampUtc": "2026-10-03T13:29:44.0395159Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: calm-before-storm",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 255,
+          "timestampUtc": "2026-10-03T13:29:44.5604501Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 256,
+          "timestampUtc": "2026-10-03T13:29:45.9216006Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: concentrated-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 257,
+          "timestampUtc": "2026-10-03T13:29:50.0358869Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 5: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 258,
+          "timestampUtc": "2026-10-03T13:29:50.4093309Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 7: mass-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 259,
+          "timestampUtc": "2026-10-03T13:29:51.2815941Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 10: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 260,
+          "timestampUtc": "2026-10-03T13:29:52.376987Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 14: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 261,
+          "timestampUtc": "2026-10-03T13:29:53.3620362Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 17: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 262,
+          "timestampUtc": "2026-10-03T13:29:54.4637155Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 20: concentrated-landing",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 263,
+          "timestampUtc": "2026-10-03T13:29:56.8555317Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 24: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 264,
+          "timestampUtc": "2026-10-03T13:29:58.4528107Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 27: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 265,
+          "timestampUtc": "2026-10-03T13:30:00.876452Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 30 waves: Wave 5 — fog, Wave 7 — mass-landing, Wave 10 — ammunition-shortage, Wave 14 — fog, Wave 17 — emergency-supply, Wave 20 — concentrated-landing, Wave 24 — multi-sector, Wave 27 — ammunition-shortage, Wave 31 — heavy-assault",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:161)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 266,
+          "timestampUtc": "2026-10-03T13:31:54.2920406Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase4A 100 real boat waves: breaches=93087, homicides=5390175, earned=35750, peak enemies=5, peak boats=32",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.SurvivalPlayTests/<HundredAcceleratedBoatWavesCompleteAndReleaseTransientObjects>d__11:MoveNext () (at Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs:73)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 267,
+          "timestampUtc": "2026-10-03T13:32:10.5377913Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 268,
+          "timestampUtc": "2026-10-03T13:32:10.5823166Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 65 total, 65 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 269,
+          "timestampUtc": "2026-10-03T13:32:10.9418941Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        }
+      ],
+      "cursor": 269,
+      "session": "e6f4bc4f23854900a5191611c681e01a",
+      "returned": 226,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 2,
+        "warn": 79,
+        "log": 145
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-10-03T13:32:57.2888468Z",
+        "ageMs": 116,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 0,
+        "consoleWarnings": 0,
+        "consoleLogs": 28,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

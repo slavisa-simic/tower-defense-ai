@@ -1,0 +1,24 @@
+{
+  "unity": "6000.3.24f1",
+  "playMode": {
+    "summary": {
+      "total": 71,
+      "passed": 71,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "duration": 186.93
+  },
+  "validationDate": "2026-10-03",
+  "editMode": {
+    "summary": {
+      "total": 120,
+      "passed": 120,
+      "failed": 0,
+      "skipped": 0,
+      "inconclusive": 0
+    },
+    "duration": 1.88
+  }
+}

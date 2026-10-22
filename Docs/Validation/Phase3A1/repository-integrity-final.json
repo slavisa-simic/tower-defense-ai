@@ -1,0 +1,10 @@
+{
+  "preexisting_files": 284,
+  "unchanged": 283,
+  "changed": [
+    "Assets/Game/Scenes/CoastalDefense_TopDown.unity"
+  ],
+  "existing_asset_guids_preserved": true,
+  "new_runtime_sprites": 52,
+  "native_sources": 57
+}

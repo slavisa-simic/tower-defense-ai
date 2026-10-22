@@ -1,0 +1,1947 @@
+{
+  "runtime": [
+    {
+      "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_idle_e_sheet_v001.png",
+      "width": 256,
+      "height": 64,
+      "guid": "3f08ce3b9743103439f9aafb038a4ffe",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_basic_infected_idle_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "3f08ce3b9743103439f9aafb038a4ffe",
+          "fileId": 1685132740
+        },
+        {
+          "name": "bd_enemy_basic_infected_idle_e__f001",
+          "rect": [
+            64.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "3f08ce3b9743103439f9aafb038a4ffe",
+          "fileId": 1159499653
+        },
+        {
+          "name": "bd_enemy_basic_infected_idle_e__f002",
+          "rect": [
+            128.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "3f08ce3b9743103439f9aafb038a4ffe",
+          "fileId": 1435211884
+        },
+        {
+          "name": "bd_enemy_basic_infected_idle_e__f003",
+          "rect": [
+            192.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "3f08ce3b9743103439f9aafb038a4ffe",
+          "fileId": -2112339116
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_idle_e_v001.anim",
+      "clipGuid": "8123fd811d71a954e8189f9113f3a9c3",
+      "fps": 5.0,
+      "loop": true,
+      "duration": 0.8,
+      "keys": 4,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_walk_e_sheet_v001.png",
+      "width": 512,
+      "height": 64,
+      "guid": "344abf8e351729d40b6d9676a4aca1db",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_basic_infected_walk_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "344abf8e351729d40b6d9676a4aca1db",
+          "fileId": -1707175168
+        },
+        {
+          "name": "bd_enemy_basic_infected_walk_e__f001",
+          "rect": [
+            64.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "344abf8e351729d40b6d9676a4aca1db",
+          "fileId": -938078798
+        },
+        {
+          "name": "bd_enemy_basic_infected_walk_e__f002",
+          "rect": [
+            128.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "344abf8e351729d40b6d9676a4aca1db",
+          "fileId": 1348927526
+        },
+        {
+          "name": "bd_enemy_basic_infected_walk_e__f003",
+          "rect": [
+            192.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "344abf8e351729d40b6d9676a4aca1db",
+          "fileId": 1826823598
+        },
+        {
+          "name": "bd_enemy_basic_infected_walk_e__f004",
+          "rect": [
+            256.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "344abf8e351729d40b6d9676a4aca1db",
+          "fileId": 1251495476
+        },
+        {
+          "name": "bd_enemy_basic_infected_walk_e__f005",
+          "rect": [
+            320.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "344abf8e351729d40b6d9676a4aca1db",
+          "fileId": -202838165
+        },
+        {
+          "name": "bd_enemy_basic_infected_walk_e__f006",
+          "rect": [
+            384.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "344abf8e351729d40b6d9676a4aca1db",
+          "fileId": 1122846250
+        },
+        {
+          "name": "bd_enemy_basic_infected_walk_e__f007",
+          "rect": [
+            448.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "344abf8e351729d40b6d9676a4aca1db",
+          "fileId": 1856301806
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_walk_e_v001.anim",
+      "clipGuid": "6acbd4aab7c41d74b9128920a6fdf09c",
+      "fps": 8.0,
+      "loop": true,
+      "duration": 1.0,
+      "keys": 8,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_attack_e_sheet_v001.png",
+      "width": 384,
+      "height": 64,
+      "guid": "44eb352c02fc0f54dbebc21d9ba4cb8a",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_basic_infected_attack_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "44eb352c02fc0f54dbebc21d9ba4cb8a",
+          "fileId": 799572036
+        },
+        {
+          "name": "bd_enemy_basic_infected_attack_e__f001",
+          "rect": [
+            64.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "44eb352c02fc0f54dbebc21d9ba4cb8a",
+          "fileId": 760383261
+        },
+        {
+          "name": "bd_enemy_basic_infected_attack_e__f002",
+          "rect": [
+            128.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "44eb352c02fc0f54dbebc21d9ba4cb8a",
+          "fileId": 1159384823
+        },
+        {
+          "name": "bd_enemy_basic_infected_attack_e__f003",
+          "rect": [
+            192.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "44eb352c02fc0f54dbebc21d9ba4cb8a",
+          "fileId": -1160509310
+        },
+        {
+          "name": "bd_enemy_basic_infected_attack_e__f004",
+          "rect": [
+            256.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "44eb352c02fc0f54dbebc21d9ba4cb8a",
+          "fileId": -1958430615
+        },
+        {
+          "name": "bd_enemy_basic_infected_attack_e__f005",
+          "rect": [
+            320.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "44eb352c02fc0f54dbebc21d9ba4cb8a",
+          "fileId": 1571611146
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_attack_e_v001.anim",
+      "clipGuid": "2085de480a1d4fb4cbaa1686e9b5a0e3",
+      "fps": 10.0,
+      "loop": false,
+      "duration": 0.6,
+      "keys": 6,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_hit_e_sheet_v001.png",
+      "width": 128,
+      "height": 64,
+      "guid": "0795c10e0704c674b90d23d94aa952b3",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_basic_infected_hit_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "0795c10e0704c674b90d23d94aa952b3",
+          "fileId": 1480239088
+        },
+        {
+          "name": "bd_enemy_basic_infected_hit_e__f001",
+          "rect": [
+            64.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "0795c10e0704c674b90d23d94aa952b3",
+          "fileId": 1598240373
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_hit_e_v001.anim",
+      "clipGuid": "37f44893e22cb824682d4259978c7dea",
+      "fps": 10.0,
+      "loop": false,
+      "duration": 0.2,
+      "keys": 2,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_death_e_sheet_v001.png",
+      "width": 512,
+      "height": 64,
+      "guid": "5f9d893e7eb61a34caccb74df5d48da8",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_basic_infected_death_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5f9d893e7eb61a34caccb74df5d48da8",
+          "fileId": -1559544754
+        },
+        {
+          "name": "bd_enemy_basic_infected_death_e__f001",
+          "rect": [
+            64.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5f9d893e7eb61a34caccb74df5d48da8",
+          "fileId": 25183514
+        },
+        {
+          "name": "bd_enemy_basic_infected_death_e__f002",
+          "rect": [
+            128.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5f9d893e7eb61a34caccb74df5d48da8",
+          "fileId": -1302475312
+        },
+        {
+          "name": "bd_enemy_basic_infected_death_e__f003",
+          "rect": [
+            192.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5f9d893e7eb61a34caccb74df5d48da8",
+          "fileId": 531527943
+        },
+        {
+          "name": "bd_enemy_basic_infected_death_e__f004",
+          "rect": [
+            256.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5f9d893e7eb61a34caccb74df5d48da8",
+          "fileId": 800141211
+        },
+        {
+          "name": "bd_enemy_basic_infected_death_e__f005",
+          "rect": [
+            320.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5f9d893e7eb61a34caccb74df5d48da8",
+          "fileId": 1176789055
+        },
+        {
+          "name": "bd_enemy_basic_infected_death_e__f006",
+          "rect": [
+            384.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5f9d893e7eb61a34caccb74df5d48da8",
+          "fileId": 1107071886
+        },
+        {
+          "name": "bd_enemy_basic_infected_death_e__f007",
+          "rect": [
+            448.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5f9d893e7eb61a34caccb74df5d48da8",
+          "fileId": 269672592
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_death_e_v001.anim",
+      "clipGuid": "98e0e1298def7894c85d634344e919a7",
+      "fps": 9.0,
+      "loop": false,
+      "duration": 0.8888889,
+      "keys": 8,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_idle_e_sheet_v001.png",
+      "width": 256,
+      "height": 64,
+      "guid": "44eb2272d8274174eb86a046c8243cbe",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_runner_idle_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "44eb2272d8274174eb86a046c8243cbe",
+          "fileId": 756460432
+        },
+        {
+          "name": "bd_enemy_runner_idle_e__f001",
+          "rect": [
+            64.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "44eb2272d8274174eb86a046c8243cbe",
+          "fileId": -2101995929
+        },
+        {
+          "name": "bd_enemy_runner_idle_e__f002",
+          "rect": [
+            128.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "44eb2272d8274174eb86a046c8243cbe",
+          "fileId": 806661024
+        },
+        {
+          "name": "bd_enemy_runner_idle_e__f003",
+          "rect": [
+            192.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "44eb2272d8274174eb86a046c8243cbe",
+          "fileId": -373921457
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_idle_e_v001.anim",
+      "clipGuid": "20d3e07760c3ac94b946c6f7b89590df",
+      "fps": 5.0,
+      "loop": true,
+      "duration": 0.8,
+      "keys": 4,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_run_e_sheet_v001.png",
+      "width": 512,
+      "height": 64,
+      "guid": "35cf99d0e53a06b4da373f118d5c593f",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_runner_run_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "35cf99d0e53a06b4da373f118d5c593f",
+          "fileId": -2029347194
+        },
+        {
+          "name": "bd_enemy_runner_run_e__f001",
+          "rect": [
+            64.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "35cf99d0e53a06b4da373f118d5c593f",
+          "fileId": 1517589194
+        },
+        {
+          "name": "bd_enemy_runner_run_e__f002",
+          "rect": [
+            128.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "35cf99d0e53a06b4da373f118d5c593f",
+          "fileId": 570508710
+        },
+        {
+          "name": "bd_enemy_runner_run_e__f003",
+          "rect": [
+            192.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "35cf99d0e53a06b4da373f118d5c593f",
+          "fileId": -1149954239
+        },
+        {
+          "name": "bd_enemy_runner_run_e__f004",
+          "rect": [
+            256.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "35cf99d0e53a06b4da373f118d5c593f",
+          "fileId": 1782915150
+        },
+        {
+          "name": "bd_enemy_runner_run_e__f005",
+          "rect": [
+            320.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "35cf99d0e53a06b4da373f118d5c593f",
+          "fileId": -936824339
+        },
+        {
+          "name": "bd_enemy_runner_run_e__f006",
+          "rect": [
+            384.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "35cf99d0e53a06b4da373f118d5c593f",
+          "fileId": -1894605619
+        },
+        {
+          "name": "bd_enemy_runner_run_e__f007",
+          "rect": [
+            448.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "35cf99d0e53a06b4da373f118d5c593f",
+          "fileId": -1135537696
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_run_e_v001.anim",
+      "clipGuid": "26c44f30771f6864d8cc9049c733a87b",
+      "fps": 12.0,
+      "loop": true,
+      "duration": 0.6666666,
+      "keys": 8,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_attack_e_sheet_v001.png",
+      "width": 384,
+      "height": 64,
+      "guid": "950b7b6fadf3df84c8ce015e2df2da93",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_runner_attack_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "950b7b6fadf3df84c8ce015e2df2da93",
+          "fileId": -321349985
+        },
+        {
+          "name": "bd_enemy_runner_attack_e__f001",
+          "rect": [
+            64.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "950b7b6fadf3df84c8ce015e2df2da93",
+          "fileId": -1727629787
+        },
+        {
+          "name": "bd_enemy_runner_attack_e__f002",
+          "rect": [
+            128.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "950b7b6fadf3df84c8ce015e2df2da93",
+          "fileId": 1896036681
+        },
+        {
+          "name": "bd_enemy_runner_attack_e__f003",
+          "rect": [
+            192.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "950b7b6fadf3df84c8ce015e2df2da93",
+          "fileId": -510926349
+        },
+        {
+          "name": "bd_enemy_runner_attack_e__f004",
+          "rect": [
+            256.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "950b7b6fadf3df84c8ce015e2df2da93",
+          "fileId": -1493059085
+        },
+        {
+          "name": "bd_enemy_runner_attack_e__f005",
+          "rect": [
+            320.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "950b7b6fadf3df84c8ce015e2df2da93",
+          "fileId": 486215694
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_attack_e_v001.anim",
+      "clipGuid": "afe05e91b100572449bd78694014b177",
+      "fps": 10.0,
+      "loop": false,
+      "duration": 0.6,
+      "keys": 6,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_hit_e_sheet_v001.png",
+      "width": 128,
+      "height": 64,
+      "guid": "1f65589d3e6d9f442a635438a74d93c2",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_runner_hit_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "1f65589d3e6d9f442a635438a74d93c2",
+          "fileId": -2033052612
+        },
+        {
+          "name": "bd_enemy_runner_hit_e__f001",
+          "rect": [
+            64.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "1f65589d3e6d9f442a635438a74d93c2",
+          "fileId": 948741613
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_hit_e_v001.anim",
+      "clipGuid": "cac71cd285daa5046aac72a42c2147f2",
+      "fps": 10.0,
+      "loop": false,
+      "duration": 0.2,
+      "keys": 2,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_death_e_sheet_v001.png",
+      "width": 512,
+      "height": 64,
+      "guid": "5c72b6eda54b5c74c9e81363d52a2e96",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_runner_death_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5c72b6eda54b5c74c9e81363d52a2e96",
+          "fileId": 2073687900
+        },
+        {
+          "name": "bd_enemy_runner_death_e__f001",
+          "rect": [
+            64.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5c72b6eda54b5c74c9e81363d52a2e96",
+          "fileId": 240796339
+        },
+        {
+          "name": "bd_enemy_runner_death_e__f002",
+          "rect": [
+            128.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5c72b6eda54b5c74c9e81363d52a2e96",
+          "fileId": -703561723
+        },
+        {
+          "name": "bd_enemy_runner_death_e__f003",
+          "rect": [
+            192.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5c72b6eda54b5c74c9e81363d52a2e96",
+          "fileId": -1400952927
+        },
+        {
+          "name": "bd_enemy_runner_death_e__f004",
+          "rect": [
+            256.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5c72b6eda54b5c74c9e81363d52a2e96",
+          "fileId": 1219665328
+        },
+        {
+          "name": "bd_enemy_runner_death_e__f005",
+          "rect": [
+            320.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5c72b6eda54b5c74c9e81363d52a2e96",
+          "fileId": -1313964221
+        },
+        {
+          "name": "bd_enemy_runner_death_e__f006",
+          "rect": [
+            384.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5c72b6eda54b5c74c9e81363d52a2e96",
+          "fileId": 74083435
+        },
+        {
+          "name": "bd_enemy_runner_death_e__f007",
+          "rect": [
+            448.0,
+            0.0,
+            64.0,
+            64.0
+          ],
+          "pivot": [
+            32.0,
+            32.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "5c72b6eda54b5c74c9e81363d52a2e96",
+          "fileId": 695109645
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_death_e_v001.anim",
+      "clipGuid": "fd7be066f40f2714b80ae361267273c9",
+      "fps": 9.0,
+      "loop": false,
+      "duration": 0.8888889,
+      "keys": 8,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_idle_e_sheet_v001.png",
+      "width": 384,
+      "height": 96,
+      "guid": "3d25496efdfd4094dae68dda652e9258",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_brute_idle_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "3d25496efdfd4094dae68dda652e9258",
+          "fileId": 1898053927
+        },
+        {
+          "name": "bd_enemy_brute_idle_e__f001",
+          "rect": [
+            96.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "3d25496efdfd4094dae68dda652e9258",
+          "fileId": 1928080456
+        },
+        {
+          "name": "bd_enemy_brute_idle_e__f002",
+          "rect": [
+            192.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "3d25496efdfd4094dae68dda652e9258",
+          "fileId": -221824480
+        },
+        {
+          "name": "bd_enemy_brute_idle_e__f003",
+          "rect": [
+            288.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "3d25496efdfd4094dae68dda652e9258",
+          "fileId": -1375644500
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_idle_e_v001.anim",
+      "clipGuid": "0c67b32bbf3aad3408d8adb5e4683493",
+      "fps": 5.0,
+      "loop": true,
+      "duration": 0.8,
+      "keys": 4,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_walk_e_sheet_v001.png",
+      "width": 768,
+      "height": 96,
+      "guid": "86eec82d2f6804e4e91c23388ab989b3",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_brute_walk_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "86eec82d2f6804e4e91c23388ab989b3",
+          "fileId": 100703643
+        },
+        {
+          "name": "bd_enemy_brute_walk_e__f001",
+          "rect": [
+            96.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "86eec82d2f6804e4e91c23388ab989b3",
+          "fileId": -1515436979
+        },
+        {
+          "name": "bd_enemy_brute_walk_e__f002",
+          "rect": [
+            192.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "86eec82d2f6804e4e91c23388ab989b3",
+          "fileId": -1436288319
+        },
+        {
+          "name": "bd_enemy_brute_walk_e__f003",
+          "rect": [
+            288.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "86eec82d2f6804e4e91c23388ab989b3",
+          "fileId": 1713529756
+        },
+        {
+          "name": "bd_enemy_brute_walk_e__f004",
+          "rect": [
+            384.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "86eec82d2f6804e4e91c23388ab989b3",
+          "fileId": -860189233
+        },
+        {
+          "name": "bd_enemy_brute_walk_e__f005",
+          "rect": [
+            480.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "86eec82d2f6804e4e91c23388ab989b3",
+          "fileId": -1005906054
+        },
+        {
+          "name": "bd_enemy_brute_walk_e__f006",
+          "rect": [
+            576.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "86eec82d2f6804e4e91c23388ab989b3",
+          "fileId": 777522838
+        },
+        {
+          "name": "bd_enemy_brute_walk_e__f007",
+          "rect": [
+            672.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "86eec82d2f6804e4e91c23388ab989b3",
+          "fileId": 103569445
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_walk_e_v001.anim",
+      "clipGuid": "7c3c6d2b0fe9c6a4eb3af922d360eb3a",
+      "fps": 6.0,
+      "loop": true,
+      "duration": 1.33333325,
+      "keys": 8,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_attack_e_sheet_v001.png",
+      "width": 576,
+      "height": 96,
+      "guid": "296d59f7aec4ca443ae194ad4009d354",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_brute_attack_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "296d59f7aec4ca443ae194ad4009d354",
+          "fileId": 538348073
+        },
+        {
+          "name": "bd_enemy_brute_attack_e__f001",
+          "rect": [
+            96.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "296d59f7aec4ca443ae194ad4009d354",
+          "fileId": 1995864257
+        },
+        {
+          "name": "bd_enemy_brute_attack_e__f002",
+          "rect": [
+            192.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "296d59f7aec4ca443ae194ad4009d354",
+          "fileId": 703807636
+        },
+        {
+          "name": "bd_enemy_brute_attack_e__f003",
+          "rect": [
+            288.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "296d59f7aec4ca443ae194ad4009d354",
+          "fileId": 1549936060
+        },
+        {
+          "name": "bd_enemy_brute_attack_e__f004",
+          "rect": [
+            384.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "296d59f7aec4ca443ae194ad4009d354",
+          "fileId": -1472509596
+        },
+        {
+          "name": "bd_enemy_brute_attack_e__f005",
+          "rect": [
+            480.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "296d59f7aec4ca443ae194ad4009d354",
+          "fileId": -584266425
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_attack_e_v001.anim",
+      "clipGuid": "6b1bf11cc07b776428d8bc977eb00275",
+      "fps": 10.0,
+      "loop": false,
+      "duration": 0.6,
+      "keys": 6,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_hit_e_sheet_v001.png",
+      "width": 192,
+      "height": 96,
+      "guid": "9a4745261402cea4c97464536e332cfa",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_brute_hit_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "9a4745261402cea4c97464536e332cfa",
+          "fileId": 1057473066
+        },
+        {
+          "name": "bd_enemy_brute_hit_e__f001",
+          "rect": [
+            96.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "9a4745261402cea4c97464536e332cfa",
+          "fileId": -325164609
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_hit_e_v001.anim",
+      "clipGuid": "7f170630672a4cd4ba11d3a6693c798e",
+      "fps": 10.0,
+      "loop": false,
+      "duration": 0.2,
+      "keys": 2,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    },
+    {
+      "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_death_e_sheet_v001.png",
+      "width": 768,
+      "height": 96,
+      "guid": "0ea29b7bbb873c940a40d9e2bf3e2416",
+      "filter": "Point",
+      "compression": "Uncompressed",
+      "mipmapEnabled": false,
+      "spritePixelsPerUnit": 51.2,
+      "alphaIsTransparency": true,
+      "isReadable": false,
+      "sRGBTexture": true,
+      "maxTextureSize": 4096,
+      "wrap": "Clamp",
+      "npot": "None",
+      "frames": [
+        {
+          "name": "bd_enemy_brute_death_e__f000",
+          "rect": [
+            0.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "0ea29b7bbb873c940a40d9e2bf3e2416",
+          "fileId": 1500633225
+        },
+        {
+          "name": "bd_enemy_brute_death_e__f001",
+          "rect": [
+            96.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "0ea29b7bbb873c940a40d9e2bf3e2416",
+          "fileId": 612435020
+        },
+        {
+          "name": "bd_enemy_brute_death_e__f002",
+          "rect": [
+            192.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "0ea29b7bbb873c940a40d9e2bf3e2416",
+          "fileId": -1278879012
+        },
+        {
+          "name": "bd_enemy_brute_death_e__f003",
+          "rect": [
+            288.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "0ea29b7bbb873c940a40d9e2bf3e2416",
+          "fileId": -1684035089
+        },
+        {
+          "name": "bd_enemy_brute_death_e__f004",
+          "rect": [
+            384.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "0ea29b7bbb873c940a40d9e2bf3e2416",
+          "fileId": -508705328
+        },
+        {
+          "name": "bd_enemy_brute_death_e__f005",
+          "rect": [
+            480.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "0ea29b7bbb873c940a40d9e2bf3e2416",
+          "fileId": 1026076574
+        },
+        {
+          "name": "bd_enemy_brute_death_e__f006",
+          "rect": [
+            576.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "0ea29b7bbb873c940a40d9e2bf3e2416",
+          "fileId": -458562070
+        },
+        {
+          "name": "bd_enemy_brute_death_e__f007",
+          "rect": [
+            672.0,
+            0.0,
+            96.0,
+            96.0
+          ],
+          "pivot": [
+            48.0,
+            48.0
+          ],
+          "pixelsPerUnit": 51.2,
+          "guid": "0ea29b7bbb873c940a40d9e2bf3e2416",
+          "fileId": -1047666186
+        }
+      ],
+      "clipPath": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_death_e_v001.anim",
+      "clipGuid": "9c905b46a4f0b9448b0779703d2a903d",
+      "fps": 9.0,
+      "loop": false,
+      "duration": 0.8888889,
+      "keys": 8,
+      "binding": "Visual/Body:SpriteRenderer.m_Sprite",
+      "events": 0,
+      "floatCurves": 0
+    }
+  ],
+  "archives": [
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_attack_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_death_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_hit_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1774,
+      "height": 887,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_idle_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_ref_v001.png",
+      "type": "Default",
+      "width": 1254,
+      "height": 1254,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_walk_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_attack_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_death_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_hit_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1774,
+      "height": 887,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_idle_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_ref_v001.png",
+      "type": "Default",
+      "width": 1254,
+      "height": 1254,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_walk_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_lineup_core_v001.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_attack_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_death_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_hit_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1774,
+      "height": 887,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_idle_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_ref_v001.png",
+      "type": "Default",
+      "width": 1254,
+      "height": 1254,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_run_e_sheet_v001.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_run_e_sheet_v002.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/MasterReferences/bd_ref_enemy_basic_infected_v001.png",
+      "type": "Default",
+      "width": 1254,
+      "height": 1254,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/MasterReferences/bd_ref_enemy_brute_v001.png",
+      "type": "Default",
+      "width": 1254,
+      "height": 1254,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+      "type": "Default",
+      "width": 1536,
+      "height": 1024,
+      "filter": "Point",
+      "mipmapEnabled": false
+    },
+    {
+      "path": "Assets/Game/Art/MasterReferences/bd_ref_enemy_runner_v001.png",
+      "type": "Default",
+      "width": 1254,
+      "height": 1254,
+      "filter": "Point",
+      "mipmapEnabled": false
+    }
+  ]
+}

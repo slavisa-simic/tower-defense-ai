@@ -1,0 +1,25 @@
+{
+  "activeBefore": 327,
+  "activeAfter": 311,
+  "state": "Spawning",
+  "rows": [
+    {
+      "id": "barbed-wire",
+      "refund": 25,
+      "revisionChanged": true,
+      "adjacency": 0
+    },
+    {
+      "id": "machine-gun-nest",
+      "refund": 75,
+      "revisionChanged": false,
+      "adjacency": 0
+    },
+    {
+      "id": "rocket",
+      "refund": 450,
+      "revisionChanged": false,
+      "adjacency": 0
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": ".utmp/phase2c-interactions.cs",
+      "entry": "Phase2CInteractions.MineArea"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 33,
+      "executeMs": 319,
+      "assemblyName": "PipelineRunScript_phase2c-interactions_6df73a5a2d3447b9932e5da0b79677ef",
+      "success": true,
+      "result": {
+        "detonations": 1,
+        "triggerRemoved": true,
+        "insideRemoved": true,
+        "outsideHP": 100,
+        "mineRemoved": true,
+        "flashVisible": true,
+        "money": 325
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

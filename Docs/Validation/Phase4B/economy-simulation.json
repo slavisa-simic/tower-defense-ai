@@ -1,0 +1,281 @@
+{
+  "rows": [
+    {
+      "wave": 1,
+      "count": 10,
+      "kills": 10,
+      "homicides": 0,
+      "breaches": 0,
+      "startBalance": 0,
+      "balance": 350,
+      "simulationSeconds": 34.2,
+      "completed": true
+    },
+    {
+      "wave": 2,
+      "count": 13,
+      "kills": 13,
+      "homicides": 0,
+      "breaches": 0,
+      "startBalance": 150,
+      "balance": 580,
+      "simulationSeconds": 49.4,
+      "completed": true
+    },
+    {
+      "wave": 3,
+      "count": 12,
+      "kills": 12,
+      "homicides": 0,
+      "breaches": 0,
+      "startBalance": 380,
+      "balance": 830,
+      "simulationSeconds": 44.9,
+      "completed": true
+    },
+    {
+      "wave": 4,
+      "count": 13,
+      "kills": 13,
+      "homicides": 0,
+      "breaches": 0,
+      "startBalance": 430,
+      "balance": 930,
+      "simulationSeconds": 48.7,
+      "completed": true
+    },
+    {
+      "wave": 5,
+      "count": 21,
+      "kills": 21,
+      "homicides": 0,
+      "breaches": 0,
+      "startBalance": 480,
+      "balance": 1135,
+      "simulationSeconds": 79.5,
+      "completed": true
+    },
+    {
+      "wave": 6,
+      "count": 16,
+      "kills": 16,
+      "homicides": 0,
+      "breaches": 0,
+      "startBalance": 535,
+      "balance": 1160,
+      "simulationSeconds": 62.3,
+      "completed": true
+    },
+    {
+      "wave": 7,
+      "count": 27,
+      "kills": 27,
+      "homicides": 0,
+      "breaches": 0,
+      "startBalance": 260,
+      "balance": 1075,
+      "simulationSeconds": 97.3,
+      "completed": true
+    },
+    {
+      "wave": 8,
+      "count": 20,
+      "kills": 20,
+      "homicides": 0,
+      "breaches": 0,
+      "startBalance": 625,
+      "balance": 1390,
+      "simulationSeconds": 80.4,
+      "completed": true
+    },
+    {
+      "wave": 9,
+      "count": 25,
+      "kills": 25,
+      "homicides": 0,
+      "breaches": 0,
+      "startBalance": 690,
+      "balance": 1555,
+      "simulationSeconds": 94.6,
+      "completed": true
+    },
+    {
+      "wave": 10,
+      "count": 25,
+      "kills": 25,
+      "homicides": 0,
+      "breaches": 0,
+      "startBalance": 555,
+      "balance": 1475,
+      "simulationSeconds": 96.0,
+      "completed": true
+    },
+    {
+      "wave": 11,
+      "count": 24,
+      "kills": 24,
+      "homicides": 0,
+      "breaches": 0,
+      "startBalance": 475,
+      "balance": 1415,
+      "simulationSeconds": 50.7,
+      "completed": true
+    },
+    {
+      "wave": 12,
+      "count": 28,
+      "kills": 28,
+      "homicides": 0,
+      "breaches": 0,
+      "startBalance": 840,
+      "balance": 1885,
+      "simulationSeconds": 62.2,
+      "completed": true
+    },
+    {
+      "wave": 13,
+      "count": 27,
+      "kills": 27,
+      "homicides": 0,
+      "breaches": 0,
+      "startBalance": 1885,
+      "balance": 2960,
+      "simulationSeconds": 60.1000023,
+      "completed": true
+    },
+    {
+      "wave": 14,
+      "count": 26,
+      "kills": 26,
+      "homicides": 0,
+      "breaches": 0,
+      "startBalance": 2960,
+      "balance": 4065,
+      "simulationSeconds": 66.6,
+      "completed": true
+    }
+  ],
+  "peak": 9,
+  "startingMoney": 500,
+  "externalMoney": 0,
+  "totalEarned": 10540,
+  "totalSpent": 6975,
+  "defenses": [
+    {
+      "id": "rocket",
+      "anchor": "(18, 3)"
+    },
+    {
+      "id": "barbed-wire",
+      "anchor": "(27, 4)"
+    },
+    {
+      "id": "machine-gun-nest",
+      "anchor": "(23, 4)"
+    },
+    {
+      "id": "machine-gun-nest",
+      "anchor": "(23, 11)"
+    },
+    {
+      "id": "machine-gun-nest",
+      "anchor": "(23, 7)"
+    },
+    {
+      "id": "barbed-wire",
+      "anchor": "(26, 5)"
+    },
+    {
+      "id": "rocket",
+      "anchor": "(20, 14)"
+    },
+    {
+      "id": "land-mine",
+      "anchor": "(27, 8)"
+    },
+    {
+      "id": "sniper-tower",
+      "anchor": "(23, 9)"
+    },
+    {
+      "id": "barbed-wire",
+      "anchor": "(26, 10)"
+    },
+    {
+      "id": "mortar",
+      "anchor": "(20, 11)"
+    },
+    {
+      "id": "autocannon",
+      "anchor": "(22, 16)"
+    },
+    {
+      "id": "sniper-tower",
+      "anchor": "(23, 13)"
+    },
+    {
+      "id": "barbed-wire",
+      "anchor": "(26, 13)"
+    },
+    {
+      "id": "flamethrower",
+      "anchor": "(25, 9)"
+    },
+    {
+      "id": "autocannon",
+      "anchor": "(20, 5)"
+    },
+    {
+      "id": "mortar",
+      "anchor": "(18, 13)"
+    },
+    {
+      "id": "flamethrower",
+      "anchor": "(25, 14)"
+    },
+    {
+      "id": "barbed-wire",
+      "anchor": "(26, 9)"
+    },
+    {
+      "id": "barbed-wire",
+      "anchor": "(27, 14)"
+    },
+    {
+      "id": "barbed-wire",
+      "anchor": "(27, 9)"
+    },
+    {
+      "id": "barbed-wire",
+      "anchor": "(26, 3)"
+    },
+    {
+      "id": "barbed-wire",
+      "anchor": "(26, 15)"
+    },
+    {
+      "id": "flamethrower",
+      "anchor": "(25, 4)"
+    },
+    {
+      "id": "barbed-wire",
+      "anchor": "(26, 14)"
+    },
+    {
+      "id": "mortar",
+      "anchor": "(19, 8)"
+    },
+    {
+      "id": "machine-gun-nest",
+      "anchor": "(23, 14)"
+    },
+    {
+      "id": "barbed-wire",
+      "anchor": "(26, 4)"
+    },
+    {
+      "id": "barbed-wire",
+      "anchor": "(26, 8)"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "AliveCount": 5,
+  "PendingCount": 4,
+  "state": "Spawning",
+  "RemainingText": "Enemies Remaining: 9",
+  "StartAvailable": false,
+  "CurrentHealth": 100,
+  "terrain": [
+    {
+      "name": "Shallow Water",
+      "sprite": "bd_env_shallow_water_tile_v001",
+      "scale": "(1.00, 1.00, 1.00)",
+      "mode": "Tiled",
+      "size": "(0.60, 22.50)",
+      "sorting": "Environment"
+    },
+    {
+      "name": "Grass Combat Field",
+      "sprite": "bd_env_grass_tile_v001",
+      "scale": "(1.00, 1.00, 1.00)",
+      "mode": "Tiled",
+      "size": "(32.50, 22.50)",
+      "sorting": "Environment"
+    },
+    {
+      "name": "Beach",
+      "sprite": "bd_env_muddy_shore_tile_v001",
+      "scale": "(1.00, 1.00, 1.00)",
+      "mode": "Tiled",
+      "size": "(2.50, 22.50)",
+      "sorting": "Environment"
+    },
+    {
+      "name": "Ocean",
+      "sprite": "bd_env_deep_danube_water_tile_v001",
+      "scale": "(1.00, 1.00, 1.00)",
+      "mode": "Tiled",
+      "size": "(5.00, 22.50)",
+      "sorting": "Environment"
+    },
+    {
+      "name": "Shoreline",
+      "sprite": "bd_env_wet_bank_transition_tile_v001",
+      "scale": "(1.00, 1.00, 1.00)",
+      "mode": "Tiled",
+      "size": "(1.25, 22.50)",
+      "sorting": "Environment"
+    }
+  ]
+}

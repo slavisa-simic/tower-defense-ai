@@ -1,0 +1,28 @@
+{
+  "auditedUtc": "2026-09-17T23:00:44.3040960Z",
+  "assetAndDirectoryCount": 135,
+  "metadataCount": 135,
+  "missingMetadata": [],
+  "orphanedMetadata": [],
+  "invalidGuids": [],
+  "duplicateGuids": [],
+  "originalMetadataCompared": 77,
+  "changedOriginalMetadata": [],
+  "preservedMachineGunAssets": [
+    {
+      "path": "Assets/Game/Data/Defenses/MachineGunNest.asset",
+      "unchanged": true,
+      "sha256": "2AB9ACD5381D32DB3464A7F096865F4ED8CB959F0E448C65189AD08F6E218AD3"
+    },
+    {
+      "path": "Assets/Game/Prefabs/Defenses/MachineGunNest.prefab",
+      "unchanged": true,
+      "sha256": "BD7A4B7485D8779B6EE456FDE8810549A4AD7F9C8184488D6BAA15A551CEEE00"
+    }
+  ],
+  "temporaryCaptureFolderRemoved": true,
+  "gitDiffCheckExitCode": 0,
+  "gitDiffCheckOutput": [],
+  "reportLocalLinkCount": 23,
+  "missingReportLinks": []
+}

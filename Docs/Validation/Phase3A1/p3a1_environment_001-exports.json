@@ -1,0 +1,392 @@
+[
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_deep_danube_water_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_deep_danube_water_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#153239",
+      "#17444C",
+      "#1D4850",
+      "#245058"
+    ],
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB",
+    "source_sha256": "23add93a301b2cf2a4e778ce489ff994865d9393922fdc9e65a5d0b6980bbc7e",
+    "output_sha256": "9b09509d4bf9dc5ee3fab85a00cd9026bbdb69770fdd83f4f1a8f04181424694",
+    "crop_bbox": null,
+    "actual_size": [
+      64,
+      64
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "color_count": 4,
+    "method": "nearest-neighbor; paired seam-edge blend before palette mapping; no dithering; binary alpha threshold 128",
+    "pillow_version": "12.3.0",
+    "edge_x_equal": true,
+    "edge_y_equal": true
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_shallow_water_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_shallow_water_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#21484C",
+      "#295458",
+      "#2D5C5D",
+      "#396666"
+    ],
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB",
+    "source_sha256": "e46773b9271938072c729ef49719dc4e156181cb411ee37e618c62b556b38413",
+    "output_sha256": "60d839edf16bddcc2aba627e67e771cff2f56ccb54b884ea7c4861116503ea74",
+    "crop_bbox": null,
+    "actual_size": [
+      64,
+      64
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "color_count": 4,
+    "method": "nearest-neighbor; paired seam-edge blend before palette mapping; no dithering; binary alpha threshold 128",
+    "pillow_version": "12.3.0",
+    "edge_x_equal": true,
+    "edge_y_equal": true
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_muddy_shore_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#493B2D",
+      "#55412F",
+      "#5A4633",
+      "#6C5137",
+      "#795C3E"
+    ],
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB",
+    "source_sha256": "476fa5a4601dce144cf463219ee6b2294f64ef7bd43962bb58e55fcfa79babb8",
+    "output_sha256": "f7952a290b92f3dc141c97be1a706571a8fa8531d867876d6452272c553f380e",
+    "crop_bbox": null,
+    "actual_size": [
+      64,
+      64
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "color_count": 5,
+    "method": "nearest-neighbor; paired seam-edge blend before palette mapping; no dithering; binary alpha threshold 128",
+    "pillow_version": "12.3.0",
+    "edge_x_equal": true,
+    "edge_y_equal": true
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_wet_bank_transition_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_wet_bank_transition_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "y",
+    "palette": [
+      "#21484C",
+      "#295458",
+      "#2D5C5D",
+      "#396666",
+      "#44524A",
+      "#493B2D",
+      "#55412F",
+      "#5A4633",
+      "#6C5137",
+      "#795C3E"
+    ],
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB",
+    "source_sha256": "dfdc45721ca79f7fff1cdf0671aa40f1611cdaac0ec5c0526a0a82431cd53fd8",
+    "output_sha256": "005a4794c06c5e0d58d11f64c416fb4be2837b99f6d8e74976963ea8f433b135",
+    "crop_bbox": null,
+    "actual_size": [
+      64,
+      64
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "color_count": 10,
+    "method": "nearest-neighbor; paired seam-edge blend before palette mapping; no dithering; binary alpha threshold 128",
+    "pillow_version": "12.3.0",
+    "edge_x_equal": false,
+    "edge_y_equal": true
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_grass_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_grass_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#3D4630",
+      "#454F34",
+      "#4B5538",
+      "#555D3C",
+      "#5E643E"
+    ],
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB",
+    "source_sha256": "5bac713d49ffbe2a30aa50cd5ef076159590d7ef6a91c43a3dfb898bdcf84688",
+    "output_sha256": "d9d1e05d404de0c1a7cc5c1a383c0d6cbeb3d91c0c97ade161b67e80e16e0b34",
+    "crop_bbox": null,
+    "actual_size": [
+      64,
+      64
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "color_count": 5,
+    "method": "nearest-neighbor; paired seam-edge blend before palette mapping; no dithering; binary alpha threshold 128",
+    "pillow_version": "12.3.0",
+    "edge_x_equal": true,
+    "edge_y_equal": true
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_dirt_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#6D533A",
+      "#795D40",
+      "#816445",
+      "#907251"
+    ],
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB",
+    "source_sha256": "a8bd19b5d8872bb747b04e746b789906551914543e41161d0a9805eac0dc99b2",
+    "output_sha256": "4842d454038a0dc2d1db50763a456fa79f565c8fe8ef96470d9867e90acb3878",
+    "crop_bbox": null,
+    "actual_size": [
+      64,
+      64
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "color_count": 4,
+    "method": "nearest-neighbor; paired seam-edge blend before palette mapping; no dithering; binary alpha threshold 128",
+    "pillow_version": "12.3.0",
+    "edge_x_equal": true,
+    "edge_y_equal": true
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_cracked_ground_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_cracked_ground_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#473E32",
+      "#61523F",
+      "#6B5B44",
+      "#706049",
+      "#7C6C51"
+    ],
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB",
+    "source_sha256": "60a94cbfefa7f0952551207d72d4e004becca8dae4143d3e62587c2a312418d5",
+    "output_sha256": "604b03dc4e93946723ea3b5559581cd09d5f82b384f98d6f0302a27c439726ee",
+    "crop_bbox": null,
+    "actual_size": [
+      64,
+      64
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "color_count": 4,
+    "method": "nearest-neighbor; paired seam-edge blend before palette mapping; no dithering; binary alpha threshold 128",
+    "pillow_version": "12.3.0",
+    "edge_x_equal": true,
+    "edge_y_equal": true
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_bunker_floor_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_bunker_floor_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#4D5953",
+      "#657067",
+      "#747C70",
+      "#858B7C"
+    ],
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB",
+    "source_sha256": "4df4df29aea4658c1fda7d6adfc1065bce26a26b3cbb3d770c117132e115a1ad",
+    "output_sha256": "989d1a6829d5652ee1573ec1f911de03cc7d2ad5d832df3623468bd36625fca9",
+    "crop_bbox": null,
+    "actual_size": [
+      64,
+      64
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "color_count": 4,
+    "method": "nearest-neighbor; paired seam-edge blend before palette mapping; no dithering; binary alpha threshold 128",
+    "pillow_version": "12.3.0",
+    "edge_x_equal": true,
+    "edge_y_equal": true
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_concrete_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_concrete_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#666E64",
+      "#7E8277",
+      "#939486",
+      "#A1A295"
+    ],
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB",
+    "source_sha256": "b496de623f03e6e860f024954ced412ca515c1c1b8626616f9b225c0c0afc14e",
+    "output_sha256": "0220a9dc6e7791fd9a0dbb719a4afbb601b9ad863f207c73e99bfc59c825ed7f",
+    "crop_bbox": null,
+    "actual_size": [
+      64,
+      64
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "color_count": 3,
+    "method": "nearest-neighbor; paired seam-edge blend before palette mapping; no dithering; binary alpha threshold 128",
+    "pillow_version": "12.3.0",
+    "edge_x_equal": true,
+    "edge_y_equal": true
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_road_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_road_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "x",
+    "palette": [
+      "#343E39",
+      "#414944",
+      "#50554B",
+      "#696A59",
+      "#B7B09A"
+    ],
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB",
+    "source_sha256": "a909d50e691cca11d445c5d178a2296fb84b5999d1c3c4bde04a2876ffb0ec80",
+    "output_sha256": "bc3a9a07c3d86b83f8c0a52ee0827cd753e3e868b47beada03613ab590981d15",
+    "crop_bbox": null,
+    "actual_size": [
+      64,
+      64
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "color_count": 5,
+    "method": "nearest-neighbor; paired seam-edge blend before palette mapping; no dithering; binary alpha threshold 128",
+    "pillow_version": "12.3.0",
+    "edge_x_equal": true,
+    "edge_y_equal": false
+  }
+]

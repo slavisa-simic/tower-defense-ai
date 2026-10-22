@@ -1,0 +1,3185 @@
+[
+  {
+    "id": "basic_infected",
+    "action": "idle",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_idle_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_idle_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "a8296c03eafa43fa579454e2eab9730eb0537c54c73c5e8c1c84d6023a78491a",
+    "size": [
+      256,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.08130081300813008,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "7755465742ea1f65e38de9ae2b67bf0ea8c7ed83f4ed1b920b8e4210363162a9",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 5,
+    "loop": true,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          188,
+          104,
+          623,
+          431
+        ],
+        "sourcePivot": [
+          385.6,
+          274.1
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_idle_e__f000",
+        "bounds": [
+          16,
+          18,
+          51,
+          45
+        ],
+        "opaquePixels": 603,
+        "sha256": "5d28477e1c728936cdb68d294a1b21dcb6c0c7c5064259ff0346223605d3374f"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          131,
+          97,
+          601,
+          437
+        ],
+        "sourcePivot": [
+          343.6,
+          275.1
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_idle_e__f001",
+        "bounds": [
+          15,
+          18,
+          53,
+          46
+        ],
+        "opaquePixels": 657,
+        "sha256": "b16c5ad5b9b1071992a58d124be97b0897b7e704b554327fb2496959d518a5f1"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          187,
+          53,
+          665,
+          385
+        ],
+        "sourcePivot": [
+          407.1,
+          213.8
+        ],
+        "rect": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_idle_e__f002",
+        "bounds": [
+          14,
+          19,
+          53,
+          46
+        ],
+        "opaquePixels": 659,
+        "sha256": "8363350ae0ebc81704e1e9451c952de31ad1cb6c0f1fff320b49b6f8d7e1d5a9"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          131,
+          48,
+          580,
+          380
+        ],
+        "sourcePivot": [
+          337.6,
+          219.6
+        ],
+        "rect": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_idle_e__f003",
+        "bounds": [
+          15,
+          18,
+          52,
+          45
+        ],
+        "opaquePixels": 632,
+        "sha256": "27bd1d979d6f4e2c979f64b4a627397574ab37915d109c5362381fbf248ae305"
+      }
+    ]
+  },
+  {
+    "id": "basic_infected",
+    "action": "walk",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_walk_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_walk_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "3e62a776dc86759c1d4abe85728753385cfb39a208eb6e1371620c45c8324d6f",
+    "size": [
+      512,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.10362694300518134,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "396436d899bebce00417d9dd5e5943f51598d86c3d478f6ef4127e2cb39a3b28",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 8,
+    "loop": true,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          48,
+          125,
+          369,
+          403
+        ],
+        "sourcePivot": [
+          207.55,
+          255.8
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f000",
+        "bounds": [
+          15,
+          18,
+          48,
+          47
+        ],
+        "opaquePixels": 585,
+        "sha256": "162f90828f37f2e16f43ea3314ed2c3ac2d92f9d56d787e650095b6aa59ba636"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          56,
+          121,
+          359,
+          404
+        ],
+        "sourcePivot": [
+          212.55,
+          254.8
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f001",
+        "bounds": [
+          16,
+          18,
+          47,
+          47
+        ],
+        "opaquePixels": 524,
+        "sha256": "68d7ccc91c19eaf35151d29bca3bb83bdee4b57e88d89da6d1518f481773f56e"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          52,
+          121,
+          335,
+          401
+        ],
+        "sourcePivot": [
+          210.05,
+          263.95
+        ],
+        "rect": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f002",
+        "bounds": [
+          16,
+          17,
+          45,
+          46
+        ],
+        "opaquePixels": 516,
+        "sha256": "58bced773bfa8273e7853fb1565852cde26c9c001352dc7683dae654c5d08b8e"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          26,
+          121,
+          341,
+          401
+        ],
+        "sourcePivot": [
+          201.55,
+          254.3
+        ],
+        "rect": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f003",
+        "bounds": [
+          14,
+          18,
+          47,
+          47
+        ],
+        "opaquePixels": 572,
+        "sha256": "bf76fcaded973b58495c5a41eb41263dede5dc0181e3b7433b3c3c104e904381"
+      },
+      {
+        "frame": 4,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          48,
+          59,
+          367,
+          332
+        ],
+        "sourcePivot": [
+          210.05,
+          189.8
+        ],
+        "rect": [
+          256,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f004",
+        "bounds": [
+          15,
+          18,
+          48,
+          46
+        ],
+        "opaquePixels": 566,
+        "sha256": "ca4fc2078cd7d3403dc81e24a01698f3576177aed86718f35ef8592a31516f35"
+      },
+      {
+        "frame": 5,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          56,
+          55,
+          348,
+          341
+        ],
+        "sourcePivot": [
+          213.05,
+          189.3
+        ],
+        "rect": [
+          320,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f005",
+        "bounds": [
+          16,
+          18,
+          46,
+          48
+        ],
+        "opaquePixels": 544,
+        "sha256": "a089fbf740e4d2f96b6f46d75c560eb52039d8b9717522ed60998461eb23ac7e"
+      },
+      {
+        "frame": 6,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          52,
+          55,
+          338,
+          336
+        ],
+        "sourcePivot": [
+          208.55,
+          198.95
+        ],
+        "rect": [
+          384,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f006",
+        "bounds": [
+          16,
+          17,
+          46,
+          46
+        ],
+        "opaquePixels": 534,
+        "sha256": "1c80cac75e23f7f11df938b3520732b58c04315efaf93b7856bb339af2350d2d"
+      },
+      {
+        "frame": 7,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          26,
+          55,
+          349,
+          336
+        ],
+        "sourcePivot": [
+          195.55,
+          192.3
+        ],
+        "rect": [
+          448,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f007",
+        "bounds": [
+          14,
+          18,
+          47,
+          47
+        ],
+        "opaquePixels": 605,
+        "sha256": "94d455c32a2d1f48010d43a2208100c29eea8882776da43ff5ea629254cc38c2"
+      }
+    ]
+  },
+  {
+    "id": "basic_infected",
+    "action": "attack",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_attack_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_attack_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "6510bcb5ac27a4105ca9845ae0a865cee5b6a519c2a8571da016d7e9c5749b73",
+    "size": [
+      384,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.09900990099009901,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "5ad674bd142051cfdfcdade64885253c3178c94604ba5b4506fd1eccf0e169fa",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 10,
+    "loop": false,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          79,
+          115,
+          426,
+          395
+        ],
+        "sourcePivot": [
+          251.2,
+          256.2
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_attack_e__f000",
+        "bounds": [
+          15,
+          18,
+          49,
+          46
+        ],
+        "opaquePixels": 628,
+        "sha256": "f12df29e7628abc6e0f2031f13d5939dd6125873ca58c70856633b47cabca5e2"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          60,
+          117,
+          455,
+          389
+        ],
+        "sourcePivot": [
+          280.3,
+          257.2
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_attack_e__f001",
+        "bounds": [
+          10,
+          18,
+          49,
+          45
+        ],
+        "opaquePixels": 580,
+        "sha256": "5f66b313d9a32ce0fe5e8817873caaeb0a15e8554b442cdbb52768da85282ce4"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          63,
+          119,
+          469,
+          395
+        ],
+        "sourcePivot": [
+          243.2,
+          259.7
+        ],
+        "rect": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_attack_e__f002",
+        "bounds": [
+          14,
+          18,
+          54,
+          45
+        ],
+        "opaquePixels": 655,
+        "sha256": "203f477763014e7cafade763879be37efe543d769cea7d5cad6a1b7400135dbd"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          44,
+          80,
+          497,
+          372
+        ],
+        "sourcePivot": [
+          209.0,
+          238.2
+        ],
+        "rect": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_attack_e__f003",
+        "bounds": [
+          16,
+          16,
+          61,
+          45
+        ],
+        "opaquePixels": 644,
+        "sha256": "3ac623772d432b4da60d59c77036c2eb75fb89aa548ea7619c9d2228490536d6"
+      },
+      {
+        "frame": 4,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          74,
+          103,
+          431,
+          382
+        ],
+        "sourcePivot": [
+          243.1,
+          242.7
+        ],
+        "rect": [
+          256,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_attack_e__f004",
+        "bounds": [
+          15,
+          18,
+          50,
+          46
+        ],
+        "opaquePixels": 647,
+        "sha256": "945e0e61d59f1d6929e19272e6bfed060c74968f81d663cb7425f4541bbeea8d"
+      },
+      {
+        "frame": 5,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          78,
+          112,
+          421,
+          392
+        ],
+        "sourcePivot": [
+          247.2,
+          252.2
+        ],
+        "rect": [
+          320,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_attack_e__f005",
+        "bounds": [
+          15,
+          18,
+          49,
+          46
+        ],
+        "opaquePixels": 621,
+        "sha256": "622092b7031341aad15d055c2e693beabd92372f3a18a5888dc56b0267a02dcb"
+      }
+    ]
+  },
+  {
+    "id": "basic_infected",
+    "action": "hit",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_hit_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_hit_e_sheet_v001.png",
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "5a10b5f3ca89e1f11339e93d6c848c79d6d86fcbec9cbcbbe8b86c8bebfcaeae",
+    "size": [
+      128,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.05747126436781609,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "1dd681b8d72c9fba8753dcf7557141cace2ecefbe49bb67f7f2bd02ec693bbe4",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 10,
+    "loop": false,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          887,
+          887
+        ],
+        "sourceBounds": [
+          149,
+          189,
+          808,
+          698
+        ],
+        "sourcePivot": [
+          484.6,
+          471.7
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_hit_e__f000",
+        "bounds": [
+          13,
+          16,
+          51,
+          45
+        ],
+        "opaquePixels": 657,
+        "sha256": "f6036bbc383fc6f5a54f73608b328718d0fc53893cd4f3349cb8bd696a87999c"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          887,
+          887
+        ],
+        "sourceBounds": [
+          98,
+          207,
+          728,
+          698
+        ],
+        "sourcePivot": [
+          424.2,
+          454.3
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_hit_e__f001",
+        "bounds": [
+          13,
+          18,
+          49,
+          46
+        ],
+        "opaquePixels": 632,
+        "sha256": "1c3c191fe8f6cad2c68518e0c06aa07fba9a58e75287727321117bed7305436a"
+      }
+    ]
+  },
+  {
+    "id": "basic_infected",
+    "action": "death",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_death_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_death_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "0ee82b3f6cb3dffb059fe00b454054c99d574cf831ef571d70e320b1a745686f",
+    "size": [
+      512,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.12345679012345678,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "11ab5caa809c965a0dcdb201524cc324232a2a125097e2ee2132f97fabfc6963",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 9,
+    "loop": false,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          51,
+          178,
+          347,
+          402
+        ],
+        "sourcePivot": [
+          183.7,
+          290.2
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f000",
+        "bounds": [
+          16,
+          18,
+          53,
+          46
+        ],
+        "opaquePixels": 624,
+        "sha256": "fef0fc5d1acddf3089361f1fd3b591ae0195463a79119e6c75efa1a5a99dbb37"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          68,
+          200,
+          325,
+          415
+        ],
+        "sourcePivot": [
+          201.7,
+          303.1
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f001",
+        "bounds": [
+          15,
+          19,
+          47,
+          46
+        ],
+        "opaquePixels": 578,
+        "sha256": "95c33d844497ca3782be6a07612c960eb846becca2126f7f951d52ac1b0051d9"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          55,
+          212,
+          314,
+          457
+        ],
+        "sourcePivot": [
+          190.1,
+          305.5
+        ],
+        "rect": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f002",
+        "bounds": [
+          15,
+          20,
+          47,
+          50
+        ],
+        "opaquePixels": 550,
+        "sha256": "cd84c6c13c8f0e6c5193c5b5ecae333b3213fca50eec743f1a917c98ce705ac0"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          26,
+          208,
+          350,
+          465
+        ],
+        "sourcePivot": [
+          176.5,
+          294.4
+        ],
+        "rect": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f003",
+        "bounds": [
+          13,
+          21,
+          53,
+          53
+        ],
+        "opaquePixels": 611,
+        "sha256": "46420d7af29a4fcae27d751d7fc76b27c5b74de2da21792f7ccf59507969da64"
+      },
+      {
+        "frame": 4,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          30,
+          117,
+          371,
+          324
+        ],
+        "sourcePivot": [
+          196.2,
+          206.4
+        ],
+        "rect": [
+          256,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f004",
+        "bounds": [
+          11,
+          21,
+          53,
+          47
+        ],
+        "opaquePixels": 658,
+        "sha256": "ad03e941a635740b009b9a4ef597409596fe65607255ef6e5c5f9bda5f43808f"
+      },
+      {
+        "frame": 5,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          28,
+          123,
+          368,
+          317
+        ],
+        "sourcePivot": [
+          184.5,
+          212.9
+        ],
+        "rect": [
+          320,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f005",
+        "bounds": [
+          13,
+          21,
+          55,
+          45
+        ],
+        "opaquePixels": 643,
+        "sha256": "7ef22e4f7f93e5f5a5d15f40a331fe247ce36485030bdba9e53dd80eda76a512"
+      },
+      {
+        "frame": 6,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          17,
+          131,
+          352,
+          316
+        ],
+        "sourcePivot": [
+          161.4,
+          215.4
+        ],
+        "rect": [
+          384,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f006",
+        "bounds": [
+          14,
+          22,
+          55,
+          45
+        ],
+        "opaquePixels": 634,
+        "sha256": "4bf225225a19fcc033b384fc215a5776892c9bcd6b2e859f828ba5de4fd9a632"
+      },
+      {
+        "frame": 7,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          11,
+          134,
+          349,
+          318
+        ],
+        "sourcePivot": [
+          157.9,
+          218.9
+        ],
+        "rect": [
+          448,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f007",
+        "bounds": [
+          14,
+          22,
+          56,
+          45
+        ],
+        "opaquePixels": 645,
+        "sha256": "ae0862655fcbc4c88edd8941af3273be0d052844e5dc431b1b080f8d3cc50328"
+      }
+    ]
+  },
+  {
+    "id": "runner",
+    "action": "idle",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_idle_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_idle_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "6950911525682f140ade04059e26f620eb885b93663acd53ce34024f6d318ed1",
+    "size": [
+      256,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.08695652173913043,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "0becf1ea7cfd2e62fc346a5cf5b7706bd9e6e9e338dda07692d425023ef2187d",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 5,
+    "loop": true,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          215,
+          122,
+          609,
+          422
+        ],
+        "sourcePivot": [
+          409.5,
+          269.0
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_idle_e__f000",
+        "bounds": [
+          15,
+          19,
+          49,
+          45
+        ],
+        "opaquePixels": 482,
+        "sha256": "e8e351803894ef05f0bbd4a22337f5fa9ae4ed7203f4888f9385f023f10863de"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          160,
+          122,
+          554,
+          422
+        ],
+        "sourcePivot": [
+          354.0,
+          270.0
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_idle_e__f001",
+        "bounds": [
+          15,
+          19,
+          49,
+          45
+        ],
+        "opaquePixels": 487,
+        "sha256": "4a737a06735139b9fb457ffb5938d4566926900abf46260870be600e84798906"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          214,
+          79,
+          612,
+          366
+        ],
+        "sourcePivot": [
+          415.0,
+          213.5
+        ],
+        "rect": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_idle_e__f002",
+        "bounds": [
+          15,
+          20,
+          50,
+          45
+        ],
+        "opaquePixels": 510,
+        "sha256": "5f6c3354f01294e0ae673abb5087fc3df4b480c9b462460be03670b6a4c1396a"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          160,
+          79,
+          557,
+          378
+        ],
+        "sourcePivot": [
+          354.0,
+          226.0
+        ],
+        "rect": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_idle_e__f003",
+        "bounds": [
+          15,
+          19,
+          50,
+          45
+        ],
+        "opaquePixels": 493,
+        "sha256": "47a590b5bb4984085caa78b8821f247bd91f18897dee313281e3c3f381dfcc15"
+      }
+    ]
+  },
+  {
+    "id": "runner",
+    "action": "run",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_run_e_sheet_v002.png",
+    "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_run_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "9ddd599ddb4fc644d1d3d998e8de57718d91da8ac3bc12a9d315ec9fb8f3ceb3",
+    "size": [
+      512,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.1125,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "840593ceedf37d596108421788265c4d35a86fb858d8aa660b9b3c152cef8b41",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 12,
+    "loop": true,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          44,
+          175,
+          358,
+          396
+        ],
+        "sourcePivot": [
+          194.94444,
+          294.27778
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_run_e__f000",
+        "bounds": [
+          15,
+          19,
+          50,
+          44
+        ],
+        "opaquePixels": 469,
+        "sha256": "56f15b2b80982c932e4d45393b3d7e17527a1233bded26876124f25bd00c294f"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          76,
+          175,
+          356,
+          400
+        ],
+        "sourcePivot": [
+          236.44444,
+          295.27778
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_run_e__f001",
+        "bounds": [
+          14,
+          18,
+          46,
+          43
+        ],
+        "opaquePixels": 424,
+        "sha256": "4010eb1244806741f0d9b99472132d692a8e949f417db6cefe4dae6e9a2dfbd9"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          62,
+          180,
+          303,
+          400
+        ],
+        "sourcePivot": [
+          203.94444,
+          312.66667
+        ],
+        "rect": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_run_e__f002",
+        "bounds": [
+          16,
+          17,
+          43,
+          42
+        ],
+        "opaquePixels": 402,
+        "sha256": "cf4a22e9ccc384ac83acd49815d4c855e48b0770b7037a8d045cbaa06d26d950"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          28,
+          175,
+          346,
+          404
+        ],
+        "sourcePivot": [
+          208.44444,
+          293.77778
+        ],
+        "rect": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_run_e__f003",
+        "bounds": [
+          12,
+          19,
+          48,
+          45
+        ],
+        "opaquePixels": 488,
+        "sha256": "e41a87b170b3c1fb7f6817da8ba1d14493e9a762264df5f5fe180a69b0330dd7"
+      },
+      {
+        "frame": 4,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          45,
+          69,
+          358,
+          296
+        ],
+        "sourcePivot": [
+          223.44444,
+          188.77778
+        ],
+        "rect": [
+          256,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_run_e__f004",
+        "bounds": [
+          12,
+          19,
+          47,
+          45
+        ],
+        "opaquePixels": 467,
+        "sha256": "191b5a6d661b34405a4aa9e20f638e1e78c274bb550956f3de678d95d4b7fee7"
+      },
+      {
+        "frame": 5,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          91,
+          66,
+          347,
+          289
+        ],
+        "sourcePivot": [
+          225.44444,
+          182.77778
+        ],
+        "rect": [
+          320,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_run_e__f005",
+        "bounds": [
+          17,
+          19,
+          46,
+          44
+        ],
+        "opaquePixels": 410,
+        "sha256": "9b005ea66590754bfd560cc17915cfa350bddc6baa6f881093a1503ba6e9fd2f"
+      },
+      {
+        "frame": 6,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          66,
+          65,
+          285,
+          296
+        ],
+        "sourcePivot": [
+          195.94444,
+          197.66667
+        ],
+        "rect": [
+          384,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_run_e__f006",
+        "bounds": [
+          17,
+          17,
+          42,
+          43
+        ],
+        "opaquePixels": 404,
+        "sha256": "19a13c0a0905c67498e6c7e97cc03b2c9677e94effef023470e6e012ece74708"
+      },
+      {
+        "frame": 7,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          22,
+          70,
+          344,
+          299
+        ],
+        "sourcePivot": [
+          202.94444,
+          192.77778
+        ],
+        "rect": [
+          448,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_run_e__f007",
+        "bounds": [
+          12,
+          18,
+          48,
+          44
+        ],
+        "opaquePixels": 475,
+        "sha256": "f276add24f11986de88d1ee7590600ebe4b5b40b3e68c4b3ad7b655d9bf10036"
+      }
+    ]
+  },
+  {
+    "id": "runner",
+    "action": "attack",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_attack_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_attack_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "c67dc3915ba2aa2be858ba892cdb9783fb30e93dd935814151e570a58f0abde7",
+    "size": [
+      384,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.09137055837563451,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "6af8bae98f659517d48ee53ca0212e4402def8540cf23d7639ccf4c789072941",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 10,
+    "loop": false,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          87,
+          153,
+          418,
+          422
+        ],
+        "sourcePivot": [
+          241.72222,
+          279.38889
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_attack_e__f000",
+        "bounds": [
+          18,
+          20,
+          48,
+          45
+        ],
+        "opaquePixels": 417,
+        "sha256": "60ce6337dc92dac7a2b93b361fdc174f3ef312bfbc2cd0eac45c71debb915ab2"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          103,
+          86,
+          423,
+          422
+        ],
+        "sourcePivot": [
+          270.16667,
+          281.38889
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_attack_e__f001",
+        "bounds": [
+          17,
+          14,
+          46,
+          45
+        ],
+        "opaquePixels": 437,
+        "sha256": "3c850f9c16f7cb39098d41bbabc7761ea1b2a68e075ce4efa997ca456971fb5c"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          77,
+          148,
+          467,
+          422
+        ],
+        "sourcePivot": [
+          248.22222,
+          281.88889
+        ],
+        "rect": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_attack_e__f002",
+        "bounds": [
+          16,
+          20,
+          52,
+          45
+        ],
+        "opaquePixels": 468,
+        "sha256": "ec566b6e7d8fb54dfbbd244ed64b2647aec40c694797000d13c25c7a20cd8bcd"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          560,
+          512
+        ],
+        "sourceBounds": [
+          72,
+          101,
+          528,
+          342
+        ],
+        "sourcePivot": [
+          216.83333,
+          243.88889
+        ],
+        "rect": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_attack_e__f003",
+        "bounds": [
+          19,
+          19,
+          61,
+          41
+        ],
+        "opaquePixels": 420,
+        "sha256": "1905dfe9f0c11ea6e042656dd6fcb4f0b60f2086a077826d8101609bf7797153"
+      },
+      {
+        "frame": 4,
+        "sourceCell": [
+          464,
+          512
+        ],
+        "sourceBounds": [
+          40,
+          96,
+          360,
+          366
+        ],
+        "sourcePivot": [
+          182.27778,
+          236.88889
+        ],
+        "rect": [
+          256,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_attack_e__f004",
+        "bounds": [
+          19,
+          19,
+          48,
+          44
+        ],
+        "opaquePixels": 430,
+        "sha256": "b142ebe0de8e220f363700f8618f3d46fce5add43a6a0298394e618cec267085"
+      },
+      {
+        "frame": 5,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          73,
+          110,
+          404,
+          377
+        ],
+        "sourcePivot": [
+          228.22222,
+          237.38889
+        ],
+        "rect": [
+          320,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_attack_e__f005",
+        "bounds": [
+          18,
+          20,
+          48,
+          44
+        ],
+        "opaquePixels": 402,
+        "sha256": "22dbccb4ad8d306945f11094dd42022055def7101836118745dbe0f32a05ef70"
+      }
+    ]
+  },
+  {
+    "id": "runner",
+    "action": "hit",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_hit_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_hit_e_sheet_v001.png",
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "6371f45ddd401d7cf44666d3f3ce6d5cf86e682514ead193548bdc6a30cb2cad",
+    "size": [
+      128,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.05625,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "4c194faa4d7988ff23e754938609f22e6518ed9988a50098ae5644a35630434e",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 10,
+    "loop": false,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          887,
+          887
+        ],
+        "sourceBounds": [
+          166,
+          210,
+          787,
+          715
+        ],
+        "sourcePivot": [
+          491.94444,
+          490.33333
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_hit_e__f000",
+        "bounds": [
+          14,
+          16,
+          49,
+          44
+        ],
+        "opaquePixels": 474,
+        "sha256": "1bcdcb9de41b9cdf1a090cc57d978b96537ec5041fd342e2bcaabd8ed9eed593"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          887,
+          887
+        ],
+        "sourceBounds": [
+          121,
+          268,
+          732,
+          695
+        ],
+        "sourcePivot": [
+          427.16667,
+          471.05556
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_hit_e__f001",
+        "bounds": [
+          15,
+          21,
+          49,
+          45
+        ],
+        "opaquePixels": 448,
+        "sha256": "a9716e8142dd122920827328b60c138432833ac5603ca4b2b2c5d930c748a2b8"
+      }
+    ]
+  },
+  {
+    "id": "runner",
+    "action": "death",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_death_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_death_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "d27da16ce9fe0e4dfa7c7f1f807fa16a2d0e90419bd7e25b0cd1163563375772",
+    "size": [
+      512,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.13636363636363635,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "6ad22f7de4bed466667274599baf01cf15b8ff2ea86a1548c923077c7a698153",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 9,
+    "loop": false,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          95,
+          181,
+          330,
+          424
+        ],
+        "sourcePivot": [
+          198.16667,
+          267.66667
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_death_e__f000",
+        "bounds": [
+          18,
+          20,
+          50,
+          53
+        ],
+        "opaquePixels": 504,
+        "sha256": "55323ac7eb09d4272ef5c9babcabf86e0fe42dd439a198abf819d161adc78a0a"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          90,
+          186,
+          300,
+          424
+        ],
+        "sourcePivot": [
+          178.16667,
+          268.83333
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_death_e__f001",
+        "bounds": [
+          20,
+          21,
+          49,
+          53
+        ],
+        "opaquePixels": 476,
+        "sha256": "4490d8d9d2b6c7326ad7b34e25fb10bd5317b750419e0f73671f4e3749b57719"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          40,
+          232,
+          294,
+          421
+        ],
+        "sourcePivot": [
+          167.83333,
+          298.5
+        ],
+        "rect": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_death_e__f002",
+        "bounds": [
+          15,
+          23,
+          50,
+          49
+        ],
+        "opaquePixels": 460,
+        "sha256": "bedd9169d9f614eade421a51e4c2b28820b9f2f32c226e2b0d0a5821c641a2a7"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          20,
+          226,
+          340,
+          425
+        ],
+        "sourcePivot": [
+          168.5,
+          293.16667
+        ],
+        "rect": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_death_e__f003",
+        "bounds": [
+          12,
+          23,
+          56,
+          50
+        ],
+        "opaquePixels": 575,
+        "sha256": "7adf342b50a32e9419399957bf1999246079180603289e5855d2e5ae052b123f"
+      },
+      {
+        "frame": 4,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          49,
+          136,
+          351,
+          325
+        ],
+        "sourcePivot": [
+          163.0,
+          216.66667
+        ],
+        "rect": [
+          256,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_death_e__f004",
+        "bounds": [
+          16,
+          21,
+          57,
+          47
+        ],
+        "opaquePixels": 570,
+        "sha256": "d02edb6ec4fd8fbeca33284a8aed7bb5b29057d2aa7d24d2e4e96d91a8645bd2"
+      },
+      {
+        "frame": 5,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          24,
+          149,
+          354,
+          313
+        ],
+        "sourcePivot": [
+          190.33333,
+          217.16667
+        ],
+        "rect": [
+          320,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_death_e__f005",
+        "bounds": [
+          9,
+          23,
+          54,
+          45
+        ],
+        "opaquePixels": 572,
+        "sha256": "42dc784d383aa3e05e66fe57d1e373591afe053447559230a0a14488ecc1dc97"
+      },
+      {
+        "frame": 6,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          22,
+          146,
+          349,
+          313
+        ],
+        "sourcePivot": [
+          180.5,
+          216.66667
+        ],
+        "rect": [
+          384,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_death_e__f006",
+        "bounds": [
+          10,
+          22,
+          55,
+          45
+        ],
+        "opaquePixels": 587,
+        "sha256": "b05e6e7fd52544ab138a041029c15c21a41d165c4ff6af86c265703456b215a9"
+      },
+      {
+        "frame": 7,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          17,
+          155,
+          349,
+          309
+        ],
+        "sourcePivot": [
+          185.5,
+          217.66667
+        ],
+        "rect": [
+          448,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_runner_death_e__f007",
+        "bounds": [
+          9,
+          23,
+          54,
+          44
+        ],
+        "opaquePixels": 590,
+        "sha256": "b7e3b33935d0705dd1d710f2d8dea38ab74ac02d59d1b975089fcb3c73e9c42e"
+      }
+    ]
+  },
+  {
+    "id": "brute",
+    "action": "idle",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_idle_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_idle_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "1bf9609d0c947c82c52e3dde12d72c9d52a16767eb7802f5de7736b07f5dac76",
+    "size": [
+      384,
+      96
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.13023255813953488,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "149256aa8a16eb6aa81abc4a1ef0d496f416e027c5adb2ab8a9aaeb67aae377c",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 5,
+    "loop": true,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          199,
+          72,
+          617,
+          449
+        ],
+        "sourcePivot": [
+          418.75,
+          263.71429
+        ],
+        "rect": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_idle_e__f000",
+        "bounds": [
+          19,
+          23,
+          73,
+          72
+        ],
+        "opaquePixels": 1727,
+        "sha256": "975c4be02f2c712a02b88ea7c2f22b55c6488ab73e7b3afa25d462822ae2aa3a"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          151,
+          65,
+          569,
+          454
+        ],
+        "sourcePivot": [
+          375.75,
+          258.21429
+        ],
+        "rect": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_idle_e__f001",
+        "bounds": [
+          19,
+          23,
+          73,
+          74
+        ],
+        "opaquePixels": 1822,
+        "sha256": "f0632e8ef3f8867a2336382b9d94bc7929acc89c84a647eb62f0c60ff9eb8fa5"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          208,
+          64,
+          617,
+          435
+        ],
+        "sourcePivot": [
+          430.25,
+          250.03571
+        ],
+        "rect": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_idle_e__f002",
+        "bounds": [
+          19,
+          24,
+          72,
+          72
+        ],
+        "opaquePixels": 1689,
+        "sha256": "2f0a2dc2828543ba62ce9cba911360bb557c296317eb711ebcb2f4cf18e01ce7"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          149,
+          59,
+          571,
+          443
+        ],
+        "sourcePivot": [
+          363.25,
+          246.71429
+        ],
+        "rect": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_idle_e__f003",
+        "bounds": [
+          20,
+          24,
+          75,
+          74
+        ],
+        "opaquePixels": 1791,
+        "sha256": "67faeb36cf8eb56fdbb78d32a2703b074ba547090d853d32837071e06303bcc6"
+      }
+    ]
+  },
+  {
+    "id": "brute",
+    "action": "walk",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_walk_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_walk_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "cc19858cecd2d500817b17e83e5578d8ba73e50569547897c0621359552fc326",
+    "size": [
+      768,
+      96
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.19047619047619047,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "906c416635e308941e4b4c7409b6e6fff0d5634b2ee8bc4be788d3b50025ae58",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 6,
+    "loop": true,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          54,
+          152,
+          342,
+          403
+        ],
+        "sourcePivot": [
+          210.75,
+          271.5
+        ],
+        "rect": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_walk_e__f000",
+        "bounds": [
+          18,
+          25,
+          73,
+          73
+        ],
+        "opaquePixels": 1770,
+        "sha256": "7d2063b2a1452d443d66ebe800cb07412e8a54571bc2da6da5e61e70d65af475"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          58,
+          144,
+          338,
+          405
+        ],
+        "sourcePivot": [
+          218.75,
+          268.0
+        ],
+        "rect": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_walk_e__f001",
+        "bounds": [
+          17,
+          24,
+          70,
+          74
+        ],
+        "opaquePixels": 1697,
+        "sha256": "6ddd1d51b674a7a2d5e8cbfc8e09309a500c5a7eaeb26f97b26d2aaab2590ddc"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          48,
+          145,
+          315,
+          418
+        ],
+        "sourcePivot": [
+          207.75,
+          279.75
+        ],
+        "rect": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_walk_e__f002",
+        "bounds": [
+          18,
+          22,
+          69,
+          74
+        ],
+        "opaquePixels": 1550,
+        "sha256": "3dba94299efcaeac41e1ef0e8cdf31748bbf45702a1b82a3c836aa7a0bced579"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          17,
+          143,
+          340,
+          410
+        ],
+        "sourcePivot": [
+          200.25,
+          272.5
+        ],
+        "rect": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_walk_e__f003",
+        "bounds": [
+          13,
+          23,
+          75,
+          74
+        ],
+        "opaquePixels": 1856,
+        "sha256": "e527e7369f4d6f10146ca17046ff3599c177b38a8fd4a5ffb7ec02fa3f1f36b5"
+      },
+      {
+        "frame": 4,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          51,
+          98,
+          352,
+          357
+        ],
+        "sourcePivot": [
+          211.25,
+          225.5
+        ],
+        "rect": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_walk_e__f004",
+        "bounds": [
+          17,
+          24,
+          74,
+          73
+        ],
+        "opaquePixels": 1813,
+        "sha256": "2c65ea48785e5783617a5023b1fe07ac43462f38b01fb7507db73a9d65ea5544"
+      },
+      {
+        "frame": 5,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          55,
+          95,
+          334,
+          368
+        ],
+        "sourcePivot": [
+          218.75,
+          224.0
+        ],
+        "rect": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_walk_e__f005",
+        "bounds": [
+          17,
+          23,
+          70,
+          75
+        ],
+        "opaquePixels": 1646,
+        "sha256": "c34d3654efbcd45987e1cad4469985af87953b632ec7a7ea1219f7ef76a69d06"
+      },
+      {
+        "frame": 6,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          44,
+          95,
+          291,
+          371
+        ],
+        "sourcePivot": [
+          201.25,
+          231.25
+        ],
+        "rect": [
+          576,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_walk_e__f006",
+        "bounds": [
+          18,
+          22,
+          65,
+          75
+        ],
+        "opaquePixels": 1596,
+        "sha256": "7859ffc15d9a40f1ccefbe6dd7a91660c62d939eee9da9ebe3c2fd079f21dec3"
+      },
+      {
+        "frame": 7,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          32,
+          95,
+          339,
+          357
+        ],
+        "sourcePivot": [
+          198.75,
+          225.5
+        ],
+        "rect": [
+          672,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_walk_e__f007",
+        "bounds": [
+          16,
+          23,
+          74,
+          73
+        ],
+        "opaquePixels": 1839,
+        "sha256": "7b2b8d06d7809c57c8852063566f8cbd26292a15ac496127535b150a702748f6"
+      }
+    ]
+  },
+  {
+    "id": "brute",
+    "action": "attack",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_attack_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_attack_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "2ef30f289d54ecda6443a4fba4af48a7c84c5550e65a46f6d530a04721528ec4",
+    "size": [
+      576,
+      96
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.16,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "2d6377476ad0a1bce4f8f21f13248c8899b8731513f1810344e2ec0d65754839",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 10,
+    "loop": false,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          96,
+          108,
+          441,
+          436
+        ],
+        "sourcePivot": [
+          267.75,
+          263.0
+        ],
+        "rect": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_attack_e__f000",
+        "bounds": [
+          21,
+          23,
+          76,
+          75
+        ],
+        "opaquePixels": 1820,
+        "sha256": "03170145bc6b00f01a0f715851249cff07378a708998ae920a71b8fa7944f63e"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          74,
+          107,
+          419,
+          456
+        ],
+        "sourcePivot": [
+          252.5,
+          267.0
+        ],
+        "rect": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_attack_e__f001",
+        "bounds": [
+          19,
+          22,
+          74,
+          78
+        ],
+        "opaquePixels": 1797,
+        "sha256": "bb3f7cd11f47cb1c7fc01a21c00fc7cf1831dcae4cbd5344a7217914b13bcf47"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          53,
+          104,
+          423,
+          426
+        ],
+        "sourcePivot": [
+          248.75,
+          264.0
+        ],
+        "rect": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_attack_e__f002",
+        "bounds": [
+          17,
+          22,
+          76,
+          74
+        ],
+        "opaquePixels": 1992,
+        "sha256": "c49fe8d6e5de05ce7a9d25b6f896d6db2cc41f6ec40efad38f02f8bca5a5ceb9"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          565,
+          512
+        ],
+        "sourceBounds": [
+          55,
+          65,
+          542,
+          354
+        ],
+        "sourcePivot": [
+          264.0,
+          205.5
+        ],
+        "rect": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_attack_e__f003",
+        "bounds": [
+          15,
+          26,
+          93,
+          72
+        ],
+        "opaquePixels": 2020,
+        "sha256": "450ffcdeb6817dcdb85d1b2b98f00de066ae2df1ccd747d13ea62a0ba57adcec"
+      },
+      {
+        "frame": 4,
+        "sourceCell": [
+          459,
+          512
+        ],
+        "sourceBounds": [
+          39,
+          61,
+          382,
+          380
+        ],
+        "sourcePivot": [
+          208.0,
+          215.0
+        ],
+        "rect": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_attack_e__f004",
+        "bounds": [
+          21,
+          23,
+          76,
+          74
+        ],
+        "opaquePixels": 1809,
+        "sha256": "4ca947fef26044937ce3c412c7869d10624a8a52d987536b130de937fe542c1a"
+      },
+      {
+        "frame": 5,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          71,
+          64,
+          418,
+          390
+        ],
+        "sourcePivot": [
+          243.75,
+          221.5
+        ],
+        "rect": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_attack_e__f005",
+        "bounds": [
+          20,
+          23,
+          76,
+          75
+        ],
+        "opaquePixels": 1859,
+        "sha256": "a2b2187ddbd88dfe2d8ad97f038145f953b8d79d4b8c05d1fb25abfface01923"
+      }
+    ]
+  },
+  {
+    "id": "brute",
+    "action": "hit",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_hit_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_hit_e_sheet_v001.png",
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "5d0b5016c3350aa25753c4619559cacbd2c72900ed3fff547e2f88b39d25cbf2",
+    "size": [
+      192,
+      96
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.1,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "58802e64d8c7196297288abc100fa59299f447121a05beac1c89faf3c9148227",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 10,
+    "loop": false,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          887,
+          887
+        ],
+        "sourceBounds": [
+          196,
+          158,
+          859,
+          706
+        ],
+        "sourcePivot": [
+          481.5,
+          439.0
+        ],
+        "rect": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_hit_e__f000",
+        "bounds": [
+          19,
+          20,
+          85,
+          75
+        ],
+        "opaquePixels": 1962,
+        "sha256": "0844da1e132fbe5e095c5de6281ed0613ad5d411f220074deb24d034e6b52c62"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          887,
+          887
+        ],
+        "sourceBounds": [
+          151,
+          210,
+          721,
+          732
+        ],
+        "sourcePivot": [
+          459.5,
+          466.5
+        ],
+        "rect": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_hit_e__f001",
+        "bounds": [
+          17,
+          22,
+          74,
+          74
+        ],
+        "opaquePixels": 1865,
+        "sha256": "4fb56bed0d98b0af3203e4dd6f4fdc67fdb3c42944f2f0a42a6e25c3ed62040c"
+      }
+    ]
+  },
+  {
+    "id": "brute",
+    "action": "death",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_death_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_death_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "5ebc47c43e9f23f6e79e559af11efc8fd1e1b9d0991407bbc5d27d64021d61a6",
+    "size": [
+      768,
+      96
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.21374045801526717,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "43618eee9a9fd6217dc6e3b3a7ebb2774da14ae4b855286201f82ce97c3339af",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 9,
+    "loop": false,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          82,
+          125,
+          328,
+          386
+        ],
+        "sourcePivot": [
+          207.25,
+          236.21429
+        ],
+        "rect": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_death_e__f000",
+        "bounds": [
+          21,
+          24,
+          74,
+          80
+        ],
+        "opaquePixels": 1916,
+        "sha256": "1b4e226fdbbef64fb55bda47e5a3890af993cbfeaa2950a3589628712f8c3a5a"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          72,
+          135,
+          317,
+          379
+        ],
+        "sourcePivot": [
+          203.75,
+          245.53571
+        ],
+        "rect": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_death_e__f001",
+        "bounds": [
+          20,
+          24,
+          72,
+          76
+        ],
+        "opaquePixels": 1792,
+        "sha256": "ceebeb4e77601030e4aa4c9cc1e39fb468cf4dfee9317a1c209da6581bc8e642"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          49,
+          152,
+          333,
+          397
+        ],
+        "sourcePivot": [
+          208.89286,
+          261.85714
+        ],
+        "rect": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_death_e__f002",
+        "bounds": [
+          14,
+          25,
+          75,
+          77
+        ],
+        "opaquePixels": 1880,
+        "sha256": "808c8dd888747d377b3ddff9621da286e5f8882d1627821c6dc17d2f1adf06ec"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          27,
+          152,
+          337,
+          401
+        ],
+        "sourcePivot": [
+          184.03571,
+          256.67857
+        ],
+        "rect": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_death_e__f003",
+        "bounds": [
+          14,
+          26,
+          80,
+          79
+        ],
+        "opaquePixels": 2063,
+        "sha256": "dfd2e671413af4045b0ae81b55c3280e3cbeda40555e01245b4fa66fa7fab76d"
+      },
+      {
+        "frame": 4,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          36,
+          110,
+          362,
+          335
+        ],
+        "sourcePivot": [
+          207.17857,
+          220.17857
+        ],
+        "rect": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_death_e__f004",
+        "bounds": [
+          11,
+          24,
+          81,
+          72
+        ],
+        "opaquePixels": 2147,
+        "sha256": "531b08c06e48c4e3d354f89848fead4254dc25defb13b4fd7d4d390a961e02df"
+      },
+      {
+        "frame": 5,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          19,
+          115,
+          369,
+          334
+        ],
+        "sourcePivot": [
+          210.14286,
+          221.67857
+        ],
+        "rect": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_death_e__f005",
+        "bounds": [
+          7,
+          25,
+          82,
+          72
+        ],
+        "opaquePixels": 2250,
+        "sha256": "b385d3ab93f93b7cf03676763284dcb440c13e8f147dde9a2b5663579fc51665"
+      },
+      {
+        "frame": 6,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          12,
+          114,
+          361,
+          331
+        ],
+        "sourcePivot": [
+          194.96429,
+          222.67857
+        ],
+        "rect": [
+          576,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_death_e__f006",
+        "bounds": [
+          9,
+          25,
+          84,
+          71
+        ],
+        "opaquePixels": 2173,
+        "sha256": "6c49fc4871cf1a62009e13bd70b227c31b583ccdcf1e51898aac2f485f4ee6eb"
+      },
+      {
+        "frame": 7,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          11,
+          121,
+          356,
+          323
+        ],
+        "sourcePivot": [
+          203.46429,
+          226.17857
+        ],
+        "rect": [
+          672,
+          0,
+          96,
+          96
+        ],
+        "name": "bd_enemy_brute_death_e__f007",
+        "bounds": [
+          7,
+          26,
+          81,
+          69
+        ],
+        "opaquePixels": 2144,
+        "sha256": "7e88a168fda5171c0e137b78d86c0731789b45ab32dcc78d6df6d1df629708b0"
+      }
+    ]
+  }
+]

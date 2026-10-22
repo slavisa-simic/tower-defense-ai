@@ -1,0 +1,23 @@
+{
+  "screen": [
+    1920,
+    1080
+  ],
+  "orthographic": true,
+  "rotation": "(0.00, 0.00, 0.00)",
+  "lanes": [
+    "(31, 4)",
+    "(31, 9)",
+    "(31, 14)"
+  ],
+  "money": "RSD 0",
+  "wave": "WAVE 1",
+  "homicides": "HOMICIDES 200 / 200",
+  "borderColliderFree": true,
+  "visibleCoin": false,
+  "managers": {
+    "waves": 1,
+    "statistics": 1,
+    "border": 1
+  }
+}

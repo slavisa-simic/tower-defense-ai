@@ -1,0 +1,14 @@
+{
+  "initialMoney": 500,
+  "fixture": "Explicit 0.1-second shared wave/enemy/MG ticks; no extra money or health. Actual earned-income reinvestment.",
+  "results": [
+    {
+      "wave": 1,
+      "state": "GameOver",
+      "ticks": 322,
+      "kills": 26,
+      "homicides": 1000,
+      "money": 700
+    }
+  ]
+}

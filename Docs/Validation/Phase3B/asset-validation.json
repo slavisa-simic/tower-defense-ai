@@ -1,0 +1,139 @@
+{
+  "sequences": 22,
+  "clips": 18,
+  "pass": true,
+  "rows": [
+    {
+      "path": "Assets/Game/Art/Effects/Combat/MachineGun/bd_fx_mg_muzzle_sheet_v001.png",
+      "frames": 4,
+      "sampled": 4,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Combat/Sniper/bd_fx_sniper_muzzle_sheet_v001.png",
+      "frames": 3,
+      "sampled": 3,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_dirt_sheet_v001.png",
+      "frames": 4,
+      "sampled": 4,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_mud_sheet_v001.png",
+      "frames": 4,
+      "sampled": 4,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_concrete_sheet_v001.png",
+      "frames": 4,
+      "sampled": 4,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_metal_sheet_v001.png",
+      "frames": 4,
+      "sampled": 4,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_flesh_sheet_v001.png",
+      "frames": 4,
+      "sampled": 4,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Blood/Hits/bd_fx_blood_hit_sheet_v001.png",
+      "frames": 4,
+      "sampled": 4,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Blood/Death/bd_fx_blood_decal_v001.png",
+      "frames": 1,
+      "sampled": 0,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Blood/Death/bd_fx_blood_decal_medium_v001.png",
+      "frames": 1,
+      "sampled": 0,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Explosions/Mine/bd_fx_mine_explosion_sheet_v001.png",
+      "frames": 8,
+      "sampled": 8,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Explosions/Generic/bd_fx_explosion_small_sheet_v001.png",
+      "frames": 6,
+      "sampled": 6,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Smoke/bd_fx_smoke_small_sheet_v001.png",
+      "frames": 6,
+      "sampled": 6,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Smoke/bd_fx_smoke_medium_sheet_v001.png",
+      "frames": 6,
+      "sampled": 6,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_small_sheet_v001.png",
+      "frames": 6,
+      "sampled": 6,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_medium_sheet_v001.png",
+      "frames": 6,
+      "sampled": 6,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_large_sheet_v001.png",
+      "frames": 6,
+      "sampled": 6,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Water/Wake/bd_fx_water_wake_sheet_v001.png",
+      "frames": 4,
+      "sampled": 4,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/World/bd_fx_water_ripple_sheet_v001.png",
+      "frames": 6,
+      "sampled": 6,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/World/bd_fx_shore_foam_sheet_v001.png",
+      "frames": 4,
+      "sampled": 4,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Combat/MachineGun/bd_fx_mg_tracer_v001.png",
+      "frames": 1,
+      "sampled": 0,
+      "pass": true
+    },
+    {
+      "path": "Assets/Game/Art/Effects/Combat/Sniper/bd_fx_sniper_tracer_v001.png",
+      "frames": 1,
+      "sampled": 0,
+      "pass": true
+    }
+  ]
+}

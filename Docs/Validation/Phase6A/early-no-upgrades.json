@@ -1,0 +1,46 @@
+{
+  "initialMoney": 500,
+  "fixture": "Explicit 0.1-second shared wave/enemy/MG ticks; no extra money or health. Actual earned-income reinvestment.",
+  "results": [
+    {
+      "wave": 1,
+      "state": "WaveComplete",
+      "ticks": 264,
+      "kills": 54,
+      "homicides": 650,
+      "money": 300
+    },
+    {
+      "wave": 2,
+      "state": "WaveComplete",
+      "ticks": 227,
+      "kills": 174,
+      "homicides": 650,
+      "money": 3105
+    },
+    {
+      "wave": 3,
+      "state": "WaveComplete",
+      "ticks": 166,
+      "kills": 289,
+      "homicides": 650,
+      "money": 6540
+    },
+    {
+      "wave": 4,
+      "state": "WaveComplete",
+      "ticks": 211,
+      "kills": 434,
+      "homicides": 650,
+      "money": 10830
+    },
+    {
+      "wave": 5,
+      "state": "GameOver",
+      "ticks": 211,
+      "kills": 574,
+      "homicides": 1025,
+      "money": 14870
+    }
+  ]
+}

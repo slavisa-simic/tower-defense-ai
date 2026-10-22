@@ -1,0 +1,70 @@
+{
+  "version": "6000.3.24f1",
+  "scene": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+  "isDirty": false,
+  "playing": false,
+  "compiling": false,
+  "compilationFailed": false,
+  "camera": {
+    "orthographic": true,
+    "orthographicSize": 11.85,
+    "aspect": 1.77777779,
+    "position": "(0.00, 0.00, -10.00)",
+    "rotation": "(0.00, 0.00, 0.00)"
+  },
+  "grid": {
+    "Width": 32,
+    "Height": 18,
+    "CellSize": 1.25
+  },
+  "placeholderRenderers": [
+    {
+      "name": "Body Outline",
+      "scale": "(0.88, 0.64, 1.00)",
+      "bounds": "(1.00, 1.00, 0.20)",
+      "sortingLayerName": "Enemies",
+      "sortingOrder": 0
+    },
+    {
+      "name": "Body",
+      "scale": "(0.65, 0.46, 1.00)",
+      "bounds": "(1.00, 1.00, 0.20)",
+      "sortingLayerName": "Enemies",
+      "sortingOrder": 1
+    },
+    {
+      "name": "Facing Tip",
+      "scale": "(0.40, 0.60, 1.00)",
+      "bounds": "(1.00, 1.00, 0.20)",
+      "sortingLayerName": "Enemies",
+      "sortingOrder": 2
+    }
+  ],
+  "console": {
+    "errors": 0,
+    "warnings": 0,
+    "logs": 5,
+    "messages": [
+      {
+        "message": "[PipelineTestRunner] Reattaching result collector after domain reload\nUnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+        "mode": 8406016
+      },
+      {
+        "message": "[TestResultCollector] Run started: 22 test(s)\nUnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+        "mode": 8406016
+      },
+      {
+        "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml\n",
+        "mode": 8668160
+      },
+      {
+        "message": "[TestResultCollector] Run finished: 22 total, 22 passed, 0 failed\nUnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+        "mode": 8406016
+      },
+      {
+        "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+        "mode": 8406016
+      }
+    ]
+  }
+}

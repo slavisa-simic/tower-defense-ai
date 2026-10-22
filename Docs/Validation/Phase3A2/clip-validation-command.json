@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase3A2/ValidateClips.cs",
+      "entry": "Phase3A2ValidateClips.Run"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 30,
+      "executeMs": 14,
+      "assemblyName": "PipelineRunScript_ValidateClips_3da68fbb1aac4b49bcdf2d3b59e87105",
+      "success": true,
+      "result": "84 sprite keys sampled successfully across 15 clips; active scene unchanged"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

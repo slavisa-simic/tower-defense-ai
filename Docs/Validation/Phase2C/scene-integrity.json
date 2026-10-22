@@ -1,0 +1,140 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": ".utmp/phase2c-integrity.cs",
+      "entry": "Phase2CIntegrity.Main"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 98,
+      "executeMs": 19,
+      "assemblyName": "PipelineRunScript_phase2c-integrity_ea0a8c128c4e44c68f496e7203637ad9",
+      "success": true,
+      "result": {
+        "scene": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+        "rootCount": 16,
+        "missingScripts": 0,
+        "brokenReferences": [],
+        "managers": [
+          {
+            "name": "GridManager",
+            "count": 1
+          },
+          {
+            "name": "GameStateController",
+            "count": 1
+          },
+          {
+            "name": "EnemySpawner",
+            "count": 1
+          },
+          {
+            "name": "EconomyManager",
+            "count": 1
+          },
+          {
+            "name": "EnemyRegistry",
+            "count": 1
+          },
+          {
+            "name": "EnemyRewardService",
+            "count": 1
+          },
+          {
+            "name": "BuildManager",
+            "count": 1
+          },
+          {
+            "name": "PlacementController",
+            "count": 1
+          },
+          {
+            "name": "PlacementInput",
+            "count": 1
+          },
+          {
+            "name": "WaveManager",
+            "count": 1
+          }
+        ],
+        "definitions": [
+          {
+            "name": "MG Nest",
+            "valid": true,
+            "cost": 150,
+            "turretComponents": 1,
+            "presentationComponents": 1
+          },
+          {
+            "name": "Barbed Wire",
+            "valid": true,
+            "cost": 50,
+            "turretComponents": 0,
+            "presentationComponents": 0
+          },
+          {
+            "name": "Land Mine",
+            "valid": true,
+            "cost": 75,
+            "turretComponents": 0,
+            "presentationComponents": 0
+          },
+          {
+            "name": "Sniper Tower",
+            "valid": true,
+            "cost": 300,
+            "turretComponents": 1,
+            "presentationComponents": 1
+          }
+        ],
+        "waveData": [
+          {
+            "number": 1,
+            "valid": true,
+            "count": 10,
+            "reward": 100
+          },
+          {
+            "number": 2,
+            "valid": true,
+            "count": 15,
+            "reward": 100
+          },
+          {
+            "number": 3,
+            "valid": true,
+            "count": 20,
+            "reward": 100
+          },
+          {
+            "number": 4,
+            "valid": true,
+            "count": 25,
+            "reward": 100
+          },
+          {
+            "number": 5,
+            "valid": true,
+            "count": 30,
+            "reward": 100
+          }
+        ],
+        "camera": "(0.00000, 0.00000, 0.00000, 1.00000)",
+        "plane": "XY",
+        "firstBuildScene": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+        "legacySpawnLoops": 0,
+        "previewInstances": 1
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase6A/Live.cs",
+      "entry": "Phase6ALive.Early"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 133,
+      "executeMs": 1063,
+      "assemblyName": "PipelineRunScript_Live_5a654e241f6d42508f841887cb09d6a3",
+      "success": true,
+      "result": "{\r\n  \"initialMoney\": 500,\r\n  \"fixture\": \"Explicit 0.1-second shared wave/enemy/MG ticks; no extra money or health. Actual earned-income reinvestment.\",\r\n  \"results\": [\r\n    {\r\n      \"wave\": 1,\r\n      \"state\": \"WaveComplete\",\r\n      \"ticks\": 264,\r\n      \"kills\": 54,\r\n      \"homicides\": 650,\r\n      \"money\": 300\r\n    },\r\n    {\r\n      \"wave\": 2,\r\n      \"state\": \"WaveComplete\",\r\n      \"ticks\": 232,\r\n      \"kills\": 174,\r\n      \"homicides\": 650,\r\n      \"money\": 3179\r\n    },\r\n    {\r\n      \"wave\": 3,\r\n      \"state\": \"WaveComplete\",\r\n      \"ticks\": 166,\r\n      \"kills\": 299,\r\n      \"homicides\": 650,\r\n      \"money\": 3679\r\n    },\r\n    {\r\n      \"wave\": 4,\r\n      \"state\": \"WaveComplete\",\r\n      \"ticks\": 188,\r\n      \"kills\": 459,\r\n      \"homicides\": 650,\r\n      \"money\": 7894\r\n    },\r\n    {\r\n      \"wave\": 5,\r\n      \"state\": \"WaveComplete\",\r\n      \"ticks\": 212,\r\n      \"kills\": 649,\r\n      \"homicides\": 650,\r\n      \"money\": 12712\r\n    }\r\n  ]\r\n}"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -1,0 +1,17 @@
+{
+  "status": "completed",
+  "buildId": "build_d6018e4b9f7c",
+  "result": "Succeeded",
+  "platform": "StandaloneWindows64",
+  "outputPath": "C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Build/Phase2A/ShorelineDefense.exe",
+  "totalSizeBytes": 100910936,
+  "buildTimeMs": 58172,
+  "totalWarnings": 1,
+  "totalErrors": 0,
+  "errors": [],
+  "warnings": [
+    {
+      "message": "Pipeline: RuntimePipelineConfig found, but enableInBuilds = false. Pipeline will be disabled in Player builds."
+    }
+  ]
+}

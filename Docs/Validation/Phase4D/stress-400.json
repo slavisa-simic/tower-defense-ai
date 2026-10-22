@@ -1,0 +1,133 @@
+{
+  "requested": 400,
+  "setupMs": 267.3313,
+  "pathRequests": 2175,
+  "actualSearches": 255,
+  "CacheHits": 1920,
+  "CreatedEnemies": 435,
+  "ReusedEnemies": 0,
+  "PooledEnemies": 108,
+  "samples": 774,
+  "medianMs": 6.1997021548449993,
+  "p95Ms": 7.6725976541638374,
+  "maxMs": 282.5322151184082,
+  "activeMin": 327,
+  "activeMax": 400,
+  "boats": 5,
+  "shots": [
+    {
+      "id": "sniper-tower",
+      "turretShots": 3,
+      "areaShots": null
+    },
+    {
+      "id": "flamethrower",
+      "turretShots": null,
+      "areaShots": null
+    },
+    {
+      "id": "sniper-tower",
+      "turretShots": 3,
+      "areaShots": null
+    },
+    {
+      "id": "machine-gun-nest",
+      "turretShots": 22,
+      "areaShots": null
+    },
+    {
+      "id": "barbed-wire",
+      "turretShots": null,
+      "areaShots": null
+    },
+    {
+      "id": "barbed-wire",
+      "turretShots": null,
+      "areaShots": null
+    },
+    {
+      "id": "rocket",
+      "turretShots": null,
+      "areaShots": 1
+    },
+    {
+      "id": "flamethrower",
+      "turretShots": null,
+      "areaShots": null
+    },
+    {
+      "id": "autocannon",
+      "turretShots": 11,
+      "areaShots": null
+    },
+    {
+      "id": "rocket",
+      "turretShots": null,
+      "areaShots": 1
+    },
+    {
+      "id": "flamethrower",
+      "turretShots": null,
+      "areaShots": null
+    },
+    {
+      "id": "barbed-wire",
+      "turretShots": null,
+      "areaShots": null
+    },
+    {
+      "id": "autocannon",
+      "turretShots": 11,
+      "areaShots": null
+    },
+    {
+      "id": "rocket",
+      "turretShots": null,
+      "areaShots": 1
+    },
+    {
+      "id": "sniper-tower",
+      "turretShots": 3,
+      "areaShots": null
+    },
+    {
+      "id": "autocannon",
+      "turretShots": 11,
+      "areaShots": null
+    },
+    {
+      "id": "mortar",
+      "turretShots": null,
+      "areaShots": 2
+    },
+    {
+      "id": "machine-gun-nest",
+      "turretShots": 22,
+      "areaShots": null
+    },
+    {
+      "id": "machine-gun-nest",
+      "turretShots": 22,
+      "areaShots": null
+    },
+    {
+      "id": "mortar",
+      "turretShots": null,
+      "areaShots": 2
+    },
+    {
+      "id": "mortar",
+      "turretShots": null,
+      "areaShots": 2
+    }
+  ],
+  "renderers": 1929,
+  "projectiles": 0,
+  "gc0": 0,
+  "gc1": 0,
+  "gc2": 0,
+  "managedMemoryDelta": 2236416,
+  "gcRecorderValid": true,
+  "gcAllocationAverage": 13072.16788321168,
+  "gcAllocationMax": 55546
+}

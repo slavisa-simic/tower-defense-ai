@@ -1,0 +1,22 @@
+[
+  {
+    "skillPath": ".agents/skills/game-art-pipeline-engineering",
+    "exitCode": 0,
+    "output": "Skill is valid!"
+  },
+  {
+    "skillPath": ".agents/skills/unity-pipeline",
+    "exitCode": 0,
+    "output": "Skill is valid!"
+  },
+  {
+    "skillPath": "C:/Users/Slavisa/.agents/skills/unity-cli",
+    "exitCode": 0,
+    "output": "Skill is valid!"
+  },
+  {
+    "skillPath": "C:/Users/Slavisa/.codex/skills/game-art-pipeline-engineering",
+    "exitCode": 0,
+    "output": "Skill is valid!"
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "success": true,
+  "command": "command runtime_status",
+  "data": {
+    "command": "runtime_status",
+    "parameters": {},
+    "result": {
+      "UnityVersion": "6000.3.24f1",
+      "Platform": "WindowsPlayer",
+      "BuildGuid": "d5907589bf0d4ecbaa85f0b8491c6da4",
+      "Version": "0.1.0",
+      "IsPlaying": true,
+      "TargetFrameRate": 60,
+      "TimeScale": 1,
+      "RealTimeSinceStartup": 330.496582,
+      "FrameCount": 2317436,
+      "LoadedLevelName": "MainMenu",
+      "LoadedLevelBuildIndex": 0,
+      "Performance": {
+        "FrameStatsAvailable": true,
+        "SampleWindow": 120,
+        "Fps": 124.224632,
+        "AverageFrameTimeMs": 8.049933,
+        "MinFrameTimeMs": 6.89609528,
+        "MaxFrameTimeMs": 50.2361031,
+        "LastFrameTimeMs": 16.666,
+        "GpuTimingAvailable": true,
+        "CpuFrameTimeMs": 16.6594,
+        "GpuFrameTimeMs": 1.22172,
+        "TotalAllocatedMemory": 110406961,
+        "TotalReservedMemory": 244207616,
+        "MonoUsedSize": 31109120,
+        "MonoHeapSize": 49229824,
+        "GcMemory": 31109120,
+        "Counters": {
+          "DrawCalls": 396,
+          "SetPassCalls": 11,
+          "Triangles": 2632,
+          "Vertices": 5294,
+          "GcAllocInFrame": 34023
+        }
+      },
+      "PipelineDriver": {
+        "IsServerRunning": true,
+        "ActualPort": 7900,
+        "EnableInBuilds": true,
+        "RequestTimeoutMs": 30000,
+        "EnableAuditLogging": true,
+        "AutoStart": true,
+        "MaxWorkItemsPerFrame": 10
+      },
+      "Timestamp": "2026-10-03T15:25:12.8112346Z"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7900,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Builds\\Phase5C-QA"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

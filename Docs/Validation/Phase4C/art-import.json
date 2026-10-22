@@ -1,0 +1,322 @@
+[
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p4c_content_001/breacher_v002.png",
+    "width": 1374,
+    "height": 1145
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/IsisBreacher_idle_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/IsisBreacher_move_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/IsisBreacher_attack_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/IsisBreacher_hit_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/IsisBreacher_death_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p4c_content_001/heavy_v002.png",
+    "width": 1312,
+    "height": 1199
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/IsisHeavy_idle_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/IsisHeavy_move_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/IsisHeavy_attack_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/IsisHeavy_hit_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/IsisHeavy_death_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p4c_content_001/runner_v002.png",
+    "width": 1312,
+    "height": 1199
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateRunner_idle_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateRunner_move_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateRunner_attack_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateRunner_hit_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateRunner_death_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p4c_content_001/raider_v002.png",
+    "width": 1374,
+    "height": 1145
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateRaider_idle_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateRaider_move_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateRaider_attack_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateRaider_hit_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateRaider_death_v002.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p4c_content_001/pirateBoss_v003.png",
+    "width": 1315,
+    "height": 1197
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateWarlord_idle_v002.png",
+    "width": 384,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateWarlord_move_v002.png",
+    "width": 384,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateWarlord_attack_v002.png",
+    "width": 384,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateWarlord_hit_v002.png",
+    "width": 384,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "runtime": "Assets/Game/Art/Enemies/Special/PirateWarlord_death_v002.png",
+    "width": 384,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p4c_content_001/militantBoat_v001.png",
+    "width": 2172,
+    "height": 724
+  },
+  {
+    "runtime": "Assets/Game/Art/Props/MilitantBossTransport_v001.png",
+    "width": 192,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 1,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p4c_content_001/pirateBoat_v001.png",
+    "width": 2172,
+    "height": 724
+  },
+  {
+    "runtime": "Assets/Game/Art/Props/PirateBossTransport_v001.png",
+    "width": 192,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 1,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p4c_content_001/toolsIcon_v001.png",
+    "width": 1536,
+    "height": 1024
+  },
+  {
+    "runtime": "Assets/Game/Art/UI/ui_icon_dismantle.png",
+    "width": 64,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 1,
+    "alpha": "binary 220 threshold",
+    "colors": "five-bit channels no dither",
+    "fit": "nearest neighbor centered bounds; one common scale per character"
+  }
+]

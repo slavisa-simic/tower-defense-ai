@@ -1,0 +1,14 @@
+{
+  "State": 1,
+  "PendingCount": 9,
+  "AliveCount": 1,
+  "ActiveBoats": 2,
+  "IncomingPassengers": 9,
+  "TotalArrivals": 2,
+  "positions": [
+    {
+      "position": "(-14.63, -8.13, 0.00)",
+      "HasPath": true
+    }
+  ]
+}

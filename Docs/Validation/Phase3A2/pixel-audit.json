@@ -1,0 +1,970 @@
+{
+  "sheets": [
+    {
+      "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_idle_e_sheet_v001.png",
+      "size": [
+        256,
+        64
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 4,
+      "bounds": [
+        [
+          16,
+          18,
+          51,
+          45
+        ],
+        [
+          15,
+          18,
+          53,
+          46
+        ],
+        [
+          14,
+          19,
+          53,
+          46
+        ],
+        [
+          15,
+          18,
+          52,
+          45
+        ]
+      ],
+      "minimumMargin": 11,
+      "sha256": "7755465742ea1f65e38de9ae2b67bf0ea8c7ed83f4ed1b920b8e4210363162a9"
+    },
+    {
+      "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_walk_e_sheet_v001.png",
+      "size": [
+        512,
+        64
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 8,
+      "bounds": [
+        [
+          15,
+          18,
+          48,
+          47
+        ],
+        [
+          16,
+          18,
+          47,
+          47
+        ],
+        [
+          16,
+          17,
+          45,
+          46
+        ],
+        [
+          14,
+          18,
+          47,
+          47
+        ],
+        [
+          15,
+          18,
+          48,
+          46
+        ],
+        [
+          16,
+          18,
+          46,
+          48
+        ],
+        [
+          16,
+          17,
+          46,
+          46
+        ],
+        [
+          14,
+          18,
+          47,
+          47
+        ]
+      ],
+      "minimumMargin": 14,
+      "sha256": "396436d899bebce00417d9dd5e5943f51598d86c3d478f6ef4127e2cb39a3b28"
+    },
+    {
+      "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_attack_e_sheet_v001.png",
+      "size": [
+        384,
+        64
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 6,
+      "bounds": [
+        [
+          15,
+          18,
+          49,
+          46
+        ],
+        [
+          10,
+          18,
+          49,
+          45
+        ],
+        [
+          14,
+          18,
+          54,
+          45
+        ],
+        [
+          16,
+          16,
+          61,
+          45
+        ],
+        [
+          15,
+          18,
+          50,
+          46
+        ],
+        [
+          15,
+          18,
+          49,
+          46
+        ]
+      ],
+      "minimumMargin": 3,
+      "sha256": "5ad674bd142051cfdfcdade64885253c3178c94604ba5b4506fd1eccf0e169fa"
+    },
+    {
+      "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_hit_e_sheet_v001.png",
+      "size": [
+        128,
+        64
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 2,
+      "bounds": [
+        [
+          13,
+          16,
+          51,
+          45
+        ],
+        [
+          13,
+          18,
+          49,
+          46
+        ]
+      ],
+      "minimumMargin": 13,
+      "sha256": "1dd681b8d72c9fba8753dcf7557141cace2ecefbe49bb67f7f2bd02ec693bbe4"
+    },
+    {
+      "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_death_e_sheet_v001.png",
+      "size": [
+        512,
+        64
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 8,
+      "bounds": [
+        [
+          16,
+          18,
+          53,
+          46
+        ],
+        [
+          15,
+          19,
+          47,
+          46
+        ],
+        [
+          15,
+          20,
+          47,
+          50
+        ],
+        [
+          13,
+          21,
+          53,
+          53
+        ],
+        [
+          11,
+          21,
+          53,
+          47
+        ],
+        [
+          13,
+          21,
+          55,
+          45
+        ],
+        [
+          14,
+          22,
+          55,
+          45
+        ],
+        [
+          14,
+          22,
+          56,
+          45
+        ]
+      ],
+      "minimumMargin": 8,
+      "sha256": "11ab5caa809c965a0dcdb201524cc324232a2a125097e2ee2132f97fabfc6963"
+    },
+    {
+      "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_idle_e_sheet_v001.png",
+      "size": [
+        256,
+        64
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 4,
+      "bounds": [
+        [
+          15,
+          19,
+          49,
+          45
+        ],
+        [
+          15,
+          19,
+          49,
+          45
+        ],
+        [
+          15,
+          20,
+          50,
+          45
+        ],
+        [
+          15,
+          19,
+          50,
+          45
+        ]
+      ],
+      "minimumMargin": 14,
+      "sha256": "0becf1ea7cfd2e62fc346a5cf5b7706bd9e6e9e338dda07692d425023ef2187d"
+    },
+    {
+      "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_run_e_sheet_v001.png",
+      "size": [
+        512,
+        64
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 8,
+      "bounds": [
+        [
+          15,
+          19,
+          50,
+          44
+        ],
+        [
+          14,
+          18,
+          46,
+          43
+        ],
+        [
+          16,
+          17,
+          43,
+          42
+        ],
+        [
+          12,
+          19,
+          48,
+          45
+        ],
+        [
+          12,
+          19,
+          47,
+          45
+        ],
+        [
+          17,
+          19,
+          46,
+          44
+        ],
+        [
+          17,
+          17,
+          42,
+          43
+        ],
+        [
+          12,
+          18,
+          48,
+          44
+        ]
+      ],
+      "minimumMargin": 12,
+      "sha256": "840593ceedf37d596108421788265c4d35a86fb858d8aa660b9b3c152cef8b41"
+    },
+    {
+      "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_attack_e_sheet_v001.png",
+      "size": [
+        384,
+        64
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 6,
+      "bounds": [
+        [
+          18,
+          20,
+          48,
+          45
+        ],
+        [
+          17,
+          14,
+          46,
+          45
+        ],
+        [
+          16,
+          20,
+          52,
+          45
+        ],
+        [
+          19,
+          19,
+          61,
+          41
+        ],
+        [
+          19,
+          19,
+          48,
+          44
+        ],
+        [
+          18,
+          20,
+          48,
+          44
+        ]
+      ],
+      "minimumMargin": 3,
+      "sha256": "6af8bae98f659517d48ee53ca0212e4402def8540cf23d7639ccf4c789072941"
+    },
+    {
+      "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_hit_e_sheet_v001.png",
+      "size": [
+        128,
+        64
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 2,
+      "bounds": [
+        [
+          14,
+          16,
+          49,
+          44
+        ],
+        [
+          15,
+          21,
+          49,
+          45
+        ]
+      ],
+      "minimumMargin": 14,
+      "sha256": "4c194faa4d7988ff23e754938609f22e6518ed9988a50098ae5644a35630434e"
+    },
+    {
+      "output": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_death_e_sheet_v001.png",
+      "size": [
+        512,
+        64
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 8,
+      "bounds": [
+        [
+          18,
+          20,
+          50,
+          53
+        ],
+        [
+          20,
+          21,
+          49,
+          53
+        ],
+        [
+          15,
+          23,
+          50,
+          49
+        ],
+        [
+          12,
+          23,
+          56,
+          50
+        ],
+        [
+          16,
+          21,
+          57,
+          47
+        ],
+        [
+          9,
+          23,
+          54,
+          45
+        ],
+        [
+          10,
+          22,
+          55,
+          45
+        ],
+        [
+          9,
+          23,
+          54,
+          44
+        ]
+      ],
+      "minimumMargin": 7,
+      "sha256": "6ad22f7de4bed466667274599baf01cf15b8ff2ea86a1548c923077c7a698153"
+    },
+    {
+      "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_idle_e_sheet_v001.png",
+      "size": [
+        384,
+        96
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 4,
+      "bounds": [
+        [
+          19,
+          23,
+          73,
+          72
+        ],
+        [
+          19,
+          23,
+          73,
+          74
+        ],
+        [
+          19,
+          24,
+          72,
+          72
+        ],
+        [
+          20,
+          24,
+          75,
+          74
+        ]
+      ],
+      "minimumMargin": 19,
+      "sha256": "149256aa8a16eb6aa81abc4a1ef0d496f416e027c5adb2ab8a9aaeb67aae377c"
+    },
+    {
+      "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_walk_e_sheet_v001.png",
+      "size": [
+        768,
+        96
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 8,
+      "bounds": [
+        [
+          18,
+          25,
+          73,
+          73
+        ],
+        [
+          17,
+          24,
+          70,
+          74
+        ],
+        [
+          18,
+          22,
+          69,
+          74
+        ],
+        [
+          13,
+          23,
+          75,
+          74
+        ],
+        [
+          17,
+          24,
+          74,
+          73
+        ],
+        [
+          17,
+          23,
+          70,
+          75
+        ],
+        [
+          18,
+          22,
+          65,
+          75
+        ],
+        [
+          16,
+          23,
+          74,
+          73
+        ]
+      ],
+      "minimumMargin": 13,
+      "sha256": "906c416635e308941e4b4c7409b6e6fff0d5634b2ee8bc4be788d3b50025ae58"
+    },
+    {
+      "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_attack_e_sheet_v001.png",
+      "size": [
+        576,
+        96
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 6,
+      "bounds": [
+        [
+          21,
+          23,
+          76,
+          75
+        ],
+        [
+          19,
+          22,
+          74,
+          78
+        ],
+        [
+          17,
+          22,
+          76,
+          74
+        ],
+        [
+          15,
+          26,
+          93,
+          72
+        ],
+        [
+          21,
+          23,
+          76,
+          74
+        ],
+        [
+          20,
+          23,
+          76,
+          75
+        ]
+      ],
+      "minimumMargin": 3,
+      "sha256": "2d6377476ad0a1bce4f8f21f13248c8899b8731513f1810344e2ec0d65754839"
+    },
+    {
+      "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_hit_e_sheet_v001.png",
+      "size": [
+        192,
+        96
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 2,
+      "bounds": [
+        [
+          19,
+          20,
+          85,
+          75
+        ],
+        [
+          17,
+          22,
+          74,
+          74
+        ]
+      ],
+      "minimumMargin": 11,
+      "sha256": "58802e64d8c7196297288abc100fa59299f447121a05beac1c89faf3c9148227"
+    },
+    {
+      "output": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_death_e_sheet_v001.png",
+      "size": [
+        768,
+        96
+      ],
+      "rgba": true,
+      "binaryAlpha": true,
+      "transparentRGBZero": true,
+      "magentaResiduePixels": 0,
+      "uniqueFrames": 8,
+      "bounds": [
+        [
+          21,
+          24,
+          74,
+          80
+        ],
+        [
+          20,
+          24,
+          72,
+          76
+        ],
+        [
+          14,
+          25,
+          75,
+          77
+        ],
+        [
+          14,
+          26,
+          80,
+          79
+        ],
+        [
+          11,
+          24,
+          81,
+          72
+        ],
+        [
+          7,
+          25,
+          82,
+          72
+        ],
+        [
+          9,
+          25,
+          84,
+          71
+        ],
+        [
+          7,
+          26,
+          81,
+          69
+        ]
+      ],
+      "minimumMargin": 7,
+      "sha256": "43618eee9a9fd6217dc6e3b3a7ebb2774da14ae4b855286201f82ce97c3339af"
+    }
+  ],
+  "nativeSources": [
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_attack_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-037d8495-595c-488e-850f-00bddcd6980d.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "6510bcb5ac27a4105ca9845ae0a865cee5b6a519c2a8571da016d7e9c5749b73",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_death_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-618e5305-ca4b-4a40-ab0a-23944b871d52.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "0ee82b3f6cb3dffb059fe00b454054c99d574cf831ef571d70e320b1a745686f",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_hit_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-122d8761-bdd1-41e3-8206-d56462542fb8.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "sha256": "5a10b5f3ca89e1f11339e93d6c848c79d6d86fcbec9cbcbbe8b86c8bebfcaeae",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_idle_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-390c5fc7-6da7-4292-bc7e-91c9cf43f5d8.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "a8296c03eafa43fa579454e2eab9730eb0537c54c73c5e8c1c84d6023a78491a",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_ref_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-63be36d6-0a87-4d9e-a8dc-d1813b16e990.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "bedef6d9962a559db160bb84abf86dad3f46e9cbe5d15b4274c5011045ccf632",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_walk_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-1066f086-e5dd-4a4c-a344-2c64712b8faf.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "3e62a776dc86759c1d4abe85728753385cfb39a208eb6e1371620c45c8324d6f",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_attack_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-350f0903-bb90-4fff-a93c-09f4b636157b.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "2ef30f289d54ecda6443a4fba4af48a7c84c5550e65a46f6d530a04721528ec4",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_death_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-9c3b7b98-24cb-4b95-b132-81823f01ca76.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "5ebc47c43e9f23f6e79e559af11efc8fd1e1b9d0991407bbc5d27d64021d61a6",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_hit_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-b11e44bc-1903-4b23-b58c-1cf520c1b87c.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "sha256": "5d0b5016c3350aa25753c4619559cacbd2c72900ed3fff547e2f88b39d25cbf2",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_idle_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-714d067f-2a91-4e9a-8d3c-bf7a3874bfcc.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "1bf9609d0c947c82c52e3dde12d72c9d52a16767eb7802f5de7736b07f5dac76",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_ref_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-c6c7450a-e50d-4723-bc65-991122bbb4bf.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "10c2c5253e9166f4124d1f2f170ed121e1947327669743737951a8729c8e66ea",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_walk_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-a4c2ca6c-57e7-427e-86b7-56bc0019c1de.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "cc19858cecd2d500817b17e83e5578d8ba73e50569547897c0621359552fc326",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_lineup_core_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-c02ccdfb-be9d-4e64-9da4-624386eded9b.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "7a049c5b64fb70c02286a51018083613daf1b1a02d176ce4ec37f41fd91b8cd8",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_attack_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-71f26fb4-3e63-45fa-9199-99e83fc4151f.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "c67dc3915ba2aa2be858ba892cdb9783fb30e93dd935814151e570a58f0abde7",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_death_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-dceb9b3f-85ef-432c-a94c-a6c736da193f.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "d27da16ce9fe0e4dfa7c7f1f807fa16a2d0e90419bd7e25b0cd1163563375772",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_hit_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-ebc13553-fc3a-4508-948a-aa5951d56591.png",
+      "size": [
+        1774,
+        887
+      ],
+      "mode": "RGB",
+      "sha256": "6371f45ddd401d7cf44666d3f3ce6d5cf86e682514ead193548bdc6a30cb2cad",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_idle_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-b2be96b6-43ab-4a6e-8be5-e0c81c7f9c02.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "6950911525682f140ade04059e26f620eb885b93663acd53ce34024f6d318ed1",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_ref_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-a773db4f-d3f0-44e0-933f-906d265b1905.png",
+      "size": [
+        1254,
+        1254
+      ],
+      "mode": "RGB",
+      "sha256": "95dbb0fdfdcfa1b6fe48e50714b11607d33e64766d8ed00a5b61545e7e69cfd4",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_run_e_sheet_v001.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-7d5702a6-5fcd-42c7-bc06-84a0f0d005e5.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "2a9a803310db1d5c3bacc4f31ecbc7c83efa8c48c7a666e2c3c0967c654638c4",
+      "byteIdentical": true
+    },
+    {
+      "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_run_e_sheet_v002.png",
+      "generated": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0bb8a-d7b8-73e3-85a2-c47563f6e0d6\\exec-ee570903-6e24-4eba-918e-e1655eeb9a1b.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "sha256": "9ddd599ddb4fc644d1d3d998e8de57718d91da8ac3bc12a9d315ec9fb8f3ceb3",
+      "byteIdentical": true
+    }
+  ]
+}

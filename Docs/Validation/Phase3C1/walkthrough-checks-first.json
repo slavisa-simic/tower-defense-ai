@@ -1,0 +1,267 @@
+[
+  {
+    "name": "Scene uses authoritative 32x18 XY grid",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Preparation never auto spawns",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Normal scene has no visible placeholder sprites",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Decorative props have no colliders",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "machine-gun-nest select",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "machine-gun-nest valid production ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "machine-gun-nest invalid red ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "barbed-wire select",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "barbed-wire valid production ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "barbed-wire invalid red ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "land-mine select",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "land-mine valid production ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "land-mine invalid red ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "sniper-tower select",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "sniper-tower valid production ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "sniper-tower invalid red ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Purchases preserve economy and HUD",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 1 started by UI",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 1 controls reflect combat",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 1 completes through real combat",
+    "pass": true,
+    "detail": {
+      "CompletedWaves": 1,
+      "State": 3,
+      "CurrentHealth": 100,
+      "kills": 10
+    }
+  },
+  {
+    "name": "Wave 1 pays exact kills and completion",
+    "pass": true,
+    "detail": {
+      "before": 75,
+      "after": 425,
+      "kills": 10,
+      "bonus": 100
+    }
+  },
+  {
+    "name": "Wave 1 returns cleanly",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 2 started by UI",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 2 controls reflect combat",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 2 completes through real combat",
+    "pass": true,
+    "detail": {
+      "CompletedWaves": 2,
+      "State": 3,
+      "CurrentHealth": 20,
+      "kills": 15
+    }
+  },
+  {
+    "name": "Wave 2 pays exact kills and completion",
+    "pass": true,
+    "detail": {
+      "before": 125,
+      "after": 600,
+      "kills": 15,
+      "bonus": 100
+    }
+  },
+  {
+    "name": "Wave 2 returns cleanly",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 3 started by UI",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 3 controls reflect combat",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 3 completes through real combat",
+    "pass": true,
+    "detail": {
+      "CompletedWaves": 3,
+      "State": 3,
+      "CurrentHealth": 20,
+      "kills": 20
+    }
+  },
+  {
+    "name": "Wave 3 pays exact kills and completion",
+    "pass": true,
+    "detail": {
+      "before": 300,
+      "after": 900,
+      "kills": 20,
+      "bonus": 100
+    }
+  },
+  {
+    "name": "Wave 3 returns cleanly",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 4 started by UI",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 4 controls reflect combat",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 4 completes through real combat",
+    "pass": true,
+    "detail": {
+      "CompletedWaves": 4,
+      "State": 3,
+      "CurrentHealth": 20,
+      "kills": 25
+    }
+  },
+  {
+    "name": "Wave 4 pays exact kills and completion",
+    "pass": true,
+    "detail": {
+      "before": 675,
+      "after": 1400,
+      "kills": 25,
+      "bonus": 100
+    }
+  },
+  {
+    "name": "Wave 4 returns cleanly",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 5 started by UI",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 5 controls reflect combat",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Wave 5 completes through real combat",
+    "pass": true,
+    "detail": {
+      "CompletedWaves": 5,
+      "State": 3,
+      "CurrentHealth": 20,
+      "kills": 30
+    }
+  },
+  {
+    "name": "Wave 5 pays exact kills and completion",
+    "pass": true,
+    "detail": {
+      "before": 1200,
+      "after": 2050,
+      "kills": 30,
+      "bonus": 100
+    }
+  },
+  {
+    "name": "Wave 5 returns cleanly",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Base HP bar follows gameplay",
+    "pass": false,
+    "detail": null
+  }
+]

@@ -1,0 +1,13 @@
+{
+  "total": 627,
+  "unchanged": 621,
+  "changed": [
+    "Assets/Game/Prefabs/Defenses/BarbedWire.prefab",
+    "Assets/Game/Prefabs/Defenses/LandMine.prefab",
+    "Assets/Game/Prefabs/Defenses/MachineGunNest.prefab",
+    "Assets/Game/Prefabs/Defenses/SniperTower.prefab",
+    "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+    "Assets/Game/Scripts/Presentation/TurretPresentation.cs"
+  ],
+  "missing": []
+}

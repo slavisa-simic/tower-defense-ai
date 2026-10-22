@@ -1,0 +1,30 @@
+{
+  "initialStandardEnemies": 150,
+  "rows": [
+    {
+      "kind": "UndeadOsama",
+      "hp": 24000,
+      "activeStandardEnemies": 150,
+      "killReward": 2500,
+      "targeting": true,
+      "hud": [
+        "",
+        "UNDEAD OSAMA BIN LADEN  24.000 / 24.000"
+      ],
+      "breach": true
+    },
+    {
+      "kind": "PirateWarlord",
+      "hp": 18000,
+      "activeStandardEnemies": 150,
+      "killReward": 2200,
+      "targeting": true,
+      "hud": [
+        "BOSS BREACH +1000 HOMICIDES",
+        "SOMALI PIRATE WARLORD  18.000 / 18.000"
+      ],
+      "breach": true
+    }
+  ],
+  "ReusedEnemies": 2
+}

@@ -1,0 +1,123 @@
+[
+  {
+    "wave": 15,
+    "count": 29,
+    "completed": true,
+    "kills": 29,
+    "homicides": 0,
+    "startBalance": 4065,
+    "balance": 5260,
+    "peak": 8,
+    "seconds": 13.4417172
+  },
+  {
+    "wave": 16,
+    "count": 33,
+    "completed": true,
+    "kills": 33,
+    "homicides": 0,
+    "startBalance": 5260,
+    "balance": 6560,
+    "peak": 7,
+    "seconds": 12.507349099999999
+  },
+  {
+    "wave": 17,
+    "count": 32,
+    "completed": true,
+    "kills": 32,
+    "homicides": 0,
+    "startBalance": 6560,
+    "balance": 7880,
+    "peak": 6,
+    "seconds": 13.085135099999999
+  },
+  {
+    "wave": 18,
+    "count": 48,
+    "completed": true,
+    "kills": 48,
+    "homicides": 0,
+    "startBalance": 7880,
+    "balance": 9465,
+    "peak": 8,
+    "seconds": 16.2187275
+  },
+  {
+    "wave": 19,
+    "count": 46,
+    "completed": true,
+    "kills": 46,
+    "homicides": 0,
+    "startBalance": 9465,
+    "balance": 11045,
+    "peak": 9,
+    "seconds": 13.7750226
+  },
+  {
+    "wave": 20,
+    "count": 38,
+    "completed": true,
+    "kills": 38,
+    "homicides": 0,
+    "startBalance": 11045,
+    "balance": 12590,
+    "peak": 7,
+    "seconds": 16.2734722
+  },
+  {
+    "wave": 21,
+    "count": 49,
+    "completed": true,
+    "kills": 49,
+    "homicides": 0,
+    "startBalance": 12590,
+    "balance": 14315,
+    "peak": 11,
+    "seconds": 12.530939799999999
+  },
+  {
+    "wave": 22,
+    "count": 42,
+    "completed": true,
+    "kills": 42,
+    "homicides": 0,
+    "startBalance": 14315,
+    "balance": 16010,
+    "peak": 9,
+    "seconds": 11.5376151
+  },
+  {
+    "wave": 23,
+    "count": 49,
+    "completed": true,
+    "kills": 49,
+    "homicides": 0,
+    "startBalance": 16010,
+    "balance": 17845,
+    "peak": 9,
+    "seconds": 13.052038
+  },
+  {
+    "wave": 24,
+    "count": 50,
+    "completed": true,
+    "kills": 50,
+    "homicides": 0,
+    "startBalance": 17845,
+    "balance": 19730,
+    "peak": 11,
+    "seconds": 14.065570399999999
+  },
+  {
+    "wave": 25,
+    "count": 52,
+    "completed": true,
+    "kills": 52,
+    "homicides": 0,
+    "startBalance": 19730,
+    "balance": 21690,
+    "peak": 11,
+    "seconds": 14.2242483
+  }
+]

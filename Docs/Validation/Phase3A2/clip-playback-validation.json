@@ -1,0 +1,141 @@
+{
+  "clips": [
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_idle_e_v001.anim",
+      "count": 4,
+      "fps": 5.0,
+      "loop": true,
+      "duration": 0.8,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    },
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_walk_e_v001.anim",
+      "count": 8,
+      "fps": 8.0,
+      "loop": true,
+      "duration": 1.0,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    },
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_attack_e_v001.anim",
+      "count": 6,
+      "fps": 10.0,
+      "loop": false,
+      "duration": 0.6,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    },
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_hit_e_v001.anim",
+      "count": 2,
+      "fps": 10.0,
+      "loop": false,
+      "duration": 0.2,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    },
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_death_e_v001.anim",
+      "count": 8,
+      "fps": 9.0,
+      "loop": false,
+      "duration": 0.8888889,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    },
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_idle_e_v001.anim",
+      "count": 4,
+      "fps": 5.0,
+      "loop": true,
+      "duration": 0.8,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    },
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_run_e_v001.anim",
+      "count": 8,
+      "fps": 12.0,
+      "loop": true,
+      "duration": 0.6666666,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    },
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_attack_e_v001.anim",
+      "count": 6,
+      "fps": 10.0,
+      "loop": false,
+      "duration": 0.6,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    },
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_hit_e_v001.anim",
+      "count": 2,
+      "fps": 10.0,
+      "loop": false,
+      "duration": 0.2,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    },
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_death_e_v001.anim",
+      "count": 8,
+      "fps": 9.0,
+      "loop": false,
+      "duration": 0.8888889,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    },
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_idle_e_v001.anim",
+      "count": 4,
+      "fps": 5.0,
+      "loop": true,
+      "duration": 0.8,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    },
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_walk_e_v001.anim",
+      "count": 8,
+      "fps": 6.0,
+      "loop": true,
+      "duration": 1.33333325,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    },
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_attack_e_v001.anim",
+      "count": 6,
+      "fps": 10.0,
+      "loop": false,
+      "duration": 0.6,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    },
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_hit_e_v001.anim",
+      "count": 2,
+      "fps": 10.0,
+      "loop": false,
+      "duration": 0.2,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    },
+    {
+      "clipPath": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_death_e_v001.anim",
+      "count": 8,
+      "fps": 9.0,
+      "loop": false,
+      "duration": 0.8888889,
+      "samplingPassed": true,
+      "transformsUnchanged": true
+    }
+  ],
+  "sampledFrames": 84,
+  "activeSceneUnchanged": true
+}

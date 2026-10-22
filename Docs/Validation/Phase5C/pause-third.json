@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "command": "command test_status",
+  "data": {
+    "command": "test_status",
+    "parameters": {},
+    "result": "{\r\n  \"status\": \"completed\",\r\n  \"duration\": 10.87,\r\n  \"summary\": {\r\n    \"total\": 1,\r\n    \"passed\": 0,\r\n    \"failed\": 1,\r\n    \"skipped\": 0,\r\n    \"inconclusive\": 0\r\n  },\r\n  \"results\": [\r\n    {\r\n      \"FullName\": \"ShorelineDefense.Tests.PersistencePlayTests.PausePreservesDoubleSpeedAndActiveQuitUsesPreparationCheckpoint\",\r\n      \"Status\": \"Failed\",\r\n      \"Duration\": 10.8370034,\r\n      \"Message\": \"  Transition 1; pending=False; loading=False; title=BORDER DEFENDERS\\r\\n  Expected string length 22 but was 8. Strings differ at index 0.\\r\\n  Expected: \\\"CoastalDefense_TopDown\\\"\\r\\n  But was:  \\\"MainMenu\\\"\\r\\n  -----------^\\r\\n\",\r\n      \"StackTrace\": \"at ShorelineDefense.Tests.PersistencePlayTests+<Transition>d__6.MoveNext () [0x000e5] in C:\\\\Users\\\\Slavisa\\\\Documents\\\\ChatGPT\\\\border-defenders\\\\Assets\\\\Game\\\\Tests\\\\PlayMode\\\\PersistencePlayTests.cs:35\\r\\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\\\Library\\\\PackageCache\\\\com.unity.test-framework@bd7f943e9647\\\\UnityEngine.TestRunner\\\\NUnitExtensions\\\\Attributes\\\\TestEnumerator.cs:44\\r\\n\"\r\n    }\r\n  ]\r\n}",
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

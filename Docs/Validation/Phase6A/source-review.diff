@@ -1,0 +1,359 @@
+--- Docs\Validation\Phase6A\baseline-scripts\Building\BuildManager.cs
++++ Assets\Game\Scripts\Building\BuildManager.cs
+@@ -72,8 +72,8 @@
+             if (game == null || !game.IsPlaying) return PlacementResult.NotPlaying;
+             if (definition == null || !definition.IsValid || economy == null || enemies == null) return PlacementResult.InvalidDefinition;
+             if (grid?.Grid != null && Events?.Modifiers.floodedColumns > 0 && grid.Grid.Plane == GameplayPlane.XY) {
+-                int first = grid.Definition.WaterBandCells + grid.Definition.BeachBandCells;
+-                if (cell.x < first + Events.Modifiers.floodedColumns && cell.x + definition.Footprint.x > first) return PlacementResult.NotBuildable;
++                for (int x = 0; x < definition.Footprint.x; x++) for (int y = 0; y < definition.Footprint.y; y++)
++                    if (grid.Definition.IsFloodable(cell + new Vector2Int(x,y), Events.Modifiers.floodedColumns)) return PlacementResult.NotBuildable;
+             }
+             return PlacementRules.Validate(grid?.Grid, cell, definition.Footprint, definition.Cost, economy.Money);
+         }
+--- Docs\Validation\Phase6A\baseline-scripts\Grid\BattlefieldDefinition.cs
++++ Assets\Game\Scripts\Grid\BattlefieldDefinition.cs
+@@ -16,6 +16,16 @@
+         [SerializeField] private Vector2Int baseCell = new Vector2Int(29, 9);
+         [Tooltip("Centered reserved base area; remains walkable, never buildable.")]
+         [SerializeField] private Vector2Int baseFootprint = Vector2Int.one;
++        [Tooltip("Optional authored cell masks. Empty arrays preserve the original map.")]
++        public Vector2Int[] waterCells = System.Array.Empty<Vector2Int>();
++        public Vector2Int[] groundCells = System.Array.Empty<Vector2Int>();
++        public Vector2Int[] blockedCells = System.Array.Empty<Vector2Int>();
++        public Vector2Int[] noBuildCells = System.Array.Empty<Vector2Int>();
++        public Vector2Int[] floodableCells = System.Array.Empty<Vector2Int>();
++        public bool authoredWater;
++        public bool IsFloodable(Vector2Int cell, int columns) => authoredWater
++            ? System.Array.IndexOf(floodableCells, cell) >= 0
++            : cell.x >= waterBandCells + beachBandCells && cell.x < waterBandCells + beachBandCells + columns;
+ 
+         public int Width => width;
+         public int Height => height;
+@@ -33,13 +43,17 @@
+             for (int x = 0; x < width; x++)
+             {
+                 var type = TerrainAt(new Vector2Int(x, y));
+-                grid.SetCell(new Vector2Int(x, y), new GridCell(type, true, type == TerrainType.Ground));
++                var cell = new Vector2Int(x,y);
++                grid.SetCell(cell, new GridCell(type, type != TerrainType.Blocked && (!authoredWater || type != TerrainType.Water), type == TerrainType.Ground && System.Array.IndexOf(noBuildCells, cell) < 0));
+             }
+             return grid;
+         }
+ 
+         public TerrainType TerrainAt(Vector2Int cell)
+         {
++            if (System.Array.IndexOf(blockedCells, cell) >= 0) return TerrainType.Blocked;
++            if (System.Array.IndexOf(waterCells, cell) >= 0) return TerrainType.Water;
++            if (System.Array.IndexOf(groundCells, cell) >= 0) return TerrainType.Ground;
+             Vector2Int baseMin = baseCell - new Vector2Int(baseFootprint.x / 2, baseFootprint.y / 2);
+             if (cell.x >= baseMin.x && cell.y >= baseMin.y &&
+                 cell.x < baseMin.x + baseFootprint.x && cell.y < baseMin.y + baseFootprint.y) return TerrainType.Base;
+--- Docs\Validation\Phase6A\baseline-scripts\Persistence\RunSaveCompatibility.cs
++++ Assets\Game\Scripts\Persistence\RunSaveCompatibility.cs
+@@ -21,7 +21,7 @@
+                 if (definition == null || !definition.IsValid || Mathf.RoundToInt(definition.MaxHealth * (definition.LevelData(item.level)?.health ?? 1)) != item.maxHealth) return false;
+                 if (item.x < 0 || item.y < 0 || (long)item.x + definition.Footprint.x > map.Width || (long)item.y + definition.Footprint.y > map.Height) return false;
+                 for (int x = 0; x < definition.Footprint.x; x++) for (int y = 0; y < definition.Footprint.y; y++)
+-                { var cell = new Vector2Int(item.x + x, item.y + y); if (map.TerrainAt(cell) != TerrainType.Ground || !cells.Add(cell)) return false; }
++                { var cell = new Vector2Int(item.x + x, item.y + y); if (map.TerrainAt(cell) != TerrainType.Ground || Array.IndexOf(map.noBuildCells, cell) >= 0 || !cells.Add(cell)) return false; }
+             }
+             bool Known(string id) => events != null && Array.Exists(events.events, e => e != null && e.id == id);
+             var state = data.events;
+--- Docs\Validation\Phase6A\baseline-scripts\Persistence\RunSaveData.cs
++++ Assets\Game\Scripts\Persistence\RunSaveData.cs
+@@ -5,7 +5,8 @@
+ {
+     [Serializable] public sealed class RunSaveData
+     {
+-        public int saveVersion = 1;
++        public int saveVersion = 2;
++        public string mapId = ShorelineDefense.Grid.MapCatalog.OriginalId;
+         public string runId, savedUtc;
+         public int wave, completedWaves, seed, money, maxHomicides;
+         public double duration;
+@@ -46,6 +47,7 @@
+     }
+     [Serializable] public sealed class RunRecord
+     {
++        public string mapId;
+         public string runId, endedUtc;
+         public int wave, peakEnemies;
+         public long kills, homicides, bosses, earned;
+--- Docs\Validation\Phase6A\baseline-scripts\Persistence\RunSession.cs
++++ Assets\Game\Scripts\Persistence\RunSession.cs
+@@ -30,6 +30,7 @@
+         private float saveAfter;
+         private WaveState lastWaveState;
+         private RunRecord finished;
++        public string MapId => FindFirstObjectByType<ShorelineDefense.Grid.MapRuntimeContext>()?.MapId ?? ShorelineDefense.Grid.MapCatalog.OriginalId;
+         public bool CanSave => Ready && game.IsPlaying && waves.IsEndless && waves.State == WaveState.Preparation && waves.CompletedWaves == waves.PreparationWaveNumber - 1;
+         private void Start()
+         {
+@@ -58,6 +59,7 @@
+         private void Restore(RunSaveData data)
+         {
+             if (!SaveGameService.Valid(data)) throw new InvalidOperationException("Invalid snapshot.");
++            if ((data.saveVersion == 1 ? ShorelineDefense.Grid.MapCatalog.OriginalId : data.mapId) != MapId) throw new InvalidOperationException("Wrong map for saved run.");
+             var definitions = FindFirstObjectByType<BuildHud>().Defenses;
+             if (!RunSaveCompatibility.Valid(data, definitions, builder.Battlefield.Definition, waves.EndlessSettings.eventSettings)) throw new InvalidOperationException("Save catalog or map is incompatible.");
+             RunId = data.runId; Duration = data.duration; border.ConfigureThreshold(data.maxHomicides);
+@@ -73,7 +75,7 @@
+         {
+             if (!CanSave) throw new InvalidOperationException("Progress is saved between waves.");
+             var money = builder.Economy;
+-            var data = new RunSaveData { runId = RunId, duration = Duration, wave = waves.CurrentWaveNumber, completedWaves = waves.CompletedWaves,
++            var data = new RunSaveData { mapId = MapId, runId = RunId, duration = Duration, wave = waves.CurrentWaveNumber, completedWaves = waves.CompletedWaves,
+                 seed = waves.RunSeed, money = money.Money, earned = money.TotalEarned, spent = money.TotalSpent, refunds = money.RefundIncome,
+                 dismantled = money.StructuresDismantled, maxHomicides = border.MaxHomicides, statistics = statistics.Capture(), events = waves.Events.Capture() };
+             foreach (var d in FindObjectsByType<DefenseBase>(FindObjectsSortMode.None))
+@@ -105,7 +107,7 @@
+         {
+             if (state != GameState.GameOver || finished != null) return;
+             dirty = false;
+-            finished = new RunRecord { runId = RunId, endedUtc = DateTime.UtcNow.ToString("O"), wave = statistics.HighestWaveReached,
++            finished = new RunRecord { mapId = MapId, runId = RunId, endedUtc = DateTime.UtcNow.ToString("O"), wave = statistics.HighestWaveReached,
+                 kills = statistics.TotalKills, homicides = statistics.Homicides, bosses = statistics.BossesKilled,
+                 earned = statistics.TotalMoneyEarned, duration = Duration, peakEnemies = statistics.PeakActiveEnemies };
+             FinalizeRun();
+--- Docs\Validation\Phase6A\baseline-scripts\Persistence\SaveGameService.cs
++++ Assets\Game\Scripts\Persistence\SaveGameService.cs
+@@ -19,7 +19,7 @@
+         public bool Delete(out string error) => store.Delete("active_run", out error);
+         public static bool Valid(RunSaveData d)
+         {
+-            if (d == null || d.saveVersion != 1 || !Guid.TryParse(d.runId, out _) || d.wave < 1 || d.wave > 1000000 ||
++            if (d == null || (d.saveVersion != 1 && d.saveVersion != 2) || (d.saveVersion == 2 && string.IsNullOrEmpty(d.mapId)) || !Guid.TryParse(d.runId, out _) || d.wave < 1 || d.wave > 1000000 ||
+                 d.completedWaves != d.wave - 1 || d.money < 0 || d.maxHomicides < 0 || double.IsNaN(d.duration) || double.IsInfinity(d.duration) || d.duration < 0 ||
+                 d.earned < 0 || d.spent < 0 || d.refunds < 0 || d.dismantled < 0 || d.statistics?.kills?.Length != 9 || d.events == null || d.structures == null || d.structures.Count > 2048) return false;
+             var s = d.statistics;
+--- Docs\Validation\Phase6A\baseline-scripts\Presentation\EndlessEventPresentation.cs
++++ Assets\Game\Scripts\Presentation\EndlessEventPresentation.cs
+@@ -11,6 +11,7 @@
+         [SerializeField] private GridManager battlefield;
+         [SerializeField] private Sprite fogSprite, wetSprite;
+         private SpriteRenderer fog, wet;
++        private SpriteRenderer[] dockFlood;
+         public bool FogVisible => fog != null && fog.enabled;
+         public bool FloodVisible => wet != null && wet.enabled;
+         public void Configure(WaveManager manager, GridManager grid, Sprite mist, Sprite bank)
+@@ -20,6 +21,17 @@
+             if (waves == null || battlefield?.Grid == null) return;
+             fog = Make("Event Mist", fogSprite, "Effects", 18, false);
+             wet = Make("Flooded No Build Strip", wetSprite, "GroundObjects", 1, true);
++            if (battlefield.Definition.authoredWater)
++            {
++                dockFlood = new SpriteRenderer[battlefield.Definition.floodableCells.Length];
++                for (int i = 0; i < dockFlood.Length; i++)
++                {
++                    var r = Make("Flooded Dock Cell", wetSprite, "GroundObjects", 1, true);
++                    r.size = Vector2.one * battlefield.Grid.CellSize;
++                    r.transform.position = battlefield.Grid.CellToWorld(battlefield.Definition.floodableCells[i]);
++                    r.color = new Color(.22f,.52f,.57f,.64f); dockFlood[i] = r;
++                }
++            }
+             waves.EventChanged += Refresh; Refresh();
+         }
+         private void OnEnable() { if (fog != null && waves != null) { waves.EventChanged += Refresh; Refresh(); } }
+@@ -40,6 +52,7 @@
+             fog.transform.position = grid.Origin + new Vector3(fog.size.x / 2, fog.size.y / 2, -.1f);
+             fog.color = new Color(.76f, .82f, .81f, .24f);
+             wet.enabled = modifiers?.floodedColumns > 0;
++            if (dockFlood != null) { foreach (var r in dockFlood) r.enabled = wet.enabled; wet.enabled = false; }
+             wet.size = new Vector2((modifiers?.floodedColumns ?? 0) * grid.CellSize, grid.Height * grid.CellSize);
+             wet.transform.position = grid.Origin + new Vector3((battlefield.Definition.WaterBandCells + battlefield.Definition.BeachBandCells) * grid.CellSize + wet.size.x / 2, wet.size.y / 2, -.02f);
+             wet.color = new Color(.22f, .52f, .57f, .64f);
+--- Docs\Validation\Phase6A\baseline-scripts\UI\HudArtPresentation.cs
++++ Assets\Game\Scripts\UI\HudArtPresentation.cs
+@@ -22,6 +22,14 @@
+         private void OnEnable()
+         {
+             var root = GetComponent<UIDocument>().rootVisualElement;
++            // The gameplay camera reserves HUD margins. Cover those pixels explicitly so
++            // a previous scene's backbuffer cannot remain visible outside its viewport.
++            if (Camera.main != null)
++            {
++                var viewport = Camera.main.rect;
++                Margin(root, "viewport-top-background", (1 - viewport.yMax) * 100, true);
++                Margin(root, "viewport-bottom-background", viewport.yMin * 100, false);
++            }
+             if (pixelFont != null) root.style.unityFontDefinition = FontDefinition.FromFont(pixelFont);
+             moneyPanel = root.Q("money-panel"); healthPanel = root.Q("health-panel"); healthFill = root.Q("health-fill");
+             if (economy == null || playerBase == null) return;
+@@ -35,6 +43,15 @@
+             if (statistics != null) statistics.OnHomicidesChanged -= OnHomicides;
+             moneyPanel?.RemoveFromClassList("money-gain"); moneyPanel?.RemoveFromClassList("money-spent");
+             healthPanel?.RemoveFromClassList("health-hit"); moneyUntil = healthUntil = 0;
++        }
++        private static void Margin(VisualElement root, string name, float percent, bool top)
++        {
++            if (root.Q(name) != null || percent <= 0) return;
++            var strip = new VisualElement { name = name, pickingMode = PickingMode.Ignore };
++            strip.style.position = Position.Absolute; strip.style.left = 0; strip.style.right = 0;
++            strip.style.height = Length.Percent(percent); strip.style.backgroundColor = new Color(.055f,.09f,.105f,1);
++            if (top) strip.style.top = 0; else strip.style.bottom = 0;
++            root.Insert(0,strip);
+         }
+         private void OnMoney(int amount)
+         {
+--- Docs\Validation\Phase6A\baseline-scripts\UI\ProductMenuController.cs
++++ Assets\Game\Scripts\UI\ProductMenuController.cs
+@@ -20,7 +20,13 @@
+         [SerializeField] private ShorelineDefense.Defenses.DefenseDefinition[] defenseCatalog;
+         [SerializeField] private ShorelineDefense.Grid.BattlefieldDefinition battlefield;
+         [SerializeField] private ShorelineDefense.Waves.EndlessEventSettings eventCatalog;
+-        private SaveGameService Saves => new SaveGameService(LocalGameData.Files, d => RunSaveCompatibility.Valid(d, defenseCatalog, battlefield, eventCatalog));
++        [SerializeField] private ShorelineDefense.Grid.MapCatalog maps;
++        private ShorelineDefense.Grid.MapDefinition selectedMap;
++        public void ConfigureMaps(ShorelineDefense.Grid.MapCatalog catalog) => maps = catalog;
++        private SaveGameService Saves => new SaveGameService(LocalGameData.Files, d => {
++            var map = maps?.Find(d.saveVersion == 1 ? ShorelineDefense.Grid.MapCatalog.OriginalId : d.mapId);
++            return (maps == null || map != null) && RunSaveCompatibility.Valid(d, defenseCatalog, map != null ? map.battlefield : battlefield, eventCatalog);
++        });
+         public static string Notice;
+         public bool ModalOpen => overlay != null && overlay.style.display != DisplayStyle.None;
+         public bool IsLoading => loading;
+@@ -84,19 +90,45 @@
+         }
+         public void NewGame()
+         {
++            ShowMapSelect();
++        }
++        public void ShowMapSelect()
++        {
++            Page("CHOOSE MAP", "maps"); selectedMap = null;
++            if (maps == null) { Copy("Map catalog unavailable."); ActionButton("maps-back", "BACK", Back); return; }
++            foreach (var map in maps.maps)
++            {
++                if (map == null) continue;
++                if (map.preview != null) { var image = new Image { sprite = map.preview, scaleMode = ScaleMode.ScaleToFit }; image.style.height = 140; content.Add(image); }
++                Copy(map.displayName + "\n" + map.description + "\n" + map.gameplayStyle);
++                ActionButton("map-" + map.id, "SELECT " + map.displayName, () => {
++                    selectedMap = map;
++                    Page(map.displayName, "map-confirm"); Copy(map.description + "\n" + map.gameplayStyle);
++                    ActionButton("map-start", "START", ConfirmNew); ActionButton("maps-back", "BACK", ShowMapSelect);
++                });
++            }
++            ActionButton("maps-back", "BACK", Back);
++        }
++        private void ConfirmNew()
++        {
+             if (Saves.Load(out _, out _))
+                 Confirm("START NEW RUN?", "Your current active run will be replaced. Completed run history will be kept.", "START NEW RUN", StartNew, Back);
+             else StartNew();
+         }
+         private void StartNew()
+         {
++            var map = selectedMap ?? maps?.Find(session != null ? session.MapId : ShorelineDefense.Grid.MapCatalog.OriginalId);
++            if (map == null) { Copy("Map unavailable."); return; }
+             if (!Saves.Delete(out string error)) { Copy("Could not replace active save: " + error); return; }
+-            RunSession.Pending = null; Load("CoastalDefense_TopDown");
++            RunSession.Pending = null;
++            Load(map.sceneName);
+         }
+         public void Continue()
+         {
+             if (!Saves.Load(out var data, out _)) { ShowMain(); return; }
+-            RunSession.Pending = data; Load("CoastalDefense_TopDown");
++            var map = maps?.Find(data.saveVersion == 1 ? ShorelineDefense.Grid.MapCatalog.OriginalId : data.mapId);
++            if (map == null) { Copy("Saved map unavailable. Save preserved."); return; }
++            RunSession.Pending = data; Load(map.sceneName);
+         }
+         private void Load(string scene)
+         { if (loading) return; loading = true; Time.timeScale = 1; Page("LOADING...", "loading"); SceneManager.LoadSceneAsync(scene); }
+@@ -132,7 +164,7 @@
+             foreach (var r in data.runs)
+             {
+                 string date = DateTime.TryParse(r.endedUtc, out var ended) ? ended.ToLocalTime().ToString("yyyy-MM-dd HH:mm") : "Unknown date";
+-                Copy($"{date}\nWave {r.wave}  /  Kills {r.kills:N0}\nHomicides {r.homicides:N0}  /  Bosses {r.bosses:N0}\nEarned {r.earned:N0} RSD  /  {FormatDuration(r.duration)}");
++                Copy($"{maps?.Find(r.mapId)?.displayName ?? "DANUBE BORDER"}\n{date}\nWave {r.wave}  /  Kills {r.kills:N0}\nHomicides {r.homicides:N0}  /  Bosses {r.bosses:N0}\nEarned {r.earned:N0} RSD  /  {FormatDuration(r.duration)}");
+             }
+             if (history.Error != null) Copy("Some run history could not be loaded: " + history.Error);
+             ActionButton("history-back", "BACK", Back);
+@@ -167,10 +199,11 @@
+             if (state != GameState.GameOver) return;
+             Page("BORDER DEFENSE COLLAPSED", "over");
+             var stats = FindFirstObjectByType<RunStatistics>();
++            Copy(maps?.Find(session.MapId)?.displayName ?? "DANUBE BORDER");
+             Copy($"WAVE REACHED {stats.HighestWaveReached}\nTOTAL KILLS {stats.TotalKills:N0}\nHOMICIDES {stats.Homicides:N0}\nBOSSES KILLED {stats.BossesKilled:N0}\nRSD EARNED {stats.TotalMoneyEarned:N0}\nSTRUCTURES BUILT {stats.StructuresBuilt}\nDURATION {FormatDuration(session.Duration)}");
+             // Existing game-over label remains for legacy scene/tests; product overlay owns this view.
+             root.Q<Label>("game-over").style.visibility = Visibility.Hidden;
+-            ActionButton("over-new", "NEW RUN", () => { if (session.FinalizeRun()) StartNew(); else Copy(session.Feedback); });
++            ActionButton("over-new", "NEW RUN", () => { if (session.FinalizeRun()) ShowMapSelect(); else Copy(session.Feedback); });
+             ActionButton("over-main", "MAIN MENU", ReturnToMenu);
+         }
+         private void Update()
+--- Docs\Validation\Phase6A\baseline-scripts\Waves\BoatLandingSystem.cs
++++ Assets\Game\Scripts\Waves\BoatLandingSystem.cs
+@@ -13,6 +13,8 @@
+     {
+         public Vector3 riverEntry;
+         public Vector3 berth;
++        public bool authoredSector;
++        public LandingSector sector;
+         public Vector3[] unloadingPositions = Array.Empty<Vector3>();
+     }
+ 
+@@ -53,6 +55,7 @@
+         { eventModifiers = modifiers; targetSector = sector; }
+         public LandingSector SectorFor(RiverLandingPoint point)
+         {
++            if (point.authoredSector) return point.sector;
+             var grid = spawner.Battlefield.Grid;
+             float fraction = (point.berth.y - grid.Origin.y) / (grid.Height * grid.CellSize);
+             return fraction < 1f / 3 ? LandingSector.South : fraction > 2f / 3 ? LandingSector.North : LandingSector.Center;
+@@ -108,9 +111,9 @@
+                 // into every free lane. The fifth allows supporting landings elsewhere.
+                 if (eventModifiers?.landingPattern == LandingPattern.Concentrated && landingSequence % 5 != 4 && SectorFor(point) != targetSector) continue;
+                 bool entryOccupied = false; int laneCount = 0;
+-                foreach (var active in boats) if (active.point == index) {
+-                    laneCount++;
+-                    if ((active.visual.transform.position - point.riverEntry).sqrMagnitude < 16) entryOccupied = true;
++                foreach (var active in boats) {
++                    if (active.point == index) laneCount++;
++                    if ((active.point == index || spawner.Battlefield.Definition.authoredWater) && (active.visual.transform.position - point.riverEntry).sqrMagnitude < 16) entryOccupied = true;
+                 }
+                 if (entryOccupied) continue;
+                 float score = laneCount * 4 + recentLandings[index] / (float)Mathf.Max(1, landingSequence) +
+@@ -160,6 +163,7 @@
+             }
+             return false;
+         }
++        public bool IsValidApproach(RiverLandingPoint point) => IsRiverLane(point);
+         private bool IsRiverLane(RiverLandingPoint point)
+         {
+             var battlefield = spawner != null ? spawner.Battlefield : null;
+@@ -168,6 +172,24 @@
+             var sprite = boatPrefab.GetComponentInChildren<SpriteRenderer>()?.sprite;
+             if (sprite == null) return false;
+             var grid = battlefield.Grid;
++            if (battlefield.Definition.authoredWater)
++            {
++                if (!Mathf.Approximately(point.berth.z, grid.Origin.z) || !Mathf.Approximately(point.riverEntry.z, grid.Origin.z)) return false;
++                if (point.riverEntry == point.berth) return false;
++                // Sample the swept hull conservatively. Off-grid river is allowed on left/bottom only.
++                int steps = Mathf.CeilToInt(Vector3.Distance(point.riverEntry, point.berth) / (grid.CellSize * .25f));
++                for (int i = 0; i <= steps; i++)
++                {
++                    var center = Vector3.Lerp(point.riverEntry, point.berth, (float)i / steps);
++                    for (int x = -1; x <= 1; x++) for (int y = -1; y <= 1; y++)
++                    {
++                        var sample = center + new Vector3(x * sprite.bounds.extents.x, y * sprite.bounds.extents.y, 0);
++                        if (grid.TryWorldToCell(sample, out var cell)) { if (grid.GetCell(cell).Terrain != TerrainType.Water) return false; }
++                        else if (sample.x >= grid.Origin.x && sample.y >= grid.Origin.y) return false;
++                    }
++                }
++                return true;
++            }
+             float shore = grid.Origin.x + battlefield.Definition.WaterBandCells * grid.CellSize;
+             float halfWidth = sprite.bounds.extents.x, halfHeight = sprite.bounds.extents.y;
+             // Straight horizontal lanes only: both the hull and its full swept path stay in river space.
+@@ -188,7 +210,7 @@
+                     // Incoming hulls queue behind an occupied berth/approach; unloading remains per boat.
+                     bool waiting = false;
+                     if (boat.stage == 0) foreach (var ahead in boats)
+-                        if (ahead != boat && ahead.point == boat.point && ahead.stage != 3 &&
++                        if (ahead != boat && (ahead.point == boat.point || spawner.Battlefield.Definition.authoredWater) && ahead.stage != 3 &&
+                             ahead.visual.transform.position.x > boat.visual.transform.position.x &&
+                             (ahead.visual.transform.position - boat.visual.transform.position).sqrMagnitude < 16) { waiting = true; break; }
+                     if (waiting) continue;

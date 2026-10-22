@@ -1,0 +1,55 @@
+{
+  "status": "completed",
+  "duration": 13.81,
+  "summary": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "ShorelineDefense.Tests.PersistencePlayTests.AnnouncedFogAndNextBossPlanSurviveReloadWithSameSeed",
+      "Status": "Passed",
+      "Duration": 2.2667121,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PersistencePlayTests.CorruptAndUnsupportedSavesKeepMenuUsableAndBackupRecoverable",
+      "Status": "Passed",
+      "Duration": 2.3133436,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PersistencePlayTests.FullMenuBuildWaveAutosaveContinueDeathHistoryAndFreshRunJourney",
+      "Status": "Passed",
+      "Duration": 3.3639608,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PersistencePlayTests.PausePreservesDoubleSpeedAndActiveQuitUsesPreparationCheckpoint",
+      "Status": "Passed",
+      "Duration": 2.678004,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PersistencePlayTests.SettingsApplyLivePresentationCapsAndPersistAcrossScene",
+      "Status": "Passed",
+      "Duration": 1.3156244,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PersistencePlayTests.StructuresEconomyWireEventsAndStatisticsRestoreWithoutRerollOrPayment",
+      "Status": "Passed",
+      "Duration": 1.839335,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

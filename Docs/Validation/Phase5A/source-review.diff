@@ -1,0 +1,303 @@
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Building/BuildManager.cs b/Assets/Game/Scripts/Building/BuildManager.cs
+index f70c08c..cfa3064 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Building/BuildManager.cs
++++ b/Assets/Game/Scripts/Building/BuildManager.cs
+@@ -17,8 +17,33 @@ namespace ShorelineDefense.Building
+         [SerializeField] private Transform defenseParent;
+         private Transform staging;
+         private bool placing;
++        [SerializeField] private ShorelineDefense.Waves.WaveManager waves;
++        [SerializeField, Min(.01f)] private float repairBasisFraction = .5f;
++        [SerializeField, Min(.01f)] private float preparationRepairMultiplier = .75f;
++        [SerializeField, Min(.01f)] private float waveRepairMultiplier = 1.25f;
++        public void ConfigureWaves(ShorelineDefense.Waves.WaveManager manager) => waves = manager;
++        public float RepairMultiplier => waves != null && (waves.State == ShorelineDefense.Waves.WaveState.Spawning || waves.State == ShorelineDefense.Waves.WaveState.Combat) ? waveRepairMultiplier : preparationRepairMultiplier;
++        public int UpgradeCost(DefenseBase defense) => defense != null && defense.Level < 3 ? defense.Definition.LevelData(defense.Level + 1)?.cost ?? 0 : 0;
++        public int RepairCost(DefenseBase defense) => defense != null && defense.IsAlive && defense.CurrentHealth < defense.MaxHealth ?
++            Math.Max(1, (int)Math.Min(int.MaxValue, Math.Ceiling(defense.TotalInvestment * (double)repairBasisFraction * (defense.MaxHealth - defense.CurrentHealth) / defense.MaxHealth * RepairMultiplier))) : 0;
++        public bool CanUpgrade(DefenseBase defense) => CanDismantle(defense) && defense.Level < 3 && UpgradeCost(defense) > 0 && economy.CanAfford(UpgradeCost(defense));
++        public bool CanRepair(DefenseBase defense) => CanDismantle(defense) && RepairCost(defense) > 0 && economy.CanAfford(RepairCost(defense));
++        public bool TryUpgrade(DefenseBase defense)
++        {
++            if (placing || !CanUpgrade(defense)) return false;
++            placing = true;
++            try { int cost = UpgradeCost(defense); if (!economy.TrySpend(cost)) return false; defense.ApplyUpgrade(cost); return true; }
++            finally { placing = false; }
++        }
++        public bool TryRepair(DefenseBase defense)
++        {
++            if (placing || !CanRepair(defense)) return false;
++            placing = true;
++            try { if (!economy.TrySpend(RepairCost(defense))) return false; defense.Repair(); return true; }
++            finally { placing = false; }
++        }
+         [SerializeField, Range(0, 1)] private float dismantleRefundFraction = .5f;
+-        public int RefundFor(DefenseBase defense) => defense != null ? (int)Math.Floor(defense.ConstructionCost * (double)(float.IsNaN(dismantleRefundFraction) ? .5f : Mathf.Clamp01(dismantleRefundFraction))) : 0;
++        public int RefundFor(DefenseBase defense) => defense != null ? (int)Math.Min(int.MaxValue, Math.Floor(defense.TotalInvestment * (double)(float.IsNaN(dismantleRefundFraction) ? .5f : Mathf.Clamp01(dismantleRefundFraction)))) : 0;
+         public bool CanDismantle(DefenseBase defense) => game != null && game.IsPlaying && defense != null && defense.Owner == this && defense.IsAlive && !defense.Dismantled && defense.gameObject.activeInHierarchy && !(defense.GetComponent<LandMine>()?.Exploded ?? false);
+         public bool TryDismantle(DefenseBase defense, out int refund) {
+             refund = 0;
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Building/PlacementInput.cs b/Assets/Game/Scripts/Building/PlacementInput.cs
+index 89901ab..c9e95f2 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Building/PlacementInput.cs
++++ b/Assets/Game/Scripts/Building/PlacementInput.cs
+@@ -10,14 +10,16 @@ namespace ShorelineDefense.Building
+         [SerializeField] private GridManager grid;
+         [SerializeField] private PlacementController placement;
+         [SerializeField] private UIDocument hud;
++        [SerializeField] private StructureSelection selection;
++        public void ConfigureSelection(StructureSelection controller) => selection = controller;
+         public void Configure(Camera camera, GridManager battlefield, PlacementController controller, UIDocument document)
+         { view = camera; grid = battlefield; placement = controller; hud = document; }
+         private void Update()
+         {
+-            if (!placement.IsInteracting) return;
+-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1)) { placement.Cancel(); return; }
++            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1)) { placement.Cancel(); selection?.Clear(); return; }
+             if (IsOverHud(Input.mousePosition) || !TryScreenToCell(Input.mousePosition, out var cell))
+             { placement.HidePreview(); return; }
++            if (!placement.IsInteracting) { if (Input.GetMouseButtonDown(0)) selection?.SelectCell(cell); return; }
+             placement.HoverCell(cell);
+             if (Input.GetMouseButtonDown(0)) { if(placement.IsDismantling)placement.TryDismantleCurrent();else placement.TryPlaceCurrent(out _); }
+         }
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Defenses/DefenseBase.cs b/Assets/Game/Scripts/Defenses/DefenseBase.cs
+index 724ef45..bbcb73c 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Defenses/DefenseBase.cs
++++ b/Assets/Game/Scripts/Defenses/DefenseBase.cs
+@@ -10,12 +10,36 @@ namespace ShorelineDefense.Defenses
+     public sealed class DefenseBase : MonoBehaviour, IDamageable
+     {
+         private Health health;
++        private bool removed;
+         public ShorelineDefense.Building.BuildManager Owner { get; private set; }
+         public int ConstructionCost { get; private set; }
++        public int Level { get; private set; } = 1;
++        public long TotalInvestment { get; private set; }
++        public int MaxHealth => health?.MaxHealth ?? 0;
++        public event Action Changed;
++        public event Action Upgraded;
++        private DefenseLevelData LevelStats => Definition.LevelData(Level);
++        public int Damage => Mathf.RoundToInt(Definition.Damage * (LevelStats?.damage ?? 1));
++        public float FireRate => Definition.FireRate * (LevelStats?.fireRate ?? 1);
++        public float MovementMultiplier => Mathf.Max(.05f, Definition.MovementMultiplier * (LevelStats?.slow ?? 1));
++        public float SplashRadiusInCells => Definition.HeavyWeapon.splashRadiusInCells * (LevelStats?.splash ?? 1);
++        public float BurnDuration => Definition.HeavyWeapon.burnDuration * (LevelStats?.burnDuration ?? 1);
++        public float BurnDps => Definition.HeavyWeapon.burnDps * (LevelStats?.burnDps ?? 1);
++        internal void ApplyUpgrade(int cost)
++        {
++            Level++;
++            TotalInvestment += cost;
++            health.IncreaseMaximum(Mathf.RoundToInt(Definition.MaxHealth * (LevelStats?.health ?? 1)));
++            Upgraded?.Invoke();
++            Changed?.Invoke();
++        }
++        internal void Repair() => health.RestoreFull();
++        private void HealthChanged() => Changed?.Invoke();
+         public bool Dismantled { get; private set; }
+-        internal void SetConstructionOwner(ShorelineDefense.Building.BuildManager owner, int cost) { Owner = owner; ConstructionCost = cost; }
++        internal void SetConstructionOwner(ShorelineDefense.Building.BuildManager owner, int cost) { Owner = owner; ConstructionCost = cost; TotalInvestment = cost; }
+         internal void RemoveByDismantle() {
+             Dismantled = true;
++            Changed?.Invoke();
+             ReleaseCells();
+             gameObject.SetActive(false);
+             Destroy(gameObject);
+@@ -26,9 +50,9 @@ namespace ShorelineDefense.Defenses
+         public GameStateController Game { get; private set; }
+         public EnemyRegistry Enemies { get; private set; }
+         public Vector2Int Anchor { get; private set; }
+-        public bool IsAlive => health != null && health.IsAlive && !Dismantled;
++        public bool IsAlive => health != null && health.IsAlive && !Dismantled && !removed;
+         public int CurrentHealth => health?.CurrentHealth ?? 0;
+-        public float Range => Definition.RangeInCells * grid.CellSize;
++        public float Range => Definition.RangeInCells * (LevelStats?.range ?? 1) * grid.CellSize;
+         public BattlefieldGrid Grid => grid;
+         public event Action Died;
+ 
+@@ -43,6 +67,7 @@ namespace ShorelineDefense.Defenses
+             Game = state;
+             Enemies = enemies;
+             health = new Health(definition.MaxHealth);
++            health.Changed += HealthChanged;
+             health.Died += OnDied;
+         }
+ 
+@@ -56,8 +81,10 @@ namespace ShorelineDefense.Defenses
+         private void ReleaseCells() => grid?.ClearOccupied(Anchor, footprint, this);
+         private void OnDestroy()
+         {
++            removed = true;
+             ReleaseCells();
+-            if (health != null) health.Died -= OnDied;
++            if (health != null) { health.Died -= OnDied; health.Changed -= HealthChanged; }
++            Changed?.Invoke();
+         }
+     }
+ }
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Defenses/DefenseDefinition.cs b/Assets/Game/Scripts/Defenses/DefenseDefinition.cs
+index 78cd7a8..cbffa47 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Defenses/DefenseDefinition.cs
++++ b/Assets/Game/Scripts/Defenses/DefenseDefinition.cs
+@@ -19,6 +19,10 @@ namespace ShorelineDefense.Defenses
+         [SerializeField] private TargetingMode targetingMode;
+         [SerializeField] private HeavyWeaponData heavyWeapon;
+         public HeavyWeaponData HeavyWeapon => heavyWeapon;
++        [Header("Upgrades: absolute multipliers from Level I")]
++        [SerializeField] private DefenseLevelData levelII = new DefenseLevelData();
++        [SerializeField] private DefenseLevelData levelIII = new DefenseLevelData { cost = 200, health = 1.5f, damage = 1.6f, fireRate = 1.25f, range = 1.1f };
++        public DefenseLevelData LevelData(int level) => level == 2 ? levelII : level == 3 ? levelIII : null;
+         [Header("Walkable area effects")]
+         [SerializeField, Range(0.05f, 1f)] private float movementMultiplier = 0.5f;
+         [SerializeField, Min(1)] private float traversalMultiplier = 2f;
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Defenses/BarbedWire.cs b/Assets/Game/Scripts/Defenses/BarbedWire.cs
+index 4fd7bde..105a08e 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Defenses/BarbedWire.cs
++++ b/Assets/Game/Scripts/Defenses/BarbedWire.cs
+@@ -7,20 +7,30 @@ namespace ShorelineDefense.Defenses
+     public sealed class BarbedWire : MonoBehaviour
+     {
+         private DefenseBase defense;
++        private int appliedLevel;
+         private void Awake() => defense = GetComponent<DefenseBase>();
+         private void OnEnable()
+         {
+             if (defense.Definition == null) return;
+             defense.Died += Release;
++            defense.Changed += Refresh;
++            Refresh();
++        }
++        private void Refresh()
++        {
++            if (!defense.IsAlive || appliedLevel == defense.Level) return;
++            appliedLevel = defense.Level;
+             defense.Grid.TrySetTraversalModifier(defense.Anchor, defense.Definition.Footprint, defense,
+-                defense.Definition.TraversalMultiplier, defense.Definition.MovementMultiplier);
++                defense.Definition.TraversalMultiplier, defense.MovementMultiplier);
+         }
+         private void Release() => defense.Grid?.ClearTraversalModifier(defense.Anchor, defense.Definition.Footprint, defense);
+         private void OnDisable()
+         {
+             if (defense == null || defense.Definition == null) return;
+             defense.Died -= Release;
++            defense.Changed -= Refresh;
+             Release();
++            appliedLevel = 0;
+         }
+     }
+ }
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Defenses/TurretCombat.cs b/Assets/Game/Scripts/Defenses/TurretCombat.cs
+index b9f1c3e..bfe4e6a 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Defenses/TurretCombat.cs
++++ b/Assets/Game/Scripts/Defenses/TurretCombat.cs
+@@ -16,6 +16,9 @@ namespace ShorelineDefense.Defenses
+         public event Action<Vector3> Fired;
+         protected void Awake() => defense = GetComponent<DefenseBase>();
+         protected void Update() => Tick(Time.deltaTime);
++        protected void OnEnable() => defense.Upgraded += RefreshUpgrade;
++        protected void OnDisable() => defense.Upgraded -= RefreshUpgrade;
++        private void RefreshUpgrade() { cooldown = Math.Min(cooldown, 1.0 / defense.FireRate); acquisitionTimer = 0; }
+ 
+         public bool IsValidTarget(EnemyController enemy) => enemy != null && enemy.IsTargetable &&
+             ((Vector2)(enemy.transform.position - transform.position)).sqrMagnitude <= defense.Range * defense.Range;
+@@ -40,12 +43,12 @@ namespace ShorelineDefense.Defenses
+                 return;
+             }
+             cooldown -= deltaTime;
+-            double interval = 1.0 / defense.Definition.FireRate;
++            double interval = 1.0 / defense.FireRate;
+             while (cooldown <= 0 && IsValidTarget(Target) && defense.Game.IsPlaying)
+             {
+                 cooldown += interval;
+                 Vector3 impact = Target.transform.position;
+-                Target.Health.TakeDefenseDamage(defense.Definition.Damage);
++                Target.Health.TakeDefenseDamage(defense.Damage);
+                 ShotsFired++;
+                 Fired?.Invoke(impact);
+             }
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Defenses/LandMine.cs b/Assets/Game/Scripts/Defenses/LandMine.cs
+index 422aed3..bedaa0f 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Defenses/LandMine.cs
++++ b/Assets/Game/Scripts/Defenses/LandMine.cs
+@@ -28,7 +28,7 @@ namespace ShorelineDefense.Defenses
+             if (defense.Enemies.FindClosest(transform.position, defense.Definition.TriggerRadiusInCells * defense.Grid.CellSize) == null) return;
+             // Latch before callbacks/damage, including reentrant ticks from observers.
+             Exploded = true;
+-            AreaDamage.Apply(defense.Enemies, transform.position, defense.Range, defense.Definition.Damage, victims);
++            AreaDamage.Apply(defense.Enemies, transform.position, defense.Range, defense.Damage, victims);
+             Detonated?.Invoke(defense.Range);
+             defense.TakeDamage(defense.CurrentHealth);
+             enabled = false;
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Defenses/AreaProjectileWeapon.cs b/Assets/Game/Scripts/Defenses/AreaProjectileWeapon.cs
+index d1ca586..34aff24 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Defenses/AreaProjectileWeapon.cs
++++ b/Assets/Game/Scripts/Defenses/AreaProjectileWeapon.cs
+@@ -16,6 +16,9 @@ namespace ShorelineDefense.Defenses
+         public event Action<Vector3, TimedAreaProjectile> Fired;
+         private void Awake() => defense = GetComponent<DefenseBase>();
+         private void Update() => Tick(Time.deltaTime);
++        private void OnEnable() => defense.Upgraded += RefreshUpgrade;
++        private void OnDisable() => defense.Upgraded -= RefreshUpgrade;
++        private void RefreshUpgrade() { cooldown = Mathf.Min(cooldown, 1 / defense.FireRate); retry = 0; }
+         public void Tick(float dt)
+         {
+             if (dt <= 0 || !defense.IsAlive || !defense.Game.IsPlaying) return;
+@@ -24,12 +27,12 @@ namespace ShorelineDefense.Defenses
+             var data = defense.Definition.HeavyWeapon;
+             HasSolution = ClusterTargeting.TrySelect(defense.Enemies, transform.position,
+                 data.minimumRangeInCells * defense.Grid.CellSize, defense.Range,
+-                data.splashRadiusInCells * defense.Grid.CellSize, data.travelTime, data.clusterCandidates, targeting, out var point);
++                defense.SplashRadiusInCells * defense.Grid.CellSize, data.travelTime, data.clusterCandidates, targeting, out var point);
+             if (!HasSolution) { retry = .25f; return; }
+-            AimPoint = point; cooldown = 1 / defense.Definition.FireRate; ShotsFired++;
++            AimPoint = point; cooldown = 1 / defense.FireRate; ShotsFired++;
+             var shot = new GameObject("Timed area projectile").AddComponent<TimedAreaProjectile>();
+             shot.Initialize(defense.Enemies, defense.Game, transform.position, point, data.travelTime,
+-                data.arcHeight, data.splashRadiusInCells * defense.Grid.CellSize, defense.Definition.Damage);
++                data.arcHeight, defense.SplashRadiusInCells * defense.Grid.CellSize, defense.Damage);
+             Fired?.Invoke(point, shot);
+         }
+     }
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Defenses/FlameWeapon.cs b/Assets/Game/Scripts/Defenses/FlameWeapon.cs
+index 3cb0ea9..3ff6919 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Defenses/FlameWeapon.cs
++++ b/Assets/Game/Scripts/Defenses/FlameWeapon.cs
+@@ -33,11 +33,11 @@ namespace ShorelineDefense.Defenses
+             {
+                 var enemy = victims[i];
+                 if (enemy == null || !enemy.IsTargetable || !InCone(enemy.transform.position - transform.position, AimDirection, defense.Range, data.coneAngle)) continue;
+-                enemy.Health.TakeDefenseDamage(defense.Definition.Damage);
++                enemy.Health.TakeDefenseDamage(defense.Damage);
+                 if (!enemy.IsTargetable) continue;
+                 var burn = enemy.GetComponent<EnemyDamageOverTime>();
+                 if (burn == null) burn = enemy.gameObject.AddComponent<EnemyDamageOverTime>();
+-                burn.ApplyBurn(data.burnDuration, data.burnDps);
++                burn.ApplyBurn(defense.BurnDuration, defense.BurnDps);
+             }
+             victims.Clear();
+         }
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Presentation/DefenseSpritePresentation.cs b/Assets/Game/Scripts/Presentation/DefenseSpritePresentation.cs
+index ebb66f8..cbdb2e5 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Presentation/DefenseSpritePresentation.cs
++++ b/Assets/Game/Scripts/Presentation/DefenseSpritePresentation.cs
+@@ -30,7 +30,7 @@ namespace ShorelineDefense.Presentation
+             if (baseRenderer == null || defense.Definition == null) return;
+             Sprite next = !defense.IsAlive && destroyed != null ? destroyed :
+                 mine != null && mine.Armed && armed != null ? armed :
+-                damaged != null && defense.CurrentHealth <= defense.Definition.MaxHealth / 2 ? damaged : idle;
++                damaged != null && defense.CurrentHealth <= defense.MaxHealth / 2 ? damaged : idle;
+             if (next != null && baseRenderer.sprite != next) baseRenderer.sprite = next;
+         }
+         private void OnDied()
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Presentation/DefenseDamageSmoke.cs b/Assets/Game/Scripts/Presentation/DefenseDamageSmoke.cs
+index 617e42a..b7bdfa2 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Presentation/DefenseDamageSmoke.cs
++++ b/Assets/Game/Scripts/Presentation/DefenseDamageSmoke.cs
+@@ -15,7 +15,7 @@ namespace ShorelineDefense.Presentation
+         {
+             if (Time.time < nextPuff || effects == null || !effects.CanPlay) return;
+             nextPuff = Time.time + 1.2f;
+-            if (defense.IsAlive && defense.Definition != null && defense.CurrentHealth <= defense.Definition.MaxHealth * .35f)
++            if (defense.IsAlive && defense.Definition != null && defense.CurrentHealth <= defense.MaxHealth * .35f)
+                 effects.Play(VfxId.SmokeSmall, transform.position, 0, .7f);
+         }
+     }

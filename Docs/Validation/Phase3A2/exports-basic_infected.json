@@ -1,0 +1,1063 @@
+[
+  {
+    "id": "basic_infected",
+    "action": "idle",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_idle_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_idle_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "a8296c03eafa43fa579454e2eab9730eb0537c54c73c5e8c1c84d6023a78491a",
+    "size": [
+      256,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.07399347116430903,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "52a1407853af193a9a67fbb39618c3367605724593336c403ea8865b3bbb7a85",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 5,
+    "loop": true,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          188,
+          104,
+          623,
+          431
+        ],
+        "sourcePivot": [
+          405.5,
+          267.5
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_idle_e__f000",
+        "bounds": [
+          16,
+          20,
+          48,
+          44
+        ],
+        "opaquePixels": 486,
+        "sha256": "9f4699fc34b30cf7d318fe15082cdad1de8cfb239169a3b50bf99056f8d1debe"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          131,
+          97,
+          601,
+          437
+        ],
+        "sourcePivot": [
+          366.0,
+          267.0
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_idle_e__f001",
+        "bounds": [
+          15,
+          19,
+          50,
+          44
+        ],
+        "opaquePixels": 539,
+        "sha256": "e827bf707ab021979983e48ebec4ddb843de4baba1cbb48b2bc932f9ef9ba592"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          187,
+          53,
+          665,
+          385
+        ],
+        "sourcePivot": [
+          426.0,
+          219.0
+        ],
+        "rect": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_idle_e__f002",
+        "bounds": [
+          14,
+          20,
+          49,
+          45
+        ],
+        "opaquePixels": 547,
+        "sha256": "30afd5c307cb5ca0a5b0873ac1213fad61a3adedd73a5230ad9ee1cea0ea95b5"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          768,
+          512
+        ],
+        "sourceBounds": [
+          131,
+          48,
+          580,
+          380
+        ],
+        "sourcePivot": [
+          355.5,
+          214.0
+        ],
+        "rect": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_idle_e__f003",
+        "bounds": [
+          15,
+          20,
+          48,
+          45
+        ],
+        "opaquePixels": 521,
+        "sha256": "c41ad90f40f559f91732d299664b0dbf8dd2737a68a0c33e31a8ff99b2961c3c"
+      }
+    ]
+  },
+  {
+    "id": "basic_infected",
+    "action": "walk",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_walk_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_walk_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "3e62a776dc86759c1d4abe85728753385cfb39a208eb6e1371620c45c8324d6f",
+    "size": [
+      512,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.11003236245954692,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "3cc35a96e567ac2012f05a951b870cbda65414c2e654243b18994aec417757b2",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 8,
+    "loop": true,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          48,
+          125,
+          369,
+          403
+        ],
+        "sourcePivot": [
+          208.5,
+          264.0
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f000",
+        "bounds": [
+          14,
+          17,
+          49,
+          48
+        ],
+        "opaquePixels": 662,
+        "sha256": "a93593d13e8a20d09083e6423055d1a0a93736832cd06c954d8cac6df0ebb672"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          56,
+          121,
+          359,
+          404
+        ],
+        "sourcePivot": [
+          207.5,
+          262.5
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f001",
+        "bounds": [
+          15,
+          16,
+          48,
+          47
+        ],
+        "opaquePixels": 600,
+        "sha256": "45f77729a06a03e1876729282ff1dc7898d1d5ce86cbc02ae43a57d6617e8ec5"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          52,
+          121,
+          335,
+          401
+        ],
+        "sourcePivot": [
+          193.5,
+          261.0
+        ],
+        "rect": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f002",
+        "bounds": [
+          16,
+          17,
+          47,
+          48
+        ],
+        "opaquePixels": 590,
+        "sha256": "a3929bdc1e03b299c5ef6573a67a4351659536303f42d48f5bd1d7f216e26faf"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          26,
+          121,
+          341,
+          401
+        ],
+        "sourcePivot": [
+          183.5,
+          261.0
+        ],
+        "rect": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f003",
+        "bounds": [
+          15,
+          17,
+          50,
+          48
+        ],
+        "opaquePixels": 651,
+        "sha256": "b00da74dfef7aab35275b3f21e6640ef8dd7e05e38291eb73854450767412ce8"
+      },
+      {
+        "frame": 4,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          48,
+          59,
+          367,
+          332
+        ],
+        "sourcePivot": [
+          207.5,
+          195.5
+        ],
+        "rect": [
+          256,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f004",
+        "bounds": [
+          14,
+          17,
+          49,
+          47
+        ],
+        "opaquePixels": 642,
+        "sha256": "e9bcb62f0f075b050f70080369e55a089ce248bc61dbea89e1f0357ba6fefe1d"
+      },
+      {
+        "frame": 5,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          56,
+          55,
+          348,
+          341
+        ],
+        "sourcePivot": [
+          202.0,
+          198.0
+        ],
+        "rect": [
+          320,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f005",
+        "bounds": [
+          16,
+          16,
+          48,
+          47
+        ],
+        "opaquePixels": 597,
+        "sha256": "64f337a019edb4cc419abfa886bbd73c69536a6bd1a83a36bb563166921d004b"
+      },
+      {
+        "frame": 6,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          52,
+          55,
+          338,
+          336
+        ],
+        "sourcePivot": [
+          195.0,
+          195.5
+        ],
+        "rect": [
+          384,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f006",
+        "bounds": [
+          16,
+          17,
+          47,
+          48
+        ],
+        "opaquePixels": 598,
+        "sha256": "3d471c0be23082b2c2212f46574b08719ac68cbfff9e42fd67038383cae803a6"
+      },
+      {
+        "frame": 7,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          26,
+          55,
+          349,
+          336
+        ],
+        "sourcePivot": [
+          187.5,
+          195.5
+        ],
+        "rect": [
+          448,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_walk_e__f007",
+        "bounds": [
+          14,
+          17,
+          50,
+          48
+        ],
+        "opaquePixels": 709,
+        "sha256": "2cc942751ad0b3fe3d1524e663fa33c2c911edeb9e32f11ca503ddef0823eefb"
+      }
+    ]
+  },
+  {
+    "id": "basic_infected",
+    "action": "attack",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_attack_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_attack_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "6510bcb5ac27a4105ca9845ae0a865cee5b6a519c2a8571da016d7e9c5749b73",
+    "size": [
+      384,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.08489388264669163,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "7f2f6207dd9797220cb08d082fa30ba6ca53fe82d92146767b84a960230ba8e3",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 10,
+    "loop": false,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          79,
+          115,
+          426,
+          395
+        ],
+        "sourcePivot": [
+          252.5,
+          255.0
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_attack_e__f000",
+        "bounds": [
+          17,
+          20,
+          46,
+          44
+        ],
+        "opaquePixels": 456,
+        "sha256": "688b62ef0246fb6e215d030cdc57468d89c6c33877dbab0d86739dbe3d3628f5"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          60,
+          117,
+          455,
+          389
+        ],
+        "sourcePivot": [
+          257.5,
+          253.0
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_attack_e__f001",
+        "bounds": [
+          15,
+          20,
+          49,
+          43
+        ],
+        "opaquePixels": 436,
+        "sha256": "8d1e8eb4480a4565f9ee4bab7bb44453522dfba20b5264676a94a3eb85e047fd"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          63,
+          119,
+          469,
+          395
+        ],
+        "sourcePivot": [
+          266.0,
+          257.0
+        ],
+        "rect": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_attack_e__f002",
+        "bounds": [
+          15,
+          20,
+          49,
+          43
+        ],
+        "opaquePixels": 473,
+        "sha256": "39accce9f6a695b317c0e7d71219f1bbad9582be292989aeae3b243b69016cac"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          44,
+          80,
+          497,
+          372
+        ],
+        "sourcePivot": [
+          270.5,
+          226.0
+        ],
+        "rect": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_attack_e__f003",
+        "bounds": [
+          13,
+          20,
+          51,
+          45
+        ],
+        "opaquePixels": 467,
+        "sha256": "a1fbb6c36670ab8ccc2ed1662a894161b1a24ba07548239de9afea92bbf66def"
+      },
+      {
+        "frame": 4,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          74,
+          103,
+          431,
+          382
+        ],
+        "sourcePivot": [
+          252.5,
+          242.5
+        ],
+        "rect": [
+          256,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_attack_e__f004",
+        "bounds": [
+          17,
+          20,
+          47,
+          44
+        ],
+        "opaquePixels": 474,
+        "sha256": "9d5f4562b7c0465643ba38ff3d5d262641a7f7c1d2d57929832640d20bbbe6a0"
+      },
+      {
+        "frame": 5,
+        "sourceCell": [
+          512,
+          512
+        ],
+        "sourceBounds": [
+          78,
+          112,
+          421,
+          392
+        ],
+        "sourcePivot": [
+          249.5,
+          252.0
+        ],
+        "rect": [
+          320,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_attack_e__f005",
+        "bounds": [
+          17,
+          20,
+          46,
+          44
+        ],
+        "opaquePixels": 450,
+        "sha256": "9a92ad7cc5b365763657c996b18836cf356dfeb732f05ae3db3035305bda792d"
+      }
+    ]
+  },
+  {
+    "id": "basic_infected",
+    "action": "hit",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_hit_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_hit_e_sheet_v001.png",
+    "sourceSize": [
+      1774,
+      887
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "5a10b5f3ca89e1f11339e93d6c848c79d6d86fcbec9cbcbbe8b86c8bebfcaeae",
+    "size": [
+      128,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.05275407292474787,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "29fab42ec258ce7b4007cd6c224ab0ca75979df4d5f3b3642a5ff6e15c1eb342",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 10,
+    "loop": false,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          887,
+          887
+        ],
+        "sourceBounds": [
+          149,
+          189,
+          808,
+          698
+        ],
+        "sourcePivot": [
+          478.5,
+          443.5
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_hit_e__f000",
+        "bounds": [
+          15,
+          19,
+          50,
+          46
+        ],
+        "opaquePixels": 560,
+        "sha256": "1110c25b2eeb9839c253ec032b51cadd3e984b911738feafa75f57060969dac6"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          887,
+          887
+        ],
+        "sourceBounds": [
+          98,
+          207,
+          728,
+          698
+        ],
+        "sourcePivot": [
+          413.0,
+          452.5
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_hit_e__f001",
+        "bounds": [
+          15,
+          19,
+          48,
+          45
+        ],
+        "opaquePixels": 541,
+        "sha256": "2950b4796f42a520e6c2bd817005160e14a236714ee495a3e054cc4c54a356fc"
+      }
+    ]
+  },
+  {
+    "id": "basic_infected",
+    "action": "death",
+    "source": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_death_e_sheet_v001.png",
+    "output": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_death_e_sheet_v001.png",
+    "sourceSize": [
+      1536,
+      1024
+    ],
+    "sourceMode": "RGB",
+    "sourceSHA256": "0ee82b3f6cb3dffb059fe00b454054c99d574cf831ef571d70e320b1a745686f",
+    "size": [
+      512,
+      64
+    ],
+    "mode": "RGBA",
+    "exportScale": 0.12252252252252252,
+    "scaleMethod": "constant-per-action",
+    "outputSHA256": "4c2e7cf3c8cddc540d90d5ae4681fed338bfb73dbdda8b201faa9fab1bcc2a0f",
+    "ppu": 51.2,
+    "pivot": [
+      0.5,
+      0.5
+    ],
+    "fps": 9,
+    "loop": false,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "frames": [
+      {
+        "frame": 0,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          51,
+          178,
+          347,
+          402
+        ],
+        "sourcePivot": [
+          199.0,
+          290.0
+        ],
+        "rect": [
+          0,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f000",
+        "bounds": [
+          14,
+          18,
+          50,
+          45
+        ],
+        "opaquePixels": 581,
+        "sha256": "8f73112a5888ee19b1f95219fabbdec6a0ab97bc585e8cabb71ffb059b7a617d"
+      },
+      {
+        "frame": 1,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          68,
+          200,
+          325,
+          415
+        ],
+        "sourcePivot": [
+          196.5,
+          307.5
+        ],
+        "rect": [
+          64,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f001",
+        "bounds": [
+          16,
+          19,
+          47,
+          45
+        ],
+        "opaquePixels": 543,
+        "sha256": "344e31457c8d9a0131854b36f1c75f6ee057c578d302e209acdd67bb31ba2bad"
+      },
+      {
+        "frame": 2,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          55,
+          212,
+          314,
+          457
+        ],
+        "sourcePivot": [
+          184.5,
+          334.5
+        ],
+        "rect": [
+          128,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f002",
+        "bounds": [
+          16,
+          17,
+          48,
+          47
+        ],
+        "opaquePixels": 550,
+        "sha256": "1d554ef376df63843d25428481ef09aa9e28def1066751761eaff32222d73428"
+      },
+      {
+        "frame": 3,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          26,
+          208,
+          350,
+          465
+        ],
+        "sourcePivot": [
+          188.0,
+          336.5
+        ],
+        "rect": [
+          192,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f003",
+        "bounds": [
+          12,
+          16,
+          52,
+          47
+        ],
+        "opaquePixels": 597,
+        "sha256": "e59fe8a8aeac559cf5da89776a5ed69c8fb22e476a6c9b7fe4f69d48a9e8c83c"
+      },
+      {
+        "frame": 4,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          30,
+          117,
+          371,
+          324
+        ],
+        "sourcePivot": [
+          200.5,
+          220.5
+        ],
+        "rect": [
+          256,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f004",
+        "bounds": [
+          11,
+          19,
+          53,
+          44
+        ],
+        "opaquePixels": 642,
+        "sha256": "321ea3aa40915819c151f23b0c192b6448cb4dcaece5f79449a47af389c878d5"
+      },
+      {
+        "frame": 5,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          28,
+          123,
+          368,
+          317
+        ],
+        "sourcePivot": [
+          198.0,
+          220.0
+        ],
+        "rect": [
+          320,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f005",
+        "bounds": [
+          11,
+          20,
+          53,
+          44
+        ],
+        "opaquePixels": 643,
+        "sha256": "196c40311363e284aad58bfecee4808d09be11ea7c99e1129bb03c386526068c"
+      },
+      {
+        "frame": 6,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          17,
+          131,
+          352,
+          316
+        ],
+        "sourcePivot": [
+          184.5,
+          223.5
+        ],
+        "rect": [
+          384,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f006",
+        "bounds": [
+          11,
+          21,
+          52,
+          44
+        ],
+        "opaquePixels": 634,
+        "sha256": "a963184bec86d7620816afbfa02dd502883ec04d09e8efe65d71042b978e3d46"
+      },
+      {
+        "frame": 7,
+        "sourceCell": [
+          384,
+          512
+        ],
+        "sourceBounds": [
+          11,
+          134,
+          349,
+          318
+        ],
+        "sourcePivot": [
+          180.0,
+          226.0
+        ],
+        "rect": [
+          448,
+          0,
+          64,
+          64
+        ],
+        "name": "bd_enemy_basic_infected_death_e__f007",
+        "bounds": [
+          11,
+          21,
+          52,
+          44
+        ],
+        "opaquePixels": 626,
+        "sha256": "c750f4cf74d5bbcbe35eeeeef4bce3ef5bdaff69667126ba5b1beed6714c86af"
+      }
+    ]
+  }
+]

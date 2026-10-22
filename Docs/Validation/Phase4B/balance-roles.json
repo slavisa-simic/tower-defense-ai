@@ -1,0 +1,77 @@
+[
+  {
+    "id": "machine-gun-nest",
+    "scenario": "six clustered Basic",
+    "seconds": 2.0,
+    "kills": 1,
+    "damage": 180,
+    "remaining": 420
+  },
+  {
+    "id": "mortar",
+    "scenario": "six clustered Basic",
+    "seconds": 4.0,
+    "kills": 6,
+    "damage": 600,
+    "remaining": 0
+  },
+  {
+    "id": "rocket",
+    "scenario": "six clustered Basic",
+    "seconds": 4.0,
+    "kills": 6,
+    "damage": 600,
+    "remaining": 0
+  },
+  {
+    "id": "flamethrower",
+    "scenario": "six clustered Basic",
+    "seconds": 2.0,
+    "kills": 6,
+    "damage": 600,
+    "remaining": 0
+  },
+  {
+    "id": "autocannon",
+    "scenario": "one Brute",
+    "seconds": 2.0,
+    "kills": 0,
+    "damage": 275,
+    "remaining": 325
+  },
+  {
+    "id": "machine-gun-nest",
+    "scenario": "one Brute",
+    "seconds": 2,
+    "damage": 180,
+    "remaining": 420
+  },
+  {
+    "id": "autocannon",
+    "scenario": "one Brute",
+    "seconds": 2,
+    "damage": 275,
+    "remaining": 325
+  },
+  {
+    "id": "sniper-tower",
+    "scenario": "one Brute",
+    "seconds": 2,
+    "damage": 200,
+    "remaining": 400
+  },
+  {
+    "id": "flamethrower",
+    "scenario": "moving Brute, free ground",
+    "seconds": 8,
+    "initialSpeed": 1.35,
+    "damage": 402
+  },
+  {
+    "id": "flamethrower",
+    "scenario": "moving Brute starts on Wire",
+    "seconds": 8,
+    "initialSpeed": 0.675,
+    "damage": 447
+  }
+]

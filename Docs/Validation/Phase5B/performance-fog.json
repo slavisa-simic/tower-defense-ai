@@ -1,0 +1,18 @@
+{
+  "id": "fog",
+  "fixtureMoney": 50000,
+  "unlimitedBreaches": true,
+  "sampleSeconds": 3,
+  "cpuValid": true,
+  "gcValid": true,
+  "frames": 1170,
+  "medianMs": 2.4716,
+  "p95Ms": 3.3514,
+  "maxMs": 4.4759,
+  "meanGcBytes": 10344.483760683761,
+  "enemies": 80,
+  "boats": 11,
+  "createdBoats": 13,
+  "renderers": 1068,
+  "eventRenderers": 2
+}

@@ -1,0 +1,2510 @@
+[
+  {
+    "path": "Assets/Game.meta",
+    "sha256": "2A245DFD851CFEC21491EF20B6C796B858DE73A6D74087F4B9ABD1B25E6AC3B5"
+  },
+  {
+    "path": "Assets/Settings.meta",
+    "sha256": "73C8E19843240273FACB0AF6BDBF430D719E397ADED705629594060CE25CE7AD"
+  },
+  {
+    "path": "Assets/UI Toolkit.meta",
+    "sha256": "33E64E268BD4CEB5E4977749C18086E10E2AA48FEBBC2494A69A60A5C9D2A01E"
+  },
+  {
+    "path": "Assets/Game/Animations.meta",
+    "sha256": "0DD183E856EB3CB37E2E83F11D10614424D9F091C0904EBC31790A9BE98B6668"
+  },
+  {
+    "path": "Assets/Game/Art.meta",
+    "sha256": "75477129B6CD453FD19B0A1B484671AFD0977B90DE0347812969993140AAF9CD"
+  },
+  {
+    "path": "Assets/Game/Data.meta",
+    "sha256": "6E69B78CFD7FE32C47E88ACFDE3183027490FF7EFE58DEE60B0C115A4F0F22CE"
+  },
+  {
+    "path": "Assets/Game/Editor.meta",
+    "sha256": "A44DAB6DBCF94E32554CB077DD2A630DE519B988560FE8920AACFB20847DB4FC"
+  },
+  {
+    "path": "Assets/Game/Materials.meta",
+    "sha256": "BB2A1886C26E50975218CC42277B82A9E159DE4049AEEEEF670BC19077CC3DFB"
+  },
+  {
+    "path": "Assets/Game/Prefabs.meta",
+    "sha256": "AAA6846906FA7DAD453C441A08983233D95D3950D190475D9545C79624C51B8D"
+  },
+  {
+    "path": "Assets/Game/Scenes.meta",
+    "sha256": "DDBCC98073BFFA434B3031D1F9BFB5D5AEABA51749C4B382C64F48D6FFDD1705"
+  },
+  {
+    "path": "Assets/Game/Scripts.meta",
+    "sha256": "9433A33A2B95C4DDA2AFDC8FF58265BEDDF3FD1057BA9DB8DCE776BDC59069D1"
+  },
+  {
+    "path": "Assets/Game/Tests.meta",
+    "sha256": "E36A2F886DD4B47F886D9B3297DCEC96DF379F49468F2BBEF8A0799B8021C840"
+  },
+  {
+    "path": "Assets/Game/UI.meta",
+    "sha256": "55CF52F4ABBA2BB8BB3E789B9D4FA2D7DE30CF2F16F4D949DB9CA22424680512"
+  },
+  {
+    "path": "Assets/Game/Animations/.gitkeep",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies.meta",
+    "sha256": "546E916D4EB324997E3356350393BD6EAB8A816AEF1F8C11C0FE021BA2B303A7"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/BasicInfected.meta",
+    "sha256": "2319D43F532D01B64DEAD63116822F84385225B6F00EF12D8DC8B3C2098E4078"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Brute.meta",
+    "sha256": "0B8E93560D51BC058F9515284D48D868197EF4C3E56294A9EAB01CE2C4C42754"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Runner.meta",
+    "sha256": "2121BED3B99D4CD4DCC9D6EEE68FEA57244C6B09F087AB8AF007D8A98DD325A9"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_attack_e_v001.anim",
+    "sha256": "B00504659794C9D8FC061EF18AA402D26E062E864C88BA4A9695122233DC74E4"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_attack_e_v001.anim.meta",
+    "sha256": "6DFB07E0F289FFEC345F48AF282427277877679D0B60CFDABDED46B2C644F167"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_death_e_v001.anim",
+    "sha256": "8D06B51D2857308E012463B39D2B3B4A09216315FD1A27CD3C59235A08863C81"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_death_e_v001.anim.meta",
+    "sha256": "3BBAD5A7D722E3B926F530BEF8ED91D0E1DB5C802CB7FA8CED00013CE844E7DC"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_hit_e_v001.anim",
+    "sha256": "8392FF0FACAD95B2ABA154A4A3648280B058CBF92592F8340B43FE727D2A0BDC"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_hit_e_v001.anim.meta",
+    "sha256": "B66797219D55C1D7A1AF2B7F0301D97E1DB2A32978673D1A24FB27305C81DBD0"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_idle_e_v001.anim",
+    "sha256": "F75EBF1A57846AB10D2FE83FD1E03DB71A82C1AE2B1A9735155E19651385829B"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_idle_e_v001.anim.meta",
+    "sha256": "4A7E7571865551AEA7BE4575ECC08294C459CFC3AE1AE831A04B76FAA67A6DF6"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_walk_e_v001.anim",
+    "sha256": "67F6CD8C865452702B6CE298AE076D246BA2EB73319BEF7E258879F64F1CE967"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/BasicInfected/bd_enemy_basic_infected_walk_e_v001.anim.meta",
+    "sha256": "C259B72D12EC16EF74B2A5EE08D3732369B675D1A8E534CAA32B0B59706833A6"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_attack_e_v001.anim",
+    "sha256": "168804AB0AB9A055BAA6A0E6AACD89693BABA23E1AE7A192F9227BBC820D1E29"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_attack_e_v001.anim.meta",
+    "sha256": "0D38DBB21054E10C80998C896FD427F653750F6A7C22F567FB3255D1877B652F"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_death_e_v001.anim",
+    "sha256": "9C434D07494963E822F9E5277BD5E446E5F8989FFB7B76438211AD915E95F394"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_death_e_v001.anim.meta",
+    "sha256": "443DD69EEF9C17F82AA4C3F24797EC510C4B0D69B76A1F5184338BBA916098AA"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_hit_e_v001.anim",
+    "sha256": "5CEE418F12F743473A182E942C14BA9119F994D1AD551C425A8EB75CB177E21E"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_hit_e_v001.anim.meta",
+    "sha256": "12F595BCEA6320E6A7E55FE30FE9E10CF88E43CE3635A5443345C29A673D4343"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_idle_e_v001.anim",
+    "sha256": "93CD90F03BBD24290CF0904424186E469839038ECA4025C32576377EFE391F4B"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_idle_e_v001.anim.meta",
+    "sha256": "51EAB7F27D739E103B8CF4998E300FE3A70753EE4F01C5ED99816F4A0241FFE7"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_walk_e_v001.anim",
+    "sha256": "E46B5081750E0003CF44996033348C1DA6F1C53EED5A3B57FF3257CFF086149C"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Brute/bd_enemy_brute_walk_e_v001.anim.meta",
+    "sha256": "AC2F63336D55453A040C72899F8D150597F21699837D07476863A9F35BBBD0B9"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_attack_e_v001.anim",
+    "sha256": "DE66BBF508DC3BC229CAB5D22C1420E9D12B9732B2D26C6C9018027879F98042"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_attack_e_v001.anim.meta",
+    "sha256": "1932A95ABB7277A20399708E4F3FAA2703E01A0012B33938B8A7C2C9466CF6D6"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_death_e_v001.anim",
+    "sha256": "E66F467C2951573934B9B10FFC95A832E8CAAE1C4E2109DD4BEDF54D76B1A2B3"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_death_e_v001.anim.meta",
+    "sha256": "2E0500075E5F3E647AB3D9CBD90CC4BD96F9135CFF8531223A0BA610AD022C3C"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_hit_e_v001.anim",
+    "sha256": "AE7B820FCF0FE2B50BE5740409B1343D377315D558909E94E1EE981F8ED8C67E"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_hit_e_v001.anim.meta",
+    "sha256": "3EDBA9656F48E81695FD6C1AE62FCB222AC6FEC98C6316F93F601137D9EC7DC7"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_idle_e_v001.anim",
+    "sha256": "721D5E091E574AAA66C57AB2C5EE7F05D235763B20D6778E074E6DA7DCF0E436"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_idle_e_v001.anim.meta",
+    "sha256": "992C9A267B41C09EB8C6CBBF76D51171B4FA4DD626DE340EAADEB160891D8D80"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_run_e_v001.anim",
+    "sha256": "08598F1066748C24EBF1869FAB1E3E86283612466FBAD0E02E986BB486581E9C"
+  },
+  {
+    "path": "Assets/Game/Animations/Enemies/Runner/bd_enemy_runner_run_e_v001.anim.meta",
+    "sha256": "90CA6C5D0387D8686BD303EE5BB3782FC82F2B4CF5133FD6C9460854EAA6321A"
+  },
+  {
+    "path": "Assets/Game/Art/Base.meta",
+    "sha256": "79BDC2465CA096A3AE4845E6087C51F8430AF60E062DFB9A927677967ED17F7F"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses.meta",
+    "sha256": "FC9788E393E233C00C4C7E0049A926306D8E86155FC738DF5FBAD39FD95E0A36"
+  },
+  {
+    "path": "Assets/Game/Art/Effects.meta",
+    "sha256": "8C473B870E1AE916E85F671EACEC27FC44952792C369068E4274C850DCDE3C6E"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies.meta",
+    "sha256": "2E502F515FD51FAC328774D7FBF9E521B7B874402995557E14F9D3344DE2FE0C"
+  },
+  {
+    "path": "Assets/Game/Art/Environment.meta",
+    "sha256": "F1DD3C849B81E7A7623133058B2009FAB236FF04F777782A73D76BB836FC7C95"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences.meta",
+    "sha256": "68604662B43CD33E5A594E11BEE430D8A6274DEEFD6A750885308BF6EC5D7997"
+  },
+  {
+    "path": "Assets/Game/Art/Placeholders.meta",
+    "sha256": "A0D544052756C9AEA2DE38EF5D3B9CF08089375CEECFE4D49F1A89FF92A19051"
+  },
+  {
+    "path": "Assets/Game/Art/Props.meta",
+    "sha256": "961C1A67488F9130C3A50893817A71BDE983648EC6B92EEAD531B499D1822CD0"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets.meta",
+    "sha256": "F27366E4076F5B55498892782E4B062DDA6B6F739D04008925A3C91353F7B949"
+  },
+  {
+    "path": "Assets/Game/Art/UI.meta",
+    "sha256": "24832D37F697872311BD9B540929D3FFEA928BE13FB1AADF076696721FA2B566"
+  },
+  {
+    "path": "Assets/Game/Art/Base/.gitkeep",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_ammo_supply_crate_cluster_v001.png",
+    "sha256": "4982A59DD0F5B8A495FBC6C95730E86B128A40AF47E8A08A54E9E14B362C7256"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_ammo_supply_crate_cluster_v001.png.meta",
+    "sha256": "B3663B5460D95B224FACB222D3E90794890249F48A5BCF2F53E00225B8401AC3"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_bunker_corner_v001.png",
+    "sha256": "564198B011F0271500123BCAFA06B53AF21B67F05D30491662427CE8219C173F"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_bunker_corner_v001.png.meta",
+    "sha256": "A7CBA4F12BB0BC50AF04DC63F9B1ECA2B15794E4D8EC9680CC87604D8069076A"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_bunker_gate_piece_v001.png",
+    "sha256": "6EA185071A21BAB407009EA300ED059F7C1B0A54D589971A59B63E33DEA55248"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_bunker_gate_piece_v001.png.meta",
+    "sha256": "D9765DF0521B44F8599B03E74A19483245E31C93567FF8B363244F9F64703502"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_bunker_wall_segment_v001.png",
+    "sha256": "9DF4A535D3FCC65B6EDE4233AB232BB7398CF3AE5DA9D5ABA664C3D9464B2EC8"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_bunker_wall_segment_v001.png.meta",
+    "sha256": "001B55721E72B04C12EE3D90F5B3D198D7C28F575025814248659B37BC42D2B9"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_command_post_object_v001.png",
+    "sha256": "8B5D689FBCFCAE7DB05ED4FF9F2CD7E3F3D6D1AFF4C693F36C7877BC93F1F462"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_command_post_object_v001.png.meta",
+    "sha256": "68996E6F00FDB1A55D885BA3D52167F00A3945A4B0CDFF8D0696DB1F52203A01"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_defensive_sandbag_nest_base_v001.png",
+    "sha256": "E101F025318E59F028E84A6DD91B0E05D857887441A72E3E3803BBE2C37C7735"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_defensive_sandbag_nest_base_v001.png.meta",
+    "sha256": "2A489CB27C1E1352C6F3A148ED0DE21C7C075C16E89A8855E4B1DF89A2336174"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_generator_unit_v001.png",
+    "sha256": "C26D7359E02598331F53FBD1E449AC9682BAB7F2FFCE0EF2163451C162CB2D20"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_generator_unit_v001.png.meta",
+    "sha256": "473FAD74335A055ED906E681A8211E9127F43ACEDCE6AB85B5890E0A82B35C70"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_military_tent_topdown_v001.png",
+    "sha256": "6F3DB86FE74BA13CE5DA30CB4989E137C8EA0EBB815E4630705B94BC8A4A6B8D"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_military_tent_topdown_v001.png.meta",
+    "sha256": "186E5E9E4563E78ECDA213A31646F0A6F1E178671FBB24777A34D03A3777D369"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_river_checkpoint_marker_v001.png",
+    "sha256": "DE6F309E68F9855534B015D6F9889526FF88BCC3F6200A4386B12CB70D9D930C"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_river_checkpoint_marker_v001.png.meta",
+    "sha256": "3096378C7FDEE0658B89AFA11BE0E2AE4AC66709D98DFF1782EDF4BC72B02710"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_watch_post_v001.png",
+    "sha256": "E891EF934D31690EB5C5F6FC95583BE35429CB691D028008D38B5CCCAEFE4FCA"
+  },
+  {
+    "path": "Assets/Game/Art/Base/bd_base_watch_post_v001.png.meta",
+    "sha256": "AF8332AC0B4B9BCFD58A401E3370624351C7AF223803FB26C9D1A6EF0CFB7EEB"
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/.gitkeep",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/.gitkeep",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/.gitkeep",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected.meta",
+    "sha256": "A3C58ABB52F41E34CEFA2BEBA162906CD34EFE2D83F845095D6004315A47CE67"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute.meta",
+    "sha256": "E73229AD9B143A15CE9D1E2B9A0CDEC71C3E09954209BC1F5DAEBC68E4432A66"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner.meta",
+    "sha256": "5A1672E0A275375C4914B51AE030CEAD74D5722225E11CE9369EB488197B6E3A"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_attack_e_sheet_v001.png",
+    "sha256": "5AD674BD142051CFDFCDADE64885253C3178C94604BA5B4506FD1ECCF0E169FA"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_attack_e_sheet_v001.png.meta",
+    "sha256": "ADE148E64595C3A89F6F67328AA4470242180D9DFF071EF64C592F65EFFD00B8"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_death_e_sheet_v001.png",
+    "sha256": "11AB5CAA809C965A0DCDB201524CC324232A2A125097E2EE2132F97FABFC6963"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_death_e_sheet_v001.png.meta",
+    "sha256": "79916DCC2828DFF36D6BC528E6FC1E84B04ED7FDBB074E546514242CCFBE21A5"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_hit_e_sheet_v001.png",
+    "sha256": "1DD681B8D72C9FBA8753DCF7557141CACE2ECEFBE49BB67F7F2BD02EC693BBE4"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_hit_e_sheet_v001.png.meta",
+    "sha256": "58246EB49B8D23AA4A6A036D6AAE21C095ED4BD38A8CB7AA9EA01BDBBC67CAB0"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_idle_e_sheet_v001.png",
+    "sha256": "7755465742EA1F65E38DE9AE2B67BF0EA8C7ED83F4ED1B920B8E4210363162A9"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_idle_e_sheet_v001.png.meta",
+    "sha256": "1868ED2684DE6C85E4E9BCCADC8126356C8C7BA5A7FC96B1BF5EF89CFBD56CFE"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_walk_e_sheet_v001.png",
+    "sha256": "396436D899BEBCE00417D9DD5E5943F51598D86C3D478F6EF4127E2CB39A3B28"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_walk_e_sheet_v001.png.meta",
+    "sha256": "2B8B3DFC2796506E1DF8F7453167D4C379555F52D466843962ACD279D3AACB88"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_attack_e_sheet_v001.png",
+    "sha256": "2D6377476AD0A1BCE4F8F21F13248C8899B8731513F1810344E2EC0D65754839"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_attack_e_sheet_v001.png.meta",
+    "sha256": "69660F8C362FF9D3497CB137F57BCF30FDC7BEFB2956E3EDBBA2071FA4A1D07C"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_death_e_sheet_v001.png",
+    "sha256": "43618EEE9A9FD6217DC6E3B3A7EBB2774DA14AE4B855286201F82CE97C3339AF"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_death_e_sheet_v001.png.meta",
+    "sha256": "BAAA73B7211025A1CB83BB20A4311D8E095DEEC31BBE00752777D9285D3F048B"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_hit_e_sheet_v001.png",
+    "sha256": "58802E64D8C7196297288ABC100FA59299F447121A05BEAC1C89FAF3C9148227"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_hit_e_sheet_v001.png.meta",
+    "sha256": "42DAB817A6923E1F143C3EA75354008A139B43F987AF13BE1F1DC28738D5FEB7"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_idle_e_sheet_v001.png",
+    "sha256": "149256AA8A16EB6AA81ABC4A1EF0D496F416E027C5ADB2AB8A9AAEB67AAE377C"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_idle_e_sheet_v001.png.meta",
+    "sha256": "AAF8004DF504A788BF735FE58D6ADB454540C82E0621DF4B62A310928D7BD523"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_walk_e_sheet_v001.png",
+    "sha256": "906C416635E308941E4B4C7409B6E6FFF0D5634B2EE8BC4BE788D3B50025AE58"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Brute/bd_enemy_brute_walk_e_sheet_v001.png.meta",
+    "sha256": "90B563BF008A9CEB083728E2738332578BF5F94C36AB1FBA78330B973746B2A3"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_attack_e_sheet_v001.png",
+    "sha256": "6AF8BAE98F659517D48EE53CA0212E4402DEF8540CF23D7639CCF4C789072941"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_attack_e_sheet_v001.png.meta",
+    "sha256": "64398B46FDDF3DE4D15232464859FAAFF9D656F4AFBB0C732BED889969F5AF6F"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_death_e_sheet_v001.png",
+    "sha256": "6AD22F7DE4BED466667274599BAF01CF15B8FF2EA86A1548C923077C7A698153"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_death_e_sheet_v001.png.meta",
+    "sha256": "0932DE7382679B4ACB2A13C9410BD63B4B946E8687F667CDF2CC4DAEDC00CCBC"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_hit_e_sheet_v001.png",
+    "sha256": "4C194FAA4D7988FF23E754938609F22E6518ED9988A50098AE5644A35630434E"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_hit_e_sheet_v001.png.meta",
+    "sha256": "0644154DA7CA0DE9E1C41C9448C2F174451573EC05EA2556E5F3ED61688350E0"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_idle_e_sheet_v001.png",
+    "sha256": "0BECF1EA7CFD2E62FC346A5CF5B7706BD9E6E9E338DDA07692D425023EF2187D"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_idle_e_sheet_v001.png.meta",
+    "sha256": "51F5B14014A2160453BCA6C8EC0E5BC2D1B9ADD42DC505F1FFF0049CE29D4CFD"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_run_e_sheet_v001.png",
+    "sha256": "840593CEEDF37D596108421788265C4D35A86FB858D8AA660B9B3C152CEF8B41"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Runner/bd_enemy_runner_run_e_sheet_v001.png.meta",
+    "sha256": "5D736F7A53C0B55C341A9E16BDA2D5D6ED4A8B56BEDFC71FADE1CDFC67B0D015"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/.gitkeep",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_bunker_floor_tile_v001.png",
+    "sha256": "989D1A6829D5652EE1573EC1F911DE03CC7D2AD5D832DF3623468BD36625FCA9"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_bunker_floor_tile_v001.png.meta",
+    "sha256": "1E49ED7EAFEABFE430630C54FA1AAC25175E05FF88242D5EEF778D22D25EDA0C"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_concrete_tile_v001.png",
+    "sha256": "0220A9DC6E7791FD9A0DBB719A4AFBB601B9AD863F207C73E99BFC59C825ED7F"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_concrete_tile_v001.png.meta",
+    "sha256": "EAB3EF225F471606E2D4B4715388D9ABFEF845A1349D323849D6A951E1801EC9"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_cracked_ground_tile_v001.png",
+    "sha256": "604B03DC4E93946723EA3B5559581CD09D5F82B384F98D6F0302A27C439726EE"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_cracked_ground_tile_v001.png.meta",
+    "sha256": "C2AFC573C7386891ADEFCBB1B93DC226C7D5BFDC0D4B0242703836F3A883431E"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_deep_danube_water_tile_v001.png",
+    "sha256": "9B09509D4BF9DC5EE3FAB85A00CD9026BBDB69770FDD83F4F1A8F04181424694"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_deep_danube_water_tile_v001.png.meta",
+    "sha256": "790AE183C82D945FF764B10778CE79D56EDC2A3D2AD58CBD1732B756EE1A5F1F"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "sha256": "4842D454038A0DC2D1DB50763A456FA79F565C8FE8EF96470D9867E90ACB3878"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png.meta",
+    "sha256": "AA849C39A07327E5E29DD91238139E7F3B1376A9DD449CEBE688A7181F9B8F58"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_grass_tile_v001.png",
+    "sha256": "D9D1E05D404DE0C1A7CC5C1A383C0D6CBEB3D91C0C97ADE161B67E80E16E0B34"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_grass_tile_v001.png.meta",
+    "sha256": "4109AE7D32361C274629C4FFDEB2C4BDD4945815E641791C7835B7F0DD2C87A3"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "sha256": "F7952A290B92F3DC141C97BE1A706571A8FA8531D867876D6452272C553F380E"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png.meta",
+    "sha256": "D50638EB74023DC5B39C884AD4076076EA3878B5282D572B13F663E6F4D29469"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_road_tile_v001.png",
+    "sha256": "BC3A9A07C3D86B83F8C0A52EE0827CD753E3E868B47BEADA03613AB590981D15"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_road_tile_v001.png.meta",
+    "sha256": "B635A4C72FE202263BF1016E2B5857B384205C747A81EF31B7ED05B9BAE1043C"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_shallow_water_tile_v001.png",
+    "sha256": "60D839EDF16BDDCC2ABA627E67E771CFF2F56CCB54B884EA7C4861116503EA74"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_shallow_water_tile_v001.png.meta",
+    "sha256": "0A8798D0FDE4F4AFF6E213F62F83325562C9597B4B441AA31E416DECFC8E0B45"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_wet_bank_transition_tile_v001.png",
+    "sha256": "005A4794C06C5E0D58D11F64C416FB4BE2837B99F6D8E74976963EA8F433B135"
+  },
+  {
+    "path": "Assets/Game/Art/Environment/bd_env_wet_bank_transition_tile_v001.png.meta",
+    "sha256": "E5F2C039BEEB55E3A94FC0D7E2C7B1372BD2483E305860CB085115F61DB4724C"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/.gitkeep",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_danube_master_v001.png",
+    "sha256": "6D846F1EB59D21A1B1C0CC216F351C13C69349EDE99061AEE9E663E584AAB393"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_danube_master_v001.png.meta",
+    "sha256": "56DC8FAD5FC7CD2F50C55DA8AFD13215B2194353F47D50128734AB45C3075030"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+    "sha256": "354421E55C341BFBCC65993BA20C644842EEC44073CD3BBB7EB3B7794F7D7E45"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png.meta",
+    "sha256": "1E48C6285CB970811574684306CE8A4B42883DAA05B44860BF4AB27F6940A224"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_enemy_basic_infected_v001.png",
+    "sha256": "BEDEF6D9962A559DB160BB84ABF86DAD3F46E9CBE5D15B4274C5011045CCF632"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_enemy_basic_infected_v001.png.meta",
+    "sha256": "EAE9E8040A85E207CBCD85938772FF89047D7E44220F3693BDBE89647DF46841"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_enemy_brute_v001.png",
+    "sha256": "10C2C5253E9166F4124D1F2F170ED121E1947327669743737951A8729C8E66EA"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_enemy_brute_v001.png.meta",
+    "sha256": "BBF7604CC918AED49AB9C2EB6F156157C6903E360ACD0FE923CFF274C0AB71A5"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png",
+    "sha256": "7A049C5B64FB70C02286A51018083613DAF1B1A02D176CE4EC37F41FD91B8CD8"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_enemy_lineup_core_v001.png.meta",
+    "sha256": "BA5F813BBD4C5B058955CD77E6181957B19F5E188F423E0E0DC6EFAF5E22E719"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_enemy_runner_v001.png",
+    "sha256": "95DBB0FDFDCFA1B6FE48E50714B11607D33E64766D8ED00A5B61545E7E69CFD4"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_enemy_runner_v001.png.meta",
+    "sha256": "0B6082475D2C4259C4FCCED5752CA4A544BF6A57FA21DD3EA7A621851BE45B83"
+  },
+  {
+    "path": "Assets/Game/Art/Placeholders/Square.png",
+    "sha256": "DB993F2D24618C82972FB8A7BC2C85A44CC6C2F8C34609CA0AF3A0E4C34C15A7"
+  },
+  {
+    "path": "Assets/Game/Art/Placeholders/Square.png.meta",
+    "sha256": "686F3456CDAAE25B38FAD376DE4D20FE5505B339A07C71733A96237F02EDC196"
+  },
+  {
+    "path": "Assets/Game/Art/Placeholders/Triangle.png",
+    "sha256": "F05CC8B474B98ADA5BEA123E0023C09B7E7C5763D3BD494F41AF61CBEA439298"
+  },
+  {
+    "path": "Assets/Game/Art/Placeholders/Triangle.png.meta",
+    "sha256": "2437E383AC5AE2680CBA7A37BD6008A330427111DBC4167ABB685A83BF7F3C07"
+  },
+  {
+    "path": "Assets/Game/Art/Props/.gitkeep",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_antenna_v001.png",
+    "sha256": "F658F2ED3DDA1110F92481D3460299D6B0211F810F961341A007E0EC2EDE5D42"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_antenna_v001.png.meta",
+    "sha256": "8EE3819E61F5CCD98CF983C8CF75A20020E7BAD3C415BA0DD955BC80E078B3C3"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_barbed_barrier_segment_visual_v001.png",
+    "sha256": "E95E2CB097114C6ADD46EF6502D446BCBD6DD52C6A61E58638AB34F7EFCFE64F"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_barbed_barrier_segment_visual_v001.png.meta",
+    "sha256": "9A9FC2CE181B159E2B731B8B58C4F757F9D157398705146165AD4AC743A317A8"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_czech_hedgehog_obstacle_v001.png",
+    "sha256": "B03DA145DE51A2DDAD68630DD7428257A88109BD589B12D92A05596DF3CD72DC"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_czech_hedgehog_obstacle_v001.png.meta",
+    "sha256": "9DAE0AAF595865E44413C0420C488D06AD1DDDE70122158128088DA427135EBD"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_debris_scrap_v001.png",
+    "sha256": "6A148DDBECEED622A1472FACCCCF4678D7041FBB4BBC34796310EB5B49CD9967"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_debris_scrap_v001.png.meta",
+    "sha256": "D8A2199D90AAFD606F3315E4CA24DEF927A7FC5DF6C0CA9A2CD6F5BCF632ED26"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_destroyed_rubber_boat_v001.png",
+    "sha256": "E26D2E0901A1C05AE5E123AFBDFBEE1D5F9F6C718AFEC8BEC1E50D662A99808E"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_destroyed_rubber_boat_v001.png.meta",
+    "sha256": "64356551304A116F282B5523CE8604B786412A7CF07CAFC9AC8627D634C3845A"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_floodlight_v001.png",
+    "sha256": "C8CE81E4ABEA74F28A5A69EA69334FAE17B95F725732B8E7DCF77FDA649CE240"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_floodlight_v001.png.meta",
+    "sha256": "76544FB6A622D8C5C00F207C5AB5A90F77544B57A97554890E0D58252EDC7F56"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_metal_crate_v001.png",
+    "sha256": "4694F34397244E9A4C7AD63CDB292AF05432B0F21E8362C94476AE9EC617D978"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_metal_crate_v001.png.meta",
+    "sha256": "2B07B49EB1FF80AA12236522C66CDD9EFD37A89210BE8B5958CC78CCCE1E3981"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_military_barrel_v001.png",
+    "sha256": "627D81F580D2378BC9A1FC4E210FB05FDC88A9C85A9D5126214AC8FF04BA30AE"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_military_barrel_v001.png.meta",
+    "sha256": "9141225C16FAD5F35AE5EB405933A475606BD857D867F8FE1178AF54F40C5D3B"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_oil_barrel_v001.png",
+    "sha256": "A2C60D232D9B81CBC328F91BF3653469E9CC5B3671C4A0C0065C782AAF376B8B"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_oil_barrel_v001.png.meta",
+    "sha256": "73F79F81D825F56EC2E21476A9AC13BD14873DEBEE0E9A847D13066DA7F85868"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_quarantine_fence_segment_v001.png",
+    "sha256": "EB5DCE4C97AB68113842A54F2A26BAC800A1FBFDA3BE13880217624454796D9F"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_quarantine_fence_segment_v001.png.meta",
+    "sha256": "C0975D08C060A37030B2DF889D52C713F0FA0466E7769FA1F365309467636001"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_radar_device_v001.png",
+    "sha256": "B05E3CCA6DC55D083A62FEDE43E9ED221AD45BE4F7B813E2CAC2456E0FD849BD"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_radar_device_v001.png.meta",
+    "sha256": "5EA733E6818E331B0E8DE5F52CAE0A2DC8290D6FC07827919EA5DF22BF6A43B9"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_rubber_boat_v001.png",
+    "sha256": "127F42400A2887EFF57D666D8CC3F264D240E10053FF0D88B5796E19C64A0E02"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_rubber_boat_v001.png.meta",
+    "sha256": "36FBF34D6869D01EFD818B89200D70767B65BF1AA0BA7EB5DC098113115D5DD8"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_sandbag_segment_v001.png",
+    "sha256": "42298A2A72475A7BF2B9E3F3C2DAD522FD5776DB00A3F11852FA0BF14EAC2080"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_sandbag_segment_v001.png.meta",
+    "sha256": "AD0465ED2C983F2B331E8FF72C1041E22CE0E378E7ADF42B448E9FB15A8330A1"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_spotlight_v001.png",
+    "sha256": "50644BC7FBE9D54F0434FDD402CB094F51889EC50FDD4703F788AC6F57B1F3F6"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_spotlight_v001.png.meta",
+    "sha256": "0BE43E4923FB42669B3870DE401E7918D46EA77C29BD1638C411D92D3090E29B"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_warning_sign_v001.png",
+    "sha256": "00EEDF9945268D150EF3E13A01B53BADCAAF540B1D95A34DB0CEA2E0BFE1EF7C"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_warning_sign_v001.png.meta",
+    "sha256": "B978C4F7F0B86CF2226555B8FE44A1532E91F526FAF0A48664F10EC32E84F8EB"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_wooden_crate_v001.png",
+    "sha256": "8B8E86B6A68BBAB58C74859B8E4CA19CA16CD60F53F67B2C5495E5C0CB59F5AB"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_wooden_crate_v001.png.meta",
+    "sha256": "CFB27D54C07DD51D3D8E1B8ED86107063EFCFE7EF5E0289B0EE94D06ED18F88D"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_wrecked_supply_box_v001.png",
+    "sha256": "FD5010361723AA5D8E49F52084297A310DEA48EF4CC2950608889E38171D8B8C"
+  },
+  {
+    "path": "Assets/Game/Art/Props/bd_prop_wrecked_supply_box_v001.png.meta",
+    "sha256": "B8906CC47AA4BCEAF532263231E3D206C24C31D9448EE2364D33F3C0F5504634"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/.gitkeep",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001.meta",
+    "sha256": "8129AD0A770A8A9D8910407261137E26927EB7AD2C40A49163CC9F933C9A3860"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001.meta",
+    "sha256": "562D53B17853165E59932FB652AE5AE0B846CE626F74F3101AC6F430F4C74BE6"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_master_001.meta",
+    "sha256": "D984E59179B4BC055BB30889CB3689154BF9778B07083B4A5245E582AD2DD2A7"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001.meta",
+    "sha256": "89BC911775050A59D73A5A2A47ECB47C7766759D5BD919A385FEF423E98321CC"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001.meta",
+    "sha256": "BFCD677440EE72936B137799CA32A38A7C12A377A8AE14675A35FC3AAC7DF27A"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001.meta",
+    "sha256": "B9E3C55F4F3891EFE060D5EB338DB0D7E5092511DCBB6C41C1453932EFE40011"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_ammo_supply_crate_cluster_v001.png",
+    "sha256": "E2CDA8F88A2AE38B46209BEE8140444FEFC222D04DF4DC050517FB8AC0574269"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_ammo_supply_crate_cluster_v001.png.meta",
+    "sha256": "8E3BE51E70E4F1D335648495FB3F3D6B14D6B64A4CC2DBA08B485203546B9275"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_corner_v001.png",
+    "sha256": "09C03EA11E645C3F74EAEE0B2C5E3240D29993E8A55E31B1409D628411C9A507"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_corner_v001.png.meta",
+    "sha256": "2FCDB03BE3E7F5E74AF9D0F75CD2774AEBF9F04B64E0575C7D5018D452463369"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_gate_piece_v001.png",
+    "sha256": "04DAC566BA965F5BAEE0339A73BC19A03690E7C7C515ACA5D8E555770B26ACE5"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_gate_piece_v001.png.meta",
+    "sha256": "2E037FC86E9100D55AB0E1B606D1D7E0B1A3BA980BD2B13E143F22824AF8407D"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_wall_segment_v001.png",
+    "sha256": "F47878A9670133AE928D15CF4668EA262A77BAC44C7CE549ADEC2095ECFD8F65"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_bunker_wall_segment_v001.png.meta",
+    "sha256": "8FB41BFD19C7E4AA2F9DC01CB5B0E9BDBD9E6012A447B2AC902FDE8BA2944A3F"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_command_post_object_v001.png",
+    "sha256": "F41BE4298664B4491FFDD88C84B8063D79DD042910EFC69444E18380E7EE50E1"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_command_post_object_v001.png.meta",
+    "sha256": "C603471B209EC3CE44F1C75348BD25BF6230EB18E820CDE5E5306ABB92819AA0"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_defensive_sandbag_nest_base_v001.png",
+    "sha256": "5AB7B61995EDECD84E843E091196D440B5344E997DE0D91B208A6F647CE691BE"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_defensive_sandbag_nest_base_v001.png.meta",
+    "sha256": "C3F01A6338A88FD86D2CC1931AD380A0242B16B8E8BBEDF6D9212CCB795F6DCC"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_generator_unit_v001.png",
+    "sha256": "2745ED0D4C3DFCBE82DFE3B6C0D7068374F74A0073BC93FFE0B18549C130B3CC"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_generator_unit_v001.png.meta",
+    "sha256": "2C79A0A08E3AD61DB09330AAA1B512F38573A9046A52ED778C98EC93732CD95E"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_military_tent_topdown_v001.png",
+    "sha256": "EE1591ACB0E16B78865184EFCE879F3AC35746FAAAE2007D1FB98C2DB41E7BC7"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_military_tent_topdown_v001.png.meta",
+    "sha256": "3394E40E61ACD8B4DE22ABA3699137826339548E89EE1E2DD7F9E37459CB7B21"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_river_checkpoint_marker_v001.png",
+    "sha256": "367F3CBF7A6173F559087D2AE76DF7A15FDAB152ED7FBA4FEFE0798E86CCAF89"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_river_checkpoint_marker_v001.png.meta",
+    "sha256": "B6EE598D092E03730D54A6B24DE8AD80FD3442D7F5B28006B6C5526356EEF177"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_watch_post_v001.png",
+    "sha256": "F7C4ACDFB5715595F748EB3E9D3F511853DB4A3D889A6746F77A4CA2C4041EBB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_base_001/bd_src_watch_post_v001.png.meta",
+    "sha256": "94CC820C848F09875AB0D5E1096C5C93934458318BA0A8E1374FDFB85741028D"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_bunker_floor_tile_v001.png",
+    "sha256": "4DF4DF29AEA4658C1FDA7D6ADFC1065BCE26A26B3CBB3D770C117132E115A1AD"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_bunker_floor_tile_v001.png.meta",
+    "sha256": "EE71C511F0EA18B9BD992EB4DA60612E1D77A3723E212554EBD0D437C3B55037"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_concrete_tile_v001.png",
+    "sha256": "B496DE623F03E6E860F024954CED412CA515C1C1B8626616F9B225C0C0AFC14E"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_concrete_tile_v001.png.meta",
+    "sha256": "5C7AA35EA3B1C1AFDD9851E85D6D44F1E0D95F034408CE08108A6F6D3FC4A6C6"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_cracked_ground_tile_v001.png",
+    "sha256": "60A94CBFEFA7F0952551207D72D4E004BECCA8DAE4143D3E62587C2A312418D5"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_cracked_ground_tile_v001.png.meta",
+    "sha256": "2D9905A1B633EC27E9A61A208095FB17F899B717936F8BE6A56A9AF9530FDA3C"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_deep_danube_water_tile_v001.png",
+    "sha256": "23ADD93A301B2CF2A4E778CE489FF994865D9393922FDC9E65A5D0B6980BBC7E"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_deep_danube_water_tile_v001.png.meta",
+    "sha256": "1768C7BD03355E5A8455CA77E9A13EFBA764B6C3E1BF5DE352D30A46EEA122BC"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_dirt_tile_v001.png",
+    "sha256": "A8BD19B5D8872BB747B04E746B789906551914543E41161D0A9805EAC0DC99B2"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_dirt_tile_v001.png.meta",
+    "sha256": "C21E534F60E86DF60165C64550A2C4973D6EC31C79734380102C563A78D46F9E"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_grass_tile_v001.png",
+    "sha256": "5BAC713D49FFBE2A30AA50CD5EF076159590D7EF6A91C43A3DFB898BDCF84688"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_grass_tile_v001.png.meta",
+    "sha256": "5623D3011A634F030AF6DF511DCEA47A4312937F441AA3CD9F303FBD97232889"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_muddy_shore_tile_v001.png",
+    "sha256": "476FA5A4601DCE144CF463219EE6B2294F64EF7BD43962BB58E55FCFA79BABB8"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_muddy_shore_tile_v001.png.meta",
+    "sha256": "F317C29E4C6037CC4E082773BA130411C1D014AE6F0A7C1CA78A8C7782430D58"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_road_tile_v001.png",
+    "sha256": "A909D50E691CCA11D445C5D178A2296FB84B5999D1C3C4BDE04A2876FFB0EC80"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_road_tile_v001.png.meta",
+    "sha256": "651A52AB4E4970C7177C1C5310D2F2507993627673F7F2333AACA91B42A99A1A"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_shallow_water_tile_v001.png",
+    "sha256": "E46773B9271938072C729EF49719DC4E156181CB411EE37E618C62B556B38413"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_shallow_water_tile_v001.png.meta",
+    "sha256": "988C96AFC024F69ED8E76E92C2CC75EBE1CED3A57289733CB06F3647CB160E0F"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_wet_bank_transition_tile_v001.png",
+    "sha256": "DFDC45721CA79F7FFF1CDF0671AA40F1611CDAAC0EC5C0526A0A82431CD53FD8"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_wet_bank_transition_tile_v001.png.meta",
+    "sha256": "667C906741FFA3EB394EBB6C8D2C39BBB088D1CA666B394F5A25BA9195101968"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_master_001/bd_src_danube_master_v001.png",
+    "sha256": "6D846F1EB59D21A1B1C0CC216F351C13C69349EDE99061AEE9E663E584AAB393"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_master_001/bd_src_danube_master_v001.png.meta",
+    "sha256": "F90BEC369B30DD7A37B1D3F8D1A0709E1DB2C0AD398208B12FAD79255FC57553"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_master_001/bd_src_danube_master_v002.png",
+    "sha256": "354421E55C341BFBCC65993BA20C644842EEC44073CD3BBB7EB3B7794F7D7E45"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_master_001/bd_src_danube_master_v002.png.meta",
+    "sha256": "0D6D56AB0646F38AB29FEBEB4BD485FF4CA15C5E8AD3715A4E25012FD923B309"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_antenna_v001.png",
+    "sha256": "FB9E6D1B8E3973E3907CC36A18C7FBC6BB116C103418F26392B70C69A86EDC76"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_antenna_v001.png.meta",
+    "sha256": "6F35C26265E26FDBFA306347A0FF7EBF8CE35B7358E044622481E741B3E5B4B9"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_barbed_barrier_segment_visual_v001.png",
+    "sha256": "990ED76B69E0D6E1F07729F521A0885E5429BC4BB35548D6BAD24F278E574EC7"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_barbed_barrier_segment_visual_v001.png.meta",
+    "sha256": "A287613D4BF407AEB40F59D5CD4AF9C7AB0D8DBB4BDFD27427DA93AAF902B00B"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_czech_hedgehog_obstacle_v001.png",
+    "sha256": "3A7377E3F130553B28DFCCE05447F871C870C4E7C8109EC2A94E6599348DDE63"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_czech_hedgehog_obstacle_v001.png.meta",
+    "sha256": "C41313F58C77B833DE0CECF0AD0A63B693C2E6D5CCB178A1DC5BBC1C3A5AFE78"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_debris_scrap_v001.png",
+    "sha256": "2DF702D56348BD4C54350AB2D81213F77DADBE1B3AECE462E6B9078E2E32AA10"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_debris_scrap_v001.png.meta",
+    "sha256": "68A85C60690EFF56292F50832D261483ED720199ECED74590C38D22A143763B1"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_destroyed_rubber_boat_v001.png",
+    "sha256": "EB3D38FAA17D3A4EE138C57074EE4C68278D7F8271C2DC5C710F904A4D9E3D7E"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_destroyed_rubber_boat_v001.png.meta",
+    "sha256": "34DFF076B539980F7E69DE24BB165E81D27AC75A8AEE96733F12AE8E14E86689"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_floodlight_v001.png",
+    "sha256": "D99827714D140E5A23883797DCADBBAF7658008C8E06A3193F5FF44C0BF11615"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_floodlight_v001.png.meta",
+    "sha256": "0D45EF4F739F6BF5B9D326589BD11CA3A0DFDDFEC61F39392DA12D21309C06F4"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_metal_crate_v001.png",
+    "sha256": "7439BA891CE121CD99FD2A680B795482AAAF3960817F7B4F85DEE4193420C7E6"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_metal_crate_v001.png.meta",
+    "sha256": "C0C626CE8E0DCF93F598E195B9B45FB232517E11BDD26A0682E2ADB3BB9FB79D"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_military_barrel_v001.png",
+    "sha256": "D372F94B6957E09DC8E9811B57C469E7F01F501819F2748B253F0E662492A2B2"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_military_barrel_v001.png.meta",
+    "sha256": "3DCE02BC261CC5E66995FE98DE54F495106A99DAE531D64755D127B33C8CAEFD"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_oil_barrel_v001.png",
+    "sha256": "1520161637CE741C9D64EECC700231E2BF44FB90D6212826F0B08CDAAA7232CE"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_oil_barrel_v001.png.meta",
+    "sha256": "8E24A054C9AB838C210C9F6E5CDB79AF49E53B0A344AEA74D4E114DE0BD57839"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_quarantine_fence_segment_v001.png",
+    "sha256": "D7DD17700AAD8CAEC95F44AE2CAA81500250148023177EF9AE1A6E777C5EBE9A"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_quarantine_fence_segment_v001.png.meta",
+    "sha256": "27B0E30803072C69C26861B5A51E54DBA2804E4502E2220F22830DC0E73D520B"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_radar_device_v001.png",
+    "sha256": "D045FF2BE237ECE3B2B7370DED061B8BBC65C9A51E16CDCF62AD80FEB2E7BC29"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_radar_device_v001.png.meta",
+    "sha256": "1A4D97B3B4A8CC5B3B2D6318B5012D57F1EE890E9FEBC02B38E809FA345759F0"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_rubber_boat_v001.png",
+    "sha256": "CA077B41B8FCD4FC155A7B857122650F58C43F5059BEF80AA343EBE42D5DE613"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_rubber_boat_v001.png.meta",
+    "sha256": "EEC5DE7E7AF6B698E91D3A42A4F548BBE717E55203F5FFC10F6E7F2C09FE6DAD"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_sandbag_segment_v001.png",
+    "sha256": "166662E3A5F9B60655277F32D2A7590F8C3D658D4958E0FFE1E85C0227ECC84F"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_sandbag_segment_v001.png.meta",
+    "sha256": "81D6BACB9456559A165222DA851D379EF9159FD0BC963CED12EED9C50EC4C3B4"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v001.png",
+    "sha256": "BF2251E2180FDED52A714EF4BC38959F6CCD6EBE2318502003DD7F5F37E336B5"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v001.png.meta",
+    "sha256": "7C72D68763ADB0971D864EB866C9D964FE43A2E812996038925B18CD9633DC4D"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v002.png",
+    "sha256": "E0F567826CB38286FD1325570C0B510DE2484AC0F866561045FFAE6DDFF8470B"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v002.png.meta",
+    "sha256": "4F4557CC33BD5A77342F168BC26F5D4777BE6673D9ECF1C2B3ABCCF95161E9BD"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v003.png",
+    "sha256": "A825FEABA1E969A8B8B228974E65DEAED6715E96D3E5573B87F4087D0BE7D176"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_spotlight_v003.png.meta",
+    "sha256": "3B8FC1A9CCF0DBEF5F603427CD0554B441B6F74BB359B23C88D8106CD387164F"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_warning_sign_v001.png",
+    "sha256": "71AA54487D9C3F1102C05F37C2BFF8D327F68792D751358B38002605F732979B"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_warning_sign_v001.png.meta",
+    "sha256": "02BA0A14D5F95DC78105C40B982E7B8BDF031C92923E4043EB4BA27AD67AFB83"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_wooden_crate_v001.png",
+    "sha256": "08D776016EDA8817DF2F5B943C30B93A70272A2CCB5F5ABEDF3DC5D45C21D4F1"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_wooden_crate_v001.png.meta",
+    "sha256": "0FCD5BCC1DD5AA436126F2363C09D5C2ED797117B0C26602D44385FDB180A0BF"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_wrecked_supply_box_v001.png",
+    "sha256": "2BFF4CE86FD4911E326F40B474A915DD15E8774022C3F909B63B2218383DF504"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_props_001/bd_src_wrecked_supply_box_v001.png.meta",
+    "sha256": "DB7F6272B97B874F6397C07B43189B4C81AAC0FB15CA5EB5439E241E53E2FA9C"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_barbed_wire_icon_v001.png",
+    "sha256": "5CAAAB01BF99E4CA607F7A0BD7CE78BEC4DA86D2AF9FC002EF5771CA1EA75DD5"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_barbed_wire_icon_v001.png.meta",
+    "sha256": "C617C1E55B905D8E8CB94DB78D1AE9E9CB2F346FE30FD1C2157DB602531DA10B"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_base_hp_icon_v001.png",
+    "sha256": "1A43C9A31687C780D8EE4675083462E2E8E17A9A5FFC4AE9AF328A704C83BE52"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_base_hp_icon_v001.png.meta",
+    "sha256": "D6EDF3740DCA6D13EEEB5AF480EC32EFE8951B5FDB96F17E08D245A5D12FF182"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_build_button_disabled_v001.png",
+    "sha256": "A238C78D25D9325D2E7094EADC3E8ED5841EE060BDA1278AA649B106B8C9CBB7"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_build_button_disabled_v001.png.meta",
+    "sha256": "0A5EC4295AEFC7C4DE63EA23832F45D5B1D7A7BDF2573AB9386DB391CD272FD7"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_build_button_empty_v001.png",
+    "sha256": "BB71B97C86EA011505A46EC21756778D0AFEDDC60848CCFA5079C25A36A83EE7"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_build_button_empty_v001.png.meta",
+    "sha256": "7A043CF87D679984E527270488F655E49A8169AB2E31681EE533EB6446F42DA6"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_build_button_selected_v001.png",
+    "sha256": "8A66A54FF89B04B50BA82256AC2B484DE93D8D4C605F55143797D052662A8E72"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_build_button_selected_v001.png.meta",
+    "sha256": "D26C600229380E0B3ED7089E714B586C0FAAA23E75F6525B04AB27F832B29790"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_hud_panel_large_v001.png",
+    "sha256": "06DBF5B773A10A2D4579688856BCFC41BB32D9AE750E6E67F0612C17FD5364A1"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_hud_panel_large_v001.png.meta",
+    "sha256": "28418150987317602E2F41065F5F031868F3C1BAE02D7B4F2FA063CA75F89A45"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_hud_panel_medium_v001.png",
+    "sha256": "0230C77A30A0AAACD2776B3CFBBC05FFAF5F3DA40294DA4C211B54D217C5203C"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_hud_panel_medium_v001.png.meta",
+    "sha256": "724D44FE517C7224B75EBC807182CA04D28C8DA2B00F3CEB4FAE85CE61EB5F5E"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_hud_panel_small_v001.png",
+    "sha256": "49305B8A0662B8F7BF95F8A70CDFBA677BCCAFB51739B2444B32FA937D2D8B29"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_hud_panel_small_v001.png.meta",
+    "sha256": "1823A2BD50234E3522A07F551D250C5AA17649EB86707795A99C5966BB346348"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_land_mine_icon_v001.png",
+    "sha256": "9A09505D95F26756FA82EDFF211CA23499A22610DB8FF7FBC842798D1BCB226C"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_land_mine_icon_v001.png.meta",
+    "sha256": "4F73D191C1B084668666F0AB3C63DC48FAEA19A360FF817F033F0D3167ACCB16"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_mg_nest_icon_v001.png",
+    "sha256": "98544731EFD9920C5104C47AC77011EBFFD22BB303A16128A0C0E0F5F337BEB7"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_mg_nest_icon_v001.png.meta",
+    "sha256": "248658A8262FC680E67D7D45B86EDF326286DBADAF5DC8B2CF13C73B4A1F69C4"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_money_icon_v001.png",
+    "sha256": "6EC7F220B8437D140E6F99BDF6AA8EA5E45D0A2E4F958FA135CD0B555DF7031A"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_money_icon_v001.png.meta",
+    "sha256": "4DD0E1E73C7CE8D962C41F3B2AB89C677313225899C6CDEBBC9BEA3459795A0F"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_money_icon_v002.png",
+    "sha256": "E2A87B9DE69E9860060F7D8FC873C0D444B98C295B25F3F503440F402601FD48"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_money_icon_v002.png.meta",
+    "sha256": "AA86530DA8D0067AB75EDE09FDC8BE2149CD90B659D60F436F2B0382937ECCB9"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_small_status_panel_v001.png",
+    "sha256": "5D7745EA20C2856CBFDDB0F481A5422CDF07BA7A2A846CF9A24B2407D49E1ACC"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_small_status_panel_v001.png.meta",
+    "sha256": "D6451A318B6555847CC5D741D5E46D10B0773C3B315E1BC1A811FE950A7667B4"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_sniper_tower_icon_v001.png",
+    "sha256": "7970B7A78AD921E8ACC1A3965EDACC751DC34FAA256DC613DEA92D721EE5F5AB"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_sniper_tower_icon_v001.png.meta",
+    "sha256": "BECD4ECEEAE4B185CB7D2552F9AAEE6BB8DD8D72B0ABFAD5FC10AAEB694D7004"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_start_wave_button_v001.png",
+    "sha256": "DB82B0554F46480DE87AD5C282881E22C718EA018205B8B41AC05E7FB887A147"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_start_wave_button_v001.png.meta",
+    "sha256": "2AC8415515C1AFAB8A28E1950D3B563D92DE6F1F6340D5DEC0A7B30795D42208"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_wave_icon_v001.png",
+    "sha256": "3AE9BF258DF9C31337455D0EDAAD66F947758D250B89EC0CF128B6DD4EE9DF54"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_ui_001/bd_src_wave_icon_v001.png.meta",
+    "sha256": "EE8787017F534357F3CE6EF5FDDE891ADD26A85A9220B14FB76A6405B8061629"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_attack_e_sheet_v001.png",
+    "sha256": "6510BCB5AC27A4105CA9845AE0A865CEE5B6A519C2A8571DA016D7E9C5749B73"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_attack_e_sheet_v001.png.meta",
+    "sha256": "F26FAEF16A4E7330AB574CDA6085FBA640F7F7E60E8447D0E966E8419EE7465E"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_death_e_sheet_v001.png",
+    "sha256": "0EE82B3F6CB3DFFB059FE00B454054C99D574CF831EF571D70E320B1A745686F"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_death_e_sheet_v001.png.meta",
+    "sha256": "499F56C743A4AE411F7ECACE2745B54AE2B4ADF631BDB28DE8FCBD07D8B8C1E8"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_hit_e_sheet_v001.png",
+    "sha256": "5A10B5F3CA89E1F11339E93D6C848C79D6D86FCBEC9CBCBBE8B86C8BEBFCAEAE"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_hit_e_sheet_v001.png.meta",
+    "sha256": "A44106B0958FD297071A3B634CF51D497B8D0F6BF75E16E36DD0574DC00B6C00"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_idle_e_sheet_v001.png",
+    "sha256": "A8296C03EAFA43FA579454E2EAB9730EB0537C54C73C5E8C1C84D6023A78491A"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_idle_e_sheet_v001.png.meta",
+    "sha256": "2D1B221736B0607D18B6C9593EEC0546EFCDB738A32E29CB22D7416D200781F2"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_ref_v001.png",
+    "sha256": "BEDEF6D9962A559DB160BB84ABF86DAD3F46E9CBE5D15B4274C5011045CCF632"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_ref_v001.png.meta",
+    "sha256": "B2562C3B055677DED3019825983015D06B241D5616C6A50367B3F9684A398C1C"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_walk_e_sheet_v001.png",
+    "sha256": "3E62A776DC86759C1D4ABE85728753385CFB39A208EB6E1371620C45C8324D6F"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_basic_infected_walk_e_sheet_v001.png.meta",
+    "sha256": "828A1E1E761D91E2F6EE193452F8AD76986EA317E193BDA73A24EEEE0436570A"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_attack_e_sheet_v001.png",
+    "sha256": "2EF30F289D54ECDA6443A4FBA4AF48A7C84C5550E65A46F6D530A04721528EC4"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_attack_e_sheet_v001.png.meta",
+    "sha256": "590240D7A2B39AED9EFF731738DB4DC5C1437DF7A0B85108CEE1C2A85A4E8AFF"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_death_e_sheet_v001.png",
+    "sha256": "5EBC47C43E9F23F6E79E559AF11EFC8FD1E1B9D0991407BBC5D27D64021D61A6"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_death_e_sheet_v001.png.meta",
+    "sha256": "B3A54F1D88A24E942E4C592E56F9F6C8E823D16A76E4CFC23966741F8AFC2587"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_hit_e_sheet_v001.png",
+    "sha256": "5D0B5016C3350AA25753C4619559CACBD2C72900ED3FFF547E2F88B39D25CBF2"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_hit_e_sheet_v001.png.meta",
+    "sha256": "A7B04AF88381D30F7C038390B372E8504C121E062B6055085760BBC7B1F1B6CF"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_idle_e_sheet_v001.png",
+    "sha256": "1BF9609D0C947C82C52E3DDE12D72C9D52A16767EB7802F5DE7736B07F5DAC76"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_idle_e_sheet_v001.png.meta",
+    "sha256": "CB7CC99986721F6DC7B847983B7A97A0639961BEC095F366C2E55FD6536227BC"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_ref_v001.png",
+    "sha256": "10C2C5253E9166F4124D1F2F170ED121E1947327669743737951A8729C8E66EA"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_ref_v001.png.meta",
+    "sha256": "7D4D6366D094C4E8EBA9D92DDE70187D43D8D0345410541A8C8D22C969DB16F7"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_walk_e_sheet_v001.png",
+    "sha256": "CC19858CECD2D500817B17E83E5578D8BA73E50569547897C0621359552FC326"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_brute_walk_e_sheet_v001.png.meta",
+    "sha256": "0C4BC26EDC5F99ABD7A92091724834E44023F07F97B185307375044CAE658467"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_lineup_core_v001.png",
+    "sha256": "7A049C5B64FB70C02286A51018083613DAF1B1A02D176CE4EC37F41FD91B8CD8"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_lineup_core_v001.png.meta",
+    "sha256": "9C44E66ADD43694209FD2B3AC96C7E98F28E3509298FDA623C6FFFB01DCB5226"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_attack_e_sheet_v001.png",
+    "sha256": "C67DC3915BA2AA2BE858BA892CDB9783FB30E93DD935814151E570A58F0ABDE7"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_attack_e_sheet_v001.png.meta",
+    "sha256": "40A019E6C5226DD03F647BD53F2552EE974DBAC0EE9863D7F91C4FBDAD049A1C"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_death_e_sheet_v001.png",
+    "sha256": "D27DA16CE9FE0E4DFA7C7F1F807FA16A2D0E90419BD7E25B0CD1163563375772"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_death_e_sheet_v001.png.meta",
+    "sha256": "9A2290C25267D20E53A88E26C1B679EC76BF99248AE0A1A6926CB2E05A96AA8D"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_hit_e_sheet_v001.png",
+    "sha256": "6371F45DDD401D7CF44666D3F3CE6D5CF86E682514EAD193548BDC6A30CB2CAD"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_hit_e_sheet_v001.png.meta",
+    "sha256": "034A63AD1DCA0096946DA4E81A0655BB37FF4F1F3909AF3FD0E79FC7D68ADC0B"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_idle_e_sheet_v001.png",
+    "sha256": "6950911525682F140ADE04059E26F620EB885B93663ACD53CE34024F6D318ED1"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_idle_e_sheet_v001.png.meta",
+    "sha256": "ABAB62E010D7664B46B0ECC28D05B1D78391908AFFDC92FF50A7FA5D95074529"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_ref_v001.png",
+    "sha256": "95DBB0FDFDCFA1B6FE48E50714B11607D33E64766D8ED00A5B61545E7E69CFD4"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_ref_v001.png.meta",
+    "sha256": "4C858B0AA89E03A3650AFEA810D577E5D71596213F8128A90AE2C60EDBF734D7"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_run_e_sheet_v001.png",
+    "sha256": "2A9A803310DB1D5C3BACC4F31ECBC7C83EFA8C48C7A666E2C3C0967C654638C4"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_run_e_sheet_v001.png.meta",
+    "sha256": "41128535E6358AD686487DFA095334D321979801C2F4EB92398F12D160553DFA"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_run_e_sheet_v002.png",
+    "sha256": "9DDD599DDB4FC644D1D3D998E8DE57718D91DA8AC3BC12A9D315EC9FB8F3CEB3"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a2_core_enemies_001/bd_src_enemy_runner_run_e_sheet_v002.png.meta",
+    "sha256": "4AB4D3E19EA0D219F5968DCFF72CDC7A7BBE33C2965A9AD31B14BC4058ABC365"
+  },
+  {
+    "path": "Assets/Game/Art/UI/.gitkeep",
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_barbed_wire_icon_v001.png",
+    "sha256": "FF0056FE6FCC90F73217FD3B7C986A510B52A3CC8AEC4D5E4F54BE95391926B0"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_barbed_wire_icon_v001.png.meta",
+    "sha256": "69DFFE38BB4F91C9E0AB8AB92910F00374575B86841369BC1E9103A4BAD46212"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_base_hp_icon_v001.png",
+    "sha256": "07D662EEFEF2895841336735D0B2A2AC5853B1F4789092368FB448497CD41692"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_base_hp_icon_v001.png.meta",
+    "sha256": "745C9933EE60BDC7CBB734F3CD46B6F0BA510FD38970E4592F329DAA0B8F1C86"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_build_button_disabled_v001.png",
+    "sha256": "EE1CCCB37574150DA60740409DEF6C62AAA2B9B630BC4258EABBDA12C814A201"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_build_button_disabled_v001.png.meta",
+    "sha256": "63887DAEFE7375894436985595F6606F14E54FC4D07B2FC449B716D3DF04EC1B"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_build_button_empty_v001.png",
+    "sha256": "66D6E4F2DF254FEE9AD925F0A84A741F8EB9391F3F8930ADD397FEBDF738EF41"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_build_button_empty_v001.png.meta",
+    "sha256": "B5B613DCEF154F48B356001E2C89BBDD279B7C2217095CD5AB6CCB7A9831CCC2"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_build_button_selected_v001.png",
+    "sha256": "0A25EF45225336C8A51E001604E7EA5E66F0EBE508A5B00F3EA8F2F0A54AF5C5"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_build_button_selected_v001.png.meta",
+    "sha256": "EA8C70BCFEDF2ED62333AAEB2827F572509D192C11B6FAEC0867D90901487A6A"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_hud_panel_large_v001.png",
+    "sha256": "C4E538AC8D801A28B21F26B13A1DACE1C79CFFA433807A2757F11F355737E343"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_hud_panel_large_v001.png.meta",
+    "sha256": "5ACA6BB80B3E8D9BC84D9DD2BC4075575419F2A0B9C64F51E09473B0B38F9DD7"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_hud_panel_medium_v001.png",
+    "sha256": "A1C68599AEE212B09AAF48C76C5CDC661DD52D91355F113C7CD6E8021E8A0B3B"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_hud_panel_medium_v001.png.meta",
+    "sha256": "7FF67BC6EA849A41D7E7ECB57EC6FC86E52447123A3F9730981D6F191D8F2C21"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_hud_panel_small_v001.png",
+    "sha256": "9194D0FB5CB83DECA6E8A470F0D3EAD0348685B92D2D6CAD5DFEEB7E4096AD83"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_hud_panel_small_v001.png.meta",
+    "sha256": "52B332E5AC304AD18DA6A83A3335EE2351E09B38DE525AA122C5CF39D3C570BF"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_land_mine_icon_v001.png",
+    "sha256": "9A3BEDB4F3C6149ABB757E703B8B943357330E560B990D070E7A8C8AD86F1853"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_land_mine_icon_v001.png.meta",
+    "sha256": "5FE600D9A02FE076B7DA91C06D8253A031C3404E919017C8D03D7C3053DE5C71"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_mg_nest_icon_v001.png",
+    "sha256": "163786885EF09D92CCA1C7C3A51C06A4668C04D9A4F8672B025B01863FCB4356"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_mg_nest_icon_v001.png.meta",
+    "sha256": "DFFE27AEE352BE20E66154F547189414CC8006C35111302E1E30039C6282AE43"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_money_icon_v001.png",
+    "sha256": "746895775701DDCC3EAB2197DAEAD6B64A0B2D5B5CEC900AB38BF6436EFF6A53"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_money_icon_v001.png.meta",
+    "sha256": "DEDCBAB2A1F1F4777878BE85B50CAC0039BDD7E407CB5B530F20DCACD274379B"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_small_status_panel_v001.png",
+    "sha256": "E769BD2EC24525FBCD6FFAA64DD3FD8375223B9BE3247948F43AAE0C3BF2B507"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_small_status_panel_v001.png.meta",
+    "sha256": "C4CD5F12337BFBF0A45C0785ACE2AC02EF7BEECE6E8234EE397C5822C3955B9F"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_sniper_tower_icon_v001.png",
+    "sha256": "88BAB8BA806DC40784C15021B4D2D1C76833F5F26DD9A45C550179E5C7ACF367"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_sniper_tower_icon_v001.png.meta",
+    "sha256": "964F622CE74F2C39E7FA7B5DDA244C79514E5581F74686945C8BD5369E72E323"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_start_wave_button_v001.png",
+    "sha256": "133EF6F89EA20D06468A48B8D4B5853C391EB0903C099221A839059966E2C0DB"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_start_wave_button_v001.png.meta",
+    "sha256": "CAEBED6B75660B404ED1D9249AFEC7D69003E669220340856E34DB8750E485B0"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_wave_icon_v001.png",
+    "sha256": "1C4AF8C05A1D168E9ECA90A4FE018ACD06ED8D4274674EC07C98378BB0DA0836"
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_wave_icon_v001.png.meta",
+    "sha256": "35EE300B291CCFC01DF1C2585B6B05BD0188B795393298BA3F4EC6F976531EAA"
+  },
+  {
+    "path": "Assets/Game/Data/Defenses.meta",
+    "sha256": "01A932098C9F9E5789621ADE19B0CE68481458E2338428A56CB03E499DB2C844"
+  },
+  {
+    "path": "Assets/Game/Data/Enemies.meta",
+    "sha256": "C3D6283F90A545CE785493BB1D65F79C88DDEF6D91E4F650AB0965ED229D6492"
+  },
+  {
+    "path": "Assets/Game/Data/Game.meta",
+    "sha256": "A440FD2FE4077C5788228B6F6D121F7C54B2036E05E73BAD1F4C1070FDF85266"
+  },
+  {
+    "path": "Assets/Game/Data/Waves.meta",
+    "sha256": "4C06FFB2C57749FA8C3A80DC65D16854AFA2AFE8EC0B8016B1D77CBD115A5F8F"
+  },
+  {
+    "path": "Assets/Game/Data/Defenses/BarbedWire.asset",
+    "sha256": "78B48D0C17D8F50CDB1C9C7E67C9378B87711D438598417402DAE4ADD7E58E48"
+  },
+  {
+    "path": "Assets/Game/Data/Defenses/BarbedWire.asset.meta",
+    "sha256": "40435FB3CE623D223B35CB56C77737488AA66CE8AF2C8154D514B6AE8FAB0A9F"
+  },
+  {
+    "path": "Assets/Game/Data/Defenses/LandMine.asset",
+    "sha256": "262FF2E3EE420F69207114569C59D0489B5AAABCA850B8C13C6CE772571AF30C"
+  },
+  {
+    "path": "Assets/Game/Data/Defenses/LandMine.asset.meta",
+    "sha256": "F572556546096289A8C51EC4270FD39B4AA49CABCE764CFEF087278C5C1E29D6"
+  },
+  {
+    "path": "Assets/Game/Data/Defenses/MachineGunNest.asset",
+    "sha256": "2AB9ACD5381D32DB3464A7F096865F4ED8CB959F0E448C65189AD08F6E218AD3"
+  },
+  {
+    "path": "Assets/Game/Data/Defenses/MachineGunNest.asset.meta",
+    "sha256": "6496E6B3956DAF557B3689D85AB2C41BAFA30EF35A7F071AD02A3DA52A34637E"
+  },
+  {
+    "path": "Assets/Game/Data/Defenses/SniperTower.asset",
+    "sha256": "2A69A026109FF1166162A855309F87FB01B64A9A325EE0DABD9BA91C16F2940C"
+  },
+  {
+    "path": "Assets/Game/Data/Defenses/SniperTower.asset.meta",
+    "sha256": "0712614E8F0B604BABB7B08755F6F7EA6E1FA09D1C4684E92C477CD9586B9EA6"
+  },
+  {
+    "path": "Assets/Game/Data/Enemies/Crawler.asset",
+    "sha256": "05BB50FD7B5C36E98BB0A6EFAA6D63EEBC0DAB3DF38E453787A4C03029AF93E6"
+  },
+  {
+    "path": "Assets/Game/Data/Enemies/Crawler.asset.meta",
+    "sha256": "7AD2FE8EEB3F97F64A1FE98E918ECEE52AC37B43F79D6F5C3B09AA1E2A10B902"
+  },
+  {
+    "path": "Assets/Game/Data/Game/Battlefield_TopDown.asset",
+    "sha256": "01C6EE5E9178802045D2640D0338263253252747200C76BA6E94CFA324129295"
+  },
+  {
+    "path": "Assets/Game/Data/Game/Battlefield_TopDown.asset.meta",
+    "sha256": "F724474657D4CE3916A83785860D59277D53B4ACC4033723D09DD891001590FD"
+  },
+  {
+    "path": "Assets/Game/Data/Game/Battlefield.asset",
+    "sha256": "65A3A8AE07CD1E88DFF88F918F391BC0DDE197B8E845B7F61626C5B13CC96309"
+  },
+  {
+    "path": "Assets/Game/Data/Game/Battlefield.asset.meta",
+    "sha256": "80435C27840F20EEEC8383B2C855B28D6B0BA42F17134A88647EAF19F4C779EB"
+  },
+  {
+    "path": "Assets/Game/Data/Waves/Wave1.asset",
+    "sha256": "A23E12078663F7E7147B0029CEBF97565C55D60DA0D8CE8979D2B7CD22DC5C7A"
+  },
+  {
+    "path": "Assets/Game/Data/Waves/Wave1.asset.meta",
+    "sha256": "8132C6956DEA0F0A76EB5AA42DB688582D646577E8A86DA94F927B9870C387C8"
+  },
+  {
+    "path": "Assets/Game/Data/Waves/Wave2.asset",
+    "sha256": "ADEC30D5D2180960D83E9E131A3E19BFAE0003454D93FBA827C2275274C2C2D7"
+  },
+  {
+    "path": "Assets/Game/Data/Waves/Wave2.asset.meta",
+    "sha256": "78F8EA478D2971CD41B5C5D64A37285DCEE86750E46ED0A6EE24C9F3075FDEA1"
+  },
+  {
+    "path": "Assets/Game/Data/Waves/Wave3.asset",
+    "sha256": "EE19FDF6CE83A2B098B69E975356ABA5028DC3BD4235A4E46CF6AC4654B3D3E2"
+  },
+  {
+    "path": "Assets/Game/Data/Waves/Wave3.asset.meta",
+    "sha256": "E2E7EB63E6CB0D6491DFE712AB30967573365FB1E08A658DC87C149555085B4F"
+  },
+  {
+    "path": "Assets/Game/Data/Waves/Wave4.asset",
+    "sha256": "FA6D609659070BF4292A9BC17733F48ADA808454EF918572BB017B4A03F0C814"
+  },
+  {
+    "path": "Assets/Game/Data/Waves/Wave4.asset.meta",
+    "sha256": "489454148D75996CBC82AF4ED82024168B3F0FF44F03C06F1203C44399044D0E"
+  },
+  {
+    "path": "Assets/Game/Data/Waves/Wave5.asset",
+    "sha256": "71C7131485A3FBFB6816E5AB5FD0A80F14B8E34DB7DDAF02106CCCE6A8CCB023"
+  },
+  {
+    "path": "Assets/Game/Data/Waves/Wave5.asset.meta",
+    "sha256": "FC3160FEE1A0D811AD015EC50864B9A6CA4200565C713FDB96E57C6FE473F2F7"
+  },
+  {
+    "path": "Assets/Game/Editor/Phase2BSceneSetup.cs",
+    "sha256": "ADB1C78ED8A64C7CC0BD25EB10AD27D7F754302333211D42811EF157320F325B"
+  },
+  {
+    "path": "Assets/Game/Editor/Phase2BSceneSetup.cs.meta",
+    "sha256": "AE21B49646188164746AC51BDE582786D3F926AFA263131EC5042C5257BD52A0"
+  },
+  {
+    "path": "Assets/Game/Editor/Phase2CSceneSetup.cs",
+    "sha256": "1B76B3F56E744B801E48CC408E53846B8613DE8545C5BFB5E73AE892B768E61E"
+  },
+  {
+    "path": "Assets/Game/Editor/Phase2CSceneSetup.cs.meta",
+    "sha256": "C7B1DA9B46F3EAD8529817F24956D7FC80A28F6D38881AF0762F205C4B032AE9"
+  },
+  {
+    "path": "Assets/Game/Editor/PrototypeSceneBuilder.cs",
+    "sha256": "4FA5D1FEAE994EB1485B81C7DB3E8655DF3DEFBCE6A266DDEA81F7341A2E2B68"
+  },
+  {
+    "path": "Assets/Game/Editor/PrototypeSceneBuilder.cs.meta",
+    "sha256": "E05A3EEE7EE4FF9D43C0D42171C1346F07F23290AE07AF436FA09309DFB3F13C"
+  },
+  {
+    "path": "Assets/Game/Editor/ShorelineDefense.Editor.asmdef",
+    "sha256": "94569CE46D35087C77E7F1D697C98D8BAE61873FDD95A9968D8AACE03147B73D"
+  },
+  {
+    "path": "Assets/Game/Editor/ShorelineDefense.Editor.asmdef.meta",
+    "sha256": "E4EB84D3FFF28537C186535F9913E2D6D265BF5C9947A8F0A499B3AA5B113AE8"
+  },
+  {
+    "path": "Assets/Game/Editor/TopDownSceneBuilder.cs",
+    "sha256": "9FF0FA584BD869C67C845706D583F9EA3E588549490CD58AE7837FA4564AFBB9"
+  },
+  {
+    "path": "Assets/Game/Editor/TopDownSceneBuilder.cs.meta",
+    "sha256": "7E88D4106F09D5BFF37F127FE477AFB7E9BC2DEBCE70AC8BF1BE1CAC992C8DFE"
+  },
+  {
+    "path": "Assets/Game/Materials/Beach.mat",
+    "sha256": "23EF54C080BA46E8CBE0F51772E75B6D0C31DD5502573A0FDB81491A7E1EED1A"
+  },
+  {
+    "path": "Assets/Game/Materials/Beach.mat.meta",
+    "sha256": "15DB1C3FB0226A8E0543058190887F2630D7B76AAEEBB59F8F439FE51045E97D"
+  },
+  {
+    "path": "Assets/Game/Materials/Crawler.mat",
+    "sha256": "4F3341763128F826489C48FF6CDFB307724FD6C2486E1AA6FD36E16FCDD0588D"
+  },
+  {
+    "path": "Assets/Game/Materials/Crawler.mat.meta",
+    "sha256": "893BAEA7DF8DA6B5933A2684EDCFE57811A3927DB3F844174410C12C00909B36"
+  },
+  {
+    "path": "Assets/Game/Materials/Ground.mat",
+    "sha256": "A199EB342B61D0FB3AC7ACFA443018712AB27EE11C11C5B824F9E8B2BAB74F20"
+  },
+  {
+    "path": "Assets/Game/Materials/Ground.mat.meta",
+    "sha256": "2CCFBBE1165BD0F3554445DABC21E1F816C13DFEADCD3D6DEE56EDA0C00190C6"
+  },
+  {
+    "path": "Assets/Game/Materials/PlayerBase.mat",
+    "sha256": "FEDADCFF2AF015DA82E45C427564554DDBE8DE76B9C659F31093677D03B1A43B"
+  },
+  {
+    "path": "Assets/Game/Materials/PlayerBase.mat.meta",
+    "sha256": "91BA0396D6D1FF1824B9C127C878C0142D89963BA5E76462CB282E325A14AB0D"
+  },
+  {
+    "path": "Assets/Game/Materials/TopDownPlaceholder.mat",
+    "sha256": "EF4869E34F80419D99865AA77A725830E828A02664CFA3F8BF9AEC622DA3F3EE"
+  },
+  {
+    "path": "Assets/Game/Materials/TopDownPlaceholder.mat.meta",
+    "sha256": "FA182AC9E8264C9BC9972A1154CF1893C27F182B95C4DEB1C24C0AF2CD68B392"
+  },
+  {
+    "path": "Assets/Game/Materials/Water.mat",
+    "sha256": "44E372275E61FD6AEA67DC80EAB160000F731686458BA6102B75314433E3C411"
+  },
+  {
+    "path": "Assets/Game/Materials/Water.mat.meta",
+    "sha256": "81DB90C2BBC545FB646570FFEEE37C1AE80F048AB568B7ACF4B24B63CBB8435C"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Defenses.meta",
+    "sha256": "B1E3AF33922047A231B3F4F810AD40CB5F6B5AF91118D2C0AEAF30B3D54842AD"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Enemies.meta",
+    "sha256": "614623DDF18E9F656A3742164C19B17731253E027AFB8E041CE8403E80085088"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Gameplay.meta",
+    "sha256": "A7016303C27E726FB65770AA93AC5B8C4ACA5CDACF7271235B6A7B93B62A888E"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Defenses/BarbedWire.prefab",
+    "sha256": "3FB25A8E06351416A22229030F6421906BD0DE3683C3CD8B73F771847581225E"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Defenses/BarbedWire.prefab.meta",
+    "sha256": "5E9A16A0802F29F44FAE616CF479C2EDB7CAC0C69E5FCFBCD05C84B4A1B7084D"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Defenses/LandMine.prefab",
+    "sha256": "2B796F842F089058516D4DD853CF491825DE8F20C770937382E19561B8FC5E4E"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Defenses/LandMine.prefab.meta",
+    "sha256": "A2B31AC70E748953ECFA20F8B269B75039B8F2F952A75BEC36EA3836E188C9B5"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Defenses/MachineGunNest.prefab",
+    "sha256": "BD7A4B7485D8779B6EE456FDE8810549A4AD7F9C8184488D6BAA15A551CEEE00"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Defenses/MachineGunNest.prefab.meta",
+    "sha256": "A634782D442C5F1D1B2AA29ACF0B3A034E1021395B4BDE636C422DEA0AFE0B31"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Defenses/SniperTower.prefab",
+    "sha256": "0CDDA79264BE202F90E09AB29BB526EBB7A48BB4CB4404CE1DF6D6F38ACC7AA8"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Defenses/SniperTower.prefab.meta",
+    "sha256": "BB653D3B20A4662BFAB85792F44469437DE3D9E77D679CB83C5A735970A3B728"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Enemies/Crawler_TopDown.prefab",
+    "sha256": "C80654F160B35FA2478479235D1BCABF82967F0E2D0A58656B3FC1D62E74986A"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Enemies/Crawler_TopDown.prefab.meta",
+    "sha256": "C1F538F47C97FB04D5F23F164454E4C552492C46A92C156B60B8DB752717D924"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Enemies/Crawler.prefab",
+    "sha256": "65BCAA92F993095F837F0E29ABC08CD62A0417DB30795111993332C7CD6822C3"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Enemies/Crawler.prefab.meta",
+    "sha256": "A39082FAABEC82DB0B8E22C5385957672D6B021E1E98162C599406EA8EDABB60"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Gameplay/PlayerBase_TopDown.prefab",
+    "sha256": "069E9136676097E25B4687D658A62EB5EDCD25107F4420F1C3812BE605B3F366"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Gameplay/PlayerBase_TopDown.prefab.meta",
+    "sha256": "2B1701DEF6C443D6F1C0A87517A4444D22B98855DA2482D5F9CBF913C3A6A6D9"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Gameplay/PlayerBase.prefab",
+    "sha256": "C6F32248974F782532AFBF222F3EE5C1D91BD9ABB626CFF9960A83D963821BE8"
+  },
+  {
+    "path": "Assets/Game/Prefabs/Gameplay/PlayerBase.prefab.meta",
+    "sha256": "32B942412ADA7B2A80A90376467855F1B56656E4AEE6DA7538D0BB2DD13026D1"
+  },
+  {
+    "path": "Assets/Game/Scenes/CoastalDefense_Prototype.unity",
+    "sha256": "4B64ED09316E850E6A5ABE695537EDF8238EF27E09D03DB3DBDFFEE583A2B74F"
+  },
+  {
+    "path": "Assets/Game/Scenes/CoastalDefense_Prototype.unity.meta",
+    "sha256": "BDAA9FA9511149EA6175B3F5DEC623ABAFB3BD1E72F73D0B64E4CCA820D35A2D"
+  },
+  {
+    "path": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+    "sha256": "7B1387B0216F099702DF1191E4E1CF4449902180BAD058F2714EA1FC9D81B913"
+  },
+  {
+    "path": "Assets/Game/Scenes/CoastalDefense_TopDown.unity.meta",
+    "sha256": "3F79BBCBDC77E89E40298464A336EEF556B49F0AC88C9A9B5482CFDB2860C0F4"
+  },
+  {
+    "path": "Assets/Game/Scripts/Base.meta",
+    "sha256": "9F6F76271EDA3144D61A14D62CE11182F5E870A269B33F5A00869720A519EE9A"
+  },
+  {
+    "path": "Assets/Game/Scripts/Building.meta",
+    "sha256": "438A7BA76CAFDB7567691AB8701A791514F8F4B88B12FC3F78798E976D497154"
+  },
+  {
+    "path": "Assets/Game/Scripts/Combat.meta",
+    "sha256": "088AEA1AB68A631735F01A0DCC813CE98341F6E2848ECF70E25E219CED258F3B"
+  },
+  {
+    "path": "Assets/Game/Scripts/Core.meta",
+    "sha256": "31ABB02E1168DDF58C579D46C0EB01A7F9D22D314B7F95A702D37500F587CD4C"
+  },
+  {
+    "path": "Assets/Game/Scripts/Defenses.meta",
+    "sha256": "584ABDA67B778221322ACD8CE5B3A7F606030DDB83D538C907B6034A32DCEED4"
+  },
+  {
+    "path": "Assets/Game/Scripts/Economy.meta",
+    "sha256": "EB53712B67FD2826A7653C2181062789B7E5C4E027F216CB0634A62B4A049F8C"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies.meta",
+    "sha256": "878248058DA65AAF449E18361033242918441F76A9D1EFEE0D63FAD509B2E128"
+  },
+  {
+    "path": "Assets/Game/Scripts/Grid.meta",
+    "sha256": "9F1B7F252A8AEBF430884B854BCB91D5EB3D6B37D1CD116E579BF0EFE2EB877F"
+  },
+  {
+    "path": "Assets/Game/Scripts/Presentation.meta",
+    "sha256": "0AA6B4F2FB60C41D9A991444074F5724792562FAB4DF249ACE496259678BA6F7"
+  },
+  {
+    "path": "Assets/Game/Scripts/ShorelineDefense.Runtime.asmdef",
+    "sha256": "277D19C05AAFC0621FEDCC8015CBDEE8D9963B4A6037E24E09B6C51574B83987"
+  },
+  {
+    "path": "Assets/Game/Scripts/ShorelineDefense.Runtime.asmdef.meta",
+    "sha256": "02128989E392E37DEE1E544B61BD5D57C48B779CE46681C67B7DA61E3409EEA4"
+  },
+  {
+    "path": "Assets/Game/Scripts/UI.meta",
+    "sha256": "D68DA3D16C1B6AF1C20788CA8DD0849CBC8AE9A2AF86CBFB754845B4055620BF"
+  },
+  {
+    "path": "Assets/Game/Scripts/Waves.meta",
+    "sha256": "F7EB2E2AD0F331B643270727704DD383E60FEE8F546D091143B0C035C073C732"
+  },
+  {
+    "path": "Assets/Game/Scripts/Base/BaseHealth.cs",
+    "sha256": "32D999EE7FB1401990F6800242D2B315FD6C06DE3D6D5F7BB88CF9F99843C6AB"
+  },
+  {
+    "path": "Assets/Game/Scripts/Base/BaseHealth.cs.meta",
+    "sha256": "B3734661BC442F797860A707A4E9053C8771C01A2EC1D88CDC3BF9EE16C9A897"
+  },
+  {
+    "path": "Assets/Game/Scripts/Building/BuildManager.cs",
+    "sha256": "584AC7EF848A222D46CD6D6DB1B8590DB9DE6BCF16965AC9EB41CB0A6C1F5187"
+  },
+  {
+    "path": "Assets/Game/Scripts/Building/BuildManager.cs.meta",
+    "sha256": "18A7B37188BD1E71E85AFE726E2A2C9DCCDADD3D3D3F2F042F61B91662DF3166"
+  },
+  {
+    "path": "Assets/Game/Scripts/Building/PlacementController.cs",
+    "sha256": "9E3CBC14E588D7E6E42CFEAD80A484C4416D4C61A448CCC6F7444F18A4970FCE"
+  },
+  {
+    "path": "Assets/Game/Scripts/Building/PlacementController.cs.meta",
+    "sha256": "C1736B29C18FA83A255B94276836E42DC156D3152175B7DBA415C15A52CE61D8"
+  },
+  {
+    "path": "Assets/Game/Scripts/Building/PlacementInput.cs",
+    "sha256": "8D4D6E97B8CBCCD901613BB69DE5290CF438D383C4A616E9F73C19826BC45D8E"
+  },
+  {
+    "path": "Assets/Game/Scripts/Building/PlacementInput.cs.meta",
+    "sha256": "4DA70D8D4F93083F71F54EC3BFDA3FD1CB6285927534D458BB2678EA73EDC5F1"
+  },
+  {
+    "path": "Assets/Game/Scripts/Building/PlacementRules.cs",
+    "sha256": "F88EFE251FAAB8059010AFC2A5B422497D6F2E4372B32C3E07BD7FBEE9E65A62"
+  },
+  {
+    "path": "Assets/Game/Scripts/Building/PlacementRules.cs.meta",
+    "sha256": "9ADC542E51C384AD10661C116D516A9A4C7AC20460C176198652849CC830D76D"
+  },
+  {
+    "path": "Assets/Game/Scripts/Combat/Health.cs",
+    "sha256": "9AFA06C7253FE4FB600100703AEBD7E38B520B2FD55AFD70DAD360EF67A079B1"
+  },
+  {
+    "path": "Assets/Game/Scripts/Combat/Health.cs.meta",
+    "sha256": "4C10BB37100F043BE821A4E63D861B9EF24F8ABE1DDE135B95FED21CDD960057"
+  },
+  {
+    "path": "Assets/Game/Scripts/Combat/IDamageable.cs",
+    "sha256": "48E9601D8D5AC75E952FA5D61B9EC473C5F6365A3C0CE4E29FB76EB75526C46E"
+  },
+  {
+    "path": "Assets/Game/Scripts/Combat/IDamageable.cs.meta",
+    "sha256": "13BED538D510512AC1009FE7621F36B01D69C1AF58E4C75451D652B766C67AF2"
+  },
+  {
+    "path": "Assets/Game/Scripts/Core/GameStateController.cs",
+    "sha256": "4DF10A4BDDE023F8647131788C87E077D290D1D3FEDE5A4F9A1E9FD4B5B8563B"
+  },
+  {
+    "path": "Assets/Game/Scripts/Core/GameStateController.cs.meta",
+    "sha256": "DFA060A83381D9E7C89FE99D8ED8925EF48D22F73CC97071B03E86BF273D828E"
+  },
+  {
+    "path": "Assets/Game/Scripts/Defenses/BarbedWire.cs",
+    "sha256": "58C97AA86858CF1F4FAD0D4A966A80D7FE847DFFA19FE9B5DE5012B5E17272DE"
+  },
+  {
+    "path": "Assets/Game/Scripts/Defenses/BarbedWire.cs.meta",
+    "sha256": "7C458A63379E15B1CCDE029AA0D0E51EAE56974050AAB9C03870259E528B11E1"
+  },
+  {
+    "path": "Assets/Game/Scripts/Defenses/DefenseBase.cs",
+    "sha256": "807E5EDC9406FA33B80101399BF60FF7A49AA603F27543FB23F425F16C56B733"
+  },
+  {
+    "path": "Assets/Game/Scripts/Defenses/DefenseBase.cs.meta",
+    "sha256": "D8C88FEB705025135E478A269ECB3DA1E36D178A7E19B8598B3E29AD7071EB6E"
+  },
+  {
+    "path": "Assets/Game/Scripts/Defenses/DefenseDefinition.cs",
+    "sha256": "9780A6147148C05719B291894F6DC178EDD9E2DCAB028D8FF91E009A2A21ADB4"
+  },
+  {
+    "path": "Assets/Game/Scripts/Defenses/DefenseDefinition.cs.meta",
+    "sha256": "9F63DACC886AB5083E2CDB1CFFCD51751B835F62FD14B3E5F4B4169BF3669917"
+  },
+  {
+    "path": "Assets/Game/Scripts/Defenses/LandMine.cs",
+    "sha256": "009A2D7F3B5F5E9353BF7B354134DB6828FA6DF6F0CEFA3D155BAEBA5D1F8D9E"
+  },
+  {
+    "path": "Assets/Game/Scripts/Defenses/LandMine.cs.meta",
+    "sha256": "C252D1B7798A4C6DEE5CB3449D9BB8A1276714F13F1319F6A55C0729DFDE0BC8"
+  },
+  {
+    "path": "Assets/Game/Scripts/Defenses/MachineGunCombat.cs",
+    "sha256": "5EBD2F1FCD7A3CF9C3772BFDAC8A1C43D4762016241636AE0AEF671E9130A688"
+  },
+  {
+    "path": "Assets/Game/Scripts/Defenses/MachineGunCombat.cs.meta",
+    "sha256": "DE9CE5E2CDCC64080CFEB0F488B7C5A0ACF325DD84BBCD4187AFEE233B6A67FA"
+  },
+  {
+    "path": "Assets/Game/Scripts/Defenses/TurretCombat.cs",
+    "sha256": "3C4CEEF2F3A78E84A2FA749ACB437B7A88AF60E3264C7A95C62FD94CF0694E87"
+  },
+  {
+    "path": "Assets/Game/Scripts/Defenses/TurretCombat.cs.meta",
+    "sha256": "7919BA805B63E75007BEB02CEFB760AC9B7EB6E91A6D255734D128FCF7D2669C"
+  },
+  {
+    "path": "Assets/Game/Scripts/Economy/EconomyManager.cs",
+    "sha256": "CC7047A0E8745856462642F2867726F1F724801A9467B931E349CA78EA775FFF"
+  },
+  {
+    "path": "Assets/Game/Scripts/Economy/EconomyManager.cs.meta",
+    "sha256": "7BC5755A35215FFDED7AC5078A043502B9F5FD6439A05E8B773FF8E0BF4E0C99"
+  },
+  {
+    "path": "Assets/Game/Scripts/Economy/EnemyRewardService.cs",
+    "sha256": "142BE46ACBE729F0D66010479B2705FFB13F52663F51112CBCB9A3C5FC265AB7"
+  },
+  {
+    "path": "Assets/Game/Scripts/Economy/EnemyRewardService.cs.meta",
+    "sha256": "AAB8F80B2C82A39CA5811C0D293E5997E09B0041B0CC1B22343CDE6DC9F9D88C"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemyCombat.cs",
+    "sha256": "96388EE9FE766ACCD20289E9920C14455D52BEC78C011D124B6C43E8FDABAFB0"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemyCombat.cs.meta",
+    "sha256": "AB843D88A158E9141E6644C2949039E5199BAC5F957B978CD47BAD15849A509C"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemyController.cs",
+    "sha256": "2F45DDB57C2FC9600014CBCCB42B94925BB8288B4BDF6865902A61579B0897C5"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemyController.cs.meta",
+    "sha256": "4BB340F3EFF61FE9688329049B8BA8426BF551DBC352E24A394E4F431CEBBBD6"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemyDefinition.cs",
+    "sha256": "A1DC920EA53928DAE04E795A4C6D177C8F52FD7F88B6202BC1FDCBC818330657"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemyDefinition.cs.meta",
+    "sha256": "B13F6051B79150856B54FF251CC5304113D0990BB4438258C3DED16FB3850187"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemyFacing.cs",
+    "sha256": "6942C5F8AE172A26E38FA55278A04A722610DC8CEC6CB9A887F3292410446D22"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemyFacing.cs.meta",
+    "sha256": "699B511E8DB744328D5A44DB05D481F9A9E2A7D71CBCE2472B9BB3B70437D8B5"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemyHealth.cs",
+    "sha256": "D28B46449BCF41B4F8E9620D96F4D390EB5F55106B3DD309C38550197E2ADC08"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemyHealth.cs.meta",
+    "sha256": "6DCA7C3AF656D6E8D8C0DE0C065169AAE71FEF6C413CF0A748E8064727DBC387"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemyMovement.cs",
+    "sha256": "A1DDA091FE41AA9A27AA82E0C983861EEF89B67D5496CB79E99D6C2A7EB45856"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemyMovement.cs.meta",
+    "sha256": "78A17D6E71AF06598E5A7A16D1F5619A7FB1E1C78A32D0E865D131F319736202"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemyRegistry.cs",
+    "sha256": "D2EFCFA2478E6345456A8E64B1DC71AA3E3F6301231E688D10ADBD61634F23CD"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemyRegistry.cs.meta",
+    "sha256": "BE155A33B8801D9680907D3D39BF490FFA8F953BCB20B2F79FB8ED93F3AD2361"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemySpawner.cs",
+    "sha256": "372C5E388AD915888B0FE5E06EB5BA018A5DE66E8E564011217B84287D084FFE"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/EnemySpawner.cs.meta",
+    "sha256": "0803A4AEACB65E35416663F9AA7B525CCF713C69BE7B05143A51CB2122EB0694"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/MovementModifiers.cs",
+    "sha256": "9FBFF9D78CA435D183748AB6A0EAB2A7A3B2B07182877C4DE4FFAFCDCE5020DB"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/MovementModifiers.cs.meta",
+    "sha256": "83C7A2A01D5A5CBBECBC87F79A771C296671A864321AA65A3F3E67203FC48781"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/PrototypeSpawnLoop.cs",
+    "sha256": "A9976CCF90F8FEDF250D98C0846B050D88F4C6FFB616A361B651094BB81F08E3"
+  },
+  {
+    "path": "Assets/Game/Scripts/Enemies/PrototypeSpawnLoop.cs.meta",
+    "sha256": "3A892B531CB00D64ED83AC1DB09193BF9E9B1BEB5CF2F89451D7CD8736B0168B"
+  },
+  {
+    "path": "Assets/Game/Scripts/Grid/BattlefieldDefinition.cs",
+    "sha256": "DB9314BCAEF87B85121164F21981BA435598777EB24FD9FD14E94296570BCE62"
+  },
+  {
+    "path": "Assets/Game/Scripts/Grid/BattlefieldDefinition.cs.meta",
+    "sha256": "C583721D5916E450870D8789F0D7DF22C45DEC7A83384790BB56B560985AB936"
+  },
+  {
+    "path": "Assets/Game/Scripts/Grid/BattlefieldGrid.cs",
+    "sha256": "DEA0AC4A61A60D4B91497F89600C0B2D5876F43BEF68BA33561AFF87CCCFFC75"
+  },
+  {
+    "path": "Assets/Game/Scripts/Grid/BattlefieldGrid.cs.meta",
+    "sha256": "28FE5ADD45CB289DB77A2B4D028FFCF7DD6226E3960B87909F29884F41F5B8F8"
+  },
+  {
+    "path": "Assets/Game/Scripts/Grid/GridCell.cs",
+    "sha256": "73214282C78A0D7967BEC28213049DEC1B71E4BF2617B57E54D5CC983250E0F4"
+  },
+  {
+    "path": "Assets/Game/Scripts/Grid/GridCell.cs.meta",
+    "sha256": "99D3A5AF0BD1940CDCF2743E6ECD400A97D3929C642211B25C0EEF4E37DFADD4"
+  },
+  {
+    "path": "Assets/Game/Scripts/Grid/GridManager.cs",
+    "sha256": "5744325016CB3D86C4930EDB5CAE3B90516934E8660DDBBBE452649A496FF768"
+  },
+  {
+    "path": "Assets/Game/Scripts/Grid/GridManager.cs.meta",
+    "sha256": "02C9AE807574F74E594E9BC385DF8FC0A5D1A8B9E66F69DC2C20F6E097D20AC3"
+  },
+  {
+    "path": "Assets/Game/Scripts/Grid/PathfindingService.cs",
+    "sha256": "8EF03935F65190ACD9F679B8B7199047D04DDD3A0037CF0719BA4159584C48B0"
+  },
+  {
+    "path": "Assets/Game/Scripts/Grid/PathfindingService.cs.meta",
+    "sha256": "7800FD1006373B0685B4E8FF87978CDEF4E0BAEABA39A16A826B4E284CE040C7"
+  },
+  {
+    "path": "Assets/Game/Scripts/Presentation/MachineGunPresentation.cs",
+    "sha256": "5148E2C387F94A495B8174AC96821EDB778E6DDBFDCB58C5729E8805620339A7"
+  },
+  {
+    "path": "Assets/Game/Scripts/Presentation/MachineGunPresentation.cs.meta",
+    "sha256": "E058EA892AB42AAE7DB5816D5923F60CAE1637B88067748A24121D58C5C0DD19"
+  },
+  {
+    "path": "Assets/Game/Scripts/Presentation/MineExplosionPresentation.cs",
+    "sha256": "670DE9B62887400081E26827A94A773D0F5FB6985D2D9B45A84C425BE5483FBE"
+  },
+  {
+    "path": "Assets/Game/Scripts/Presentation/MineExplosionPresentation.cs.meta",
+    "sha256": "F2924DE155BCDEB946825B39B9AD59D5627B3F3B04ACA8B4D6232392FD9F372B"
+  },
+  {
+    "path": "Assets/Game/Scripts/Presentation/TopDownCamera.cs",
+    "sha256": "D6C006BD4A1CC4527674CB3CA69D0720F133CFBCBA72726B1ECB4149039BBC2B"
+  },
+  {
+    "path": "Assets/Game/Scripts/Presentation/TopDownCamera.cs.meta",
+    "sha256": "E3CBD03178B12983A2AF7D70AF8249E37D6012E48D8AAE6E16D875F9A987EF88"
+  },
+  {
+    "path": "Assets/Game/Scripts/Presentation/TurretPresentation.cs",
+    "sha256": "313B41BB5C90FFD455E4197B64E2B36A7F84F5C5B597E727E545706744D9182B"
+  },
+  {
+    "path": "Assets/Game/Scripts/Presentation/TurretPresentation.cs.meta",
+    "sha256": "82BD1128DA9E2677CE84AD5028486A716A277B44A516C85A8B2A2CF1D0A040BC"
+  },
+  {
+    "path": "Assets/Game/Scripts/UI/BuildHud.cs",
+    "sha256": "480B11D6355D6D2C8C853E8AF0B9F0421F5899E8B085FC5120F03AA358730E08"
+  },
+  {
+    "path": "Assets/Game/Scripts/UI/BuildHud.cs.meta",
+    "sha256": "A8CABE2153C1C77EF305FA495D589D64AB3879E3EABA70DF00FE9C354C631863"
+  },
+  {
+    "path": "Assets/Game/Scripts/UI/PrototypeHud.cs",
+    "sha256": "2B4D9A9C7D6C647C89D10A19F845F9202C1E24CCF94CE1FCEEC168D2D8D8D8D1"
+  },
+  {
+    "path": "Assets/Game/Scripts/UI/PrototypeHud.cs.meta",
+    "sha256": "BA56558C18D18D695A05743AD8ABB06E012BD483833C713592F39768CCA2FCC7"
+  },
+  {
+    "path": "Assets/Game/Scripts/UI/WaveHud.cs",
+    "sha256": "B396A9C9A086936B44920200207A509872F50EF1984DD4DB46C091A1B3E131BD"
+  },
+  {
+    "path": "Assets/Game/Scripts/UI/WaveHud.cs.meta",
+    "sha256": "E1309BC0EF765B8EAEB349E323358170D2FEF24DDE90150A8EC9EFC0959F8E34"
+  },
+  {
+    "path": "Assets/Game/Scripts/Waves/WaveDefinition.cs",
+    "sha256": "BAE1C7BA4E07DFA4B1251EDB6760FE75353CD6E80B2F536FF9E83D1B5FFC2CC6"
+  },
+  {
+    "path": "Assets/Game/Scripts/Waves/WaveDefinition.cs.meta",
+    "sha256": "166FDFF132DA447CF8BD599ED6AAD17A5AB2D4E210DAC629ED2D318ED183690D"
+  },
+  {
+    "path": "Assets/Game/Scripts/Waves/WaveManager.cs",
+    "sha256": "44C1BD12DBCF9080CA9C9F8A67902EA7F747B0F2C745A23B6D4AFCC431D93072"
+  },
+  {
+    "path": "Assets/Game/Scripts/Waves/WaveManager.cs.meta",
+    "sha256": "282B76707CE99B31A88067E911A8A11A15AAF4C08C93748361ACBE477237F3E8"
+  },
+  {
+    "path": "Assets/Game/Tests/EditMode.meta",
+    "sha256": "9EF6A9CA5FC874266C7A0335B6C93377B61E19B0FAE6E75E0CA976623DEC9479"
+  },
+  {
+    "path": "Assets/Game/Tests/PlayMode.meta",
+    "sha256": "B8F790E5BC66A2F4C24C41772BC33C256CCD642D63EF5824BC869F2649B2FFDC"
+  },
+  {
+    "path": "Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs",
+    "sha256": "71A2C869A95BDA076E77F74D5AB176543B63B1E8BE41F223CD16774EDC60D533"
+  },
+  {
+    "path": "Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs.meta",
+    "sha256": "6572611E7BB249DDF9C96704E7A91D469AA51D44658031C0F08A7E4CF64922FF"
+  },
+  {
+    "path": "Assets/Game/Tests/EditMode/GridAndPathTests.cs",
+    "sha256": "6623BA6FC28232B80B062FA27BF74927D30FA5670585E8788260DFD17032A567"
+  },
+  {
+    "path": "Assets/Game/Tests/EditMode/GridAndPathTests.cs.meta",
+    "sha256": "324AFC5DCA732BBE1697F2AED0455BED9507B4647CD634DFA6CA589208EBD99C"
+  },
+  {
+    "path": "Assets/Game/Tests/EditMode/HealthTests.cs",
+    "sha256": "95D3E2C229B984B69B6860CB182B703386FD1DC355D45924120D2F78A05AA1A2"
+  },
+  {
+    "path": "Assets/Game/Tests/EditMode/HealthTests.cs.meta",
+    "sha256": "18836547320BA8381780A69BFCAF0429443E3DC6441BDCAD642B12A68EE98E88"
+  },
+  {
+    "path": "Assets/Game/Tests/EditMode/Phase2CRulesTests.cs",
+    "sha256": "43A5F2B04FC0754FBC355EDAEBF8EE57ED2CE7C7D9ECA5EBEDEC2987DD727405"
+  },
+  {
+    "path": "Assets/Game/Tests/EditMode/Phase2CRulesTests.cs.meta",
+    "sha256": "BAD397738A80595008225D7616E37F386DAEC25A4957295DF5D53475AF28B6D9"
+  },
+  {
+    "path": "Assets/Game/Tests/EditMode/ShorelineDefense.EditModeTests.asmdef",
+    "sha256": "A1DA3844AE49D95A0075B8FC0F2C7DF31B4B8AA3A6190093BFA7D3016880B182"
+  },
+  {
+    "path": "Assets/Game/Tests/EditMode/ShorelineDefense.EditModeTests.asmdef.meta",
+    "sha256": "E8E19985A70A5B55B364CB9BD2D720989D330B51CA5BFCB6BB565E71E7E98416"
+  },
+  {
+    "path": "Assets/Game/Tests/EditMode/TopDownGridTests.cs",
+    "sha256": "232B7EA6F5D96D7CE7935533278F39434890A159229551D10D0E5D36DF8E1ADF"
+  },
+  {
+    "path": "Assets/Game/Tests/EditMode/TopDownGridTests.cs.meta",
+    "sha256": "8352EFBDA9F2F6CA11815ECF4827DDCF38B264177E30B6282423F082A5956DE1"
+  },
+  {
+    "path": "Assets/Game/Tests/PlayMode/DefenseLoopTests.cs",
+    "sha256": "710D8FB00320F567F6F9C6277ABA2C96C3C1933AEB891E20985B1ADA4E011973"
+  },
+  {
+    "path": "Assets/Game/Tests/PlayMode/DefenseLoopTests.cs.meta",
+    "sha256": "B5BF9FD84C63D8DC262F4E5288406FFEA697D33C0EE117C54BE2AF473BAB1E67"
+  },
+  {
+    "path": "Assets/Game/Tests/PlayMode/Phase2CPlayTests.cs",
+    "sha256": "3F8D628E0031A9FAE83A28104686B87615F398EF0DEE084F119AD5EBB874D34E"
+  },
+  {
+    "path": "Assets/Game/Tests/PlayMode/Phase2CPlayTests.cs.meta",
+    "sha256": "D5048837C6F65C17048EBEE91D3B33F63430069194218E85B8DE0E81480BAC81"
+  },
+  {
+    "path": "Assets/Game/Tests/PlayMode/PrototypePlayTests.cs",
+    "sha256": "F2947A357DB21A46394CF8F5550C8B6BBA1648957C4FB5681B37F49A512A65A5"
+  },
+  {
+    "path": "Assets/Game/Tests/PlayMode/PrototypePlayTests.cs.meta",
+    "sha256": "AE9AB3CF1DAC8FCD85F0307EF433352A468377E67C87141ACBE3E5D374115261"
+  },
+  {
+    "path": "Assets/Game/Tests/PlayMode/ShorelineDefense.PlayModeTests.asmdef",
+    "sha256": "8A641941FD21D728518E2747471E2F177AF6F75C6FEFD03F7BD4B172D13E1C62"
+  },
+  {
+    "path": "Assets/Game/Tests/PlayMode/ShorelineDefense.PlayModeTests.asmdef.meta",
+    "sha256": "F14933F2ABF336DC6F014D82D92D637BA052C766ADEAE43432795F14484ED65A"
+  },
+  {
+    "path": "Assets/Game/Tests/PlayMode/TopDownPlayTests.cs",
+    "sha256": "9A64849B2757BB15069F20874609C284FD4A47144EE7866390B55B4982F888D9"
+  },
+  {
+    "path": "Assets/Game/Tests/PlayMode/TopDownPlayTests.cs.meta",
+    "sha256": "70FC0EFD5D2AEE524D3D368E9616CA41D9800F103F987D78045AF524BB4DCE95"
+  },
+  {
+    "path": "Assets/Game/UI/PrototypeHud.uxml",
+    "sha256": "08FCFDB33EAE980CE3A0E7E136C343E589A20D32708C123BEDDB4D29F007600C"
+  },
+  {
+    "path": "Assets/Game/UI/PrototypeHud.uxml.meta",
+    "sha256": "DD1B190310313A33406B76F56CF322B0D43DCEA31B816F04366C1D1B6D60715B"
+  },
+  {
+    "path": "Assets/Game/UI/PrototypePanelSettings.asset",
+    "sha256": "D7E5BA77C5100F933D7522730A3A21814FB1310DEE1EC48F169B451DBF9E7EAC"
+  },
+  {
+    "path": "Assets/Game/UI/PrototypePanelSettings.asset.meta",
+    "sha256": "89FE787F5A570D33FCD41FBDE6A0B91E23943A2D08E4D193BAEA8326F6FFBF1F"
+  },
+  {
+    "path": "Assets/Game/UI/PrototypeTheme.tss",
+    "sha256": "682E2B1C6CC1D6E332C15F56C840F7D8282CB1E5BC627EB6664580352A752FDA"
+  },
+  {
+    "path": "Assets/Game/UI/PrototypeTheme.tss.meta",
+    "sha256": "2C8E7CC45EF002AE5A6628E6AC6C16411A39C389E2E0A3CC0D7EDC9568C86C1D"
+  },
+  {
+    "path": "Assets/Game/UI/TopDownHud.uss",
+    "sha256": "29CE61389176F61404D0AFA3B44FF348EA09127CAA046E2E2B0E76514E8EA40E"
+  },
+  {
+    "path": "Assets/Game/UI/TopDownHud.uss.meta",
+    "sha256": "1D00FA81D93DBA3DF822C249C4E3F07D1F0AB53031C6135CE68B27D9DCCEDD54"
+  },
+  {
+    "path": "Assets/Game/UI/TopDownHud.uxml",
+    "sha256": "4A712DB2D5A1848C3FFBE5EA0F10A6DC8C97DED1AB2300E3610740ED784B1F16"
+  },
+  {
+    "path": "Assets/Game/UI/TopDownHud.uxml.meta",
+    "sha256": "8A0384152C7812BD5FCA9CD547C0BCC39C3FB71D5036F43AFF3ABC90B368BBBC"
+  },
+  {
+    "path": "Assets/Settings/DefaultVolumeProfile.asset",
+    "sha256": "463776C51AE49D4FEF980E8FD268081B2F505610D79315003FAAE1ACFF8F4115"
+  },
+  {
+    "path": "Assets/Settings/DefaultVolumeProfile.asset.meta",
+    "sha256": "EFBCB026CEE6B8E32FDF27018C06B0515296A6CCBB43969E792FEA270310700A"
+  },
+  {
+    "path": "Assets/Settings/Mobile_Renderer.asset",
+    "sha256": "AA93274C9521FA941170BECEC9E87C5FA36B8587EEFD5EEB5C0EED0D1D4B1DBE"
+  },
+  {
+    "path": "Assets/Settings/Mobile_Renderer.asset.meta",
+    "sha256": "A148EE2B4987B05B8FF7AE5F9BF84916184F77AEFDDC821DCEB551F5A69F8179"
+  },
+  {
+    "path": "Assets/Settings/Mobile_RPAsset.asset",
+    "sha256": "7F4E6B59F0FE9B2B32470D7AA3E3B155481425B7CA890360305AAB911332AA4E"
+  },
+  {
+    "path": "Assets/Settings/Mobile_RPAsset.asset.meta",
+    "sha256": "53EA46647712C615FD1A3F2E0DDDFA8559EEEDC649E9A1DBF93FF913DE28544C"
+  },
+  {
+    "path": "Assets/Settings/PC_Renderer.asset",
+    "sha256": "3D0B01D8DED3327263B6690BE128A3DE58D17C514943AE42FE743A3E084A9C79"
+  },
+  {
+    "path": "Assets/Settings/PC_Renderer.asset.meta",
+    "sha256": "B5DF8DDB2708C6ED4C133A5FF9EE95A75CC20E4EE3ED6181366A61AEDBAF31EC"
+  },
+  {
+    "path": "Assets/Settings/PC_RPAsset.asset",
+    "sha256": "8CD42D4F17ABB5B5A1475435897D5F3708EA1C65AA0C254F2BCA52B668E87E5D"
+  },
+  {
+    "path": "Assets/Settings/PC_RPAsset.asset.meta",
+    "sha256": "BB469B9B6F318E9E9BED29C3B2E73E79371C04743C6F95DD6603941F1CD3E53E"
+  },
+  {
+    "path": "Assets/Settings/SampleSceneProfile.asset",
+    "sha256": "A8677D4BAC051D24CAA11CD622E39F968155EE277BFCE132274F1DE225692FE9"
+  },
+  {
+    "path": "Assets/Settings/SampleSceneProfile.asset.meta",
+    "sha256": "2E23ABC214069F0ADBF2B2207F1DB54BE7876629EC2A3681D0F4AA5B61622EF0"
+  },
+  {
+    "path": "Assets/Settings/TopDown_Renderer.asset",
+    "sha256": "D3EFBD1BFF211BA0EB95FC8E23642A1FD0BC31D200FC1804669BCD8D49330A46"
+  },
+  {
+    "path": "Assets/Settings/TopDown_Renderer.asset.meta",
+    "sha256": "DEC8C11825E2D46D4B258FAA85322B86B042AF7F217F3A241E14EE1DE9135E5A"
+  },
+  {
+    "path": "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset",
+    "sha256": "54A969F05B99D364D74AB0F45887AC72549C0027F1465647AF10A27BB1E873B6"
+  },
+  {
+    "path": "Assets/Settings/UniversalRenderPipelineGlobalSettings.asset.meta",
+    "sha256": "F61661D8BC8DBE531DAF09F6211EF978C7BA145C9207C8E76524396AE0722D7C"
+  },
+  {
+    "path": "Assets/UI Toolkit/UnityThemes.meta",
+    "sha256": "CE1AD25EFA670F2B9BD628B0ADE33DABE720E7D5E6418B3AC49EDEA55DE6072A"
+  },
+  {
+    "path": "Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss",
+    "sha256": "341561A31FCBB6F0C53C2CA99C2C311E2904369EFB470004DD3AE9701B8CB433"
+  },
+  {
+    "path": "Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss.meta",
+    "sha256": "5A6C82A36BF8E4C78369256678693DFAE15E56B73DC86DAFB6B44386C398E1A1"
+  },
+  {
+    "path": "Packages/manifest.json",
+    "sha256": "B85B808C2BD138B38CF91594B3FD39EBBAD72E16D80292B71899DE83030DA4BD"
+  },
+  {
+    "path": "Packages/packages-lock.json",
+    "sha256": "394DB38A3E57472139D929F57C243D42D5908207BB607F50C0342812239F64AA"
+  },
+  {
+    "path": "ProjectSettings/AudioManager.asset",
+    "sha256": "AEEDEB3243F07B61DBBE854AA08B5EF6F0B5274DD9852AD9F6129DDE3E105A31"
+  },
+  {
+    "path": "ProjectSettings/ClusterInputManager.asset",
+    "sha256": "40E65DD214BF254955D2C8829CA8CE2130FD3510485560CE012E9A1DDD93E623"
+  },
+  {
+    "path": "ProjectSettings/DynamicsManager.asset",
+    "sha256": "B7C9A9DC08B98990109D4346F68745E15E238DE400F96C583E53E1C83C743A78"
+  },
+  {
+    "path": "ProjectSettings/EditorBuildSettings.asset",
+    "sha256": "278A832C4DEF911A4F41EF0A7E372F4D4C1ADA2AA4A52C4F1207737B9968BA79"
+  },
+  {
+    "path": "ProjectSettings/EditorSettings.asset",
+    "sha256": "705E5DDE8B4CEB8147971B0C8F3781EBBE566A12B8E280379EE24F2BD9AD9474"
+  },
+  {
+    "path": "ProjectSettings/GraphicsSettings.asset",
+    "sha256": "6736F33DC62C35B0E7A88E275242080BC7A1D94C91154D18FCEB332B661A6BCE"
+  },
+  {
+    "path": "ProjectSettings/InputManager.asset",
+    "sha256": "7A1BB836A1008D26D0860D143E9D9DF7CA41731D30A72901B518063819C62DF2"
+  },
+  {
+    "path": "ProjectSettings/MemorySettings.asset",
+    "sha256": "1E8379A461B10AE09F3F696911088C16875D63E87ED5F2D95DF9E1892703F9FD"
+  },
+  {
+    "path": "ProjectSettings/MultiplayerManager.asset",
+    "sha256": "ABA89FD1A1DDAD182727AD82727E536D27372E90328A8196DA2A4560398983DD"
+  },
+  {
+    "path": "ProjectSettings/NavMeshAreas.asset",
+    "sha256": "80106CFA7E6181A1928B142C075F3E510D527441E3D79BC83590E4AC91E7CD66"
+  },
+  {
+    "path": "ProjectSettings/PackageManagerSettings.asset",
+    "sha256": "A7DABBA589ABE7FC2B45BD3D3FBA3FE9BE97043492703F716DA2D9131C13A807"
+  },
+  {
+    "path": "ProjectSettings/Physics2DSettings.asset",
+    "sha256": "E3CBDBF0BE15244B7B67D2F07BDB8E8981911C11A8C7FE8035F5261272FEC658"
+  },
+  {
+    "path": "ProjectSettings/PresetManager.asset",
+    "sha256": "29C125923FE6E29F90190D4FCE1C82D660E7051546E2C9D02908D18C9CF2436C"
+  },
+  {
+    "path": "ProjectSettings/ProjectSettings.asset",
+    "sha256": "C8D13CA91A87DBEE2143E125F382DF84F713E9A341C90AC57821EAC4724595C6"
+  },
+  {
+    "path": "ProjectSettings/ProjectVersion.txt",
+    "sha256": "7A43A06DFE51C4E3933C5A7848320925CE96E667F8C7736557D13A02007E9860"
+  },
+  {
+    "path": "ProjectSettings/QualitySettings.asset",
+    "sha256": "6814D6CC3EB850DD7D2A069A8B17BA9F7591DEBA8B1758A855978BD9C8627643"
+  },
+  {
+    "path": "ProjectSettings/SceneTemplateSettings.json",
+    "sha256": "BB9098B3BFCDE78D93E264B96F7B77B5430E64E8C57A7AAD7F5A5D9C3945E16A"
+  },
+  {
+    "path": "ProjectSettings/ShaderGraphSettings.asset",
+    "sha256": "CDBA1E5D65BCF6E3269D76ED3E60B6C21F98322002996642C9D74F1EB89F6B91"
+  },
+  {
+    "path": "ProjectSettings/TagManager.asset",
+    "sha256": "3C0F995DE69D85E7F5D5C6F7A99B32300155CF2E4D253C358C993310F4D6A55A"
+  },
+  {
+    "path": "ProjectSettings/TimeManager.asset",
+    "sha256": "1A83E54ADBBDA7C9F4851103A0C6AB7F6448A3343D4EA5B7620452FA08416ECD"
+  },
+  {
+    "path": "ProjectSettings/UnityConnectSettings.asset",
+    "sha256": "B7DD1E8290598F5CE86919BA1C98B42B766C8C42191A30FA2C4D12195C4ECD00"
+  },
+  {
+    "path": "ProjectSettings/URPProjectSettings.asset",
+    "sha256": "C317FE22B9488785C0611F0642429922E5D324430D929BFFB41648130F30C218"
+  },
+  {
+    "path": "ProjectSettings/VersionControlSettings.asset",
+    "sha256": "E7BDA45BF7A394745FEE1316E6C71FA676004D591AD1F3AA247FD3E4CEB86071"
+  },
+  {
+    "path": "ProjectSettings/VFXManager.asset",
+    "sha256": "F066C6483919961332415EE64204F74FE52F38C02E82892EB02B7A5B2E381F0E"
+  },
+  {
+    "path": "ProjectSettings/XRSettings.asset",
+    "sha256": "EDD2BEB4A2E388312B4B7DA241AA51070434005D82C59363F1237DD2E567585F"
+  },
+  {
+    "path": "ProjectSettings/Packages/com.unity.pipeline/RuntimePipelineConfig.json",
+    "sha256": "1FA1E5A49599C951BE6B19718BE04A96C6692B496898107FDC43C74936E5E13A"
+  }
+]

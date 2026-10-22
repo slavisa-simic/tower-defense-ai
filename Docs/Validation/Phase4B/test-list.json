@@ -1,0 +1,431 @@
+{
+  "success": true,
+  "command": "command list_tests",
+  "data": {
+    "command": "list_tests",
+    "parameters": {
+      "mode": "playmode"
+    },
+    "result": {
+      "Mode": "PlayMode",
+      "Count": 45,
+      "Tests": [
+        {
+          "FullName": "ShorelineDefense.Tests.ArtIntegrationTests.HitPoseEndsWithoutInterruptingAuthoritativeMovement",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.ArtIntegrationTests.HudReenableKeepsNamedMgBindingAndAllCellsAccessible",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.DefenseLoopTests.CreationFailureAndMultiCellPlacementKeepTransactionsConsistent",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.DefenseLoopTests.DeathRewardOnceAndNoRewardForCleanupOrPostGameDamage",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.DefenseLoopTests.RejectedPlacementsCancelPreviewAndOccupancyCleanupNeverSpend",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.DefenseLoopTests.SpawnPlaceShootKillRewardAndBuyAgain",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.DefenseLoopTests.TargetingRangeDisabledTargetsAimAndStableCooldown",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HeavyDefensePlayTests.AllPurchasesUseCatalogFootprintsPreviewsAndRsd",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HeavyDefensePlayTests.AreaAndBurnCancelOnGameOverWithoutDamageOrRewards",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HeavyDefensePlayTests.CannonPrioritizesHealthCooldownAndReacquiresAfterLoss",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HeavyDefensePlayTests.FlameConeMultiHitBurnRefreshExpiryAndReward",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HeavyDefensePlayTests.MortarEnforcesAnnulusAndChoosesClusterThenImpactsOnce",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HeavyDefensePlayTests.RocketRetainsPointAfterTargetDeathAndDamageIgnoresVisuals",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.AllFiveWavesCountPendingAndLivingEnemiesAndRewardExactlyOnce",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.FailedSpawnRetriesWithoutLosingPendingEnemiesAndGameOverStopsEverything",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.FourButtonsSwitchOnePreviewAndEnforceCostsOccupancyAndTerrain",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.MineArmsIgnoresDeadTargetsDamagesAreaOnceAndUsesGenericRewards",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.SceneSmokeBuildFightEarnCompleteAndPrepareNextWave",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.SniperPrioritizesRouteProgressAndHonorsRangeCooldownAndDeadTargetRelease",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.UnarmedMineWaitsAndGameOverStopsIt",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.WirePlacementSlowsRecoversAndCleansUpNavigation",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase3C1PlayTests.BlockedLandingWaitsForValidRouteAndGameOverCancelsUnloading",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase3C1PlayTests.BoatsReserveDistinctRiverLanesAndUnloadThroughNormalSpawner",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase3C1PlayTests.IdleWeaponsStartLeftAndCameraAndVegetationStayOverhead",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase3C1PlayTests.InvalidRiverLanesAndActiveLimitPreventBadArrivalsAndGameOverCancelsIncoming",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase3C1PlayTests.WaveKeepsIncomingPassengersPendingAndCompletesOnlyAfterLastKill",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase3C1PlayTests.WirePlacementRemovalAndPreviewKeepTopologyAndSlowdown",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.PrototypePlayTests.LethalBaseDamageSignalsGameOverOnceAndSceneReloadResetsRuntimeState",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.PrototypePlayTests.MovementRepathsOnlyOnGridChangeAndResumesWhenRouteReopens",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.PrototypePlayTests.PersistedSceneRunsFromSeaToGameOverAndStopsSpawningAndMovement",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.PrototypePlayTests.SpawnedEnemiesOwnIndependentHealthAndDeadEnemyIsRemoved",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.SurvivalPlayTests.BothTurretsTargetEveryEnemyKindAndPresentationUsesItsOwnArt",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.SurvivalPlayTests.EachBreachResolvesOnceWithoutRewardAndThresholdStopsBoats",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.SurvivalPlayTests.HundredAcceleratedBoatWavesCompleteAndReleaseTransientObjects",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.SurvivalPlayTests.MixedCargoCapacityAndAllTypesUseDefenseRules",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.SurvivalPlayTests.ThresholdOnFinalWaveMemberNeverPaysCompletionReward",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.SurvivalPlayTests.UnlimitedModeKillsMoneyAndActiveCapRemainCorrect",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.TopDownPlayTests.LethalBaseDamageSignalsGameOverOnceAndSceneReloadResetsRuntimeState",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.TopDownPlayTests.MovementRepathsOnlyOnGridChangeAndResumesWhenRouteReopens",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.TopDownPlayTests.OccupiedAndBlockedSpawnPointsAreSkippedAndReopenedLaneResumes",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.TopDownPlayTests.PersistedSceneRunsFromSeaToGameOverAndStopsSpawningAndMovement",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.TopDownPlayTests.SpawnedEnemiesOwnIndependentHealthAndDeadEnemyIsRemoved",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.VfxIntegrationTests.GameOverClearsPresentationAndRejectsFurtherEffects",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.VfxIntegrationTests.ReenabledObserversPayOnceAndDeathOutlivesTarget",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.VfxIntegrationTests.WaterExitStopsWakeAndEmitsOneSplash",
+          "Mode": "PlayMode",
+          "Assembly": "ShorelineDefense.PlayModeTests",
+          "Categories": [
+            "Uncategorized"
+          ],
+          "Explicit": false
+        }
+      ],
+      "success": true,
+      "result": null,
+      "message": "Found 45 test(s)."
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

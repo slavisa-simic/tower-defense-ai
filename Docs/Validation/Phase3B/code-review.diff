@@ -1,0 +1,77 @@
+--- baseline/Enemies/EnemyHealth.cs
++++ Assets/Game/Scripts/Enemies/EnemyHealth.cs
+@@ -11,6 +11,7 @@
+         public int CurrentHealth => health?.CurrentHealth ?? 0;
+         public int MaxHealth => health?.MaxHealth ?? 0;
+         public event Action Died;
++        public event Action<int> Damaged;
+         public bool KilledByDefense { get; private set; }
+ 
+         public void Initialize(int maximum)
+@@ -21,7 +22,13 @@
+             health.Died += OnDied;
+         }
+ 
+-        public void TakeDamage(int amount) => health?.TakeDamage(amount);
++        public void TakeDamage(int amount)
++        {
++            if (!IsAlive || amount <= 0) return;
++            int applied = Math.Min(amount, CurrentHealth);
++            health.TakeDamage(amount);
++            Damaged?.Invoke(applied);
++        }
+         // Attribution belongs to the lethal damage operation, never to a specific turret type.
+         public void TakeDefenseDamage(int amount)
+         {
+--- baseline/Presentation/TurretPresentation.cs
++++ Assets/Game/Scripts/Presentation/TurretPresentation.cs
+@@ -18,6 +18,9 @@
+         [SerializeField] private Sprite[] firingFrames;
+         [SerializeField, Min(1)] private float firingFramesPerSecond = 20;
+         private TurretCombat combat;
++        [SerializeField] private bool sniperEffects;
++        private VfxService effects;
++        public void ConfigureEffects(bool sniper) => sniperEffects = sniper;
+         private float visibleUntil;
+         private float shotStarted = float.NegativeInfinity;
+         public void Configure(Transform rotatingWeapon, Transform muzzlePoint, SpriteRenderer muzzleFlash, SpriteRenderer shotTracer)
+@@ -25,7 +28,7 @@
+         public void ConfigureSprites(SpriteRenderer renderer, Sprite idle, Sprite[] frames, float framesPerSecond)
+         { weaponRenderer = renderer; idleSprite = idle; firingFrames = frames; firingFramesPerSecond = Mathf.Max(1, framesPerSecond); }
+         protected void Awake() => combat = GetComponent<TurretCombat>();
+-        protected void OnEnable() { combat.Fired += OnFired; ResetSprite(); Hide(); }
++        protected void OnEnable() { effects = FindFirstObjectByType<VfxService>(); combat.Fired += OnFired; ResetSprite(); Hide(); }
+         protected void OnDisable() { if (combat != null) combat.Fired -= OnFired; ResetSprite(); Hide(); }
+         protected void LateUpdate()
+         {
+@@ -55,6 +58,12 @@
+         {
+             shotStarted = Time.time;
+             Aim(impact);
++            if (effects != null)
++            {
++                Hide();
++                effects.Shot(sniperEffects, muzzle, impact);
++                return;
++            }
+             Vector3 direction = impact - muzzle.position;
+             tracer.transform.position = (impact + muzzle.position) * 0.5f;
+             tracer.transform.rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
+--- baseline/Presentation/MineExplosionPresentation.cs
++++ Assets/Game/Scripts/Presentation/MineExplosionPresentation.cs
+@@ -8,12 +8,14 @@
+     {
+         [SerializeField] private SpriteRenderer flash;
+         private LandMine mine;
++        private VfxService effects;
+         public void Configure(SpriteRenderer renderer) => flash = renderer;
+         private void Awake() => mine = GetComponent<LandMine>();
+-        private void OnEnable() { mine.Detonated += Show; }
++        private void OnEnable() { effects = FindFirstObjectByType<VfxService>(); mine.Detonated += Show; }
+         private void OnDisable() { if (mine != null) mine.Detonated -= Show; }
+         private void Show(float radius)
+         {
++            if (effects != null) { effects.Mine(transform.position, radius); return; }
+             if (flash == null) return;
+             flash.transform.SetParent(null, true);
+             flash.transform.localScale = new Vector3(radius * 2, radius * 2, 1);

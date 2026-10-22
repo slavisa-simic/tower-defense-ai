@@ -1,0 +1,80 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": ".utmp/phase2c-play-inspection.cs",
+      "entry": "Phase2CInspection.Snapshot"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 65,
+      "executeMs": 2,
+      "assemblyName": "PipelineRunScript_phase2c-play-inspection_a54d238ab62b497496fdf38ad7627b9a",
+      "success": true,
+      "result": {
+        "time": 235.721619,
+        "timeScale": 0,
+        "money": 225,
+        "baseHP": 100,
+        "state": "Combat",
+        "wave": 1,
+        "remaining": 1,
+        "pending": 0,
+        "alive": 1,
+        "completed": 0,
+        "spawned": 10,
+        "selection": null,
+        "preview": false,
+        "previewResult": "Occupied",
+        "paths": 10,
+        "enemies": [
+          {
+            "id": -12104,
+            "hp": 100,
+            "position": "(1.105, 1.875, 0.000)",
+            "speed": 2.5,
+            "progress": 15.4201117
+          }
+        ],
+        "defenses": [
+          {
+            "type": "Sniper Tower",
+            "anchor": "(19, 9)",
+            "health": 250,
+            "shots": 7,
+            "range": 13.75,
+            "target": null,
+            "weaponRotation": 320.88562
+          },
+          {
+            "type": "Barbed Wire",
+            "anchor": "(25, 9)",
+            "health": 200,
+            "shots": 0,
+            "range": 1.25,
+            "target": null,
+            "weaponRotation": 0
+          },
+          {
+            "type": "MG Nest",
+            "anchor": "(23, 9)",
+            "health": 300,
+            "shots": 10,
+            "range": 6.25,
+            "target": null,
+            "weaponRotation": 160.37619
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

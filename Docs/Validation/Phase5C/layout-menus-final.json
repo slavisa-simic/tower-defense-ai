@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase5C/Live.cs",
+      "entry": "Phase5CLive.RefreshMenus"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 120,
+      "executeMs": 3112,
+      "assemblyName": "PipelineRunScript_Live_a7296380df994b4f803cdbe65c302b09",
+      "success": true,
+      "result": "Final Main Menu/settings captures and bounds passed at all four resolutions"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

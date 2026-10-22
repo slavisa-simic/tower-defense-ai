@@ -1,0 +1,285 @@
+{
+  "scene": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+  "isDirty": false,
+  "playing": false,
+  "compilationFailed": false,
+  "version": "6000.3.24f1",
+  "console": {
+    "errors": 0,
+    "warnings": 0,
+    "logs": 0
+  },
+  "prefabs": [
+    {
+      "path": "Assets/Game/Prefabs/Defenses\\BarbedWire.prefab",
+      "guid": "82f4e568363d89d4ebbc7ce1f8cd067f",
+      "components": [
+        "Transform",
+        "DefenseBase",
+        "BarbedWire",
+        "DefenseSpritePresentation"
+      ],
+      "renderers": [
+        {
+          "name": "Wire strand",
+          "path": "Wire strand",
+          "enabled": true,
+          "sprite": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_single_v001.png",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(1.00, 1.00, 1.00)",
+          "color": "RGBA(1.000, 1.000, 1.000, 1.000)",
+          "sortingLayerName": "GroundObjects",
+          "sortingOrder": 1
+        },
+        {
+          "name": "Wire strand",
+          "path": "Wire strand",
+          "enabled": false,
+          "sprite": "",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(1.10, 0.07, 1.00)",
+          "color": "RGBA(0.650, 0.700, 0.710, 1.000)",
+          "sortingLayerName": "Defenses",
+          "sortingOrder": 1
+        },
+        {
+          "name": "Wire strand",
+          "path": "Wire strand",
+          "enabled": false,
+          "sprite": "",
+          "position": "(0.00, 0.30, 0.00)",
+          "scale": "(1.10, 0.07, 1.00)",
+          "color": "RGBA(0.650, 0.700, 0.710, 1.000)",
+          "sortingLayerName": "Defenses",
+          "sortingOrder": 1
+        },
+        {
+          "name": "Left post",
+          "path": "Left post",
+          "enabled": false,
+          "sprite": "",
+          "position": "(-0.45, 0.00, 0.00)",
+          "scale": "(0.13, 0.90, 1.00)",
+          "color": "RGBA(0.300, 0.250, 0.200, 1.000)",
+          "sortingLayerName": "Defenses",
+          "sortingOrder": 2
+        },
+        {
+          "name": "Right post",
+          "path": "Right post",
+          "enabled": false,
+          "sprite": "",
+          "position": "(0.45, 0.00, 0.00)",
+          "scale": "(0.13, 0.90, 1.00)",
+          "color": "RGBA(0.300, 0.250, 0.200, 1.000)",
+          "sortingLayerName": "Defenses",
+          "sortingOrder": 2
+        }
+      ]
+    },
+    {
+      "path": "Assets/Game/Prefabs/Defenses\\LandMine.prefab",
+      "guid": "0ab4dc049833ee24d8b0edbd22fd89be",
+      "components": [
+        "Transform",
+        "DefenseBase",
+        "LandMine",
+        "MineExplosionPresentation",
+        "DefenseSpritePresentation"
+      ],
+      "renderers": [
+        {
+          "name": "Mine body",
+          "path": "Mine body",
+          "enabled": true,
+          "sprite": "Assets/Game/Art/Defenses/LandMine/bd_defense_mine_idle_v001.png",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(1.00, 1.00, 1.00)",
+          "color": "RGBA(1.000, 1.000, 1.000, 1.000)",
+          "sortingLayerName": "GroundObjects",
+          "sortingOrder": 2
+        },
+        {
+          "name": "Trigger",
+          "path": "Trigger",
+          "enabled": false,
+          "sprite": "",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(0.20, 0.20, 1.00)",
+          "color": "RGBA(0.950, 0.450, 0.160, 1.000)",
+          "sortingLayerName": "Defenses",
+          "sortingOrder": 2
+        },
+        {
+          "name": "Mine Explosion Flash",
+          "path": "Mine Explosion Flash",
+          "enabled": false,
+          "sprite": "Assets/Game/Art/Placeholders/Square.png",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(1.00, 1.00, 1.00)",
+          "color": "RGBA(1.000, 0.650, 0.200, 0.500)",
+          "sortingLayerName": "Effects",
+          "sortingOrder": 15
+        }
+      ]
+    },
+    {
+      "path": "Assets/Game/Prefabs/Defenses\\MachineGunNest.prefab",
+      "guid": "1d194432f8863b24ba6f2192469cdfa0",
+      "components": [
+        "Transform",
+        "DefenseBase",
+        "MachineGunCombat",
+        "MachineGunPresentation",
+        "DefenseSpritePresentation"
+      ],
+      "renderers": [
+        {
+          "name": "Sandbag Base",
+          "path": "Sandbag Base",
+          "enabled": true,
+          "sprite": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_base_idle_v001.png",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(1.00, 1.00, 1.00)",
+          "color": "RGBA(1.000, 1.000, 1.000, 1.000)",
+          "sortingLayerName": "Defenses",
+          "sortingOrder": 0
+        },
+        {
+          "name": "Inset",
+          "path": "Inset",
+          "enabled": false,
+          "sprite": "",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(0.82, 0.68, 1.00)",
+          "color": "RGBA(0.180, 0.250, 0.210, 1.000)",
+          "sortingLayerName": "Defenses",
+          "sortingOrder": 1
+        },
+        {
+          "name": "Receiver",
+          "path": "Rotating Weapon/Receiver",
+          "enabled": true,
+          "sprite": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_weapon_idle_v001.png",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(1.00, 1.00, 1.00)",
+          "color": "RGBA(1.000, 1.000, 1.000, 1.000)",
+          "sortingLayerName": "Defenses",
+          "sortingOrder": 2
+        },
+        {
+          "name": "Barrel",
+          "path": "Rotating Weapon/Barrel",
+          "enabled": false,
+          "sprite": "",
+          "position": "(0.40, 0.00, 0.00)",
+          "scale": "(0.70, 0.14, 1.00)",
+          "color": "RGBA(0.120, 0.160, 0.170, 1.000)",
+          "sortingLayerName": "Defenses",
+          "sortingOrder": 3
+        },
+        {
+          "name": "Muzzle Flash",
+          "path": "Rotating Weapon/Muzzle/Muzzle Flash",
+          "enabled": false,
+          "sprite": "Assets/Game/Art/Placeholders/Square.png",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(0.26, 0.26, 1.00)",
+          "color": "RGBA(1.000, 0.890, 0.350, 1.000)",
+          "sortingLayerName": "Effects",
+          "sortingOrder": 5
+        },
+        {
+          "name": "Reusable Tracer",
+          "path": "Reusable Tracer",
+          "enabled": false,
+          "sprite": "Assets/Game/Art/Placeholders/Square.png",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(1.00, 1.00, 1.00)",
+          "color": "RGBA(1.000, 0.900, 0.500, 1.000)",
+          "sortingLayerName": "Effects",
+          "sortingOrder": 4
+        }
+      ]
+    },
+    {
+      "path": "Assets/Game/Prefabs/Defenses\\SniperTower.prefab",
+      "guid": "1b5d3a115e5d1cf42b7bdf94d45445ff",
+      "components": [
+        "Transform",
+        "DefenseBase",
+        "TurretCombat",
+        "TurretPresentation",
+        "DefenseSpritePresentation"
+      ],
+      "renderers": [
+        {
+          "name": "Sandbag Base",
+          "path": "Sandbag Base",
+          "enabled": true,
+          "sprite": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_base_idle_v001.png",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(1.00, 1.00, 1.00)",
+          "color": "RGBA(1.000, 1.000, 1.000, 1.000)",
+          "sortingLayerName": "Defenses",
+          "sortingOrder": 0
+        },
+        {
+          "name": "Inset",
+          "path": "Inset",
+          "enabled": false,
+          "sprite": "",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(0.82, 0.68, 1.00)",
+          "color": "RGBA(0.180, 0.250, 0.210, 1.000)",
+          "sortingLayerName": "Defenses",
+          "sortingOrder": 1
+        },
+        {
+          "name": "Receiver",
+          "path": "Rotating Weapon/Receiver",
+          "enabled": true,
+          "sprite": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_aim_idle_v001.png",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(1.00, 1.00, 1.00)",
+          "color": "RGBA(1.000, 1.000, 1.000, 1.000)",
+          "sortingLayerName": "Defenses",
+          "sortingOrder": 2
+        },
+        {
+          "name": "Barrel",
+          "path": "Rotating Weapon/Barrel",
+          "enabled": false,
+          "sprite": "",
+          "position": "(0.40, 0.00, 0.00)",
+          "scale": "(1.00, 0.11, 1.00)",
+          "color": "RGBA(0.120, 0.160, 0.170, 1.000)",
+          "sortingLayerName": "Defenses",
+          "sortingOrder": 3
+        },
+        {
+          "name": "Muzzle Flash",
+          "path": "Rotating Weapon/Muzzle/Muzzle Flash",
+          "enabled": false,
+          "sprite": "Assets/Game/Art/Placeholders/Square.png",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(0.26, 0.26, 1.00)",
+          "color": "RGBA(0.400, 0.900, 1.000, 1.000)",
+          "sortingLayerName": "Effects",
+          "sortingOrder": 5
+        },
+        {
+          "name": "Reusable Tracer",
+          "path": "Reusable Tracer",
+          "enabled": false,
+          "sprite": "Assets/Game/Art/Placeholders/Square.png",
+          "position": "(0.00, 0.00, 0.00)",
+          "scale": "(1.00, 1.00, 1.00)",
+          "color": "RGBA(0.400, 0.900, 1.000, 1.000)",
+          "sortingLayerName": "Effects",
+          "sortingOrder": 4
+        }
+      ]
+    }
+  ]
+}

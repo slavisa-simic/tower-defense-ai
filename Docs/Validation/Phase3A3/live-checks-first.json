@@ -1,0 +1,142 @@
+[
+  {
+    "name": "MachineGunNest selection",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "MachineGunNest valid actual-art ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "MachineGunNest invalid red ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "MachineGunNest placement",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "MachineGunNest grid/root",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "SniperTower selection",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "SniperTower valid actual-art ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "SniperTower invalid red ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "SniperTower placement",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "SniperTower grid/root",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "BarbedWire selection",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "BarbedWire valid actual-art ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "BarbedWire invalid red ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "BarbedWire placement",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "BarbedWire grid/root",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "LandMine selection",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "LandMine valid actual-art ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "LandMine invalid red ghost",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "LandMine placement",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "LandMine grid/root",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "Economy charged original costs",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 MachineGunNest no visible shape placeholders",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 SniperTower no visible shape placeholders",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 BarbedWire no visible shape placeholders",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 LandMine no visible shape placeholders",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "MG/sniper original damage",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 MachineGunNest base fixed and weapon aims",
+    "pass": true,
+    "detail": null
+  },
+  {
+    "name": "P3A3 MachineGunNest recoil frame plays",
+    "pass": false,
+    "detail": "bd_defense_mg_weapon_idle_v001"
+  }
+]

@@ -1,0 +1,232 @@
+[
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_blood_decal_medium_v001.png",
+    "sha256": "28a5a210f779fc930c5c3daf3529d958aefb4148f5781ae3218f619310fd9fb9",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-0e0ebf64-d897-428d-8974-a669b425d76a.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_blood_decal_v001.png",
+    "sha256": "eda42538a9b2ed38c3877214c49385769d2778c66b52dd38fd5dbc17d2f354d4",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-fd23e663-f93c-4b62-bb05-ac5f26548798.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_blood_hit_v001.png",
+    "sha256": "a6144efaa877aebac1adf94342209f519e88de708d59f4b1697716112513f90b",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-58ef507c-1ede-4cfb-a7cc-c9978d85dad6.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_explosion_small_v001.png",
+    "sha256": "983241cc9f367afca4f0affec00b51352e31c0ad4eb0b86fed0fd7b6a2b7417d",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-63a06cbc-b209-4eb1-8dae-0c590ce3cd7c.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_impact_concrete_v001.png",
+    "sha256": "d3c7f13eb0231e010c46f0ee0642e0ce4896c35776c12a741cd8996892dcd8b1",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-0f560625-1ed5-4a63-84b7-01767a27bb4c.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_impact_dirt_v001.png",
+    "sha256": "8c4e56fc182cd3eee9e1ebf62a6b9e50b4d530fff6ff0073e24247a0b6fd653a",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-fbab4a42-e830-4e58-b33f-87a314aca5d5.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_impact_flesh_v001.png",
+    "sha256": "653332157cc4ab6dd05011232f3af09d6d8a8a86197d37b1e8eb223a2107b3c7",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-534ab9c4-5f4b-4e9e-bfcd-e400dd488755.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_impact_metal_v001.png",
+    "sha256": "d420080e31defe50bc27406edec6f079c6e057119e2532639b1758517eb09c3f",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-71e9ef2a-38d7-4f50-82b8-38574e9a3cbd.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_impact_mud_v001.png",
+    "sha256": "dc12e7cd5d13c8908893ba8793c7f75c21833ddbc6fae5ac52c4c5b6a8188253",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-fb1c5fa6-864c-4a76-986d-dc977b3b1443.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_mg_muzzle_v001.png",
+    "sha256": "053400bde3cf2e2beeaf841a7628f050344e6ac11dcde5496180a8680c2404ce",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-123cefe6-c816-45c9-99de-84690117ed0a.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_mg_muzzle_v002.png",
+    "sha256": "d9cb3a551da16129cc640eb6eea1a81d2134b6d933bb0a1e4950cfdb7ee4ad4c",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-0def2100-910f-45b0-aeb8-69b987ba7dc2.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_mine_explosion_v001.png",
+    "sha256": "1f415ef409800422e3c75fe1ac2b5f87d6e97922544481a7088ee661a127e2b9",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-d8067f98-daea-400f-ba52-b1b945d7937f.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_shore_foam_v001.png",
+    "sha256": "c2f15732dfb890f1164a940e7e09fcf17cd566cb8fff86168230dc9bd4bb6ab8",
+    "dimensions": [
+      1983,
+      793
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-c14bab73-51fd-42b5-9246-5ffc2ca5d888.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_smoke_medium_v001.png",
+    "sha256": "3c5dc65a7d07cf9cfdecb3a6abf29201e8b7b19d7af8d53bba7faa83ee000c96",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-c5fef1b8-4b52-4bfb-8013-e79fab98cd0c.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_smoke_small_v001.png",
+    "sha256": "16ff7ec895ec71e128ee094e161ba94d695e06e56e35256f3f66f982fe1387fe",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-794c714c-7918-476e-80a9-696eb18f6994.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_sniper_muzzle_v001.png",
+    "sha256": "933ce9bacccf8887f1932ee34ca81ac3fbcfbb0e597e1225016e1151edf9fdd6",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-d7e8afd4-8a7b-4eeb-9dde-ac82243b4371.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_vfx_master_v001.png",
+    "sha256": "b16ab509b5c98f465f98889158875ac27b305ff084c93376bec0399ec3cbc66a",
+    "dimensions": [
+      1536,
+      1024
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-1bd1d14a-7d82-4c1b-a7c5-392157fc9c2f.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_water_ripple_v001.png",
+    "sha256": "3a7e736418d25af44a58c5e4d3bb51dc151afe97d7625aaa3cfe69b69ddfaaaa",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-895e6f5d-de33-4919-8b74-ba0038a66e59.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_water_splash_large_v001.png",
+    "sha256": "6e288287cc93d6de371e454ad95583ebcf9d3c4124da3000ef3dbffb9c695647",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-284bed15-15b0-4b3f-8e25-12bc9dd717ba.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_water_splash_medium_v001.png",
+    "sha256": "b1d76c21dfb80eb2662ce9993e0a30a959a1f958a51c4e31964b63a8f7423c91",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-2d567a06-41a2-41fb-8b5c-c16d14b1336a.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_water_splash_medium_v002.png",
+    "sha256": "2a0f26fd3d045dedb40253a598666069016cb89a89b82269635775eeed45526f",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-49847ff3-9c63-41ab-8b19-fff861316747.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_water_splash_small_v001.png",
+    "sha256": "eef8d77a716bf99599848d5a5f1feaffc17306e1e63a42744e855e5cb222c3c0",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-33b191b9-2ebe-4029-8612-5c6c8a5d184c.png",
+    "matchesOriginal": true
+  },
+  {
+    "path": "Assets/Game/Art/Effects/SourceSheets/p3b_core_001/bd_src_water_wake_v001.png",
+    "sha256": "ad508aefdae68d4bf8588d04395af4b2ddb8dfd7947a4a0a07216d43ed20a15d",
+    "dimensions": [
+      2172,
+      724
+    ],
+    "original": "C:\\Users\\Slavisa\\.codex\\generated_images\\01a0c311-10b8-70e0-b29b-69dd1264aba6\\exec-0d789133-5ffa-42de-953f-050ef97611b4.png",
+    "matchesOriginal": true
+  }
+]

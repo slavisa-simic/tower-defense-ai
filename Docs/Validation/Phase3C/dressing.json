@@ -1,0 +1,1242 @@
+[
+  {
+    "name": "Quarantine concrete apron",
+    "path": "Assets/Game/Art/Environment/bd_env_concrete_tile_v001.png",
+    "position": "(16.88, 0.00, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 1.0
+  },
+  {
+    "name": "Checkpoint access road",
+    "path": "Assets/Game/Art/Environment/bd_env_road_tile_v001.png",
+    "position": "(16.88, 0.25, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 3,
+    "alpha": 1.0
+  },
+  {
+    "name": "Command bunker floor",
+    "path": "Assets/Game/Art/Environment/bd_env_bunker_floor_tile_v001.png",
+    "position": "(16.88, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 4,
+    "alpha": 1.0
+  },
+  {
+    "name": "Wet silt fringe 0",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, -10.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.28
+  },
+  {
+    "name": "Wet silt fringe 1",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, -9.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.34
+  },
+  {
+    "name": "Silt fade 1",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-10.63, -9.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.11
+  },
+  {
+    "name": "Wet silt fringe 2",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, -8.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.4
+  },
+  {
+    "name": "Silt fade 2",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-10.63, -8.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.11
+  },
+  {
+    "name": "Wet silt fringe 3",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, -6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.46
+  },
+  {
+    "name": "Wet silt fringe 4",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, -5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.28
+  },
+  {
+    "name": "Silt fade 4",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-10.63, -5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.11
+  },
+  {
+    "name": "Wet silt fringe 5",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, -4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.34
+  },
+  {
+    "name": "Silt fade 5",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-10.63, -4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.11
+  },
+  {
+    "name": "Wet silt fringe 6",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, -3.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.4
+  },
+  {
+    "name": "Wet silt fringe 7",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, -1.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.46
+  },
+  {
+    "name": "Silt fade 7",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-10.63, -1.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.11
+  },
+  {
+    "name": "Wet silt fringe 8",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, -0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.28
+  },
+  {
+    "name": "Silt fade 8",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-10.63, -0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.11
+  },
+  {
+    "name": "Wet silt fringe 9",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.34
+  },
+  {
+    "name": "Wet silt fringe 10",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, 1.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.4
+  },
+  {
+    "name": "Silt fade 10",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-10.63, 1.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.11
+  },
+  {
+    "name": "Wet silt fringe 11",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, 3.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.46
+  },
+  {
+    "name": "Silt fade 11",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-10.63, 3.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.11
+  },
+  {
+    "name": "Wet silt fringe 12",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, 4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.28
+  },
+  {
+    "name": "Wet silt fringe 13",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, 5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.34
+  },
+  {
+    "name": "Silt fade 13",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-10.63, 5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.11
+  },
+  {
+    "name": "Wet silt fringe 14",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, 6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.4
+  },
+  {
+    "name": "Silt fade 14",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-10.63, 6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.11
+  },
+  {
+    "name": "Wet silt fringe 15",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, 8.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.46
+  },
+  {
+    "name": "Wet silt fringe 16",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, 9.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.28
+  },
+  {
+    "name": "Silt fade 16",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-10.63, 9.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.11
+  },
+  {
+    "name": "Wet silt fringe 17",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-11.88, 10.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.34
+  },
+  {
+    "name": "Silt fade 17",
+    "path": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "position": "(-10.63, 10.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.11
+  },
+  {
+    "name": "Worn track 8 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-9.38, -5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 8 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-9.38, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 8 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-9.38, 8.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 9 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-8.13, -5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 9 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-8.13, -4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 9 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-8.13, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 9 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-8.13, 1.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 9 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-8.13, 8.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 9 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-8.13, 9.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 10 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-6.88, -4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 10 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-6.88, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 10 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-6.88, 6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 11 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-5.63, -4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 11 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-5.63, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 11 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-5.63, 6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 12 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-4.38, -4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 12 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-4.38, -3.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 12 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-4.38, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 12 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-4.38, 1.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 12 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-4.38, 6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 12 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-4.38, 8.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 13 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-3.13, -4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 13 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-3.13, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 13 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-3.13, 6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 14 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-1.88, -4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 14 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-1.88, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 14 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-1.88, 6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 15 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-0.63, -5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 15 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-0.63, -4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 15 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-0.63, 1.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 15 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-0.63, 3.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 15 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-0.63, 6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 15 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(-0.63, 8.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 16 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(0.63, -5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 16 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(0.63, 1.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 16 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(0.63, 6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 17 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(1.88, -5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 17 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(1.88, 1.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 17 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(1.88, 6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 18 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(3.13, -5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 18 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(3.13, -4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 18 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(3.13, 1.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 18 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(3.13, 3.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 18 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(3.13, 6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 18 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(3.13, 8.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 19 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(4.38, -5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 19 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(4.38, 1.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 19 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(4.38, 6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 20 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(5.63, -5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 20 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(5.63, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 20 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(5.63, 8.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 21 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(6.88, -5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 21 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(6.88, -4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 21 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(6.88, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 21 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(6.88, 1.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 21 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(6.88, 8.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 21 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(6.88, 9.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 22 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(8.13, -5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 22 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(8.13, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 22 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(8.13, 8.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 23 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(9.38, -5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 23 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(9.38, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 23 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(9.38, 8.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 24 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(10.63, -5.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 24 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(10.63, -4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 24 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(10.63, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 24 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(10.63, 1.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 24 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(10.63, 8.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Track fringe 24 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(10.63, 9.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.07
+  },
+  {
+    "name": "Worn track 25 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(11.88, -4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 25 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(11.88, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 25 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(11.88, 6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 26 4",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(13.13, -4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 26 9",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(13.13, 0.63, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Worn track 26 14",
+    "path": "Assets/Game/Art/Environment/bd_env_dirt_tile_v001.png",
+    "position": "(13.13, 6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.18
+  },
+  {
+    "name": "Weathered soil (10.00, 2.00)",
+    "path": "Assets/Game/Art/Environment/bd_env_cracked_ground_tile_v001.png",
+    "position": "(-6.88, -8.13, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.3
+  },
+  {
+    "name": "Weathered soil (18.00, 16.00)",
+    "path": "Assets/Game/Art/Environment/bd_env_cracked_ground_tile_v001.png",
+    "position": "(3.13, 9.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.3
+  },
+  {
+    "name": "Weathered soil (23.00, 3.00)",
+    "path": "Assets/Game/Art/Environment/bd_env_cracked_ground_tile_v001.png",
+    "position": "(9.38, -6.88, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.3
+  },
+  {
+    "name": "Weathered soil (8.00, 12.00)",
+    "path": "Assets/Game/Art/Environment/bd_env_cracked_ground_tile_v001.png",
+    "position": "(-9.38, 4.38, 0.00)",
+    "sortingLayerName": "Environment",
+    "sortingOrder": 2,
+    "alpha": 0.3
+  },
+  {
+    "name": "prop_rubber_boat",
+    "path": "Assets/Game/Art/Props/bd_prop_rubber_boat_v001.png",
+    "position": "(-17.38, -5.38, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_rubber_boat",
+    "path": "Assets/Game/Art/Props/bd_prop_rubber_boat_v001.png",
+    "position": "(-17.63, 6.38, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_destroyed_rubber_boat",
+    "path": "Assets/Game/Art/Props/bd_prop_destroyed_rubber_boat_v001.png",
+    "position": "(-14.63, 2.38, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_wrecked_supply_box",
+    "path": "Assets/Game/Art/Props/bd_prop_wrecked_supply_box_v001.png",
+    "position": "(-13.00, 4.00, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_debris_scrap",
+    "path": "Assets/Game/Art/Props/bd_prop_debris_scrap_v001.png",
+    "position": "(-12.75, -6.50, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_oil_barrel",
+    "path": "Assets/Game/Art/Props/bd_prop_oil_barrel_v001.png",
+    "position": "(-13.00, 8.38, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_debris_scrap",
+    "path": "Assets/Game/Art/Props/bd_prop_debris_scrap_v001.png",
+    "position": "(-11.75, 8.75, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_bunker_wall_segment",
+    "path": "Assets/Game/Art/Base/bd_base_bunker_wall_segment_v001.png",
+    "position": "(13.50, -9.38, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_bunker_wall_segment",
+    "path": "Assets/Game/Art/Base/bd_base_bunker_wall_segment_v001.png",
+    "position": "(13.50, -8.13, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_bunker_wall_segment",
+    "path": "Assets/Game/Art/Base/bd_base_bunker_wall_segment_v001.png",
+    "position": "(13.50, -6.88, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_bunker_wall_segment",
+    "path": "Assets/Game/Art/Base/bd_base_bunker_wall_segment_v001.png",
+    "position": "(13.50, -5.63, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_bunker_wall_segment",
+    "path": "Assets/Game/Art/Base/bd_base_bunker_wall_segment_v001.png",
+    "position": "(13.50, -4.38, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_bunker_wall_segment",
+    "path": "Assets/Game/Art/Base/bd_base_bunker_wall_segment_v001.png",
+    "position": "(13.50, 5.63, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_bunker_wall_segment",
+    "path": "Assets/Game/Art/Base/bd_base_bunker_wall_segment_v001.png",
+    "position": "(13.50, 6.88, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_bunker_wall_segment",
+    "path": "Assets/Game/Art/Base/bd_base_bunker_wall_segment_v001.png",
+    "position": "(13.50, 8.13, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_bunker_wall_segment",
+    "path": "Assets/Game/Art/Base/bd_base_bunker_wall_segment_v001.png",
+    "position": "(13.50, 9.38, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_bunker_gate_piece",
+    "path": "Assets/Game/Art/Base/bd_base_bunker_gate_piece_v001.png",
+    "position": "(13.50, -1.75, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_river_checkpoint_marker",
+    "path": "Assets/Game/Art/Base/bd_base_river_checkpoint_marker_v001.png",
+    "position": "(15.38, -0.13, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_military_tent_topdown",
+    "path": "Assets/Game/Art/Base/bd_base_military_tent_topdown_v001.png",
+    "position": "(17.38, 7.25, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_watch_post",
+    "path": "Assets/Game/Art/Base/bd_base_watch_post_v001.png",
+    "position": "(15.25, -6.75, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_generator_unit",
+    "path": "Assets/Game/Art/Base/bd_base_generator_unit_v001.png",
+    "position": "(18.25, -3.25, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "base_ammo_supply_crate_cluster",
+    "path": "Assets/Game/Art/Base/bd_base_ammo_supply_crate_cluster_v001.png",
+    "position": "(17.75, -6.13, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_antenna",
+    "path": "Assets/Game/Art/Props/bd_prop_antenna_v001.png",
+    "position": "(18.25, 4.50, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_radar_device",
+    "path": "Assets/Game/Art/Props/bd_prop_radar_device_v001.png",
+    "position": "(15.25, 9.38, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_floodlight",
+    "path": "Assets/Game/Art/Props/bd_prop_floodlight_v001.png",
+    "position": "(14.13, -3.75, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_floodlight",
+    "path": "Assets/Game/Art/Props/bd_prop_floodlight_v001.png",
+    "position": "(14.13, 5.25, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_warning_sign",
+    "path": "Assets/Game/Art/Props/bd_prop_warning_sign_v001.png",
+    "position": "(12.38, -2.38, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_warning_sign",
+    "path": "Assets/Game/Art/Props/bd_prop_warning_sign_v001.png",
+    "position": "(12.38, 3.50, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_military_barrel",
+    "path": "Assets/Game/Art/Props/bd_prop_military_barrel_v001.png",
+    "position": "(18.50, 5.75, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_metal_crate",
+    "path": "Assets/Game/Art/Props/bd_prop_metal_crate_v001.png",
+    "position": "(15.75, 4.50, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_wooden_crate",
+    "path": "Assets/Game/Art/Props/bd_prop_wooden_crate_v001.png",
+    "position": "(18.63, 9.63, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_quarantine_fence_segment",
+    "path": "Assets/Game/Art/Props/bd_prop_quarantine_fence_segment_v001.png",
+    "position": "(15.25, -8.88, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_quarantine_fence_segment",
+    "path": "Assets/Game/Art/Props/bd_prop_quarantine_fence_segment_v001.png",
+    "position": "(15.25, 10.50, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_quarantine_fence_segment",
+    "path": "Assets/Game/Art/Props/bd_prop_quarantine_fence_segment_v001.png",
+    "position": "(16.63, -8.88, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_quarantine_fence_segment",
+    "path": "Assets/Game/Art/Props/bd_prop_quarantine_fence_segment_v001.png",
+    "position": "(16.63, 10.50, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_quarantine_fence_segment",
+    "path": "Assets/Game/Art/Props/bd_prop_quarantine_fence_segment_v001.png",
+    "position": "(18.00, -8.88, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_quarantine_fence_segment",
+    "path": "Assets/Game/Art/Props/bd_prop_quarantine_fence_segment_v001.png",
+    "position": "(18.00, 10.50, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_quarantine_fence_segment",
+    "path": "Assets/Game/Art/Props/bd_prop_quarantine_fence_segment_v001.png",
+    "position": "(19.38, -8.88, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_quarantine_fence_segment",
+    "path": "Assets/Game/Art/Props/bd_prop_quarantine_fence_segment_v001.png",
+    "position": "(19.38, 10.50, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_sandbag_segment",
+    "path": "Assets/Game/Art/Props/bd_prop_sandbag_segment_v001.png",
+    "position": "(11.63, -6.63, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_sandbag_segment",
+    "path": "Assets/Game/Art/Props/bd_prop_sandbag_segment_v001.png",
+    "position": "(11.63, 7.75, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_czech_hedgehog_obstacle",
+    "path": "Assets/Game/Art/Props/bd_prop_czech_hedgehog_obstacle_v001.png",
+    "position": "(10.75, -8.63, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  },
+  {
+    "name": "prop_czech_hedgehog_obstacle",
+    "path": "Assets/Game/Art/Props/bd_prop_czech_hedgehog_obstacle_v001.png",
+    "position": "(10.75, 9.63, 0.00)",
+    "sortingLayerName": "GroundObjects",
+    "sortingOrder": -5,
+    "alpha": 1.0
+  }
+]

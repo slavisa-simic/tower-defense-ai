@@ -1,0 +1,825 @@
+{
+  "success": true,
+  "command": "command run_tests",
+  "data": {
+    "command": "run_tests",
+    "parameters": {
+      "mode": "editor"
+    },
+    "result": {
+      "Summary": {
+        "Total": 113,
+        "Passed": 113,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "ShorelineDefense.Tests.AssaultPressureTests.DirectorAcceleratesLowPopulationAndHoldsHysteresisAndAccountsForCargo",
+          "Status": "Passed",
+          "Duration": 0.0122162,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.AssaultPressureTests.HealthFactorsDoNotStackForBosses",
+          "Status": "Passed",
+          "Duration": 0.0009251,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.AssaultPressureTests.RouteCacheSharesResultsAndInvalidatesOnNavigationChange",
+          "Status": "Passed",
+          "Duration": 0.0045028,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.AssaultPressureTests.SeededQuantityIsFiveTimesBaselineExceptSingleBoss(1,16)",
+          "Status": "Passed",
+          "Duration": 0.0278307,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.AssaultPressureTests.SeededQuantityIsFiveTimesBaselineExceptSingleBoss(5,38)",
+          "Status": "Passed",
+          "Duration": 0.000149,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.AssaultPressureTests.SeededQuantityIsFiveTimesBaselineExceptSingleBoss(10,52)",
+          "Status": "Passed",
+          "Duration": 0.0001048,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.AssaultPressureTests.SeededQuantityIsFiveTimesBaselineExceptSingleBoss(20,87)",
+          "Status": "Passed",
+          "Duration": 0.0001161,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.AssaultPressureTests.SeededQuantityIsFiveTimesBaselineExceptSingleBoss(25,139)",
+          "Status": "Passed",
+          "Duration": 0.000406,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.AssaultPressureTests.SeededQuantityIsFiveTimesBaselineExceptSingleBoss(50,289)",
+          "Status": "Passed",
+          "Duration": 0.0002392,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EconomyAndPlacementTests.BrokenObserverCannotTurnCommittedPaymentIntoFailure",
+          "Status": "Passed",
+          "Duration": 0.0075075,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EconomyAndPlacementTests.EconomyOwnsBalanceAndEmitsOnlyRealChanges",
+          "Status": "Passed",
+          "Duration": 0.0007012,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EconomyAndPlacementTests.EntireFootprintMustFitAndBeBuildableAndAffordable",
+          "Status": "Passed",
+          "Duration": 0.0017344,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EconomyAndPlacementTests.MultiCellOccupancyIsAtomicAndOnlyItsOwnerCanReleaseIt",
+          "Status": "Passed",
+          "Duration": 0.0010355,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EconomyAndPlacementTests.OccupiedNonBlockingCellStillHasAValidPath",
+          "Status": "Passed",
+          "Duration": 0.0001945,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EconomyAndPlacementTests.PlacementHonorsTerrainAndBuildability(Water,False,NotBuildable)",
+          "Status": "Passed",
+          "Duration": 0.0003602,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EconomyAndPlacementTests.PlacementHonorsTerrainAndBuildability(Beach,False,NotBuildable)",
+          "Status": "Passed",
+          "Duration": 0.000085,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EconomyAndPlacementTests.PlacementHonorsTerrainAndBuildability(Base,False,NotBuildable)",
+          "Status": "Passed",
+          "Duration": 0.00006,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EconomyAndPlacementTests.PlacementHonorsTerrainAndBuildability(Blocked,False,NotBuildable)",
+          "Status": "Passed",
+          "Duration": 0.00006,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EconomyAndPlacementTests.PlacementHonorsTerrainAndBuildability(Ground,False,NotBuildable)",
+          "Status": "Passed",
+          "Duration": 0.0000579,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EconomyAndPlacementTests.PlacementHonorsTerrainAndBuildability(Ground,True,Valid)",
+          "Status": "Passed",
+          "Duration": 0.00006,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessEventRulesTests.AllDurationTypesCleanUpDeterministically(NextWave)",
+          "Status": "Passed",
+          "Duration": 0.0046003,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessEventRulesTests.AllDurationTypesCleanUpDeterministically(EntireWave)",
+          "Status": "Passed",
+          "Duration": 0.0001578,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessEventRulesTests.AllDurationTypesCleanUpDeterministically(Timed)",
+          "Status": "Passed",
+          "Duration": 0.0001157,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessEventRulesTests.AllDurationTypesCleanUpDeterministically(Preparation)",
+          "Status": "Passed",
+          "Duration": 0.000103,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessEventRulesTests.AllDurationTypesCleanUpDeterministically(MultiWave)",
+          "Status": "Passed",
+          "Duration": 0.0001026,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessEventRulesTests.CatalogIsCompleteAndEligibleSelectionIsSeededAndNeverStacks",
+          "Status": "Passed",
+          "Duration": 0.0524783,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessEventRulesTests.CategoryWeightsProduceChallengeReliefAndPatternVariety",
+          "Status": "Passed",
+          "Duration": 0.0088291,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessEventRulesTests.CompatibilityIsSymmetricAndMaximumWaveIsHonored",
+          "Status": "Passed",
+          "Duration": 0.0004447,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessEventRulesTests.CompositionBiasChangesActualGeneratedRoster(\"pirate-raid\",PirateRunner)",
+          "Status": "Passed",
+          "Duration": 0.0068141,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessEventRulesTests.CompositionBiasChangesActualGeneratedRoster(\"militant-assault\",IsisBreacher)",
+          "Status": "Passed",
+          "Duration": 0.0032236,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessEventRulesTests.CompositionBiasChangesActualGeneratedRoster(\"heavy-assault\",Brute)",
+          "Status": "Passed",
+          "Duration": 0.0028155,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessEventRulesTests.CompositionBiasChangesActualGeneratedRoster(\"runner-swarm\",Runner)",
+          "Status": "Passed",
+          "Duration": 0.0035103,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessEventRulesTests.MassLandingChangesQuantityAndDirectorWithoutMutatingBaseData",
+          "Status": "Passed",
+          "Duration": 0.0008027,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessEventRulesTests.NaturalPacingRespectsGapCooldownRecentExclusionAndBosses",
+          "Status": "Passed",
+          "Duration": 0.0027495,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.CompositionIsValidBudgetedBoundedAndNumericallySafe(1)",
+          "Status": "Passed",
+          "Duration": 0.0024234,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.CompositionIsValidBudgetedBoundedAndNumericallySafe(10)",
+          "Status": "Passed",
+          "Duration": 0.001405,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.CompositionIsValidBudgetedBoundedAndNumericallySafe(25)",
+          "Status": "Passed",
+          "Duration": 0.0030002,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.CompositionIsValidBudgetedBoundedAndNumericallySafe(50)",
+          "Status": "Passed",
+          "Duration": 0.0054937,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.CompositionIsValidBudgetedBoundedAndNumericallySafe(100)",
+          "Status": "Passed",
+          "Duration": 0.005562,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.CompositionIsValidBudgetedBoundedAndNumericallySafe(1000)",
+          "Status": "Passed",
+          "Duration": 0.0054905,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.CompositionIsValidBudgetedBoundedAndNumericallySafe(int.MaxValue)",
+          "Status": "Passed",
+          "Duration": 0.0054011,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.SeedReproducesCompositionAndOtherSeedsVary",
+          "Status": "Passed",
+          "Duration": 0.0019634,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.UnlocksEnemyStatsAndDifficultyGrowthMatchRoles",
+          "Status": "Passed",
+          "Duration": 0.0011356,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.GridAndPathTests.AStarChoosesCheaperDetourAndUsesUpdatedGrid",
+          "Status": "Passed",
+          "Duration": 0.0017952,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.GridAndPathTests.AStarProducesShortestAdjacentPathAndAvoidsBlockedCells",
+          "Status": "Passed",
+          "Duration": 0.0006836,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.GridAndPathTests.BattlefieldDefinitionMakesWaterBeachGroundAndNonBuildableBase",
+          "Status": "Passed",
+          "Duration": 0.0010027,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.GridAndPathTests.BoundsAreInclusiveAtMinimumAndExclusiveAtMaximum(-0.01f,0.5f,False)",
+          "Status": "Passed",
+          "Duration": 0.0005029,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.GridAndPathTests.BoundsAreInclusiveAtMinimumAndExclusiveAtMaximum(0.0f,0.0f,True)",
+          "Status": "Passed",
+          "Duration": 0.0000459,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.GridAndPathTests.BoundsAreInclusiveAtMinimumAndExclusiveAtMaximum(3.999f,2.999f,True)",
+          "Status": "Passed",
+          "Duration": 0.0000368,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.GridAndPathTests.BoundsAreInclusiveAtMinimumAndExclusiveAtMaximum(4.0f,1.0f,False)",
+          "Status": "Passed",
+          "Duration": 0.0000342,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.GridAndPathTests.BoundsAreInclusiveAtMinimumAndExclusiveAtMaximum(1.0f,3.0f,False)",
+          "Status": "Passed",
+          "Duration": 0.0000341,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.GridAndPathTests.CellCentersRoundTripWithNonZeroOriginAndCellSize",
+          "Status": "Passed",
+          "Duration": 0.0004643,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.GridAndPathTests.InvalidCellAndCostAreRejected",
+          "Status": "Passed",
+          "Duration": 0.0013445,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.GridAndPathTests.SameStartAndGoalProducesOneCell",
+          "Status": "Passed",
+          "Duration": 0.0003145,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.GridAndPathTests.UnreachableOrInvalidEndpointsReturnEmptyPathAndSearchCanRecover",
+          "Status": "Passed",
+          "Duration": 0.0008753,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HealthTests.DamageReducesHealthAndNotifiesObservers",
+          "Status": "Passed",
+          "Duration": 0.0004062,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HealthTests.HealthInstancesAreIndependentAndRequirePositiveMaximum",
+          "Status": "Passed",
+          "Duration": 0.0003285,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HealthTests.LethalDamageClampsAtZeroAndDeathOnlyOccursOnce",
+          "Status": "Passed",
+          "Duration": 0.0003156,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HealthTests.NonPositiveDamageDoesNotHealOrEmitEvents",
+          "Status": "Passed",
+          "Duration": 0.0001561,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HealthTests.ReentrantDamageFromObserverDoesNotDuplicateDeath",
+          "Status": "Passed",
+          "Duration": 0.000192,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HeavyWeaponRulesTests.ConeUsesRangeAndAngle(-2,0,True)",
+          "Status": "Passed",
+          "Duration": 0.0003546,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HeavyWeaponRulesTests.ConeUsesRangeAndAngle(-2,0.8f,True)",
+          "Status": "Passed",
+          "Duration": 0.0000422,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HeavyWeaponRulesTests.ConeUsesRangeAndAngle(-2,2,False)",
+          "Status": "Passed",
+          "Duration": 0.000033,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HeavyWeaponRulesTests.ConeUsesRangeAndAngle(2,0,False)",
+          "Status": "Passed",
+          "Duration": 0.0000334,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HeavyWeaponRulesTests.ConeUsesRangeAndAngle(-5,0,False)",
+          "Status": "Passed",
+          "Duration": 0.0000321,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.HeavyWeaponRulesTests.InvalidBehaviorDataRejectsDeadZoneAndNonfiniteTimings",
+          "Status": "Passed",
+          "Duration": 0.0003091,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase2CRulesTests.MovementEntersCrossesAndLeavesAdjacentWireEvenInLongFrames",
+          "Status": "Passed",
+          "Duration": 0.0052681,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase2CRulesTests.PersistedCatalogAndWavesHaveTheRequestedPrototypeValues",
+          "Status": "Passed",
+          "Duration": 0.0142931,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase2CRulesTests.RouteProgressOrdersDetoursInsteadOfStraightLineDistance",
+          "Status": "Passed",
+          "Duration": 0.0013794,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase2CRulesTests.RuntimeSlowSourcesStackReplaceAndRemoveIndependently",
+          "Status": "Passed",
+          "Duration": 0.0004523,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase2CRulesTests.WireChangesRouteCostWithoutBlockingAndRestoresOnlyItsOwnOverlay",
+          "Status": "Passed",
+          "Duration": 0.0008626,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase4CRulesTests.AllSpecialEnemiesAreConfiguredAndFactionBiasRetainsBasicCrowds",
+          "Status": "Passed",
+          "Duration": 0.0013567,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase4CRulesTests.ArmorMitigatesDamageAndExtremeHitsStillKill(0,100)",
+          "Status": "Passed",
+          "Duration": 0.000959,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase4CRulesTests.ArmorMitigatesDamageAndExtremeHitsStillKill(0.35f,65)",
+          "Status": "Passed",
+          "Duration": 0.0001171,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase4CRulesTests.ArmorMitigatesDamageAndExtremeHitsStillKill(0.2f,80)",
+          "Status": "Passed",
+          "Duration": 0.0000937,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase4CRulesTests.BoatCadenceAndConcurrencyGrowWithoutOverflow",
+          "Status": "Passed",
+          "Duration": 0.0003132,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase4CRulesTests.BossScheduleAlternatesAndAddsEscortsWithoutRemovingNormalPressure",
+          "Status": "Passed",
+          "Duration": 0.0007184,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase4CRulesTests.PressureEstablishesScaleEarly(1,60,90)",
+          "Status": "Passed",
+          "Duration": 0.0005313,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase4CRulesTests.PressureEstablishesScaleEarly(3,100,150)",
+          "Status": "Passed",
+          "Duration": 0.0001178,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase4CRulesTests.PressureEstablishesScaleEarly(5,150,225)",
+          "Status": "Passed",
+          "Duration": 0.0000968,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase4CRulesTests.PressureEstablishesScaleEarly(10,225,375)",
+          "Status": "Passed",
+          "Duration": 0.0000962,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.Phase4CRulesTests.PressureEstablishesScaleEarly(20,375,650)",
+          "Status": "Passed",
+          "Duration": 0.0001104,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.StructureHealthTests.CapacityUpgradePreservesMissingHealthAndRepairIsIdempotent",
+          "Status": "Passed",
+          "Duration": 0.0004077,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.StructureHealthTests.RepairsAndCapacityChangesCannotResurrectDestroyedStructures",
+          "Status": "Passed",
+          "Duration": 0.0001376,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.TopDownGridTests.CameraFramesEntireBattlefieldAndFacesXYPlane(1920,1080)",
+          "Status": "Passed",
+          "Duration": 0.002367,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.TopDownGridTests.CameraFramesEntireBattlefieldAndFacesXYPlane(2560,1440)",
+          "Status": "Passed",
+          "Duration": 0.0001886,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.TopDownGridTests.CameraFramesEntireBattlefieldAndFacesXYPlane(1280,720)",
+          "Status": "Passed",
+          "Duration": 0.0001602,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.TopDownGridTests.CameraFramesEntireBattlefieldAndFacesXYPlane(1024,768)",
+          "Status": "Passed",
+          "Duration": 0.0001503,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.TopDownGridTests.CameraFramesEntireBattlefieldAndFacesXYPlane(2560,1080)",
+          "Status": "Passed",
+          "Duration": 0.0001471,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.TopDownGridTests.EveryCoastRowHasAPathAcrossWaterBeachAndGroundToRightHandBase",
+          "Status": "Passed",
+          "Duration": 0.0042367,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.TopDownGridTests.LegacySerializedDefinitionKeepsOriginalXZMap",
+          "Status": "Passed",
+          "Duration": 0.0007249,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.TopDownGridTests.XYConversionUsesYAndIgnoresPresentationDepth",
+          "Status": "Passed",
+          "Duration": 0.0003211,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.TopDownGridTests.XYMovementIsFrameIndependentThroughTurnsAndClampsAtAttackRange",
+          "Status": "Passed",
+          "Duration": 0.0008828,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.VfxPoolTests.CapacityRecyclesOldestWithoutCreatingMoreRenderers",
+          "Status": "Passed",
+          "Duration": 0.0062821,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.VfxPoolTests.ClearReleasesEveryActiveEffectAndAllowsReuse",
+          "Status": "Passed",
+          "Duration": 0.0008413,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.VfxPoolTests.DamageNotificationReportsCommittedDamageOnceAndIgnoresInvalidHits",
+          "Status": "Passed",
+          "Duration": 0.0006591,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.VfxPoolTests.ReuseResetsFadeFollowTransformAndSorting",
+          "Status": "Passed",
+          "Duration": 0.0021271,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(False,False,False,False,0)",
+          "Status": "Passed",
+          "Duration": 0.0004265,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(True,False,False,False,1)",
+          "Status": "Passed",
+          "Duration": 0.0000477,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(False,True,False,False,2)",
+          "Status": "Passed",
+          "Duration": 0.0000384,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(False,False,True,False,4)",
+          "Status": "Passed",
+          "Duration": 0.0000353,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(False,False,False,True,8)",
+          "Status": "Passed",
+          "Duration": 0.0000369,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(True,False,True,False,5)",
+          "Status": "Passed",
+          "Duration": 0.0000363,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(False,True,False,True,10)",
+          "Status": "Passed",
+          "Duration": 0.0000352,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(True,True,False,False,3)",
+          "Status": "Passed",
+          "Duration": 0.0000389,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(False,True,True,False,6)",
+          "Status": "Passed",
+          "Duration": 0.0000358,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(False,False,True,True,12)",
+          "Status": "Passed",
+          "Duration": 0.0000358,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(True,False,False,True,9)",
+          "Status": "Passed",
+          "Duration": 0.0000386,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(True,True,True,False,7)",
+          "Status": "Passed",
+          "Duration": 0.0000378,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(True,True,False,True,11)",
+          "Status": "Passed",
+          "Duration": 0.0000367,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(True,False,True,True,13)",
+          "Status": "Passed",
+          "Duration": 0.000037,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(False,True,True,True,14)",
+          "Status": "Passed",
+          "Duration": 0.0000374,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.WireConnectivityTests.CardinalBitsCoverEveryTopology(True,True,True,True,15)",
+          "Status": "Passed",
+          "Duration": 0.0000374,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 0.99,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": null,
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

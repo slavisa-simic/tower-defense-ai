@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase6A/Live.cs",
+      "entry": "Phase6ALive.Screens"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 148,
+      "executeMs": 1171,
+      "assemblyName": "PipelineRunScript_Live_126e79f708c7443fbf6578472aac59d6",
+      "success": true,
+      "result": "Captured container defenses, multi-sector boats, mass landing and boss."
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

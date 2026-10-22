@@ -1,0 +1,488 @@
+[
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_ne_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_wire_corner_ne_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_nw_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_wire_corner_nw_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_se_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_wire_corner_se_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_corner_sw_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_wire_corner_sw_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_damaged_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_wire_damaged_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_destroyed_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_wire_destroyed_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_horizontal_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_wire_horizontal_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_single_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_wire_single_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/BarbedWire/bd_defense_wire_vertical_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_wire_vertical_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/LandMine/bd_defense_mine_armed_v001.png",
+    "width": 32,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_mine_armed_v001",
+        "rect": "(x:0.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/LandMine/bd_defense_mine_idle_v001.png",
+    "width": 32,
+    "height": 32,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_mine_idle_v001",
+        "rect": "(x:0.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_base_damaged_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_mg_base_damaged_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_base_destroyed_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_mg_base_destroyed_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_base_idle_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_mg_base_idle_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_preview_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_mg_preview_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_weapon_fire_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_mg_weapon_fire__f000",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_defense_mg_weapon_fire__f001",
+        "rect": "(x:64.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_defense_mg_weapon_fire__f002",
+        "rect": "(x:128.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_defense_mg_weapon_fire__f003",
+        "rect": "(x:192.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_weapon_idle_v001.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_mg_weapon_idle_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_aim_fire_sheet_v001.png",
+    "width": 288,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_sniper_aim_fire__f000",
+        "rect": "(x:0.00, y:0.00, width:96.00, height:96.00)",
+        "pivot": "(48.00, 48.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_defense_sniper_aim_fire__f001",
+        "rect": "(x:96.00, y:0.00, width:96.00, height:96.00)",
+        "pivot": "(48.00, 48.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_defense_sniper_aim_fire__f002",
+        "rect": "(x:192.00, y:0.00, width:96.00, height:96.00)",
+        "pivot": "(48.00, 48.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_aim_idle_v001.png",
+    "width": 96,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_sniper_aim_idle_v001",
+        "rect": "(x:0.00, y:0.00, width:96.00, height:96.00)",
+        "pivot": "(48.00, 48.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_base_damaged_v001.png",
+    "width": 96,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_sniper_base_damaged_v001",
+        "rect": "(x:0.00, y:0.00, width:96.00, height:96.00)",
+        "pivot": "(48.00, 48.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_base_destroyed_v001.png",
+    "width": 96,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_sniper_base_destroyed_v001",
+        "rect": "(x:0.00, y:0.00, width:96.00, height:96.00)",
+        "pivot": "(48.00, 48.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_base_idle_v001.png",
+    "width": 96,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_sniper_base_idle_v001",
+        "rect": "(x:0.00, y:0.00, width:96.00, height:96.00)",
+        "pivot": "(48.00, 48.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Defenses/SniperTower/bd_defense_sniper_preview_v001.png",
+    "width": 96,
+    "height": 96,
+    "spritePixelsPerUnit": 51.2,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_defense_sniper_preview_v001",
+        "rect": "(x:0.00, y:0.00, width:96.00, height:96.00)",
+        "pivot": "(48.00, 48.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/UI/bd_ui_sniper_tower_icon_v002.png",
+    "width": 64,
+    "height": 64,
+    "spritePixelsPerUnit": 100.0,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "alphaIsTransparency": true,
+    "isReadable": false,
+    "sprites": [
+      {
+        "name": "bd_ui_sniper_tower_icon_v002",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 100.0
+      }
+    ]
+  }
+]

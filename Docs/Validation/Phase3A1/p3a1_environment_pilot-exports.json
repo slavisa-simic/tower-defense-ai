@@ -1,0 +1,117 @@
+[
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_deep_danube_water_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_deep_danube_water_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#153239",
+      "#17444C",
+      "#1D4850",
+      "#245058"
+    ],
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB",
+    "source_sha256": "23add93a301b2cf2a4e778ce489ff994865d9393922fdc9e65a5d0b6980bbc7e",
+    "output_sha256": "9b09509d4bf9dc5ee3fab85a00cd9026bbdb69770fdd83f4f1a8f04181424694",
+    "crop_bbox": null,
+    "actual_size": [
+      64,
+      64
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "color_count": 4,
+    "method": "nearest-neighbor; paired seam-edge blend before palette mapping; no dithering; binary alpha threshold 128",
+    "pillow_version": "12.3.0",
+    "edge_x_equal": true,
+    "edge_y_equal": true
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_shallow_water_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_shallow_water_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#21484C",
+      "#295458",
+      "#2D5C5D",
+      "#396666"
+    ],
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB",
+    "source_sha256": "e46773b9271938072c729ef49719dc4e156181cb411ee37e618c62b556b38413",
+    "output_sha256": "60d839edf16bddcc2aba627e67e771cff2f56ccb54b884ea7c4861116503ea74",
+    "crop_bbox": null,
+    "actual_size": [
+      64,
+      64
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "color_count": 4,
+    "method": "nearest-neighbor; paired seam-edge blend before palette mapping; no dithering; binary alpha threshold 128",
+    "pillow_version": "12.3.0",
+    "edge_x_equal": true,
+    "edge_y_equal": true
+  },
+  {
+    "source": "Assets/Game/Art/SourceSheets/p3a1_environment_001/bd_src_muddy_shore_tile_v001.png",
+    "output": "Assets/Game/Art/Environment/bd_env_muddy_shore_tile_v001.png",
+    "size": [
+      64,
+      64
+    ],
+    "alpha": false,
+    "repeat": "xy",
+    "palette": [
+      "#493B2D",
+      "#55412F",
+      "#5A4633",
+      "#6C5137",
+      "#795C3E"
+    ],
+    "native_size": [
+      1254,
+      1254
+    ],
+    "native_mode": "RGB",
+    "source_sha256": "476fa5a4601dce144cf463219ee6b2294f64ef7bd43962bb58e55fcfa79babb8",
+    "output_sha256": "f7952a290b92f3dc141c97be1a706571a8fa8531d867876d6452272c553f380e",
+    "crop_bbox": null,
+    "actual_size": [
+      64,
+      64
+    ],
+    "alpha_extrema": [
+      255,
+      255
+    ],
+    "transparent_pixels": 0,
+    "color_count": 5,
+    "method": "nearest-neighbor; paired seam-edge blend before palette mapping; no dithering; binary alpha threshold 128",
+    "pillow_version": "12.3.0",
+    "edge_x_equal": true,
+    "edge_y_equal": true
+  }
+]

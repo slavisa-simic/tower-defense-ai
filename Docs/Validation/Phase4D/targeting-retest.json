@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "command": "command test_status",
+  "data": {
+    "command": "test_status",
+    "parameters": {},
+    "result": "{\r\n  \"status\": \"completed\",\r\n  \"duration\": 0.75,\r\n  \"summary\": {\r\n    \"total\": 1,\r\n    \"passed\": 0,\r\n    \"failed\": 1,\r\n    \"skipped\": 0,\r\n    \"inconclusive\": 0\r\n  },\r\n  \"results\": [\r\n    {\r\n      \"FullName\": \"ShorelineDefense.Tests.SurvivalPlayTests.BothTurretsTargetEveryEnemyKindAndPresentationUsesItsOwnArt\",\r\n      \"Status\": \"Failed\",\r\n      \"Duration\": 0.7219171,\r\n      \"Message\": \"  Turret 3 kind Basic targetable True registered 1 range True\\r\\n  Expected: greater than 0\\r\\n  But was:  0\\r\\n\",\r\n      \"StackTrace\": \"at ShorelineDefense.Tests.SurvivalPlayTests+<BothTurretsTargetEveryEnemyKindAndPresentationUsesItsOwnArt>d__13.MoveNext () [0x0017e] in C:\\\\Users\\\\Slavisa\\\\Documents\\\\ChatGPT\\\\border-defenders\\\\Assets\\\\Game\\\\Tests\\\\PlayMode\\\\SurvivalPlayTests.cs:89\\r\\nat UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\\\Library\\\\PackageCache\\\\com.unity.test-framework@bd7f943e9647\\\\UnityEngine.TestRunner\\\\NUnitExtensions\\\\Attributes\\\\TestEnumerator.cs:44\\r\\n\"\r\n    }\r\n  ]\r\n}",
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

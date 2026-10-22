@@ -1,0 +1,125 @@
+{
+  "screen": [
+    1440,
+    810
+  ],
+  "orthographic": true,
+  "rotation": "(0.00, 0.00, 0.00)",
+  "buttons": [
+    {
+      "name": "build-barbed-wire",
+      "text": "Barbed Wire  50 RSD",
+      "rect": "(x:122.67, y:515.56, width:209.78, height:67.56)",
+      "inside": true,
+      "width": 209.7778,
+      "height": 67.55554
+    },
+    {
+      "name": "build-land-mine",
+      "text": "Land Mine  75 RSD",
+      "rect": "(x:341.33, y:515.56, width:209.78, height:67.56)",
+      "inside": true,
+      "width": 209.77774,
+      "height": 67.55554
+    },
+    {
+      "name": "build-mg",
+      "text": "MG Nest  150 RSD",
+      "rect": "(x:560.00, y:515.56, width:209.78, height:67.56)",
+      "inside": true,
+      "width": 209.777771,
+      "height": 67.55554
+    },
+    {
+      "name": "build-sniper-tower",
+      "text": "Sniper Tower  300 RSD",
+      "rect": "(x:778.67, y:515.56, width:209.78, height:67.56)",
+      "inside": true,
+      "width": 209.777771,
+      "height": 67.55554
+    },
+    {
+      "name": "build-mortar",
+      "text": "Mortar  400 RSD",
+      "rect": "(x:122.67, y:587.56, width:209.78, height:68.44)",
+      "inside": true,
+      "width": 209.7778,
+      "height": 68.44446
+    },
+    {
+      "name": "build-flamethrower",
+      "text": "Flamethrower  300 RSD",
+      "rect": "(x:341.33, y:587.56, width:209.78, height:68.44)",
+      "inside": true,
+      "width": 209.77774,
+      "height": 68.44446
+    },
+    {
+      "name": "build-autocannon",
+      "text": "Auto Cannon  600 RSD",
+      "rect": "(x:560.00, y:587.56, width:209.78, height:68.44)",
+      "inside": true,
+      "width": 209.777771,
+      "height": 68.44446
+    },
+    {
+      "name": "build-rocket",
+      "text": "Rocket Launcher  900 RSD",
+      "rect": "(x:778.67, y:587.56, width:209.78, height:68.44)",
+      "inside": true,
+      "width": 209.777771,
+      "height": 68.44446
+    }
+  ],
+  "footprints": [
+    {
+      "Id": "machine-gun-nest",
+      "Cost": 150,
+      "IsValid": true,
+      "footprint": "(1, 1)"
+    },
+    {
+      "Id": "barbed-wire",
+      "Cost": 50,
+      "IsValid": true,
+      "footprint": "(1, 1)"
+    },
+    {
+      "Id": "land-mine",
+      "Cost": 75,
+      "IsValid": true,
+      "footprint": "(1, 1)"
+    },
+    {
+      "Id": "sniper-tower",
+      "Cost": 300,
+      "IsValid": true,
+      "footprint": "(1, 1)"
+    },
+    {
+      "Id": "mortar",
+      "Cost": 400,
+      "IsValid": true,
+      "footprint": "(2, 2)"
+    },
+    {
+      "Id": "flamethrower",
+      "Cost": 300,
+      "IsValid": true,
+      "footprint": "(1, 1)"
+    },
+    {
+      "Id": "autocannon",
+      "Cost": 600,
+      "IsValid": true,
+      "footprint": "(2, 2)"
+    },
+    {
+      "Id": "rocket",
+      "Cost": 900,
+      "IsValid": true,
+      "footprint": "(2, 2)"
+    }
+  ],
+  "projectiles": 0
+}

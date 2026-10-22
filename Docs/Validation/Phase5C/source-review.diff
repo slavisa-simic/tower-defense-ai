@@ -1,0 +1,1194 @@
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/Building/BuildManager.cs b/Assets/Game/Scripts/Building/BuildManager.cs
+index 5653e22..ac21cec 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/Building/BuildManager.cs
++++ b/Assets/Game/Scripts/Building/BuildManager.cs
+@@ -17,6 +17,9 @@ namespace ShorelineDefense.Building
+         [SerializeField] private Transform defenseParent;
+         private Transform staging;
+         private bool placing;
++        private RunStatistics statistics;
++        public event Action StableActionCommitted;
++        private void Awake() => statistics = FindFirstObjectByType<RunStatistics>();
+         [SerializeField] private ShorelineDefense.Waves.WaveManager waves;
+         [SerializeField, Min(.01f)] private float repairBasisFraction = .5f;
+         [SerializeField, Min(.01f)] private float preparationRepairMultiplier = .75f;
+@@ -33,14 +36,14 @@ namespace ShorelineDefense.Building
+         {
+             if (placing || !CanUpgrade(defense)) return false;
+             placing = true;
+-            try { int cost = UpgradeCost(defense); if (!economy.TrySpend(cost)) return false; defense.ApplyUpgrade(cost); return true; }
++            try { int cost = UpgradeCost(defense); if (!economy.TrySpend(cost)) return false; defense.ApplyUpgrade(cost); statistics?.RecordUpgrade(); StableActionCommitted?.Invoke(); return true; }
+             finally { placing = false; }
+         }
+         public bool TryRepair(DefenseBase defense)
+         {
+             if (placing || !CanRepair(defense)) return false;
+             placing = true;
+-            try { if (!economy.TrySpend(RepairCost(defense))) return false; defense.Repair(); return true; }
++            try { if (!economy.TrySpend(RepairCost(defense))) return false; defense.Repair(); statistics?.RecordRepair(); StableActionCommitted?.Invoke(); return true; }
+             finally { placing = false; }
+         }
+         [SerializeField, Range(0, 1)] private float dismantleRefundFraction = .5f;
+@@ -54,6 +57,7 @@ namespace ShorelineDefense.Building
+                 refund = RefundFor(defense);
+                 defense.RemoveByDismantle();
+                 economy.RefundConstruction(refund);
++                StableActionCommitted?.Invoke();
+                 return true;
+             } finally { placing = false; }
+         }
+@@ -107,6 +111,8 @@ namespace ShorelineDefense.Building
+                 candidate.transform.SetParent(defenseParent, true);
+                 candidate.gameObject.SetActive(true);
+                 defense = candidate;
++                statistics?.RecordBuild();
++                StableActionCommitted?.Invoke();
+                 return PlacementResult.Valid;
+             }
+             catch (Exception exception)
+@@ -128,6 +134,24 @@ namespace ShorelineDefense.Building
+ 
+         protected virtual DefenseBase CreateDefense(DefenseDefinition definition, Vector3 position, Transform parent) =>
+             Instantiate(definition.Prefab, position, Quaternion.identity, parent);
++
++        public DefenseBase RestoreDefense(DefenseDefinition definition, Persistence.StructureSaveData data)
++        {
++            var cell = new Vector2Int(data.x, data.y);
++            var result = PlacementRules.Validate(grid.Grid, cell, definition.Footprint, 0, 0);
++            if (result != PlacementResult.Valid) throw new InvalidOperationException("Saved structure footprint is unavailable: " + result);
++            if (staging == null) { staging = new GameObject("Inactive Defense Staging").transform; staging.SetParent(transform, false); staging.gameObject.SetActive(false); }
++            var candidate = CreateDefense(definition, grid.Grid.FootprintCenter(cell, definition.Footprint), staging);
++            candidate.gameObject.SetActive(false);
++            candidate.Initialize(definition, cell, grid.Grid, game, enemies);
++            candidate.SetConstructionOwner(this, data.constructionCost);
++            candidate.RestoreState(data);
++            if (!grid.Grid.TryOccupy(cell, definition.Footprint, candidate)) throw new InvalidOperationException("Saved structure overlaps another structure.");
++            candidate.transform.SetParent(defenseParent, true);
++            candidate.gameObject.SetActive(true);
++            candidate.GetComponent<LandMine>()?.RestoreArming(data.mineArmingRemaining);
++            return candidate;
++        }
+     }
+ }
+ 
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/Building/PlacementInput.cs b/Assets/Game/Scripts/Building/PlacementInput.cs
+index c9e95f2..a820296 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/Building/PlacementInput.cs
++++ b/Assets/Game/Scripts/Building/PlacementInput.cs
+@@ -16,7 +16,10 @@ namespace ShorelineDefense.Building
+         { view = camera; grid = battlefield; placement = controller; hud = document; }
+         private void Update()
+         {
+-            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetMouseButtonDown(1)) { placement.Cancel(); selection?.Clear(); return; }
++            var menus = hud != null ? hud.GetComponent<ShorelineDefense.UI.ProductMenuController>() : null;
++            if (menus != null && menus.ModalOpen) { placement.HidePreview(); return; }
++            // ProductMenuController owns Escape priority; legacy scenes retain cancellation.
++            if ((menus == null && Input.GetKeyDown(KeyCode.Escape)) || Input.GetMouseButtonDown(1)) { placement.Cancel(); selection?.Clear(); return; }
+             if (IsOverHud(Input.mousePosition) || !TryScreenToCell(Input.mousePosition, out var cell))
+             { placement.HidePreview(); return; }
+             if (!placement.IsInteracting) { if (Input.GetMouseButtonDown(0)) selection?.SelectCell(cell); return; }
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/Core/GameSpeedController.cs b/Assets/Game/Scripts/Core/GameSpeedController.cs
+index d18774e..355abcc 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/Core/GameSpeedController.cs
++++ b/Assets/Game/Scripts/Core/GameSpeedController.cs
+@@ -8,6 +8,8 @@ namespace ShorelineDefense.Core
+     {
+         [SerializeField] private GameStateController game;
+         public GameSpeed Speed { get; private set; } = GameSpeed.Normal;
++        public GameSpeed LastRunningSpeed { get; private set; } = GameSpeed.Normal;
++        public bool Resume() => SetSpeed(LastRunningSpeed);
+         public event Action Changed;
+         public void Configure(GameStateController state) => game = state;
+         private void OnEnable() { game.StateChanged += StateChanged; }
+@@ -16,6 +18,7 @@ namespace ShorelineDefense.Core
+         {
+             if (game == null || !game.IsPlaying || !Enum.IsDefined(typeof(GameSpeed), value)) return false;
+             Speed = value;
++            if (value != GameSpeed.Pause) LastRunningSpeed = value;
+             Time.timeScale = value == GameSpeed.Pause ? 0 : value == GameSpeed.Double ? 2 : 1;
+             Changed?.Invoke();
+             return true;
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/Core/RunStatistics.cs b/Assets/Game/Scripts/Core/RunStatistics.cs
+index cd82bfa..7bd95a6 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/Core/RunStatistics.cs
++++ b/Assets/Game/Scripts/Core/RunStatistics.cs
+@@ -41,6 +41,23 @@ namespace ShorelineDefense.Core
+         public string MostRecentEvent => waves?.Events?.MostRecentEvent;
+         public int EventCount(string id) => waves?.Events?.Count(id) ?? 0;
+         public int HighestWaveReached { get; private set; }
++        public int StructuresBuilt { get; private set; }
++        public int StructuresUpgraded { get; private set; }
++        public int StructuresRepaired { get; private set; }
++        public void RecordBuild() => StructuresBuilt++;
++        public void RecordUpgrade() => StructuresUpgraded++;
++        public void RecordRepair() => StructuresRepaired++;
++        public Persistence.StatisticsSaveData Capture() => new Persistence.StatisticsSaveData {
++            kills = (long[])kills.Clone(), homicides = Homicides, breaches = TotalBreaches, bossesBreached = BossesBreached,
++            highestWave = HighestWaveReached, peakEnemies = PeakActiveEnemies, peakBoats = PeakConcurrentBoats,
++            built = StructuresBuilt, upgraded = StructuresUpgraded, repaired = StructuresRepaired };
++        public void Restore(Persistence.StatisticsSaveData data)
++        {
++            Array.Copy(data.kills, kills, kills.Length); Homicides = data.homicides; TotalBreaches = data.breaches; BossesBreached = data.bossesBreached;
++            HighestWaveReached = data.highestWave; PeakActiveEnemies = data.peakEnemies; PeakConcurrentBoats = data.peakBoats;
++            StructuresBuilt = data.built; StructuresUpgraded = data.upgraded; StructuresRepaired = data.repaired;
++            OnHomicidesChanged?.Invoke(Homicides);
++        }
+         public long TotalMoneyEarned => economy != null ? economy.TotalEarned : 0;
+         public long TotalMoneySpent => economy != null ? economy.TotalSpent : 0;
+         public event Action<long> OnHomicidesChanged;
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/Defenses/DefenseBase.cs b/Assets/Game/Scripts/Defenses/DefenseBase.cs
+index 2f2f2f1..e6f012e 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/Defenses/DefenseBase.cs
++++ b/Assets/Game/Scripts/Defenses/DefenseBase.cs
+@@ -34,6 +34,13 @@ namespace ShorelineDefense.Defenses
+             Changed?.Invoke();
+         }
+         internal void Repair() => health.RestoreFull();
++        internal void RestoreState(Persistence.StructureSaveData data)
++        {
++            Level = data.level; ConstructionCost = data.constructionCost; TotalInvestment = data.investment;
++            health.IncreaseMaximum(Mathf.RoundToInt(Definition.MaxHealth * (LevelStats?.health ?? 1)));
++            if (health.MaxHealth != data.maxHealth) throw new InvalidOperationException("Structure tuning differs from this save.");
++            health.TakeDamage(health.MaxHealth - data.health);
++        }
+         private void HealthChanged() => Changed?.Invoke();
+         public bool Dismantled { get; private set; }
+         internal void SetConstructionOwner(ShorelineDefense.Building.BuildManager owner, int cost) { Owner = owner; ConstructionCost = cost; TotalInvestment = cost; }
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/Defenses/LandMine.cs b/Assets/Game/Scripts/Defenses/LandMine.cs
+index bedaa0f..48fc3da 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/Defenses/LandMine.cs
++++ b/Assets/Game/Scripts/Defenses/LandMine.cs
+@@ -15,6 +15,8 @@ namespace ShorelineDefense.Defenses
+         private float proximityTimer;
+         public bool Exploded { get; private set; }
+         public bool Armed => defense != null && defense.Definition != null && elapsed >= defense.Definition.ArmingDelay && !Exploded;
++        public float ArmingRemaining => defense?.Definition != null ? Mathf.Max(0, defense.Definition.ArmingDelay - elapsed) : 0;
++        internal void RestoreArming(float remaining) => elapsed = Mathf.Max(0, defense.Definition.ArmingDelay - Mathf.Min(remaining, defense.Definition.ArmingDelay));
+         public event Action<float> Detonated;
+         private void Awake() => defense = GetComponent<DefenseBase>();
+         private void Update() => Tick(Time.deltaTime);
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/Economy/EconomyManager.cs b/Assets/Game/Scripts/Economy/EconomyManager.cs
+index 1de2713..b17e6ee 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/Economy/EconomyManager.cs
++++ b/Assets/Game/Scripts/Economy/EconomyManager.cs
+@@ -25,6 +25,8 @@ namespace ShorelineDefense.Economy
+             NotifyMoneyChanged();
+         }
+         public void Configure(GameStateController state) => game = state;
++        public void Restore(int money, long earned, long spent, long refunds, int dismantled)
++        { balance = money; TotalEarned = earned; TotalSpent = spent; RefundIncome = refunds; StructuresDismantled = dismantled; NotifyMoneyChanged(); }
+         private void Awake() => _ = Money;
+         public bool CanAfford(int cost) => cost >= 0 && Money >= cost;
+ 
+diff --git a/Assets/Game/Scripts/Persistence/LocalJsonStore.cs b/Assets/Game/Scripts/Persistence/LocalJsonStore.cs
+new file mode 100644
+index 0000000..5f3470f
+--- /dev/null
++++ b/Assets/Game/Scripts/Persistence/LocalJsonStore.cs
+@@ -0,0 +1,60 @@
++using System;
++using System.IO;
++using System.Text;
++using UnityEngine;
++
++namespace ShorelineDefense.Persistence
++{
++    /// <summary>Bounded local JSON with flushed temporary writes and atomic replacement.</summary>
++    public sealed class LocalJsonStore
++    {
++        public string Root { get; }
++        public LocalJsonStore(string directory) { Root = directory; }
++        public string PathFor(string name) => Path.Combine(Root, name + ".json");
++        public bool Write<T>(string name, T data, out string error)
++        {
++            error = null;
++            try
++            {
++                Directory.CreateDirectory(Root);
++                string target = PathFor(name), temporary = target + ".tmp";
++                byte[] bytes = Encoding.UTF8.GetBytes(JsonUtility.ToJson(data, true));
++                using (var stream = new FileStream(temporary, FileMode.Create, FileAccess.Write, FileShare.None))
++                { stream.Write(bytes, 0, bytes.Length); stream.Flush(true); }
++                if (File.Exists(target)) File.Replace(temporary, target, target + ".bak");
++                else File.Move(temporary, target);
++                return true;
++            }
++            catch (Exception exception) when (exception is IOException || exception is UnauthorizedAccessException || exception is ArgumentException)
++            { error = exception.Message; return false; }
++        }
++        public bool Read<T>(string name, Func<T, bool> validate, out T data, out string error) where T : class
++        {
++            data = null; error = null;
++            string target = PathFor(name);
++            foreach (string path in new[] { target, target + ".bak" })
++            {
++                if (!File.Exists(path)) continue;
++                try
++                {
++                    if (new FileInfo(path).Length > 4 * 1024 * 1024) throw new IOException("Local data file is too large.");
++                    var candidate = JsonUtility.FromJson<T>(File.ReadAllText(path));
++                    if (candidate == null || !validate(candidate)) throw new IOException("Unsupported or invalid local data.");
++                    data = candidate;
++                    if (path != target) error = "Recovered the previous save from backup.";
++                    return true;
++                }
++                catch (Exception exception) when (exception is IOException || exception is UnauthorizedAccessException || exception is ArgumentException)
++                { error = exception.Message; }
++            }
++            return false;
++        }
++        public bool Delete(string name, out string error)
++        {
++            error = null;
++            try { foreach (string suffix in new[] { "", ".bak", ".tmp" }) { string path = PathFor(name) + suffix; if (File.Exists(path)) File.Delete(path); } return true; }
++            catch (Exception exception) when (exception is IOException || exception is UnauthorizedAccessException)
++            { error = exception.Message; return false; }
++        }
++    }
++}
+diff --git a/Assets/Game/Scripts/Persistence/LocalJsonStore.cs.meta b/Assets/Game/Scripts/Persistence/LocalJsonStore.cs.meta
+new file mode 100644
+index 0000000..2bc0830
+--- /dev/null
++++ b/Assets/Game/Scripts/Persistence/LocalJsonStore.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: 1c18887cf2db61b4aaefa8e93553c437
+\ No newline at end of file
+diff --git a/Assets/Game/Scripts/Persistence/RunSaveCompatibility.cs b/Assets/Game/Scripts/Persistence/RunSaveCompatibility.cs
+new file mode 100644
+index 0000000..f6c786a
+--- /dev/null
++++ b/Assets/Game/Scripts/Persistence/RunSaveCompatibility.cs
+@@ -0,0 +1,34 @@
++using System;
++using System.Collections.Generic;
++using ShorelineDefense.Defenses;
++using ShorelineDefense.Grid;
++using ShorelineDefense.Waves;
++using UnityEngine;
++
++namespace ShorelineDefense.Persistence
++{
++    /// <summary>Catalog/map preflight also runs in Main Menu, allowing backup recovery before scene load.</summary>
++    public static class RunSaveCompatibility
++    {
++        public static bool Valid(RunSaveData data, IReadOnlyList<DefenseDefinition> defenses, BattlefieldDefinition map, EndlessEventSettings events)
++        {
++            if (!SaveGameService.Valid(data) || defenses == null || map == null) return false;
++            var cells = new HashSet<Vector2Int>();
++            foreach (var item in data.structures)
++            {
++                DefenseDefinition definition = null;
++                foreach (var candidate in defenses) if (candidate != null && candidate.Id == item.defenseId) { definition = candidate; break; }
++                if (definition == null || !definition.IsValid || Mathf.RoundToInt(definition.MaxHealth * (definition.LevelData(item.level)?.health ?? 1)) != item.maxHealth) return false;
++                if (item.x < 0 || item.y < 0 || (long)item.x + definition.Footprint.x > map.Width || (long)item.y + definition.Footprint.y > map.Height) return false;
++                for (int x = 0; x < definition.Footprint.x; x++) for (int y = 0; y < definition.Footprint.y; y++)
++                { var cell = new Vector2Int(item.x + x, item.y + y); if (map.TerrainAt(cell) != TerrainType.Ground || !cells.Add(cell)) return false; }
++            }
++            bool Known(string id) => events != null && Array.Exists(events.events, e => e != null && e.id == id);
++            var state = data.events;
++            if (!string.IsNullOrEmpty(state.currentId) && (!Known(state.currentId) || state.wave != data.wave || state.wavesRemaining <= 0)) return false;
++            foreach (var list in new[] { state.cooldowns, state.counts, state.history }) foreach (var item in list) if (!Known(item.id)) return false;
++            foreach (string id in state.recent) if (!Known(id)) return false;
++            return true;
++        }
++    }
++}
+diff --git a/Assets/Game/Scripts/Persistence/RunSaveCompatibility.cs.meta b/Assets/Game/Scripts/Persistence/RunSaveCompatibility.cs.meta
+new file mode 100644
+index 0000000..a35b89d
+--- /dev/null
++++ b/Assets/Game/Scripts/Persistence/RunSaveCompatibility.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: 9980f0f839f873c47bc464d8027fcee0
+\ No newline at end of file
+diff --git a/Assets/Game/Scripts/Persistence/RunSaveData.cs b/Assets/Game/Scripts/Persistence/RunSaveData.cs
+new file mode 100644
+index 0000000..e547034
+--- /dev/null
++++ b/Assets/Game/Scripts/Persistence/RunSaveData.cs
+@@ -0,0 +1,59 @@
++using System;
++using System.Collections.Generic;
++
++namespace ShorelineDefense.Persistence
++{
++    [Serializable] public sealed class RunSaveData
++    {
++        public int saveVersion = 1;
++        public string runId, savedUtc;
++        public int wave, completedWaves, seed, money, maxHomicides;
++        public double duration;
++        public long earned, spent, refunds;
++        public int dismantled;
++        public StatisticsSaveData statistics = new StatisticsSaveData();
++        public EventSaveData events = new EventSaveData();
++        public List<StructureSaveData> structures = new List<StructureSaveData>();
++    }
++    [Serializable] public sealed class StructureSaveData
++    {
++        public string defenseId;
++        public int x, y, level, health, maxHealth, constructionCost;
++        public long investment;
++        public float mineArmingRemaining;
++    }
++    [Serializable] public sealed class StatisticsSaveData
++    {
++        public long[] kills = new long[9];
++        public long homicides, breaches, bossesBreached;
++        public int highestWave, peakEnemies, peakBoats, built, upgraded, repaired;
++    }
++    [Serializable] public sealed class EventCounter
++    {
++        public string id;
++        public int value;
++        public EventCounter(string key, int count) { id = key; value = count; }
++    }
++    [Serializable] public sealed class EventSaveData
++    {
++        public string currentId, mostRecent;
++        public int nextWave, wave, sector, wavesRemaining, supplyReceived;
++        public float secondsRemaining, warningRemaining;
++        public bool active;
++        public long experienced;
++        public List<string> recent = new List<string>();
++        public List<EventCounter> cooldowns = new List<EventCounter>(), counts = new List<EventCounter>(), history = new List<EventCounter>();
++    }
++    [Serializable] public sealed class RunRecord
++    {
++        public string runId, endedUtc;
++        public int wave, peakEnemies;
++        public long kills, homicides, bosses, earned;
++        public double duration;
++    }
++    [Serializable] public sealed class HistoryData
++    {
++        public int saveVersion = 1;
++        public List<RunRecord> runs = new List<RunRecord>();
++    }
++}
+diff --git a/Assets/Game/Scripts/Persistence/RunSaveData.cs.meta b/Assets/Game/Scripts/Persistence/RunSaveData.cs.meta
+new file mode 100644
+index 0000000..7b4a69c
+--- /dev/null
++++ b/Assets/Game/Scripts/Persistence/RunSaveData.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: de6a66ec53af6ee4382f92808ff0f7bd
+\ No newline at end of file
+diff --git a/Assets/Game/Scripts/Persistence/RunSession.cs b/Assets/Game/Scripts/Persistence/RunSession.cs
+new file mode 100644
+index 0000000..480c5cc
+--- /dev/null
++++ b/Assets/Game/Scripts/Persistence/RunSession.cs
+@@ -0,0 +1,132 @@
++using System;
++using System.Collections.Generic;
++using ShorelineDefense.Building;
++using ShorelineDefense.Core;
++using ShorelineDefense.Defenses;
++using ShorelineDefense.UI;
++using ShorelineDefense.Waves;
++using UnityEngine;
++
++namespace ShorelineDefense.Persistence
++{
++    /// <summary>Coordinates stable snapshots. Scene reload owns complete new-run reset.</summary>
++    [DefaultExecutionOrder(1000)]
++    public sealed class RunSession : MonoBehaviour
++    {
++        public static RunSaveData Pending { get; set; }
++        public string RunId { get; private set; }
++        public double Duration { get; private set; }
++        public string Feedback { get; private set; }
++        public bool Ready { get; private set; }
++        public event Action FeedbackChanged;
++        private BuildManager builder;
++        private WaveManager waves;
++        private GameStateController game;
++        private RunStatistics statistics;
++        private BorderBreachService border;
++        private SaveGameService saves;
++        private RunHistoryService history;
++        private bool dirty, finalized;
++        private float saveAfter;
++        private WaveState lastWaveState;
++        private RunRecord finished;
++        public bool CanSave => Ready && game.IsPlaying && waves.IsEndless && waves.State == WaveState.Preparation && waves.CompletedWaves == waves.PreparationWaveNumber - 1;
++        private void Start()
++        {
++            builder = FindFirstObjectByType<BuildManager>(); waves = FindFirstObjectByType<WaveManager>();
++            game = builder.Game; statistics = FindFirstObjectByType<RunStatistics>(); border = FindFirstObjectByType<BorderBreachService>();
++            saves = new SaveGameService(LocalGameData.Files); history = new RunHistoryService(LocalGameData.Files);
++            SettingsService.Instance.Apply();
++            var data = Pending; Pending = null;
++            try
++            {
++                if (data != null) Restore(data);
++                else { RunId = Guid.NewGuid().ToString(); Duration = 0; }
++                Ready = true;
++            }
++            catch (Exception exception)
++            {
++                Debug.LogWarning("Continue restoration rejected: " + exception.Message);
++                ProductMenuController.Notice = "The saved run could not be restored. Your save has been preserved.";
++                UnityEngine.SceneManagement.SceneManager.LoadScene("MainMenu"); return;
++            }
++            lastWaveState = waves.State;
++            waves.Changed += WaveChanged; waves.EventChanged += QueueSave; builder.StableActionCommitted += QueueSave; game.StateChanged += StateChanged;
++            waves.PreparationEnding += BeforeWave;
++            SaveNow();
++        }
++        private void Restore(RunSaveData data)
++        {
++            if (!SaveGameService.Valid(data)) throw new InvalidOperationException("Invalid snapshot.");
++            var definitions = FindFirstObjectByType<BuildHud>().Defenses;
++            if (!RunSaveCompatibility.Valid(data, definitions, builder.Battlefield.Definition, waves.EndlessSettings.eventSettings)) throw new InvalidOperationException("Save catalog or map is incompatible.");
++            RunId = data.runId; Duration = data.duration; border.ConfigureThreshold(data.maxHomicides);
++            builder.Economy.Restore(data.money, data.earned, data.spent, data.refunds, data.dismantled);
++            waves.RestorePreparation(data);
++            foreach (var item in data.structures) builder.RestoreDefense(FindDefinition(definitions, item.defenseId), item);
++            // Wire OnEnable subscribes to grid occupancy and rebuilds each neighboring mask.
++            statistics.Restore(data.statistics);
++        }
++        private static DefenseDefinition FindDefinition(IReadOnlyList<DefenseDefinition> catalog, string id)
++        { foreach (var d in catalog) if (d.Id == id) return d; return null; }
++        public RunSaveData Capture()
++        {
++            if (!CanSave) throw new InvalidOperationException("Progress is saved between waves.");
++            var money = builder.Economy;
++            var data = new RunSaveData { runId = RunId, duration = Duration, wave = waves.CurrentWaveNumber, completedWaves = waves.CompletedWaves,
++                seed = waves.RunSeed, money = money.Money, earned = money.TotalEarned, spent = money.TotalSpent, refunds = money.RefundIncome,
++                dismantled = money.StructuresDismantled, maxHomicides = border.MaxHomicides, statistics = statistics.Capture(), events = waves.Events.Capture() };
++            foreach (var d in FindObjectsByType<DefenseBase>(FindObjectsSortMode.None))
++                if (builder.CanDismantle(d)) data.structures.Add(new StructureSaveData { defenseId = d.Definition.Id, x = d.Anchor.x, y = d.Anchor.y,
++                    level = d.Level, health = d.CurrentHealth, maxHealth = d.MaxHealth, constructionCost = d.ConstructionCost, investment = d.TotalInvestment,
++                    mineArmingRemaining = d.GetComponent<LandMine>()?.ArmingRemaining ?? 0 });
++            return data;
++        }
++        public void QueueSave() { if (!CanSave) return; dirty = true; saveAfter = Time.unscaledTime + .25f; }
++        private void WaveChanged()
++        { if (waves.State == lastWaveState) return; lastWaveState = waves.State; if (CanSave) SaveNow(); }
++        private void BeforeWave() { if (CanSave) SaveNow(); }
++        public bool SaveNow()
++        {
++            if (!CanSave) return false;
++            dirty = false;
++            bool ok = saves.Save(Capture(), out string error);
++            Notify(ok ? "SAVED" : "SAVE FAILED — " + error);
++            if (!ok) Debug.LogWarning("Run save failed: " + error);
++            return ok;
++        }
++        private void Update()
++        {
++            if (!Ready) return;
++            if (game.IsPlaying) Duration += Time.deltaTime;
++            if (dirty && Time.unscaledTime >= saveAfter) SaveNow();
++        }
++        private void StateChanged(GameState state)
++        {
++            if (state != GameState.GameOver || finished != null) return;
++            dirty = false;
++            finished = new RunRecord { runId = RunId, endedUtc = DateTime.UtcNow.ToString("O"), wave = statistics.HighestWaveReached,
++                kills = statistics.TotalKills, homicides = statistics.Homicides, bosses = statistics.BossesKilled,
++                earned = statistics.TotalMoneyEarned, duration = Duration, peakEnemies = statistics.PeakActiveEnemies };
++            FinalizeRun();
++        }
++        public bool FinalizeRun()
++        {
++            if (finalized || finished == null) return finalized;
++            if (!history.Record(finished, out string error)) { saves.Delete(out _); Notify("RUN HISTORY SAVE FAILED — " + error); return false; }
++            finalized = saves.Delete(out error);
++            Notify(finalized ? "RUN RECORDED" : "Run recorded; active save cleanup failed: " + error);
++            return finalized;
++        }
++        private void Notify(string text) { Feedback = text; FeedbackChanged?.Invoke(); }
++        private void OnApplicationQuit() { if (CanSave) SaveNow(); else if (finished != null) FinalizeRun(); }
++        private void OnApplicationPause(bool paused) { if (paused && CanSave) SaveNow(); }
++        private void OnDestroy()
++        {
++            if (waves == null) return;
++            waves.Changed -= WaveChanged; waves.EventChanged -= QueueSave;
++            waves.PreparationEnding -= BeforeWave;
++            builder.StableActionCommitted -= QueueSave; game.StateChanged -= StateChanged;
++        }
++    }
++}
+diff --git a/Assets/Game/Scripts/Persistence/RunSession.cs.meta b/Assets/Game/Scripts/Persistence/RunSession.cs.meta
+new file mode 100644
+index 0000000..9a2ab2a
+--- /dev/null
++++ b/Assets/Game/Scripts/Persistence/RunSession.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: fced098cf5b1e404ab48d23b4fb8cf53
+\ No newline at end of file
+diff --git a/Assets/Game/Scripts/Persistence/SaveGameService.cs b/Assets/Game/Scripts/Persistence/SaveGameService.cs
+new file mode 100644
+index 0000000..b0ec094
+--- /dev/null
++++ b/Assets/Game/Scripts/Persistence/SaveGameService.cs
+@@ -0,0 +1,63 @@
++using System;
++using UnityEngine;
++
++namespace ShorelineDefense.Persistence
++{
++    public sealed class SaveGameService
++    {
++        private readonly LocalJsonStore store;
++        private readonly RunHistoryService history;
++        private readonly Func<RunSaveData, bool> compatibility;
++        public SaveGameService(LocalJsonStore files, Func<RunSaveData, bool> preflight = null) { store = files; history = new RunHistoryService(files); compatibility = preflight; }
++        public bool Save(RunSaveData data, out string error)
++        {
++            if (!Valid(data)) { error = "Run is not a valid Preparation snapshot."; return false; }
++            data.savedUtc = DateTime.UtcNow.ToString("O");
++            return store.Write("active_run", data, out error);
++        }
++        public bool Load(out RunSaveData data, out string error) => store.Read("active_run", d => Valid(d) && (compatibility == null || compatibility(d)) && !history.Contains(d.runId), out data, out error);
++        public bool Delete(out string error) => store.Delete("active_run", out error);
++        public static bool Valid(RunSaveData d)
++        {
++            if (d == null || d.saveVersion != 1 || !Guid.TryParse(d.runId, out _) || d.wave < 1 || d.wave > 1000000 ||
++                d.completedWaves != d.wave - 1 || d.money < 0 || d.maxHomicides < 0 || double.IsNaN(d.duration) || double.IsInfinity(d.duration) || d.duration < 0 ||
++                d.earned < 0 || d.spent < 0 || d.refunds < 0 || d.dismantled < 0 || d.statistics?.kills?.Length != 9 || d.events == null || d.structures == null || d.structures.Count > 2048) return false;
++            var s = d.statistics;
++            if (s.homicides < 0 || s.breaches < 0 || s.bossesBreached < 0 || s.highestWave < 0 || s.built < 0 || s.upgraded < 0 || s.repaired < 0 ||
++                s.peakEnemies < 0 || s.peakBoats < 0 || d.maxHomicides > 0 && s.homicides >= d.maxHomicides) return false;
++            foreach (long k in s.kills) if (k < 0) return false;
++            foreach (var structure in d.structures)
++                if (structure == null || string.IsNullOrEmpty(structure.defenseId) || structure.level < 1 || structure.level > 3 || structure.health <= 0 ||
++                    structure.health > structure.maxHealth || structure.investment < structure.constructionCost || structure.constructionCost < 0 ||
++                    !float.IsFinite(structure.mineArmingRemaining) || structure.mineArmingRemaining < 0) return false;
++            var e = d.events;
++            if (e.recent == null || e.cooldowns == null || e.counts == null || e.history == null || e.history.Count > 128 || e.recent.Count > 128 ||
++                e.cooldowns.Count > 128 || e.counts.Count > 128 || e.experienced < 0 || e.nextWave < 0 || e.sector < 0 || e.sector > 2 ||
++                !float.IsFinite(e.warningRemaining) || !float.IsFinite(e.secondsRemaining) || e.warningRemaining < 0 || e.secondsRemaining < 0) return false;
++            foreach (var list in new[] { e.cooldowns, e.counts, e.history }) foreach (var item in list) if (item == null || string.IsNullOrEmpty(item.id) || item.value < 0) return false;
++            return true;
++        }
++    }
++    public sealed class RunHistoryService
++    {
++        private readonly LocalJsonStore store;
++        public string Error { get; private set; }
++        public RunHistoryService(LocalJsonStore files) { store = files; }
++        public HistoryData Load()
++        {
++            bool ok = store.Read<HistoryData>("run_history", d => d.saveVersion == 1 && d.runs != null && d.runs.Count <= 20 && d.runs.TrueForAll(r => r != null && Guid.TryParse(r.runId, out _) && r.wave >= 0 && r.kills >= 0 && double.IsFinite(r.duration) && r.duration >= 0), out var data, out string error);
++            Error = error; return ok ? data : new HistoryData();
++        }
++        public bool Contains(string id) => Load().runs.Exists(r => r.runId == id);
++        public bool Record(RunRecord record, out string error)
++        {
++            var data = Load();
++            if (data.runs.Exists(r => r.runId == record.runId)) { error = null; return true; }
++            data.runs.Insert(0, record);
++            if (data.runs.Count > 20) data.runs.RemoveRange(20, data.runs.Count - 20);
++            // Two durable copies ensure a recovered history also excludes the latest dead run.
++            if (!store.Write("run_history", data, out error)) return false;
++            return store.Write("run_history", data, out error);
++        }
++    }
++}
+diff --git a/Assets/Game/Scripts/Persistence/SaveGameService.cs.meta b/Assets/Game/Scripts/Persistence/SaveGameService.cs.meta
+new file mode 100644
+index 0000000..b690b62
+--- /dev/null
++++ b/Assets/Game/Scripts/Persistence/SaveGameService.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: d5b4e1bc73f1b614399c88d20a2fa669
+\ No newline at end of file
+diff --git a/Assets/Game/Scripts/Persistence/SettingsService.cs b/Assets/Game/Scripts/Persistence/SettingsService.cs
+new file mode 100644
+index 0000000..39799b8
+--- /dev/null
++++ b/Assets/Game/Scripts/Persistence/SettingsService.cs
+@@ -0,0 +1,49 @@
++using System;
++using UnityEngine;
++
++namespace ShorelineDefense.Persistence
++{
++    [Serializable] public sealed class GameSettings
++    {
++        public int saveVersion = 1, width = 1920, height = 1080, vfxDensity = 2;
++        public bool fullscreen = true, vsync = true, rewardPopups = true;
++    }
++    public sealed class SettingsService
++    {
++        private readonly LocalJsonStore store;
++        public GameSettings Current { get; private set; }
++        public string Error { get; private set; }
++        public static SettingsService Instance => LocalGameData.Settings;
++        public event Action Changed;
++        public SettingsService(LocalJsonStore files)
++        {
++            store = files;
++            store.Read<GameSettings>("settings", Valid, out var data, out string error);
++            Current = data ?? new GameSettings { width = Screen.width > 0 ? Screen.width : 1920, height = Screen.height > 0 ? Screen.height : 1080, fullscreen = Screen.fullScreen };
++            Error = error;
++        }
++        public static bool Valid(GameSettings d) => d != null && d.saveVersion == 1 && d.width >= 800 && d.width <= 16384 && d.height >= 600 && d.height <= 16384 && d.vfxDensity >= 0 && d.vfxDensity <= 2;
++        public bool Save(GameSettings data)
++        {
++            if (!Valid(data)) { Error = "Invalid display settings."; return false; }
++            if (!store.Write("settings", data, out string error)) { Error = error; return false; }
++            Current = data; Error = null; Apply(); Changed?.Invoke(); return true;
++        }
++        public void Apply()
++        {
++            QualitySettings.vSyncCount = Current.vsync ? 1 : 0;
++            if (!Application.isEditor) Screen.SetResolution(Current.width, Current.height, Current.fullscreen ? FullScreenMode.ExclusiveFullScreen : FullScreenMode.Windowed);
++        }
++    }
++    public static class LocalGameData
++    {
++        private static LocalJsonStore files;
++        private static SettingsService settings;
++        public static LocalJsonStore Files => files ?? (files = new LocalJsonStore(System.IO.Path.Combine(Application.persistentDataPath, "BorderDefenders")));
++        public static SettingsService Settings => settings ?? (settings = new SettingsService(Files));
++        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
++        private static void Reset() { files = null; settings = null; RunSession.Pending = null; }
++        // Test fixtures redirect local storage before loading any product scene.
++        public static void UseDirectory(string directory) { files = new LocalJsonStore(directory); settings = null; }
++    }
++}
+diff --git a/Assets/Game/Scripts/Persistence/SettingsService.cs.meta b/Assets/Game/Scripts/Persistence/SettingsService.cs.meta
+new file mode 100644
+index 0000000..32b47ef
+--- /dev/null
++++ b/Assets/Game/Scripts/Persistence/SettingsService.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: 01a9b6ab6e28a9f4f8cf2d2b7c4ae78e
+\ No newline at end of file
+diff --git a/Assets/Game/Scripts/Persistence.meta b/Assets/Game/Scripts/Persistence.meta
+new file mode 100644
+index 0000000..68e4658
+--- /dev/null
++++ b/Assets/Game/Scripts/Persistence.meta
+@@ -0,0 +1,8 @@
++fileFormatVersion: 2
++guid: 90dc9a3f581952841ae737da7cc6b81a
++folderAsset: yes
++DefaultImporter:
++  externalObjects: {}
++  userData: 
++  assetBundleName: 
++  assetBundleVariant: 
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/Presentation/SpriteEffectPool.cs b/Assets/Game/Scripts/Presentation/SpriteEffectPool.cs
+index 5f4e52f..9ef2d12 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/Presentation/SpriteEffectPool.cs
++++ b/Assets/Game/Scripts/Presentation/SpriteEffectPool.cs
+@@ -18,6 +18,7 @@ namespace ShorelineDefense.Presentation
+         private readonly Slot[] slots;
+         private long serial;
+         public int Capacity => slots.Length;
++        public int PlaybackLimit { get; set; } = int.MaxValue;
+         public int ActiveCount { get; private set; }
+         public int RecycledCount { get; private set; }
+         public int PeakCount { get; private set; }
+@@ -41,6 +42,7 @@ namespace ShorelineDefense.Presentation
+             Vector2 drift, Transform follow = null)
+         {
+             if (frames == null || frames.Length == 0 || frames[0] == null) return null;
++            if (ActiveCount >= PlaybackLimit) return null;
+             Slot slot = slots[0];
+             for (int i = 0; i < slots.Length; i++)
+             {
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/Presentation/VfxService.cs b/Assets/Game/Scripts/Presentation/VfxService.cs
+index c8bd780..3d43473 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/Presentation/VfxService.cs
++++ b/Assets/Game/Scripts/Presentation/VfxService.cs
+@@ -35,13 +35,21 @@ namespace ShorelineDefense.Presentation
+                 new SpriteEffectPool(transform, "Decal", decalCapacity, material),
+                 new SpriteEffectPool(transform, "Death", corpseCapacity, material) };
+         }
+-        private void OnEnable() { if (game != null) game.StateChanged += OnState; }
++        private void OnEnable() { if (game != null) game.StateChanged += OnState; Persistence.SettingsService.Instance.Changed += ApplyDensity; ApplyDensity(); }
+         private void OnDisable()
+         {
+             if (game != null) game.StateChanged -= OnState;
++            Persistence.SettingsService.Instance.Changed -= ApplyDensity;
+             Clear();
+         }
+         private void OnState(GameState state) { if (state == GameState.GameOver) Clear(); }
++        private void ApplyDensity()
++        {
++            if (pools == null) return;
++            int density = Persistence.SettingsService.Instance.Current.vfxDensity;
++            float factor = density == 0 ? .25f : density == 1 ? .5f : 1;
++            for (int i = 0; i < pools.Length; i++) { pools[i].Clear(); pools[i].PlaybackLimit = Mathf.Max(1, Mathf.RoundToInt(pools[i].Capacity * factor)); }
++        }
+         private void LateUpdate()
+         {
+             if (pools == null) return;
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/UI/BossHUDController.cs b/Assets/Game/Scripts/UI/BossHUDController.cs
+index 2043188..ad54aaa 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/UI/BossHUDController.cs
++++ b/Assets/Game/Scripts/UI/BossHUDController.cs
+@@ -5,21 +5,21 @@ namespace ShorelineDefense.UI {
+  [RequireComponent(typeof(UIDocument))]
+  public sealed class BossHUDController : MonoBehaviour {
+   [SerializeField] private BossEncounterManager encounters;
+-  private VisualElement panel,track,fill;private Label name,warning;
++  private VisualElement panel,track,fill;private Label bossName,warning;
+   private void OnEnable(){
+    if(encounters==null)return;
+    var root=GetComponent<UIDocument>().rootVisualElement;
+    panel=new VisualElement{name="boss-panel",pickingMode=PickingMode.Ignore};panel.style.position=Position.Absolute;panel.style.top=105;panel.style.left=Length.Percent(28);panel.style.right=Length.Percent(28);panel.style.backgroundColor=new Color(.12f,.15f,.13f,.95f);
+-   name=new Label { pickingMode=PickingMode.Ignore };warning=new Label { pickingMode=PickingMode.Ignore };name.style.color=new Color(.88f,.86f,.76f);name.style.fontSize=14;name.style.unityTextAlign=TextAnchor.MiddleCenter;warning.style.unityTextAlign=TextAnchor.MiddleCenter;warning.style.color=new Color(1,.55f,.25f);
+-   track=new VisualElement { pickingMode=PickingMode.Ignore };track.style.height=8;track.style.backgroundColor=Color.black;fill=new VisualElement { pickingMode=PickingMode.Ignore };fill.style.height=8;fill.style.backgroundColor=new Color(.7f,.2f,.15f);track.Add(fill);panel.Add(warning);panel.Add(name);panel.Add(track);root.Add(panel);
++   bossName=new Label { pickingMode=PickingMode.Ignore };warning=new Label { pickingMode=PickingMode.Ignore };bossName.style.color=new Color(.88f,.86f,.76f);bossName.style.fontSize=14;bossName.style.unityTextAlign=TextAnchor.MiddleCenter;warning.style.unityTextAlign=TextAnchor.MiddleCenter;warning.style.color=new Color(1,.55f,.25f);
++   track=new VisualElement { pickingMode=PickingMode.Ignore };track.style.height=8;track.style.backgroundColor=Color.black;fill=new VisualElement { pickingMode=PickingMode.Ignore };fill.style.height=8;fill.style.backgroundColor=new Color(.7f,.2f,.15f);track.Add(fill);panel.Add(warning);panel.Add(bossName);panel.Add(track);root.Add(panel);
+    encounters.Changed+=Refresh;Refresh();
+   }
+   private void OnDisable(){if(encounters!=null)encounters.Changed-=Refresh;panel?.RemoveFromHierarchy();}
+   private void Update(){if(panel!=null && warning.style.display!=DisplayStyle.None && Time.time>=encounters.MessageUntil)Refresh();}
+   private void Refresh(){if(panel==null)return;var boss=encounters.ActiveBoss;bool alive=boss!=null && boss.IsTargetable;bool message=Time.time<encounters.MessageUntil;
+    panel.style.display=alive||message?DisplayStyle.Flex:DisplayStyle.None;warning.style.display=message?DisplayStyle.Flex:DisplayStyle.None;warning.text=encounters.Message;
+-   name.style.display=track.style.display=alive?DisplayStyle.Flex:DisplayStyle.None;
+-   if(alive){name.text=$"{boss.Definition.DisplayName}  {boss.Health.CurrentHealth:N0} / {boss.Health.MaxHealth:N0}";fill.style.width=Length.Percent(100f*boss.Health.CurrentHealth/boss.Health.MaxHealth);}
++   bossName.style.display=track.style.display=alive?DisplayStyle.Flex:DisplayStyle.None;
++   if(alive){bossName.text=$"{boss.Definition.DisplayName}  {boss.Health.CurrentHealth:N0} / {boss.Health.MaxHealth:N0}";fill.style.width=Length.Percent(100f*boss.Health.CurrentHealth/boss.Health.MaxHealth);}
+   }
+  }
+ }
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/UI/BuildHud.cs b/Assets/Game/Scripts/UI/BuildHud.cs
+index 8558d4e..a893efa 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/UI/BuildHud.cs
++++ b/Assets/Game/Scripts/UI/BuildHud.cs
+@@ -50,6 +50,8 @@ namespace ShorelineDefense.UI
+                 button.AddToClassList("defense-button");
+                 button.AddToClassList("defense-" + definition.Id);
+                 button.text = $"{definition.DisplayName}  {definition.Cost} RSD";
++                button.tooltip = $"{definition.DisplayName.ToUpperInvariant()}\n{definition.Cost:N0} RSD\n" + Description(definition.Id) +
++                    (definition.Damage > 0 ? $"\nDamage {definition.Damage} / Range {definition.RangeInCells:0.0} cells" : "");
+                 var icon = new VisualElement { pickingMode = PickingMode.Ignore };
+                 icon.AddToClassList("build-icon");
+                 button.Add(icon);
+@@ -93,6 +95,20 @@ namespace ShorelineDefense.UI
+             subscribed = false;
+         }
+         private void OnMoneyChanged(int money) => Refresh();
++        private static string Description(string id)
++        {
++            switch (id) {
++                case "barbed-wire": return "Slows infected crossing the wire.";
++                case "land-mine": return "Single-use explosive area defense.";
++                case "machine-gun-nest": return "Sustained anti-infantry fire.";
++                case "sniper-tower": return "Long-range precision fire.";
++                case "mortar": return "Indirect explosive fire against groups.";
++                case "flamethrower": return "Close-range fire and lingering burns.";
++                case "autocannon": return "Heavy direct fire against armored targets.";
++                case "rocket": return "Powerful explosive area strikes.";
++                default: return "Defend the quarantine line.";
++            }
++        }
+         private void OnStateChanged(GameState state) => Refresh();
+         private void Update(){if(placement!=null && placement.IsDismantling && hint!=null)Refresh();}
+         private void Refresh()
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/UI/CombatFeedbackHud.cs b/Assets/Game/Scripts/UI/CombatFeedbackHud.cs
+index dfc4df8..a36ceeb 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/UI/CombatFeedbackHud.cs
++++ b/Assets/Game/Scripts/UI/CombatFeedbackHud.cs
+@@ -76,7 +76,7 @@ namespace ShorelineDefense.UI
+         }
+         private void OnKilled(EnemyController enemy)
+         {
+-            if (!game.IsPlaying || !enemy.Health.KilledByDefense || enemy.Definition.KillReward <= 0) return;
++            if (!game.IsPlaying || !enemy.Health.KilledByDefense || enemy.Definition.KillReward <= 0 || !Persistence.SettingsService.Instance.Current.rewardPopups) return;
+             LastRewardText = "+" + enemy.Definition.KillReward + " RSD";
+             foreach (var popup in popups)
+                 if (popup.active && !popup.breach && popup.age < .2f && (popup.world - enemy.transform.position).sqrMagnitude < 25)
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/UI/EndlessEventHud.cs b/Assets/Game/Scripts/UI/EndlessEventHud.cs
+index 98331c5..5056e01 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/UI/EndlessEventHud.cs
++++ b/Assets/Game/Scripts/UI/EndlessEventHud.cs
+@@ -32,8 +32,10 @@ namespace ShorelineDefense.UI
+             waveStatus.style.display = current != null ? DisplayStyle.None : DisplayStyle.Flex;
+             if (current == null) return;
+             bool preparation = waves.State == WaveState.Preparation;
+-            title.text = (preparation ? "EVENT: " : "ACTIVE: ") + current.Definition.displayName;
++            title.text = (preparation ? "UPCOMING EVENT: " : "ACTIVE: ") + current.Definition.displayName;
++            panel.tooltip = current.Definition.displayName + "\n" + current.Definition.description;
+             effect.text = current.Definition.description;
++            effect.style.display = preparation ? DisplayStyle.Flex : DisplayStyle.None;
+             if (current.Definition.modifiers.landingPattern == LandingPattern.Concentrated) effect.text += " / " + current.Sector.ToString().ToUpperInvariant() + " SECTOR";
+             if (current.SupplyReceived > 0) effect.text += " / +" + current.SupplyReceived + " RSD RECEIVED";
+             if (current.WarningRemaining > 0) effect.text += " / PREPARATION WARNING";
+diff --git a/Assets/Game/Scripts/UI/ProductMenuController.cs b/Assets/Game/Scripts/UI/ProductMenuController.cs
+new file mode 100644
+index 0000000..71a435d
+--- /dev/null
++++ b/Assets/Game/Scripts/UI/ProductMenuController.cs
+@@ -0,0 +1,205 @@
++using System;
++using System.Collections.Generic;
++using System.Linq;
++using ShorelineDefense.Building;
++using ShorelineDefense.Core;
++using ShorelineDefense.Persistence;
++using UnityEngine;
++using UnityEngine.SceneManagement;
++using UnityEngine.UIElements;
++
++namespace ShorelineDefense.UI
++{
++    /// <summary>UI observes services; simulation and persistence remain in their owners.</summary>
++    [DefaultExecutionOrder(1100), RequireComponent(typeof(UIDocument))]
++    public sealed class ProductMenuController : MonoBehaviour
++    {
++        [SerializeField] private bool mainMenu;
++        [SerializeField] private StyleSheet menuStyle;
++        [SerializeField] private Font pixelFont;
++        [SerializeField] private ShorelineDefense.Defenses.DefenseDefinition[] defenseCatalog;
++        [SerializeField] private ShorelineDefense.Grid.BattlefieldDefinition battlefield;
++        [SerializeField] private ShorelineDefense.Waves.EndlessEventSettings eventCatalog;
++        private SaveGameService Saves => new SaveGameService(LocalGameData.Files, d => RunSaveCompatibility.Valid(d, defenseCatalog, battlefield, eventCatalog));
++        public static string Notice;
++        public bool ModalOpen => overlay != null && overlay.style.display != DisplayStyle.None;
++        public bool IsLoading => loading;
++        private VisualElement root, overlay, card, content;
++        private Label feedback;
++        private GameSpeedController speed;
++        private RunSession session;
++        private GameStateController game;
++        private PlacementController placement;
++        private StructureSelection selection;
++        private string page;
++        private Action cancelDialog;
++        private bool loading;
++        public void Configure(bool menu, StyleSheet style, Font font) { mainMenu = menu; menuStyle = style; pixelFont = font; }
++        public void ConfigureCatalog(ShorelineDefense.Defenses.DefenseDefinition[] defenses, ShorelineDefense.Grid.BattlefieldDefinition map, ShorelineDefense.Waves.EndlessEventSettings events)
++        { defenseCatalog = defenses; battlefield = map; eventCatalog = events; }
++        private void Start()
++        {
++            root = GetComponent<UIDocument>().rootVisualElement;
++            if (menuStyle != null) root.styleSheets.Add(menuStyle);
++            if (pixelFont != null) root.style.unityFontDefinition = FontDefinition.FromFont(pixelFont);
++            overlay = new VisualElement { name = "product-overlay" }; overlay.AddToClassList("product-overlay");
++            card = new VisualElement { name = "product-card" }; card.AddToClassList("product-card");
++            var scroll = new ScrollView(ScrollViewMode.Vertical); scroll.AddToClassList("product-scroll");
++            content = scroll.contentContainer; card.Add(scroll); overlay.Add(card); root.Add(overlay);
++            feedback = new Label { name = "save-feedback", pickingMode = PickingMode.Ignore }; feedback.AddToClassList("save-feedback"); root.Add(feedback);
++            SettingsService.Instance.Apply();
++            if (mainMenu) ShowMain();
++            else
++            {
++                speed = FindFirstObjectByType<GameSpeedController>(); session = FindFirstObjectByType<RunSession>(); game = FindFirstObjectByType<GameStateController>();
++                placement = FindFirstObjectByType<PlacementController>(); selection = FindFirstObjectByType<StructureSelection>();
++                speed.Changed += SpeedChanged; game.StateChanged += StateChanged; session.FeedbackChanged += FeedbackChanged;
++                Hide(); FeedbackChanged();
++            }
++            gameObject.AddComponent<RuntimeTooltips>();
++        }
++        private void OnDestroy()
++        { if (speed != null) speed.Changed -= SpeedChanged; if (game != null) game.StateChanged -= StateChanged; if (session != null) session.FeedbackChanged -= FeedbackChanged; }
++        private void FeedbackChanged() { if (feedback != null) feedback.text = session.Feedback; }
++        private void Page(string title, string id)
++        {
++            page = id; content.Clear(); cancelDialog = null; overlay.style.display = DisplayStyle.Flex; overlay.BringToFront();
++            var heading = new Label(title); heading.AddToClassList("product-title"); content.Add(heading);
++        }
++        private void Copy(string text) { var label = new Label(text); label.AddToClassList("product-copy"); content.Add(label); }
++        private Button ActionButton(string id, string text, Action action)
++        { var button = new Button(action) { name = id, text = text }; button.AddToClassList("product-button"); content.Add(button); return button; }
++        public void ShowMain()
++        {
++            Page("BORDER DEFENDERS", "main"); Copy("DANUBE QUARANTINE LINE\nHold the river. Defend the border.");
++            var saves = Saves;
++            bool valid = saves.Load(out _, out string error);
++            ActionButton("menu-continue", "CONTINUE", Continue).SetEnabled(valid);
++            ActionButton("menu-new", "NEW GAME", NewGame);
++            ActionButton("menu-history", "RUN HISTORY", ShowHistory);
++            ActionButton("menu-settings", "SETTINGS", ShowSettings);
++            ActionButton("menu-quit", "QUIT", () => Confirm("QUIT GAME?", "Your last Preparation save will be kept.", "QUIT", Application.Quit, ShowMain));
++            if (Notice != null) { Copy(Notice); Notice = null; }
++            else if (error != null) Copy(valid ? error : "The active save could not be loaded. You can start a new run.");
++        }
++        public void NewGame()
++        {
++            if (Saves.Load(out _, out _))
++                Confirm("START NEW RUN?", "Your current active run will be replaced. Completed run history will be kept.", "START NEW RUN", StartNew, Back);
++            else StartNew();
++        }
++        private void StartNew()
++        {
++            if (!Saves.Delete(out string error)) { Copy("Could not replace active save: " + error); return; }
++            RunSession.Pending = null; Load("CoastalDefense_TopDown");
++        }
++        public void Continue()
++        {
++            if (!Saves.Load(out var data, out _)) { ShowMain(); return; }
++            RunSession.Pending = data; Load("CoastalDefense_TopDown");
++        }
++        private void Load(string scene)
++        { if (loading) return; loading = true; Time.timeScale = 1; Page("LOADING...", "loading"); SceneManager.LoadSceneAsync(scene); }
++        private void Hide() { overlay.style.display = DisplayStyle.None; page = null; }
++        private void Back() { if (mainMenu) ShowMain(); else ShowPause(); }
++        public void ShowPause()
++        {
++            if (game == null || !game.IsPlaying) return;
++            if (speed.Speed != GameSpeed.Pause) speed.SetSpeed(GameSpeed.Pause);
++            Page("PAUSED", "pause");
++            Copy("Progress is saved between waves.\n" + (session.CanSave ? "Preparation progress can be saved now." : "Leaving now returns to the last Preparation save."));
++            ActionButton("pause-resume", "RESUME", () => { Hide(); speed.Resume(); });
++            ActionButton("pause-settings", "SETTINGS", ShowSettings);
++            ActionButton("pause-restart", "RESTART RUN", () => Confirm("RESTART RUN?", "The current active run will be replaced.", "RESTART", StartNew, ShowPause));
++            ActionButton("pause-main", "MAIN MENU", ReturnToMenu);
++        }
++        public void ReturnToMenu()
++        {
++            if (game.CurrentState == GameState.GameOver) { if (session.FinalizeRun()) Load("MainMenu"); else Copy(session.Feedback); return; }
++            if (session.CanSave) { if (session.SaveNow()) Load("MainMenu"); else Copy("Progress could not be saved. Resume to try again."); }
++            else Confirm("PROGRESS IS SAVED BETWEEN WAVES", "Current wave progress will be lost. Continue will return to your last Preparation save.", "QUIT CURRENT WAVE", () => Load("MainMenu"), ShowPause);
++        }
++        public void Confirm(string title, string message, string accept, Action yes, Action no)
++        {
++            Page(title, "confirm"); Copy(message); cancelDialog = no;
++            ActionButton("confirm-cancel", "CANCEL", no); ActionButton("confirm-accept", accept, yes);
++        }
++        public void ShowHistory()
++        {
++            Page("RUN HISTORY", "history");
++            var history = new RunHistoryService(LocalGameData.Files); var data = history.Load();
++            Copy(data.runs.Count == 0 ? "No completed runs yet." : "PERSONAL BEST — WAVE " + data.runs.Max(r => r.wave));
++            foreach (var r in data.runs)
++            {
++                string date = DateTime.TryParse(r.endedUtc, out var ended) ? ended.ToLocalTime().ToString("yyyy-MM-dd HH:mm") : "Unknown date";
++                Copy($"{date}\nWave {r.wave}  /  Kills {r.kills:N0}\nHomicides {r.homicides:N0}  /  Bosses {r.bosses:N0}\nEarned {r.earned:N0} RSD  /  {FormatDuration(r.duration)}");
++            }
++            if (history.Error != null) Copy("Some run history could not be loaded: " + history.Error);
++            ActionButton("history-back", "BACK", Back);
++        }
++        public static string FormatDuration(double seconds) => TimeSpan.FromSeconds(seconds).ToString(seconds >= 3600 ? @"h\:mm\:ss" : @"mm\:ss");
++        public void ShowSettings()
++        {
++            Page("SETTINGS", "settings"); var current = SettingsService.Instance.Current;
++            var resolutions = new List<Vector2Int>();
++            foreach (var r in Screen.resolutions) if (r.width >= 800 && r.height >= 600 && !resolutions.Contains(new Vector2Int(r.width, r.height))) resolutions.Add(new Vector2Int(r.width, r.height));
++            if (!resolutions.Contains(new Vector2Int(current.width, current.height))) resolutions.Add(new Vector2Int(current.width, current.height));
++            resolutions.Sort((a, b) => a.x != b.x ? a.x.CompareTo(b.x) : a.y.CompareTo(b.y));
++            var resolution = new DropdownField("Resolution", resolutions.Select(r => r.x + " x " + r.y).ToList(), resolutions.IndexOf(new Vector2Int(current.width, current.height))) { name = "settings-resolution" }; content.Add(resolution);
++            var fullscreen = new Toggle("Fullscreen") { name = "settings-fullscreen", value = current.fullscreen }; content.Add(fullscreen);
++            var vsync = new Toggle("VSync") { name = "settings-vsync", value = current.vsync }; content.Add(vsync);
++            var density = new DropdownField("VFX density", new List<string> { "Low", "Medium", "High" }, current.vfxDensity) { name = "settings-vfx" }; content.Add(density);
++            var rewards = new Toggle("Show RSD reward popups") { name = "settings-rewards", value = current.rewardPopups }; content.Add(rewards);
++            Copy("VFX density limits secondary effects and blood decals.\nGameplay damage and enemy counts stay the same.");
++            if (Application.isEditor) Copy("Display mode applies in the standalone game. Editor Game View is controlled separately.");
++            var result = new Label { name = "settings-result" }; result.AddToClassList("product-copy"); content.Add(result);
++            ActionButton("settings-apply", "APPLY & SAVE", () => {
++                var size = resolutions[resolution.index];
++                bool ok = SettingsService.Instance.Save(new GameSettings { width = size.x, height = size.y, fullscreen = fullscreen.value, vsync = vsync.value, vfxDensity = density.index, rewardPopups = rewards.value });
++                result.text = ok ? "SETTINGS SAVED" : "Settings could not be saved: " + SettingsService.Instance.Error;
++            });
++            ActionButton("settings-back", "BACK", Back);
++        }
++        private void SpeedChanged()
++        { if (game.IsPlaying && speed.Speed == GameSpeed.Pause && !ModalOpen) ShowPause(); else if (speed.Speed != GameSpeed.Pause && page == "pause") Hide(); }
++        private void StateChanged(GameState state)
++        {
++            if (state != GameState.GameOver) return;
++            Page("BORDER DEFENSE COLLAPSED", "over");
++            var stats = FindFirstObjectByType<RunStatistics>();
++            Copy($"WAVE REACHED {stats.HighestWaveReached}\nTOTAL KILLS {stats.TotalKills:N0}\nHOMICIDES {stats.Homicides:N0}\nBOSSES KILLED {stats.BossesKilled:N0}\nRSD EARNED {stats.TotalMoneyEarned:N0}\nSTRUCTURES BUILT {stats.StructuresBuilt}\nDURATION {FormatDuration(session.Duration)}");
++            // Existing game-over label remains for legacy scene/tests; product overlay owns this view.
++            root.Q<Label>("game-over").style.visibility = Visibility.Hidden;
++            ActionButton("over-new", "NEW RUN", () => { if (session.FinalizeRun()) StartNew(); else Copy(session.Feedback); });
++            ActionButton("over-main", "MAIN MENU", ReturnToMenu);
++        }
++        private void Update()
++        {
++            if (loading) return;
++            if (mainMenu) { if (Input.GetKeyDown(KeyCode.Escape)) { if (page == "confirm") cancelDialog?.Invoke(); else if (page != "main") ShowMain(); } return; }
++            if (game == null || !game.IsPlaying) return;
++            if (Input.GetKeyDown(KeyCode.Escape))
++            {
++                if (placement.IsInteracting) placement.Cancel();
++                else if (page == "confirm") cancelDialog?.Invoke();
++                else if (page == "settings" || page == "history") Back();
++                else if (page == "pause") { Hide(); speed.Resume(); }
++                else if (selection.Selected != null) selection.Clear();
++                else ShowPause();
++                return;
++            }
++            if (Input.GetKeyDown(KeyCode.Space) && (page == null || page == "pause"))
++            { if (speed.Speed == GameSpeed.Pause) { Hide(); speed.Resume(); } else ShowPause(); }
++            if (ModalOpen) return;
++            var buttons = root.Q("defense-buttons");
++            if (buttons != null) for (int i = 0; i < 8; i++)
++                if (Input.GetKeyDown(KeyCode.Alpha1 + i)) { var b = buttons.Children().OfType<Button>().ElementAtOrDefault(i); if (b != null && b.enabledSelf) using (var e = NavigationSubmitEvent.GetPooled()) { e.target = b; b.SendEvent(e); } }
++            if (Input.GetKeyDown(KeyCode.Delete) && selection.Selected != null)
++            {
++                var selected = selection.Selected; var builder = selected.Owner;
++                speed.SetSpeed(GameSpeed.Pause);
++                Confirm("DISMANTLE STRUCTURE?", $"Refund: {builder.RefundFor(selected):N0} RSD", "DISMANTLE", () => { builder.TryDismantle(selected, out _); Hide(); speed.Resume(); }, () => { Hide(); speed.Resume(); });
++            }
++        }
++    }
++}
+diff --git a/Assets/Game/Scripts/UI/ProductMenuController.cs.meta b/Assets/Game/Scripts/UI/ProductMenuController.cs.meta
+new file mode 100644
+index 0000000..17159f5
+--- /dev/null
++++ b/Assets/Game/Scripts/UI/ProductMenuController.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: 0da51716c25461b488b8c4ab39aaaf1e
+\ No newline at end of file
+diff --git a/Assets/Game/Scripts/UI/RuntimeTooltips.cs b/Assets/Game/Scripts/UI/RuntimeTooltips.cs
+new file mode 100644
+index 0000000..979e8e1
+--- /dev/null
++++ b/Assets/Game/Scripts/UI/RuntimeTooltips.cs
+@@ -0,0 +1,32 @@
++using UnityEngine;
++using UnityEngine.UIElements;
++
++namespace ShorelineDefense.UI
++{
++    /// <summary>UI Toolkit's editor tooltip property is rendered explicitly for the Player.</summary>
++    public sealed class RuntimeTooltips : MonoBehaviour
++    {
++        private VisualElement root, target;
++        private Label tooltip;
++        private void Start()
++        {
++            root = GetComponent<UIDocument>().rootVisualElement;
++            tooltip = new Label { name = "runtime-tooltip", pickingMode = PickingMode.Ignore };
++            tooltip.AddToClassList("runtime-tooltip"); tooltip.style.display = DisplayStyle.None; root.Add(tooltip);
++            root.RegisterCallback<PointerOverEvent>(Over); root.RegisterCallback<PointerOutEvent>(Out);
++        }
++        private void Over(PointerOverEvent e)
++        {
++            target = e.target as VisualElement;
++            while (target != null && string.IsNullOrEmpty(target.tooltip)) target = target.parent;
++            if (target == null) return;
++            tooltip.text = target.tooltip; tooltip.style.display = DisplayStyle.Flex; tooltip.BringToFront();
++            float width = root.resolvedStyle.width, height = root.resolvedStyle.height;
++            tooltip.style.left = Mathf.Clamp(target.worldBound.xMin, 12, Mathf.Max(12, width - 370));
++            tooltip.style.top = Mathf.Clamp(target.worldBound.yMin - 160, 12, Mathf.Max(12, height - 170));
++        }
++        private void Out(PointerOutEvent e) { target = null; tooltip.style.display = DisplayStyle.None; }
++        private void LateUpdate() { if (target != null && tooltip != null) tooltip.text = target.tooltip; }
++        private void OnDestroy() { root?.UnregisterCallback<PointerOverEvent>(Over); root?.UnregisterCallback<PointerOutEvent>(Out); tooltip?.RemoveFromHierarchy(); }
++    }
++}
+diff --git a/Assets/Game/Scripts/UI/RuntimeTooltips.cs.meta b/Assets/Game/Scripts/UI/RuntimeTooltips.cs.meta
+new file mode 100644
+index 0000000..3abc2a5
+--- /dev/null
++++ b/Assets/Game/Scripts/UI/RuntimeTooltips.cs.meta
+@@ -0,0 +1,2 @@
++fileFormatVersion: 2
++guid: dc1b72823848e0846a99c2098ae09dc1
+\ No newline at end of file
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/UI/StructureHud.cs b/Assets/Game/Scripts/UI/StructureHud.cs
+index 5148339..dd7fca1 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/UI/StructureHud.cs
++++ b/Assets/Game/Scripts/UI/StructureHud.cs
+@@ -80,6 +80,15 @@ namespace ShorelineDefense.UI
+             upgrade.text = d.Level == 3 ? "MAX LEVEL III" : $"UPGRADE / {cost:N0} RSD";
+             repair.text = repairCost == 0 ? "HP FULL" : $"REPAIR / {repairCost:N0} RSD";
+             dismantle.text = $"DISMANTLE / +{builder.RefundFor(d):N0} RSD";
++            repair.tooltip = $"REPAIR TO FULL\nHP {d.CurrentHealth:N0} / {d.MaxHealth:N0}\nEffective cost {repairCost:N0} RSD";
++            dismantle.tooltip = $"DISMANTLE\nRefund {builder.RefundFor(d):N0} RSD\nBased on paid construction and upgrades.";
++            var next = d.Definition.LevelData(d.Level + 1);
++            upgrade.tooltip = d.Level == 3 ? "MAX LEVEL III" : $"UPGRADE TO LEVEL {(d.Level == 1 ? "II" : "III")}\n{cost:N0} RSD\n" +
++                $"HP capacity {d.MaxHealth} → {Mathf.RoundToInt(d.Definition.MaxHealth * (next?.health ?? 1))}\n" +
++                (d.Definition.Id == "barbed-wire" ? $"Slow {(1 - d.MovementMultiplier) * 100:0}% → {(1 - d.Definition.MovementMultiplier * (next?.slow ?? 1)) * 100:0}%" :
++                $"Damage {d.Damage} → {Mathf.RoundToInt(d.Definition.Damage * (next?.damage ?? 1))}\n" +
++                (d.Definition.Id == "land-mine" ? $"Blast {d.Range / d.Grid.CellSize:0.0} → {d.Definition.RangeInCells * (next?.range ?? 1):0.0} cells" :
++                $"Fire rate {d.FireRate:0.00} → {d.Definition.FireRate * (next?.fireRate ?? 1):0.00}/s\nRange {d.Range / d.Grid.CellSize:0.0} → {d.Definition.RangeInCells * (next?.range ?? 1) * (d.Owner?.Events?.Modifiers.defenseRange ?? 1):0.0} cells"));
+             upgrade.SetEnabled(builder.CanUpgrade(d)); repair.SetEnabled(builder.CanRepair(d)); dismantle.SetEnabled(builder.CanDismantle(d));
+             status.text = $"Repair rate x{builder.RepairMultiplier:0.00}" + ((cost > builder.Economy.Money && d.Level < 3) || repairCost > builder.Economy.Money ? " / Insufficient RSD" : "");
+         }
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/Waves/EndlessEventManager.cs b/Assets/Game/Scripts/Waves/EndlessEventManager.cs
+index 8f9400c..4bd76b9 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/Waves/EndlessEventManager.cs
++++ b/Assets/Game/Scripts/Waves/EndlessEventManager.cs
+@@ -129,6 +129,32 @@ namespace ShorelineDefense.Waves
+             { Current.SecondsRemaining -= dt; if (Current.SecondsRemaining <= 0) Cancel(); }
+         }
+         public void Cancel() { if (Current == null) return; Current = null; Changed?.Invoke(); }
++        public Persistence.EventSaveData Capture()
++        {
++            var d = new Persistence.EventSaveData { nextWave = nextEventWave, experienced = EventsExperienced, mostRecent = MostRecentEvent, recent = new List<string>(recent) };
++            foreach (var pair in lastWave) d.cooldowns.Add(new Persistence.EventCounter(pair.Key, pair.Value));
++            foreach (var pair in counts) d.counts.Add(new Persistence.EventCounter(pair.Key, pair.Value));
++            foreach (var item in history) d.history.Add(new Persistence.EventCounter(item.Id, item.Wave));
++            if (Current != null) { d.currentId = Current.Definition.id; d.wave = Current.Wave; d.sector = (int)Current.Sector; d.active = Current.Active;
++                d.wavesRemaining = Current.WavesRemaining; d.secondsRemaining = Current.SecondsRemaining; d.warningRemaining = Current.WarningRemaining; d.supplyReceived = Current.SupplyReceived; }
++            return d;
++        }
++        public void Restore(Persistence.EventSaveData d)
++        {
++            preparation = true; nextEventWave = d.nextWave; EventsExperienced = d.experienced; MostRecentEvent = d.mostRecent;
++            lastWave.Clear(); counts.Clear(); recent.Clear(); history.Clear();
++            foreach (var pair in d.cooldowns) lastWave[pair.id] = pair.value;
++            foreach (var pair in d.counts) counts[pair.id] = pair.value;
++            recent.AddRange(d.recent);
++            foreach (var item in d.history) history.Add(new EventHistoryEntry(item.value, item.id));
++            Current = null;
++            if (!string.IsNullOrEmpty(d.currentId)) {
++                var definition = settings == null ? null : Array.Find(settings.events, e => e != null && e.id == d.currentId);
++                if (definition == null) throw new InvalidOperationException("Saved event is no longer available.");
++                Current = new ActiveEventContext { Definition = definition, Wave = d.wave, Sector = (LandingSector)d.sector, Active = d.active,
++                    WavesRemaining = d.wavesRemaining, SecondsRemaining = d.secondsRemaining, WarningRemaining = d.warningRemaining, SupplyReceived = d.supplyReceived };
++            }
++        }
+ #if UNITY_EDITOR || DEVELOPMENT_BUILD
+         public bool Force(EndlessEventDefinition definition, int wave, bool boss, EconomyManager economy)
+         {
+diff --git a/Docs/Validation/Phase5C/baseline-scripts/Waves/WaveManager.cs b/Assets/Game/Scripts/Waves/WaveManager.cs
+index b37f009..07c1e58 100644
+--- a/Docs/Validation/Phase5C/baseline-scripts/Waves/WaveManager.cs
++++ b/Assets/Game/Scripts/Waves/WaveManager.cs
+@@ -43,6 +43,16 @@ namespace ShorelineDefense.Waves
+         private void ReleaseEvents() { if (Events != null) { Events.Cancel(); Events.Changed -= NotifyEventChanged; Events = null; } }
+         public void ConfigureEndless(EndlessWaveSettings settings)
+         { ReleaseEvents(); ReleaseGenerated(); endless = settings; generator = null; waveIndex = 0; EnsureGenerated(); Changed?.Invoke(); }
++        public void RestorePreparation(Persistence.RunSaveData data)
++        {
++            if (!IsEndless || State != WaveState.Preparation) throw new InvalidOperationException("Only fresh endless Preparation can be restored.");
++            ReleaseEvents(); ReleaseGenerated(); waveIndex = data.wave - 1; CompletedWaves = data.completedWaves; RunSeed = data.seed;
++            generator = new EndlessWaveGenerator(endless, RunSeed);
++            Events = new EndlessEventManager(endless.eventSettings, RunSeed); Events.Restore(data.events); Events.Changed += NotifyEventChanged;
++            // The announced event is already committed; never call Prepare or credit its supply again.
++            generated = generator.Generate(data.wave, Events.Current?.Definition.modifiers);
++            NotifyEventChanged(); Changed?.Invoke();
++        }
+         private void EnsureGenerated()
+         {
+             if (endless == null || generated != null) return;
+@@ -85,12 +95,15 @@ namespace ShorelineDefense.Waves
+         public IReadOnlyList<WaveDefinition> Waves => waves;
+         public WaveDefinition CurrentWave { get { EnsureGenerated(); return IsEndless ? generated : waves != null && waveIndex < waves.Length ? waves[waveIndex] : null; } }
+         public int CurrentWaveNumber => CurrentWave != null ? CurrentWave.WaveNumber : 0;
++        // Cheap index for boundary observers; CurrentWave may generate and emit event callbacks.
++        public int PreparationWaveNumber => waveIndex + 1;
+         public int EnemiesRemaining => State == WaveState.Preparation ? CurrentWave?.ScheduledCount ?? 0 : pending + alive.Count;
+         public int AliveCount => alive.Count;
+         public int PendingCount => pending;
+         public int CompletedWaves { get; private set; }
+         public bool CanStart => isActiveAndEnabled && game != null && game.IsPlaying && State == WaveState.Preparation && CurrentWave != null && CurrentWave.IsValid && (Events?.CanStart ?? true);
+         public event Action Changed;
++        public event Action PreparationEnding;
+         public void ConfigureLandings(BoatLandingSystem transport)
+         {
+             if (landings != null) landings.Unloaded -= OnUnloaded;
+@@ -138,6 +151,8 @@ namespace ShorelineDefense.Waves
+         }
+         public bool TryStartWave()
+         {
++            if (!CanStart) return false;
++            PreparationEnding?.Invoke();
+             if (!CanStart) return false;
+             alive.Clear();
+             Events?.BeginWave();

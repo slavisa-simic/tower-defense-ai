@@ -1,0 +1,56 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "TestResults/Phase2AIntegrity.cs",
+      "entry": "Phase2AIntegrity.Run"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 495,
+      "executeMs": 1238,
+      "assemblyName": "PipelineRunScript_Phase2AIntegrity_5cd8e7888121486b94956a292eff9043",
+      "success": true,
+      "result": {
+        "issues": [],
+        "scenes": [
+          {
+            "path": "Assets/Game/Scenes/CoastalDefense_Prototype.unity",
+            "rootCount": 10,
+            "grids": 1,
+            "gameStates": 1,
+            "spawners": 1
+          },
+          {
+            "path": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+            "rootCount": 9,
+            "grids": 1,
+            "gameStates": 1,
+            "spawners": 1
+          }
+        ],
+        "primaryAfterOpeningTwice": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+        "rootsAfterOpeningTwice": 9,
+        "buildScenes": [
+          {
+            "path": "Assets/Game/Scenes/CoastalDefense_TopDown.unity",
+            "enabled": true
+          },
+          {
+            "path": "Assets/Game/Scenes/CoastalDefense_Prototype.unity",
+            "enabled": true
+          }
+        ]
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

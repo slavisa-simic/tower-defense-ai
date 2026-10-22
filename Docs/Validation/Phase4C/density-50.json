@@ -1,0 +1,237 @@
+{
+  "number": 50,
+  "planned": 289,
+  "peak": 74,
+  "boatsPeak": 8,
+  "average": 47.315789473684212,
+  "samples": [
+    {
+      "seconds": 0.5,
+      "enemies": 0,
+      "boats": 2,
+      "pending": 289
+    },
+    {
+      "seconds": 1.0,
+      "enemies": 0,
+      "boats": 3,
+      "pending": 289
+    },
+    {
+      "seconds": 1.5,
+      "enemies": 1,
+      "boats": 4,
+      "pending": 288
+    },
+    {
+      "seconds": 2.0,
+      "enemies": 4,
+      "boats": 5,
+      "pending": 285
+    },
+    {
+      "seconds": 2.5,
+      "enemies": 8,
+      "boats": 5,
+      "pending": 281
+    },
+    {
+      "seconds": 3.0,
+      "enemies": 13,
+      "boats": 6,
+      "pending": 276
+    },
+    {
+      "seconds": 3.5,
+      "enemies": 17,
+      "boats": 7,
+      "pending": 272
+    },
+    {
+      "seconds": 4.0,
+      "enemies": 22,
+      "boats": 7,
+      "pending": 267
+    },
+    {
+      "seconds": 4.5,
+      "enemies": 28,
+      "boats": 6,
+      "pending": 261
+    },
+    {
+      "seconds": 5.0,
+      "enemies": 33,
+      "boats": 7,
+      "pending": 256
+    },
+    {
+      "seconds": 5.5,
+      "enemies": 36,
+      "boats": 7,
+      "pending": 253
+    },
+    {
+      "seconds": 6.0,
+      "enemies": 38,
+      "boats": 8,
+      "pending": 251
+    },
+    {
+      "seconds": 6.5,
+      "enemies": 40,
+      "boats": 7,
+      "pending": 249
+    },
+    {
+      "seconds": 7.0,
+      "enemies": 43,
+      "boats": 7,
+      "pending": 246
+    },
+    {
+      "seconds": 7.5,
+      "enemies": 49,
+      "boats": 6,
+      "pending": 240
+    },
+    {
+      "seconds": 8.0,
+      "enemies": 55,
+      "boats": 6,
+      "pending": 234
+    },
+    {
+      "seconds": 8.5,
+      "enemies": 59,
+      "boats": 6,
+      "pending": 227
+    },
+    {
+      "seconds": 9.0,
+      "enemies": 58,
+      "boats": 6,
+      "pending": 224
+    },
+    {
+      "seconds": 9.5,
+      "enemies": 56,
+      "boats": 7,
+      "pending": 220
+    },
+    {
+      "seconds": 10.0,
+      "enemies": 58,
+      "boats": 6,
+      "pending": 214
+    },
+    {
+      "seconds": 10.5,
+      "enemies": 57,
+      "boats": 6,
+      "pending": 210
+    },
+    {
+      "seconds": 11.0,
+      "enemies": 58,
+      "boats": 7,
+      "pending": 209
+    },
+    {
+      "seconds": 11.5,
+      "enemies": 61,
+      "boats": 6,
+      "pending": 205
+    },
+    {
+      "seconds": 12.0,
+      "enemies": 67,
+      "boats": 5,
+      "pending": 199
+    },
+    {
+      "seconds": 12.5,
+      "enemies": 70,
+      "boats": 6,
+      "pending": 196
+    },
+    {
+      "seconds": 13.0,
+      "enemies": 73,
+      "boats": 6,
+      "pending": 193
+    },
+    {
+      "seconds": 13.5,
+      "enemies": 74,
+      "boats": 6,
+      "pending": 191
+    },
+    {
+      "seconds": 14.0,
+      "enemies": 72,
+      "boats": 7,
+      "pending": 187
+    },
+    {
+      "seconds": 14.5,
+      "enemies": 67,
+      "boats": 5,
+      "pending": 184
+    },
+    {
+      "seconds": 15.0,
+      "enemies": 60,
+      "boats": 5,
+      "pending": 181
+    },
+    {
+      "seconds": 15.5,
+      "enemies": 58,
+      "boats": 6,
+      "pending": 176
+    },
+    {
+      "seconds": 16.0,
+      "enemies": 58,
+      "boats": 7,
+      "pending": 172
+    },
+    {
+      "seconds": 16.5,
+      "enemies": 61,
+      "boats": 7,
+      "pending": 167
+    },
+    {
+      "seconds": 17.0,
+      "enemies": 64,
+      "boats": 7,
+      "pending": 164
+    },
+    {
+      "seconds": 17.5,
+      "enemies": 67,
+      "boats": 7,
+      "pending": 159
+    },
+    {
+      "seconds": 18.0,
+      "enemies": 71,
+      "boats": 7,
+      "pending": 155
+    },
+    {
+      "seconds": 18.5,
+      "enemies": 70,
+      "boats": 8,
+      "pending": 154
+    },
+    {
+      "seconds": 19.0,
+      "enemies": 72,
+      "boats": 8,
+      "pending": 150
+    }
+  ]
+}

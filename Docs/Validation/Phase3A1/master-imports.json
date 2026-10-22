@@ -1,0 +1,58 @@
+[
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_danube_master_v001.png",
+    "guid": "5d2f8ea43ca2e1e43943ede2a02c1842",
+    "width": 1536,
+    "height": 1024,
+    "type": "Default",
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "maxTextureSize": 4096,
+    "npot": "None",
+    "isReadable": false,
+    "runtimeConsumer": null
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_master_001/bd_src_danube_master_v001.png",
+    "guid": "4e78a28b01ed9ac45855cade102bc22f",
+    "width": 1536,
+    "height": 1024,
+    "type": "Default",
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "maxTextureSize": 4096,
+    "npot": "None",
+    "isReadable": false,
+    "runtimeConsumer": null
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+    "guid": "33cbddb1ccc461f42975dbd4f1643eef",
+    "width": 1536,
+    "height": 1024,
+    "type": "Default",
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "maxTextureSize": 4096,
+    "npot": "None",
+    "isReadable": false,
+    "runtimeConsumer": null
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p3a1_master_001/bd_src_danube_master_v002.png",
+    "guid": "f8f96b6f6b6a19a4194f4c966801a6d5",
+    "width": 1536,
+    "height": 1024,
+    "type": "Default",
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "maxTextureSize": 4096,
+    "npot": "None",
+    "isReadable": false,
+    "runtimeConsumer": null
+  }
+]

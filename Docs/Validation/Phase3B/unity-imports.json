@@ -1,0 +1,824 @@
+[
+  {
+    "path": "Assets/Game/Art/Effects/Combat/MachineGun/bd_fx_mg_muzzle_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_mg_muzzle_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_mg_muzzle__f000",
+        "rect": "(x:0.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(12.00, 17.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_mg_muzzle__f001",
+        "rect": "(x:32.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(12.00, 17.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_mg_muzzle__f002",
+        "rect": "(x:64.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(12.00, 17.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_mg_muzzle__f003",
+        "rect": "(x:96.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(12.00, 17.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Sniper/bd_fx_sniper_muzzle_sheet_v001.png",
+    "width": 144,
+    "height": 48,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_sniper_muzzle_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_sniper_muzzle__f000",
+        "rect": "(x:0.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(16.00, 25.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_sniper_muzzle__f001",
+        "rect": "(x:48.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(16.00, 25.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_sniper_muzzle__f002",
+        "rect": "(x:96.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(16.00, 25.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_dirt_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_impact_dirt_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_impact_dirt__f000",
+        "rect": "(x:0.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_dirt__f001",
+        "rect": "(x:32.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_dirt__f002",
+        "rect": "(x:64.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_dirt__f003",
+        "rect": "(x:96.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_mud_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_impact_mud_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_impact_mud__f000",
+        "rect": "(x:0.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_mud__f001",
+        "rect": "(x:32.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_mud__f002",
+        "rect": "(x:64.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_mud__f003",
+        "rect": "(x:96.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_concrete_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_impact_concrete_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_impact_concrete__f000",
+        "rect": "(x:0.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_concrete__f001",
+        "rect": "(x:32.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_concrete__f002",
+        "rect": "(x:64.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_concrete__f003",
+        "rect": "(x:96.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_metal_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_impact_metal_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_impact_metal__f000",
+        "rect": "(x:0.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_metal__f001",
+        "rect": "(x:32.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_metal__f002",
+        "rect": "(x:64.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_metal__f003",
+        "rect": "(x:96.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Impacts/bd_fx_impact_flesh_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_impact_flesh_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_impact_flesh__f000",
+        "rect": "(x:0.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_flesh__f001",
+        "rect": "(x:32.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_flesh__f002",
+        "rect": "(x:64.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_impact_flesh__f003",
+        "rect": "(x:96.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Blood/Hits/bd_fx_blood_hit_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_blood_hit_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_blood_hit__f000",
+        "rect": "(x:0.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_blood_hit__f001",
+        "rect": "(x:32.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_blood_hit__f002",
+        "rect": "(x:64.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_blood_hit__f003",
+        "rect": "(x:96.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Blood/Death/bd_fx_blood_decal_v001.png",
+    "width": 32,
+    "height": 32,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": null,
+    "frames": [
+      {
+        "name": "bd_fx_blood_decal_v001",
+        "rect": "(x:0.00, y:0.00, width:32.00, height:32.00)",
+        "pivot": "(16.00, 16.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Blood/Death/bd_fx_blood_decal_medium_v001.png",
+    "width": 48,
+    "height": 48,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": null,
+    "frames": [
+      {
+        "name": "bd_fx_blood_decal_medium_v001",
+        "rect": "(x:0.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Explosions/Mine/bd_fx_mine_explosion_sheet_v001.png",
+    "width": 1024,
+    "height": 128,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_mine_explosion_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_mine_explosion__f000",
+        "rect": "(x:0.00, y:0.00, width:128.00, height:128.00)",
+        "pivot": "(64.00, 64.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_mine_explosion__f001",
+        "rect": "(x:128.00, y:0.00, width:128.00, height:128.00)",
+        "pivot": "(64.00, 64.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_mine_explosion__f002",
+        "rect": "(x:256.00, y:0.00, width:128.00, height:128.00)",
+        "pivot": "(64.00, 64.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_mine_explosion__f003",
+        "rect": "(x:384.00, y:0.00, width:128.00, height:128.00)",
+        "pivot": "(64.00, 64.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_mine_explosion__f004",
+        "rect": "(x:512.00, y:0.00, width:128.00, height:128.00)",
+        "pivot": "(64.00, 64.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_mine_explosion__f005",
+        "rect": "(x:640.00, y:0.00, width:128.00, height:128.00)",
+        "pivot": "(64.00, 64.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_mine_explosion__f006",
+        "rect": "(x:768.00, y:0.00, width:128.00, height:128.00)",
+        "pivot": "(64.00, 64.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_mine_explosion__f007",
+        "rect": "(x:896.00, y:0.00, width:128.00, height:128.00)",
+        "pivot": "(64.00, 64.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Explosions/Generic/bd_fx_explosion_small_sheet_v001.png",
+    "width": 384,
+    "height": 64,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_explosion_small_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_explosion_small__f000",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_explosion_small__f001",
+        "rect": "(x:64.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_explosion_small__f002",
+        "rect": "(x:128.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_explosion_small__f003",
+        "rect": "(x:192.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_explosion_small__f004",
+        "rect": "(x:256.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_explosion_small__f005",
+        "rect": "(x:320.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Smoke/bd_fx_smoke_small_sheet_v001.png",
+    "width": 288,
+    "height": 48,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_smoke_small_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_smoke_small__f000",
+        "rect": "(x:0.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_smoke_small__f001",
+        "rect": "(x:48.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_smoke_small__f002",
+        "rect": "(x:96.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_smoke_small__f003",
+        "rect": "(x:144.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_smoke_small__f004",
+        "rect": "(x:192.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_smoke_small__f005",
+        "rect": "(x:240.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Smoke/bd_fx_smoke_medium_sheet_v001.png",
+    "width": 384,
+    "height": 64,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_smoke_medium_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_smoke_medium__f000",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_smoke_medium__f001",
+        "rect": "(x:64.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_smoke_medium__f002",
+        "rect": "(x:128.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_smoke_medium__f003",
+        "rect": "(x:192.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_smoke_medium__f004",
+        "rect": "(x:256.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_smoke_medium__f005",
+        "rect": "(x:320.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_small_sheet_v001.png",
+    "width": 288,
+    "height": 48,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_water_splash_small_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_water_splash_small__f000",
+        "rect": "(x:0.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_small__f001",
+        "rect": "(x:48.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_small__f002",
+        "rect": "(x:96.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_small__f003",
+        "rect": "(x:144.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_small__f004",
+        "rect": "(x:192.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_small__f005",
+        "rect": "(x:240.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_medium_sheet_v001.png",
+    "width": 384,
+    "height": 64,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_water_splash_medium_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_water_splash_medium__f000",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_medium__f001",
+        "rect": "(x:64.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_medium__f002",
+        "rect": "(x:128.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_medium__f003",
+        "rect": "(x:192.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_medium__f004",
+        "rect": "(x:256.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_medium__f005",
+        "rect": "(x:320.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Water/Splash/bd_fx_water_splash_large_sheet_v001.png",
+    "width": 576,
+    "height": 96,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_water_splash_large_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_water_splash_large__f000",
+        "rect": "(x:0.00, y:0.00, width:96.00, height:96.00)",
+        "pivot": "(48.00, 48.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_large__f001",
+        "rect": "(x:96.00, y:0.00, width:96.00, height:96.00)",
+        "pivot": "(48.00, 48.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_large__f002",
+        "rect": "(x:192.00, y:0.00, width:96.00, height:96.00)",
+        "pivot": "(48.00, 48.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_large__f003",
+        "rect": "(x:288.00, y:0.00, width:96.00, height:96.00)",
+        "pivot": "(48.00, 48.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_large__f004",
+        "rect": "(x:384.00, y:0.00, width:96.00, height:96.00)",
+        "pivot": "(48.00, 48.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_splash_large__f005",
+        "rect": "(x:480.00, y:0.00, width:96.00, height:96.00)",
+        "pivot": "(48.00, 48.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Water/Wake/bd_fx_water_wake_sheet_v001.png",
+    "width": 192,
+    "height": 48,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_water_wake_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_water_wake__f000",
+        "rect": "(x:0.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_wake__f001",
+        "rect": "(x:48.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_wake__f002",
+        "rect": "(x:96.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_wake__f003",
+        "rect": "(x:144.00, y:0.00, width:48.00, height:48.00)",
+        "pivot": "(24.00, 24.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/World/bd_fx_water_ripple_sheet_v001.png",
+    "width": 384,
+    "height": 64,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_water_ripple_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_water_ripple__f000",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_ripple__f001",
+        "rect": "(x:64.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_ripple__f002",
+        "rect": "(x:128.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_ripple__f003",
+        "rect": "(x:192.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_ripple__f004",
+        "rect": "(x:256.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_water_ripple__f005",
+        "rect": "(x:320.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/World/bd_fx_shore_foam_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": "Assets/Game/Animations/Effects/bd_fx_shore_foam_v001.anim",
+    "frames": [
+      {
+        "name": "bd_fx_shore_foam__f000",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_shore_foam__f001",
+        "rect": "(x:64.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_shore_foam__f002",
+        "rect": "(x:128.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      },
+      {
+        "name": "bd_fx_shore_foam__f003",
+        "rect": "(x:192.00, y:0.00, width:64.00, height:64.00)",
+        "pivot": "(32.00, 32.00)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/MachineGun/bd_fx_mg_tracer_v001.png",
+    "width": 64,
+    "height": 3,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": null,
+    "frames": [
+      {
+        "name": "bd_fx_mg_tracer_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:3.00)",
+        "pivot": "(32.00, 1.50)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Combat/Sniper/bd_fx_sniper_tracer_v001.png",
+    "width": 64,
+    "height": 5,
+    "filter": "Point",
+    "compression": "Uncompressed",
+    "mipmapEnabled": false,
+    "spritePixelsPerUnit": 51.2,
+    "clipPath": null,
+    "frames": [
+      {
+        "name": "bd_fx_sniper_tracer_v001",
+        "rect": "(x:0.00, y:0.00, width:64.00, height:5.00)",
+        "pivot": "(32.00, 2.50)",
+        "pixelsPerUnit": 51.2
+      }
+    ]
+  }
+]

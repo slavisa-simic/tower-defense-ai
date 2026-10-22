@@ -1,0 +1,34 @@
+[
+  {
+    "wave": 5,
+    "id": "fog"
+  },
+  {
+    "wave": 7,
+    "id": "mass-landing"
+  },
+  {
+    "wave": 10,
+    "id": "ammunition-shortage"
+  },
+  {
+    "wave": 14,
+    "id": "fog"
+  },
+  {
+    "wave": 17,
+    "id": "emergency-supply"
+  },
+  {
+    "wave": 20,
+    "id": "concentrated-landing"
+  },
+  {
+    "wave": 24,
+    "id": "multi-sector"
+  },
+  {
+    "wave": 27,
+    "id": "ammunition-shortage"
+  }
+]

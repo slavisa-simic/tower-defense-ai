@@ -1,0 +1,517 @@
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Waves/EndlessWaveSettings.cs b/Assets/Game/Scripts/Waves/EndlessWaveSettings.cs
+index f59ba6a..534f2f6 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Waves/EndlessWaveSettings.cs
++++ b/Assets/Game/Scripts/Waves/EndlessWaveSettings.cs
+@@ -25,11 +25,38 @@ namespace ShorelineDefense.Waves
+         [Min(.05f)] public float minimumArrivalInterval = .65f;
+         [Min(0)] public float arrivalGrowth = .045f;
+         [Min(1)] public int wavesPerBoatConcurrency = 4;
+-        [Range(1,12)] public int maximumConcurrentBoats = 8;
++        [Range(1,32)] public int maximumConcurrentBoats = 8;
+         [Min(1)] public int initialConcurrentBoats = 2;
+         public BossEncounterDefinition bossEncounters;
++        [Header("Assault difficulty (legacy formations are the reference)")]
++        [Range(1, 20)] public int enemyQuantityMultiplier = 1;
++        [Min(1)] public float globalEnemyHealthMultiplier = 1;
++        [Min(1)] public float bossHealthMultiplier = 1;
++        public bool pressureDirectorEnabled;
++        [Min(1)] public int earlyPressureTarget = 60;
++        [Min(1)] public int maximumPressureTarget = 320;
++        [Min(0)] public float pressureGrowthPerWave = 6;
++        [Range(.05f, .4f)] public float pressureHysteresis = .2f;
++        [Range(.1f, .25f)] public float directorEvaluationInterval = .2f;
++        [Min(.05f)] public float acceleratedArrivalInterval = .15f;
++        [Min(0)] public float firstAttackDelay = .25f;
++        [Min(1)] public int boatCapacity = 12;
++        [Min(.1f)] public float boatSpeed = 9;
++        [Min(.05f)] public float unloadInterval = .07f;
++        [Min(.1f)] public float disembarkSeparation = .4f;
++        [Min(0)] public float departureDelay = .15f;
++        public bool assaultSurgesEnabled = true;
++        [Min(1)] public float surgePeriod = 24;
++        [Min(1)] public float surgeDuration = 7;
++        [Range(0, 8)] public int surgeExtraBoats = 3;
++        public bool showPressureDebug;
++        public int PressureTarget(int wave) => (int)Math.Min(Mathf.Clamp(maximumPressureTarget, 1, 400),
++            Math.Max(1, earlyPressureTarget) + Math.Max(0, (double)wave - 1) * EndlessWaveGenerator.Safe(pressureGrowthPerWave, 6));
++        // Boss tuning replaces the ordinary global factor, rather than multiplying it again.
++        public float RuntimeHealthMultiplier(float waveHealth, bool boss) => Mathf.Clamp(waveHealth, 1, 100) *
++            Mathf.Clamp(EndlessWaveGenerator.Safe(boss ? bossHealthMultiplier : globalEnemyHealthMultiplier, 1), 1, 100);
+         public float ArrivalInterval(int wave) => Mathf.Max(.05f, Mathf.Max(minimumArrivalInterval, earlyArrivalInterval / (1 + Mathf.Max(0, arrivalGrowth) * (Mathf.Max(1, wave) - 1))));
+-        public int BoatConcurrency(int wave) => Mathf.Clamp((int)Math.Min(12L, Math.Max(1, initialConcurrentBoats) + ((long)Math.Max(1, wave) - 1) / Math.Max(1, wavesPerBoatConcurrency)), 1, Mathf.Clamp(maximumConcurrentBoats, 1, 12));
++        public int BoatConcurrency(int wave) => Mathf.Clamp((int)Math.Min(32L, Math.Max(1, initialConcurrentBoats) + ((long)Math.Max(1, wave) - 1) / Math.Max(1, wavesPerBoatConcurrency)), 1, Mathf.Clamp(maximumConcurrentBoats, 1, 32));
+     }
+ }
+ 
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Waves/EndlessWaveGenerator.cs b/Assets/Game/Scripts/Waves/EndlessWaveGenerator.cs
+index 1811fa1..e4490c8 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Waves/EndlessWaveGenerator.cs
++++ b/Assets/Game/Scripts/Waves/EndlessWaveGenerator.cs
+@@ -14,7 +14,7 @@ namespace ShorelineDefense.Waves
+         {
+             double age = Math.Max(0, (double)wave - 1);
+             double budget = Math.Max(1, settings.baseBudget) + age * Safe(settings.linearGrowth, 3) + age * age * Safe(settings.nonlinearGrowth, .015f);
+-            return (int)Math.Min(100000000, Math.Max(1, budget));
++            return (int)Math.Min(100000000, Math.Max(1, (int)Math.Min(100000000, budget)) * (long)Mathf.Clamp(settings.enemyQuantityMultiplier, 1, 20));
+         }
+         public WaveDefinition Generate(int number)
+         {
+@@ -24,7 +24,8 @@ namespace ShorelineDefense.Waves
+                 if (prefab != null && prefab.Definition != null && prefab.Definition.UnlockWave <= number) available.Add(prefab);
+             if (available.Count == 0) throw new InvalidOperationException("No unlocked valid endless enemy prefab.");
+             var random = new System.Random(unchecked(seed * 397 ^ number));
+-            int remaining = Budget(number), cap = Mathf.Clamp(settings.maximumEnemiesPerWave, 1, 300);
++            int quantity = Mathf.Clamp(settings.enemyQuantityMultiplier, 1, 20);
++            int remaining = Budget(number) / quantity, cap = Mathf.Clamp(settings.maximumEnemiesPerWave / quantity, 1, 300);
+             var groups = new List<WaveEnemyGroup>();
+             // Small shuffled groups vary both boat cargo and successive landing pressure.
+             for (int count = 0; count < cap; count++)
+@@ -39,7 +40,7 @@ namespace ShorelineDefense.Waves
+                     roll -= Weight(p.Definition.Kind, number); if (roll < 0) { selected = p; break; }
+                 }
+                 remaining -= selected.Definition.DifficultyCost;
+-                groups.Add(new WaveEnemyGroup(selected, 1));
++                groups.Add(new WaveEnemyGroup(selected, quantity));
+             }
+             if (groups.Count == 0) throw new InvalidOperationException("Wave budget cannot afford an unlocked enemy.");
+             double age = Math.Max(0, (double)number - Math.Max(1, settings.scalingStartWave));
+@@ -55,7 +56,8 @@ namespace ShorelineDefense.Waves
+                 int encounterCost = boss.Definition.DifficultyCost;
+                 foreach (var escort in encounter.Escorts) {
+                     if (escort == null || !escort.IsValid) continue;
+-                    escortGroups.Add(escort); encounterCost += escort.Count * escort.Prefab.Definition.DifficultyCost;
++                    int escortCount = escort.Count * quantity;
++                    escortGroups.Add(new WaveEnemyGroup(escort.Prefab, escortCount)); encounterCost += escortCount * escort.Prefab.Definition.DifficultyCost;
+                 }
+                 groups.InsertRange(Math.Min(7, groups.Count), escortGroups);
+                 wave.Encounter = encounter; wave.EncounterCost = encounterCost;
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Waves/WaveManager.cs b/Assets/Game/Scripts/Waves/WaveManager.cs
+index fc72d08..4e3f37e 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Waves/WaveManager.cs
++++ b/Assets/Game/Scripts/Waves/WaveManager.cs
+@@ -42,6 +42,12 @@ namespace ShorelineDefense.Waves
+         private float timer;
+         private bool subscribed;
+         private readonly List<EnemyController> cargo = new List<EnemyController>(8);
++        private readonly AssaultPressureDirector director = new AssaultPressureDirector();
++        private bool bossAwaitingDeployment;
++        private EnemyController deployedBoss;
++        public AssaultPressureDirector PressureDirector => director;
++        public int PendingBoats => landings == null ? 0 : Mathf.CeilToInt(Mathf.Max(0, pending - landings.IncomingPassengers) / (float)landings.Capacity);
++        public BoatLandingSystem Landings => landings;
+         public WaveState State { get; private set; } = WaveState.Preparation;
+         public IReadOnlyList<WaveDefinition> Waves => waves;
+         public WaveDefinition CurrentWave { get { EnsureGenerated(); return IsEndless ? generated : waves != null && waveIndex < waves.Length ? waves[waveIndex] : null; } }
+@@ -103,16 +109,24 @@ namespace ShorelineDefense.Waves
+             alive.Clear();
+             if (IsEndless)
+             {
+-                spawner.ConfigureWave(endless.maximumActiveEnemies, CurrentWave.HealthMultiplier, CurrentWave.SpeedMultiplier);
++                spawner.ConfigureWave(endless.maximumActiveEnemies, endless.RuntimeHealthMultiplier(CurrentWave.HealthMultiplier, false), CurrentWave.SpeedMultiplier,
++                    endless.RuntimeHealthMultiplier(CurrentWave.HealthMultiplier, true));
+                 landings?.ConfigurePressure(endless.ArrivalInterval(CurrentWaveNumber) * (generated.Encounter != null ? generated.Encounter.ArrivalMultiplier : 1), endless.BoatConcurrency(CurrentWaveNumber));
++                if (endless.pressureDirectorEnabled) {
++                    landings?.ConfigureMotion(endless.boatCapacity, endless.boatSpeed, endless.unloadInterval, endless.departureDelay);
++                    spawner.ConfigureDeployment(endless.disembarkSeparation);
++                }
+             }
++            director.Reset();
++            bossAwaitingDeployment = CurrentWave.Encounter != null; deployedBoss = null;
+             pending = CurrentWave.ScheduledCount;
+             groupIndex = spawnedInGroup = 0;
+             timer = CurrentWave.Groups[0].DelayBeforeGroup;
++            if (IsEndless && endless.pressureDirectorEnabled) timer = Mathf.Max(.05f, endless.firstAttackDelay);
+             SetState(WaveState.Spawning);
+             return true;
+         }
+-        private void Update() => Tick(Time.deltaTime);
++        private void Update() { Tick(Time.deltaTime); if (game != null && game.IsPlaying && (State == WaveState.Spawning || State == WaveState.Combat)) statistics?.SamplePressure(registry.Count, Time.unscaledDeltaTime); }
+         public void Tick(float deltaTime)
+         {
+             if (game == null || !game.IsPlaying || deltaTime <= 0) return;
+@@ -129,7 +143,15 @@ namespace ShorelineDefense.Waves
+                 return;
+             }
+             if (State != WaveState.Spawning) return;
++            if (IsEndless && endless.pressureDirectorEnabled && landings != null && director.Tick(deltaTime, endless, CurrentWaveNumber,
++                registry.Count, pending, landings.ActiveBoats, landings.IncomingPassengers, bossAwaitingDeployment || deployedBoss != null && deployedBoss.IsTargetable))
++            {
++                landings.ConfigurePressure(director.ArrivalInterval, director.BoatLimit);
++                if (landings.TotalArrivals > 0 && director.Mode == AssaultPressure.Accelerated)
++                    timer = Mathf.Min(timer, director.ArrivalInterval);
++            }
+             if (groupIndex >= CurrentWave.Groups.Count) return;
++            if (IsEndless && endless.pressureDirectorEnabled && landings != null && director.DeploymentPaused) return;
+             timer -= deltaTime;
+             if (timer > 0) return;
+             var group = CurrentWave.Groups[groupIndex];
+@@ -184,11 +206,13 @@ namespace ShorelineDefense.Waves
+         {
+             if (State != WaveState.Spawning || !game.IsPlaying) return;
+             alive.Add(enemy); pending--;
++            if (enemy.Definition is BossDefinition) { bossAwaitingDeployment = false; deployedBoss = enemy; }
+             if (pending == 0 && groupIndex == CurrentWave.Groups.Count) SetState(WaveState.Combat);
+             Changed?.Invoke(); CheckCompletion();
+         }
+         private void OnEnemyRemoved(EnemyController enemy)
+         {
++            if (deployedBoss == enemy) deployedBoss = null;
+             if (!alive.Remove(enemy)) return;
+             Changed?.Invoke();
+             CheckCompletion();
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Waves/BoatLandingSystem.cs b/Assets/Game/Scripts/Waves/BoatLandingSystem.cs
+index 1fc7391..2d2ef7e 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Waves/BoatLandingSystem.cs
++++ b/Assets/Game/Scripts/Waves/BoatLandingSystem.cs
+@@ -41,12 +41,18 @@ namespace ShorelineDefense.Waves
+         }
+         private readonly List<Transport> boats = new List<Transport>(6);
+         private int nextPoint;
++        private readonly Dictionary<GameObject, Stack<GameObject>> visualPools = new Dictionary<GameObject, Stack<GameObject>>();
++        private readonly Dictionary<GameObject, GameObject> visualSources = new Dictionary<GameObject, GameObject>();
++        private int[] recentLandings;
++        private int landingSequence;
++        public int CreatedBoatVisuals { get; private set; }
++        public int ReusedBoatVisuals { get; private set; }
+         private VfxService effects;
+         public int Capacity => capacity;
+         public float MoveSpeed => moveSpeed;
+         public int ConcurrencyLimit => maximumActiveBoats;
+         public int PeakConcurrentBoats { get; private set; }
+-        public void ConfigureMotion(int cargoUnits, float speed, float unloadDelay, float returnDelay) { capacity = Mathf.Clamp(cargoUnits, 3, 16); moveSpeed = Mathf.Max(.1f,speed); disembarkDelay = Mathf.Max(.05f,unloadDelay); departureDelay = Mathf.Max(0,returnDelay); }
++        public void ConfigureMotion(int cargoUnits, float speed, float unloadDelay, float returnDelay) { capacity = Mathf.Clamp(cargoUnits, 3, 18); moveSpeed = Mathf.Max(.1f,speed); disembarkDelay = Mathf.Max(.05f,unloadDelay); departureDelay = Mathf.Max(0,returnDelay); }
+         public float ArrivalInterval => arrivalInterval;
+         public int ActiveBoats => boats.Count;
+         public int IncomingPassengers { get; private set; }
+@@ -65,7 +71,7 @@ namespace ShorelineDefense.Waves
+         private void OnState(GameState state) { if (state == GameState.GameOver) Cancel(); }
+         public int PassengerLimit(EnemyController prefab) => Mathf.Max(1, capacity / Mathf.Max(1, prefab.Definition.TransportCapacityUnits));
+         public void ConfigurePressure(float interval, int concurrency)
+-        { arrivalInterval = Mathf.Clamp(interval, .05f, 30); maximumActiveBoats = Mathf.Clamp(concurrency, 1, 12); }
++        { arrivalInterval = Mathf.Clamp(interval, .05f, 30); maximumActiveBoats = Mathf.Clamp(concurrency, 1, 32); }
+         public bool TryDispatch(EnemyController passenger, int count)
+         {
+             if (passenger == null || passenger.Definition == null || count <= 0 || count > PassengerLimit(passenger)) return false;
+@@ -79,18 +85,34 @@ namespace ShorelineDefense.Waves
+             int units = 0;
+             foreach (var p in cargo) { if (p == null || p.Definition == null) return false; units += Mathf.Max(1, p.Definition.TransportCapacityUnits); }
+             if (units > capacity) return false;
+-            for (int attempt = 0; attempt < landingPoints.Length; attempt++)
++            if (recentLandings == null || recentLandings.Length != landingPoints.Length) recentLandings = new int[landingPoints.Length];
++            // Least occupied/recent sector with seeded-style jitter; no predictable round-robin.
++            int chosen = -1; float best = float.PositiveInfinity;
++            for (int index = 0; index < landingPoints.Length; index++)
+             {
+-                int index = nextPoint; nextPoint = (nextPoint + 1) % landingPoints.Length;
+-                bool occupied = false; foreach (var boat in boats) occupied |= boat.point == index;
+                 var point = landingPoints[index];
+-                // Boats can approach while a predecessor departs; reserve only an occupied berth/approach within hull clearance.
+-                occupied = false;
+-                foreach (var active in boats) if (active.point == index && (active.stage != 3 || (active.visual.transform.position - point.riverEntry).sqrMagnitude < 16)) occupied = true;
+-                if (occupied || !IsRiverLane(point)) continue;
++                if (!IsRiverLane(point)) continue;
++                bool entryOccupied = false; int laneCount = 0;
++                foreach (var active in boats) if (active.point == index) {
++                    laneCount++;
++                    if ((active.visual.transform.position - point.riverEntry).sqrMagnitude < 16) entryOccupied = true;
++                }
++                if (entryOccupied) continue;
++                float score = laneCount * 4 + recentLandings[index] / (float)Mathf.Max(1, landingSequence) +
++                    ((index * 17 + landingSequence * 13) % 23) * .025f;
++                if (score < best) { best = score; chosen = index; }
++            }
++            if (chosen >= 0)
++            {
++                int index = chosen; var point = landingPoints[index]; recentLandings[index] = ++landingSequence;
+                 BossDefinition boss = null;
+                 foreach (var passenger in cargo) if (passenger.Definition is BossDefinition special) { boss = special; break; }
+-                var visual = Instantiate(boss != null && boss.BossBoat != null ? boss.BossBoat : boatPrefab, point.riverEntry, Quaternion.identity, transform);
++                var source = boss != null && boss.BossBoat != null ? boss.BossBoat : boatPrefab;
++                if (!visualPools.TryGetValue(source, out var pool)) visualPools[source] = pool = new Stack<GameObject>();
++                GameObject visual;
++                if (pool.Count > 0) { visual = pool.Pop(); ReusedBoatVisuals++; }
++                else { visual = Instantiate(source, point.riverEntry, Quaternion.identity, transform); visualSources[visual] = source; CreatedBoatVisuals++; }
++                visual.transform.SetPositionAndRotation(point.riverEntry, Quaternion.identity); visual.SetActive(true);
+                 var seats = visual.GetComponentsInChildren<SpriteRenderer>(true);
+                 var offsets = new int[cargo.Count]; int nextSeat = 0;
+                 for (int p = 0; p < cargo.Count; p++)
+@@ -143,6 +165,13 @@ namespace ShorelineDefense.Waves
+                 var boat = boats[i]; var point = landingPoints[boat.point];
+                 if (boat.stage == 0 || boat.stage == 3)
+                 {
++                    // Incoming hulls queue behind an occupied berth/approach; unloading remains per boat.
++                    bool waiting = false;
++                    if (boat.stage == 0) foreach (var ahead in boats)
++                        if (ahead != boat && ahead.point == boat.point && ahead.stage != 3 &&
++                            ahead.visual.transform.position.x > boat.visual.transform.position.x &&
++                            (ahead.visual.transform.position - boat.visual.transform.position).sqrMagnitude < 16) { waiting = true; break; }
++                    if (waiting) continue;
+                     var destination = boat.stage == 0 ? point.berth : point.riverEntry;
+                     var direction = destination - boat.visual.transform.position;
+                     if (direction.sqrMagnitude > .0001f)
+@@ -156,7 +185,7 @@ namespace ShorelineDefense.Waves
+                         boat.wakeTimer = .3f;
+                     }
+                     if ((boat.visual.transform.position - destination).sqrMagnitude > .0001f) continue;
+-                    if (boat.stage == 3) { Destroy(boat.visual); boats.RemoveAt(i); continue; }
++                    if (boat.stage == 3) { ReturnVisual(boat.visual); boats.RemoveAt(i); continue; }
+                     boat.stage = 1;
+                     effects?.Play(VfxId.SplashMedium, point.berth + Vector3.right * 1.4f, 0, .6f);
+                 }
+@@ -191,8 +220,10 @@ namespace ShorelineDefense.Waves
+         }
+         public void Cancel()
+         {
+-            foreach (var boat in boats) if (boat.visual != null) Destroy(boat.visual);
++            foreach (var boat in boats) if (boat.visual != null) ReturnVisual(boat.visual);
+             boats.Clear(); IncomingPassengers = 0;
+         }
++        private void ReturnVisual(GameObject visual)
++        { visual.SetActive(false); if (visualSources.TryGetValue(visual, out var source)) visualPools[source].Push(visual); else Destroy(visual); }
+     }
+ }
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Enemies/EnemySpawner.cs b/Assets/Game/Scripts/Enemies/EnemySpawner.cs
+index b66a16b..c288d4f 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Enemies/EnemySpawner.cs
++++ b/Assets/Game/Scripts/Enemies/EnemySpawner.cs
+@@ -18,11 +18,31 @@ namespace ShorelineDefense.Enemies
+         [SerializeField] private EnemyRegistry registry;
+         [SerializeField] private BorderBreachService border;
+         private int activeLimit = int.MaxValue;
+-        private float healthMultiplier = 1, speedMultiplier = 1;
++        private float healthMultiplier = 1, speedMultiplier = 1, bossHealthMultiplier = 1;
+         public void ConfigureBorder(BorderBreachService service) => border = service;
+-        public void ConfigureWave(int maximumActive, float health, float speed)
+-        { activeLimit = Mathf.Clamp(maximumActive, 1, 300); healthMultiplier = Mathf.Clamp(health, 1, 100); speedMultiplier = Mathf.Clamp(speed, 1, 3); }
++        public void ConfigureDeployment(float separation) => minimumSpawnSeparation = Mathf.Clamp(separation, .1f, 2);
++        public void ConfigureWave(int maximumActive, float health, float speed, float bossHealth = -1)
++        { activeLimit = Mathf.Clamp(maximumActive, 1, 400); healthMultiplier = Mathf.Clamp(health, 1, 10000); bossHealthMultiplier = bossHealth < 0 ? healthMultiplier : Mathf.Clamp(bossHealth, 1, 10000); speedMultiplier = Mathf.Clamp(speed, 1, 3); }
+         private readonly List<EnemyController> spawnedEnemies = new List<EnemyController>();
++        private readonly Dictionary<EnemyController, Stack<EnemyController>> pools = new Dictionary<EnemyController, Stack<EnemyController>>();
++        private readonly Dictionary<EnemyController, EnemyController> sources = new Dictionary<EnemyController, EnemyController>();
++        private readonly List<EnemyController> returning = new List<EnemyController>();
++        private int pooledCount;
++        public int CreatedEnemies { get; private set; }
++        public int ReusedEnemies { get; private set; }
++        public int PooledEnemies => pooledCount;
++        private void QueueReturn(EnemyController enemy) => returning.Add(enemy);
++        private void LateUpdate()
++        {
++            // Defer reuse until death/reward/presentation callbacks have all returned.
++            foreach (var enemy in returning) {
++                if (enemy == null) continue;
++                spawnedEnemies.Remove(enemy);
++                if (pooledCount >= 400) { sources.Remove(enemy); Destroy(enemy.gameObject); continue; }
++                pools[sources[enemy]].Push(enemy); pooledCount++;
++            }
++            returning.Clear();
++        }
+         private int nextSpawnPoint;
+         private readonly List<Vector2Int> unloadingPath = new List<Vector2Int>(64);
+         public int TotalSpawned { get; private set; }
+@@ -99,8 +119,13 @@ namespace ShorelineDefense.Enemies
+             if (border != null && !border.TryGetDestination(cell, out goal)) return false;
+             if (
+                 !grid.Paths.TryFindPath(cell, goal, unloadingPath)) return false;
+-            var enemy = Instantiate(requestedPrefab, position, Quaternion.identity, enemyParent);
+-            enemy.Initialize(grid, playerBase, game, registry, border, border != null ? goal : (Vector2Int?)null, healthMultiplier, speedMultiplier);
++            if (!pools.TryGetValue(requestedPrefab, out var pool)) pools[requestedPrefab] = pool = new Stack<EnemyController>();
++            EnemyController enemy;
++            if (pool.Count > 0) { enemy = pool.Pop(); pooledCount--; ReusedEnemies++; enemy.transform.SetPositionAndRotation(position, Quaternion.identity); }
++            else { enemy = Instantiate(requestedPrefab, position, Quaternion.identity, enemyParent); sources[enemy] = requestedPrefab; enemy.ConfigurePool(QueueReturn); CreatedEnemies++; }
++            enemy.Initialize(grid, playerBase, game, registry, border, border != null ? goal : (Vector2Int?)null,
++                requestedPrefab.Definition is ShorelineDefense.Waves.BossDefinition ? bossHealthMultiplier : healthMultiplier, speedMultiplier);
++            enemy.gameObject.SetActive(true);
+             spawnedEnemies.Add(enemy);
+             TotalSpawned++;
+             spawned = enemy;
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Enemies/EnemyController.cs b/Assets/Game/Scripts/Enemies/EnemyController.cs
+index 6a60e49..64077a7 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Enemies/EnemyController.cs
++++ b/Assets/Game/Scripts/Enemies/EnemyController.cs
+@@ -18,6 +18,8 @@ namespace ShorelineDefense.Enemies
+         private EnemyRegistry registry;
+         private BorderBreachService border;
+         private bool resolved;
++        private System.Action<EnemyController> returnToPool;
++        public void ConfigurePool(System.Action<EnemyController> release) => returnToPool = release;
+         public EnemyDefinition Definition => definition;
+         public EnemyMovement Movement => movement;
+         public EnemyHealth Health => health;
+@@ -84,10 +86,11 @@ namespace ShorelineDefense.Enemies
+             resolved = true;
+             registry?.NotifyKilled(this);
+             // Health is already zero, so targeting/movement/attacks stop before deferred destruction.
+-            Destroy(gameObject);
++            if (returnToPool != null) { gameObject.SetActive(false); returnToPool(this); }
++            else Destroy(gameObject);
+         }
+         public bool TryResolveBreach() { if (!IsTargetable) return false; resolved = true; return true; }
+-        public void RemoveBreached() { if (!resolved) return; registry?.Unregister(this); gameObject.SetActive(false); Destroy(gameObject); }
++        public void RemoveBreached() { if (!resolved) return; registry?.Unregister(this); gameObject.SetActive(false); if (returnToPool != null) returnToPool(this); else Destroy(gameObject); }
+         private void OnEnable() { if (initialized && health.IsAlive) registry?.Register(this); }
+         private void OnDisable() => registry?.Unregister(this);
+         private void OnDestroy()
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Enemies/EnemyMovement.cs b/Assets/Game/Scripts/Enemies/EnemyMovement.cs
+index b24380d..a8a0e11 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Enemies/EnemyMovement.cs
++++ b/Assets/Game/Scripts/Enemies/EnemyMovement.cs
+@@ -15,6 +15,7 @@ namespace ShorelineDefense.Enemies
+         private float stoppingDistance;
+         private int waypoint;
+         private bool pathDirty;
++        private int pathRevision = -1;
+ 
+         public bool HasPath { get; private set; }
+         public bool ReachedDestination { get; private set; }
+@@ -105,6 +106,7 @@ namespace ShorelineDefense.Enemies
+ 
+         private void RecalculatePath()
+         {
++            pathRevision = grid.Revision;
+             pathDirty = false;
+             waypoint = 0;
+             ReachedDestination = false;
+@@ -115,7 +117,9 @@ namespace ShorelineDefense.Enemies
+         }
+ 
+         private void InvalidatePath() => pathDirty = true;
+-        private void OnEnable() { if (grid != null) { grid.Changed += InvalidatePath; pathDirty = true; } }
++        private void OnEnable() { if (grid != null) { grid.Changed += InvalidatePath;
++            pathDirty = pathRevision != grid.Revision || path.Count == 0 || !grid.TryWorldToCell(transform.position, out var start) || path[0] != start;
++        } }
+         private void OnDisable() => Unsubscribe();
+         private void Unsubscribe() { if (grid != null) grid.Changed -= InvalidatePath; }
+ 
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Grid/PathfindingService.cs b/Assets/Game/Scripts/Grid/PathfindingService.cs
+index a565334..c5afbae 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Grid/PathfindingService.cs
++++ b/Assets/Game/Scripts/Grid/PathfindingService.cs
+@@ -13,6 +13,10 @@ namespace ShorelineDefense.Grid
+         private readonly byte[] states;
+         private readonly int[] open;
+         public int Requests { get; private set; }
++        public int Searches { get; private set; }
++        public int CacheHits { get; private set; }
++        private int cachedRevision = -1;
++        private readonly Dictionary<long, Vector2Int[]> routes = new Dictionary<long, Vector2Int[]>();
+ 
+         public PathfindingService(BattlefieldGrid grid)
+         {
+@@ -32,6 +36,13 @@ namespace ShorelineDefense.Grid
+             if (!grid.Contains(start) || !grid.Contains(goal) ||
+                 !grid.GetCell(start).Walkable || !grid.GetCell(goal).Walkable) return false;
+ 
++            // Coast/breach queries repeat across passengers. Bound storage and invalidate every navigation edit.
++            if (cachedRevision != grid.Revision) { routes.Clear(); cachedRevision = grid.Revision; }
++            long key = (long)Index(start) * grid.CellCount + Index(goal);
++            if (routes.TryGetValue(key, out var cached)) { result.AddRange(cached); CacheHits++; return cached.Length > 0; }
++            if (routes.Count >= 2048) routes.Clear();
++            Searches++;
++
+             Array.Clear(states, 0, states.Length);
+             int startIndex = Index(start);
+             int goalIndex = Index(goal);
+@@ -64,6 +75,7 @@ namespace ShorelineDefense.Grid
+                 {
+                     for (int node = current; node != -1; node = parents[node]) result.Add(Cell(node));
+                     result.Reverse();
++                    routes[key] = result.ToArray();
+                     return true;
+                 }
+                 states[current] = 2;
+@@ -87,6 +99,7 @@ namespace ShorelineDefense.Grid
+                     }
+                 }
+             }
++            routes[key] = Array.Empty<Vector2Int>();
+             return false;
+         }
+ 
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Core/RunStatistics.cs b/Assets/Game/Scripts/Core/RunStatistics.cs
+index db6d0e1..04d30f9 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Core/RunStatistics.cs
++++ b/Assets/Game/Scripts/Core/RunStatistics.cs
+@@ -23,6 +23,14 @@ namespace ShorelineDefense.Core
+         public void RecordBossBreach() => BossesBreached = SaturatingAdd(BossesBreached, 1);
+         public int PeakActiveEnemies { get; private set; }
+         public int PeakConcurrentBoats { get; private set; }
++        private double pressureSum, frameTimeSum;
++        private long pressureSamples, waveIncomeStart;
++        private int incomeWave;
++        public double AverageActiveEnemies => pressureSamples == 0 ? 0 : pressureSum / pressureSamples;
++        public double AverageFrameTimeMs => pressureSamples == 0 ? 0 : frameTimeSum / pressureSamples;
++        public long CurrentWaveIncome => economy == null ? 0 : Math.Max(0, economy.TotalEarned - waveIncomeStart);
++        public long LastCompletedWaveIncome { get; private set; }
++        public void SamplePressure(int active, float frameSeconds) { pressureSum += active; frameTimeSum += frameSeconds * 1000; pressureSamples++; }
+         public void RecordPressure(int active, int boats) { PeakActiveEnemies = Math.Max(PeakActiveEnemies, active); PeakConcurrentBoats = Math.Max(PeakConcurrentBoats, boats); }
+         public long BasicKills => kills[0];
+         public long RunnerKills => kills[1];
+@@ -41,7 +49,11 @@ namespace ShorelineDefense.Core
+         private void OnKilled(EnemyController enemy)
+         { int index = (int)enemy.Definition.Kind; if (index >= 0 && index < kills.Length) kills[index] = SaturatingAdd(kills[index], 1); }
+         private void OnWave()
+-        { if (waves.State == WaveState.Spawning || waves.State == WaveState.Combat) HighestWaveReached = Math.Max(HighestWaveReached, CurrentWave); }
++        {
++            if (waves.State == WaveState.Spawning || waves.State == WaveState.Combat) HighestWaveReached = Math.Max(HighestWaveReached, CurrentWave);
++            if (waves.State == WaveState.Spawning && incomeWave != CurrentWave) { incomeWave = CurrentWave; waveIncomeStart = economy != null ? economy.TotalEarned : 0; }
++            if (waves.State == WaveState.Preparation && incomeWave != CurrentWave && incomeWave > 0) LastCompletedWaveIncome = CurrentWaveIncome;
++        }
+         public void RecordBreach(int penalty)
+         {
+             TotalBreaches = SaturatingAdd(TotalBreaches, 1); Homicides = SaturatingAdd(Homicides, Math.Max(0, penalty));
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/UI/CombatFeedbackHud.cs b/Assets/Game/Scripts/UI/CombatFeedbackHud.cs
+index b739000..dfc4df8 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/UI/CombatFeedbackHud.cs
++++ b/Assets/Game/Scripts/UI/CombatFeedbackHud.cs
+@@ -16,7 +16,7 @@ namespace ShorelineDefense.UI
+         [SerializeField] private Font pixelFont;
+         [SerializeField] private BorderBreachService border;
+         [SerializeField, Min(1)] private int popupCapacity = 24;
+-        private sealed class Popup { public Label label; public Vector3 world; public float age; public bool active, breach; public int line; }
++        private sealed class Popup { public Label label; public Vector3 world; public float age; public bool active, breach; public int line; public long reward; }
+         private Popup[] popups;
+         private VisualElement layer, dimmer;
+         private Label banner;
+@@ -78,11 +78,14 @@ namespace ShorelineDefense.UI
+         {
+             if (!game.IsPlaying || !enemy.Health.KilledByDefense || enemy.Definition.KillReward <= 0) return;
+             LastRewardText = "+" + enemy.Definition.KillReward + " RSD";
+-            ShowPopup(enemy.transform.position, LastRewardText, new Color(.72f, .88f, .6f));
++            foreach (var popup in popups)
++                if (popup.active && !popup.breach && popup.age < .2f && (popup.world - enemy.transform.position).sqrMagnitude < 25)
++                { popup.reward += enemy.Definition.KillReward; popup.label.text = "+" + popup.reward + " RSD"; return; }
++            ShowPopup(enemy.transform.position, LastRewardText, new Color(.72f, .88f, .6f)).reward = enemy.Definition.KillReward;
+         }
+         private void OnBreach(Vector3 position, int penalty)
+         { if (game.IsPlaying) ShowPopup(position, "+" + penalty + " HOMICIDES", new Color(.95f, .35f, .3f), true); }
+-        private void ShowPopup(Vector3 position, string text, Color color, bool breach = false)
++        private Popup ShowPopup(Vector3 position, string text, Color color, bool breach = false)
+         {
+             int usedLines = 0, line = 0;
+             Popup oldestAtLane = null;
+@@ -101,10 +104,12 @@ namespace ShorelineDefense.UI
+             if (breach && line == 3) { slot = oldestAtLane; line = slot.line; }
+             if (!slot.active) ActivePopups++;
+             slot.active = true; slot.age = 0; slot.world = position;
++            slot.reward = 0;
+             slot.breach = breach; slot.line = line;
+             slot.label.text = text; slot.label.style.color = color; slot.label.style.opacity = 1;
+             slot.label.style.display = DisplayStyle.Flex;
+             PositionPopup(slot);
++            return slot;
+         }
+         private void OnWave()
+         {
+diff --git a/Docs/Validation/Phase4D/baseline-scripts/Presentation/EnemySpritePresentation.cs b/Assets/Game/Scripts/Presentation/EnemySpritePresentation.cs
+index 78b4006..f2e3b22 100644
+--- a/Docs/Validation/Phase4D/baseline-scripts/Presentation/EnemySpritePresentation.cs
++++ b/Assets/Game/Scripts/Presentation/EnemySpritePresentation.cs
+@@ -42,6 +42,7 @@ namespace ShorelineDefense.Presentation
+             health.Damaged += OnDamaged;
+             health.Died += OnDied;
+             previousPosition = transform.position;
++            if (body != null) body.enabled = true;
+             terrainKnown = false; flashUntil = 0; hitUntil = 0; animationClock = 0; lastSequence = null;
+         }
+         private void OnDisable()

@@ -1,0 +1,528 @@
+{
+  "counts": [
+    {
+      "wave": 1,
+      "count": 10
+    },
+    {
+      "wave": 2,
+      "count": 13
+    },
+    {
+      "wave": 3,
+      "count": 12
+    },
+    {
+      "wave": 4,
+      "count": 13
+    },
+    {
+      "wave": 5,
+      "count": 21
+    },
+    {
+      "wave": 6,
+      "count": 16
+    },
+    {
+      "wave": 7,
+      "count": 27
+    },
+    {
+      "wave": 8,
+      "count": 20
+    },
+    {
+      "wave": 9,
+      "count": 25
+    },
+    {
+      "wave": 10,
+      "count": 25
+    },
+    {
+      "wave": 11,
+      "count": 24
+    },
+    {
+      "wave": 12,
+      "count": 28
+    },
+    {
+      "wave": 13,
+      "count": 27
+    },
+    {
+      "wave": 14,
+      "count": 26
+    },
+    {
+      "wave": 15,
+      "count": 29
+    },
+    {
+      "wave": 16,
+      "count": 33
+    },
+    {
+      "wave": 17,
+      "count": 32
+    },
+    {
+      "wave": 18,
+      "count": 48
+    },
+    {
+      "wave": 19,
+      "count": 46
+    },
+    {
+      "wave": 20,
+      "count": 38
+    },
+    {
+      "wave": 21,
+      "count": 49
+    },
+    {
+      "wave": 22,
+      "count": 42
+    },
+    {
+      "wave": 23,
+      "count": 49
+    },
+    {
+      "wave": 24,
+      "count": 50
+    },
+    {
+      "wave": 25,
+      "count": 52
+    }
+  ],
+  "peak": 5,
+  "average": 3.4,
+  "samples": [
+    {
+      "seconds": 0.5,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 10,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 1.0,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 10,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 1.5,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 10,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 2.0,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 10,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 2.5,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 10,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 3.0,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 10,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 3.5,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 10,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 4.0,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 10,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 4.5,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 10,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 5.0,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 10,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 5.5,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 10,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 6.0,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 10,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 6.5,
+      "enemies": 0,
+      "boats": 1,
+      "pending": 10,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 7.0,
+      "enemies": 1,
+      "boats": 1,
+      "pending": 9,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 7.5,
+      "enemies": 2,
+      "boats": 1,
+      "pending": 8,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 8.0,
+      "enemies": 3,
+      "boats": 1,
+      "pending": 7,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 8.5,
+      "enemies": 3,
+      "boats": 1,
+      "pending": 7,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 9.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 9.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 10.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 10.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 11.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 11.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 12.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 12.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 13.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 13.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 14.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 14.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 15.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 15.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 16.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 16.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 17.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 17.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 18.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 18.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 19.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 19.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 20.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 20.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 21.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 21.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 22.0,
+      "enemies": 4,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 22.5,
+      "enemies": 3,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 23.0,
+      "enemies": 2,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 23.5,
+      "enemies": 1,
+      "boats": 1,
+      "pending": 5,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 24.0,
+      "enemies": 1,
+      "boats": 1,
+      "pending": 4,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 24.5,
+      "enemies": 2,
+      "boats": 1,
+      "pending": 3,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 25.0,
+      "enemies": 3,
+      "boats": 1,
+      "pending": 2,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 25.5,
+      "enemies": 4,
+      "boats": 1,
+      "pending": 1,
+      "state": "Spawning"
+    },
+    {
+      "seconds": 26.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 26.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 27.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 27.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 28.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 28.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 29.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 29.5,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 0,
+      "state": "Combat"
+    },
+    {
+      "seconds": 30.0,
+      "enemies": 5,
+      "boats": 1,
+      "pending": 0,
+      "state": "Combat"
+    }
+  ]
+}
