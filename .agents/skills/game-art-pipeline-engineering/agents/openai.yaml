@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game Art Pipeline Engineering"
+  short_description: "Phased game art production and safe Unity integration"
+  default_prompt: "Use $game-art-pipeline-engineering to prepare or integrate the requested Border Defenders art batch."
