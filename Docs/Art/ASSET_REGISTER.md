@@ -1,5 +1,9 @@
 # Art asset register
 
+## README documentation media — 2026-10-22
+
+The authorized README showcase reuses the approved Danube master v002, HUD font, and existing sprite pixels in five self-contained SVGs, plus fresh Unity world captures and two GIFs. Outputs live under `Docs/Readme/Media/` and have no Unity import or runtime consumers. Selection is within the user's documentation request; runtime art approval states are unchanged. Exact sources, dimensions, filenames, hashes, capture setup, warning, and validation are recorded in [the batch](Batches/readme_showcase_001.md), [media notes](../Readme/MEDIA.md), and [manifest](../Readme/media-manifest.json).
+
 ## Phase 3C.1 additions — 2026-10-01
 
 Authorized by the attached strict-top-down cleanup/world-polish/boat-landings request. Reuses approved Danube master v002 and recorded exact-pixel export authorization. Built-in ImageGen source receipts/prompts/rejected reed v001 and selected reed v002 are recorded in `Batches/p3c1_polish_001.md`; technical selection/integration is not a new human approval claim.

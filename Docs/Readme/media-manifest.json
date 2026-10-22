@@ -1,0 +1,201 @@
+{
+  "batch": "readme_showcase_001",
+  "date": "2026-10-22",
+  "runtimeImports": false,
+  "newImageGenCalls": 0,
+  "files": [
+    {
+      "path": "Docs/Readme/Media/danube-assault.gif",
+      "bytes": 763453,
+      "sha256": "06a83010b090a43c93ea1b128aec53e6e53e3f8ce3cc74bff10de8c2d5689a05",
+      "width": 960,
+      "height": 540,
+      "format": "GIF",
+      "frames": 120,
+      "durationMs": 12000,
+      "loop": 0
+    },
+    {
+      "path": "Docs/Readme/Media/danube-border-poster.png",
+      "bytes": 410810,
+      "sha256": "299e171d6a905a8fdfec7e0790900a0f292bbd4bdb8df5c154d7ae0a1203dad4",
+      "width": 960,
+      "height": 540,
+      "format": "PNG"
+    },
+    {
+      "path": "Docs/Readme/Media/danube-border.png",
+      "bytes": 401712,
+      "sha256": "f53b3a0caa56c12594e4d8a514f10c2f1570831cc8347227ec0c80ed414f7b60",
+      "width": 960,
+      "height": 540,
+      "format": "PNG"
+    },
+    {
+      "path": "Docs/Readme/Media/hero.svg",
+      "bytes": 127935,
+      "sha256": "1a5c7e335bc185380358916c72b3df9e7a788ef38a61e67afcba2f0af9411d7b",
+      "width": 1280,
+      "height": 350,
+      "format": "SVG"
+    },
+    {
+      "path": "Docs/Readme/Media/industrial-port-poster.png",
+      "bytes": 642732,
+      "sha256": "099e4c6be401e002f54c0a3d142cb52048ef307308f80d1cc35fb836d6ec9d2e",
+      "width": 960,
+      "height": 540,
+      "format": "PNG"
+    },
+    {
+      "path": "Docs/Readme/Media/industrial-port.png",
+      "bytes": 630621,
+      "sha256": "f92c3e4869df3d2af9b23777cbded8a84ac07d882d0df29b3a0f04f78b4233fb",
+      "width": 960,
+      "height": 540,
+      "format": "PNG"
+    },
+    {
+      "path": "Docs/Readme/Media/port-assault.gif",
+      "bytes": 1152047,
+      "sha256": "ca48bfb5f08add6a34365fef44198833072cce361e5f36bef27c05fedab15484",
+      "width": 960,
+      "height": 540,
+      "format": "GIF",
+      "frames": 120,
+      "durationMs": 12000,
+      "loop": 0
+    },
+    {
+      "path": "Docs/Readme/Media/section-deploy.svg",
+      "bytes": 13120,
+      "sha256": "5d7435f486cb31755e10fa2786d8a68625ddfb69c2674b0b883da8d0ca3848c3",
+      "width": 1280,
+      "height": 112,
+      "format": "SVG"
+    },
+    {
+      "path": "Docs/Readme/Media/section-field.svg",
+      "bytes": 16945,
+      "sha256": "0acd9d8f19fae08b38140f091d0b1159ffce246324d1a6e3e213590f1071cfc2",
+      "width": 1280,
+      "height": 112,
+      "format": "SVG"
+    },
+    {
+      "path": "Docs/Readme/Media/section-systems.svg",
+      "bytes": 17525,
+      "sha256": "4ad707d385b24793fbda3cc409c3d681c3e1c66bf5570f559a63fe559ecc6a7a",
+      "width": 1280,
+      "height": 112,
+      "format": "SVG"
+    },
+    {
+      "path": "Docs/Readme/Media/section-workshop.svg",
+      "bytes": 32985,
+      "sha256": "d288731732d98f613b2fbfe4219f2a8ae34add7e479583a01ec71d6bda9f2f58",
+      "width": 1280,
+      "height": 112,
+      "format": "SVG"
+    }
+  ],
+  "totalMediaBytes": 4209885,
+  "sources": [
+    {
+      "path": "ART_BIBLE.md",
+      "sha256": "792d3b5b124aaee70f47998b615eef04f97b6505c50a89e2202ceb575affd164"
+    },
+    {
+      "path": "Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
+      "sha256": "354421e55c341bfbcc65993ba20c644842eec44073cd3bbb7eb3b7794f7d7e45"
+    },
+    {
+      "path": "Assets/Game/Art/UI/bd_ui_hud_pixel_v001.ttf",
+      "sha256": "02e365c6ede2e38417c1eb9b33fff4b1d43abee08f8964c7ed388266e8cce4b2"
+    },
+    {
+      "path": "Assets/Game/Art/Props/bd_prop_rubber_boat_v001.png",
+      "sha256": "127f42400a2887eff57d666d8cc3f264d240e10053ff0d88b5796e19c64a0e02"
+    },
+    {
+      "path": "Assets/Game/Art/Defenses/MachineGunNest/bd_defense_mg_preview_v001.png",
+      "sha256": "b46d2eb53505be30b0b53aea7179930429ab262857b92e7a072c2778d0557122"
+    },
+    {
+      "path": "Assets/Game/Art/UI/bd_ui_barbed_wire_icon_v001.png",
+      "sha256": "ff0056fe6fcc90f73217fd3b7c986a510b52a3cc8aec4d5e4f54be95391926b0"
+    },
+    {
+      "path": "Assets/Game/Art/UI/bd_ui_mg_nest_icon_v001.png",
+      "sha256": "163786885ef09d92cca1c7c3a51c06a4668c04d9a4f8672b025b01863fcb4356"
+    },
+    {
+      "path": "Assets/Game/Art/UI/ui_icon_autocannon.png",
+      "sha256": "6ff7e6e119875987032447b33ded219693f3e5ccd0f7e35456fa494fe5c007d5"
+    },
+    {
+      "path": "Assets/Game/Art/UI/bd_ui_land_mine_icon_v001.png",
+      "sha256": "9a3bedb4f3c6149abb757e703b8b943357330e560b990d070e7a8c8ad86f1853"
+    },
+    {
+      "path": "Assets/Game/Art/UI/ui_icon_money_rsd.png",
+      "sha256": "7033b4ef6a518fac510c201ec394988e5ff5ef2714ef3403f5d1017fed9955a3"
+    },
+    {
+      "path": "Docs/Validation/Phase5C/hud-1080.png",
+      "sha256": "23208c7cc9c355315a5fbbaf01326fe43d419eda62072ecb7e39c3aa849c180a"
+    },
+    {
+      "path": "Docs/Validation/Phase6A/boss-encounter-hud.png",
+      "sha256": "a26b507ce8e351c1c8963f98e83ea4bd559450c038b8da289062eb2bc040231c"
+    }
+  ],
+  "previewChecks": {
+    "desktop": {
+      "width": 1400,
+      "documentWidth": 1400,
+      "images": [],
+      "diagrams": 3,
+      "diagramSizes": [
+        {
+          "width": 854,
+          "height": 965.984375,
+          "viewBox": "0 0 868.15625 982"
+        },
+        {
+          "width": 850.75,
+          "height": 1030,
+          "viewBox": "0 0 850.75 1030"
+        },
+        {
+          "width": 276,
+          "height": 598,
+          "viewBox": "0 0 276 598"
+        }
+      ]
+    },
+    "expanded": [],
+    "mobile": {
+      "width": 390,
+      "documentWidth": 390
+    },
+    "errors": []
+  },
+  "authoring": [
+    {
+      "path": "Docs/Readme/Tools/build_media.py",
+      "sha256": "87c0009d7a2342f596b13a41e7d371bad8cd00b619842462978ebcf5034be607"
+    },
+    {
+      "path": "Docs/Readme/Tools/CaptureShowcase.cs",
+      "sha256": "416a9db737035811a4cded0d4768f9c33e10862f0cdbf30746b59990bb07929f"
+    }
+  ],
+  "captureChecks": {
+    "unity": "6000.3.24f1",
+    "consoleErrors": 0,
+    "consoleWarnings": 1,
+    "warning": "SpriteAtlasManager.atlasRequested wasn't listened to while PortEnvironment requested.",
+    "runtimeAssetChanges": false
+  }
+}
