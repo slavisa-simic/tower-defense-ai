@@ -1,0 +1,6 @@
+{
+  "name": "ShorelineDefense.PlayModeTests",
+  "rootNamespace": "ShorelineDefense.Tests",
+  "references": ["ShorelineDefense.Runtime"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

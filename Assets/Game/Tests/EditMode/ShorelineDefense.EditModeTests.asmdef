@@ -1,0 +1,7 @@
+{
+  "name": "ShorelineDefense.EditModeTests",
+  "rootNamespace": "ShorelineDefense.Tests",
+  "references": ["ShorelineDefense.Runtime"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}
