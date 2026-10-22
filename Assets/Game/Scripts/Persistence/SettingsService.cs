@@ -19,7 +19,9 @@ namespace ShorelineDefense.Persistence
         {
             store = files;
             store.Read<GameSettings>("settings", Valid, out var data, out string error);
-            Current = data ?? new GameSettings { width = Screen.width > 0 ? Screen.width : 1920, height = Screen.height > 0 ? Screen.height : 1080, fullscreen = Screen.fullScreen };
+            var displayDefaults = new GameSettings { width = Screen.width, height = Screen.height, fullscreen = Screen.fullScreen };
+            // A small Editor Game View must not create defaults that Save rejects.
+            Current = data ?? (Valid(displayDefaults) ? displayDefaults : new GameSettings { fullscreen = Screen.fullScreen });
             Error = error;
         }
         public static bool Valid(GameSettings d) => d != null && d.saveVersion == 1 && d.width >= 800 && d.width <= 16384 && d.height >= 600 && d.height <= 16384 && d.vfxDensity >= 0 && d.vfxDensity <= 2;

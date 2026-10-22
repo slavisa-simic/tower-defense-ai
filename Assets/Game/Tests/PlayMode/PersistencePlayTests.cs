@@ -111,6 +111,8 @@ namespace ShorelineDefense.Tests
         [UnityTest] public IEnumerator SettingsApplyLivePresentationCapsAndPersistAcrossScene()
         {
             Click("menu-settings"); Root.Q<DropdownField>("settings-vfx").index = 0; Root.Q<Toggle>("settings-rewards").value = false; Root.Q<Toggle>("settings-vsync").value = false; Click("settings-apply");
+            Assert.That(Root.Q<Label>("settings-result").text, Is.EqualTo("SETTINGS SAVED"),
+                $"{SettingsService.Instance.Error}; resolution={Root.Q<DropdownField>("settings-resolution").value}");
             Assert.That(SettingsService.Instance.Current.vfxDensity, Is.Zero); Assert.That(QualitySettings.vSyncCount, Is.Zero); Click("settings-back"); Click("menu-new"); Click("map-river_border"); Click("map-start"); yield return Transition("CoastalDefense_TopDown");
             Assert.That(Find<VfxService>().Pool(VfxChannel.Decal).PlaybackLimit, Is.EqualTo(12)); Assert.That(new SettingsService(LocalGameData.Files).Current.rewardPopups, Is.False);
             Find<ProductMenuController>().ShowPause(); Click("pause-restart"); Click("confirm-accept"); yield return Transition("CoastalDefense_TopDown"); Assert.That(SettingsService.Instance.Current.vfxDensity, Is.Zero);
