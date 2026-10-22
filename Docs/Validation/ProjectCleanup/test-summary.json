@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-22",
+  "editor": "6000.3.24f1",
+  "initialEditMode": {
+    "result": "Passed",
+    "total": 122,
+    "passed": 122,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 1.4444634
+  },
+  "initialPlayMode": {
+    "result": "Failed(Child)",
+    "total": 75,
+    "passed": 74,
+    "failed": 1,
+    "skipped": 0,
+    "durationSeconds": 127.0807275
+  },
+  "reproducedFailure": {
+    "test": "PersistencePlayTests.SettingsApplyLivePresentationCapsAndPersistAcrossScene",
+    "resolution": "640 x 480",
+    "message": "Invalid display settings."
+  },
+  "focusedSettingsAfterFix": {
+    "result": "Passed",
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 2.1083624
+  },
+  "finalEditMode": {
+    "result": "Passed",
+    "total": 122,
+    "passed": 122,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 0.7927474
+  },
+  "finalPlayMode": {
+    "result": "Passed",
+    "total": 75,
+    "passed": 75,
+    "failed": 0,
+    "skipped": 0,
+    "durationSeconds": 127.7933877
+  },
+  "compiler": {
+    "baseline": "CS0169: BoatLandingSystem.nextPoint is never used",
+    "finalErrors": 0,
+    "finalWarnings": 0
+  },
+  "assetAudit": {
+    "remainingAssetMetadata": 807,
+    "removedEmptyFolderMetadata": 22,
+    "duplicateGuids": [],
+    "malformedMetadata": [],
+    "missingMetadata": [],
+    "orphanMetadata": [],
+    "unrepresentedFolders": [],
+    "referencesToDeletedGuids": [],
+    "invalidProjectJson": [],
+    "missingBuildScenes": []
+  }
+}

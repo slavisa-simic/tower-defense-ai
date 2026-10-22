@@ -42,7 +42,6 @@ namespace ShorelineDefense.Waves
             public SpriteRenderer[] passengers;
         }
         private readonly List<Transport> boats = new List<Transport>(6);
-        private int nextPoint;
         private readonly Dictionary<GameObject, Stack<GameObject>> visualPools = new Dictionary<GameObject, Stack<GameObject>>();
         private readonly Dictionary<GameObject, GameObject> visualSources = new Dictionary<GameObject, GameObject>();
         private int[] recentLandings;

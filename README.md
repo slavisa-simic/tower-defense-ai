@@ -52,7 +52,7 @@ The menu provides Continue, map selection, settings, and run history. Saves reco
 - `Assets/Game/Data/`: ScriptableObject definitions for maps, defenses, enemies, waves, and events.
 - `Assets/Game/Scenes/`, `Prefabs/`, `Animations/`, and `UI/`: saved playable content and UI Toolkit assets.
 - `Assets/Game/Art/`: runtime art, master references, and versioned source sheets.
-- `Assets/Game/Audio/`: audio pipeline fixtures; production audio is not connected to gameplay.
+- `Assets/Game/Audio/`: audio pipeline fixtures; create additional category folders when they receive assets. Production audio is not connected to gameplay.
 - `Assets/Game/Tests/`: EditMode and PlayMode regression suites.
 - `Docs/Art/`: asset register, batch provenance, and integration guidance.
 - `Docs/Validation/`: historical test results, screenshots, authoring scripts, and build evidence.
@@ -72,7 +72,9 @@ unity test . --mode PlayMode --output TestResults/playmode.xml
 
 The recorded Phase 6A validation reports **122/122 EditMode** and **75/75 PlayMode** tests passed, plus a successful Windows release build. These are historical results from 2026-10-03; see [the Phase 6A report](PHASE_6A_REPORT.md) and [test summary](Docs/Validation/Phase6A/test-summary.json).
 
-During repository preparation on 2026-10-22, a fresh test attempt could not start because the required Unity 6000.3.24f1 Editor was not installed. The installed 6000.6.0f1 Editor was not used to upgrade the project. Fresh compilation, Console inspection, and test results remain unverified for this import.
+Fresh cleanup checks on **2026-10-22**, using the pinned Unity 6000.3.24f1 Editor, passed **122/122 EditMode** and **75/75 PlayMode** tests with no C# compiler errors or warnings. See [the repository cleanup report](Docs/Validation/ProjectCleanup/report.md) for scope and results.
+
+If the Unity CLI cannot find an existing Editor installation, register its executable with `unity editors add "C:/path/to/Editor/Unity.exe"`.
 
 Human comparative balance checks, earned-income midgame/boss victories, and sustained standalone profiling remain limits documented in the Phase 6A report.
 

@@ -7,7 +7,7 @@ Prepared 2026-10-02 for Phase 5A. This document sets production requirements; it
 - Preserve the generator's original download unchanged in `Assets/Game/Audio/Source/<category>/`. Prefer lossless WAV PCM, 48 kHz, 24-bit source masters when the provider can actually deliver them. Retain a native MP3 if that is the only provider output; transcoding does not recover lost fidelity and must be labeled as a decoded working master.
 - Use 48 kHz PCM WAV, 16-bit or 24-bit, for processed short SFX. Mono is the default for positional weapons, impacts, enemies and boats. Stereo is appropriate for music, broad ambience and authored UI where justified.
 - Use OGG Vorbis for approved longer music/ambience exports where useful. Unity can also compress a WAV during import; avoid double lossy compression. Choose runtime import settings after target-device profiling.
-- Categories in both Source and Processed: Weapons, Explosions, Impacts, Enemies, Bosses, Boats, Environment, UI, Music, Radio. Mixers and Definitions are reserved for future assets. Keep prompts/receipts/license records in `Docs/Audio/`, not runtime folders. Preserve existing GUIDs and do not relocate working assets without AssetDatabase.
+- Categories for Source and Processed: Weapons, Explosions, Impacts, Enemies, Bosses, Boats, Environment, UI, Music, Radio. Create a category folder when it receives its first asset; only Environment currently contains test clips. Likewise, create Mixers and Definitions when actual assets need them. Keep prompts/receipts/license records in `Docs/Audio/`, not runtime folders. Preserve existing asset GUIDs and do not relocate working assets without AssetDatabase.
 
 ## Names, revisions and variations
 
