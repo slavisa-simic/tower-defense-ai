@@ -1,6 +1,6 @@
 # Phase 3A-2 enemy art specifications
 
-2026-09-19. Batch `p3a2_core_enemies_001`. Production uses the user-selected Danube master v002, the existing art/lore bibles, and the requested internal enemy-look review before animation. Technical selection is not a claim of separate user approval.
+2026-09-19. Batch `p3a2_core_enemies_001`. Production uses the user-selected Danube master v002, the existing art/lore handbooks, and the requested internal enemy-look review before animation. Technical selection is not a claim of separate user approval.
 
 ## Scale and presentation
 

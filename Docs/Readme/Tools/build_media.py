@@ -94,7 +94,7 @@ def build():
     sections = [
         ("field", "01", "HOLD THE RIVER", "MAPS / DEFENSES / INCOMING CONTACTS", "UI/bd_ui_mg_nest_icon_v001.png"),
         ("systems", "02", "INSIDE THE DEFENSE LINE", "COMMANDS / STATE / PRESENTATION", "UI/ui_icon_autocannon.png"),
-        ("workshop", "03", "BUILT WITH CODEX", "PHASE BRIEFS / ART BIBLE / CUSTOM SKILLS", "UI/bd_ui_land_mine_icon_v001.png"),
+        ("workshop", "03", "BUILT WITH CODEX", "PHASE BRIEFS / ART HANDBOOK / CUSTOM SKILLS", "UI/bd_ui_land_mine_icon_v001.png"),
         ("deploy", "04", "OPEN THE PROJECT", "SETUP / CONTROLS / VALIDATION", "UI/ui_icon_money_rsd.png"),
     ]
     for name, number, heading, subtitle, icon in sections:

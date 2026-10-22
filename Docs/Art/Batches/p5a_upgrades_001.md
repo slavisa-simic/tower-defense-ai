@@ -1,6 +1,6 @@
 # Phase 5A upgrade overlay batch
 
-Date: 2026-10-03. Scope: Level II/III add-on layers for the existing eight defenses, selection corner markers and functional UI Toolkit management controls. Approved style reference: `Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png`, recorded approval in ART_BIBLE.md. The user explicitly authorized autonomous upgrade visual production and integration; this batch is agent-selected under that authorization, not a claim of separate human image approval.
+Date: 2026-10-03. Scope: Level II/III add-on layers for the existing eight defenses, selection corner markers and functional UI Toolkit management controls. Approved style reference: `Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png`, recorded approval in ART_HANDBOOK.md. The user explicitly authorized autonomous upgrade visual production and integration; this batch is agent-selected under that authorization, not a claim of separate human image approval.
 
 ## Deliverables and provenance
 

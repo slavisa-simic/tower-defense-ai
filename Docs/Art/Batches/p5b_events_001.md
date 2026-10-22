@@ -1,6 +1,6 @@
 # Phase 5B event presentation reuse
 
-Reference contract: approved Danube master v002 and ART_BIBLE.md. This batch adds no generated raster art and replaces no existing approved asset. Existing sprite GUIDs/import settings and all gameplay prefab roots remain intact.
+Reference contract: approved Danube master v002 and ART_HANDBOOK.md. This batch adds no generated raster art and replaces no existing approved asset. Existing sprite GUIDs/import settings and all gameplay prefab roots remain intact.
 
 Consumers:
 - `EndlessEventDefinition.uiIcon`: existing wave chevrons for assault/pattern/weather events; existing Auto Cannon icon for heavy/militant events; existing dismantle tools icon for Field Engineers; existing RSD paper bundle for Emergency Supply. Names and effects remain functional UI Toolkit text.

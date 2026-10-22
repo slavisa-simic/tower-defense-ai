@@ -1,4 +1,4 @@
-# Border Defenders lore bible
+# Border Defenders lore handbook
 
 Phase 3A-1, 2026-09-18. Visual fiction for the user's alternate post-nuclear Balkan timeline; not a claim about real events or people.
 

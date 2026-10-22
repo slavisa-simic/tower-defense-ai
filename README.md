@@ -163,7 +163,7 @@ Gameplay is strictly **XY**: X horizontal, Y vertical, Z for presentation depth.
 
 </details>
 
-<img src="Docs/Readme/Media/section-workshop.svg" width="1280" alt="Workshop report: phase briefs, art bible and custom skills">
+<img src="Docs/Readme/Media/section-workshop.svg" width="1280" alt="Workshop report: phase briefs, art handbook and custom skills">
 
 ## Built with Codex
 
@@ -184,19 +184,19 @@ Development followed bounded phase briefs. The game owner chose the direction an
 
 These reports preserve their original status and limitations. For example, Phase 4C records an unavailable requested boss-art batch and its visual fallback. The playable implementation and the art delivery status are recorded separately.
 
-### An art bible before an art batch
+### An art handbook before an art batch
 
 <a href="Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png"><img src="Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png" width="960" alt="Approved Danube master reference v002: overhead riverbank, quarantine base, material palette, silhouettes and UI studies."></a>
 
 *The approved visual master, v002. This is the art-direction board, not a gameplay screenshot.*
 
-The [art bible](ART_BIBLE.md) fixes the overhead perspective, material language, palette, scale, silhouettes, and readable UI. The [lore bible](LORE_BIBLE.md) establishes the alternate post-nuclear Balkan setting. The selected master revision anchors later batches.
+The [art handbook](ART_HANDBOOK.md) fixes the overhead perspective, material language, palette, scale, silhouettes, and readable UI. The [lore handbook](LORE_HANDBOOK.md) establishes the alternate post-nuclear Balkan setting. The selected master revision anchors later batches.
 
 ```mermaid
 flowchart TD
     accTitle: Art production and integration workflow
-    accDescr: A bounded brief and art bible reuse the approved master, followed by recorded source batches, pixel exports, existing Unity presentation consumers, and validation evidence.
-    Direction["Art bible + approved master v002<br/>camera · palette · scale"] --> Batch["Bounded batch<br/>prompts · sources · revisions"]
+    accDescr: A bounded brief and art handbook reuse the approved master, followed by recorded source batches, pixel exports, existing Unity presentation consumers, and validation evidence.
+    Direction["Art handbook + approved master v002<br/>camera · palette · scale"] --> Batch["Bounded batch<br/>prompts · sources · revisions"]
     Batch --> Integration["Pixel exports + Unity integration<br/>PPU · alpha · GUIDs · consumers"]
     Integration --> Evidence["Validation + asset register<br/>tests · captures · selection status"]
     classDef data fill:#293b3c,stroke:#7d9b91,color:#f3ead4

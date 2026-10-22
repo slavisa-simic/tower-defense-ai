@@ -4,7 +4,7 @@ Phase 3A-3, produced 2026-09-20–21. Status: **integrated and validated**, exce
 
 ## Scope, references, and generation receipts
 
-Approved style anchor: `Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png`, selected in Phase 3A-1. Existing bibles, production rules, environment/enemy art, and actual DefenseDefinitions/prefabs/grid informed this batch. The approved master and previous phase exports are unchanged.
+Approved style anchor: `Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png`, selected in Phase 3A-1. Existing handbooks, production rules, environment/enemy art, and actual DefenseDefinitions/prefabs/grid informed this batch. The approved master and previous phase exports are unchanged.
 
 Used the built-in ImageGen capability directly, sequentially for each defense and its edits. The tool did not expose a model revision or seed; neither is invented. All 29 native PNG outputs were copied byte-for-byte into `Assets/Game/Art/SourceSheets/p3a3_defenses_001/`. The [final manifest](p3a3_final_manifest.json) records each original generator path, repository path, exact dimensions, mode, SHA-256, prompt path, and byte-identity result. It also catalogs all 24 runtime exports with source, dimensions, pivot, FPS, PPU, consumer, and status.
 

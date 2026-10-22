@@ -33,8 +33,8 @@
     },
     {
       "path": "Docs/Readme/Media/hero.svg",
-      "bytes": 127935,
-      "sha256": "1a5c7e335bc185380358916c72b3df9e7a788ef38a61e67afcba2f0af9411d7b",
+      "bytes": 127934,
+      "sha256": "1083ca485fa4732bd10e3051725155a9f681b923ec36a33f75a52f9f0da1d5e5",
       "width": 1280,
       "height": 350,
       "format": "SVG"
@@ -68,42 +68,42 @@
     },
     {
       "path": "Docs/Readme/Media/section-deploy.svg",
-      "bytes": 13120,
-      "sha256": "5d7435f486cb31755e10fa2786d8a68625ddfb69c2674b0b883da8d0ca3848c3",
+      "bytes": 13119,
+      "sha256": "6704a2495f4df00de6d1858b6fa1640a46b8d9b0b9cf5f8ae101254d28ded02d",
       "width": 1280,
       "height": 112,
       "format": "SVG"
     },
     {
       "path": "Docs/Readme/Media/section-field.svg",
-      "bytes": 16945,
-      "sha256": "0acd9d8f19fae08b38140f091d0b1159ffce246324d1a6e3e213590f1071cfc2",
+      "bytes": 16944,
+      "sha256": "3bb5637b47f80f2c8efc346f607a25720785950e5041a3f2433643d24e3397c7",
       "width": 1280,
       "height": 112,
       "format": "SVG"
     },
     {
       "path": "Docs/Readme/Media/section-systems.svg",
-      "bytes": 17525,
-      "sha256": "4ad707d385b24793fbda3cc409c3d681c3e1c66bf5570f559a63fe559ecc6a7a",
+      "bytes": 17524,
+      "sha256": "b3f6f93a707384d81ed9deb239d15ca7dba915a6214ba4c0ac1f941f37da20a9",
       "width": 1280,
       "height": 112,
       "format": "SVG"
     },
     {
       "path": "Docs/Readme/Media/section-workshop.svg",
-      "bytes": 32985,
-      "sha256": "d288731732d98f613b2fbfe4219f2a8ae34add7e479583a01ec71d6bda9f2f58",
+      "bytes": 32987,
+      "sha256": "cfcae7ecfc3969c0dc738329638ae465627d04fe30b32a8c204489ee2b3e934f",
       "width": 1280,
       "height": 112,
       "format": "SVG"
     }
   ],
-  "totalMediaBytes": 4209885,
+  "totalMediaBytes": 4209883,
   "sources": [
     {
-      "path": "ART_BIBLE.md",
-      "sha256": "792d3b5b124aaee70f47998b615eef04f97b6505c50a89e2202ceb575affd164"
+      "path": "ART_HANDBOOK.md",
+      "sha256": "4cbdf2e8a9a9a1d943b2ad47c1d571c85eda4c9e4d2a259eed78eb343e7674bf"
     },
     {
       "path": "Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png",
@@ -184,7 +184,7 @@
   "authoring": [
     {
       "path": "Docs/Readme/Tools/build_media.py",
-      "sha256": "87c0009d7a2342f596b13a41e7d371bad8cd00b619842462978ebcf5034be607"
+      "sha256": "acacfa1ccfe4a5f68b1949afe50ec4c918edcd959b3f1e790a78d2c1c3668c82"
     },
     {
       "path": "Docs/Readme/Tools/CaptureShowcase.cs",

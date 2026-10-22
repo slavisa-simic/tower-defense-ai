@@ -2,7 +2,7 @@
 
 Created 2026-10-22 for the requested repository presentation refresh. Media stay outside Unity's Assets tree. Existing game art, metadata, scenes, configuration, and gameplay source are unchanged.
 
-The visual hierarchy follows `ui-ux-pro-max` guidance for contrast, consistent styling, descriptive alternatives, responsive layouts, and meaningful motion. The palette comes from `ART_BIBLE.md` and approved Danube master v002. The title and section labels use the existing Border Defenders HUD font, converted into self-contained SVG paths. Existing runtime sprite pixels are represented as SVG paths; no external fonts, embedded scripts, raster links, or new ImageGen assets are required by the SVGs.
+The visual hierarchy follows `ui-ux-pro-max` guidance for contrast, consistent styling, descriptive alternatives, responsive layouts, and meaningful motion. The palette comes from `ART_HANDBOOK.md` and approved Danube master v002. The title and section labels use the existing Border Defenders HUD font, converted into self-contained SVG paths. Existing runtime sprite pixels are represented as SVG paths; no external fonts, embedded scripts, raster links, or new ImageGen assets are required by the SVGs.
 
 | Media | Origin and treatment |
 | --- | --- |

@@ -86,7 +86,7 @@ Built-in ImageGen generated five raw candidates: rejected reeds v001, selected r
 
 Runtime exports: reeds/shrub 48x48, grass 32x32; 16 wire v002 masks 64x64; shared code-native contact sprite 64x64. Export uses recorded nearest sampling, hard alpha and no-dither channel reduction. Opposing wire boundaries match all 64 horizontal plus 64 vertical mask pairs pixel-for-pixel. All 20 runtime import/alpha checks passed. World imports retain 51.2 PPU, Point, uncompressed, no mipmaps, Full Rect, centered pivots and no generated physics shapes.
 
-Existing artwork remains unchanged. Six existing primary prefabs retain GUIDs and gameplay roots; scene/prefab editing used Unity AssetDatabase/PrefabUtility/EditorSceneManager. Original v001 wire assets remain available. No packages, UI redesign, new defense/enemy roster or multiplayer added. ART_BIBLE and ASSET_REGISTER contain the durable rules and output inventory.
+Existing artwork remains unchanged. Six existing primary prefabs retain GUIDs and gameplay roots; scene/prefab editing used Unity AssetDatabase/PrefabUtility/EditorSceneManager. Original v001 wire assets remain available. No packages, UI redesign, new defense/enemy roster or multiplayer added. ART_HANDBOOK and ASSET_REGISTER contain the durable rules and output inventory.
 
 ## 12. Tests executed
 

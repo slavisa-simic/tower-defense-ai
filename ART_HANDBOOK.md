@@ -1,4 +1,4 @@
-# Border Defenders art bible
+# Border Defenders art handbook
 
 ## Durable Phase 3C.1 presentation conventions
 
