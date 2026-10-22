@@ -1,0 +1,33 @@
+diff --git a/Docs/Validation/PrePhase5A/before-EndlessSurvival.asset.txt b/Docs/Validation/PrePhase5A/after-EndlessSurvival.asset.txt
+index 7b2c2a4..ea7e6f8 100644
+--- a/Docs/Validation/PrePhase5A/before-EndlessSurvival.asset.txt
++++ b/Docs/Validation/PrePhase5A/after-EndlessSurvival.asset.txt
+@@ -23,7 +23,7 @@ MonoBehaviour:
+   baseBudget: 16
+   linearGrowth: 8
+   nonlinearGrowth: 0.08
+-  maximumEnemiesPerWave: 2400
++  maximumEnemiesPerWave: 1200
+   maximumActiveEnemies: 400
+   seed: 1977
+   randomizeSeed: 1
+@@ -41,13 +41,13 @@ MonoBehaviour:
+   maximumConcurrentBoats: 28
+   initialConcurrentBoats: 6
+   bossEncounters: {fileID: 11400000, guid: 5eb7865b2fe72f741a96d5e58dd675ad, type: 2}
+-  enemyQuantityMultiplier: 10
+-  globalEnemyHealthMultiplier: 3
+-  bossHealthMultiplier: 3
++  enemyQuantityMultiplier: 5
++  globalEnemyHealthMultiplier: 1
++  bossHealthMultiplier: 1
+   pressureDirectorEnabled: 1
+-  earlyPressureTarget: 50
+-  maximumPressureTarget: 320
+-  pressureGrowthPerWave: 8
++  earlyPressureTarget: 25
++  maximumPressureTarget: 160
++  pressureGrowthPerWave: 4
+   pressureHysteresis: 0.2
+   directorEvaluationInterval: 0.2
+   acceleratedArrivalInterval: 0.15

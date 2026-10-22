@@ -1,0 +1,742 @@
+{
+  "number": 20,
+  "externalMoney": 18000,
+  "planned": 435,
+  "peak": 115,
+  "bpeak": 12,
+  "Homicides": 100,
+  "TotalKills": 434,
+  "BossesKilled": 0,
+  "BossesBreached": 0,
+  "income": 17830,
+  "seconds": 37.744589699999892,
+  "state": "Preparation",
+  "samples": [
+    {
+      "enemies": 0,
+      "boats": 1,
+      "pending": 435,
+      "boss": null
+    },
+    {
+      "enemies": 0,
+      "boats": 3,
+      "pending": 435,
+      "boss": null
+    },
+    {
+      "enemies": 0,
+      "boats": 5,
+      "pending": 435,
+      "boss": null
+    },
+    {
+      "enemies": 5,
+      "boats": 7,
+      "pending": 430,
+      "boss": null
+    },
+    {
+      "enemies": 15,
+      "boats": 9,
+      "pending": 420,
+      "boss": null
+    },
+    {
+      "enemies": 27,
+      "boats": 10,
+      "pending": 408,
+      "boss": null
+    },
+    {
+      "enemies": 35,
+      "boats": 10,
+      "pending": 400,
+      "boss": null
+    },
+    {
+      "enemies": 42,
+      "boats": 12,
+      "pending": 393,
+      "boss": null
+    },
+    {
+      "enemies": 51,
+      "boats": 11,
+      "pending": 384,
+      "boss": null
+    },
+    {
+      "enemies": 43,
+      "boats": 10,
+      "pending": 376,
+      "boss": null
+    },
+    {
+      "enemies": 52,
+      "boats": 11,
+      "pending": 366,
+      "boss": null
+    },
+    {
+      "enemies": 60,
+      "boats": 10,
+      "pending": 358,
+      "boss": null
+    },
+    {
+      "enemies": 66,
+      "boats": 10,
+      "pending": 352,
+      "boss": null
+    },
+    {
+      "enemies": 74,
+      "boats": 10,
+      "pending": 344,
+      "boss": null
+    },
+    {
+      "enemies": 85,
+      "boats": 10,
+      "pending": 331,
+      "boss": null
+    },
+    {
+      "enemies": 88,
+      "boats": 9,
+      "pending": 327,
+      "boss": null
+    },
+    {
+      "enemies": 93,
+      "boats": 9,
+      "pending": 322,
+      "boss": null
+    },
+    {
+      "enemies": 97,
+      "boats": 6,
+      "pending": 318,
+      "boss": null
+    },
+    {
+      "enemies": 108,
+      "boats": 5,
+      "pending": 307,
+      "boss": null
+    },
+    {
+      "enemies": 98,
+      "boats": 4,
+      "pending": 295,
+      "boss": null
+    },
+    {
+      "enemies": 102,
+      "boats": 5,
+      "pending": 288,
+      "boss": null
+    },
+    {
+      "enemies": 103,
+      "boats": 6,
+      "pending": 285,
+      "boss": null
+    },
+    {
+      "enemies": 104,
+      "boats": 5,
+      "pending": 283,
+      "boss": null
+    },
+    {
+      "enemies": 107,
+      "boats": 5,
+      "pending": 279,
+      "boss": null
+    },
+    {
+      "enemies": 112,
+      "boats": 3,
+      "pending": 273,
+      "boss": null
+    },
+    {
+      "enemies": 112,
+      "boats": 3,
+      "pending": 269,
+      "boss": null
+    },
+    {
+      "enemies": 113,
+      "boats": 3,
+      "pending": 267,
+      "boss": null
+    },
+    {
+      "enemies": 111,
+      "boats": 4,
+      "pending": 265,
+      "boss": null
+    },
+    {
+      "enemies": 82,
+      "boats": 2,
+      "pending": 264,
+      "boss": null
+    },
+    {
+      "enemies": 84,
+      "boats": 3,
+      "pending": 261,
+      "boss": null
+    },
+    {
+      "enemies": 86,
+      "boats": 4,
+      "pending": 258,
+      "boss": null
+    },
+    {
+      "enemies": 86,
+      "boats": 4,
+      "pending": 256,
+      "boss": null
+    },
+    {
+      "enemies": 90,
+      "boats": 5,
+      "pending": 250,
+      "boss": null
+    },
+    {
+      "enemies": 92,
+      "boats": 5,
+      "pending": 246,
+      "boss": null
+    },
+    {
+      "enemies": 92,
+      "boats": 6,
+      "pending": 243,
+      "boss": null
+    },
+    {
+      "enemies": 91,
+      "boats": 7,
+      "pending": 240,
+      "boss": null
+    },
+    {
+      "enemies": 89,
+      "boats": 5,
+      "pending": 235,
+      "boss": null
+    },
+    {
+      "enemies": 74,
+      "boats": 4,
+      "pending": 229,
+      "boss": null
+    },
+    {
+      "enemies": 72,
+      "boats": 5,
+      "pending": 222,
+      "boss": null
+    },
+    {
+      "enemies": 74,
+      "boats": 5,
+      "pending": 217,
+      "boss": null
+    },
+    {
+      "enemies": 77,
+      "boats": 5,
+      "pending": 212,
+      "boss": null
+    },
+    {
+      "enemies": 82,
+      "boats": 6,
+      "pending": 206,
+      "boss": null
+    },
+    {
+      "enemies": 91,
+      "boats": 6,
+      "pending": 196,
+      "boss": null
+    },
+    {
+      "enemies": 95,
+      "boats": 6,
+      "pending": 192,
+      "boss": null
+    },
+    {
+      "enemies": 101,
+      "boats": 6,
+      "pending": 185,
+      "boss": null
+    },
+    {
+      "enemies": 107,
+      "boats": 4,
+      "pending": 174,
+      "boss": null
+    },
+    {
+      "enemies": 115,
+      "boats": 4,
+      "pending": 165,
+      "boss": null
+    },
+    {
+      "enemies": 89,
+      "boats": 4,
+      "pending": 160,
+      "boss": null
+    },
+    {
+      "enemies": 77,
+      "boats": 5,
+      "pending": 158,
+      "boss": null
+    },
+    {
+      "enemies": 78,
+      "boats": 4,
+      "pending": 157,
+      "boss": null
+    },
+    {
+      "enemies": 78,
+      "boats": 3,
+      "pending": 155,
+      "boss": null
+    },
+    {
+      "enemies": 80,
+      "boats": 4,
+      "pending": 153,
+      "boss": null
+    },
+    {
+      "enemies": 83,
+      "boats": 5,
+      "pending": 149,
+      "boss": null
+    },
+    {
+      "enemies": 88,
+      "boats": 5,
+      "pending": 144,
+      "boss": null
+    },
+    {
+      "enemies": 91,
+      "boats": 5,
+      "pending": 139,
+      "boss": null
+    },
+    {
+      "enemies": 96,
+      "boats": 4,
+      "pending": 134,
+      "boss": null
+    },
+    {
+      "enemies": 102,
+      "boats": 4,
+      "pending": 127,
+      "boss": null
+    },
+    {
+      "enemies": 95,
+      "boats": 5,
+      "pending": 120,
+      "boss": null
+    },
+    {
+      "enemies": 86,
+      "boats": 5,
+      "pending": 116,
+      "boss": null
+    },
+    {
+      "enemies": 92,
+      "boats": 6,
+      "pending": 109,
+      "boss": null
+    },
+    {
+      "enemies": 96,
+      "boats": 6,
+      "pending": 102,
+      "boss": null
+    },
+    {
+      "enemies": 104,
+      "boats": 6,
+      "pending": 93,
+      "boss": null
+    },
+    {
+      "enemies": 111,
+      "boats": 6,
+      "pending": 86,
+      "boss": null
+    },
+    {
+      "enemies": 110,
+      "boats": 6,
+      "pending": 83,
+      "boss": null
+    },
+    {
+      "enemies": 107,
+      "boats": 6,
+      "pending": 79,
+      "boss": null
+    },
+    {
+      "enemies": 107,
+      "boats": 5,
+      "pending": 75,
+      "boss": null
+    },
+    {
+      "enemies": 85,
+      "boats": 4,
+      "pending": 73,
+      "boss": null
+    },
+    {
+      "enemies": 73,
+      "boats": 3,
+      "pending": 70,
+      "boss": null
+    },
+    {
+      "enemies": 76,
+      "boats": 4,
+      "pending": 66,
+      "boss": null
+    },
+    {
+      "enemies": 80,
+      "boats": 4,
+      "pending": 62,
+      "boss": null
+    },
+    {
+      "enemies": 84,
+      "boats": 4,
+      "pending": 58,
+      "boss": null
+    },
+    {
+      "enemies": 87,
+      "boats": 4,
+      "pending": 54,
+      "boss": null
+    },
+    {
+      "enemies": 89,
+      "boats": 5,
+      "pending": 49,
+      "boss": null
+    },
+    {
+      "enemies": 95,
+      "boats": 4,
+      "pending": 41,
+      "boss": null
+    },
+    {
+      "enemies": 102,
+      "boats": 4,
+      "pending": 34,
+      "boss": null
+    },
+    {
+      "enemies": 108,
+      "boats": 4,
+      "pending": 28,
+      "boss": null
+    },
+    {
+      "enemies": 94,
+      "boats": 3,
+      "pending": 23,
+      "boss": null
+    },
+    {
+      "enemies": 93,
+      "boats": 3,
+      "pending": 18,
+      "boss": null
+    },
+    {
+      "enemies": 92,
+      "boats": 4,
+      "pending": 13,
+      "boss": null
+    },
+    {
+      "enemies": 91,
+      "boats": 4,
+      "pending": 12,
+      "boss": null
+    },
+    {
+      "enemies": 94,
+      "boats": 3,
+      "pending": 9,
+      "boss": null
+    },
+    {
+      "enemies": 96,
+      "boats": 2,
+      "pending": 6,
+      "boss": null
+    },
+    {
+      "enemies": 99,
+      "boats": 1,
+      "pending": 3,
+      "boss": null
+    },
+    {
+      "enemies": 99,
+      "boats": 1,
+      "pending": 1,
+      "boss": null
+    },
+    {
+      "enemies": 100,
+      "boats": 1,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 99,
+      "boats": 1,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 78,
+      "boats": 1,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 75,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 74,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 74,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 74,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 70,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 64,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 61,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 55,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 54,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 36,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 31,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 29,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 26,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 23,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 21,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 19,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 16,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 13,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 7,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 7,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 7,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 7,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 5,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 4,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 4,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 4,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 4,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 3,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 1,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    },
+    {
+      "enemies": 0,
+      "boats": 0,
+      "pending": 0,
+      "boss": null
+    }
+  ]
+}

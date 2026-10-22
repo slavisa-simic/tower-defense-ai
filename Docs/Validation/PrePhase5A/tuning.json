@@ -1,0 +1,92 @@
+[
+  {
+    "wave": 1,
+    "count": 80,
+    "normalHealth": 1.0,
+    "bossHealth": 1.0,
+    "target": 25,
+    "boats": 6,
+    "interval": 1.0
+  },
+  {
+    "wave": 2,
+    "count": 120,
+    "normalHealth": 1.0,
+    "bossHealth": 1.0,
+    "target": 29,
+    "boats": 6,
+    "interval": 0.9259259
+  },
+  {
+    "wave": 3,
+    "count": 110,
+    "normalHealth": 1.0,
+    "bossHealth": 1.0,
+    "target": 33,
+    "boats": 7,
+    "interval": 0.862068951
+  },
+  {
+    "wave": 4,
+    "count": 145,
+    "normalHealth": 1.0,
+    "bossHealth": 1.0,
+    "target": 37,
+    "boats": 7,
+    "interval": 0.8064516
+  },
+  {
+    "wave": 5,
+    "count": 190,
+    "normalHealth": 1.0,
+    "bossHealth": 1.0,
+    "target": 41,
+    "boats": 8,
+    "interval": 0.75757575
+  },
+  {
+    "wave": 10,
+    "count": 260,
+    "normalHealth": 1.0,
+    "bossHealth": 1.0,
+    "target": 61,
+    "boats": 10,
+    "interval": 0.5813953
+  },
+  {
+    "wave": 20,
+    "count": 435,
+    "normalHealth": 1.0,
+    "bossHealth": 1.0,
+    "target": 101,
+    "boats": 15,
+    "interval": 0.3968254
+  },
+  {
+    "wave": 25,
+    "count": 691,
+    "normalHealth": 1.0625,
+    "bossHealth": 1.0625,
+    "target": 121,
+    "boats": 18,
+    "interval": 0.342465758
+  },
+  {
+    "wave": 50,
+    "count": 1441,
+    "normalHealth": 1.375,
+    "bossHealth": 1.375,
+    "target": 160,
+    "boats": 28,
+    "interval": 0.3
+  },
+  {
+    "wave": 1000,
+    "count": 1441,
+    "normalHealth": 13.25,
+    "bossHealth": 13.25,
+    "target": 160,
+    "boats": 28,
+    "interval": 0.3
+  }
+]

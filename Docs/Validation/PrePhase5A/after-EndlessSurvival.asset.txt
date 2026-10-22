@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a4859f53c4dd5742871486a3860af14, type: 3}
+  m_Name: EndlessSurvival
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.EndlessWaveSettings
+  enemies:
+  - {fileID: 4395388213575324167, guid: 70b7dab0df97626428750832b0496721, type: 3}
+  - {fileID: 4395388213575324167, guid: b15a6c4e3181e05479c5bfef53a70588, type: 3}
+  - {fileID: 4395388213575324167, guid: 1adca194cdb797542abfc5002d8d799a, type: 3}
+  - {fileID: 4395388213575324167, guid: b2c7b035517a64a49b56ecba9ca607ec, type: 3}
+  - {fileID: 4395388213575324167, guid: 33a962e6960a18148bda8cdc79509b71, type: 3}
+  - {fileID: 4395388213575324167, guid: 3d4c92406b4f0ba47b7386d02c79114b, type: 3}
+  - {fileID: 4395388213575324167, guid: df7f7510603bce541b16f4457403af2f, type: 3}
+  baseBudget: 16
+  linearGrowth: 8
+  nonlinearGrowth: 0.08
+  maximumEnemiesPerWave: 1200
+  maximumActiveEnemies: 400
+  seed: 1977
+  randomizeSeed: 1
+  baseReward: 100
+  rewardGrowth: 5
+  scalingStartWave: 20
+  healthGrowth: 0.0125
+  speedGrowth: 0.002
+  maximumHealthMultiplier: 20
+  maximumSpeedMultiplier: 1.6
+  earlyArrivalInterval: 1
+  minimumArrivalInterval: 0.3
+  arrivalGrowth: 0.08
+  wavesPerBoatConcurrency: 2
+  maximumConcurrentBoats: 28
+  initialConcurrentBoats: 6
+  bossEncounters: {fileID: 11400000, guid: 5eb7865b2fe72f741a96d5e58dd675ad, type: 2}
+  enemyQuantityMultiplier: 5
+  globalEnemyHealthMultiplier: 1
+  bossHealthMultiplier: 1
+  pressureDirectorEnabled: 1
+  earlyPressureTarget: 25
+  maximumPressureTarget: 160
+  pressureGrowthPerWave: 4
+  pressureHysteresis: 0.2
+  directorEvaluationInterval: 0.2
+  acceleratedArrivalInterval: 0.15
+  firstAttackDelay: 0.25
+  boatCapacity: 12
+  boatSpeed: 9
+  unloadInterval: 0.07
+  disembarkSeparation: 0.4
+  departureDelay: 0.15
+  assaultSurgesEnabled: 1
+  surgePeriod: 24
+  surgeDuration: 7
+  surgeExtraBoats: 3
+  showPressureDebug: 0

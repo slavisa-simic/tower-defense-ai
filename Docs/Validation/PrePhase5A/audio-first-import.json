@@ -1,0 +1,18 @@
+{
+  "testOnly": true,
+  "generator": "FFmpeg deterministic procedural white noise; NOT generative AI",
+  "path": "Assets/Game/Audio/Processed/Environment/sfx_TEST_pipeline_noise_01.wav",
+  "length": 0.449916661,
+  "frequency": 48000,
+  "channels": 1,
+  "samples": 21596,
+  "loadState": 2,
+  "sourceRms": 0.040974800056739279,
+  "playing": true,
+  "outputRms": 0.0,
+  "sourcesBefore": 0,
+  "listenersBefore": 0,
+  "mixerAssets": 0,
+  "deviceSampleRate": 48000,
+  "audibleHumanListening": "not performed"
+}

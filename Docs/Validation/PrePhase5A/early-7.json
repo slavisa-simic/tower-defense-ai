@@ -1,0 +1,64 @@
+{
+  "externalMoney": 0,
+  "startingMoney": 500,
+  "rows": [
+    {
+      "wave": 1,
+      "planned": 80,
+      "peak": 25,
+      "bpeak": 5,
+      "kills": 80,
+      "homicides": 0,
+      "income": 2100,
+      "seconds": 9.4904945999999768,
+      "state": "Preparation"
+    },
+    {
+      "wave": 2,
+      "planned": 120,
+      "peak": 30,
+      "bpeak": 5,
+      "kills": 120,
+      "homicides": 0,
+      "income": 3105,
+      "seconds": 11.090614800000026,
+      "state": "Preparation"
+    },
+    {
+      "wave": 3,
+      "planned": 110,
+      "peak": 29,
+      "bpeak": 7,
+      "kills": 110,
+      "homicides": 0,
+      "income": 3360,
+      "seconds": 9.4451958000000218,
+      "state": "Preparation"
+    },
+    {
+      "wave": 4,
+      "planned": 145,
+      "peak": 26,
+      "bpeak": 7,
+      "kills": 145,
+      "homicides": 0,
+      "income": 4290,
+      "seconds": 12.795827700000018,
+      "state": "Preparation"
+    },
+    {
+      "wave": 5,
+      "planned": 190,
+      "peak": 33,
+      "bpeak": 6,
+      "kills": 190,
+      "homicides": 0,
+      "income": 5420,
+      "seconds": 13.269195299999922,
+      "state": "Preparation"
+    }
+  ],
+  "Homicides": 0,
+  "HighestWaveReached": 5,
+  "balance": 7450
+}

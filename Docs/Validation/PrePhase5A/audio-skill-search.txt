@@ -1,0 +1,5 @@
+C:\Users\Slavisa\.codex\skills\ui-ux-pro-max\SKILL.md
+C:\Users\Slavisa\.codex\skills\speech\SKILL.md
+C:\Users\Slavisa\.codex\plugins\cache\openai-curated-remote\google-drive\0.1.16\skills\google-drive\SKILL.md
+C:\Users\Slavisa\.codex\plugins\cache\openai-curated-remote\app-69312da8e4dc81919370cb86fd172b6c\10.0.0\skills\adobe-edit-quick-cut\SKILL.md
+C:\Users\Slavisa\.codex\skills\runway-studio-skills\SKILL.md

@@ -1,0 +1,21 @@
+usage: generate_audio.py [-h] [--api-key API_KEY] [--output-dir OUTPUT_DIR]
+                         [--no-poll]
+                         {sound-effect,tts,speech-to-speech,voice-dub,voice-isolate}
+                         ...
+
+Generate audio with Runway API
+
+positional arguments:
+  {sound-effect,tts,speech-to-speech,voice-dub,voice-isolate}
+    sound-effect        Generate sound effects from text
+    tts                 Text to speech
+    speech-to-speech    Convert voice in audio/video
+    voice-dub           Dub audio to another language
+    voice-isolate       Isolate voice from background audio
+
+options:
+  -h, --help            show this help message and exit
+  --api-key API_KEY     Runway API key (or set RUNWAYML_API_SECRET)
+  --output-dir OUTPUT_DIR
+                        Directory to save output files
+  --no-poll             Don't poll — just print the task ID

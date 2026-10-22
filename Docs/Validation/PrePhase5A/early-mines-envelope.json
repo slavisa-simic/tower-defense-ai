@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/PrePhase5A/Play.cs",
+      "entry": "PrePhase5APlay.Early",
+      "args": "[7]",
+      "timeout_ms": "200000"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 97,
+      "executeMs": 19177,
+      "assemblyName": "PipelineRunScript_Play_764027ac310949bc9e0b6db79f8a4d2e",
+      "success": true,
+      "result": "Earned-income attempt 7 reached wave 5"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

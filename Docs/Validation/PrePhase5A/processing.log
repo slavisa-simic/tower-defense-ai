@@ -1,0 +1,16 @@
+Input #0, wav, from 'C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Assets\Game\Audio\Source\Environment\sfx_TEST_pipeline_noise_01.wav':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Duration: 00:00:00.50, bitrate: 1153 kb/s
+  Stream #0:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, mono, s32 (24 bit), 1152 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s24le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Assets\Game\Audio\Processed\Environment\sfx_TEST_pipeline_noise_01.wav':
+  Metadata:
+    ISFT            : Lavf63.1.101
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, mono, s16, 768 kb/s
+    Metadata:
+      encoder         : Lavc63.1.101 pcm_s16le
+[out#0/wav @ 00000230295dc200] video:0KiB audio:42KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.180589%
+size=      42KiB time=00:00:00.44 bitrate= 769.4kbits/s speed=  48x elapsed=0:00:00.00    

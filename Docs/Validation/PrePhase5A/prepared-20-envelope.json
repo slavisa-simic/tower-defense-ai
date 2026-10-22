@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/PrePhase5A/Play.cs",
+      "entry": "PrePhase5APlay.Prepared",
+      "args": "[20]",
+      "timeout_ms": "90000"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 162,
+      "executeMs": 12994,
+      "assemblyName": "PipelineRunScript_Play_5c23dd46b0684343a3b7640d7e59d58b",
+      "success": true,
+      "result": "Prepared live combat wave 20: Preparation"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

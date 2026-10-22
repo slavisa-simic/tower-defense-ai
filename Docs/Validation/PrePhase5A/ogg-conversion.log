@@ -1,0 +1,17 @@
+[aist#0:0/pcm_s16le @ 000002108bc642c0] Guessed Channel Layout: mono
+Input #0, wav, from 'C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Assets\Game\Audio\Processed\Environment\sfx_TEST_pipeline_noise_01.wav':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Duration: 00:00:00.45, bitrate: 769 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, mono, s16, 768 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> vorbis (libvorbis))
+Press [q] to stop, [?] for help
+Output #0, ogg, to 'C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Docs\Validation\PrePhase5A\TEST_conversion_stereo.ogg':
+  Metadata:
+    encoder         : Lavf63.1.101
+  Stream #0:0: Audio: vorbis, 48000 Hz, stereo, fltp
+    Metadata:
+      encoder         : Lavc63.1.101 libvorbis
+[out#0/ogg @ 000002108bc1d480] video:0KiB audio:5KiB subtitle:0KiB other streams:0KiB global headers:4KiB muxing overhead: 88.701140%
+size=       9KiB time=00:00:00.44 bitrate= 164.8kbits/s speed=30.9x elapsed=0:00:00.01    

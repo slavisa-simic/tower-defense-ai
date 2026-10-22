@@ -1,0 +1,14 @@
+Input #0, lavfi, from 'anoisesrc=color=white:amplitude=0.1:duration=0.5:sample_rate=48000:seed=1977':
+  Duration: N/A, start: 0.000000, bitrate: 3072 kb/s
+  Stream #0:0: Audio: pcm_f64le, 48000 Hz, mono, dbl, 3072 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_f64le (native) -> pcm_s24le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'C:\Users\Slavisa\Documents\ChatGPT\border-defenders\Assets\Game\Audio\Source\Environment\sfx_TEST_pipeline_noise_01.wav':
+  Metadata:
+    ISFT            : Lavf63.1.101
+  Stream #0:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, mono, s32 (24 bit), 1152 kb/s
+    Metadata:
+      encoder         : Lavc63.1.101 pcm_s24le
+[out#0/wav @ 000001a712ccd800] video:0KiB audio:70KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.141667%
+size=      70KiB time=00:00:00.50 bitrate=1153.6kbits/s speed= 212x elapsed=0:00:00.00    

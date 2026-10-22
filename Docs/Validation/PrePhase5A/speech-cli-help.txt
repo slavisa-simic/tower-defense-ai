@@ -1,0 +1,12 @@
+usage: text_to_speech.py [-h] {list-voices,speak,speak-batch} ...
+
+Generate speech audio using the OpenAI Audio API.
+
+positional arguments:
+  {list-voices,speak,speak-batch}
+    list-voices         List supported voices
+    speak               Generate a single audio file
+    speak-batch         Generate from JSONL jobs
+
+options:
+  -h, --help            show this help message and exit

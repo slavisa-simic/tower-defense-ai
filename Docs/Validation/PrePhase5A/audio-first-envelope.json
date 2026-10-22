@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command run_script",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/PrePhase5A/AudioCheck.cs",
+      "entry": "PrePhase5AAudioCheck.Run"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 89,
+      "executeMs": 1033,
+      "assemblyName": "PipelineRunScript_AudioCheck_2caadfddd2a34cd081b63d11c4e12611",
+      "success": false,
+      "error": "Runtime Error",
+      "errorDetails": "Exception: Playback/output verification failed; inspect receipt\n  at PrePhase5AAudioCheck.Run () [0x00458] in C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\PrePhase5A\\AudioCheck.cs:42 \r\n  at Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand.RunEphemeral (System.String file, System.String entry, Newtonsoft.Json.Linq.JArray args, System.String[] references, System.String[] defines, System.Boolean pdb, System.Boolean dryRun, System.Int32 timeoutMs, System.Diagnostics.Stopwatch total) [0x00492] in .\\Library\\PackageCache\\com.unity.pipeline@ab05e9cd7f74\\Editor\\Commands\\Scripts\\RunScriptCommand.cs:252 "
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}
