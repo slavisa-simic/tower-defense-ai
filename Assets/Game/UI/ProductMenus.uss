@@ -1,0 +1,18 @@
+.product-overlay { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background-color: rgba(10, 18, 19, 0.82); align-items: center; justify-content: center; }
+.product-card { width: 540px; max-width: 90%; max-height: 90%; padding: 24px; background-image: url("../Art/UI/bd_ui_hud_panel_large_v001.png"); -unity-slice-left: 16; -unity-slice-right: 16; -unity-slice-top: 16; -unity-slice-bottom: 16; color: rgb(210, 204, 177); font-size: 16px; }
+.product-scroll { flex-shrink: 1; }
+.product-title { color: rgb(227, 197, 123); font-size: 25px; white-space: normal; -unity-text-align: middle-center; margin-bottom: 16px; }
+.product-copy { white-space: normal; font-size: 14px; margin-bottom: 14px; -unity-text-align: middle-center; }
+.product-button { height: 40px; flex-shrink: 0; margin: 4px 16px; border-radius: 0; border-width: 1px; border-color: rgb(99, 109, 77); color: rgb(210, 204, 177); background-color: rgb(30, 41, 36); font-size: 15px; }
+.product-button:hover, .product-button:focus { border-color: rgb(227, 197, 123); background-color: rgb(53, 62, 42); }
+.product-button:active { background-color: rgb(77, 79, 46); border-width: 2px; }
+.product-button:disabled { opacity: 0.4; border-color: rgb(66, 68, 61); }
+.product-card Toggle, .product-card DropdownField { margin-bottom: 12px; min-height: 30px; color: rgb(210, 204, 177); }
+.product-card .unity-base-field__label { min-width: 190px; }
+.product-card .unity-base-field__input { background-color: rgb(35, 45, 39); color: rgb(227, 218, 185); border-color: rgb(99, 109, 77); border-width: 1px; border-radius: 0; }
+.product-card .unity-popup-field__text { color: rgb(227, 218, 185); }
+.product-card .unity-toggle__checkmark { background-color: rgb(149, 161, 114); border-color: rgb(150, 159, 118); border-width: 1px; }
+.product-card .unity-popup-field__arrow { -unity-background-image-tint-color: rgb(227, 218, 185); }
+.management-button:active, .defense-button:active { background-color: rgb(66, 71, 45); border-color: rgb(227, 197, 123); }
+.save-feedback { position: absolute; top: 94px; right: 18px; max-width: 235px; color: rgb(184, 201, 156); font-size: 10px; white-space: normal; }
+.runtime-tooltip { position: absolute; max-width: 350px; padding: 12px; color: rgb(227, 218, 185); background-color: rgb(22, 32, 30); border-width: 1px; border-color: rgb(149, 130, 80); font-size: 13px; white-space: normal; }

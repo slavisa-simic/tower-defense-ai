@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f2558bf3c5cb1047a5f5acf088b8ee0, type: 3}
+  m_Name: BossEncounters
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.BossEncounterDefinition
+  firstWave: 25
+  interval: 25
+  bosses:
+  - {fileID: 4395388213575324167, guid: 4b200b1384e3a11498ce267a3999732d, type: 3}
+  - {fileID: 4395388213575324167, guid: 7b28727e63aac9146866370389659aea, type: 3}

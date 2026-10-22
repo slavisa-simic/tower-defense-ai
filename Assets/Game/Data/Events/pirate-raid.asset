@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8595f4b8de5845d43ba7c711c60cb4df, type: 3}
+  m_Name: pirate-raid
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.EndlessEventDefinition
+  id: pirate-raid
+  displayName: PIRATE RAID
+  description: Fast pirate units. Faster craft across multiple sectors.
+  category: 0
+  minimumWave: 20
+  maximumWave: 0
+  weight: 1
+  durationType: 1
+  duration: 1
+  cooldown: 8
+  allowBossWave: 0
+  preparationEffects: 0
+  incompatibleEvents: []
+  uiIcon: {fileID: 21300000, guid: 288a6f85389f05a499b308c0239fde8c, type: 3}
+  modifiers:
+    quantity: 1
+    pressure: 1
+    boatSpeed: 1.2
+    boatInterval: 0.75
+    boatConcurrency: 1
+    defenseRange: 1
+    upgradeCost: 1
+    combatRepair: 1
+    preparationRepair: 1
+    floodedColumns: 0
+    fog: 0
+    boatVisual: {fileID: 7518034814223441464, guid: 6bc74377f4a6f5e49bc0318a2338beaa, type: 3}
+    landingPattern: 1
+    composition:
+    - kind: 5
+      multiplier: 5
+    - kind: 6
+      multiplier: 4
+    - kind: 1
+      multiplier: 3
+    - kind: 0
+      multiplier: 0.4
+  supplyBase: 0
+  supplyPerWave: 0
+  supplyMaximum: 500
+  preparationWarningSeconds: 0

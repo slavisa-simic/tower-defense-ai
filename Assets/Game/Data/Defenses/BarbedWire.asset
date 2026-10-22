@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059e47b4a381f0949a34109ad42fe990, type: 3}
+  m_Name: BarbedWire
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Defenses.DefenseDefinition
+  id: barbed-wire
+  displayName: Barbed Wire
+  cost: 50
+  prefab: {fileID: 5901965688802390172, guid: 82f4e568363d89d4ebbc7ce1f8cd067f, type: 3}
+  footprint: {x: 1, y: 1}
+  maxHealth: 200
+  rangeInCells: 1
+  damage: 0
+  fireRate: 1
+  targetingMode: 0
+  heavyWeapon: {fileID: 0}
+  levelII:
+    cost: 38
+    health: 1.5
+    damage: 1.25
+    fireRate: 1
+    range: 1
+    splash: 1
+    slow: 0.8
+    burnDuration: 1
+    burnDps: 1
+    overlay: {fileID: -1480626106, guid: 402dd86e22f1f014a8e12e5bd6c9d6d3, type: 3}
+  levelIII:
+    cost: 63
+    health: 2
+    damage: 1.6
+    fireRate: 1
+    range: 1
+    splash: 1
+    slow: 0.6
+    burnDuration: 1
+    burnDps: 1
+    overlay: {fileID: 2071800802, guid: 402dd86e22f1f014a8e12e5bd6c9d6d3, type: 3}
+  movementMultiplier: 0.5
+  traversalMultiplier: 2
+  triggerRadiusInCells: 0.55
+  armingDelay: 0.35

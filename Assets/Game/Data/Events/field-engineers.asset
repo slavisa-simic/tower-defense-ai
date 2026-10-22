@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8595f4b8de5845d43ba7c711c60cb4df, type: 3}
+  m_Name: field-engineers
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.EndlessEventDefinition
+  id: field-engineers
+  displayName: FIELD ENGINEERS
+  description: PREPARATION REPAIRS 30% CHEAPER.
+  category: 1
+  minimumWave: 5
+  maximumWave: 0
+  weight: 1
+  durationType: 3
+  duration: 1
+  cooldown: 8
+  allowBossWave: 0
+  preparationEffects: 0
+  incompatibleEvents: []
+  uiIcon: {fileID: 21300000, guid: e67ea460289363a479bfabd386874a5d, type: 3}
+  modifiers:
+    quantity: 1
+    pressure: 1
+    boatSpeed: 1
+    boatInterval: 1
+    boatConcurrency: 1
+    defenseRange: 1
+    upgradeCost: 1
+    combatRepair: 1
+    preparationRepair: 0.7
+    floodedColumns: 0
+    fog: 0
+    boatVisual: {fileID: 0}
+    landingPattern: 0
+    composition: []
+  supplyBase: 0
+  supplyPerWave: 0
+  supplyMaximum: 500
+  preparationWarningSeconds: 0

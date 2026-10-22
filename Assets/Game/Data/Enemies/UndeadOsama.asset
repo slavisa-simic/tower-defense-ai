@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67a846c42faee184d9fb31ebe778f6fa, type: 3}
+  m_Name: UndeadOsama
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.BossDefinition
+  armor: 0.35
+  kind: 7
+  breachPenalty: 1000
+  difficultyCost: 20
+  unlockWave: 25
+  transportCapacityUnits: 3
+  displayName: UNDEAD OSAMA BIN LADEN
+  maxHealth: 8000
+  movementSpeed: 1.15
+  attackDamage: 10
+  attackInterval: 1
+  attackRange: 1.6
+  killReward: 2500
+  bossArt: {fileID: 0}
+  bossBoat: {fileID: 7518034814223441464, guid: 8f8e04c5f542c5c4b9820e8805882b0f, type: 3}
+  escorts:
+  - prefab: {fileID: 4395388213575324167, guid: b2c7b035517a64a49b56ecba9ca607ec, type: 3}
+    count: 12
+    spawnInterval: 0.15
+    delayBeforeGroup: 0
+  - prefab: {fileID: 4395388213575324167, guid: 33a962e6960a18148bda8cdc79509b71, type: 3}
+    count: 4
+    spawnInterval: 0.15
+    delayBeforeGroup: 0
+  - prefab: {fileID: 4395388213575324167, guid: 70b7dab0df97626428750832b0496721, type: 3}
+    count: 14
+    spawnInterval: 0.15
+    delayBeforeGroup: 0
+  - prefab: {fileID: 4395388213575324167, guid: 1adca194cdb797542abfc5002d8d799a, type: 3}
+    count: 4
+    spawnInterval: 0.15
+    delayBeforeGroup: 0
+  arrivalMultiplier: 1
+  boatSpeedMultiplier: 1

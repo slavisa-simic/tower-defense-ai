@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f40a841e78dd0459454a9c25516d4d, type: 3}
+  m_Name: IsisHeavy
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Enemies.EnemyDefinition
+  armor: 0
+  kind: 4
+  breachPenalty: 160
+  difficultyCost: 8
+  unlockWave: 18
+  transportCapacityUnits: 3
+  displayName: ISIS HEAVY INFECTED
+  maxHealth: 900
+  movementSpeed: 1.4
+  attackDamage: 10
+  attackInterval: 1
+  attackRange: 1.6
+  killReward: 120

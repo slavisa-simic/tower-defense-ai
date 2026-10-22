@@ -1,0 +1,496 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c638bf01699b4447ac290ad0ed134f9, type: 3}
+  m_Name: CombatVfxCatalog
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Presentation.VfxCatalog
+  sequences:
+  - id: 0
+    frames:
+    - {fileID: -740983764, guid: 698b3d6493f319345a3595866e1a1919, type: 3}
+    - {fileID: 465675608, guid: 698b3d6493f319345a3595866e1a1919, type: 3}
+    - {fileID: 880313895, guid: 698b3d6493f319345a3595866e1a1919, type: 3}
+    - {fileID: 1238903103, guid: 698b3d6493f319345a3595866e1a1919, type: 3}
+    fps: 48
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 10
+    lifetime: 0
+    opacity: 1
+    fadePortion: 0.15
+    drift: {x: 0, y: 0}
+  - id: 1
+    frames:
+    - {fileID: 952535451, guid: 20647cd0c5d01c9489d524fe56b9976f, type: 3}
+    - {fileID: -1262528999, guid: 20647cd0c5d01c9489d524fe56b9976f, type: 3}
+    - {fileID: 1791089481, guid: 20647cd0c5d01c9489d524fe56b9976f, type: 3}
+    fps: 40
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 10
+    lifetime: 0
+    opacity: 1
+    fadePortion: 0.15
+    drift: {x: 0, y: 0}
+  - id: 4
+    frames:
+    - {fileID: 1050134458, guid: 79c65b21645102a4e8092690fcbe07dd, type: 3}
+    - {fileID: 810648479, guid: 79c65b21645102a4e8092690fcbe07dd, type: 3}
+    - {fileID: -1383034729, guid: 79c65b21645102a4e8092690fcbe07dd, type: 3}
+    - {fileID: -869444143, guid: 79c65b21645102a4e8092690fcbe07dd, type: 3}
+    fps: 20
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 3
+    lifetime: 0
+    opacity: 0.85
+    fadePortion: 0.4
+    drift: {x: 0, y: 0}
+  - id: 5
+    frames:
+    - {fileID: 836215527, guid: e4a377d4498ad7441968a80d771bf90f, type: 3}
+    - {fileID: -1813818060, guid: e4a377d4498ad7441968a80d771bf90f, type: 3}
+    - {fileID: -29446377, guid: e4a377d4498ad7441968a80d771bf90f, type: 3}
+    - {fileID: -1549676240, guid: e4a377d4498ad7441968a80d771bf90f, type: 3}
+    fps: 20
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 3
+    lifetime: 0
+    opacity: 0.9
+    fadePortion: 0.4
+    drift: {x: 0, y: 0}
+  - id: 6
+    frames:
+    - {fileID: -743961901, guid: 34e17b6b555f86c48808905317edda29, type: 3}
+    - {fileID: -760478882, guid: 34e17b6b555f86c48808905317edda29, type: 3}
+    - {fileID: -1180275580, guid: 34e17b6b555f86c48808905317edda29, type: 3}
+    - {fileID: -578150761, guid: 34e17b6b555f86c48808905317edda29, type: 3}
+    fps: 24
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 3
+    lifetime: 0
+    opacity: 0.9
+    fadePortion: 0.4
+    drift: {x: 0, y: 0}
+  - id: 7
+    frames:
+    - {fileID: 1986129060, guid: 58a3d64d4af58f344b6a1cd076b832ab, type: 3}
+    - {fileID: 1865492808, guid: 58a3d64d4af58f344b6a1cd076b832ab, type: 3}
+    - {fileID: 1046208233, guid: 58a3d64d4af58f344b6a1cd076b832ab, type: 3}
+    - {fileID: 1638106051, guid: 58a3d64d4af58f344b6a1cd076b832ab, type: 3}
+    fps: 24
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 3
+    lifetime: 0
+    opacity: 1
+    fadePortion: 0.4
+    drift: {x: 0, y: 0}
+  - id: 8
+    frames:
+    - {fileID: 898335748, guid: e78831d6bcb65664180a8854e3101ce7, type: 3}
+    - {fileID: -913751338, guid: e78831d6bcb65664180a8854e3101ce7, type: 3}
+    - {fileID: -5242133, guid: e78831d6bcb65664180a8854e3101ce7, type: 3}
+    - {fileID: 126578398, guid: e78831d6bcb65664180a8854e3101ce7, type: 3}
+    fps: 24
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 3
+    lifetime: 0
+    opacity: 0.7
+    fadePortion: 0.4
+    drift: {x: 0, y: 0}
+  - id: 9
+    frames:
+    - {fileID: -31885303, guid: e2c970d96541f4b4997e57b44bd39f58, type: 3}
+    - {fileID: -599286710, guid: e2c970d96541f4b4997e57b44bd39f58, type: 3}
+    - {fileID: 626040979, guid: e2c970d96541f4b4997e57b44bd39f58, type: 3}
+    - {fileID: 1888087882, guid: e2c970d96541f4b4997e57b44bd39f58, type: 3}
+    fps: 20
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 2
+    lifetime: 0
+    opacity: 0.9
+    fadePortion: 0.35
+    drift: {x: 0, y: 0}
+  - id: 10
+    frames:
+    - {fileID: 21300000, guid: 6dfb776ece724b642914b8975fe8ec94, type: 3}
+    fps: 1
+    channel: 3
+    sortingLayer: GroundObjects
+    sortingOrder: 0
+    lifetime: 12
+    opacity: 0.7
+    fadePortion: 0.5
+    drift: {x: 0, y: 0}
+  - id: 11
+    frames:
+    - {fileID: 21300000, guid: afb0fd0902c36c04ebeb5bde586383e6, type: 3}
+    fps: 1
+    channel: 3
+    sortingLayer: GroundObjects
+    sortingOrder: 0
+    lifetime: 12
+    opacity: 0.65
+    fadePortion: 0.5
+    drift: {x: 0, y: 0}
+  - id: 12
+    frames:
+    - {fileID: -2046145519, guid: 2d23b0e7e5e2ec04da7fd73fdde888ed, type: 3}
+    - {fileID: -226886421, guid: 2d23b0e7e5e2ec04da7fd73fdde888ed, type: 3}
+    - {fileID: 1553724998, guid: 2d23b0e7e5e2ec04da7fd73fdde888ed, type: 3}
+    - {fileID: -218466994, guid: 2d23b0e7e5e2ec04da7fd73fdde888ed, type: 3}
+    - {fileID: -1990021447, guid: 2d23b0e7e5e2ec04da7fd73fdde888ed, type: 3}
+    - {fileID: 1865903708, guid: 2d23b0e7e5e2ec04da7fd73fdde888ed, type: 3}
+    - {fileID: -2037634724, guid: 2d23b0e7e5e2ec04da7fd73fdde888ed, type: 3}
+    - {fileID: -1730379819, guid: 2d23b0e7e5e2ec04da7fd73fdde888ed, type: 3}
+    fps: 16
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 8
+    lifetime: 0
+    opacity: 0.95
+    fadePortion: 0.4
+    drift: {x: 0, y: 0}
+  - id: 13
+    frames:
+    - {fileID: 1913920810, guid: 7b65e2b593664f049a9e65b77efdb8cd, type: 3}
+    - {fileID: 1460470086, guid: 7b65e2b593664f049a9e65b77efdb8cd, type: 3}
+    - {fileID: -807937955, guid: 7b65e2b593664f049a9e65b77efdb8cd, type: 3}
+    - {fileID: -2094455207, guid: 7b65e2b593664f049a9e65b77efdb8cd, type: 3}
+    - {fileID: 579204253, guid: 7b65e2b593664f049a9e65b77efdb8cd, type: 3}
+    - {fileID: 1394408254, guid: 7b65e2b593664f049a9e65b77efdb8cd, type: 3}
+    fps: 18
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 8
+    lifetime: 0
+    opacity: 0.9
+    fadePortion: 0.4
+    drift: {x: 0, y: 0}
+  - id: 14
+    frames:
+    - {fileID: 1158441195, guid: 7e6ba8aecc7392c4fa422227dfc3fbd3, type: 3}
+    - {fileID: -2067410096, guid: 7e6ba8aecc7392c4fa422227dfc3fbd3, type: 3}
+    - {fileID: 566024847, guid: 7e6ba8aecc7392c4fa422227dfc3fbd3, type: 3}
+    - {fileID: 125441372, guid: 7e6ba8aecc7392c4fa422227dfc3fbd3, type: 3}
+    - {fileID: -420597759, guid: 7e6ba8aecc7392c4fa422227dfc3fbd3, type: 3}
+    - {fileID: 48065395, guid: 7e6ba8aecc7392c4fa422227dfc3fbd3, type: 3}
+    fps: 6
+    channel: 2
+    sortingLayer: Effects
+    sortingOrder: 1
+    lifetime: 0
+    opacity: 0.32
+    fadePortion: 0.5
+    drift: {x: 0.08, y: 0.06}
+  - id: 15
+    frames:
+    - {fileID: -595023099, guid: 43a8a5f002ac57348949e2d85b0321f8, type: 3}
+    - {fileID: 1056517861, guid: 43a8a5f002ac57348949e2d85b0321f8, type: 3}
+    - {fileID: -1300009406, guid: 43a8a5f002ac57348949e2d85b0321f8, type: 3}
+    - {fileID: 705812922, guid: 43a8a5f002ac57348949e2d85b0321f8, type: 3}
+    - {fileID: -1548589449, guid: 43a8a5f002ac57348949e2d85b0321f8, type: 3}
+    - {fileID: -1345719190, guid: 43a8a5f002ac57348949e2d85b0321f8, type: 3}
+    fps: 6
+    channel: 2
+    sortingLayer: Effects
+    sortingOrder: 1
+    lifetime: 0
+    opacity: 0.28
+    fadePortion: 0.6
+    drift: {x: 0.08, y: 0.06}
+  - id: 16
+    frames:
+    - {fileID: -857113992, guid: ed6eaebd1e64dba408233e9c9db5c2cb, type: 3}
+    - {fileID: -1864620218, guid: ed6eaebd1e64dba408233e9c9db5c2cb, type: 3}
+    - {fileID: 2072871325, guid: ed6eaebd1e64dba408233e9c9db5c2cb, type: 3}
+    - {fileID: 47757175, guid: ed6eaebd1e64dba408233e9c9db5c2cb, type: 3}
+    - {fileID: 773070463, guid: ed6eaebd1e64dba408233e9c9db5c2cb, type: 3}
+    - {fileID: -224117045, guid: ed6eaebd1e64dba408233e9c9db5c2cb, type: 3}
+    fps: 16
+    channel: 0
+    sortingLayer: GroundObjects
+    sortingOrder: 3
+    lifetime: 0
+    opacity: 0.75
+    fadePortion: 0.5
+    drift: {x: 0, y: 0}
+  - id: 17
+    frames:
+    - {fileID: -1786739460, guid: 716270323dc9beb4d88624ae1e4e1fa4, type: 3}
+    - {fileID: -852730190, guid: 716270323dc9beb4d88624ae1e4e1fa4, type: 3}
+    - {fileID: 479366201, guid: 716270323dc9beb4d88624ae1e4e1fa4, type: 3}
+    - {fileID: 285428032, guid: 716270323dc9beb4d88624ae1e4e1fa4, type: 3}
+    - {fileID: -854831381, guid: 716270323dc9beb4d88624ae1e4e1fa4, type: 3}
+    - {fileID: 1064224472, guid: 716270323dc9beb4d88624ae1e4e1fa4, type: 3}
+    fps: 16
+    channel: 0
+    sortingLayer: GroundObjects
+    sortingOrder: 3
+    lifetime: 0
+    opacity: 0.7
+    fadePortion: 0.5
+    drift: {x: 0, y: 0}
+  - id: 18
+    frames:
+    - {fileID: -221048431, guid: e565ade5f4995594783b746190147c62, type: 3}
+    - {fileID: 1513357030, guid: e565ade5f4995594783b746190147c62, type: 3}
+    - {fileID: -79897581, guid: e565ade5f4995594783b746190147c62, type: 3}
+    - {fileID: -1903601625, guid: e565ade5f4995594783b746190147c62, type: 3}
+    - {fileID: -2016936232, guid: e565ade5f4995594783b746190147c62, type: 3}
+    - {fileID: -681885761, guid: e565ade5f4995594783b746190147c62, type: 3}
+    fps: 14
+    channel: 0
+    sortingLayer: GroundObjects
+    sortingOrder: 3
+    lifetime: 0
+    opacity: 0.65
+    fadePortion: 0.5
+    drift: {x: 0, y: 0}
+  - id: 19
+    frames:
+    - {fileID: -95759973, guid: 69ce44be10680084b829fc9ff616f6f9, type: 3}
+    - {fileID: -1316017379, guid: 69ce44be10680084b829fc9ff616f6f9, type: 3}
+    - {fileID: -1380491986, guid: 69ce44be10680084b829fc9ff616f6f9, type: 3}
+    - {fileID: -352401625, guid: 69ce44be10680084b829fc9ff616f6f9, type: 3}
+    fps: 6
+    channel: 0
+    sortingLayer: GroundObjects
+    sortingOrder: 2
+    lifetime: 0
+    opacity: 0.45
+    fadePortion: 0.4
+    drift: {x: 0, y: 0}
+  - id: 20
+    frames:
+    - {fileID: -1876722659, guid: 0342c1b498ccdca45b8c45ed70a9a215, type: 3}
+    - {fileID: 187263308, guid: 0342c1b498ccdca45b8c45ed70a9a215, type: 3}
+    - {fileID: 53869729, guid: 0342c1b498ccdca45b8c45ed70a9a215, type: 3}
+    - {fileID: -1400799033, guid: 0342c1b498ccdca45b8c45ed70a9a215, type: 3}
+    - {fileID: 1625481836, guid: 0342c1b498ccdca45b8c45ed70a9a215, type: 3}
+    - {fileID: -562955263, guid: 0342c1b498ccdca45b8c45ed70a9a215, type: 3}
+    fps: 5
+    channel: 0
+    sortingLayer: Environment
+    sortingOrder: 6
+    lifetime: 0
+    opacity: 0.28
+    fadePortion: 0.6
+    drift: {x: 0, y: 0}
+  - id: 21
+    frames:
+    - {fileID: -113493721, guid: e88599aed9006e14e9b6fa869e90691a, type: 3}
+    - {fileID: -165226143, guid: e88599aed9006e14e9b6fa869e90691a, type: 3}
+    - {fileID: -1279105228, guid: e88599aed9006e14e9b6fa869e90691a, type: 3}
+    - {fileID: -259755929, guid: e88599aed9006e14e9b6fa869e90691a, type: 3}
+    fps: 3
+    channel: 0
+    sortingLayer: Environment
+    sortingOrder: 8
+    lifetime: 0
+    opacity: 0.2
+    fadePortion: 0.4
+    drift: {x: 0, y: 0}
+  - id: 2
+    frames:
+    - {fileID: 21300000, guid: 93dc8e54231e5d846a5d754cac00c4e3, type: 3}
+    fps: 1
+    channel: 1
+    sortingLayer: Effects
+    sortingOrder: 9
+    lifetime: 0.045
+    opacity: 0.8
+    fadePortion: 0
+    drift: {x: 0, y: 0}
+  - id: 3
+    frames:
+    - {fileID: 21300000, guid: 679050ba998a2824a9b79613636b24c2, type: 3}
+    fps: 1
+    channel: 1
+    sortingLayer: Effects
+    sortingOrder: 9
+    lifetime: 0.06
+    opacity: 1
+    fadePortion: 0
+    drift: {x: 0, y: 0}
+  - id: 22
+    frames:
+    - {fileID: -928590295, guid: a18986234eb33a247ab64de53a7c2126, type: 3}
+    - {fileID: -1272993396, guid: a18986234eb33a247ab64de53a7c2126, type: 3}
+    - {fileID: 619432422, guid: a18986234eb33a247ab64de53a7c2126, type: 3}
+    - {fileID: -737672003, guid: a18986234eb33a247ab64de53a7c2126, type: 3}
+    fps: 16
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 5
+    lifetime: 0.3
+    opacity: 1
+    fadePortion: 0.25
+    drift: {x: 0, y: 0}
+  - id: 23
+    frames:
+    - {fileID: 1863467450, guid: f18a47fa16dd4314ba6c3ed82922b97c, type: 3}
+    - {fileID: -1671841793, guid: f18a47fa16dd4314ba6c3ed82922b97c, type: 3}
+    - {fileID: -1517916336, guid: f18a47fa16dd4314ba6c3ed82922b97c, type: 3}
+    - {fileID: -905326454, guid: f18a47fa16dd4314ba6c3ed82922b97c, type: 3}
+    fps: 16
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 5
+    lifetime: 0.3
+    opacity: 1
+    fadePortion: 0.25
+    drift: {x: 0, y: 0}
+  - id: 24
+    frames:
+    - {fileID: 1853703543, guid: 30e173f63164de1418febc1e861b9ea1, type: 3}
+    - {fileID: 381656449, guid: 30e173f63164de1418febc1e861b9ea1, type: 3}
+    - {fileID: -2033172664, guid: 30e173f63164de1418febc1e861b9ea1, type: 3}
+    - {fileID: -558443419, guid: 30e173f63164de1418febc1e861b9ea1, type: 3}
+    fps: 16
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 5
+    lifetime: 0.3
+    opacity: 1
+    fadePortion: 0.25
+    drift: {x: 0, y: 0}
+  - id: 25
+    frames:
+    - {fileID: -2009293234, guid: f603166ebfa38e54bb9e214f3ed9639a, type: 3}
+    - {fileID: -902848102, guid: f603166ebfa38e54bb9e214f3ed9639a, type: 3}
+    - {fileID: -1493664491, guid: f603166ebfa38e54bb9e214f3ed9639a, type: 3}
+    - {fileID: -1144478139, guid: f603166ebfa38e54bb9e214f3ed9639a, type: 3}
+    fps: 16
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 5
+    lifetime: 0.3
+    opacity: 1
+    fadePortion: 0.25
+    drift: {x: 0, y: 0}
+  - id: 26
+    frames:
+    - {fileID: 1171876977, guid: 90bf59cb7e80f4b41993da211693349c, type: 3}
+    - {fileID: -1409923453, guid: 90bf59cb7e80f4b41993da211693349c, type: 3}
+    - {fileID: 599817507, guid: 90bf59cb7e80f4b41993da211693349c, type: 3}
+    - {fileID: -1135276514, guid: 90bf59cb7e80f4b41993da211693349c, type: 3}
+    fps: 16
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 5
+    lifetime: 0.3
+    opacity: 1
+    fadePortion: 0.25
+    drift: {x: 0, y: 0}
+  - id: 27
+    frames:
+    - {fileID: 1267904083, guid: cf6c22dec3f7c154fb2e3349fb7c0c90, type: 3}
+    - {fileID: -101809570, guid: cf6c22dec3f7c154fb2e3349fb7c0c90, type: 3}
+    - {fileID: -1512970844, guid: cf6c22dec3f7c154fb2e3349fb7c0c90, type: 3}
+    - {fileID: 277207230, guid: cf6c22dec3f7c154fb2e3349fb7c0c90, type: 3}
+    fps: 16
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 5
+    lifetime: 0.3
+    opacity: 1
+    fadePortion: 0.25
+    drift: {x: 0, y: 0}
+  - id: 28
+    frames:
+    - {fileID: 1935662300, guid: c908c162e10e59f46a306e8080c5391b, type: 3}
+    - {fileID: 143788417, guid: c908c162e10e59f46a306e8080c5391b, type: 3}
+    - {fileID: 1868286768, guid: c908c162e10e59f46a306e8080c5391b, type: 3}
+    - {fileID: 1971170581, guid: c908c162e10e59f46a306e8080c5391b, type: 3}
+    fps: 16
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 5
+    lifetime: 0.3
+    opacity: 1
+    fadePortion: 0.25
+    drift: {x: 0, y: 0}
+  - id: 29
+    frames:
+    - {fileID: 1317811244, guid: 3b83c5dc64a5e5c4dae2371bcf004d2d, type: 3}
+    - {fileID: -1824138339, guid: 3b83c5dc64a5e5c4dae2371bcf004d2d, type: 3}
+    - {fileID: 495865221, guid: 3b83c5dc64a5e5c4dae2371bcf004d2d, type: 3}
+    - {fileID: -1624682040, guid: 3b83c5dc64a5e5c4dae2371bcf004d2d, type: 3}
+    fps: 16
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 5
+    lifetime: 0.3
+    opacity: 1
+    fadePortion: 0.25
+    drift: {x: 0, y: 0}
+  - id: 30
+    frames:
+    - {fileID: -727155452, guid: 2063a7f2d3ca8be4cbe32e1a832c6479, type: 3}
+    - {fileID: 636513152, guid: 2063a7f2d3ca8be4cbe32e1a832c6479, type: 3}
+    - {fileID: -691990509, guid: 2063a7f2d3ca8be4cbe32e1a832c6479, type: 3}
+    - {fileID: -1118600106, guid: 2063a7f2d3ca8be4cbe32e1a832c6479, type: 3}
+    fps: 16
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 5
+    lifetime: 0.3
+    opacity: 1
+    fadePortion: 0.25
+    drift: {x: 0, y: 0}
+  - id: 31
+    frames:
+    - {fileID: 935000343, guid: 3610a86a754a0de47be116cf0e39ecf7, type: 3}
+    - {fileID: -1709117257, guid: 3610a86a754a0de47be116cf0e39ecf7, type: 3}
+    - {fileID: 1043861054, guid: 3610a86a754a0de47be116cf0e39ecf7, type: 3}
+    - {fileID: 89679566, guid: 3610a86a754a0de47be116cf0e39ecf7, type: 3}
+    fps: 16
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 5
+    lifetime: 0.3
+    opacity: 1
+    fadePortion: 0.25
+    drift: {x: 0, y: 0}
+  - id: 32
+    frames:
+    - {fileID: 2099153902, guid: cecab668552d03c458070dad67b47fce, type: 3}
+    - {fileID: 2077547726, guid: cecab668552d03c458070dad67b47fce, type: 3}
+    - {fileID: 918626653, guid: cecab668552d03c458070dad67b47fce, type: 3}
+    - {fileID: 200281260, guid: cecab668552d03c458070dad67b47fce, type: 3}
+    fps: 16
+    channel: 2
+    sortingLayer: Effects
+    sortingOrder: 5
+    lifetime: 0.45
+    opacity: 1
+    fadePortion: 0.25
+    drift: {x: 0, y: 0}
+  - id: 33
+    frames:
+    - {fileID: 1288791398, guid: 44a6c01724debdd4dbff7898482bab99, type: 3}
+    - {fileID: -992442308, guid: 44a6c01724debdd4dbff7898482bab99, type: 3}
+    - {fileID: 270783058, guid: 44a6c01724debdd4dbff7898482bab99, type: 3}
+    - {fileID: 2128972512, guid: 44a6c01724debdd4dbff7898482bab99, type: 3}
+    fps: 16
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 5
+    lifetime: 0.3
+    opacity: 1
+    fadePortion: 0.25
+    drift: {x: 0, y: 0}

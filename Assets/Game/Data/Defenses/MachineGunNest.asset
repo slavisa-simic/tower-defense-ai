@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 059e47b4a381f0949a34109ad42fe990, type: 3}
+  m_Name: MachineGunNest
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Defenses.DefenseDefinition
+  id: machine-gun-nest
+  displayName: MG Nest
+  cost: 150
+  prefab: {fileID: 1712949689384735145, guid: 1d194432f8863b24ba6f2192469cdfa0, type: 3}
+  footprint: {x: 1, y: 1}
+  maxHealth: 300
+  rangeInCells: 5
+  damage: 20
+  fireRate: 4
+  targetingMode: 0
+  heavyWeapon: {fileID: 0}
+  levelII:
+    cost: 113
+    health: 1.25
+    damage: 1.25
+    fireRate: 1.1
+    range: 1
+    splash: 1
+    slow: 1
+    burnDuration: 1
+    burnDps: 1
+    overlay: {fileID: 1167570196, guid: 402dd86e22f1f014a8e12e5bd6c9d6d3, type: 3}
+  levelIII:
+    cost: 188
+    health: 1.5
+    damage: 1.6
+    fireRate: 1.2
+    range: 1.15
+    splash: 1
+    slow: 1
+    burnDuration: 1
+    burnDps: 1
+    overlay: {fileID: -1724756430, guid: 402dd86e22f1f014a8e12e5bd6c9d6d3, type: 3}
+  movementMultiplier: 0.5
+  traversalMultiplier: 2
+  triggerRadiusInCells: 0.55
+  armingDelay: 0.35

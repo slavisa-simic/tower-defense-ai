@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8595f4b8de5845d43ba7c711c60cb4df, type: 3}
+  m_Name: ammunition-shortage
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.EndlessEventDefinition
+  id: ammunition-shortage
+  displayName: AMMUNITION SHORTAGE
+  description: UPGRADES +20% COST / COMBAT REPAIRS +20% COST.
+  category: 0
+  minimumWave: 8
+  maximumWave: 0
+  weight: 1
+  durationType: 1
+  duration: 1
+  cooldown: 8
+  allowBossWave: 0
+  preparationEffects: 1
+  incompatibleEvents: []
+  uiIcon: {fileID: 21300000, guid: 288a6f85389f05a499b308c0239fde8c, type: 3}
+  modifiers:
+    quantity: 1
+    pressure: 1
+    boatSpeed: 1
+    boatInterval: 1
+    boatConcurrency: 1
+    defenseRange: 1
+    upgradeCost: 1.2
+    combatRepair: 1.2
+    preparationRepair: 1
+    floodedColumns: 0
+    fog: 0
+    boatVisual: {fileID: 0}
+    landingPattern: 0
+    composition: []
+  supplyBase: 0
+  supplyPerWave: 0
+  supplyMaximum: 500
+  preparationWarningSeconds: 0

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9c87c8e97aebcb4295ed1bf0c009eea, type: 3}
+  m_Name: MapCatalog
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Grid.MapCatalog
+  maps:
+  - {fileID: 11400000, guid: 93209614db879ea47b32d4ece1189569, type: 2}
+  - {fileID: 11400000, guid: 0934a451bcf49d049b06b2e75e20cea8, type: 2}

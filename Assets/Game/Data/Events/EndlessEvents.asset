@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48cc16b12056781418d8b6b44e05cc2d, type: 3}
+  m_Name: EndlessEvents
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.EndlessEventSettings
+  events:
+  - {fileID: 11400000, guid: d2788a250e29245448ad59f68dd77bf2, type: 2}
+  - {fileID: 11400000, guid: f4128fde03696ca40a212987e3758808, type: 2}
+  - {fileID: 11400000, guid: 0099ab9e576d4184a8ed65c8dec0dd19, type: 2}
+  - {fileID: 11400000, guid: 87e6f1235ff5eb24489552a2e9c4f5b3, type: 2}
+  - {fileID: 11400000, guid: efbce84646ddc9e4d872e591d3dc90f4, type: 2}
+  - {fileID: 11400000, guid: b7211ed971f234a4b9a81bc86fc89885, type: 2}
+  - {fileID: 11400000, guid: 7c771d90ace4f77478142483529703c2, type: 2}
+  - {fileID: 11400000, guid: e3a9c7ae1b5052f4d818e416ea983c37, type: 2}
+  - {fileID: 11400000, guid: 05bad25d9d80a98488fe0a0b5604f83d, type: 2}
+  - {fileID: 11400000, guid: f1e813426ba07e64383f9e4ad334a42f, type: 2}
+  - {fileID: 11400000, guid: 4e47efc0f582bb24f82707bd8c5baa96, type: 2}
+  - {fileID: 11400000, guid: 51202c21be9782844b3cea7af99f7d42, type: 2}
+  - {fileID: 11400000, guid: f9e86c23d0e9fab46af9750a5d4280d8, type: 2}
+  firstEventWave: 5
+  minimumGap: 2
+  maximumGap: 4
+  laterFrequencyWave: 30
+  laterMinimumGap: 2
+  laterMaximumGap: 3
+  recentExclusion: 2
+  challengeWeight: 0.7
+  reliefWeight: 0.2
+  patternWeight: 0.1
