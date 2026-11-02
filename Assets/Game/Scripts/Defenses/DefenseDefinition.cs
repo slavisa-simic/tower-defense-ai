@@ -12,6 +12,8 @@ namespace ShorelineDefense.Defenses
         [SerializeField, Min(0)] private int cost = 150;
         [SerializeField] private DefenseBase prefab;
         [SerializeField] private Vector2Int footprint = Vector2Int.one;
+        [SerializeField] private bool blocksMovement = true;
+        public bool BlocksMovement => blocksMovement;
         [SerializeField, Min(1)] private int maxHealth = 300;
         [SerializeField, Min(0.1f)] private float rangeInCells = 5f;
         [SerializeField, Min(0)] private int damage = 20;

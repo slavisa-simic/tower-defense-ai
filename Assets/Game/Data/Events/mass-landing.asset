@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8595f4b8de5845d43ba7c711c60cb4df, type: 3}
   m_Name: mass-landing
   m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.EndlessEventDefinition
-  id: mass-landing
-  displayName: MASS LANDING
-  description: 50% more infected. More boats; arrivals 30% faster.
+  id: mass-emergence
+  displayName: MASS EMERGENCE
+  description: High biological activity. More organisms approach across multiple
+    sectors.
   category: 0
   minimumWave: 7
   maximumWave: 0
@@ -38,6 +39,8 @@ MonoBehaviour:
     preparationRepair: 1
     floodedColumns: 0
     fog: 0
+    directEmergenceRatio: -1
+    broodCarrierRatio: -1
     boatVisual: {fileID: 0}
     landingPattern: 1
     composition: []

@@ -1,0 +1,114 @@
+[
+  {
+    "prefab": "Assets/Game/Prefabs/Enemies/Broodling_TopDown.prefab",
+    "removedDuplicates": 1,
+    "body": "Body",
+    "material": "Assets/Game/Materials/PixelShadowLow.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Enemies/Broodmother_TopDown.prefab",
+    "removedDuplicates": 1,
+    "body": "Body",
+    "material": "Assets/Game/Materials/PixelShadowTall.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Enemies/Bulwark_TopDown.prefab",
+    "removedDuplicates": 1,
+    "body": "Body",
+    "material": "Assets/Game/Materials/PixelShadowLow.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Enemies/Burrower_TopDown.prefab",
+    "removedDuplicates": 1,
+    "body": "Body",
+    "material": "Assets/Game/Materials/PixelShadowLow.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Enemies/Crawler_TopDown.prefab",
+    "removedDuplicates": 1,
+    "body": "Body",
+    "material": "Assets/Game/Materials/PixelShadowLow.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Enemies/Dredger_TopDown.prefab",
+    "removedDuplicates": 1,
+    "body": "Body",
+    "material": "Assets/Game/Materials/PixelShadowTall.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Enemies/Skitter_TopDown.prefab",
+    "removedDuplicates": 1,
+    "body": "Body",
+    "material": "Assets/Game/Materials/PixelShadowLow.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Enemies/Spitter_TopDown.prefab",
+    "removedDuplicates": 1,
+    "body": "Body",
+    "material": "Assets/Game/Materials/PixelShadowLow.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Defenses/AutoCannon.prefab",
+    "removedDuplicates": 0,
+    "body": "Base",
+    "material": "Assets/Game/Materials/PixelShadowMedium.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Defenses/BarbedWire.prefab",
+    "removedDuplicates": 0,
+    "body": "Wire strand",
+    "material": "Assets/Game/Materials/PixelShadowMedium.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Defenses/FlamethrowerPosition.prefab",
+    "removedDuplicates": 0,
+    "body": "Base",
+    "material": "Assets/Game/Materials/PixelShadowMedium.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Defenses/LandMine.prefab",
+    "removedDuplicates": 0,
+    "body": "Mine body",
+    "material": "Assets/Game/Materials/PixelShadowMedium.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Defenses/MachineGunNest.prefab",
+    "removedDuplicates": 0,
+    "body": "Sandbag Base",
+    "material": "Assets/Game/Materials/PixelShadowMedium.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Defenses/MortarPosition.prefab",
+    "removedDuplicates": 0,
+    "body": "Base",
+    "material": "Assets/Game/Materials/PixelShadowMedium.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Defenses/RocketLauncherPosition.prefab",
+    "removedDuplicates": 0,
+    "body": "Base",
+    "material": "Assets/Game/Materials/PixelShadowMedium.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Defenses/SniperTower.prefab",
+    "removedDuplicates": 0,
+    "body": "Sandbag Base",
+    "material": "Assets/Game/Materials/PixelShadowMedium.mat"
+  },
+  {
+    "prefab": "Assets/Game/Prefabs/Gameplay/PlayerBase_TopDown.prefab",
+    "removedDuplicates": 0,
+    "body": "Command Post",
+    "material": "Assets/Game/Materials/PixelShadowTall.mat"
+  },
+  {
+    "scene": "CoastalDefense_TopDown",
+    "staticOwners": 78,
+    "terrainRenderersMovedToEnvironment": 0
+  },
+  {
+    "scene": "DanubeIndustrialPort",
+    "staticOwners": 95,
+    "terrainRenderersMovedToEnvironment": 31
+  }
+]

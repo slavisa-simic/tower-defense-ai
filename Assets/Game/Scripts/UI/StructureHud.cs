@@ -71,7 +71,7 @@ namespace ShorelineDefense.UI
             else
             {
                 var heavy = d.Definition.HeavyWeapon;
-                core += d.GetComponent<ShorelineDefense.Defenses.FlameWeapon>() != null ? $"\nDPS {d.Damage / heavy.damageTick:0} / Burn {d.BurnDuration:0.0}s" : $"\nDamage {d.Damage} / Reload {1 / d.FireRate:0.00}s";
+                core += d.GetComponent<ShorelineDefense.Defenses.FlameWeapon>() != null ? $"\nDPS {d.Damage / d.DamageTick:0} / Burn {d.BurnDuration:0.0}s" : $"\nDamage {d.Damage} / Reload {1 / d.FireRate:0.00}s";
                 core += $"\nRange {d.Range / d.Grid.CellSize:0.0} cells";
                 if (d.GetComponent<ShorelineDefense.Defenses.AreaProjectileWeapon>() != null) core += $"\nBlast {d.SplashRadiusInCells:0.0} / Min {heavy.minimumRangeInCells:0.0} cells";
             }
@@ -84,11 +84,11 @@ namespace ShorelineDefense.UI
             dismantle.tooltip = $"DISMANTLE\nRefund {builder.RefundFor(d):N0} RSD\nBased on paid construction and upgrades.";
             var next = d.Definition.LevelData(d.Level + 1);
             upgrade.tooltip = d.Level == 3 ? "MAX LEVEL III" : $"UPGRADE TO LEVEL {(d.Level == 1 ? "II" : "III")}\n{cost:N0} RSD\n" +
-                $"HP capacity {d.MaxHealth} → {Mathf.RoundToInt(d.Definition.MaxHealth * (next?.health ?? 1))}\n" +
+                $"HP capacity {d.MaxHealth} → {d.Meta.MaxHealth(d.Definition, d.Level + 1)}\n" +
                 (d.Definition.Id == "barbed-wire" ? $"Slow {(1 - d.MovementMultiplier) * 100:0}% → {(1 - d.Definition.MovementMultiplier * (next?.slow ?? 1)) * 100:0}%" :
-                $"Damage {d.Damage} → {Mathf.RoundToInt(d.Definition.Damage * (next?.damage ?? 1))}\n" +
+                $"Damage {d.Damage} → {d.DamageAtLevel(d.Level + 1)}\n" +
                 (d.Definition.Id == "land-mine" ? $"Blast {d.Range / d.Grid.CellSize:0.0} → {d.Definition.RangeInCells * (next?.range ?? 1):0.0} cells" :
-                $"Fire rate {d.FireRate:0.00} → {d.Definition.FireRate * (next?.fireRate ?? 1):0.00}/s\nRange {d.Range / d.Grid.CellSize:0.0} → {d.Definition.RangeInCells * (next?.range ?? 1) * (d.Owner?.Events?.Modifiers.defenseRange ?? 1):0.0} cells"));
+                $"Fire rate {d.FireRate:0.00} → {d.FireRateAtLevel(d.Level + 1):0.00}/s\nRange {d.Range / d.Grid.CellSize:0.0} → {d.RangeAtLevel(d.Level + 1) / d.Grid.CellSize:0.0} cells"));
             upgrade.SetEnabled(builder.CanUpgrade(d)); repair.SetEnabled(builder.CanRepair(d)); dismantle.SetEnabled(builder.CanDismantle(d));
             status.text = $"Repair rate x{builder.RepairMultiplier:0.00}" + ((cost > builder.Economy.Money && d.Level < 3) || repairCost > builder.Economy.Money ? " / Insufficient RSD" : "");
         }

@@ -1,0 +1,6772 @@
+[
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\AutoCannon.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "1770562072126637626",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1604675691833022444",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\BarbedWire.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "2952393333089390181",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition"
+        ]
+      },
+      {
+        "id": "6788448467114266616",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Color",
+          "m_Size"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\FlamethrowerPosition.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "3872944172921230342",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition"
+        ]
+      },
+      {
+        "id": "7979565848822924966",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\LandMine.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "9131821728174787127",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1538755746153000456",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\MachineGunNest.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "7833576056364196621",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "4126615042765541220",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\MortarPosition.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "3135864097071790572",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "4550449379580140407",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\RocketLauncherPosition.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "7242785665480960801",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1077626624617620956",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\SniperTower.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "8551486137293950409",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1649107020262211678",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Broodling_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      1,
+      212
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "3741575819037527805",
+        "type": 4,
+        "operation": "changed",
+        "fields": []
+      },
+      {
+        "id": "4604079873125758566",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "5083847167957761737",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "4814833148086696838",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "4255503486522948063",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition"
+        ]
+      },
+      {
+        "id": "8684712415774210971",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder",
+          "m_Color",
+          "m_Size"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Broodmother_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      212,
+      1
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "5325821036002869921",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition"
+        ]
+      },
+      {
+        "id": "8896688340318541632",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "3741575819037527805",
+        "type": 4,
+        "operation": "changed",
+        "fields": []
+      },
+      {
+        "id": "4604079873125758566",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "5083847167957761737",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "4814833148086696838",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Bulwark_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      1,
+      212
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "3741575819037527805",
+        "type": 4,
+        "operation": "changed",
+        "fields": []
+      },
+      {
+        "id": "4604079873125758566",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "5083847167957761737",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "4814833148086696838",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "4858806457999734015",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition"
+        ]
+      },
+      {
+        "id": "4236111953141178419",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder",
+          "m_Color",
+          "m_Size"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Burrower_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      212,
+      1
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "5662447005462809162",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition"
+        ]
+      },
+      {
+        "id": "4281310498855932737",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "3741575819037527805",
+        "type": 4,
+        "operation": "changed",
+        "fields": []
+      },
+      {
+        "id": "4604079873125758566",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "5083847167957761737",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "4814833148086696838",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Crawler_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      212,
+      1
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "6759643818079418506",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition"
+        ]
+      },
+      {
+        "id": "2490565769394419557",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "3741575819037527805",
+        "type": 4,
+        "operation": "changed",
+        "fields": []
+      },
+      {
+        "id": "4604079873125758566",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "5083847167957761737",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "4814833148086696838",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Dredger_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      1,
+      212
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "3741575819037527805",
+        "type": 4,
+        "operation": "changed",
+        "fields": []
+      },
+      {
+        "id": "4604079873125758566",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "5083847167957761737",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "4814833148086696838",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "7272678741565969098",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition"
+        ]
+      },
+      {
+        "id": "2751204661789043730",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder",
+          "m_Color",
+          "m_Size"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Skitter_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      212,
+      1
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "3084554173806741773",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition"
+        ]
+      },
+      {
+        "id": "4426547929129253448",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "3741575819037527805",
+        "type": 4,
+        "operation": "changed",
+        "fields": []
+      },
+      {
+        "id": "4604079873125758566",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "5083847167957761737",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "4814833148086696838",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Spitter_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      212,
+      1
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "2652515886246184960",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition"
+        ]
+      },
+      {
+        "id": "8425967204930212601",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "3741575819037527805",
+        "type": 4,
+        "operation": "changed",
+        "fields": []
+      },
+      {
+        "id": "4604079873125758566",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "5083847167957761737",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "4814833148086696838",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Gameplay\\PlayerBase_TopDown.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": [],
+    "changes": [
+      {
+        "id": "5814066322140152321",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "3651831161856107671",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Scenes\\CoastalDefense_TopDown.unity",
+    "documentChanges": 158,
+    "types": [
+      4,
+      212,
+      1001
+    ],
+    "nonPresentationChanges": [
+      {
+        "id": "789177223",
+        "type": 1001,
+        "operation": "changed",
+        "fields": []
+      }
+    ],
+    "changes": [
+      {
+        "id": "2980245",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "2980246",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "15232372",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "15232373",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "46649355",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "46649356",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "65628839",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "65628840",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "107296763",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "107296764",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "118222665",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "118222666",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color"
+        ]
+      },
+      {
+        "id": "151552093",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "151552094",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "204296665",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "204296666",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "216153943",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "216153944",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "220091097",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "220091098",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "258120908",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "258120909",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "274303913",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "274303914",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color"
+        ]
+      },
+      {
+        "id": "296231931",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "296231932",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "343641353",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "343641354",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "366470789",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "366470790",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "375793358",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "375793359",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "383597604",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "383597605",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color"
+        ]
+      },
+      {
+        "id": "396518922",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "396518923",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "410912405",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_Enabled",
+          "m_Color"
+        ]
+      },
+      {
+        "id": "417538207",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "417538208",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "439576537",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "439576538",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "479064924",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "479064925",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color"
+        ]
+      },
+      {
+        "id": "486096460",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "486096461",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "489230789",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "489230790",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "496245041",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "496245042",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "533834855",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "533834856",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "536388553",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "536388554",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color"
+        ]
+      },
+      {
+        "id": "554016927",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "554016928",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "638607013",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "638607014",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "649357525",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "649357526",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color"
+        ]
+      },
+      {
+        "id": "658748253",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "658748254",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "694586428",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "694586429",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "715387542",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "715387543",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "722395225",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "722395226",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "726294627",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "726294628",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "733447806",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "733447807",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "777574745",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "777574746",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "778281441",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "778281442",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "789177223",
+        "type": 1001,
+        "operation": "changed",
+        "fields": []
+      },
+      {
+        "id": "801153269",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "801153270",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "808890850",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "808890851",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "814587179",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "814587180",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color"
+        ]
+      },
+      {
+        "id": "903856609",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "903856610",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "915834784",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "915834785",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "949455008",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "949455009",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1058631450",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1058631451",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1110080217",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1110080218",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1127725862",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1127725863",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1168462257",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1168462258",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1193789494",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1193789495",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1201038022",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1201038023",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color"
+        ]
+      },
+      {
+        "id": "1211345585",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1211345586",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1221991584",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1221991585",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1254917526",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1254917527",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1258668034",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1258668035",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1289829332",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1289829333",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color"
+        ]
+      },
+      {
+        "id": "1366848833",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1366848834",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1398169867",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1398169868",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1427024027",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1427024028",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1473222609",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1473222610",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1598714459",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1598714460",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1666115790",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1666115791",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1681062271",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1681062272",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1703703484",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1703703485",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1751339671",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1751339672",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1782020952",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1782020953",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1784915910",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1784915911",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color"
+        ]
+      },
+      {
+        "id": "1821032846",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1821032847",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color"
+        ]
+      },
+      {
+        "id": "1835859569",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1835859570",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1861555773",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1861555774",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color"
+        ]
+      },
+      {
+        "id": "1875115605",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1875115606",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1933560224",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1933560225",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1937620371",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1937620372",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1943405503",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1943405504",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1984586191",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1984586192",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "1999394918",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "1999394919",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "2040255201",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "2040255202",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "2053940066",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "2053940067",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      },
+      {
+        "id": "2112329812",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalRotation",
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "2112329813",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color"
+        ]
+      },
+      {
+        "id": "2143732492",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_LocalPosition",
+          "m_LocalScale"
+        ]
+      },
+      {
+        "id": "2143732493",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingOrder",
+          "m_Sprite",
+          "m_Color",
+          "m_Size"
+        ]
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Scenes\\DanubeIndustrialPort.unity",
+    "documentChanges": 677,
+    "types": [
+      212,
+      4,
+      1,
+      1001
+    ],
+    "nonPresentationChanges": [
+      {
+        "id": "789177223",
+        "type": 1001,
+        "operation": "changed",
+        "fields": []
+      }
+    ],
+    "changes": [
+      {
+        "id": "4799001",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "37112549",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "38559825",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "38559826",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "38559827",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "48566263",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "56341493",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "60795857",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "64906048",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "64906049",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "64906050",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "79113906",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "79113907",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "79113908",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "98466435",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "99812808",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "99812809",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "99812810",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "114590372",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "123232288",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "125518063",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "132958560",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "139608244",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "139608245",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "139608246",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "149969050",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "150914965",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "150914966",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "150914967",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "157776169",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "162269134",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "162269135",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "162269136",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "169417735",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "169417736",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "169417737",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "170982448",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "170982449",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "170982450",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "173961393",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "173961394",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "173961395",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "179918428",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "187400854",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "187400855",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "187400856",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "198082978",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "201804473",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "209994146",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "209994147",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "209994148",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "217035474",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "252880004",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "252880005",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "252880006",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "253534662",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "259591937",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "259591938",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "259591939",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "274841200",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "274841201",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "274841202",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "275135633",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "284358008",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "293934841",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "301518242",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "301518243",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "301518244",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "320634493",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "320634494",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "320634495",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "327491785",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "335788989",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "335788990",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "335788991",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "342867777",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "348338076",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "353800916",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "356570732",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "366167640",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "372837206",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "373959247",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "373959248",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "373959249",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "380500820",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "385127970",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "390224778",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "390224779",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "390224780",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "414550827",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "414550828",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "414550829",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "425148995",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "425148996",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "425148997",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "436691252",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "457069863",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "463065554",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "463065555",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "463065556",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "463833576",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "477631220",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "477631221",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "477631222",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "521097523",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "527082468",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "527082469",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "527082470",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "536410674",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "536410675",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "536410676",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "556220627",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "557401319",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "561379382",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "561379383",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "561379384",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "562955133",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "568937527",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "578271403",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "578271404",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "578271405",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "590865576",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "590865577",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "590865578",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "591167222",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "599401227",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "599401228",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "599401229",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "636217693",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "636217694",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "636217695",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "664795164",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "664795165",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "664795166",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "667200417",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "667200418",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "667200419",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "687754824",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "687754825",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "687754826",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "700205327",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "700205328",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "700205329",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "701286869",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "708403497",
+        "type": 4,
+        "operation": "changed",
+        "fields": []
+      },
+      {
+        "id": "720203063",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "720232984",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "720232985",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "720232986",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "725018275",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "729038159",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "729038160",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "729038161",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "733235932",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "751227024",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "770195691",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "770195692",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "770195693",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "770377287",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "770377288",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "770377289",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "782690066",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "787717815",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "787717816",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "787717817",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "789177223",
+        "type": 1001,
+        "operation": "changed",
+        "fields": []
+      },
+      {
+        "id": "803737133",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "805250985",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "807563171",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "811313513",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "811313514",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "811313515",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "824251135",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "841118276",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "841118277",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "841118278",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "853797285",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "853797286",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "853797287",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "856731987",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "856731988",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "856731989",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "859499877",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "859499878",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "859499879",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "876292243",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "883473029",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "909657252",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "944251383",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "946087184",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "955685172",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "955685173",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "955685174",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "962245590",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "963434250",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "999339493",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "999339494",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "999339495",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1000657991",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1000657992",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1000657993",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1004879228",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1011937204",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1014787569",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1019620182",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1028528536",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1032503570",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1037706128",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1045569541",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1045569542",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1045569543",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1061360841",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1061360842",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1061360843",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1090114769",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1096433735",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1098949693",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1114975987",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1115422207",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1130928872",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1140181083",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1158083068",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1186500224",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1189824264",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1192812955",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1192812956",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1192812957",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1194263346",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1194263347",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1194263348",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1205121711",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1205121712",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1205121713",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1250220857",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1250220858",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1250220859",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1254851749",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1262286413",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1293145116",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1298634387",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1298634388",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1298634389",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1298935808",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1314201650",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1324277030",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1324277031",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1324277032",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1328104935",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1329121397",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1341225021",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1341225022",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1341225023",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1349779363",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1377048896",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1381746436",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1381746437",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1381746438",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1389964783",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1414832969",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1419274839",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1422241650",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1422241651",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1422241652",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1425089305",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1425089306",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1425089307",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1425520135",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1425520136",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1425520137",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1430921447",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1444078757",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1444078758",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1444078759",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1459548050",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1459548051",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1459548052",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1498997853",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1519697519",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1531859585",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1541595293",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1541595294",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1541595295",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1550950639",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1556369926",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1556369927",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1556369928",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1561720732",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1561720733",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1561720734",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1580721680",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1580721681",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1580721682",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1596007901",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1614174319",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1624921110",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1627001187",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1641313660",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1643452365",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1644097829",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1664625941",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1687900257",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1687900258",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1687900259",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1692184555",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1696147646",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1696147647",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1696147648",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1699719810",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1704671194",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1716711843",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1719112826",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1721336529",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1721336530",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1721336531",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1741371251",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1741371252",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1741371253",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1742548635",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1749827035",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1763819473",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1763819474",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1763819475",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1778164147",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1778164148",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1778164149",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1806118225",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1814051282",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1815237444",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1815237445",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1815237446",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1815608635",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1815608636",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1815608637",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1823173320",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1827350081",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1838408966",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1838408967",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1838408968",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1867611842",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1867611843",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1867611844",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1895301321",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1903215291",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1903347685",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1903347686",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1903347687",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1905802602",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1905802603",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1905802604",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1922412421",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1928508253",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1939497114",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1958650290",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1958650291",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1958650292",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1973971729",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1973971730",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1973971731",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "1976406023",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "1979568425",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1986014030",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "1988249011",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "2007887836",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2007887837",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2007887838",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2029189773",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "2035377765",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2035377766",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2035377767",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2043929960",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "2055975088",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "2059673467",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "2065288524",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2065288525",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2065288526",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2072332074",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2072332075",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2072332076",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2074731471",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2074731472",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2074731473",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2078988760",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2078988761",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2078988762",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2084367933",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "2101696261",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "2113650298",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "2118312617",
+        "type": 1,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2118312618",
+        "type": 4,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2118312619",
+        "type": 212,
+        "operation": "removed",
+        "fields": []
+      },
+      {
+        "id": "2121351973",
+        "type": 4,
+        "operation": "changed",
+        "fields": [
+          "m_Children"
+        ]
+      },
+      {
+        "id": "2146063393",
+        "type": 212,
+        "operation": "changed",
+        "fields": [
+          "m_SortingLayerID",
+          "m_SortingLayer",
+          "m_SortingOrder"
+        ]
+      },
+      {
+        "id": "3594052",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "3594053",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "3594054",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "8566477",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "8566478",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "8566479",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "24647483",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "24647484",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "24647485",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "34118055",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "34118056",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "34118057",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "81803802",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "81803803",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "81803804",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "90527600",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "90527601",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "90527602",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "94673664",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "94673665",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "94673666",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "105475836",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "105475837",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "105475838",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "119670745",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "119670746",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "119670747",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "130199845",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "130199846",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "130199847",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "143763089",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "143763090",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "143763091",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "182757528",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "182757529",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "182757530",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "184791660",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "184791661",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "184791662",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "187897016",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "187897017",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "187897018",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "234169374",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "234169375",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "234169376",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "273357973",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "273357974",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "273357975",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "278643806",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "278643807",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "278643808",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "283001099",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "283001100",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "283001101",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "311966727",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "311966728",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "311966729",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "318554740",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "318554741",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "318554742",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "321879024",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "321879025",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "321879026",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "338321254",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "338321255",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "338321256",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "366925906",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "366925907",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "366925908",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "397567995",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "397567996",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "397567997",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "440899999",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "440900000",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "440900001",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "467835842",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "467835843",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "467835844",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "473482952",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "473482953",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "473482954",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "506772105",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "506772106",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "506772107",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "527153914",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "527153915",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "527153916",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "534106830",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "534106831",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "534106832",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "536989338",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "536989339",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "536989340",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "547711133",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "547711134",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "547711135",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "583224187",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "583224188",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "583224189",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "621737824",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "621737825",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "621737826",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "660854580",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "660854581",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "660854582",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "673880077",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "673880078",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "673880079",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "684667128",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "684667129",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "684667130",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "686494304",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "686494305",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "686494306",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "689063119",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "689063120",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "689063121",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "726748306",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "726748307",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "726748308",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "778938637",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "778938638",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "778938639",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "830000313",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "830000314",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "830000315",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "868605412",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "868605413",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "868605414",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "892354143",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "892354144",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "892354145",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "921105506",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "921105507",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "921105508",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "921698762",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "921698763",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "921698764",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "952517794",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "952517795",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "952517796",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1007633736",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1007633737",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1007633738",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1082800868",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1082800869",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1082800870",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1093184457",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1093184458",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1093184459",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1115456730",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1115456731",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1115456732",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1137163257",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1137163258",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1137163259",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1151113154",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1151113155",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1151113156",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1189491495",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1189491496",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1189491497",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1199651733",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1199651734",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1199651735",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1210706729",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1210706730",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1210706731",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1249585797",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1249585798",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1249585799",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1267640606",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1267640607",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1267640608",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1275537595",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1275537596",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1275537597",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1282788690",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1282788691",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1282788692",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1284226776",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1284226777",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1284226778",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1291133812",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1291133813",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1291133814",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1357182507",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1357182508",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1357182509",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1384503445",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1384503446",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1384503447",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1433534897",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1433534898",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1433534899",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1457052854",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1457052855",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1457052856",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1518266375",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1518266376",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1518266377",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1521940442",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1521940443",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1521940444",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1545100652",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1545100653",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1545100654",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1561934705",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1561934706",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1561934707",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1580180050",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1580180051",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1580180052",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1622952610",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1622952611",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1622952612",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1677376256",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1677376257",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1677376258",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1696563718",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1696563719",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1696563720",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1709697058",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1709697059",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1709697060",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1736545849",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1736545850",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1736545851",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1783911383",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1783911384",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1783911385",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1804447675",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1804447676",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1804447677",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1828607454",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1828607455",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1828607456",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1852496598",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1852496599",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1852496600",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1871052772",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1871052773",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1871052774",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1906534280",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1906534281",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1906534282",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1910041084",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1910041085",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1910041086",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1922971174",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1922971175",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1922971176",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1932743743",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1932743744",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1932743745",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1936003222",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1936003223",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1936003224",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1954790226",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1954790227",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1954790228",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1974104675",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1974104676",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1974104677",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1985731438",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1985731439",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1985731440",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1986789404",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1986789405",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "1986789406",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2008986478",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2008986479",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2008986480",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2021904453",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2021904454",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2021904455",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2036011840",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2036011841",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2036011842",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2061413571",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2061413572",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2061413573",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2068528392",
+        "type": 1,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2068528393",
+        "type": 4,
+        "operation": "added",
+        "fields": []
+      },
+      {
+        "id": "2068528394",
+        "type": 212,
+        "operation": "added",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Scripts\\Presentation\\EnemySpritePresentation.cs",
+    "kind": "presentation C#"
+  }
+]

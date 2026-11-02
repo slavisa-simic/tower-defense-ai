@@ -23,7 +23,7 @@ namespace ShorelineDefense.Defenses
             timer -= dt;
             if (timer > 0) return;
             var data = defense.Definition.HeavyWeapon;
-            timer = data.damageTick;
+            timer = defense.DamageTick;
             var target = defense.Enemies.FindTarget(transform.position, defense.Range, defense.Definition.Targeting);
             Firing = target != null;
             if (!Firing) { AimDirection = Vector2.left; return; }

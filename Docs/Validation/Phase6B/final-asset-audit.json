@@ -1,0 +1,33 @@
+{
+  "runInBackground": false,
+  "rows": [
+    {
+      "scene": "MainMenu",
+      "missing": 0,
+      "legacyDependencies": [],
+      "carriers": 0
+    },
+    {
+      "scene": "CoastalDefense_TopDown",
+      "missing": 0,
+      "legacyDependencies": [],
+      "carriers": 4
+    },
+    {
+      "scene": "DanubeIndustrialPort",
+      "missing": 0,
+      "legacyDependencies": [],
+      "carriers": 4
+    }
+  ],
+  "previews": [
+    {
+      "id": "river_border",
+      "preview": "Assets/Game/Art/UI/map_preview_danube_border.png"
+    },
+    {
+      "id": "industrial_port",
+      "preview": "Assets/Game/Art/UI/map_preview_industrial_port.png"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "diagnostics": [],
+  "compileMs": 1847,
+  "executeMs": 2238,
+  "assemblyName": "PipelineRunScript_Finalize_44578eb5dce8450c99368ea36b7eda20",
+  "success": true,
+  "result": "[\r\n  {\r\n    \"scene\": \"MainMenu\",\r\n    \"missing\": 0,\r\n    \"disabled\": 0,\r\n    \"legacyPrefabDependencies\": []\r\n  },\r\n  {\r\n    \"scene\": \"CoastalDefense_TopDown\",\r\n    \"missing\": 0,\r\n    \"disabled\": 0,\r\n    \"legacyPrefabDependencies\": []\r\n  },\r\n  {\r\n    \"scene\": \"DanubeIndustrialPort\",\r\n    \"missing\": 0,\r\n    \"disabled\": 0,\r\n    \"legacyPrefabDependencies\": []\r\n  }\r\n]"
+}

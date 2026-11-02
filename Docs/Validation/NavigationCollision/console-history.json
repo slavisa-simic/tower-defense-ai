@@ -1,0 +1,1769 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "command": "console",
+    "parameters": {
+      "tail": "300"
+    },
+    "result": {
+      "entries": [
+        {
+          "seq": 56,
+          "timestampUtc": "2026-11-02T10:07:10.5630121Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "ExecuteCommandByName: No command named 'editor status' is available. Available: [add_animator_layer, get_tags_layers, editor_focus, remove_scene_from_build, get_animator_controller, get_serialized_fields, get_authoring_root, list_shaders, remove_component, move_asset, set_active_scene, remove_animation_curve, add_timeline_track, cancel_occlusion_bake, set_transform, get_material_properties, add_animator_parameter, list_build_targets, occlusion_bake_status, get_runtime_pipeline_settings, get_player_settings, cancel_lighting_bake, audit_status, clear_baked_lighting, clear_occlusion_culling, add_animator_transition, list_tests, get_time_settings, batch, set_tag, get_import_settings, set_material_properties, delete_gameobject, package_list, wait_status, wait_cancel, add_scene_to_build, bake_lighting, bake_occlusion_culling, set_authoring_root, get_input_settings, set_input_settings, add_component, switch_build_target, rename_asset, package_remove, set_player_settings, list_build_profiles, set_parent, package_resolve, save_all, import_asset, get_quality_settings, save_prefab_contents, set_component_properties, set_autotick, set_animation_curve, cancel_navmesh_bake, bake_navmesh_surfaces, set_quality_settings, set_runtime_pipeline_settings, create_script, create_folder, create_animation_clip, get_graphics_settings, capture_game_view, create_gameobject, lighting_bake_status, get_scene_hierarchy, get_lighting_settings, read_text_file, delete_asset, get_performance_stats, recompile, set_time_settings, recompile_status, add_timeline_clip, set_active, package_search, bake_navmesh, set_graphics_settings, package_add, set_navmesh_settings, get_physics_settings, instantiate_prefab, screenshot, set_physics_settings, get_build_settings, open_scene, wait_for, search, set_serialized_field, create_scene, switch_build_target_status, build_status, add_animator_state, attach_script, set_audio_settings, set_tags_layers, rename_gameobject, clear_navmesh, run_script, create_prefab, revert_prefab_overrides, copy_asset, get_shader_properties, set_lighting_settings, menu, create_prefab_variant, set_import_settings, navmesh_bake_status, write_text_file, editor_play, list_open_scenes, set_selection, get_component_properties, find_gameobjects, build, set_build_settings, create_animator_controller, test_status, set_layer, create_timeline, create_asset, get_selection, package_status, cancel_tests, save_scene, capture_scene_view, editor_stop, audit, unpack_prefab, editor_pause, run_tests, apply_prefab_overrides, get_navmesh_settings, get_audio_settings, create_gameobjects, get_timeline, reload_file_player_interpreter, find_assets, get_animation_clip, editor_status, simulate_key, cleanup_codereload, runtime_status, set_timescale, log, console, codereload_status, console_status, eval_file, reload_file, clear_console, simulate_pointer, eval, reload_file_editor_interpreter, set_target_framerate, quit, report_evals]",
+          "stackTrace": "UnityEngine.Debug:LogError (object)\nUnity.Pipeline.BasePipelineServer:ResolveCommand (string) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2436)\nUnity.Pipeline.BasePipelineServer/<HandleExecRequest>d__115:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:1899)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<int>:SetResult (int)\nUnity.Pipeline.MaxLengthStream/<ReadAsync>d__6:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/MaxLengthStream.cs:46)\nSystem.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 57,
+          "timestampUtc": "2026-11-02T10:16:18.1442611Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Assets\\Game\\Scripts\\Grid\\MapRuntimeContext.cs(52,100): error CS1069: The type name 'BoxCollider2D' could not be found in the namespace 'UnityEngine'. This type has been forwarded to assembly 'UnityEngine.Physics2DModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null' Enable the built in package 'Physics 2D' in the Package Manager window to fix this error.",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 58,
+          "timestampUtc": "2026-11-02T10:20:25.5136105Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Failed to handle /api/exec request: Main thread operation timed out after 30000ms",
+          "stackTrace": "UnityEngine.Debug:LogError (object)\nUnity.Pipeline.BasePipelineServer/<HandleExecRequest>d__115:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2071)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<ExecuteGated>d__105:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:1403)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass115_0/<<HandleExecRequest>b__0>d:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2032)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<object>:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<ExecuteCommandByName>d__133:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2478)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<object>:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<ExecuteCommand>d__134:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2517)\nSystem.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 59,
+          "timestampUtc": "2026-11-02T10:21:02.5055089Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Failed to handle /api/exec request: Main thread operation timed out after 30000ms",
+          "stackTrace": "UnityEngine.Debug:LogError (object)\nUnity.Pipeline.BasePipelineServer/<HandleExecRequest>d__115:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2071)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<ExecuteGated>d__105:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:1403)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass115_0/<<HandleExecRequest>b__0>d:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2032)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<object>:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<ExecuteCommandByName>d__133:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2478)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<object>:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<ExecuteCommand>d__134:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2517)\nSystem.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 60,
+          "timestampUtc": "2026-11-02T10:21:54.1278938Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 61,
+          "timestampUtc": "2026-11-02T10:21:54.4789401Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 140 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 62,
+          "timestampUtc": "2026-11-02T10:21:55.3359112Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 63,
+          "timestampUtc": "2026-11-02T10:21:55.3695704Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 13 total, 13 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 64,
+          "timestampUtc": "2026-11-02T10:21:55.5508206Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 65,
+          "timestampUtc": "2026-11-02T10:22:03.7959469Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 66,
+          "timestampUtc": "2026-11-02T10:22:08.8932287Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 67,
+          "timestampUtc": "2026-11-02T10:22:08.9310239Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 88 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 68,
+          "timestampUtc": "2026-11-02T10:22:14.2657742Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "industrial_port: static blocked cells=183, container footprints=6, crane footprints=4, building footprints=6, invalid=2. Static-disconnected landing (-11.88, 10.63, 0.00); Static-disconnected landing (-11.88, 9.38, 0.00); ",
+          "stackTrace": "UnityEngine.Debug:LogWarning (object,UnityEngine.Object)\nShorelineDefense.Grid.MapRuntimeContext:Start () (at Assets/Game/Scripts/Grid/MapRuntimeContext.cs:23)\n",
+          "seeded": false
+        },
+        {
+          "seq": 69,
+          "timestampUtc": "2026-11-02T10:22:14.2693342Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Map industrial_port: 8 landings, 2 exits, 270 buildable, 285 blocked, 2 invalid. Unreachable landing (-11.88, 10.63, 0.00); Unreachable landing (-11.88, 9.38, 0.00); ",
+          "stackTrace": "UnityEngine.Debug:LogError (object,UnityEngine.Object)\nShorelineDefense.Grid.MapRuntimeContext:Start () (at Assets/Game/Scripts/Grid/MapRuntimeContext.cs:26)\n",
+          "seeded": false
+        },
+        {
+          "seq": 70,
+          "timestampUtc": "2026-11-02T10:22:15.3218421Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "industrial_port: static blocked cells=183, container footprints=6, crane footprints=4, building footprints=6, invalid=2. Static-disconnected landing (-11.88, 10.63, 0.00); Static-disconnected landing (-11.88, 9.38, 0.00); ",
+          "stackTrace": "UnityEngine.Debug:LogWarning (object,UnityEngine.Object)\nShorelineDefense.Grid.MapRuntimeContext:Start () (at Assets/Game/Scripts/Grid/MapRuntimeContext.cs:23)\n",
+          "seeded": false
+        },
+        {
+          "seq": 71,
+          "timestampUtc": "2026-11-02T10:22:15.3229136Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Map industrial_port: 8 landings, 2 exits, 270 buildable, 285 blocked, 2 invalid. Unreachable landing (-11.88, 10.63, 0.00); Unreachable landing (-11.88, 9.38, 0.00); ",
+          "stackTrace": "UnityEngine.Debug:LogError (object,UnityEngine.Object)\nShorelineDefense.Grid.MapRuntimeContext:Start () (at Assets/Game/Scripts/Grid/MapRuntimeContext.cs:26)\n",
+          "seeded": false
+        },
+        {
+          "seq": 72,
+          "timestampUtc": "2026-11-02T10:22:16.0041059Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "industrial_port: static blocked cells=183, container footprints=6, crane footprints=4, building footprints=6, invalid=2. Static-disconnected landing (-11.88, 10.63, 0.00); Static-disconnected landing (-11.88, 9.38, 0.00); ",
+          "stackTrace": "UnityEngine.Debug:LogWarning (object,UnityEngine.Object)\nShorelineDefense.Grid.MapRuntimeContext:Start () (at Assets/Game/Scripts/Grid/MapRuntimeContext.cs:23)\n",
+          "seeded": false
+        },
+        {
+          "seq": 73,
+          "timestampUtc": "2026-11-02T10:22:16.0041059Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Map industrial_port: 8 landings, 2 exits, 270 buildable, 285 blocked, 2 invalid. Unreachable landing (-11.88, 10.63, 0.00); Unreachable landing (-11.88, 9.38, 0.00); ",
+          "stackTrace": "UnityEngine.Debug:LogError (object,UnityEngine.Object)\nShorelineDefense.Grid.MapRuntimeContext:Start () (at Assets/Game/Scripts/Grid/MapRuntimeContext.cs:26)\n",
+          "seeded": false
+        },
+        {
+          "seq": 74,
+          "timestampUtc": "2026-11-02T10:22:17.587618Z",
+          "level": "warn",
+          "logType": "Warning",
+          "message": "industrial_port: static blocked cells=183, container footprints=6, crane footprints=4, building footprints=6, invalid=2. Static-disconnected landing (-11.88, 10.63, 0.00); Static-disconnected landing (-11.88, 9.38, 0.00); ",
+          "stackTrace": "UnityEngine.Debug:LogWarning (object,UnityEngine.Object)\nShorelineDefense.Grid.MapRuntimeContext:Start () (at Assets/Game/Scripts/Grid/MapRuntimeContext.cs:23)\n",
+          "seeded": false
+        },
+        {
+          "seq": 75,
+          "timestampUtc": "2026-11-02T10:22:17.5886181Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "Map industrial_port: 8 landings, 2 exits, 270 buildable, 285 blocked, 2 invalid. Unreachable landing (-11.88, 10.63, 0.00); Unreachable landing (-11.88, 9.38, 0.00); ",
+          "stackTrace": "UnityEngine.Debug:LogError (object,UnityEngine.Object)\nShorelineDefense.Grid.MapRuntimeContext:Start () (at Assets/Game/Scripts/Grid/MapRuntimeContext.cs:26)\n",
+          "seeded": false
+        },
+        {
+          "seq": 76,
+          "timestampUtc": "2026-11-02T10:22:41.7412083Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 77,
+          "timestampUtc": "2026-11-02T10:22:41.7760294Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 6 total, 1 passed, 5 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 78,
+          "timestampUtc": "2026-11-02T10:22:42.1717088Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 79,
+          "timestampUtc": "2026-11-02T10:23:57.4553395Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 80,
+          "timestampUtc": "2026-11-02T10:24:01.905629Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 81,
+          "timestampUtc": "2026-11-02T10:24:01.9595122Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 88 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 82,
+          "timestampUtc": "2026-11-02T10:24:20.6167887Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Invalidated previous test run",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:InvalidatePreviousRun () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:646)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:809)\nUnity.Pipeline.Editor.Commands.TestCommands:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/TestCommands.cs:112)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 83,
+          "timestampUtc": "2026-11-02T10:24:20.6198235Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Exiting play mode to cancel PlayMode tests",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:815)\nUnity.Pipeline.Editor.Commands.TestCommands:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/TestCommands.cs:112)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 84,
+          "timestampUtc": "2026-11-02T10:24:20.6275205Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Test run cancelled",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:819)\nUnity.Pipeline.Editor.Commands.TestCommands:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/TestCommands.cs:112)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 85,
+          "timestampUtc": "2026-11-02T10:24:20.9936979Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "Exception: Playmode tests were aborted because the player was stopped.",
+          "stackTrace": "UnityEditor.TestTools.TestRunner.TestRun.Tasks.PlayModeRunTask+<Execute>d__1.MoveNext () (at ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEditor.TestRunner/TestRun/Tasks/PlayModeRunTask.cs:66)\nUnityEditor.TestTools.TestRunner.TestRun.TestJobRunner.ExecuteStep () (at ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEditor.TestRunner/TestRun/TestJobRunner.cs:173)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+          "seeded": false
+        },
+        {
+          "seq": 86,
+          "timestampUtc": "2026-11-02T10:24:20.9947081Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "An unexpected error happened while running tests.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 87,
+          "timestampUtc": "2026-11-02T10:24:21.0070854Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 88,
+          "timestampUtc": "2026-11-02T10:24:48.3251802Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 89,
+          "timestampUtc": "2026-11-02T10:24:52.6898116Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 90,
+          "timestampUtc": "2026-11-02T10:24:52.7477556Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 88 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 91,
+          "timestampUtc": "2026-11-02T10:26:05.4814997Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 92,
+          "timestampUtc": "2026-11-02T10:26:05.5196566Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 6 total, 6 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 93,
+          "timestampUtc": "2026-11-02T10:26:05.9273791Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 94,
+          "timestampUtc": "2026-11-02T10:28:07.7379167Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 95,
+          "timestampUtc": "2026-11-02T10:28:07.7651086Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 140 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 96,
+          "timestampUtc": "2026-11-02T10:28:07.8956676Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "InvalidOperationException: Expected observer failure",
+          "stackTrace": "ShorelineDefense.Tests.EconomyAndPlacementTests+<>c.<BrokenObserverCannotTurnCommittedPaymentIntoFailure>b__0_0 (System.Int32 _) (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:18)\nShorelineDefense.Economy.EconomyManager.NotifyMoneyChanged () (at Assets/Game/Scripts/Economy/EconomyManager.cs:60)\nUnityEngine.Debug:LogException(Exception, Object)\nShorelineDefense.Economy.EconomyManager:NotifyMoneyChanged() (at Assets/Game/Scripts/Economy/EconomyManager.cs:61)\nShorelineDefense.Economy.EconomyManager:TrySpend(Int32) (at Assets/Game/Scripts/Economy/EconomyManager.cs:39)\nShorelineDefense.Tests.EconomyAndPlacementTests:BrokenObserverCannotTurnCommittedPaymentIntoFailure() (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:21)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+          "seeded": false
+        },
+        {
+          "seq": 97,
+          "timestampUtc": "2026-11-02T10:28:08.6444282Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 98,
+          "timestampUtc": "2026-11-02T10:28:08.6989319Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 140 total, 139 passed, 1 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 99,
+          "timestampUtc": "2026-11-02T10:28:08.7250989Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 100,
+          "timestampUtc": "2026-11-02T10:28:51.9053251Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 101,
+          "timestampUtc": "2026-11-02T10:28:56.3389419Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 102,
+          "timestampUtc": "2026-11-02T10:28:56.3891147Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 89 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 103,
+          "timestampUtc": "2026-11-02T10:29:21.1695918Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: mass-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 104,
+          "timestampUtc": "2026-11-02T10:29:22.1248119Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: swarm-surge",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 105,
+          "timestampUtc": "2026-11-02T10:29:22.4890453Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: armored-migration",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 106,
+          "timestampUtc": "2026-11-02T10:29:22.9708828Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: deep-water-disturbance",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 107,
+          "timestampUtc": "2026-11-02T10:29:24.501793Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: brood-tide",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 108,
+          "timestampUtc": "2026-11-02T10:29:25.2677839Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 109,
+          "timestampUtc": "2026-11-02T10:29:26.0441618Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: flooded-shore",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 110,
+          "timestampUtc": "2026-11-02T10:29:26.8178158Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 111,
+          "timestampUtc": "2026-11-02T10:29:27.6294247Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 112,
+          "timestampUtc": "2026-11-02T10:29:28.3804263Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: field-engineers",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 113,
+          "timestampUtc": "2026-11-02T10:29:29.2643895Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: calm-before-storm",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 114,
+          "timestampUtc": "2026-11-02T10:29:30.0577644Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 115,
+          "timestampUtc": "2026-11-02T10:29:31.3490224Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: concentrated-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 116,
+          "timestampUtc": "2026-11-02T10:29:38.8400391Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 5: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 117,
+          "timestampUtc": "2026-11-02T10:29:39.4507605Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 7: mass-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 118,
+          "timestampUtc": "2026-11-02T10:29:40.8432738Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 10: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 119,
+          "timestampUtc": "2026-11-02T10:29:42.734871Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 14: brood-tide",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 120,
+          "timestampUtc": "2026-11-02T10:29:45.1602418Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 17: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 121,
+          "timestampUtc": "2026-11-02T10:29:47.0991545Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 20: concentrated-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 122,
+          "timestampUtc": "2026-11-02T10:29:51.3693666Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 24: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 123,
+          "timestampUtc": "2026-11-02T10:29:54.2672529Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 27: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 124,
+          "timestampUtc": "2026-11-02T10:29:58.3201908Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 30 waves: Wave 5 — fog, Wave 7 — mass-emergence, Wave 10 — ammunition-shortage, Wave 14 — brood-tide, Wave 17 — emergency-supply, Wave 20 — concentrated-emergence, Wave 24 — multi-sector, Wave 27 — ammunition-shortage, Wave 31 — deep-water-disturbance",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:161)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 125,
+          "timestampUtc": "2026-11-02T10:33:32.7302726Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase4A 100 real boat waves: breaches=103343, homicides=3432430, earned=37946, peak enemies=5, peak boats=32",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.SurvivalPlayTests/<HundredAcceleratedBoatWavesCompleteAndReleaseTransientObjects>d__11:MoveNext () (at Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs:73)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 126,
+          "timestampUtc": "2026-11-02T10:33:49.8260866Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 127,
+          "timestampUtc": "2026-11-02T10:33:49.87408Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 89 total, 79 passed, 10 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 128,
+          "timestampUtc": "2026-11-02T10:33:50.3049786Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 129,
+          "timestampUtc": "2026-11-02T10:35:36.4304425Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 130,
+          "timestampUtc": "2026-11-02T10:35:36.4620659Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 140 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 131,
+          "timestampUtc": "2026-11-02T10:35:36.5988285Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "InvalidOperationException: Expected observer failure",
+          "stackTrace": "ShorelineDefense.Tests.EconomyAndPlacementTests+<>c.<BrokenObserverCannotTurnCommittedPaymentIntoFailure>b__0_0 (System.Int32 _) (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:18)\nShorelineDefense.Economy.EconomyManager.NotifyMoneyChanged () (at Assets/Game/Scripts/Economy/EconomyManager.cs:60)\nUnityEngine.Debug:LogException(Exception, Object)\nShorelineDefense.Economy.EconomyManager:NotifyMoneyChanged() (at Assets/Game/Scripts/Economy/EconomyManager.cs:61)\nShorelineDefense.Economy.EconomyManager:TrySpend(Int32) (at Assets/Game/Scripts/Economy/EconomyManager.cs:39)\nShorelineDefense.Tests.EconomyAndPlacementTests:BrokenObserverCannotTurnCommittedPaymentIntoFailure() (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:21)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+          "seeded": false
+        },
+        {
+          "seq": 132,
+          "timestampUtc": "2026-11-02T10:35:37.4439574Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 133,
+          "timestampUtc": "2026-11-02T10:35:37.4974224Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 140 total, 140 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 134,
+          "timestampUtc": "2026-11-02T10:35:37.5209991Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 135,
+          "timestampUtc": "2026-11-02T10:37:05.331518Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 136,
+          "timestampUtc": "2026-11-02T10:37:10.1606001Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 137,
+          "timestampUtc": "2026-11-02T10:37:10.213652Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 89 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 138,
+          "timestampUtc": "2026-11-02T10:37:33.7283018Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: mass-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 139,
+          "timestampUtc": "2026-11-02T10:37:34.8121989Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: swarm-surge",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 140,
+          "timestampUtc": "2026-11-02T10:37:35.2585562Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: armored-migration",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 141,
+          "timestampUtc": "2026-11-02T10:37:35.6851683Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: deep-water-disturbance",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 142,
+          "timestampUtc": "2026-11-02T10:37:37.2981602Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: brood-tide",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 143,
+          "timestampUtc": "2026-11-02T10:37:38.0563954Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 144,
+          "timestampUtc": "2026-11-02T10:37:38.809463Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: flooded-shore",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 145,
+          "timestampUtc": "2026-11-02T10:37:39.5459455Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 146,
+          "timestampUtc": "2026-11-02T10:37:40.4379243Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 147,
+          "timestampUtc": "2026-11-02T10:37:41.2598063Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: field-engineers",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 148,
+          "timestampUtc": "2026-11-02T10:37:42.5062086Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: calm-before-storm",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 149,
+          "timestampUtc": "2026-11-02T10:37:43.4723913Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 150,
+          "timestampUtc": "2026-11-02T10:37:46.122307Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: concentrated-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 151,
+          "timestampUtc": "2026-11-02T10:37:52.5602926Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 5: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 152,
+          "timestampUtc": "2026-11-02T10:37:53.1863743Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 7: mass-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 153,
+          "timestampUtc": "2026-11-02T10:37:54.6184328Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 10: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 154,
+          "timestampUtc": "2026-11-02T10:37:56.4926937Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 14: brood-tide",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 155,
+          "timestampUtc": "2026-11-02T10:37:58.8758051Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 17: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 156,
+          "timestampUtc": "2026-11-02T10:38:00.734239Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 20: concentrated-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 157,
+          "timestampUtc": "2026-11-02T10:38:04.9107079Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 24: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 158,
+          "timestampUtc": "2026-11-02T10:38:07.8958429Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 27: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 159,
+          "timestampUtc": "2026-11-02T10:38:11.9030761Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 30 waves: Wave 5 — fog, Wave 7 — mass-emergence, Wave 10 — ammunition-shortage, Wave 14 — brood-tide, Wave 17 — emergency-supply, Wave 20 — concentrated-emergence, Wave 24 — multi-sector, Wave 27 — ammunition-shortage, Wave 31 — deep-water-disturbance",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:161)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 160,
+          "timestampUtc": "2026-11-02T10:41:47.4325008Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase4A 100 real boat waves: breaches=101929, homicides=3387865, earned=37726, peak enemies=5, peak boats=32",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.SurvivalPlayTests/<HundredAcceleratedBoatWavesCompleteAndReleaseTransientObjects>d__11:MoveNext () (at Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs:73)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 161,
+          "timestampUtc": "2026-11-02T10:42:04.564408Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 162,
+          "timestampUtc": "2026-11-02T10:42:04.608085Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 89 total, 88 passed, 1 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 163,
+          "timestampUtc": "2026-11-02T10:42:05.0278116Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 164,
+          "timestampUtc": "2026-11-02T10:47:06.7587772Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 165,
+          "timestampUtc": "2026-11-02T10:47:11.1872356Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 166,
+          "timestampUtc": "2026-11-02T10:47:11.2432369Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 90 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 167,
+          "timestampUtc": "2026-11-02T10:47:14.1451395Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 168,
+          "timestampUtc": "2026-11-02T10:47:14.175788Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 6 total, 6 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 169,
+          "timestampUtc": "2026-11-02T10:47:14.5529457Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 170,
+          "timestampUtc": "2026-11-02T10:47:26.6460488Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 171,
+          "timestampUtc": "2026-11-02T10:47:31.3648357Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 172,
+          "timestampUtc": "2026-11-02T10:47:31.4165906Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 90 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 173,
+          "timestampUtc": "2026-11-02T10:48:07.2761894Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 174,
+          "timestampUtc": "2026-11-02T10:48:07.3104737Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 8 total, 8 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 175,
+          "timestampUtc": "2026-11-02T10:48:07.7115645Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 176,
+          "timestampUtc": "2026-11-02T10:49:24.348659Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 177,
+          "timestampUtc": "2026-11-02T10:49:24.3778145Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 140 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 178,
+          "timestampUtc": "2026-11-02T10:49:24.5036941Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "InvalidOperationException: Expected observer failure",
+          "stackTrace": "ShorelineDefense.Tests.EconomyAndPlacementTests+<>c.<BrokenObserverCannotTurnCommittedPaymentIntoFailure>b__0_0 (System.Int32 _) (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:18)\nShorelineDefense.Economy.EconomyManager.NotifyMoneyChanged () (at Assets/Game/Scripts/Economy/EconomyManager.cs:60)\nUnityEngine.Debug:LogException(Exception, Object)\nShorelineDefense.Economy.EconomyManager:NotifyMoneyChanged() (at Assets/Game/Scripts/Economy/EconomyManager.cs:61)\nShorelineDefense.Economy.EconomyManager:TrySpend(Int32) (at Assets/Game/Scripts/Economy/EconomyManager.cs:39)\nShorelineDefense.Tests.EconomyAndPlacementTests:BrokenObserverCannotTurnCommittedPaymentIntoFailure() (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:21)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+          "seeded": false
+        },
+        {
+          "seq": 179,
+          "timestampUtc": "2026-11-02T10:49:25.2598158Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 180,
+          "timestampUtc": "2026-11-02T10:49:25.3124641Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 140 total, 140 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 181,
+          "timestampUtc": "2026-11-02T10:49:25.337838Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 182,
+          "timestampUtc": "2026-11-02T10:49:56.7307723Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 183,
+          "timestampUtc": "2026-11-02T10:50:01.4496313Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 184,
+          "timestampUtc": "2026-11-02T10:50:01.5084891Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 90 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 185,
+          "timestampUtc": "2026-11-02T10:50:25.041554Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: mass-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 186,
+          "timestampUtc": "2026-11-02T10:50:26.2074506Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: swarm-surge",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 187,
+          "timestampUtc": "2026-11-02T10:50:26.6096567Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: armored-migration",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 188,
+          "timestampUtc": "2026-11-02T10:50:27.0481814Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: deep-water-disturbance",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 189,
+          "timestampUtc": "2026-11-02T10:50:28.5886524Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: brood-tide",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 190,
+          "timestampUtc": "2026-11-02T10:50:29.341916Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 191,
+          "timestampUtc": "2026-11-02T10:50:30.1338948Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: flooded-shore",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 192,
+          "timestampUtc": "2026-11-02T10:50:30.8970428Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 193,
+          "timestampUtc": "2026-11-02T10:50:31.6650819Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 194,
+          "timestampUtc": "2026-11-02T10:50:32.4478324Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: field-engineers",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 195,
+          "timestampUtc": "2026-11-02T10:50:33.3959407Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: calm-before-storm",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 196,
+          "timestampUtc": "2026-11-02T10:50:34.2380384Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 197,
+          "timestampUtc": "2026-11-02T10:50:35.5818132Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: concentrated-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 198,
+          "timestampUtc": "2026-11-02T10:50:42.3496543Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 5: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 199,
+          "timestampUtc": "2026-11-02T10:50:42.9875981Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 7: mass-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 200,
+          "timestampUtc": "2026-11-02T10:50:44.4216157Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 10: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 201,
+          "timestampUtc": "2026-11-02T10:50:46.3389565Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 14: brood-tide",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 202,
+          "timestampUtc": "2026-11-02T10:50:48.8299216Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 17: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 203,
+          "timestampUtc": "2026-11-02T10:50:50.7242893Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 20: concentrated-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 204,
+          "timestampUtc": "2026-11-02T10:50:54.8426752Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 24: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 205,
+          "timestampUtc": "2026-11-02T10:50:57.8536107Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 27: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 206,
+          "timestampUtc": "2026-11-02T10:51:01.9486695Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 30 waves: Wave 5 — fog, Wave 7 — mass-emergence, Wave 10 — ammunition-shortage, Wave 14 — brood-tide, Wave 17 — emergency-supply, Wave 20 — concentrated-emergence, Wave 24 — multi-sector, Wave 27 — ammunition-shortage, Wave 31 — deep-water-disturbance",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:161)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 207,
+          "timestampUtc": "2026-11-02T10:54:01.3159692Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Invalidated previous test run",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:InvalidatePreviousRun () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:646)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:809)\nUnity.Pipeline.Editor.Commands.TestCommands:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/TestCommands.cs:112)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 208,
+          "timestampUtc": "2026-11-02T10:54:01.3184786Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Exiting play mode to cancel PlayMode tests",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:815)\nUnity.Pipeline.Editor.Commands.TestCommands:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/TestCommands.cs:112)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 209,
+          "timestampUtc": "2026-11-02T10:54:01.3240242Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Test run cancelled",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:819)\nUnity.Pipeline.Editor.Commands.TestCommands:CancelTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/TestCommands.cs:112)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 210,
+          "timestampUtc": "2026-11-02T10:54:01.6874174Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "Exception: Playmode tests were aborted because the player was stopped.",
+          "stackTrace": "UnityEditor.TestTools.TestRunner.TestRun.Tasks.PlayModeRunTask+<Execute>d__1.MoveNext () (at ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEditor.TestRunner/TestRun/Tasks/PlayModeRunTask.cs:66)\nUnityEditor.TestTools.TestRunner.TestRun.TestJobRunner.ExecuteStep () (at ./Library/PackageCache/com.unity.test-framework@bd7f943e9647/UnityEditor.TestRunner/TestRun/TestJobRunner.cs:173)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+          "seeded": false
+        },
+        {
+          "seq": 211,
+          "timestampUtc": "2026-11-02T10:54:01.6874174Z",
+          "level": "error",
+          "logType": "Error",
+          "message": "An unexpected error happened while running tests.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 212,
+          "timestampUtc": "2026-11-02T10:54:01.7070087Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 213,
+          "timestampUtc": "2026-11-02T10:54:55.1456658Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 214,
+          "timestampUtc": "2026-11-02T10:54:55.1729793Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 140 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 215,
+          "timestampUtc": "2026-11-02T10:54:55.2987319Z",
+          "level": "error",
+          "logType": "Exception",
+          "message": "InvalidOperationException: Expected observer failure",
+          "stackTrace": "ShorelineDefense.Tests.EconomyAndPlacementTests+<>c.<BrokenObserverCannotTurnCommittedPaymentIntoFailure>b__0_0 (System.Int32 _) (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:18)\nShorelineDefense.Economy.EconomyManager.NotifyMoneyChanged () (at Assets/Game/Scripts/Economy/EconomyManager.cs:60)\nUnityEngine.Debug:LogException(Exception, Object)\nShorelineDefense.Economy.EconomyManager:NotifyMoneyChanged() (at Assets/Game/Scripts/Economy/EconomyManager.cs:61)\nShorelineDefense.Economy.EconomyManager:TrySpend(Int32) (at Assets/Game/Scripts/Economy/EconomyManager.cs:39)\nShorelineDefense.Tests.EconomyAndPlacementTests:BrokenObserverCannotTurnCommittedPaymentIntoFailure() (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:21)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+          "seeded": false
+        },
+        {
+          "seq": 216,
+          "timestampUtc": "2026-11-02T10:54:56.1362359Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 217,
+          "timestampUtc": "2026-11-02T10:54:56.2023293Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 140 total, 140 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 218,
+          "timestampUtc": "2026-11-02T10:54:56.264226Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 219,
+          "timestampUtc": "2026-11-02T10:55:29.3035772Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 220,
+          "timestampUtc": "2026-11-02T10:55:33.9279802Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+          "seeded": false
+        },
+        {
+          "seq": 221,
+          "timestampUtc": "2026-11-02T10:55:33.9819126Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run started: 90 test(s)",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 222,
+          "timestampUtc": "2026-11-02T10:55:57.5480299Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: mass-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 223,
+          "timestampUtc": "2026-11-02T10:55:58.4961108Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: swarm-surge",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 224,
+          "timestampUtc": "2026-11-02T10:55:58.9453291Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: armored-migration",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 225,
+          "timestampUtc": "2026-11-02T10:55:59.371713Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: deep-water-disturbance",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 226,
+          "timestampUtc": "2026-11-02T10:56:00.8330723Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: brood-tide",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 227,
+          "timestampUtc": "2026-11-02T10:56:01.6260756Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 228,
+          "timestampUtc": "2026-11-02T10:56:02.4113135Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: flooded-shore",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 229,
+          "timestampUtc": "2026-11-02T10:56:03.2172923Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 230,
+          "timestampUtc": "2026-11-02T10:56:03.9787998Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 231,
+          "timestampUtc": "2026-11-02T10:56:04.773241Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: field-engineers",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 232,
+          "timestampUtc": "2026-11-02T10:56:05.7997181Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: calm-before-storm",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 233,
+          "timestampUtc": "2026-11-02T10:56:06.6810803Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 234,
+          "timestampUtc": "2026-11-02T10:56:08.0171112Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B forced event passed: concentrated-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 235,
+          "timestampUtc": "2026-11-02T10:56:14.440195Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 5: fog",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 236,
+          "timestampUtc": "2026-11-02T10:56:15.0755277Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 7: mass-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 237,
+          "timestampUtc": "2026-11-02T10:56:16.4986679Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 10: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 238,
+          "timestampUtc": "2026-11-02T10:56:18.3874495Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 14: brood-tide",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 239,
+          "timestampUtc": "2026-11-02T10:56:20.8733344Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 17: emergency-supply",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 240,
+          "timestampUtc": "2026-11-02T10:56:22.8170815Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 20: concentrated-emergence",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 241,
+          "timestampUtc": "2026-11-02T10:56:26.9555817Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 24: multi-sector",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 242,
+          "timestampUtc": "2026-11-02T10:56:29.9316669Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 27: ammunition-shortage",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 243,
+          "timestampUtc": "2026-11-02T10:56:33.900725Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase5B natural 30 waves: Wave 5 — fog, Wave 7 — mass-emergence, Wave 10 — ammunition-shortage, Wave 14 — brood-tide, Wave 17 — emergency-supply, Wave 20 — concentrated-emergence, Wave 24 — multi-sector, Wave 27 — ammunition-shortage, Wave 31 — deep-water-disturbance",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:161)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 244,
+          "timestampUtc": "2026-11-02T11:00:07.8388935Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Phase4A 100 real boat waves: breaches=102302, homicides=3545370, earned=35494, peak enemies=5, peak boats=32",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.SurvivalPlayTests/<HundredAcceleratedBoatWavesCompleteAndReleaseTransientObjects>d__11:MoveNext () (at Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs:73)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 245,
+          "timestampUtc": "2026-11-02T11:00:24.9066372Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+          "stackTrace": "",
+          "seeded": false
+        },
+        {
+          "seq": 246,
+          "timestampUtc": "2026-11-02T11:00:24.9530451Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "[TestResultCollector] Run finished: 90 total, 90 passed, 0 failed",
+          "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+          "seeded": false
+        },
+        {
+          "seq": 247,
+          "timestampUtc": "2026-11-02T11:00:25.3438236Z",
+          "level": "log",
+          "logType": "Log",
+          "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+          "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+          "seeded": false
+        }
+      ],
+      "cursor": 247,
+      "session": "c7a8fd9f515d437e9f58b76de74a2cef",
+      "returned": 192,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 16,
+        "warn": 4,
+        "log": 172
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-11-02T11:01:06.6979819Z",
+        "ageMs": 46,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 0,
+        "consoleWarnings": 0,
+        "consoleLogs": 28,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8595f4b8de5845d43ba7c711c60cb4df, type: 3}
   m_Name: militant-assault
   m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.EndlessEventDefinition
-  id: militant-assault
-  displayName: MILITANT ASSAULT
-  description: Militant breachers and heavy targets incoming.
+  id: armored-migration
+  displayName: ARMORED MIGRATION
+  description: Armored bottom-dwellers approach with corrosive support.
   category: 0
-  minimumWave: 18
+  minimumWave: 10
   maximumWave: 0
   weight: 1
   durationType: 1
@@ -38,17 +38,19 @@ MonoBehaviour:
     preparationRepair: 1
     floodedColumns: 0
     fog: 0
+    directEmergenceRatio: -1
+    broodCarrierRatio: -1
     boatVisual: {fileID: 0}
     landingPattern: 0
     composition:
-    - kind: 3
-      multiplier: 5
-    - kind: 4
-      multiplier: 5
     - kind: 2
-      multiplier: 2
+      multiplier: 7
+    - kind: 3
+      multiplier: 3
     - kind: 1
-      multiplier: 0.5
+      multiplier: 0.4
+    - kind: 4
+      multiplier: 0.2
   supplyBase: 0
   supplyPerWave: 0
   supplyMaximum: 500

@@ -10,7 +10,8 @@ namespace ShorelineDefense.Presentation
         MineExplosion, ExplosionSmall, SmokeSmall, SmokeMedium, SplashSmall,
         SplashMedium, SplashLarge, WaterWake, WaterRipple, ShoreFoam,
         MortarMuzzle, MortarShell, MortarExplosion, FlameCone, Burn, BurningOverlay,
-        CannonMuzzle, CannonTracer, CannonImpact, RocketProjectile, RocketSmoke, RocketExplosion
+        CannonMuzzle, CannonTracer, CannonImpact, RocketProjectile, RocketSmoke, RocketExplosion,
+        CorrosiveGlob, SlimeImpact, PodRupture, BroodRelease, CreatureFluids, Bubbles
     }
     public enum VfxChannel { Burst, Tracer, Smoke, Decal, Corpse }
 

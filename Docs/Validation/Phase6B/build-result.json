@@ -1,0 +1,8 @@
+{
+  "diagnostics": [],
+  "compileMs": 52,
+  "executeMs": 10292,
+  "assemblyName": "PipelineRunScript_Build_d2c2ec3fa5f2437aa39e5df705dfff6f",
+  "success": true,
+  "result": "{\r\n  \"result\": \"Succeeded\",\r\n  \"totalErrors\": 0,\r\n  \"totalWarnings\": 1,\r\n  \"seconds\": 10.276985699999999,\r\n  \"totalSize\": 127202163,\r\n  \"outputPath\": \"C:/Users/Slavisa/Documents/ChatGPT/border-defenders/Builds/Phase6B/BorderDefenders.exe\"\r\n}"
+}

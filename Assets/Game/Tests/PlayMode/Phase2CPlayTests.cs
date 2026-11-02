@@ -126,6 +126,7 @@ namespace ShorelineDefense.Tests
             wire.TakeDamage(200);
             Assert.That(Grid.OccupantAt(cell), Is.Null);
             Assert.That(Grid.GetCell(cell).TraversalCost, Is.EqualTo(1));
+            enemy.Movement.PrepareNavigation(.5f);
             enemy.Movement.Tick(0.01f);
             Assert.That(builder.Battlefield.Paths.Requests, Is.EqualTo(requests + 1));
             enemy.Movement.Tick(0.01f);

@@ -1,0 +1,274 @@
+ M AGENTS.md
+ M ART_HANDBOOK.md
+ M ART_PRODUCTION_RULES.md
+ M AUDIO_PRODUCTION_RULES.md
+ M Assets/Game/Art/Effects/CombatVfxCatalog.asset
+ D Assets/Game/Art/Enemies/BasicInfected.meta
+ D Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_attack_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_attack_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_death_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_death_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_hit_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_hit_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_idle_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_idle_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_walk_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/BasicInfected/bd_enemy_basic_infected_walk_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/Brute.meta
+ D Assets/Game/Art/Enemies/Brute/bd_enemy_brute_attack_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/Brute/bd_enemy_brute_attack_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/Brute/bd_enemy_brute_death_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/Brute/bd_enemy_brute_death_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/Brute/bd_enemy_brute_hit_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/Brute/bd_enemy_brute_hit_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/Brute/bd_enemy_brute_idle_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/Brute/bd_enemy_brute_idle_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/Brute/bd_enemy_brute_walk_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/Brute/bd_enemy_brute_walk_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/Runner.meta
+ D Assets/Game/Art/Enemies/Runner/bd_enemy_runner_attack_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/Runner/bd_enemy_runner_attack_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/Runner/bd_enemy_runner_death_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/Runner/bd_enemy_runner_death_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/Runner/bd_enemy_runner_hit_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/Runner/bd_enemy_runner_hit_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/Runner/bd_enemy_runner_idle_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/Runner/bd_enemy_runner_idle_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/Runner/bd_enemy_runner_run_e_sheet_v001.png
+ D Assets/Game/Art/Enemies/Runner/bd_enemy_runner_run_e_sheet_v001.png.meta
+ D Assets/Game/Art/Enemies/Special.meta
+ D Assets/Game/Art/Enemies/Special/IsisBreacher_attack_v002.png
+ D Assets/Game/Art/Enemies/Special/IsisBreacher_attack_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/IsisBreacher_death_v002.png
+ D Assets/Game/Art/Enemies/Special/IsisBreacher_death_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/IsisBreacher_hit_v002.png
+ D Assets/Game/Art/Enemies/Special/IsisBreacher_hit_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/IsisBreacher_idle_v002.png
+ D Assets/Game/Art/Enemies/Special/IsisBreacher_idle_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/IsisBreacher_move_v002.png
+ D Assets/Game/Art/Enemies/Special/IsisBreacher_move_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/IsisHeavy_attack_v002.png
+ D Assets/Game/Art/Enemies/Special/IsisHeavy_attack_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/IsisHeavy_death_v002.png
+ D Assets/Game/Art/Enemies/Special/IsisHeavy_death_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/IsisHeavy_hit_v002.png
+ D Assets/Game/Art/Enemies/Special/IsisHeavy_hit_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/IsisHeavy_idle_v002.png
+ D Assets/Game/Art/Enemies/Special/IsisHeavy_idle_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/IsisHeavy_move_v002.png
+ D Assets/Game/Art/Enemies/Special/IsisHeavy_move_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateRaider_attack_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateRaider_attack_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateRaider_death_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateRaider_death_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateRaider_hit_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateRaider_hit_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateRaider_idle_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateRaider_idle_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateRaider_move_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateRaider_move_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateRunner_attack_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateRunner_attack_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateRunner_death_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateRunner_death_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateRunner_hit_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateRunner_hit_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateRunner_idle_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateRunner_idle_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateRunner_move_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateRunner_move_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateWarlord_attack_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateWarlord_attack_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateWarlord_death_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateWarlord_death_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateWarlord_hit_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateWarlord_hit_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateWarlord_idle_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateWarlord_idle_v002.png.meta
+ D Assets/Game/Art/Enemies/Special/PirateWarlord_move_v002.png
+ D Assets/Game/Art/Enemies/Special/PirateWarlord_move_v002.png.meta
+ D Assets/Game/Art/Props/MilitantBossTransport_v001.png
+ D Assets/Game/Art/Props/MilitantBossTransport_v001.png.meta
+ D Assets/Game/Art/Props/PirateBossTransport_v001.png
+ D Assets/Game/Art/Props/PirateBossTransport_v001.png.meta
+ D Assets/Game/Art/Props/bd_prop_destroyed_rubber_boat_v001.png
+ D Assets/Game/Art/Props/bd_prop_destroyed_rubber_boat_v001.png.meta
+ D Assets/Game/Art/Props/bd_prop_rubber_boat_v001.png
+ D Assets/Game/Art/Props/bd_prop_rubber_boat_v001.png.meta
+ M Assets/Game/Art/UI/map_preview_danube_border.png
+ D Assets/Game/Data/Enemies/Brute.asset
+ D Assets/Game/Data/Enemies/Brute.asset.meta
+ M Assets/Game/Data/Enemies/Crawler.asset
+ D Assets/Game/Data/Enemies/IsisBreacher.asset
+ D Assets/Game/Data/Enemies/IsisBreacher.asset.meta
+ D Assets/Game/Data/Enemies/IsisHeavy.asset
+ D Assets/Game/Data/Enemies/IsisHeavy.asset.meta
+ D Assets/Game/Data/Enemies/PirateRaider.asset
+ D Assets/Game/Data/Enemies/PirateRaider.asset.meta
+ D Assets/Game/Data/Enemies/PirateRunner.asset
+ D Assets/Game/Data/Enemies/PirateRunner.asset.meta
+ D Assets/Game/Data/Enemies/PirateWarlord.asset
+ D Assets/Game/Data/Enemies/PirateWarlord.asset.meta
+ D Assets/Game/Data/Enemies/Runner.asset
+ D Assets/Game/Data/Enemies/Runner.asset.meta
+ D Assets/Game/Data/Enemies/UndeadOsama.asset
+ D Assets/Game/Data/Enemies/UndeadOsama.asset.meta
+ M Assets/Game/Data/Events/ammunition-shortage.asset
+ M Assets/Game/Data/Events/calm-before-storm.asset
+ M Assets/Game/Data/Events/concentrated-landing.asset
+ M Assets/Game/Data/Events/emergency-supply.asset
+ M Assets/Game/Data/Events/field-engineers.asset
+ M Assets/Game/Data/Events/flooded-shore.asset
+ M Assets/Game/Data/Events/fog.asset
+ M Assets/Game/Data/Events/heavy-assault.asset
+ M Assets/Game/Data/Events/mass-landing.asset
+ M Assets/Game/Data/Events/militant-assault.asset
+ M Assets/Game/Data/Events/multi-sector.asset
+ M Assets/Game/Data/Events/pirate-raid.asset
+ M Assets/Game/Data/Events/runner-swarm.asset
+ M Assets/Game/Data/Maps/DanubeBorder.asset
+ M Assets/Game/Data/Maps/IndustrialPort.asset
+ M Assets/Game/Data/Waves/EndlessSurvival.asset
+ D Assets/Game/Prefabs/Enemies/Brute_TopDown.prefab
+ D Assets/Game/Prefabs/Enemies/Brute_TopDown.prefab.meta
+ M Assets/Game/Prefabs/Enemies/Crawler_TopDown.prefab
+ D Assets/Game/Prefabs/Enemies/IsisBreacher_TopDown.prefab
+ D Assets/Game/Prefabs/Enemies/IsisBreacher_TopDown.prefab.meta
+ D Assets/Game/Prefabs/Enemies/IsisHeavy_TopDown.prefab
+ D Assets/Game/Prefabs/Enemies/IsisHeavy_TopDown.prefab.meta
+ D Assets/Game/Prefabs/Enemies/PirateRaider_TopDown.prefab
+ D Assets/Game/Prefabs/Enemies/PirateRaider_TopDown.prefab.meta
+ D Assets/Game/Prefabs/Enemies/PirateRunner_TopDown.prefab
+ D Assets/Game/Prefabs/Enemies/PirateRunner_TopDown.prefab.meta
+ D Assets/Game/Prefabs/Enemies/PirateWarlord_TopDown.prefab
+ D Assets/Game/Prefabs/Enemies/PirateWarlord_TopDown.prefab.meta
+ D Assets/Game/Prefabs/Enemies/Runner_TopDown.prefab
+ D Assets/Game/Prefabs/Enemies/Runner_TopDown.prefab.meta
+ D Assets/Game/Prefabs/Enemies/UndeadOsama_TopDown.prefab
+ D Assets/Game/Prefabs/Enemies/UndeadOsama_TopDown.prefab.meta
+ D Assets/Game/Prefabs/Presentation/MilitantBossTransport.prefab
+ D Assets/Game/Prefabs/Presentation/MilitantBossTransport.prefab.meta
+ D Assets/Game/Prefabs/Presentation/PirateBossTransport.prefab
+ D Assets/Game/Prefabs/Presentation/PirateBossTransport.prefab.meta
+ D Assets/Game/Prefabs/Presentation/RubberLandingBoat.prefab
+ D Assets/Game/Prefabs/Presentation/RubberLandingBoat.prefab.meta
+ M Assets/Game/Scenes/CoastalDefense_TopDown.unity
+ M Assets/Game/Scenes/DanubeIndustrialPort.unity
+ M Assets/Game/Scenes/MainMenu.unity
+ M Assets/Game/Scripts/Core/RunStatistics.cs
+ M Assets/Game/Scripts/Enemies/EnemyController.cs
+ M Assets/Game/Scripts/Enemies/EnemyDamageOverTime.cs
+ M Assets/Game/Scripts/Enemies/EnemyDefinition.cs
+ M Assets/Game/Scripts/Enemies/EnemyMovement.cs
+ M Assets/Game/Scripts/Enemies/EnemySpawner.cs
+ M Assets/Game/Scripts/Grid/MapRuntimeContext.cs
+ M Assets/Game/Scripts/Persistence/RunSaveData.cs
+ M Assets/Game/Scripts/Persistence/RunSession.cs
+ M Assets/Game/Scripts/Persistence/SaveGameService.cs
+ M Assets/Game/Scripts/Presentation/EnemySpritePresentation.cs
+ M Assets/Game/Scripts/Presentation/VfxCatalog.cs
+ M Assets/Game/Scripts/Presentation/VfxService.cs
+ M Assets/Game/Scripts/UI/AssaultPressureDebugHud.cs
+ M Assets/Game/Scripts/UI/BuildHud.cs
+ M Assets/Game/Scripts/UI/ProductMenuController.cs
+ M Assets/Game/Scripts/Waves/BoatLandingSystem.cs
+ M Assets/Game/Scripts/Waves/BossEncounterManager.cs
+ M Assets/Game/Scripts/Waves/EndlessEventDefinition.cs
+ M Assets/Game/Scripts/Waves/EndlessWaveGenerator.cs
+ M Assets/Game/Scripts/Waves/WaveManager.cs
+ M Assets/Game/Tests/EditMode/AssaultPressureTests.cs
+ M Assets/Game/Tests/EditMode/EndlessEventRulesTests.cs
+ M Assets/Game/Tests/EditMode/EndlessWaveTests.cs
+ M Assets/Game/Tests/EditMode/PersistenceTests.cs
+ M Assets/Game/Tests/EditMode/Phase4CRulesTests.cs
+ M Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs
+ M Assets/Game/Tests/PlayMode/HeavyDefensePlayTests.cs
+ M Assets/Game/Tests/PlayMode/Phase3C1PlayTests.cs
+ M Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs
+ M Docs/Art/ASSET_REGISTER.md
+ M Docs/Art/UNITY_INTEGRATION.md
+ M LORE_HANDBOOK.md
+ M README.md
+?? ART_BIBLE.md
+?? Assets/Game/Animations/Aquatic.meta
+?? Assets/Game/Animations/Aquatic/
+?? Assets/Game/Art/Carriers.meta
+?? Assets/Game/Art/Carriers/
+?? Assets/Game/Art/Effects/Aquatic.meta
+?? Assets/Game/Art/Effects/Aquatic/
+?? Assets/Game/Art/Enemies/Aquatic.meta
+?? Assets/Game/Art/Enemies/Aquatic/
+?? Assets/Game/Art/Legacy.meta
+?? Assets/Game/Art/Legacy/
+?? Assets/Game/Art/MasterReferences/ref_aquatic_boss_lineup_01.png
+?? Assets/Game/Art/MasterReferences/ref_aquatic_boss_lineup_01.png.meta
+?? Assets/Game/Art/MasterReferences/ref_aquatic_carriers_01.png
+?? Assets/Game/Art/MasterReferences/ref_aquatic_carriers_01.png.meta
+?? Assets/Game/Art/MasterReferences/ref_aquatic_enemy_lineup_01.png
+?? Assets/Game/Art/MasterReferences/ref_aquatic_enemy_lineup_01.png.meta
+?? Assets/Game/Art/SourceSheets/p6b_aquatic_001.meta
+?? Assets/Game/Art/SourceSheets/p6b_aquatic_001/
+?? Assets/Game/Data/Carriers.meta
+?? Assets/Game/Data/Carriers/
+?? Assets/Game/Data/Enemies/Broodling.asset
+?? Assets/Game/Data/Enemies/Broodling.asset.meta
+?? Assets/Game/Data/Enemies/Broodmother.asset
+?? Assets/Game/Data/Enemies/Broodmother.asset.meta
+?? Assets/Game/Data/Enemies/Bulwark.asset
+?? Assets/Game/Data/Enemies/Bulwark.asset.meta
+?? Assets/Game/Data/Enemies/Burrower.asset
+?? Assets/Game/Data/Enemies/Burrower.asset.meta
+?? Assets/Game/Data/Enemies/Dredger.asset
+?? Assets/Game/Data/Enemies/Dredger.asset.meta
+?? Assets/Game/Data/Enemies/Skitter.asset
+?? Assets/Game/Data/Enemies/Skitter.asset.meta
+?? Assets/Game/Data/Enemies/Spitter.asset
+?? Assets/Game/Data/Enemies/Spitter.asset.meta
+?? Assets/Game/Legacy.meta
+?? Assets/Game/Legacy/
+?? Assets/Game/Prefabs/Carriers.meta
+?? Assets/Game/Prefabs/Carriers/
+?? Assets/Game/Prefabs/Enemies/Broodling_TopDown.prefab
+?? Assets/Game/Prefabs/Enemies/Broodling_TopDown.prefab.meta
+?? Assets/Game/Prefabs/Enemies/Broodmother_TopDown.prefab
+?? Assets/Game/Prefabs/Enemies/Broodmother_TopDown.prefab.meta
+?? Assets/Game/Prefabs/Enemies/Bulwark_TopDown.prefab
+?? Assets/Game/Prefabs/Enemies/Bulwark_TopDown.prefab.meta
+?? Assets/Game/Prefabs/Enemies/Burrower_TopDown.prefab
+?? Assets/Game/Prefabs/Enemies/Burrower_TopDown.prefab.meta
+?? Assets/Game/Prefabs/Enemies/Dredger_TopDown.prefab
+?? Assets/Game/Prefabs/Enemies/Dredger_TopDown.prefab.meta
+?? Assets/Game/Prefabs/Enemies/Skitter_TopDown.prefab
+?? Assets/Game/Prefabs/Enemies/Skitter_TopDown.prefab.meta
+?? Assets/Game/Prefabs/Enemies/Spitter_TopDown.prefab
+?? Assets/Game/Prefabs/Enemies/Spitter_TopDown.prefab.meta
+?? Assets/Game/Scripts/Enemies/BroodmotherSpawn.cs
+?? Assets/Game/Scripts/Enemies/BroodmotherSpawn.cs.meta
+?? Assets/Game/Scripts/Enemies/BurrowerTraversal.cs
+?? Assets/Game/Scripts/Enemies/BurrowerTraversal.cs.meta
+?? Assets/Game/Scripts/Enemies/CorrosiveSpit.cs
+?? Assets/Game/Scripts/Enemies/CorrosiveSpit.cs.meta
+?? Assets/Game/Scripts/Enemies/SpitterAttack.cs
+?? Assets/Game/Scripts/Enemies/SpitterAttack.cs.meta
+?? Assets/Game/Scripts/Persistence/AquaticSaveMigration.cs
+?? Assets/Game/Scripts/Persistence/AquaticSaveMigration.cs.meta
+?? Assets/Game/Scripts/Presentation/AquaticCarrierPresentation.cs
+?? Assets/Game/Scripts/Presentation/AquaticCarrierPresentation.cs.meta
+?? Assets/Game/Scripts/Waves/AssaultCarrierSystem.cs
+?? Assets/Game/Scripts/Waves/AssaultCarrierSystem.cs.meta
+?? Assets/Game/Scripts/Waves/CarrierDefinition.cs
+?? Assets/Game/Scripts/Waves/CarrierDefinition.cs.meta
+?? Assets/Game/Tests/EditMode/AquaticRulesTests.cs
+?? Assets/Game/Tests/EditMode/AquaticRulesTests.cs.meta
+?? Assets/Game/Tests/PlayMode/AquaticPlayTests.cs
+?? Assets/Game/Tests/PlayMode/AquaticPlayTests.cs.meta
+?? Assets/InitTestScene9b0be965-2999-4826-aa11-30d943e51f92.unity
+?? Assets/InitTestScene9b0be965-2999-4826-aa11-30d943e51f92.unity.meta
+?? Assets/_Recovery.meta
+?? Assets/_Recovery/
+?? Docs/Art/Batches/p6b_aquatic_001.md
+?? Docs/Art/Batches/p6b_aquatic_001.prompts.json
+?? Docs/Validation/Phase6B/
+?? Docs/Validation/ShadowAudit/
+?? LORE_BIBLE.md
+?? PHASE_6B_REPORT.md

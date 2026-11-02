@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3777ac5fbc4d04342bf89a26e6cf129c, type: 3}
+  m_Name: fortification-doctrine
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Progression.ResearchNodeDefinition
+  id: fortification-doctrine
+  displayName: Fortification Doctrine
+  description: 'Blocking player defenses gain +10% additional Max HP. Total: +20%.
+    Excludes Wire and Mines.'
+  branch: 1
+  costRP: 55
+  tier: 4
+  maxRank: 1
+  prerequisites:
+  - {fileID: 11400000, guid: af5a0d116edd5d6428a6b3542990b8cc, type: 2}
+  - {fileID: 11400000, guid: f4a6c3afea66dff45bf5e8ba57899f3e, type: 2}
+  - {fileID: 11400000, guid: 1b09c060f5767b24a879023117cdca0d, type: 2}
+  icon: {fileID: 722546089, guid: e8c99442ad1d63744a2ce2497d260d7c, type: 3}
+  effects:
+  - kind: 4
+    amount: 0.1
+  boardPosition: {x: 0.5, y: 318}

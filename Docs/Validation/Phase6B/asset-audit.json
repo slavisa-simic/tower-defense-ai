@@ -1,0 +1,20 @@
+[
+  {
+    "scene": "MainMenu",
+    "missing": 0,
+    "disabled": 0,
+    "legacyPrefabDependencies": []
+  },
+  {
+    "scene": "CoastalDefense_TopDown",
+    "missing": 0,
+    "disabled": 0,
+    "legacyPrefabDependencies": []
+  },
+  {
+    "scene": "DanubeIndustrialPort",
+    "missing": 0,
+    "disabled": 0,
+    "legacyPrefabDependencies": []
+  }
+]

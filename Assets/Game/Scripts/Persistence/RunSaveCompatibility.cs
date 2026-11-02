@@ -14,11 +14,12 @@ namespace ShorelineDefense.Persistence
         {
             if (!SaveGameService.Valid(data) || defenses == null || map == null) return false;
             var cells = new HashSet<Vector2Int>();
+            var meta = new Progression.MetaModifierService(data.saveVersion >= 4 ? data.metaSnapshot : new Progression.RunMetaSnapshot());
             foreach (var item in data.structures)
             {
                 DefenseDefinition definition = null;
                 foreach (var candidate in defenses) if (candidate != null && candidate.Id == item.defenseId) { definition = candidate; break; }
-                if (definition == null || !definition.IsValid || Mathf.RoundToInt(definition.MaxHealth * (definition.LevelData(item.level)?.health ?? 1)) != item.maxHealth) return false;
+                if (definition == null || !definition.IsValid || meta.MaxHealth(definition, item.level) != item.maxHealth) return false;
                 if (item.x < 0 || item.y < 0 || (long)item.x + definition.Footprint.x > map.Width || (long)item.y + definition.Footprint.y > map.Height) return false;
                 for (int x = 0; x < definition.Footprint.x; x++) for (int y = 0; y < definition.Footprint.y; y++)
                 { var cell = new Vector2Int(item.x + x, item.y + y); if (map.TerrainAt(cell) != TerrainType.Ground || Array.IndexOf(map.noBuildCells, cell) >= 0 || !cells.Add(cell)) return false; }

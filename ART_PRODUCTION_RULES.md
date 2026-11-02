@@ -5,7 +5,7 @@ Prepared 2026-09-18. This is the production contract. No art was generated durin
 ## Visual direction
 
 - Strict top-down, orthographic overhead view perpendicular to XY. No isometric projection, tilted camera, horizon, side-view people, or tall front-facing facades. Roofs, shoulders, helmets, weapons, and ground footprints establish silhouettes.
-- Alternate post-nuclear Balkan setting: the Danube defensive line, military quarantine barriers, weathered concrete, muddy riverbanks, improvised fortifications, and infected arrivals from southern radiation zones in radiation-resistant inflatables and improvised river craft.
+- Alternate post-nuclear Balkan setting: the Danube defensive line, military quarantine barriers, weathered concrete, muddy riverbanks and improvised fortifications. Phase 6B establishes mutated aquatic organisms, direct water emergence and living biological carriers as the active enemy identity; see ART_BIBLE.md and LORE_BIBLE.md.
 - Water stays on the left, defensive base on the right. Geographic lore does not rotate the playable map. Existing coastal identifiers remain valid.
 - Gritty pixel art with deliberate pixel clusters, restrained surface noise, readable silhouettes, consistent outline weight, scale, light direction, palette, and material treatment. Avoid smooth painted gradients, mismatched pixel sizes, noisy photo textures, or glossy UI.
 - Use muted river blue/green, mud brown, concrete gray, military olive, rust, and bone. Reserve limited brighter colors for threats, targeting, warnings, and interaction. Terrain must remain quieter than enemies and defenses. The master reference records exact swatches; no palette is approved yet.

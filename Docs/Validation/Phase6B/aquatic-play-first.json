@@ -1,0 +1,48 @@
+{
+  "status": "completed",
+  "duration": 5.65,
+  "summary": {
+    "total": 5,
+    "passed": 4,
+    "failed": 1,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.AllArrivalTypesFitBothMapsAndResolveWithoutTargetableWaterCargo",
+      "Status": "Failed",
+      "Duration": 1.7990172,
+      "Message": "System.NullReferenceException : Object reference not set to an instance of an object.",
+      "StackTrace": "  at ShorelineDefense.Tests.AquaticPlayTests+<AllArrivalTypesFitBothMapsAndResolveWithoutTargetableWaterCargo>d__9.MoveNext () [0x00110] in C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Assets\\Game\\Tests\\PlayMode\\AquaticPlayTests.cs:34 \r\n  at UnityEngine.TestTools.TestEnumerator+<Execute>d__7.MoveNext () [0x0003a] in .\\Library\\PackageCache\\com.unity.test-framework@bd7f943e9647\\UnityEngine.TestRunner\\NUnitExtensions\\Attributes\\TestEnumerator.cs:44 "
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.BroodmotherSpawnsAreCappedRegisteredAndIncludedInWaveAliveCount",
+      "Status": "Passed",
+      "Duration": 0.7269265,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.BurrowerIsVisibleLimitedIgnoresWireThenEmergesBeforeBorderAndBreachesOnce",
+      "Status": "Passed",
+      "Duration": 1.1270044,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.SpitterDamagesNearbyStructureThroughVisibleProjectileAndRepairStillWorks",
+      "Status": "Passed",
+      "Duration": 1.0182706,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.ThreeHundredFiftyBroodlingsRespectRegistryCapRewardAndPooling",
+      "Status": "Passed",
+      "Duration": 0.9377161,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

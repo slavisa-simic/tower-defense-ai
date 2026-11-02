@@ -42,7 +42,7 @@ namespace ShorelineDefense.UI
         private void Refresh()
         {
             waveLabel.text = $"WAVE {waves.CurrentWaveNumber}";
-            remaining.text = $"Enemies Remaining: {waves.EnemiesRemaining}";
+            remaining.text = waves.State == WaveState.Preparation ? "RIVER WATCH / PREPARATION" : $"Enemies Remaining: {waves.EnemiesRemaining}";
             start.SetEnabled(waves.CanStart);
             start.text = waves.Events?.Current != null ? (waves.Events.CanStart ? "EVENT WAVE" : "ASSAULT WARNING") : "START WAVE";
             start.style.opacity = start.enabledSelf ? 1 : 0.4f;
@@ -51,7 +51,7 @@ namespace ShorelineDefense.UI
                 case WaveState.Preparation: status.text = "WAVE READY — prepare defenses"; break;
                 case WaveState.Spawning: status.text = "Enemies approaching"; break;
                 case WaveState.Combat: status.text = "Clear the remaining enemies"; break;
-                case WaveState.WaveComplete: status.text = $"WAVE COMPLETE  +{waves.CurrentWave.CompletionReward} RSD"; break;
+                case WaveState.WaveComplete: status.text = $"WAVE COMPLETE  +{waves.EffectiveCompletionReward} RSD"; break;
                 case WaveState.AllWavesComplete: status.text = "ALL WAVES COMPLETE"; break;
                 case WaveState.GameOver: status.text = "GAME OVER"; break;
             }

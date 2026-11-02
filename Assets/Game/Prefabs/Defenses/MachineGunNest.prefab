@@ -208,8 +208,8 @@ Transform:
   m_GameObject: {fileID: 4851869824437155093}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04, y: -0.04, z: 0}
-  m_LocalScale: {x: 0.91999996, y: 0.91999996, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 9138688820302986989}
@@ -240,7 +240,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 703a716d06840de4ea102d42878e6a03, type: 2}
+  - {fileID: 2100000, guid: aacf69e778ef3b44e8c94e66a94fb071, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -261,14 +261,14 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 2002
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: -20
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 34bddf5e178d12b4698f9b8bd59307cd, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.3}
+  m_Sprite: {fileID: 21300000, guid: 9c636f808adf9134c921a0d68b9853cd, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.25, y: 1.25}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -379,7 +379,8 @@ GameObject:
   - component: {fileID: 3375822482747230641}
   - component: {fileID: 8493720268432778591}
   - component: {fileID: 3922351035184857156}
-  m_Layer: 0
+  - component: {fileID: 6327207934781112169}
+  m_Layer: 9
   m_Name: MachineGunNest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -504,6 +505,52 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 405dca2ea8508554fa12d6fc715eb042, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Presentation.DefenseUpgradePresentation
+--- !u!61 &6327207934781112169
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5152082514140486377}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.25, y: 1.25}
+  m_EdgeRadius: 0
 --- !u!1 &7282485498601163170
 GameObject:
   m_ObjectHideFlags: 0

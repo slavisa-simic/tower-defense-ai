@@ -11,6 +11,7 @@ namespace ShorelineDefense.Grid
     {
         private readonly GridCell[] cells;
         private readonly object[] occupants;
+        private readonly object[] navigationBlockers;
         private readonly object[] traversalOwners;
         private readonly float[] traversalMultipliers;
         private readonly float[] movementMultipliers;
@@ -37,6 +38,7 @@ namespace ShorelineDefense.Grid
             Plane = plane;
             cells = new GridCell[checked(width * height)];
             occupants = new object[cells.Length];
+            navigationBlockers = new object[cells.Length];
             traversalOwners = new object[cells.Length];
             traversalMultipliers = new float[cells.Length];
             movementMultipliers = new float[cells.Length];
@@ -54,6 +56,44 @@ namespace ShorelineDefense.Grid
         {
             RequireBounds(cell);
             return occupants[cell.y * Width + cell.x];
+        }
+
+        // Terrain is permanent. Player blockers are owner-scoped overlays, never terrain edits.
+        public bool IsStaticWalkable(Vector2Int cell) => Contains(cell) && cells[cell.y * Width + cell.x].Walkable;
+        public object NavigationBlockerAt(Vector2Int cell) => Contains(cell) ? navigationBlockers[cell.y * Width + cell.x] : null;
+        public bool IsTraversable(Vector2Int cell) => IsStaticWalkable(cell) && NavigationBlockerAt(cell) == null;
+
+        public bool TrySetNavigationBlocker(Vector2Int anchor, Vector2Int footprint, object owner)
+        {
+            if (owner == null || !ContainsFootprint(anchor, footprint)) return false;
+            bool changed = false;
+            for (int y = 0; y < footprint.y; y++) for (int x = 0; x < footprint.x; x++)
+            {
+                int i = (anchor.y + y) * Width + anchor.x + x;
+                if (!cells[i].Walkable || !ReferenceEquals(occupants[i], owner) ||
+                    navigationBlockers[i] != null && !ReferenceEquals(navigationBlockers[i], owner)) return false;
+            }
+            for (int y = 0; y < footprint.y; y++) for (int x = 0; x < footprint.x; x++)
+            {
+                int i = (anchor.y + y) * Width + anchor.x + x;
+                changed |= navigationBlockers[i] == null;
+                navigationBlockers[i] = owner;
+            }
+            if (changed) { Revision++; Changed?.Invoke(); }
+            return true;
+        }
+
+        public void ClearNavigationBlocker(Vector2Int anchor, Vector2Int footprint, object owner)
+        {
+            if (owner == null || !ContainsFootprint(anchor, footprint)) return;
+            bool changed = false;
+            for (int y = 0; y < footprint.y; y++) for (int x = 0; x < footprint.x; x++)
+            {
+                int i = (anchor.y + y) * Width + anchor.x + x;
+                if (!ReferenceEquals(navigationBlockers[i], owner)) continue;
+                navigationBlockers[i] = null; changed = true;
+            }
+            if (changed) { Revision++; Changed?.Invoke(); }
         }
 
         public bool CanOccupy(Vector2Int anchor, Vector2Int footprint)
@@ -120,8 +160,8 @@ namespace ShorelineDefense.Grid
             RequireBounds(cell);
             int index = cell.y * Width + cell.x;
             var value = cells[index];
-            return traversalOwners[index] == null ? value : new GridCell(value.Terrain, value.Walkable,
-                value.Buildable, value.TraversalCost * traversalMultipliers[index]);
+            return new GridCell(value.Terrain, value.Walkable && navigationBlockers[index] == null,
+                value.Buildable, value.TraversalCost * (traversalOwners[index] == null ? 1 : traversalMultipliers[index]));
         }
 
         public float MovementMultiplierAt(Vector3 position) => TryWorldToCell(position, out var cell) &&

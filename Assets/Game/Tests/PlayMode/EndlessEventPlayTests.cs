@@ -83,7 +83,7 @@ namespace ShorelineDefense.Tests
             var defense = Place("sniper-tower", 6, 8); float baseRange = defense.Definition.RangeInCells;
             Jump(24);
             var baseline = new EndlessWaveGenerator(waves.EndlessSettings, waves.RunSeed).Generate(24); int normalCount = baseline.ScheduledCount; Object.Destroy(baseline);
-            waves.ForceEvent("mass-landing"); Assert.That(waves.CurrentWave.ScheduledCount, Is.GreaterThan(normalCount));
+            waves.ForceEvent("mass-emergence"); Assert.That(waves.CurrentWave.ScheduledCount, Is.GreaterThan(normalCount));
             waves.Events.Cancel(); Assert.That(waves.CurrentWave.ScheduledCount, Is.EqualTo(normalCount));
             Assert.That(waves.Landings.ConcurrencyLimit, Is.EqualTo(waves.EndlessSettings.BoatConcurrency(24)));
             waves.ForceEvent("fog"); Assert.IsTrue(waves.TryStartWave());
@@ -121,12 +121,12 @@ namespace ShorelineDefense.Tests
         }
         [UnityTest] public IEnumerator LandingPatternsChangeActualDispatchSectorsAndMassConcurrency()
         {
-            foreach (string id in new[] { "multi-sector", "concentrated-landing", "mass-landing", "pirate-raid" }) {
+            foreach (string id in new[] { "multi-sector", "concentrated-emergence", "mass-emergence", "swarm-surge" }) {
                 Jump(24); Assert.IsTrue(waves.ForceEvent(id)); var sector = waves.Events.Current.Sector;
                 int[] before = waves.Landings.SectorArrivals.ToArray(); Assert.IsTrue(waves.TryStartWave());
-                if (id == "mass-landing") Assert.That(waves.Landings.ConcurrencyLimit, Is.EqualTo(Mathf.CeilToInt(waves.EndlessSettings.BoatConcurrency(24) * 1.5f)));
+                if (id == "mass-emergence") Assert.That(waves.Landings.ConcurrencyLimit, Is.EqualTo(Mathf.CeilToInt(waves.EndlessSettings.BoatConcurrency(24) * 1.5f)));
                 yield return Drain(); int[] counts = waves.Landings.SectorArrivals.Select((n, i) => n - before[i]).ToArray();
-                if (id == "concentrated-landing") Assert.That(counts[(int)sector], Is.GreaterThan(counts.Sum() / 2));
+                if (id == "concentrated-emergence") Assert.That(counts[(int)sector], Is.GreaterThan(counts.Sum() / 2));
                 else Assert.That(counts.Count(n => n > 0), Is.EqualTo(3));
             }
         }

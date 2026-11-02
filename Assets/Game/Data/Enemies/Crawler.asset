@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f40a841e78dd0459454a9c25516d4d, type: 3}
   m_Name: Crawler
   m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Enemies.EnemyDefinition
+  armor: 0
   kind: 0
   breachPenalty: 25
   difficultyCost: 1
   unlockWave: 1
   transportCapacityUnits: 1
-  displayName: Crawler
+  displayName: CRAWLER
   maxHealth: 100
   movementSpeed: 2.5
   attackDamage: 10

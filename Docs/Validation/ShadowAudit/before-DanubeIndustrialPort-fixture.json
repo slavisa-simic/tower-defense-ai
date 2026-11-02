@@ -1,0 +1,8 @@
+{
+  "map": "DanubeIndustrialPort",
+  "units": 8,
+  "defenses": 8,
+  "currencyGrant": 20000,
+  "resolution": "1920x1080",
+  "cameraOnly": true
+}

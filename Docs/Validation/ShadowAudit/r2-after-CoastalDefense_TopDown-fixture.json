@@ -1,0 +1,12 @@
+{
+  "map": "CoastalDefense_TopDown",
+  "units": 8,
+  "defenses": 8,
+  "currencyGrant": 20000,
+  "resolution": "1920x1080",
+  "cameraOnly": true,
+  "cameraPosition": "(0.0000, 0.0000, -10.0000)",
+  "cameraRotation": "(0.0000, 0.0000, 0.0000)",
+  "orthographicSize": 11.85,
+  "viewport": "(x:0.00, y:0.30, width:1.00, height:0.56)"
+}

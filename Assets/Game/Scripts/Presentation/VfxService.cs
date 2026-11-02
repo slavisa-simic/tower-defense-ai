@@ -97,8 +97,7 @@ namespace ShorelineDefense.Presentation
             if (!CanPlay || pools == null) return;
             pools[(int)VfxChannel.Corpse].Play(frames, fps, position, rotation, Vector3.one * scale,
                 "GroundObjects", 4, frames.Length / Mathf.Max(1, fps) + .6f, 1, .3f, Vector2.zero);
-            Play(VfxId.BloodHit, position, rotation.eulerAngles.z, scale);
-            Play(scale > 1 ? VfxId.BloodDecalMedium : VfxId.BloodDecal, position, rotation.eulerAngles.z, scale);
+            Play(VfxId.CreatureFluids, position, rotation.eulerAngles.z, scale * .65f);
         }
     }
 }

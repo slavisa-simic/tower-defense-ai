@@ -1,0 +1,516 @@
+{
+  "scenes": [
+    {
+      "name": "MainMenu",
+      "missing": 0,
+      "menus": 1,
+      "sessions": 0,
+      "intelligence": 0,
+      "isDirty": false
+    },
+    {
+      "name": "CoastalDefense_TopDown",
+      "missing": 0,
+      "menus": 1,
+      "sessions": 1,
+      "intelligence": 1,
+      "isDirty": false
+    },
+    {
+      "name": "DanubeIndustrialPort",
+      "missing": 0,
+      "menus": 1,
+      "sessions": 1,
+      "intelligence": 1,
+      "isDirty": false
+    }
+  ],
+  "imports": [
+    {
+      "path": "Assets/Game/Art/UI/Research/bd_ui_research_engineering_sheet_v001.png",
+      "width": 2172,
+      "height": 724,
+      "filter": "Point",
+      "sprites": [
+        {
+          "name": "engineering_1",
+          "rect": "(x:434.00, y:190.00, width:434.00, height:316.00)",
+          "pivot": "(217.00, 158.00)"
+        },
+        {
+          "name": "engineering_3",
+          "rect": "(x:1330.00, y:187.00, width:407.00, height:340.00)",
+          "pivot": "(203.50, 170.00)"
+        },
+        {
+          "name": "engineering_4",
+          "rect": "(x:1737.00, y:171.00, width:399.00, height:369.00)",
+          "pivot": "(199.50, 184.50)"
+        },
+        {
+          "name": "engineering_0",
+          "rect": "(x:48.00, y:190.00, width:386.00, height:337.00)",
+          "pivot": "(193.00, 168.50)"
+        },
+        {
+          "name": "engineering_2",
+          "rect": "(x:868.00, y:187.00, width:391.00, height:343.00)",
+          "pivot": "(195.50, 171.50)"
+        }
+      ]
+    },
+    {
+      "path": "Assets/Game/Art/UI/Research/bd_ui_research_intelligence_sheet_v001.png",
+      "width": 2172,
+      "height": 724,
+      "filter": "Point",
+      "sprites": [
+        {
+          "name": "intelligence_0",
+          "rect": "(x:31.00, y:143.00, width:403.00, height:369.00)",
+          "pivot": "(201.50, 184.50)"
+        },
+        {
+          "name": "intelligence_3",
+          "rect": "(x:1303.00, y:134.00, width:434.00, height:372.00)",
+          "pivot": "(217.00, 186.00)"
+        },
+        {
+          "name": "intelligence_2",
+          "rect": "(x:868.00, y:134.00, width:435.00, height:452.00)",
+          "pivot": "(217.50, 226.00)"
+        },
+        {
+          "name": "intelligence_4",
+          "rect": "(x:1737.00, y:113.00, width:387.00, height:487.00)",
+          "pivot": "(193.50, 243.50)"
+        },
+        {
+          "name": "intelligence_1",
+          "rect": "(x:434.00, y:143.00, width:434.00, height:427.00)",
+          "pivot": "(217.00, 213.50)"
+        }
+      ]
+    },
+    {
+      "path": "Assets/Game/Art/UI/Research/bd_ui_research_logistics_sheet_v001.png",
+      "width": 2059,
+      "height": 764,
+      "filter": "Point",
+      "sprites": [
+        {
+          "name": "logistics_0",
+          "rect": "(x:33.00, y:190.00, width:352.00, height:326.00)",
+          "pivot": "(176.00, 163.00)"
+        },
+        {
+          "name": "logistics_1",
+          "rect": "(x:442.00, y:181.00, width:352.00, height:344.00)",
+          "pivot": "(176.00, 172.00)"
+        },
+        {
+          "name": "logistics_2",
+          "rect": "(x:849.00, y:190.00, width:351.00, height:344.00)",
+          "pivot": "(175.50, 172.00)"
+        },
+        {
+          "name": "logistics_4",
+          "rect": "(x:1669.00, y:170.00, width:361.00, height:349.00)",
+          "pivot": "(180.50, 174.50)"
+        },
+        {
+          "name": "logistics_3",
+          "rect": "(x:1237.00, y:170.00, width:391.00, height:376.00)",
+          "pivot": "(195.50, 188.00)"
+        }
+      ]
+    },
+    {
+      "path": "Assets/Game/Art/UI/Research/bd_ui_research_points_v001.png",
+      "width": 1254,
+      "height": 1254,
+      "filter": "Point",
+      "sprites": [
+        {
+          "name": "bd_ui_research_points_v001",
+          "rect": "(x:0.00, y:0.00, width:1254.00, height:1254.00)",
+          "pivot": "(627.00, 627.00)"
+        }
+      ]
+    },
+    {
+      "path": "Assets/Game/Art/UI/Research/bd_ui_research_weapons_sheet_v001.png",
+      "width": 2172,
+      "height": 724,
+      "filter": "Point",
+      "sprites": [
+        {
+          "name": "weapons_4",
+          "rect": "(x:1779.00, y:168.00, width:369.00, height:389.00)",
+          "pivot": "(184.50, 194.50)"
+        },
+        {
+          "name": "weapons_3",
+          "rect": "(x:1352.00, y:177.00, width:360.00, height:322.00)",
+          "pivot": "(180.00, 161.00)"
+        },
+        {
+          "name": "weapons_1",
+          "rect": "(x:445.00, y:195.00, width:416.00, height:272.00)",
+          "pivot": "(208.00, 136.00)"
+        },
+        {
+          "name": "weapons_2",
+          "rect": "(x:897.00, y:169.00, width:376.00, height:366.00)",
+          "pivot": "(188.00, 183.00)"
+        },
+        {
+          "name": "weapons_0",
+          "rect": "(x:27.00, y:183.00, width:359.00, height:299.00)",
+          "pivot": "(179.50, 149.50)"
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "emergency-fund",
+      "displayName": "Emergency Fund",
+      "branch": "Logistics",
+      "costRP": 10,
+      "tier": 1,
+      "maxRank": 1,
+      "prerequisites": [],
+      "effects": [
+        {
+          "kind": "StartingRsd",
+          "amount": 100.0
+        }
+      ]
+    },
+    {
+      "id": "supply-contracts",
+      "displayName": "Supply Contracts",
+      "branch": "Logistics",
+      "costRP": 20,
+      "tier": 2,
+      "maxRank": 1,
+      "prerequisites": [
+        "emergency-fund"
+      ],
+      "effects": [
+        {
+          "kind": "PreparationRepairDiscount",
+          "amount": 0.1
+        }
+      ]
+    },
+    {
+      "id": "field-salvage",
+      "displayName": "Field Salvage",
+      "branch": "Logistics",
+      "costRP": 25,
+      "tier": 2,
+      "maxRank": 1,
+      "prerequisites": [
+        "emergency-fund"
+      ],
+      "effects": [
+        {
+          "kind": "RefundBonus",
+          "amount": 0.05
+        }
+      ]
+    },
+    {
+      "id": "logistics-network",
+      "displayName": "Logistics Network",
+      "branch": "Logistics",
+      "costRP": 35,
+      "tier": 3,
+      "maxRank": 1,
+      "prerequisites": [
+        "supply-contracts"
+      ],
+      "effects": [
+        {
+          "kind": "WaveRewardBonus",
+          "amount": 0.1
+        }
+      ]
+    },
+    {
+      "id": "reserve-stockpile",
+      "displayName": "Reserve Stockpile",
+      "branch": "Logistics",
+      "costRP": 50,
+      "tier": 4,
+      "maxRank": 1,
+      "prerequisites": [
+        "field-salvage",
+        "logistics-network"
+      ],
+      "effects": [
+        {
+          "kind": "StartingRsd",
+          "amount": 150.0
+        }
+      ]
+    },
+    {
+      "id": "reinforced-emplacements",
+      "displayName": "Reinforced Emplacements",
+      "branch": "Engineering",
+      "costRP": 15,
+      "tier": 1,
+      "maxRank": 1,
+      "prerequisites": [],
+      "effects": [
+        {
+          "kind": "BlockingHealthBonus",
+          "amount": 0.1
+        }
+      ]
+    },
+    {
+      "id": "hardened-wire",
+      "displayName": "Hardened Wire",
+      "branch": "Engineering",
+      "costRP": 20,
+      "tier": 2,
+      "maxRank": 1,
+      "prerequisites": [
+        "reinforced-emplacements"
+      ],
+      "effects": [
+        {
+          "kind": "WireHealthBonus",
+          "amount": 0.2
+        }
+      ]
+    },
+    {
+      "id": "field-maintenance",
+      "displayName": "Field Maintenance",
+      "branch": "Engineering",
+      "costRP": 30,
+      "tier": 2,
+      "maxRank": 1,
+      "prerequisites": [
+        "reinforced-emplacements"
+      ],
+      "effects": [
+        {
+          "kind": "CombatRepairDiscount",
+          "amount": 0.1
+        }
+      ]
+    },
+    {
+      "id": "modular-construction",
+      "displayName": "Modular Construction",
+      "branch": "Engineering",
+      "costRP": 35,
+      "tier": 3,
+      "maxRank": 1,
+      "prerequisites": [
+        "reinforced-emplacements"
+      ],
+      "effects": [
+        {
+          "kind": "UpgradeDiscount",
+          "amount": 0.1
+        }
+      ]
+    },
+    {
+      "id": "fortification-doctrine",
+      "displayName": "Fortification Doctrine",
+      "branch": "Engineering",
+      "costRP": 55,
+      "tier": 4,
+      "maxRank": 1,
+      "prerequisites": [
+        "hardened-wire",
+        "field-maintenance",
+        "modular-construction"
+      ],
+      "effects": [
+        {
+          "kind": "BlockingHealthBonus",
+          "amount": 0.1
+        }
+      ]
+    },
+    {
+      "id": "improved-ammunition",
+      "displayName": "Improved Ammunition",
+      "branch": "Weapons",
+      "costRP": 20,
+      "tier": 1,
+      "maxRank": 1,
+      "prerequisites": [],
+      "effects": [
+        {
+          "kind": "BallisticDamageBonus",
+          "amount": 0.05
+        }
+      ]
+    },
+    {
+      "id": "optical-calibration",
+      "displayName": "Optical Calibration",
+      "branch": "Weapons",
+      "costRP": 25,
+      "tier": 2,
+      "maxRank": 1,
+      "prerequisites": [
+        "improved-ammunition"
+      ],
+      "effects": [
+        {
+          "kind": "SniperRangeBonus",
+          "amount": 0.08
+        }
+      ]
+    },
+    {
+      "id": "area-munitions",
+      "displayName": "Area Munitions",
+      "branch": "Weapons",
+      "costRP": 30,
+      "tier": 2,
+      "maxRank": 1,
+      "prerequisites": [
+        "improved-ammunition"
+      ],
+      "effects": [
+        {
+          "kind": "AreaRadiusBonus",
+          "amount": 0.1
+        }
+      ]
+    },
+    {
+      "id": "thermal-mixture",
+      "displayName": "Thermal Mixture",
+      "branch": "Weapons",
+      "costRP": 30,
+      "tier": 3,
+      "maxRank": 1,
+      "prerequisites": [
+        "improved-ammunition"
+      ],
+      "effects": [
+        {
+          "kind": "BurnDurationBonus",
+          "amount": 0.1
+        }
+      ]
+    },
+    {
+      "id": "advanced-fire-control",
+      "displayName": "Advanced Fire Control",
+      "branch": "Weapons",
+      "costRP": 60,
+      "tier": 4,
+      "maxRank": 1,
+      "prerequisites": [
+        "improved-ammunition",
+        "optical-calibration",
+        "area-munitions",
+        "thermal-mixture"
+      ],
+      "effects": [
+        {
+          "kind": "FireRateBonus",
+          "amount": 0.05
+        }
+      ]
+    },
+    {
+      "id": "river-monitoring",
+      "displayName": "River Monitoring",
+      "branch": "Intelligence",
+      "costRP": 10,
+      "tier": 1,
+      "maxRank": 1,
+      "prerequisites": [],
+      "effects": [
+        {
+          "kind": "EnemyCountIntel",
+          "amount": 1.0
+        }
+      ]
+    },
+    {
+      "id": "advance-warning",
+      "displayName": "Advance Warning",
+      "branch": "Intelligence",
+      "costRP": 20,
+      "tier": 2,
+      "maxRank": 1,
+      "prerequisites": [
+        "river-monitoring"
+      ],
+      "effects": [
+        {
+          "kind": "ThreatIntel",
+          "amount": 1.0
+        }
+      ]
+    },
+    {
+      "id": "biological-analysis",
+      "displayName": "Biological Analysis",
+      "branch": "Intelligence",
+      "costRP": 30,
+      "tier": 3,
+      "maxRank": 1,
+      "prerequisites": [
+        "advance-warning"
+      ],
+      "effects": [
+        {
+          "kind": "CompositionIntel",
+          "amount": 1.0
+        }
+      ]
+    },
+    {
+      "id": "event-forecasting",
+      "displayName": "Event Forecasting",
+      "branch": "Intelligence",
+      "costRP": 35,
+      "tier": 3,
+      "maxRank": 1,
+      "prerequisites": [
+        "river-monitoring"
+      ],
+      "effects": [
+        {
+          "kind": "EventForecast",
+          "amount": 1.0
+        }
+      ]
+    },
+    {
+      "id": "deep-water-sensor-network",
+      "displayName": "Deep-Water Sensor Network",
+      "branch": "Intelligence",
+      "costRP": 55,
+      "tier": 4,
+      "maxRank": 1,
+      "prerequisites": [
+        "biological-analysis",
+        "event-forecasting"
+      ],
+      "effects": [
+        {
+          "kind": "DeepWaterIntel",
+          "amount": 1.0
+        }
+      ]
+    }
+  ]
+}

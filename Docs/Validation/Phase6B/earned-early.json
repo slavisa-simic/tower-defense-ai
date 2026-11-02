@@ -1,0 +1,95 @@
+{
+  "fixture": "Real 500 RSD start, threshold 1000, earned income only; explicit .1-second ticks and scripted purchases/upgrades. Not human mouse-only balance certification.",
+  "results": [
+    {
+      "map": "CoastalDefense_TopDown",
+      "wave": 1,
+      "state": "WaveComplete",
+      "ticks": 223,
+      "kills": 66,
+      "homicides": 350,
+      "money": 600
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "wave": 2,
+      "state": "WaveComplete",
+      "ticks": 308,
+      "kills": 182,
+      "homicides": 450,
+      "money": 3078
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "wave": 3,
+      "state": "WaveComplete",
+      "ticks": 160,
+      "kills": 302,
+      "homicides": 450,
+      "money": 3654
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "wave": 4,
+      "state": "WaveComplete",
+      "ticks": 179,
+      "kills": 457,
+      "homicides": 450,
+      "money": 7643
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "wave": 5,
+      "state": "WaveComplete",
+      "ticks": 217,
+      "kills": 717,
+      "homicides": 450,
+      "money": 11472
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "wave": 1,
+      "state": "WaveComplete",
+      "ticks": 293,
+      "kills": 52,
+      "homicides": 700,
+      "money": 250
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "wave": 2,
+      "state": "WaveComplete",
+      "ticks": 235,
+      "kills": 172,
+      "homicides": 700,
+      "money": 3129
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "wave": 3,
+      "state": "WaveComplete",
+      "ticks": 150,
+      "kills": 287,
+      "homicides": 700,
+      "money": 3479
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "wave": 4,
+      "state": "WaveComplete",
+      "ticks": 184,
+      "kills": 437,
+      "homicides": 700,
+      "money": 7544
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "wave": 5,
+      "state": "WaveComplete",
+      "ticks": 234,
+      "kills": 662,
+      "homicides": 700,
+      "money": 11447
+    }
+  ]
+}

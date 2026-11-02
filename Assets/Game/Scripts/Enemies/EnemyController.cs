@@ -19,11 +19,26 @@ namespace ShorelineDefense.Enemies
         private BorderBreachService border;
         private bool resolved;
         private System.Action<EnemyController> returnToPool;
+        private SpitterAttack spitter;
+        private BurrowerTraversal burrower;
+        private BroodmotherSpawn brood;
+        private float attackPose;
+        private EnemyStructureAttack structureAttack;
+        public EnemyStructureAttack StructureAttack => structureAttack;
+        public bool IsBurrowed => burrower != null && burrower.IsBurrowed;
+        public bool IsAttacking => attackPose > 0 || spitter != null && spitter.IsAttacking;
+        public bool IsCombatActive => initialized && !resolved && isActiveAndEnabled && health.IsAlive && game != null && game.IsPlaying;
+        public event System.Action CreatureAttack;
+        public event System.Action CreatureHit;
+        public event System.Action CreatureDeath;
+        public void NotifyAttack() { attackPose = .5f; Notify(CreatureAttack); }
+        private void Notify(System.Action observers)
+        { if (observers == null) return; foreach (System.Action observer in observers.GetInvocationList()) try { observer(); } catch (System.Exception e) { Debug.LogException(e, this); } }
         public void ConfigurePool(System.Action<EnemyController> release) => returnToPool = release;
         public EnemyDefinition Definition => definition;
         public EnemyMovement Movement => movement;
         public EnemyHealth Health => health;
-        public bool IsTargetable => initialized && !resolved && isActiveAndEnabled && health.IsAlive && game != null && game.IsPlaying;
+        public bool IsTargetable => IsCombatActive && !IsBurrowed;
 
         public void Configure(EnemyDefinition data) => definition = data;
 
@@ -33,6 +48,12 @@ namespace ShorelineDefense.Enemies
             combat = GetComponent<EnemyCombat>();
             health = GetComponent<EnemyHealth>();
             health.Died += OnDied;
+            health.Damaged += OnHit;
+            spitter = GetComponent<SpitterAttack>();
+            burrower = GetComponent<BurrowerTraversal>();
+            brood = GetComponent<BroodmotherSpawn>();
+            structureAttack = GetComponent<EnemyStructureAttack>();
+            if (structureAttack == null) structureAttack = gameObject.AddComponent<EnemyStructureAttack>();
         }
 
         public void Initialize(GridManager grid, BaseHealth playerBase, GameStateController state, EnemyRegistry enemies = null,
@@ -49,6 +70,7 @@ namespace ShorelineDefense.Enemies
             registry = enemies;
             target = playerBase;
             border = breach; resolved = false;
+            attackPose = 0;
             if (!grid.Grid.TryWorldToCell(target.transform.position, out var goal))
             {
                 Debug.LogError("Player base must be inside the battlefield grid.", target);
@@ -58,8 +80,12 @@ namespace ShorelineDefense.Enemies
             goal = breachGoal ?? goal;
             health.ConfigureArmor(definition.Armor);
             health.Initialize((int)System.Math.Min(int.MaxValue, System.Math.Max(1, System.Math.Ceiling(definition.MaxHealth * (double)healthMultiplier))));
-            movement.Initialize(grid.Grid, grid.Paths, goal, definition.MovementSpeed * speedMultiplier, border != null ? .05f : definition.AttackRange);
+            movement.Initialize(grid.Grid, grid.Paths, goal, definition.MovementSpeed * speedMultiplier, border != null ? .05f : definition.AttackRange, border?.BreachCells);
             combat.Initialize(target, definition);
+            structureAttack.Initialize(this);
+            spitter?.Initialize(this, grid, state);
+            burrower?.Initialize(this, grid.Grid.CellSize);
+            brood?.Initialize(this, grid);
             initialized = true;
             if (isActiveAndEnabled) registry?.Register(this);
         }
@@ -72,18 +98,25 @@ namespace ShorelineDefense.Enemies
         {
             if (!initialized || resolved || !game.IsPlaying || !health.IsAlive || target == null || !target.IsAlive) return;
             bool wasInRange = movement.ReachedDestination;
-            movement.Tick(deltaTime);
-            if (border != null) { if (movement.ReachedDestination) border.TryBreach(this); return; }
-            if (movement.ReachedDestination)
+            attackPose = Mathf.Max(0, attackPose - deltaTime);
+            bool handlingObstruction = structureAttack.Tick(deltaTime);
+            if (handlingObstruction) burrower?.SurfaceForObstruction();
+            bool attacking = handlingObstruction || spitter != null && spitter.Tick(deltaTime);
+            if (!attacking) { if (burrower != null) burrower.Move(deltaTime, false); else movement.Advance(deltaTime); }
+            brood?.Tick(deltaTime);
+            bool atObjective = !handlingObstruction && !movement.FollowingObstructionRoute && movement.ReachedDestination;
+            if (border != null) { if (atObjective) border.TryBreach(this); return; }
+            if (atObjective)
                 movement.FaceTowards(target.transform.position);
             // Begin accumulating attack time on the first full frame spent at the base.
-            combat.Tick(deltaTime, wasInRange && movement.ReachedDestination);
+            combat.Tick(deltaTime, wasInRange && atObjective);
         }
 
         private void OnDied()
         {
             if (resolved) return;
             resolved = true;
+            Notify(CreatureDeath);
             registry?.NotifyKilled(this);
             // Health is already zero, so targeting/movement/attacks stop before deferred destruction.
             if (returnToPool != null) { gameObject.SetActive(false); returnToPool(this); }
@@ -92,11 +125,13 @@ namespace ShorelineDefense.Enemies
         public bool TryResolveBreach() { if (!IsTargetable) return false; resolved = true; return true; }
         public void RemoveBreached() { if (!resolved) return; registry?.Unregister(this); gameObject.SetActive(false); if (returnToPool != null) returnToPool(this); else Destroy(gameObject); }
         private void OnEnable() { if (initialized && health.IsAlive) registry?.Register(this); }
+        private void OnHit(int amount) { if (health.IsAlive) Notify(CreatureHit); }
         private void OnDisable() => registry?.Unregister(this);
         private void OnDestroy()
         {
             registry?.Unregister(this);
             if (health != null) health.Died -= OnDied;
+            if (health != null) health.Damaged -= OnHit;
         }
     }
 }

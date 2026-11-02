@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3777ac5fbc4d04342bf89a26e6cf129c, type: 3}
+  m_Name: supply-contracts
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Progression.ResearchNodeDefinition
+  id: supply-contracts
+  displayName: Supply Contracts
+  description: Preparation repairs cost 10% less, after the normal Preparation discount.
+  branch: 0
+  costRP: 20
+  tier: 2
+  maxRank: 1
+  prerequisites:
+  - {fileID: 11400000, guid: d9edd1497598e454fb5f8bc3dfabe349, type: 2}
+  icon: {fileID: 586553291, guid: 492a57892b42146439175c07ab6d06c5, type: 3}
+  effects:
+  - kind: 1
+    amount: 0.1
+  boardPosition: {x: 0.25, y: 106}

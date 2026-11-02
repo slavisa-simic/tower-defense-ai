@@ -1,5 +1,19 @@
 # Unity art integration contract
 
+## Current shadow convention — 2026-11-02
+
+Both playable maps use alpha-only child shadow SpriteRenderers with shared `Assets/Game/Materials/PixelShadowLow/Medium/Tall.mat` and `PixelShadow.shader`. Current R2 style: neutral #1F2629 at .36/.40/.40, lower-right world XY (+4,-3)/(+8,-6)/(+12,-9) logical source pixels at 51.2 PPU, applied after rotation/scale. Low is for small creatures/props, wire and mines; Medium for containers/ordinary structures/defense footprints; Tall for buildings/cranes/bosses. The larger structural offsets compensate for the fitted gameplay camera's downscaling. Align the child to its source renderer with no additional positional offset; otherwise offsets stack. Use clearly visible structural/footprint silhouettes. No source art, lit material, Light2D or ShadowCaster2D is needed. R1's smaller 2/3/5-pixel contacts are superseded by user feedback; see batch `shadow_directional_002.md` and the R2 section of SHADOW_AUDIT_REPORT.md.
+
+Shadows use GroundObjects -20. Terrain, paving and flat road/hazard markings belong to Environment; body sprite sorting remains unchanged. Each active creature has exactly one shadow under Visual, driven by EnemySpritePresentation's actual frame/land/burrow/death state. WireConnectivity retains shadow-mask ownership. Active organic carriers use water silhouettes and wake/emergence, with no land contact. Do not restore old duplicate/root enemy shadows or the hidden boat's orphan ellipse. Authoring and validation: `Docs/Validation/ShadowAudit/`, `SHADOW_AUDIT_REPORT.md`, batch `shadow_audit_001.md`. Historical shadow descriptions below are superseded by this section.
+
+## Phase 6B current enemy integration
+
+ART_BIBLE.md and LORE_BIBLE.md supersede historical human-enemy/boat presentation below. Six aquatic creatures and two biological bosses use the existing EnemyController/Health/Movement/Registry flow; per-action four-frame sheets are under Art/Enemies/Aquatic, carriers under Art/Carriers and biological VFX under Art/Effects/Aquatic. Ordinary frames are 64px, Broodlings 32px and bosses 128px, at 51.2 PPU. Carrier frames are 192x96; definition extents own swept-water clearance. Generated sheets remain under SourceSheets/p6b_aquatic_001 and are not runtime consumers.
+
+AssaultCarrierSystem retains the original scheduler's bounded cargo/concurrency/pools; the old serialized BoatLandingSystem component is a compatibility adapter. CarrierDefinition selects direct water emergence, rupturing Drift Pods and living Brood/Leviathan organisms. All cargo stays outside EnemyRegistry until EnemySpawner initializes it on land. Direct emergence uses the actual creature's underwater/emergence frames and wake. Burrower transitions/trails and Broodmother release animations observe gameplay state without driving it. Detached death effects remain pooled and never retain a gameplay enemy.
+
+Active prefabs/data were moved through AssetDatabase with GUIDs retained. Old humanoid sprite packs and transport prefabs are archived under Art/Legacy and Game/Legacy. Current scenes and procedural catalogs must have no legacy enemy/transport prefab dependency. The batch, source manifest, import receipt and actual validation results are in p6b_aquatic_001 and Docs/Validation/Phase6B. Historical sections below record prior production state.
+
 ## Verified architecture
 
 Primary scene: `Assets/Game/Scenes/CoastalDefense_TopDown.unity`. Keep Unity pinned to `ProjectSettings/ProjectVersion.txt` (6000.3.24f1 at setup). The separate `CoastalDefense_Prototype.unity` is a regression scene; never load both gameplay scenes additively.

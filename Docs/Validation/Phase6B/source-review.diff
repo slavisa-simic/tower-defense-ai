@@ -1,0 +1,1955 @@
+diff --git a/Assets/Game/Scripts/Core/RunStatistics.cs b/Assets/Game/Scripts/Core/RunStatistics.cs
+index 7bd95a6..0b63c6e 100644
+--- a/Assets/Game/Scripts/Core/RunStatistics.cs
++++ b/Assets/Game/Scripts/Core/RunStatistics.cs
+@@ -17,8 +17,8 @@ namespace ShorelineDefense.Core
+         public long TotalBreaches { get; private set; }
+         public long TotalKills { get { long total = 0; foreach (long count in kills) total = SaturatingAdd(total, count); return total; } }
+         public long BossesKilled => SaturatingAdd(kills[7], kills[8]);
+-        public long OsamaKills => kills[7];
+-        public long SomaliWarlordKills => kills[8];
++        public long DredgerKills => kills[7];
++        public long BroodmotherKills => kills[8];
+         public long BossesBreached { get; private set; }
+         public void RecordBossBreach() => BossesBreached = SaturatingAdd(BossesBreached, 1);
+         public int PeakActiveEnemies { get; private set; }
+@@ -32,9 +32,12 @@ namespace ShorelineDefense.Core
+         public long LastCompletedWaveIncome { get; private set; }
+         public void SamplePressure(int active, float frameSeconds) { pressureSum += active; frameTimeSum += frameSeconds * 1000; pressureSamples++; }
+         public void RecordPressure(int active, int boats) { PeakActiveEnemies = Math.Max(PeakActiveEnemies, active); PeakConcurrentBoats = Math.Max(PeakConcurrentBoats, boats); }
+-        public long BasicKills => kills[0];
+-        public long RunnerKills => kills[1];
+-        public long BruteKills => kills[2];
++        public long CrawlerKills => kills[0];
++        public long SkitterKills => kills[1];
++        public long BulwarkKills => kills[2];
++        public long SpitterKills => kills[3];
++        public long BroodlingKills => kills[4];
++        public long BurrowerKills => kills[5];
+         public int CurrentWave => waves != null ? waves.CurrentWaveNumber : 0;
+         public long EventsExperienced => waves?.Events?.EventsExperienced ?? 0;
+         public string CurrentEvent => waves?.Events?.Current?.Definition.id;
+@@ -83,6 +86,6 @@ namespace ShorelineDefense.Core
+             { try { observer(Homicides); } catch (Exception exception) { Debug.LogException(exception, this); } }
+         }
+         private static long SaturatingAdd(long value, long amount) => value > long.MaxValue - amount ? long.MaxValue : value + amount;
+-        public string Report => $"BORDER DEFENSE COLLAPSED\nWAVE REACHED {HighestWaveReached}\nHOMICIDES {Homicides:N0}    TOTAL KILLS {TotalKills:N0}\nBASIC {BasicKills:N0}    RUNNERS {RunnerKills:N0}    BRUTES {BruteKills:N0}\nTOTAL MONEY EARNED {TotalMoneyEarned:N0} RSD";
++        public string Report => $"BORDER DEFENSE COLLAPSED\nWAVE REACHED {HighestWaveReached}\nHOMICIDES {Homicides:N0}    TOTAL KILLS {TotalKills:N0}\nCRAWLER {CrawlerKills:N0}  SKITTER {SkitterKills:N0}  BULWARK {BulwarkKills:N0}\nSPITTER {SpitterKills:N0}  BROODLING {BroodlingKills:N0}  BURROWER {BurrowerKills:N0}\nDREDGER {DredgerKills:N0}  BROODMOTHER {BroodmotherKills:N0}\nTOTAL MONEY EARNED {TotalMoneyEarned:N0} RSD";
+     }
+ }
+diff --git a/Assets/Game/Scripts/Enemies/EnemyController.cs b/Assets/Game/Scripts/Enemies/EnemyController.cs
+index 64077a7..0362877 100644
+--- a/Assets/Game/Scripts/Enemies/EnemyController.cs
++++ b/Assets/Game/Scripts/Enemies/EnemyController.cs
+@@ -19,11 +19,24 @@ namespace ShorelineDefense.Enemies
+         private BorderBreachService border;
+         private bool resolved;
+         private System.Action<EnemyController> returnToPool;
++        private SpitterAttack spitter;
++        private BurrowerTraversal burrower;
++        private BroodmotherSpawn brood;
++        private float attackPose;
++        public bool IsBurrowed => burrower != null && burrower.IsBurrowed;
++        public bool IsAttacking => attackPose > 0 || spitter != null && spitter.IsAttacking;
++        public bool IsCombatActive => initialized && !resolved && isActiveAndEnabled && health.IsAlive && game != null && game.IsPlaying;
++        public event System.Action CreatureAttack;
++        public event System.Action CreatureHit;
++        public event System.Action CreatureDeath;
++        public void NotifyAttack() { attackPose = .5f; Notify(CreatureAttack); }
++        private void Notify(System.Action observers)
++        { if (observers == null) return; foreach (System.Action observer in observers.GetInvocationList()) try { observer(); } catch (System.Exception e) { Debug.LogException(e, this); } }
+         public void ConfigurePool(System.Action<EnemyController> release) => returnToPool = release;
+         public EnemyDefinition Definition => definition;
+         public EnemyMovement Movement => movement;
+         public EnemyHealth Health => health;
+-        public bool IsTargetable => initialized && !resolved && isActiveAndEnabled && health.IsAlive && game != null && game.IsPlaying;
++        public bool IsTargetable => IsCombatActive && !IsBurrowed;
+ 
+         public void Configure(EnemyDefinition data) => definition = data;
+ 
+@@ -33,6 +46,10 @@ namespace ShorelineDefense.Enemies
+             combat = GetComponent<EnemyCombat>();
+             health = GetComponent<EnemyHealth>();
+             health.Died += OnDied;
++            health.Damaged += OnHit;
++            spitter = GetComponent<SpitterAttack>();
++            burrower = GetComponent<BurrowerTraversal>();
++            brood = GetComponent<BroodmotherSpawn>();
+         }
+ 
+         public void Initialize(GridManager grid, BaseHealth playerBase, GameStateController state, EnemyRegistry enemies = null,
+@@ -49,6 +66,7 @@ namespace ShorelineDefense.Enemies
+             registry = enemies;
+             target = playerBase;
+             border = breach; resolved = false;
++            attackPose = 0;
+             if (!grid.Grid.TryWorldToCell(target.transform.position, out var goal))
+             {
+                 Debug.LogError("Player base must be inside the battlefield grid.", target);
+@@ -60,6 +78,9 @@ namespace ShorelineDefense.Enemies
+             health.Initialize((int)System.Math.Min(int.MaxValue, System.Math.Max(1, System.Math.Ceiling(definition.MaxHealth * (double)healthMultiplier))));
+             movement.Initialize(grid.Grid, grid.Paths, goal, definition.MovementSpeed * speedMultiplier, border != null ? .05f : definition.AttackRange);
+             combat.Initialize(target, definition);
++            spitter?.Initialize(this, grid, state);
++            burrower?.Initialize(this, grid.Grid.CellSize);
++            brood?.Initialize(this, grid);
+             initialized = true;
+             if (isActiveAndEnabled) registry?.Register(this);
+         }
+@@ -72,7 +93,10 @@ namespace ShorelineDefense.Enemies
+         {
+             if (!initialized || resolved || !game.IsPlaying || !health.IsAlive || target == null || !target.IsAlive) return;
+             bool wasInRange = movement.ReachedDestination;
+-            movement.Tick(deltaTime);
++            attackPose = Mathf.Max(0, attackPose - deltaTime);
++            bool attacking = spitter != null && spitter.Tick(deltaTime);
++            if (!attacking) { if (burrower != null) burrower.Move(deltaTime); else movement.Tick(deltaTime); }
++            brood?.Tick(deltaTime);
+             if (border != null) { if (movement.ReachedDestination) border.TryBreach(this); return; }
+             if (movement.ReachedDestination)
+                 movement.FaceTowards(target.transform.position);
+@@ -84,6 +108,7 @@ namespace ShorelineDefense.Enemies
+         {
+             if (resolved) return;
+             resolved = true;
++            Notify(CreatureDeath);
+             registry?.NotifyKilled(this);
+             // Health is already zero, so targeting/movement/attacks stop before deferred destruction.
+             if (returnToPool != null) { gameObject.SetActive(false); returnToPool(this); }
+@@ -92,11 +117,13 @@ namespace ShorelineDefense.Enemies
+         public bool TryResolveBreach() { if (!IsTargetable) return false; resolved = true; return true; }
+         public void RemoveBreached() { if (!resolved) return; registry?.Unregister(this); gameObject.SetActive(false); if (returnToPool != null) returnToPool(this); else Destroy(gameObject); }
+         private void OnEnable() { if (initialized && health.IsAlive) registry?.Register(this); }
++        private void OnHit(int amount) { if (health.IsAlive) Notify(CreatureHit); }
+         private void OnDisable() => registry?.Unregister(this);
+         private void OnDestroy()
+         {
+             registry?.Unregister(this);
+             if (health != null) health.Died -= OnDied;
++            if (health != null) health.Damaged -= OnHit;
+         }
+     }
+ }
+diff --git a/Assets/Game/Scripts/Enemies/EnemyDamageOverTime.cs b/Assets/Game/Scripts/Enemies/EnemyDamageOverTime.cs
+index 9bb1d82..f1b0ceb 100644
+--- a/Assets/Game/Scripts/Enemies/EnemyDamageOverTime.cs
++++ b/Assets/Game/Scripts/Enemies/EnemyDamageOverTime.cs
+@@ -20,7 +20,8 @@ namespace ShorelineDefense.Enemies
+         private void Update() => Tick(Time.deltaTime);
+         public void Tick(float dt)
+         {
+-            if (!enemy.IsTargetable) { Clear(); return; }
++            // A burn committed on the surface continues during the finite burrow state.
++            if (!enemy.IsCombatActive) { Clear(); return; }
+             if (!Burning || dt <= 0) return;
+             float active = Mathf.Min(dt, remaining); remaining = Mathf.Max(0, remaining - dt);
+             fractional += active * dps;
+diff --git a/Assets/Game/Scripts/Enemies/EnemyDefinition.cs b/Assets/Game/Scripts/Enemies/EnemyDefinition.cs
+index 17d85fc..4840d61 100644
+--- a/Assets/Game/Scripts/Enemies/EnemyDefinition.cs
++++ b/Assets/Game/Scripts/Enemies/EnemyDefinition.cs
+@@ -2,7 +2,9 @@ using UnityEngine;
+ 
+ namespace ShorelineDefense.Enemies
+ {
+-    public enum EnemyKind { Basic, Runner, Brute, IsisBreacher, IsisHeavy, PirateRunner, PirateRaider, UndeadOsama, PirateWarlord }
++    // Explicit slots preserve serialized references. Slot six is reserved for migrated totals.
++    public enum EnemyKind { Crawler = 0, Skitter = 1, Bulwark = 2, Spitter = 3, Broodling = 4, Burrower = 5, LegacyUnclassified = 6, Dredger = 7, Broodmother = 8 }
++    public enum CreatureFamily { Swarm, Armored, Aberrant }
+     [CreateAssetMenu(menuName = "Shoreline Defense/Enemy Definition")]
+     public class EnemyDefinition : ScriptableObject
+     {
+@@ -13,8 +15,13 @@ namespace ShorelineDefense.Enemies
+         [SerializeField, Min(1)] private int difficultyCost = 1;
+         [SerializeField, Min(1)] private int unlockWave = 1;
+         public EnemyKind Kind => kind;
++        public CreatureFamily Family => kind == EnemyKind.Bulwark || kind == EnemyKind.Dredger ? CreatureFamily.Armored :
++            kind == EnemyKind.Spitter || kind == EnemyKind.Burrower ? CreatureFamily.Aberrant : CreatureFamily.Swarm;
++        // Half-unit capacity permits two tiny Broodlings per ordinary cargo unit.
++        public int CarrierHalfUnits => kind == EnemyKind.Broodling ? 1 : TransportCapacityUnits * 2;
+         public int BreachPenalty => Mathf.Max(0, breachPenalty);
+         public int DifficultyCost => Mathf.Max(1, difficultyCost);
++        public int WaveCostHalfUnits => kind == EnemyKind.Broodling ? 1 : DifficultyCost * 2;
+         public int UnlockWave => Mathf.Max(1, unlockWave);
+         [SerializeField, Min(1)] private int transportCapacityUnits = 1;
+         public int TransportCapacityUnits => Mathf.Max(1, transportCapacityUnits);
+diff --git a/Assets/Game/Scripts/Enemies/EnemyMovement.cs b/Assets/Game/Scripts/Enemies/EnemyMovement.cs
+index a8a0e11..c00104a 100644
+--- a/Assets/Game/Scripts/Enemies/EnemyMovement.cs
++++ b/Assets/Game/Scripts/Enemies/EnemyMovement.cs
+@@ -24,7 +24,8 @@ namespace ShorelineDefense.Enemies
+         public GameplayPlane Plane => grid?.Plane ?? GameplayPlane.XY;
+         public MovementModifiers Modifiers { get; } = new MovementModifiers();
+         public float BaseSpeed => speed;
+-        public float CurrentSpeed => speed * Modifiers.Multiplier * (grid?.MovementMultiplierAt(transform.position) ?? 1f);
++        public bool IgnoreWireSlow { get; set; }
++        public float CurrentSpeed => speed * Modifiers.Multiplier * (IgnoreWireSlow ? 1 : grid?.MovementMultiplierAt(transform.position) ?? 1f);
+         // Four-way route suffixes have equal-length cell edges; query is O(1), without another A*.
+         public float RemainingPathDistance => !HasPath || pathDirty ? float.PositiveInfinity :
+             ReachedDestination || waypoint >= path.Count ? 0 : Mathf.Max(0,
+@@ -42,6 +43,7 @@ namespace ShorelineDefense.Enemies
+             transform.position = grid.ProjectToPlane(transform.position);
+             speed = movementSpeed;
+             Modifiers.Clear();
++            IgnoreWireSlow = false;
+             stoppingDistance = stopDistance;
+             if (isActiveAndEnabled) grid.Changed += InvalidatePath;
+             RecalculatePath();
+@@ -63,7 +65,7 @@ namespace ShorelineDefense.Enemies
+                 if (distance <= 0.0001f) { waypoint++; continue; }
+                 Vector3 direction = offset / distance;
+                 // Split at cell boundaries so large ticks cannot skip slow areas or retain an exited slow.
+-                float effectiveSpeed = speed * Modifiers.Multiplier * grid.MovementMultiplierAt(transform.position + direction * 0.0001f);
++                float effectiveSpeed = speed * Modifiers.Multiplier * (IgnoreWireSlow ? 1 : grid.MovementMultiplierAt(transform.position + direction * 0.0001f));
+                 if (effectiveSpeed <= 0) return;
+                 float step = Mathf.Min(Mathf.Min(remaining * effectiveSpeed, distance), DistanceToCellEdge(direction));
+                 // Clamp the last segment at attack range, even on a long frame.
+diff --git a/Assets/Game/Scripts/Enemies/EnemySpawner.cs b/Assets/Game/Scripts/Enemies/EnemySpawner.cs
+index c288d4f..db85985 100644
+--- a/Assets/Game/Scripts/Enemies/EnemySpawner.cs
++++ b/Assets/Game/Scripts/Enemies/EnemySpawner.cs
+@@ -50,6 +50,15 @@ namespace ShorelineDefense.Enemies
+         public EnemyController DefaultPrefab => prefab;
+         public GridManager Battlefield => grid;
+         public void ConfigureRegistry(EnemyRegistry enemies) => registry = enemies;
++        public event System.Action<EnemyController> ReinforcementSpawned;
++        public bool ReinforcementsEnabled { get; set; }
++        public bool TrySpawnReinforcement(EnemyController requestedPrefab, Vector3 position, out EnemyController enemy)
++        {
++            enemy = null;
++            if (!ReinforcementsEnabled) return false;
++            if (!TrySpawnAt(requestedPrefab, position, out enemy)) return false;
++            ReinforcementSpawned?.Invoke(enemy); return true;
++        }
+ 
+         public void Configure(EnemyController crawler, GridManager battlefield, BaseHealth target,
+             GameStateController state, Transform[] points, Transform parent)
+diff --git a/Assets/Game/Scripts/Grid/MapRuntimeContext.cs b/Assets/Game/Scripts/Grid/MapRuntimeContext.cs
+index db20525..18c2837 100644
+--- a/Assets/Game/Scripts/Grid/MapRuntimeContext.cs
++++ b/Assets/Game/Scripts/Grid/MapRuntimeContext.cs
+@@ -37,6 +37,9 @@ namespace ShorelineDefense.Grid
+                     if (!grid.Grid.TryWorldToCell(position, out var cell) || !border.TryGetDestination(cell, out _))
+                     { invalid++; text.Append("Unreachable landing " + position + "; "); }
+             }
++            foreach (var carrier in boats.Carriers)
++                if (carrier == null || carrier.visualPrefab == null || !System.Linq.Enumerable.Any(boats.LandingPoints, p => boats.IsValidApproach(p, carrier)))
++                { invalid++; text.Append("Missing carrier or no water-safe approach; "); }
+             return $"Map {MapId}: {boats.LandingPoints.Count} landings, {border.BreachCells.Count} exits, {buildable} buildable, {blocked} blocked, {invalid} invalid. " + text;
+         }
+     }
+diff --git a/Assets/Game/Scripts/Persistence/RunSaveData.cs b/Assets/Game/Scripts/Persistence/RunSaveData.cs
+index 2c64acc..906870f 100644
+--- a/Assets/Game/Scripts/Persistence/RunSaveData.cs
++++ b/Assets/Game/Scripts/Persistence/RunSaveData.cs
+@@ -5,7 +5,7 @@ namespace ShorelineDefense.Persistence
+ {
+     [Serializable] public sealed class RunSaveData
+     {
+-        public int saveVersion = 2;
++        public int saveVersion = 3;
+         public string mapId = ShorelineDefense.Grid.MapCatalog.OriginalId;
+         public string runId, savedUtc;
+         public int wave, completedWaves, seed, money, maxHomicides;
+diff --git a/Assets/Game/Scripts/Persistence/RunSession.cs b/Assets/Game/Scripts/Persistence/RunSession.cs
+index 951a2a4..dfd8444 100644
+--- a/Assets/Game/Scripts/Persistence/RunSession.cs
++++ b/Assets/Game/Scripts/Persistence/RunSession.cs
+@@ -58,7 +58,7 @@ namespace ShorelineDefense.Persistence
+         }
+         private void Restore(RunSaveData data)
+         {
+-            if (!SaveGameService.Valid(data)) throw new InvalidOperationException("Invalid snapshot.");
++            if (!AquaticSaveMigration.Upgrade(data)) throw new InvalidOperationException("Invalid snapshot.");
+             if ((data.saveVersion == 1 ? ShorelineDefense.Grid.MapCatalog.OriginalId : data.mapId) != MapId) throw new InvalidOperationException("Wrong map for saved run.");
+             var definitions = FindFirstObjectByType<BuildHud>().Defenses;
+             if (!RunSaveCompatibility.Valid(data, definitions, builder.Battlefield.Definition, waves.EndlessSettings.eventSettings)) throw new InvalidOperationException("Save catalog or map is incompatible.");
+@@ -114,6 +114,7 @@ namespace ShorelineDefense.Persistence
+         }
+         public bool FinalizeRun()
+         {
++            if (history == null || saves == null) return false;
+             if (finalized || finished == null) return finalized;
+             if (!history.Record(finished, out string error)) { saves.Delete(out _); Notify("RUN HISTORY SAVE FAILED — " + error); return false; }
+             finalized = saves.Delete(out error);
+@@ -121,7 +122,7 @@ namespace ShorelineDefense.Persistence
+             return finalized;
+         }
+         private void Notify(string text) { Feedback = text; FeedbackChanged?.Invoke(); }
+-        private void OnApplicationQuit() { if (CanSave) SaveNow(); else if (finished != null) FinalizeRun(); }
++        private void OnApplicationQuit() { if (!Ready) return; if (CanSave) SaveNow(); else if (finished != null) FinalizeRun(); }
+         private void OnApplicationPause(bool paused) { if (paused && CanSave) SaveNow(); }
+         private void OnDestroy()
+         {
+diff --git a/Assets/Game/Scripts/Persistence/SaveGameService.cs b/Assets/Game/Scripts/Persistence/SaveGameService.cs
+index 06d1a5c..6ceb0e3 100644
+--- a/Assets/Game/Scripts/Persistence/SaveGameService.cs
++++ b/Assets/Game/Scripts/Persistence/SaveGameService.cs
+@@ -11,15 +11,15 @@ namespace ShorelineDefense.Persistence
+         public SaveGameService(LocalJsonStore files, Func<RunSaveData, bool> preflight = null) { store = files; history = new RunHistoryService(files); compatibility = preflight; }
+         public bool Save(RunSaveData data, out string error)
+         {
+-            if (!Valid(data)) { error = "Run is not a valid Preparation snapshot."; return false; }
++            if (!AquaticSaveMigration.Upgrade(data)) { error = "Run is not a valid Preparation snapshot."; return false; }
+             data.savedUtc = DateTime.UtcNow.ToString("O");
+             return store.Write("active_run", data, out error);
+         }
+-        public bool Load(out RunSaveData data, out string error) => store.Read("active_run", d => Valid(d) && (compatibility == null || compatibility(d)) && !history.Contains(d.runId), out data, out error);
++        public bool Load(out RunSaveData data, out string error) => store.Read("active_run", d => AquaticSaveMigration.Upgrade(d) && (compatibility == null || compatibility(d)) && !history.Contains(d.runId), out data, out error);
+         public bool Delete(out string error) => store.Delete("active_run", out error);
+         public static bool Valid(RunSaveData d)
+         {
+-            if (d == null || (d.saveVersion != 1 && d.saveVersion != 2) || (d.saveVersion == 2 && string.IsNullOrEmpty(d.mapId)) || !Guid.TryParse(d.runId, out _) || d.wave < 1 || d.wave > 1000000 ||
++            if (d == null || d.saveVersion < 1 || d.saveVersion > 3 || (d.saveVersion >= 2 && string.IsNullOrEmpty(d.mapId)) || !Guid.TryParse(d.runId, out _) || d.wave < 1 || d.wave > 1000000 ||
+                 d.completedWaves != d.wave - 1 || d.money < 0 || d.maxHomicides < 0 || double.IsNaN(d.duration) || double.IsInfinity(d.duration) || d.duration < 0 ||
+                 d.earned < 0 || d.spent < 0 || d.refunds < 0 || d.dismantled < 0 || d.statistics?.kills?.Length != 9 || d.events == null || d.structures == null || d.structures.Count > 2048) return false;
+             var s = d.statistics;
+diff --git a/Assets/Game/Scripts/Presentation/EnemySpritePresentation.cs b/Assets/Game/Scripts/Presentation/EnemySpritePresentation.cs
+index f2e3b22..451cf37 100644
+--- a/Assets/Game/Scripts/Presentation/EnemySpritePresentation.cs
++++ b/Assets/Game/Scripts/Presentation/EnemySpritePresentation.cs
+@@ -11,6 +11,9 @@ namespace ShorelineDefense.Presentation
+         [SerializeField] private SpriteRenderer wake;
+         [SerializeField] private Sprite[] idle, walk, attack, death;
+         [SerializeField] private Sprite[] hit;
++        [SerializeField] private Sprite[] emergence, burrow, underground, emerge, special;
++        [SerializeField] private SpriteRenderer contactShadow;
++        public Sprite[] EmergenceFrames => emergence;
+         [SerializeField] private float walkFps = 8;
+         [SerializeField] private float deathFps = 9;
+         [SerializeField] private VfxId arrival = VfxId.SplashSmall;
+@@ -25,6 +28,8 @@ namespace ShorelineDefense.Presentation
+         private Vector3 previousPosition;
+         private float animationClock;
+         private Sprite[] lastSequence;
++        private bool wasBurrowed;
++        private float burrowClock, emergedAt = float.NegativeInfinity;
+         public bool WakeVisible => wake != null && wake.enabled;
+         public void Configure(SpriteRenderer renderer, SpriteRenderer waterWake, Sprite[] idleFrames,
+             Sprite[] walkFrames, Sprite[] attackFrames, Sprite[] deathFrames)
+@@ -44,6 +49,7 @@ namespace ShorelineDefense.Presentation
+             previousPosition = transform.position;
+             if (body != null) body.enabled = true;
+             terrainKnown = false; flashUntil = 0; hitUntil = 0; animationClock = 0; lastSequence = null;
++            wasBurrowed = false; burrowClock = 0; emergedAt = float.NegativeInfinity;
+         }
+         private void OnDisable()
+         {
+@@ -55,18 +61,20 @@ namespace ShorelineDefense.Presentation
+         private void OnDamaged(int amount)
+         {
+             if (!enemy.Health.IsAlive || !enemy.IsTargetable) return;
++            if (enemy.Definition.Kind == EnemyKind.Broodling) return;
+             flashUntil = Time.time + .075f;
+             // Brief pose override only; navigation and attack clocks continue in gameplay.
+             // Repeated rapid hits do not keep restarting the two-frame reaction.
+             if (Time.time >= hitUntil && hit != null && hit.Length > 0)
+-            { hitStarted = Time.time; hitUntil = hitStarted + hit.Length / 10f; }
++            { hitStarted = Time.time; hitUntil = hitStarted + .2f; }
+             if (body != null) body.color = new Color(1, .6f, .6f, originalColor.a);
+             if (effects != null && effects.CanPlay)
+-                effects.Play(VfxId.BloodHit, transform.position, body != null ? body.transform.eulerAngles.z : 0, effectScale);
++                effects.Play(VfxId.CreatureFluids, transform.position, body != null ? body.transform.eulerAngles.z : 0, effectScale * .6f);
+         }
+         private void OnDied()
+         {
+-            if (body != null && effects != null && death != null && death.Length > 0)
++            if (body != null && effects != null && death != null && death.Length > 0 &&
++                (enemy.Definition.Kind != EnemyKind.Broodling || (GetInstanceID() & 3) == 0))
+                 effects.Death(death, deathFps, body.transform.position, body.transform.rotation, effectScale);
+             if (body != null) body.enabled = false;
+             if (wake != null) wake.enabled = false;
+@@ -74,18 +82,30 @@ namespace ShorelineDefense.Presentation
+         private void LateUpdate()
+         {
+             if (body == null || !enemy.Health.IsAlive) return;
++            if (wasBurrowed != enemy.IsBurrowed) { if (!enemy.IsBurrowed) emergedAt = Time.time; burrowClock = 0; wasBurrowed = enemy.IsBurrowed; }
++            if (contactShadow != null) contactShadow.enabled = !enemy.IsBurrowed;
++            if (enemy.IsBurrowed)
++            {
++                var trail = burrowClock < .35f && burrow != null && burrow.Length > 0 ? burrow : underground;
++                if (trail != null && trail.Length > 0) body.sprite = trail[(int)(burrowClock * 10) % trail.Length];
++                burrowClock += Time.deltaTime;
++                body.color = Color.white; if (wake != null) wake.enabled = false;
++                previousPosition = transform.position; return;
++            }
+             if (Time.time >= flashUntil) body.color = originalColor;
+             if (!enemy.IsTargetable)
+             { if (wake != null) wake.enabled = false; return; }
+             bool moving = (transform.position - previousPosition).sqrMagnitude > .000001f;
+             previousPosition = transform.position;
+-            var frames = enemy.Movement.ReachedDestination ? attack : moving ? walk : idle;
+-            float fps = frames == walk ? walkFps : frames == attack ? 10 : 5;
++            var frames = enemy.Movement.ReachedDestination || enemy.IsAttacking ? attack : moving ? walk : idle;
++            if (enemy.Definition.Kind == EnemyKind.Broodmother && enemy.IsAttacking && special != null && special.Length > 0) frames = special;
++            float fps = frames == walk ? walkFps : frames == attack ? 10 : frames == special ? 8 : 5;
+             if (frames != lastSequence) { animationClock = 0; lastSequence = frames; }
+             else animationClock += Time.deltaTime;
+             if (frames != null && frames.Length > 0) body.sprite = frames[(int)(animationClock * fps) % frames.Length];
+             if (Time.time < hitUntil && hit != null && hit.Length > 0)
+-                body.sprite = hit[Mathf.Min(hit.Length - 1, (int)((Time.time - hitStarted) * 10))];
++                body.sprite = hit[Mathf.Min(hit.Length - 1, (int)((Time.time - hitStarted) * hit.Length / .2f))];
++            if (Time.time - emergedAt < .4f && emerge != null && emerge.Length > 0) body.sprite = emerge[Mathf.Min(emerge.Length - 1, (int)((Time.time - emergedAt) * 10))];
+             UpdateWater();
+         }
+         private void UpdateWater()
+diff --git a/Assets/Game/Scripts/Presentation/VfxCatalog.cs b/Assets/Game/Scripts/Presentation/VfxCatalog.cs
+index c19f386..b5e379d 100644
+--- a/Assets/Game/Scripts/Presentation/VfxCatalog.cs
++++ b/Assets/Game/Scripts/Presentation/VfxCatalog.cs
+@@ -10,7 +10,8 @@ namespace ShorelineDefense.Presentation
+         MineExplosion, ExplosionSmall, SmokeSmall, SmokeMedium, SplashSmall,
+         SplashMedium, SplashLarge, WaterWake, WaterRipple, ShoreFoam,
+         MortarMuzzle, MortarShell, MortarExplosion, FlameCone, Burn, BurningOverlay,
+-        CannonMuzzle, CannonTracer, CannonImpact, RocketProjectile, RocketSmoke, RocketExplosion
++        CannonMuzzle, CannonTracer, CannonImpact, RocketProjectile, RocketSmoke, RocketExplosion,
++        CorrosiveGlob, SlimeImpact, PodRupture, BroodRelease, CreatureFluids, Bubbles
+     }
+     public enum VfxChannel { Burst, Tracer, Smoke, Decal, Corpse }
+ 
+diff --git a/Assets/Game/Scripts/Presentation/VfxService.cs b/Assets/Game/Scripts/Presentation/VfxService.cs
+index 3d43473..45b2aa9 100644
+--- a/Assets/Game/Scripts/Presentation/VfxService.cs
++++ b/Assets/Game/Scripts/Presentation/VfxService.cs
+@@ -97,8 +97,7 @@ namespace ShorelineDefense.Presentation
+             if (!CanPlay || pools == null) return;
+             pools[(int)VfxChannel.Corpse].Play(frames, fps, position, rotation, Vector3.one * scale,
+                 "GroundObjects", 4, frames.Length / Mathf.Max(1, fps) + .6f, 1, .3f, Vector2.zero);
+-            Play(VfxId.BloodHit, position, rotation.eulerAngles.z, scale);
+-            Play(scale > 1 ? VfxId.BloodDecalMedium : VfxId.BloodDecal, position, rotation.eulerAngles.z, scale);
++            Play(VfxId.CreatureFluids, position, rotation.eulerAngles.z, scale * .65f);
+         }
+     }
+ }
+diff --git a/Assets/Game/Scripts/UI/AssaultPressureDebugHud.cs b/Assets/Game/Scripts/UI/AssaultPressureDebugHud.cs
+index 9547330..8195c25 100644
+--- a/Assets/Game/Scripts/UI/AssaultPressureDebugHud.cs
++++ b/Assets/Game/Scripts/UI/AssaultPressureDebugHud.cs
+@@ -29,7 +29,7 @@ namespace ShorelineDefense.UI
+             nextRefresh = Time.unscaledTime + .25f;
+             var boats = waves.Landings; var director = waves.PressureDirector;
+             label.text = $"Wave {waves.CurrentWaveNumber}  Active {waves.AliveCount}  Pending {waves.PendingCount}\n" +
+-                $"Boats {boats?.ActiveBoats ?? 0}  Pending boats ~{waves.PendingBoats}  Target {director.Target}\n" +
++                $"Arrivals {boats?.ActiveBoats ?? 0}  Pending arrivals ~{waves.PendingBoats}  Target {director.Target}\n" +
+                 $"{director.Mode}  Surge {director.Surging}  Peaks {statistics.PeakActiveEnemies} / {statistics.PeakConcurrentBoats}\n" +
+                 $"Avg {statistics.AverageFrameTimeMs:F2} ms  Income {statistics.CurrentWaveIncome:N0} RSD";
+         }
+diff --git a/Assets/Game/Scripts/UI/BuildHud.cs b/Assets/Game/Scripts/UI/BuildHud.cs
+index 34cd063..5e4d794 100644
+--- a/Assets/Game/Scripts/UI/BuildHud.cs
++++ b/Assets/Game/Scripts/UI/BuildHud.cs
+@@ -98,7 +98,7 @@ namespace ShorelineDefense.UI
+         private static string Description(string id)
+         {
+             switch (id) {
+-                case "barbed-wire": return "Slows infected crossing the wire.";
++                case "barbed-wire": return "Slows creatures crossing the wire.";
+                 case "land-mine": return "Single-use explosive area defense.";
+                 case "machine-gun-nest": return "Sustained anti-infantry fire.";
+                 case "sniper-tower": return "Long-range precision fire.";
+diff --git a/Assets/Game/Scripts/UI/ProductMenuController.cs b/Assets/Game/Scripts/UI/ProductMenuController.cs
+index 821c6f7..bf90be5 100644
+--- a/Assets/Game/Scripts/UI/ProductMenuController.cs
++++ b/Assets/Game/Scripts/UI/ProductMenuController.cs
+@@ -208,7 +208,7 @@ namespace ShorelineDefense.UI
+         }
+         private void Update()
+         {
+-            if (loading) return;
++            if (loading || root == null) return;
+             if (mainMenu) { if (Input.GetKeyDown(KeyCode.Escape)) { if (page == "confirm") cancelDialog?.Invoke(); else if (page != "main") ShowMain(); } return; }
+             if (game == null || !game.IsPlaying) return;
+             if (Input.GetKeyDown(KeyCode.Escape))
+diff --git a/Assets/Game/Scripts/Waves/BoatLandingSystem.cs b/Assets/Game/Scripts/Waves/BoatLandingSystem.cs
+index f1100b2..7b1e0b0 100644
+--- a/Assets/Game/Scripts/Waves/BoatLandingSystem.cs
++++ b/Assets/Game/Scripts/Waves/BoatLandingSystem.cs
+@@ -1,270 +1,5 @@
+-using System;
+-using System.Collections.Generic;
+-using ShorelineDefense.Core;
+-using ShorelineDefense.Enemies;
+-using ShorelineDefense.Grid;
+-using ShorelineDefense.Presentation;
+-using UnityEngine;
+-
+ namespace ShorelineDefense.Waves
+ {
+-    [Serializable]
+-    public sealed class RiverLandingPoint
+-    {
+-        public Vector3 riverEntry;
+-        public Vector3 berth;
+-        public bool authoredSector;
+-        public LandingSector sector;
+-        public Vector3[] unloadingPositions = Array.Empty<Vector3>();
+-    }
+-
+-    /// <summary>Bounded transport presentation. The spawner alone creates/initializes passengers.</summary>
+-    public sealed class BoatLandingSystem : MonoBehaviour
+-    {
+-        [SerializeField] private EnemySpawner spawner;
+-        [SerializeField] private GameStateController game;
+-        [SerializeField] private GameObject boatPrefab;
+-        [SerializeField] private RiverLandingPoint[] landingPoints = Array.Empty<RiverLandingPoint>();
+-        [SerializeField, Min(1)] private int capacity = 5;
+-        [SerializeField, Min(1)] private int maximumActiveBoats = 3;
+-        [SerializeField, Min(.1f)] private float moveSpeed = 2.5f;
+-        [SerializeField, Min(.05f)] private float disembarkDelay = .25f;
+-        [SerializeField, Min(0)] private float departureDelay = 1;
+-        [SerializeField, Min(.05f)] private float arrivalInterval = 2;
+-        private sealed class Transport
+-        {
+-            public GameObject visual;
+-            public EnemyController[] cargo;
+-            public int[] seatOffsets;
+-            public int point, remaining, nextOffset, stage;
+-            public float timer, wakeTimer;
+-            public float speedMultiplier = 1;
+-            public SpriteRenderer[] passengers;
+-        }
+-        private readonly List<Transport> boats = new List<Transport>(6);
+-        private readonly Dictionary<GameObject, Stack<GameObject>> visualPools = new Dictionary<GameObject, Stack<GameObject>>();
+-        private readonly Dictionary<GameObject, GameObject> visualSources = new Dictionary<GameObject, GameObject>();
+-        private int[] recentLandings;
+-        private int landingSequence;
+-        private EventModifiers eventModifiers;
+-        private LandingSector targetSector;
+-        private readonly int[] sectorArrivals = new int[3];
+-        public IReadOnlyList<int> SectorArrivals => sectorArrivals;
+-        public void ConfigureEvent(EventModifiers modifiers, LandingSector sector = LandingSector.Center)
+-        { eventModifiers = modifiers; targetSector = sector; }
+-        public LandingSector SectorFor(RiverLandingPoint point)
+-        {
+-            if (point.authoredSector) return point.sector;
+-            var grid = spawner.Battlefield.Grid;
+-            float fraction = (point.berth.y - grid.Origin.y) / (grid.Height * grid.CellSize);
+-            return fraction < 1f / 3 ? LandingSector.South : fraction > 2f / 3 ? LandingSector.North : LandingSector.Center;
+-        }
+-        public int CreatedBoatVisuals { get; private set; }
+-        public int ReusedBoatVisuals { get; private set; }
+-        private VfxService effects;
+-        public int Capacity => capacity;
+-        public float MoveSpeed => moveSpeed;
+-        public int ConcurrencyLimit => maximumActiveBoats;
+-        public int PeakConcurrentBoats { get; private set; }
+-        public void ConfigureMotion(int cargoUnits, float speed, float unloadDelay, float returnDelay) { capacity = Mathf.Clamp(cargoUnits, 3, 18); moveSpeed = Mathf.Max(.1f,speed); disembarkDelay = Mathf.Max(.05f,unloadDelay); departureDelay = Mathf.Max(0,returnDelay); }
+-        public float ArrivalInterval => arrivalInterval;
+-        public int ActiveBoats => boats.Count;
+-        public int IncomingPassengers { get; private set; }
+-        public int TotalArrivals { get; private set; }
+-        public IReadOnlyList<RiverLandingPoint> LandingPoints => landingPoints;
+-        public event Action<EnemyController> Unloaded;
+-
+-        public void Configure(EnemySpawner executor, GameStateController state, GameObject prefab, RiverLandingPoint[] points)
+-        {
+-            if (isActiveAndEnabled && game != null) game.StateChanged -= OnState;
+-            Cancel(); spawner = executor; game = state; boatPrefab = prefab; landingPoints = points;
+-            if (isActiveAndEnabled && game != null) game.StateChanged += OnState;
+-        }
+-        private void OnEnable() { if (game != null) game.StateChanged += OnState; effects = FindFirstObjectByType<VfxService>(); }
+-        private void OnDisable() { if (game != null) game.StateChanged -= OnState; Cancel(); }
+-        private void OnState(GameState state) { if (state == GameState.GameOver) Cancel(); }
+-        public int PassengerLimit(EnemyController prefab) => Mathf.Max(1, capacity / Mathf.Max(1, prefab.Definition.TransportCapacityUnits));
+-        public void ConfigurePressure(float interval, int concurrency)
+-        { arrivalInterval = Mathf.Clamp(interval, .05f, 30); maximumActiveBoats = Mathf.Clamp(concurrency, 1, 32); }
+-        public bool TryDispatch(EnemyController passenger, int count)
+-        {
+-            if (passenger == null || passenger.Definition == null || count <= 0 || count > PassengerLimit(passenger)) return false;
+-            var cargo = new EnemyController[count]; for (int i = 0; i < count; i++) cargo[i] = passenger;
+-            return TryDispatch(cargo);
+-        }
+-        public bool TryDispatch(IReadOnlyList<EnemyController> cargo)
+-        {
+-            if (!isActiveAndEnabled || game == null || !game.IsPlaying || boatPrefab == null || cargo == null || cargo.Count == 0 ||
+-                landingPoints == null || landingPoints.Length == 0 || boats.Count >= maximumActiveBoats) return false;
+-            int units = 0;
+-            foreach (var p in cargo) { if (p == null || p.Definition == null) return false; units += Mathf.Max(1, p.Definition.TransportCapacityUnits); }
+-            if (units > capacity) return false;
+-            if (recentLandings == null || recentLandings.Length != landingPoints.Length) recentLandings = new int[landingPoints.Length];
+-            // Least occupied/recent sector with seeded-style jitter; no predictable round-robin.
+-            int chosen = -1; float best = float.PositiveInfinity;
+-            for (int index = 0; index < landingPoints.Length; index++)
+-            {
+-                var point = landingPoints[index];
+-                if (!IsRiverLane(point)) continue;
+-                // Four of five dispatches wait for the announced sector instead of silently spilling
+-                // into every free lane. The fifth allows supporting landings elsewhere.
+-                if (eventModifiers?.landingPattern == LandingPattern.Concentrated && landingSequence % 5 != 4 && SectorFor(point) != targetSector) continue;
+-                bool entryOccupied = false; int laneCount = 0;
+-                foreach (var active in boats) {
+-                    if (active.point == index) laneCount++;
+-                    if ((active.point == index || spawner.Battlefield.Definition.authoredWater) && (active.visual.transform.position - point.riverEntry).sqrMagnitude < 16) entryOccupied = true;
+-                }
+-                if (entryOccupied) continue;
+-                float score = laneCount * 4 + recentLandings[index] / (float)Mathf.Max(1, landingSequence) +
+-                    ((index * 17 + landingSequence * 13) % 23) * .025f;
+-                if (eventModifiers?.landingPattern == LandingPattern.Distributed)
+-                    score += (int)SectorFor(point) == landingSequence % 3 ? -20 : 0;
+-                if (eventModifiers?.landingPattern == LandingPattern.Concentrated)
+-                    score += SectorFor(point) == targetSector ? -20 : 0;
+-                if (score < best) { best = score; chosen = index; }
+-            }
+-            if (chosen >= 0)
+-            {
+-                int index = chosen; var point = landingPoints[index]; recentLandings[index] = ++landingSequence;
+-                sectorArrivals[(int)SectorFor(point)]++;
+-                BossDefinition boss = null;
+-                foreach (var passenger in cargo) if (passenger.Definition is BossDefinition special) { boss = special; break; }
+-                var source = boss != null && boss.BossBoat != null ? boss.BossBoat : eventModifiers?.boatVisual != null ? eventModifiers.boatVisual : boatPrefab;
+-                if (!visualPools.TryGetValue(source, out var pool)) visualPools[source] = pool = new Stack<GameObject>();
+-                GameObject visual;
+-                if (pool.Count > 0) { visual = pool.Pop(); ReusedBoatVisuals++; }
+-                else { visual = Instantiate(source, point.riverEntry, Quaternion.identity, transform); visualSources[visual] = source; CreatedBoatVisuals++; }
+-                visual.transform.SetPositionAndRotation(point.riverEntry, Quaternion.identity); visual.SetActive(true);
+-                var seats = visual.GetComponentsInChildren<SpriteRenderer>(true);
+-                var offsets = new int[cargo.Count]; int nextSeat = 0;
+-                for (int p = 0; p < cargo.Count; p++)
+-                {
+-                    int weight = Mathf.Max(1, cargo[p].Definition.TransportCapacityUnits);
+-                    offsets[p] = nextSeat + weight / 2; nextSeat += weight;
+-                }
+-                foreach (var seat in seats)
+-                    if (seat.name.StartsWith("Passenger ") && int.TryParse(seat.name.Substring(10), out int seatIndex))
+-                    {
+-                        int passengerIndex = Array.IndexOf(offsets, seatIndex);
+-                        seat.enabled = passengerIndex >= 0;
+-                        if (seat.enabled)
+-                        {
+-                            var body = cargo[passengerIndex].transform.Find("Visual/Body");
+-                            var sprite = body != null ? body.GetComponent<SpriteRenderer>() : null;
+-                            if (sprite != null) seat.sprite = sprite.sprite;
+-                        }
+-                    }
+-                var stored = new EnemyController[cargo.Count]; for (int i = 0; i < cargo.Count; i++) stored[i] = cargo[i];
+-                boats.Add(new Transport { visual = visual, cargo = stored, seatOffsets = offsets, point = index, remaining = cargo.Count, passengers = seats, speedMultiplier = boss != null ? boss.BoatSpeedMultiplier : 1 });
+-                IncomingPassengers += cargo.Count; TotalArrivals++;
+-                PeakConcurrentBoats = Mathf.Max(PeakConcurrentBoats, boats.Count);
+-                return true;
+-            }
+-            return false;
+-        }
+-        public bool IsValidApproach(RiverLandingPoint point) => IsRiverLane(point);
+-        private bool IsRiverLane(RiverLandingPoint point)
+-        {
+-            var battlefield = spawner != null ? spawner.Battlefield : null;
+-            if (point == null || battlefield?.Grid == null || battlefield.Grid.Plane != GameplayPlane.XY ||
+-                point.unloadingPositions == null || point.unloadingPositions.Length == 0) return false;
+-            var sprite = boatPrefab.GetComponentInChildren<SpriteRenderer>()?.sprite;
+-            if (sprite == null) return false;
+-            var grid = battlefield.Grid;
+-            if (battlefield.Definition.authoredWater)
+-            {
+-                if (!Mathf.Approximately(point.berth.z, grid.Origin.z) || !Mathf.Approximately(point.riverEntry.z, grid.Origin.z)) return false;
+-                if (point.riverEntry == point.berth) return false;
+-                // Sample the swept hull conservatively. Off-grid river is allowed on left/bottom only.
+-                int steps = Mathf.CeilToInt(Vector3.Distance(point.riverEntry, point.berth) / (grid.CellSize * .25f));
+-                for (int i = 0; i <= steps; i++)
+-                {
+-                    var center = Vector3.Lerp(point.riverEntry, point.berth, (float)i / steps);
+-                    for (int x = -1; x <= 1; x++) for (int y = -1; y <= 1; y++)
+-                    {
+-                        var sample = center + new Vector3(x * sprite.bounds.extents.x, y * sprite.bounds.extents.y, 0);
+-                        if (grid.TryWorldToCell(sample, out var cell)) { if (grid.GetCell(cell).Terrain != TerrainType.Water) return false; }
+-                        else if (sample.x >= grid.Origin.x && sample.y >= grid.Origin.y) return false;
+-                    }
+-                }
+-                return true;
+-            }
+-            float shore = grid.Origin.x + battlefield.Definition.WaterBandCells * grid.CellSize;
+-            float halfWidth = sprite.bounds.extents.x, halfHeight = sprite.bounds.extents.y;
+-            // Straight horizontal lanes only: both the hull and its full swept path stay in river space.
+-            return Mathf.Approximately(point.riverEntry.y, point.berth.y) && point.riverEntry.x < point.berth.x &&
+-                point.berth.x + halfWidth <= shore + .001f && point.berth.y - halfHeight >= grid.Origin.y &&
+-                point.berth.y + halfHeight <= grid.Origin.y + grid.Height * grid.CellSize &&
+-                Mathf.Approximately(point.berth.z, grid.Origin.z) && Mathf.Approximately(point.riverEntry.z, grid.Origin.z);
+-        }
+-        // WaveManager owns ticking so deterministic tests can advance the whole arrival sequence.
+-        public void Tick(float deltaTime)
+-        {
+-            if (game == null || !game.IsPlaying || deltaTime <= 0 || !isActiveAndEnabled) return;
+-            for (int i = boats.Count - 1; i >= 0; i--)
+-            {
+-                var boat = boats[i]; var point = landingPoints[boat.point];
+-                if (boat.stage == 0 || boat.stage == 3)
+-                {
+-                    // Incoming hulls queue behind an occupied berth/approach; unloading remains per boat.
+-                    bool waiting = false;
+-                    if (boat.stage == 0) foreach (var ahead in boats)
+-                        if (ahead != boat && (ahead.point == boat.point || spawner.Battlefield.Definition.authoredWater) && ahead.stage != 3 &&
+-                            ahead.visual.transform.position.x > boat.visual.transform.position.x &&
+-                            (ahead.visual.transform.position - boat.visual.transform.position).sqrMagnitude < 16) { waiting = true; break; }
+-                    if (waiting) continue;
+-                    var destination = boat.stage == 0 ? point.berth : point.riverEntry;
+-                    var direction = destination - boat.visual.transform.position;
+-                    if (direction.sqrMagnitude > .0001f)
+-                        boat.visual.transform.GetChild(0).rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
+-                    boat.visual.transform.position = Vector3.MoveTowards(boat.visual.transform.position, destination, moveSpeed * boat.speedMultiplier * (eventModifiers?.boatSpeed ?? 1) * deltaTime);
+-                    boat.wakeTimer -= deltaTime;
+-                    if (boat.wakeTimer <= 0 && effects != null)
+-                    {
+-                        effects.Play(VfxId.WaterWake, boat.visual.transform.position - direction.normalized * 1.2f,
+-                            Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg, 1.2f);
+-                        boat.wakeTimer = .3f;
+-                    }
+-                    if ((boat.visual.transform.position - destination).sqrMagnitude > .0001f) continue;
+-                    if (boat.stage == 3) { ReturnVisual(boat.visual); boats.RemoveAt(i); continue; }
+-                    boat.stage = 1;
+-                    effects?.Play(VfxId.SplashMedium, point.berth + Vector3.right * 1.4f, 0, .6f);
+-                }
+-                if (boat.stage == 1)
+-                {
+-                    boat.timer -= deltaTime;
+-                    if (boat.timer > 0) continue;
+-                    bool unloaded = false;
+-                    for (int attempt = 0; attempt < point.unloadingPositions.Length; attempt++)
+-                    {
+-                        var position = point.unloadingPositions[boat.nextOffset];
+-                        boat.nextOffset = (boat.nextOffset + 1) % point.unloadingPositions.Length;
+-                        if (!spawner.TrySpawnAt(boat.cargo[boat.cargo.Length - boat.remaining], position, out var enemy)) continue;
+-                        boat.remaining--; IncomingPassengers--; unloaded = true;
+-                        foreach (var seat in boat.passengers)
+-                            if (seat.name == "Passenger " + boat.seatOffsets[boat.cargo.Length - boat.remaining - 1]) seat.enabled = false;
+-                        effects?.Play(VfxId.SplashSmall, position, 0, .4f);
+-                        Unloaded?.Invoke(enemy);
+-                        // Observers may cause Game Over and clear the entire transport collection.
+-                        if (!game.IsPlaying || !isActiveAndEnabled) return;
+-                        break;
+-                    }
+-                    boat.timer = unloaded ? disembarkDelay : .1f;
+-                    if (boat.remaining == 0) { boat.stage = 2; boat.timer = departureDelay; }
+-                }
+-                else if (boat.stage == 2)
+-                {
+-                    boat.timer -= deltaTime;
+-                    if (boat.timer <= 0) boat.stage = 3;
+-                }
+-            }
+-        }
+-        public void Cancel()
+-        {
+-            foreach (var boat in boats) if (boat.visual != null) ReturnVisual(boat.visual);
+-            boats.Clear(); IncomingPassengers = 0;
+-        }
+-        private void ReturnVisual(GameObject visual)
+-        { visual.SetActive(false); if (visualSources.TryGetValue(visual, out var source)) visualPools[source].Push(visual); else Destroy(visual); }
+-    }
++    /// <summary>Serialized compatibility adapter; behavior lives in AssaultCarrierSystem.</summary>
++    public sealed class BoatLandingSystem : AssaultCarrierSystem { }
+ }
+diff --git a/Assets/Game/Scripts/Waves/BossEncounterManager.cs b/Assets/Game/Scripts/Waves/BossEncounterManager.cs
+index 713efe2..814a757 100644
+--- a/Assets/Game/Scripts/Waves/BossEncounterManager.cs
++++ b/Assets/Game/Scripts/Waves/BossEncounterManager.cs
+@@ -7,7 +7,7 @@ namespace ShorelineDefense.Waves {
+  public sealed class BossEncounterManager : MonoBehaviour {
+   [SerializeField] private WaveManager waves;
+   [SerializeField] private EnemyRegistry registry;
+-  [SerializeField] private BoatLandingSystem boats;
++  [SerializeField] private AssaultCarrierSystem boats;
+   [SerializeField] private BorderBreachService border;
+ 
+   private WaveDefinition announced;
+@@ -22,7 +22,7 @@ namespace ShorelineDefense.Waves {
+    if(waves.State == WaveState.GameOver){ClearHealth();IncomingBoss=null;Changed?.Invoke();return;}
+    if(waves.State != WaveState.Spawning || waves.CurrentWave == announced) return;
+    announced=waves.CurrentWave;IncomingBoss=announced.Encounter;
+-   if(IncomingBoss!=null){Message="SPECIAL LANDING DETECTED — " + IncomingBoss.DisplayName;MessageUntil=Time.time+4;Changed?.Invoke();}
++   if(IncomingBoss!=null){Message="MASSIVE BIOLOGICAL SIGNATURE — " + IncomingBoss.DisplayName;MessageUntil=Time.time+4;Changed?.Invoke();}
+   }
+   private void OnUnloaded(EnemyController enemy) { if(!(enemy.Definition is BossDefinition))return;ClearHealth();ActiveBoss=enemy;IncomingBoss=null;enemy.Health.Damaged += OnDamage;Changed?.Invoke(); }
+   private void OnDamage(int amount)=>Changed?.Invoke();
+diff --git a/Assets/Game/Scripts/Waves/EndlessEventDefinition.cs b/Assets/Game/Scripts/Waves/EndlessEventDefinition.cs
+index 45dbf8c..b66b1ef 100644
+--- a/Assets/Game/Scripts/Waves/EndlessEventDefinition.cs
++++ b/Assets/Game/Scripts/Waves/EndlessEventDefinition.cs
+@@ -24,6 +24,7 @@ namespace ShorelineDefense.Waves
+         [Min(.1f)] public float upgradeCost = 1, combatRepair = 1, preparationRepair = 1;
+         [Range(0, 3)] public int floodedColumns;
+         public bool fog;
++        [Range(-1, 1)] public float directEmergenceRatio = -1, broodCarrierRatio = -1;
+         public GameObject boatVisual;
+         public LandingPattern landingPattern;
+         public CompositionBias[] composition = Array.Empty<CompositionBias>();
+diff --git a/Assets/Game/Scripts/Waves/EndlessWaveGenerator.cs b/Assets/Game/Scripts/Waves/EndlessWaveGenerator.cs
+index 8a17d07..6980c85 100644
+--- a/Assets/Game/Scripts/Waves/EndlessWaveGenerator.cs
++++ b/Assets/Game/Scripts/Waves/EndlessWaveGenerator.cs
+@@ -28,6 +28,7 @@ namespace ShorelineDefense.Waves
+             int remaining = Budget(number) / quantity, cap = Mathf.Clamp(settings.maximumEnemiesPerWave / quantity, 1, 300);
+             var groups = new List<WaveEnemyGroup>();
+             int eventQuantitySoFar = 0;
++            int baseQuantitySoFar = 0;
+             // Small shuffled groups vary both boat cargo and successive landing pressure.
+             for (int count = 0; count < cap; count++)
+             {
+@@ -41,8 +42,11 @@ namespace ShorelineDefense.Waves
+                     roll -= EffectiveWeight(p.Definition.Kind, number, modifiers); if (roll < 0) { selected = p; break; }
+                 }
+                 remaining -= selected.Definition.DifficultyCost;
+-                int expanded = Mathf.Max(eventQuantitySoFar + 1, Mathf.RoundToInt((count + 1) * quantity * (modifiers?.quantity ?? 1)));
++                baseQuantitySoFar += quantity * (selected.Definition.Kind == EnemyKind.Broodling ? 2 : 1);
++                baseQuantitySoFar = Mathf.Min(baseQuantitySoFar, Mathf.Clamp(settings.maximumEnemiesPerWave, 1, 6000));
++                int expanded = Mathf.Max(eventQuantitySoFar + 1, Mathf.RoundToInt(baseQuantitySoFar * (modifiers?.quantity ?? 1)));
+                 groups.Add(new WaveEnemyGroup(selected, expanded - eventQuantitySoFar)); eventQuantitySoFar = expanded;
++                if (baseQuantitySoFar >= settings.maximumEnemiesPerWave) break;
+             }
+             if (groups.Count == 0) throw new InvalidOperationException("Wave budget cannot afford an unlocked enemy.");
+             double age = Math.Max(0, (double)number - Math.Max(1, settings.scalingStartWave));
+@@ -59,7 +63,7 @@ namespace ShorelineDefense.Waves
+                 foreach (var escort in encounter.Escorts) {
+                     if (escort == null || !escort.IsValid) continue;
+                     int escortCount = escort.Count * quantity;
+-                    escortGroups.Add(new WaveEnemyGroup(escort.Prefab, escortCount)); encounterCost += escortCount * escort.Prefab.Definition.DifficultyCost;
++                    escortGroups.Add(new WaveEnemyGroup(escort.Prefab, escortCount)); encounterCost += Mathf.CeilToInt(escortCount * escort.Prefab.Definition.WaveCostHalfUnits / 2f);
+                 }
+                 groups.InsertRange(Math.Min(7, groups.Count), escortGroups);
+                 wave.Encounter = encounter; wave.EncounterCost = encounterCost;
+@@ -69,13 +73,12 @@ namespace ShorelineDefense.Waves
+         private static int Weight(EnemyKind kind, int wave) {
+             int themed = wave % 7;
+             switch(kind) {
+-                case EnemyKind.Basic: return 70;
+-                case EnemyKind.Runner: return 30;
+-                case EnemyKind.Brute: return Math.Min(14, 5 + wave / 5);
+-                case EnemyKind.IsisBreacher: return themed == 3 ? 30 : 10;
+-                case EnemyKind.IsisHeavy: return themed == 3 ? 12 : 4;
+-                case EnemyKind.PirateRunner: return themed == 5 ? 28 : 12;
+-                case EnemyKind.PirateRaider: return themed == 5 ? 20 : 8;
++                case EnemyKind.Crawler: return 70;
++                case EnemyKind.Skitter: return themed == 5 ? 38 : 25;
++                case EnemyKind.Bulwark: return themed == 3 ? 20 : Math.Min(14, 5 + wave / 5);
++                case EnemyKind.Spitter: return themed == 2 ? 20 : 8;
++                case EnemyKind.Broodling: return themed == 5 ? 50 : 25;
++                case EnemyKind.Burrower: return themed == 2 ? 16 : 6;
+                 default: return 0;
+             }
+         }
+diff --git a/Assets/Game/Scripts/Waves/WaveManager.cs b/Assets/Game/Scripts/Waves/WaveManager.cs
+index 07c1e58..946b0ac 100644
+--- a/Assets/Game/Scripts/Waves/WaveManager.cs
++++ b/Assets/Game/Scripts/Waves/WaveManager.cs
+@@ -16,7 +16,7 @@ namespace ShorelineDefense.Waves
+         [SerializeField] private EnemyRegistry registry;
+         [SerializeField] private EconomyManager economy;
+         [SerializeField] private GameStateController game;
+-        [SerializeField] private BoatLandingSystem landings;
++        [SerializeField] private AssaultCarrierSystem landings;
+         [SerializeField] private EndlessWaveSettings endless;
+         private EndlessWaveGenerator generator; private RunStatistics statistics;
+         private WaveDefinition generated;
+@@ -90,7 +90,7 @@ namespace ShorelineDefense.Waves
+         private EnemyController deployedBoss;
+         public AssaultPressureDirector PressureDirector => director;
+         public int PendingBoats => landings == null ? 0 : Mathf.CeilToInt(Mathf.Max(0, pending - landings.IncomingPassengers) / (float)landings.Capacity);
+-        public BoatLandingSystem Landings => landings;
++        public AssaultCarrierSystem Landings => landings;
+         public WaveState State { get; private set; } = WaveState.Preparation;
+         public IReadOnlyList<WaveDefinition> Waves => waves;
+         public WaveDefinition CurrentWave { get { EnsureGenerated(); return IsEndless ? generated : waves != null && waveIndex < waves.Length ? waves[waveIndex] : null; } }
+@@ -104,7 +104,7 @@ namespace ShorelineDefense.Waves
+         public bool CanStart => isActiveAndEnabled && game != null && game.IsPlaying && State == WaveState.Preparation && CurrentWave != null && CurrentWave.IsValid && (Events?.CanStart ?? true);
+         public event Action Changed;
+         public event Action PreparationEnding;
+-        public void ConfigureLandings(BoatLandingSystem transport)
++        public void ConfigureLandings(AssaultCarrierSystem transport)
+         {
+             if (landings != null) landings.Unloaded -= OnUnloaded;
+             landings = transport;
+@@ -127,16 +127,18 @@ namespace ShorelineDefense.Waves
+             if (subscribed || game == null || registry == null) return;
+             game.StateChanged += OnGameState;
+             registry.EnemyRemoved += OnEnemyRemoved;
++            spawner.ReinforcementSpawned += OnReinforcement;
+             if (landings != null) landings.Unloaded += OnUnloaded;
+             subscribed = true;
+             OnGameState(game.CurrentState);
+         }
+-        private void OnDisable() { Unsubscribe(); Events?.Cancel(); landings?.ConfigureEvent(null); landings?.Cancel(); }
++        private void OnDisable() { if (spawner != null) spawner.ReinforcementsEnabled = false; Unsubscribe(); Events?.Cancel(); landings?.ConfigureEvent(null); landings?.Cancel(); }
+         private void Unsubscribe()
+         {
+             if (!subscribed) return;
+             game.StateChanged -= OnGameState;
+             registry.EnemyRemoved -= OnEnemyRemoved;
++            spawner.ReinforcementSpawned -= OnReinforcement;
+             if (landings != null) landings.Unloaded -= OnUnloaded;
+             subscribed = false;
+         }
+@@ -155,10 +157,12 @@ namespace ShorelineDefense.Waves
+             PreparationEnding?.Invoke();
+             if (!CanStart) return false;
+             alive.Clear();
++            spawner.ReinforcementsEnabled = true;
+             Events?.BeginWave();
+             landings?.ConfigureEvent(Events?.Modifiers, Events?.Current?.Sector ?? LandingSector.Center);
+             if (IsEndless)
+             {
++                landings?.ConfigureWave(CurrentWaveNumber);
+                 spawner.ConfigureWave(endless.maximumActiveEnemies, endless.RuntimeHealthMultiplier(CurrentWave.HealthMultiplier, false), CurrentWave.SpeedMultiplier,
+                     endless.RuntimeHealthMultiplier(CurrentWave.HealthMultiplier, true));
+                 landings?.ConfigurePressure(endless.ArrivalInterval(CurrentWaveNumber) * (generated.Encounter != null ? generated.Encounter.ArrivalMultiplier : 1) * (Events?.Modifiers.boatInterval ?? 1), Mathf.CeilToInt(endless.BoatConcurrency(CurrentWaveNumber) * (Events?.Modifiers.boatConcurrency ?? 1)));
+@@ -215,9 +219,9 @@ namespace ShorelineDefense.Waves
+                     while (nextGroup < CurrentWave.Groups.Count)
+                     {
+                         var candidate = CurrentWave.Groups[nextGroup];
+-                        int weight = candidate.Prefab.Definition.TransportCapacityUnits;
++                        int weight = candidate.Prefab.Definition.CarrierHalfUnits;
+                         if (cargo.Count > 0 && candidate.Prefab.Definition is BossDefinition) break;
+-                        if (units + weight > landings.Capacity) break;
++                        if (units + weight > landings.RequestCapacityHalfUnits(group.Prefab) || !landings.CanCarry(group.Prefab, candidate.Prefab)) break;
+                         cargo.Add(candidate.Prefab); units += weight; nextCount++;
+                         if (nextCount == candidate.Count) { nextGroup++; nextCount = 0; }
+                     }
+@@ -268,6 +272,11 @@ namespace ShorelineDefense.Waves
+             Changed?.Invoke();
+             CheckCompletion();
+         }
++        private void OnReinforcement(EnemyController enemy)
++        {
++            if (!game.IsPlaying || (State != WaveState.Spawning && State != WaveState.Combat)) return;
++            alive.Add(enemy); Changed?.Invoke();
++        }
+         private void CheckCompletion()
+         {
+             if (State != WaveState.Combat || pending != 0 || alive.Count != 0 || !game.IsPlaying) return;
+@@ -284,6 +293,7 @@ namespace ShorelineDefense.Waves
+         }
+         private void SetState(WaveState state) {
+             State = state;
++            if (state == WaveState.WaveComplete || state == WaveState.GameOver) spawner.ReinforcementsEnabled = false;
+             if (state == WaveState.WaveComplete) Events?.CompleteWave();
+             if (state == WaveState.GameOver) Events?.Cancel();
+             if (state == WaveState.WaveComplete || state == WaveState.GameOver) landings?.ConfigureEvent(null);
+diff --git a/Assets/Game/Tests/EditMode/AssaultPressureTests.cs b/Assets/Game/Tests/EditMode/AssaultPressureTests.cs
+index 964bb63..37aa18a 100644
+--- a/Assets/Game/Tests/EditMode/AssaultPressureTests.cs
++++ b/Assets/Game/Tests/EditMode/AssaultPressureTests.cs
+@@ -6,13 +6,15 @@ namespace ShorelineDefense.Tests
+ {
+     public sealed class AssaultPressureTests
+     {
+-        [TestCase(1,16)] [TestCase(5,38)] [TestCase(10,52)] [TestCase(20,87)] [TestCase(25,139)] [TestCase(50,289)]
+-        public void SeededQuantityIsFiveTimesBaselineExceptSingleBoss(int number, int baseline)
++        [TestCase(1)] [TestCase(5)] [TestCase(10)] [TestCase(20)] [TestCase(25)] [TestCase(50)]
++        public void SeededQuantityExpandsAquaticFormationsAndKeepsExactlyOneBoss(int number)
+         {
+             var settings = AssetDatabase.LoadAssetAtPath<EndlessWaveSettings>("Assets/Game/Data/Waves/EndlessSurvival.asset");
+             var wave = new EndlessWaveGenerator(settings,1977).Generate(number);
+-            try { Assert.AreEqual(baseline * 5 - (wave.Encounter == null ? 0 : 4), wave.ScheduledCount); }
+-            finally { Object.DestroyImmediate(wave); }
++            var reference=Object.Instantiate(settings);reference.enemyQuantityMultiplier=1;reference.maximumEnemiesPerWave=settings.maximumEnemiesPerWave/5;
++            var single=new EndlessWaveGenerator(reference,1977).Generate(number);
++            try { Assert.AreEqual((single.ScheduledCount-(single.Encounter==null?0:1))*5+(wave.Encounter==null?0:1),wave.ScheduledCount); }
++            finally { Object.DestroyImmediate(wave);Object.DestroyImmediate(single);Object.DestroyImmediate(reference); }
+         }
+         [Test] public void HealthFactorsDoNotStackForBosses()
+         {
+diff --git a/Assets/Game/Tests/EditMode/EndlessEventRulesTests.cs b/Assets/Game/Tests/EditMode/EndlessEventRulesTests.cs
+index e1ae996..d53844d 100644
+--- a/Assets/Game/Tests/EditMode/EndlessEventRulesTests.cs
++++ b/Assets/Game/Tests/EditMode/EndlessEventRulesTests.cs
+@@ -82,7 +82,7 @@ namespace ShorelineDefense.Tests
+         }
+         [Test] public void MassLandingChangesQuantityAndDirectorWithoutMutatingBaseData()
+         {
+-            var s = Waves; var m = Settings.events.Single(e => e.id == "mass-landing").modifiers;
++            var s = Waves; var m = Settings.events.Single(e => e.id == "mass-emergence").modifiers;
+             var generator = new EndlessWaveGenerator(s, 1977); var normal = generator.Generate(20); var assault = generator.Generate(20, m);
+             try {
+                 Assert.That(assault.ScheduledCount, Is.EqualTo(Mathf.RoundToInt(normal.ScheduledCount * 1.5f)));
+@@ -94,8 +94,8 @@ namespace ShorelineDefense.Tests
+                 Assert.That(d.Target, Is.EqualTo(s.PressureTarget(21))); Assert.That(d.BoatLimit, Is.EqualTo(s.BoatConcurrency(21)));
+             } finally { Object.DestroyImmediate(normal); Object.DestroyImmediate(assault); }
+         }
+-        [TestCase("pirate-raid", EnemyKind.PirateRunner)] [TestCase("militant-assault", EnemyKind.IsisBreacher)]
+-        [TestCase("heavy-assault", EnemyKind.Brute)] [TestCase("runner-swarm", EnemyKind.Runner)]
++        [TestCase("swarm-surge", EnemyKind.Skitter)] [TestCase("armored-migration", EnemyKind.Bulwark)]
++        [TestCase("deep-water-disturbance", EnemyKind.Bulwark)] [TestCase("brood-tide", EnemyKind.Broodling)]
+         public void CompositionBiasChangesActualGeneratedRoster(string id, EnemyKind kind)
+         {
+             int baseline = 0, biased = 0;
+diff --git a/Assets/Game/Tests/EditMode/EndlessWaveTests.cs b/Assets/Game/Tests/EditMode/EndlessWaveTests.cs
+index bff2fee..62f9fe8 100644
+--- a/Assets/Game/Tests/EditMode/EndlessWaveTests.cs
++++ b/Assets/Game/Tests/EditMode/EndlessWaveTests.cs
+@@ -20,7 +20,7 @@ namespace ShorelineDefense.Tests
+                 try
+                 {
+                     Assert.IsTrue(wave.IsValid);Assert.That(wave.ScheduledCount,Is.InRange(1,settings.maximumEnemiesPerWave + (wave.Encounter != null ? 1 + wave.Encounter.Escorts.Sum(e=>e.Count)*settings.enemyQuantityMultiplier : 0)));
+-                    int cost=wave.Groups.Sum(group=>group.Count*group.Prefab.Definition.DifficultyCost);Assert.LessOrEqual(cost,g.Budget(number)+wave.EncounterCost);
++                    int cost=wave.Groups.Sum(group=>group.Count*group.Prefab.Definition.WaveCostHalfUnits)/2;Assert.LessOrEqual(cost,g.Budget(number)+wave.EncounterCost);
+                     if(wave.ScheduledCount - (wave.Encounter != null ? 1 + wave.Encounter.Escorts.Sum(e=>e.Count)*settings.enemyQuantityMultiplier : 0)<settings.maximumEnemiesPerWave)Assert.Less(g.Budget(number)+wave.EncounterCost-cost,settings.enemies.Min(p=>p.Definition.DifficultyCost)*settings.enemyQuantityMultiplier);
+                     Assert.That(wave.HealthMultiplier,Is.InRange(1,settings.maximumHealthMultiplier));Assert.That(wave.SpeedMultiplier,Is.InRange(1,settings.maximumSpeedMultiplier));
+                     Assert.GreaterOrEqual(wave.CompletionReward,100);
+@@ -40,8 +40,8 @@ namespace ShorelineDefense.Tests
+         public void UnlocksEnemyStatsAndDifficultyGrowthMatchRoles()
+         {
+             var s=Settings;Assert.Greater(new EndlessWaveGenerator(s,0).Budget(100),new EndlessWaveGenerator(s,0).Budget(25));
+-            var basic=s.enemies.First(p=>p.Definition.Kind==EnemyKind.Basic).Definition;var runner=s.enemies.First(p=>p.Definition.Kind==EnemyKind.Runner).Definition;var brute=s.enemies.First(p=>p.Definition.Kind==EnemyKind.Brute).Definition;
+-            Assert.That(runner.UnlockWave,Is.EqualTo(3));Assert.That(brute.UnlockWave,Is.EqualTo(6));Assert.Less(runner.MaxHealth,basic.MaxHealth);Assert.Greater(runner.MovementSpeed,basic.MovementSpeed);Assert.Greater(brute.MaxHealth,basic.MaxHealth*5);Assert.Less(brute.MovementSpeed,basic.MovementSpeed);Assert.That(brute.TransportCapacityUnits,Is.EqualTo(3));
++            var basic=s.enemies.First(p=>p.Definition.Kind==EnemyKind.Crawler).Definition;var runner=s.enemies.First(p=>p.Definition.Kind==EnemyKind.Skitter).Definition;var brute=s.enemies.First(p=>p.Definition.Kind==EnemyKind.Bulwark).Definition;
++            Assert.That(runner.UnlockWave,Is.EqualTo(3));Assert.That(brute.UnlockWave,Is.EqualTo(7));Assert.Less(runner.MaxHealth,basic.MaxHealth);Assert.Greater(runner.MovementSpeed,basic.MovementSpeed);Assert.Greater(brute.MaxHealth,basic.MaxHealth*5);Assert.Less(brute.MovementSpeed,basic.MovementSpeed);Assert.That(brute.TransportCapacityUnits,Is.EqualTo(4));
+             for(int wave=1;wave<6;wave++) {var generated=new EndlessWaveGenerator(s,42).Generate(wave);try{foreach(var g in generated.Groups)Assert.LessOrEqual(g.Prefab.Definition.UnlockWave,wave);}finally{UnityEngine.Object.DestroyImmediate(generated);}}
+         }
+     }
+diff --git a/Assets/Game/Tests/EditMode/PersistenceTests.cs b/Assets/Game/Tests/EditMode/PersistenceTests.cs
+index 5be284c..0abd9e1 100644
+--- a/Assets/Game/Tests/EditMode/PersistenceTests.cs
++++ b/Assets/Game/Tests/EditMode/PersistenceTests.cs
+@@ -19,7 +19,7 @@ namespace ShorelineDefense.Tests
+             var data = Snapshot(); data.spent = 9007199254740993; data.statistics.kills[5] = 4294967297;
+             Assert.IsTrue(saves.Save(data, out _)); Assert.IsTrue(saves.Load(out var loaded, out _));
+             Assert.That(loaded.spent, Is.EqualTo(data.spent)); Assert.That(loaded.statistics.kills[5], Is.EqualTo(data.statistics.kills[5]));
+-            Assert.That(loaded.wave, Is.EqualTo(7)); Assert.That(loaded.duration, Is.EqualTo(84.5)); Assert.That(loaded.saveVersion, Is.EqualTo(2));
++            Assert.That(loaded.wave, Is.EqualTo(7)); Assert.That(loaded.duration, Is.EqualTo(84.5)); Assert.That(loaded.saveVersion, Is.EqualTo(3));
+         }
+         [Test] public void NewInstallationCanDeleteAnAbsentRunBeforeItsDirectoryExists()
+         { Assert.IsFalse(Directory.Exists(directory)); Assert.IsTrue(saves.Delete(out string error), error); Assert.IsFalse(saves.Load(out _, out _)); }
+diff --git a/Assets/Game/Tests/EditMode/Phase4CRulesTests.cs b/Assets/Game/Tests/EditMode/Phase4CRulesTests.cs
+index ab7b255..081fc2d 100644
+--- a/Assets/Game/Tests/EditMode/Phase4CRulesTests.cs
++++ b/Assets/Game/Tests/EditMode/Phase4CRulesTests.cs
+@@ -8,11 +8,11 @@ using ShorelineDefense.Enemies;
+ namespace ShorelineDefense.Tests {
+  public sealed class Phase4CRulesTests {
+   EndlessWaveSettings Settings=>AssetDatabase.LoadAssetAtPath<EndlessWaveSettings>("Assets/Game/Data/Waves/EndlessSurvival.asset");
+-  [TestCase(1,60,90)] [TestCase(3,100,150)] [TestCase(5,150,225)] [TestCase(10,225,375)] [TestCase(20,375,650)]
++  [TestCase(1,60,90)] [TestCase(3,100,150)] [TestCase(5,150,350)] [TestCase(10,225,500)] [TestCase(20,375,800)]
+   public void PressureEstablishesScaleEarly(int number,int minimum,int maximum){var w=new EndlessWaveGenerator(Settings,1977).Generate(number);try{Assert.That(w.ScheduledCount,Is.InRange(minimum,maximum));}finally{UnityEngine.Object.DestroyImmediate(w);}}
+   [Test] public void BoatCadenceAndConcurrencyGrowWithoutOverflow(){var s=Settings;Assert.That(s.BoatConcurrency(1),Is.EqualTo(6));Assert.That(s.BoatConcurrency(5),Is.EqualTo(8));Assert.That(s.BoatConcurrency(10),Is.EqualTo(10));Assert.That(s.BoatConcurrency(20),Is.EqualTo(15));Assert.That(s.BoatConcurrency(int.MaxValue),Is.EqualTo(28));Assert.Less(s.ArrivalInterval(25),s.ArrivalInterval(1));Assert.That(s.ArrivalInterval(int.MaxValue),Is.GreaterThanOrEqualTo(.3f));}
+-  [Test] public void BossScheduleAlternatesAndAddsEscortsWithoutRemovingNormalPressure(){var s=Settings;Assert.IsNull(s.bossEncounters.ForWave(24));Assert.IsNull(s.bossEncounters.ForWave(26));Assert.AreEqual(EnemyKind.UndeadOsama,s.bossEncounters.ForWave(25).Definition.Kind);Assert.AreEqual(EnemyKind.PirateWarlord,s.bossEncounters.ForWave(50).Definition.Kind);Assert.AreEqual(EnemyKind.UndeadOsama,s.bossEncounters.ForWave(75).Definition.Kind);var w=new EndlessWaveGenerator(s,1977).Generate(25);try{Assert.GreaterOrEqual(w.ScheduledCount,120);Assert.AreEqual(1,w.Groups.Count(g=>g.Prefab.Definition is BossDefinition));Assert.GreaterOrEqual(w.Encounter.Escorts.Sum(g=>g.Count),30);Assert.Greater(w.EncounterCost,0);}finally{UnityEngine.Object.DestroyImmediate(w);}}
+-  [Test] public void AllSpecialEnemiesAreConfiguredAndFactionBiasRetainsBasicCrowds(){var s=Settings;Assert.AreEqual(7,s.enemies.Length);foreach(var prefab in s.enemies){Assert.NotNull(prefab.Definition);Assert.LessOrEqual(prefab.Definition.TransportCapacityUnits,7);}foreach(int n in new[]{24,26,31}){var w=new EndlessWaveGenerator(s,1977).Generate(n);try{Assert.Greater(w.Groups.Count(g=>g.Prefab.Definition.Kind==EnemyKind.Basic),25);Assert.IsTrue(w.Groups.Any(g=>(int)g.Prefab.Definition.Kind>=3));}finally{UnityEngine.Object.DestroyImmediate(w);}}}
++  [Test] public void BossScheduleAlternatesAndAddsEscortsWithoutRemovingNormalPressure(){var s=Settings;Assert.IsNull(s.bossEncounters.ForWave(24));Assert.IsNull(s.bossEncounters.ForWave(26));Assert.AreEqual(EnemyKind.Dredger,s.bossEncounters.ForWave(25).Definition.Kind);Assert.AreEqual(EnemyKind.Broodmother,s.bossEncounters.ForWave(50).Definition.Kind);Assert.AreEqual(EnemyKind.Dredger,s.bossEncounters.ForWave(75).Definition.Kind);var w=new EndlessWaveGenerator(s,1977).Generate(25);try{Assert.GreaterOrEqual(w.ScheduledCount,120);Assert.AreEqual(1,w.Groups.Count(g=>g.Prefab.Definition is BossDefinition));Assert.GreaterOrEqual(w.Encounter.Escorts.Sum(g=>g.Count),30);Assert.Greater(w.EncounterCost,0);}finally{UnityEngine.Object.DestroyImmediate(w);}}
++  [Test] public void AquaticRosterRetainsCrawlerCrowds(){var s=Settings;Assert.AreEqual(6,s.enemies.Length);foreach(var prefab in s.enemies){Assert.NotNull(prefab.Definition);Assert.LessOrEqual(prefab.Definition.TransportCapacityUnits,7);}foreach(int n in new[]{24,26,31}){var w=new EndlessWaveGenerator(s,1977).Generate(n);try{Assert.Greater(w.Groups.Count(g=>g.Prefab.Definition.Kind==EnemyKind.Crawler),25);Assert.IsTrue(w.Groups.Any(g=>(int)g.Prefab.Definition.Kind>=3));}finally{UnityEngine.Object.DestroyImmediate(w);}}}
+   [TestCase(0,100)] [TestCase(.35f,65)] [TestCase(.2f,80)]
+   public void ArmorMitigatesDamageAndExtremeHitsStillKill(float armor,int expected){var go=new GameObject("Armor rule");try{var health=go.AddComponent<EnemyHealth>();health.ConfigureArmor(armor);health.Initialize(1000);health.TakeDefenseDamage(100);Assert.AreEqual(1000-expected,health.CurrentHealth);health.TakeDefenseDamage(int.MaxValue);Assert.IsFalse(health.IsAlive);Assert.IsTrue(health.KilledByDefense);}finally{UnityEngine.Object.DestroyImmediate(go);}} }
+ }
+diff --git a/Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs b/Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs
+index 6d642aa..eb1c922 100644
+--- a/Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs
++++ b/Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs
+@@ -83,7 +83,7 @@ namespace ShorelineDefense.Tests
+             var defense = Place("sniper-tower", 6, 8); float baseRange = defense.Definition.RangeInCells;
+             Jump(24);
+             var baseline = new EndlessWaveGenerator(waves.EndlessSettings, waves.RunSeed).Generate(24); int normalCount = baseline.ScheduledCount; Object.Destroy(baseline);
+-            waves.ForceEvent("mass-landing"); Assert.That(waves.CurrentWave.ScheduledCount, Is.GreaterThan(normalCount));
++            waves.ForceEvent("mass-emergence"); Assert.That(waves.CurrentWave.ScheduledCount, Is.GreaterThan(normalCount));
+             waves.Events.Cancel(); Assert.That(waves.CurrentWave.ScheduledCount, Is.EqualTo(normalCount));
+             Assert.That(waves.Landings.ConcurrencyLimit, Is.EqualTo(waves.EndlessSettings.BoatConcurrency(24)));
+             waves.ForceEvent("fog"); Assert.IsTrue(waves.TryStartWave());
+@@ -121,12 +121,12 @@ namespace ShorelineDefense.Tests
+         }
+         [UnityTest] public IEnumerator LandingPatternsChangeActualDispatchSectorsAndMassConcurrency()
+         {
+-            foreach (string id in new[] { "multi-sector", "concentrated-landing", "mass-landing", "pirate-raid" }) {
++            foreach (string id in new[] { "multi-sector", "concentrated-emergence", "mass-emergence", "swarm-surge" }) {
+                 Jump(24); Assert.IsTrue(waves.ForceEvent(id)); var sector = waves.Events.Current.Sector;
+                 int[] before = waves.Landings.SectorArrivals.ToArray(); Assert.IsTrue(waves.TryStartWave());
+-                if (id == "mass-landing") Assert.That(waves.Landings.ConcurrencyLimit, Is.EqualTo(Mathf.CeilToInt(waves.EndlessSettings.BoatConcurrency(24) * 1.5f)));
++                if (id == "mass-emergence") Assert.That(waves.Landings.ConcurrencyLimit, Is.EqualTo(Mathf.CeilToInt(waves.EndlessSettings.BoatConcurrency(24) * 1.5f)));
+                 yield return Drain(); int[] counts = waves.Landings.SectorArrivals.Select((n, i) => n - before[i]).ToArray();
+-                if (id == "concentrated-landing") Assert.That(counts[(int)sector], Is.GreaterThan(counts.Sum() / 2));
++                if (id == "concentrated-emergence") Assert.That(counts[(int)sector], Is.GreaterThan(counts.Sum() / 2));
+                 else Assert.That(counts.Count(n => n > 0), Is.EqualTo(3));
+             }
+         }
+diff --git a/Assets/Game/Tests/PlayMode/HeavyDefensePlayTests.cs b/Assets/Game/Tests/PlayMode/HeavyDefensePlayTests.cs
+index 02bbb3d..a975310 100644
+--- a/Assets/Game/Tests/PlayMode/HeavyDefensePlayTests.cs
++++ b/Assets/Game/Tests/PlayMode/HeavyDefensePlayTests.cs
+@@ -41,7 +41,7 @@ namespace ShorelineDefense.Tests
+         }
+         private EnemyController Spawn(Vector3 position, bool brute=false)
+         {
+-            var prefab=brute?Object.FindFirstObjectByType<WaveManager>().EndlessSettings.enemies.Single(e=>e.Definition.Kind==EnemyKind.Brute):spawner.DefaultPrefab;
++            var prefab=brute?Object.FindFirstObjectByType<WaveManager>().EndlessSettings.enemies.Single(e=>e.Definition.Kind==EnemyKind.Bulwark):spawner.DefaultPrefab;
+             Assert.IsTrue(spawner.TrySpawnAt(prefab,position,out var enemy)); return enemy;
+         }
+         [UnityTest] public IEnumerator AllPurchasesUseCatalogFootprintsPreviewsAndRsd()
+@@ -82,7 +82,7 @@ namespace ShorelineDefense.Tests
+             var defense=Place("rocket");var a=Spawn(defense.transform.position+Vector3.left*6);var b=Spawn(a.transform.position+Vector3.up*.5f,true);
+             defense.GetComponent<AreaProjectileWeapon>().Tick(.1f);var shot=Object.FindFirstObjectByType<TimedAreaProjectile>();var point=shot.ImpactPoint;
+             a.Health.TakeDefenseDamage(100);shot.Tick(.3f);Assert.IsFalse(shot.Resolved);Assert.That(shot.ImpactPoint,Is.EqualTo(point));
+-            shot.Tick(.4f);Assert.That(b.Health.CurrentHealth,Is.EqualTo(350));shot.Tick(1);Assert.That(b.Health.CurrentHealth,Is.EqualTo(350));yield return null;
++            shot.Tick(.4f);Assert.That(b.Health.CurrentHealth,Is.EqualTo(b.Health.MaxHealth-Mathf.CeilToInt(250*(1-b.Definition.Armor))));shot.Tick(1);Assert.That(b.Health.CurrentHealth,Is.EqualTo(b.Health.MaxHealth-Mathf.CeilToInt(250*(1-b.Definition.Armor))));yield return null;
+         }
+         [UnityTest] public IEnumerator FlameConeMultiHitBurnRefreshExpiryAndReward()
+         {
+@@ -98,7 +98,7 @@ namespace ShorelineDefense.Tests
+         {
+             var defense=Place("autocannon");var gun=defense.GetComponent<TurretCombat>();
+             var weak=Spawn(defense.transform.position+Vector3.left*2);var heavy=Spawn(defense.transform.position+Vector3.left*4,true);
+-            gun.Tick(.01f);Assert.That(gun.Target,Is.SameAs(heavy));Assert.That(heavy.Health.CurrentHealth,Is.EqualTo(545));Assert.That(weak.Health.CurrentHealth,Is.EqualTo(100));
++            gun.Tick(.01f);Assert.That(gun.Target,Is.SameAs(heavy));Assert.That(heavy.Health.CurrentHealth,Is.EqualTo(heavy.Health.MaxHealth-Mathf.CeilToInt(55*(1-heavy.Definition.Armor))));Assert.That(weak.Health.CurrentHealth,Is.EqualTo(100));
+             gun.Tick(.2f);Assert.That(gun.ShotsFired,Is.EqualTo(1));gun.Tick(.3f);Assert.That(gun.ShotsFired,Is.EqualTo(2));
+             heavy.Health.TakeDefenseDamage(1000);gun.Tick(.2f);Assert.That(gun.Target,Is.SameAs(weak));gun.Tick(.3f);Assert.That(weak.Health.CurrentHealth,Is.EqualTo(45));yield return null;
+         }
+diff --git a/Assets/Game/Tests/PlayMode/Phase3C1PlayTests.cs b/Assets/Game/Tests/PlayMode/Phase3C1PlayTests.cs
+index a6a7c04..d824aba 100644
+--- a/Assets/Game/Tests/PlayMode/Phase3C1PlayTests.cs
++++ b/Assets/Game/Tests/PlayMode/Phase3C1PlayTests.cs
+@@ -64,11 +64,12 @@ namespace ShorelineDefense.Tests
+         }
+         [UnityTest] public IEnumerator BoatsReserveDistinctRiverLanesAndUnloadThroughNormalSpawner()
+         {
+-            Assert.That(boats.LandingPoints.Count,Is.EqualTo(5));Assert.That(boats.PassengerLimit(spawner.DefaultPrefab),Is.EqualTo(7));
+-            Assert.That(boats.TryDispatch(spawner.DefaultPrefab,8),Is.False);
++            boats.ForcedArrival=ArrivalMethod.DriftPod;
++            Assert.That(boats.LandingPoints.Count,Is.EqualTo(5));Assert.That(boats.PassengerLimit(spawner.DefaultPrefab),Is.EqualTo(12));
++            Assert.That(boats.TryDispatch(spawner.DefaultPrefab,13),Is.False);
+             Assert.That(boats.TryDispatch(spawner.DefaultPrefab,2),Is.True);Assert.That(boats.TryDispatch(spawner.DefaultPrefab,2),Is.True);
+             Assert.That(boats.ActiveBoats,Is.EqualTo(2));Assert.That(enemies.Count,Is.Zero);
+-            var positions=boats.GetComponentsInChildren<SpriteRenderer>().Where(r=>r.name=="Rubber Boat").Select(r=>r.transform.position.y).ToArray();
++            var positions=boats.GetComponentsInChildren<SpriteRenderer>().Where(r=>r.name=="Body").Select(r=>r.transform.position.y).ToArray();
+             Assert.That(positions.Distinct().Count(),Is.EqualTo(2));
+             boats.Tick(10);Assert.That(enemies.Count,Is.EqualTo(2));Assert.That(boats.IncomingPassengers,Is.EqualTo(2));
+             foreach(var enemy in enemies.Active)
+@@ -83,6 +84,7 @@ namespace ShorelineDefense.Tests
+         }
+         [UnityTest] public IEnumerator WaveKeepsIncomingPassengersPendingAndCompletesOnlyAfterLastKill()
+         {
++            boats.ForcedArrival=ArrivalMethod.DriftPod;
+             Assert.That(waves.TryStartWave(),Is.True);waves.Tick(.3f);
+             Assert.That(waves.PendingCount,Is.EqualTo(waves.CurrentWave.ScheduledCount));Assert.That(waves.AliveCount,Is.Zero);Assert.That(boats.ActiveBoats,Is.EqualTo(1));
+             waves.Tick(.1f);Assert.That(waves.State,Is.EqualTo(WaveState.Spawning));Assert.That(waves.CompletedWaves,Is.Zero);
+@@ -93,7 +95,7 @@ namespace ShorelineDefense.Tests
+                 foreach(var enemy in enemies.Active.ToArray())enemy.Health.TakeDefenseDamage(10000);
+                 if(waves.PendingCount>0)Assert.That(waves.CompletedWaves,Is.Zero);
+             }
+-            Assert.That(spawner.TotalSpawned,Is.EqualTo(waves.CurrentWave.ScheduledCount));Assert.That(boats.TotalArrivals,Is.EqualTo(Mathf.CeilToInt(waves.CurrentWave.ScheduledCount/(float)boats.Capacity)));
++            Assert.That(spawner.TotalSpawned,Is.EqualTo(waves.CurrentWave.ScheduledCount));Assert.That(boats.TotalArrivals,Is.EqualTo(Mathf.CeilToInt(waves.CurrentWave.ScheduledCount/(float)boats.PassengerLimit(spawner.DefaultPrefab))));
+             Assert.That(waves.CompletedWaves,Is.EqualTo(1));Assert.That(waves.PendingCount,Is.Zero);Assert.That(waves.AliveCount,Is.Zero);
+             Assert.That(builder.Economy.Money,Is.EqualTo(before+count*25+reward));waves.Tick(2);Assert.That(builder.Economy.Money,Is.EqualTo(before+count*25+reward));
+             yield return null;
+diff --git a/Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs b/Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs
+index 64e9a9b..130264d 100644
+--- a/Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs
++++ b/Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs
+@@ -39,9 +39,9 @@ namespace ShorelineDefense.Tests
+         {
+             border.ConfigureThreshold(0);spawner.ConfigureWave(1,1.25f,1.1f);var enemy=Spawn(spawner.DefaultPrefab);Assert.That(enemy.Health.MaxHealth,Is.EqualTo(125));
+             Assert.IsFalse(spawner.TrySpawnAt(spawner.DefaultPrefab,spawner.Battlefield.Grid.CellToWorld(new Vector2Int(20,9)),out _));
+-            enemy.Health.TakeDefenseDamage(10000);enemy.Health.TakeDefenseDamage(10000);Assert.That(stats.TotalKills,Is.EqualTo(1));Assert.That(stats.BasicKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(25));
++            enemy.Health.TakeDefenseDamage(10000);enemy.Health.TakeDefenseDamage(10000);Assert.That(stats.TotalKills,Is.EqualTo(1));Assert.That(stats.CrawlerKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(25));
+             foreach(var prefab in waves.EndlessSettings.enemies.Take(3).Skip(1)){var killed=Spawn(prefab);killed.Health.TakeDefenseDamage(10000);yield return null;}
+-            Assert.That(stats.RunnerKills,Is.EqualTo(1));Assert.That(stats.BruteKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(135));
++            Assert.That(stats.SkitterKills,Is.EqualTo(1));Assert.That(stats.BulwarkKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(135));
+             Assert.IsTrue(money.TrySpend(50));Assert.That(stats.TotalMoneySpent,Is.EqualTo(50));Assert.IsFalse(money.TrySpend(int.MaxValue));Assert.That(stats.TotalMoneySpent,Is.EqualTo(50));
+             for(int i=0;i<45;i++){Spawn(spawner.DefaultPrefab).Tick(100);yield return null;}
+             Assert.That(stats.Homicides,Is.EqualTo(1125));Assert.IsTrue(Object.FindFirstObjectByType<GameStateController>().IsPlaying);Assert.That(Object.FindFirstObjectByType<PrototypeHud>().HealthText,Does.Not.Contain("/ 0"));
+@@ -97,7 +97,7 @@ namespace ShorelineDefense.Tests
+         }
+         [UnityTest] public IEnumerator MixedCargoCapacityAndAllTypesUseDefenseRules()
+         {
+-            var boats=Object.FindFirstObjectByType<BoatLandingSystem>();var roster=waves.EndlessSettings.enemies;Assert.IsFalse(boats.TryDispatch(new[]{roster[2],roster[2],roster[2]}));Assert.IsTrue(boats.TryDispatch(new[]{roster[2],roster[1],roster[0]}));
++            var boats=Object.FindFirstObjectByType<BoatLandingSystem>();var roster=waves.EndlessSettings.enemies;Assert.IsFalse(boats.TryDispatch(new[]{roster[2],roster[2],roster[2],roster[2]}));Assert.IsTrue(boats.TryDispatch(new[]{roster[2],roster[1],roster[0]}));
+             for(int i=0;i<80&&boats.IncomingPassengers>0;i++){boats.Tick(.5f);foreach(var e in registry.Active)e.Movement.Tick(.5f);yield return null;}
+             Assert.That(registry.Count,Is.EqualTo(3));CollectionAssert.AreEquivalent(roster.Take(3).Select(p=>p.Definition.Kind),registry.Active.Select(e=>e.Definition.Kind));
+             var builder=Object.FindFirstObjectByType<BuildManager>();var hud=Object.FindFirstObjectByType<BuildHud>();money.AddMoney(1000);
+@@ -105,7 +105,7 @@ namespace ShorelineDefense.Tests
+             foreach(var e in registry.Active){e.transform.position=spawner.Battlefield.Grid.CellToWorld(cell);Assert.That(e.Movement.CurrentSpeed,Is.EqualTo(e.Movement.BaseSpeed*.5f).Within(.001));}
+             Assert.That(builder.TryPlaceDefense(hud.Defenses[2],cell+Vector2Int.right,out var mineDefense),Is.EqualTo(PlacementResult.Valid));
+             foreach(var e in registry.Active)e.transform.position=mineDefense.transform.position;
+-            var mine=mineDefense.GetComponent<ShorelineDefense.Defenses.LandMine>();mine.Tick(1);Assert.That(stats.BasicKills,Is.EqualTo(1));Assert.That(stats.RunnerKills,Is.EqualTo(1));Assert.That(registry.Count,Is.EqualTo(1));Assert.That(registry.Active[0].Health.CurrentHealth,Is.EqualTo(450));
++            var mine=mineDefense.GetComponent<ShorelineDefense.Defenses.LandMine>();mine.Tick(1);Assert.That(stats.CrawlerKills,Is.EqualTo(1));Assert.That(stats.SkitterKills,Is.EqualTo(1));Assert.That(registry.Count,Is.EqualTo(1));Assert.That(registry.Active[0].Health.CurrentHealth,Is.EqualTo(registry.Active[0].Health.MaxHealth-Mathf.CeilToInt(mineDefense.Damage*(1-registry.Active[0].Definition.Armor))));
+             yield return null;
+         }
+     }
+
+NEW SOURCE Assets/Game/Scripts/Enemies/BroodmotherSpawn.cs
+using System.Collections.Generic;
+using ShorelineDefense.Grid;
+using UnityEngine;
+
+namespace ShorelineDefense.Enemies
+{
+    public sealed class BroodmotherSpawn : MonoBehaviour
+    {
+        [SerializeField] private EnemyController broodling;
+        [SerializeField, Min(1)] private float spawnInterval = 8;
+        [SerializeField, Range(1, 12)] private int broodlingsPerSpawn = 6;
+        [SerializeField, Range(0, 120)] private int maxTotalBroodlingsSpawned = 60;
+        [SerializeField, Range(1, 40)] private int maxConcurrentSpawnedBroodlings = 18;
+        private EnemyController enemy;
+        private EnemySpawner spawner;
+        private GridManager grid;
+        private EnemyRegistry registry;
+        private float timer;
+        private readonly HashSet<EnemyController> children = new HashSet<EnemyController>();
+        public int TotalSpawned { get; private set; }
+        public int Concurrent => children.Count;
+        public void Initialize(EnemyController owner, GridManager battlefield)
+        {
+            if (registry != null) registry.EnemyRemoved -= ChildRemoved;
+            enemy = owner; grid = battlefield; spawner = FindFirstObjectByType<EnemySpawner>();
+            registry = FindFirstObjectByType<EnemyRegistry>();
+            if (isActiveAndEnabled && registry != null) registry.EnemyRemoved += ChildRemoved;
+            children.Clear(); timer = spawnInterval; TotalSpawned = 0;
+        }
+        public void Tick(float dt)
+        {
+            if (dt <= 0 || enemy == null || !enemy.IsCombatActive || broodling == null || spawner == null || TotalSpawned >= maxTotalBroodlingsSpawned) return;
+            children.RemoveWhere(e => e == null || !e.gameObject.activeInHierarchy || !e.Health.IsAlive);
+            timer -= dt;
+            if (timer > 0 || children.Count >= maxConcurrentSpawnedBroodlings || enemy.Movement.RemainingPathDistance < grid.Grid.CellSize * 3) return;
+            timer = spawnInterval;
+            int count = Mathf.Min(broodlingsPerSpawn, Mathf.Min(maxTotalBroodlingsSpawned - TotalSpawned, maxConcurrentSpawnedBroodlings - children.Count));
+            if (!grid.Grid.TryWorldToCell(transform.position, out var center)) return;
+            int produced = 0;
+            for (int attempt = 0; attempt < 25 && produced < count; attempt++)
+            {
+                var cell = center + new Vector2Int(attempt % 5 - 2, attempt / 5 - 2);
+                if (!grid.Grid.Contains(cell) || !spawner.TrySpawnReinforcement(broodling, grid.Grid.CellToWorld(cell), out var child)) continue;
+                children.Add(child); TotalSpawned++; produced++;
+            }
+            if (produced > 0) enemy.NotifyAttack();
+        }
+        private void ChildRemoved(EnemyController child) => children.Remove(child);
+        private void OnEnable() { if (registry != null) registry.EnemyRemoved += ChildRemoved; }
+        private void OnDisable() { if (registry != null) registry.EnemyRemoved -= ChildRemoved; children.Clear(); }
+    }
+}
+
+NEW SOURCE Assets/Game/Scripts/Enemies/BurrowerTraversal.cs
+using UnityEngine;
+
+namespace ShorelineDefense.Enemies
+{
+    /// <summary>One limited route-following bypass. Never crosses blocked cells or teleports.</summary>
+    public sealed class BurrowerTraversal : MonoBehaviour
+    {
+        [SerializeField, Range(1, 8)] private float bypassCells = 5;
+        [SerializeField, Min(3)] private float finalSafetyCells = 8;
+        [SerializeField, Min(.2f)] private float surfaceSeconds = 1;
+        private EnemyController enemy;
+        private float surface, remaining, cellSize;
+        private bool used;
+        public bool IsBurrowed { get; private set; }
+        public float DistanceBurrowed { get; private set; }
+        public void Initialize(EnemyController owner, float size)
+        { enemy = owner; cellSize = size; surface = surfaceSeconds; remaining = 0; used = false; IsBurrowed = false; DistanceBurrowed = 0; }
+        public void Move(float dt)
+        {
+            if (dt <= 0) return;
+            var movement = enemy.Movement;
+            if (!used)
+            {
+                float above = Mathf.Min(surface, dt); movement.Tick(above); surface -= above; dt -= above;
+                if (dt <= 0) return;
+                used = true;
+                remaining = Mathf.Min(bypassCells * cellSize, Mathf.Max(0, movement.RemainingPathDistance - finalSafetyCells * cellSize));
+                IsBurrowed = remaining > .01f && float.IsFinite(remaining);
+            }
+            if (IsBurrowed)
+            {
+                remaining = Mathf.Min(remaining, Mathf.Max(0, movement.RemainingPathDistance - finalSafetyCells * cellSize));
+                movement.IgnoreWireSlow = true;
+                float underground = Mathf.Min(dt, remaining / Mathf.Max(.01f, movement.CurrentSpeed));
+                Vector3 before = transform.position; movement.Tick(underground);
+                // Time integrates route distance even when a turn occurs inside one tick.
+                float traveled = underground * movement.CurrentSpeed;
+                remaining -= traveled; DistanceBurrowed += traveled; dt -= underground;
+                if (!movement.HasPath || remaining <= .001f || movement.RemainingPathDistance <= finalSafetyCells * cellSize + .001f)
+                { IsBurrowed = false; movement.IgnoreWireSlow = false; }
+                if (IsBurrowed) return;
+            }
+            movement.Tick(dt);
+        }
+        private void OnDisable() { IsBurrowed = false; if (enemy != null) enemy.Movement.IgnoreWireSlow = false; }
+    }
+}
+
+NEW SOURCE Assets/Game/Scripts/Enemies/CorrosiveSpit.cs
+using System.Collections.Generic;
+using ShorelineDefense.Core;
+using ShorelineDefense.Defenses;
+using ShorelineDefense.Grid;
+using UnityEngine;
+
+namespace ShorelineDefense.Enemies
+{
+    public sealed class CorrosiveSpit : MonoBehaviour
+    {
+        private Vector3 start, impact;
+        private BattlefieldGrid grid;
+        private GameStateController game;
+        private float elapsed, duration;
+        private int damage;
+        private SpriteRenderer visual;
+        private bool resolved;
+        private ShorelineDefense.Presentation.VfxService effects;
+        public static void Launch(Vector3 from, Vector3 to, BattlefieldGrid battlefield, GameStateController state, Sprite sprite, int amount, float seconds, ShorelineDefense.Presentation.VfxService vfx = null)
+        {
+            var shot = new GameObject("Corrosive biological glob").AddComponent<CorrosiveSpit>();
+            shot.start = from; shot.impact = to; shot.grid = battlefield; shot.game = state;
+            shot.damage = amount; shot.duration = Mathf.Max(.1f, seconds); shot.transform.position = from;
+            shot.effects = vfx;
+            shot.visual = shot.gameObject.AddComponent<SpriteRenderer>(); shot.visual.sprite = sprite;
+            shot.visual.sortingLayerName = "Effects"; shot.visual.sortingOrder = 10;
+            shot.transform.localScale = Vector3.one * .4f;
+        }
+        private void Update() => Tick(Time.deltaTime);
+        public void Tick(float dt)
+        {
+            if (resolved || dt <= 0) return;
+            if (game == null || !game.IsPlaying) { resolved = true; Destroy(gameObject); return; }
+            elapsed += dt;
+            float t = Mathf.Clamp01(elapsed / duration);
+            transform.position = Vector3.Lerp(start, impact, t) + Vector3.up * (Mathf.Sin(t * Mathf.PI) * .35f);
+            if (t < 1) return;
+            resolved = true;
+            effects?.Play(ShorelineDefense.Presentation.VfxId.SlimeImpact, impact, 0, .7f);
+            // At most nine cells, deduplicated for 2x2 defenses. Locked impact permits evasion/dismantle.
+            var hit = new HashSet<DefenseBase>();
+            if (grid.TryWorldToCell(impact, out var center))
+                for (int x = -1; x <= 1; x++) for (int y = -1; y <= 1; y++)
+                {
+                    var cell = center + new Vector2Int(x, y);
+                    if (!grid.Contains(cell)) continue;
+                    var defense = grid.OccupantAt(cell) as DefenseBase;
+                    if (defense != null && defense.IsAlive && defense.gameObject.activeInHierarchy &&
+                        ((Vector2)(grid.CellToWorld(cell) - impact)).sqrMagnitude <= grid.CellSize * grid.CellSize * .8f && hit.Add(defense)) defense.TakeDamage(damage);
+                }
+            // A short, bounded splash reuses this renderer; gameplay has already resolved.
+            transform.position = impact; transform.localScale = Vector3.one * .85f;
+            visual.color = new Color(.5f, .75f, .32f, .65f); Destroy(gameObject, .18f);
+        }
+    }
+}
+
+NEW SOURCE Assets/Game/Scripts/Enemies/SpitterAttack.cs
+using ShorelineDefense.Core;
+using ShorelineDefense.Defenses;
+using ShorelineDefense.Grid;
+using UnityEngine;
+
+namespace ShorelineDefense.Enemies
+{
+    /// <summary>Local grid acquisition, never a scene scan. EnemyController owns the clock.</summary>
+    public sealed class SpitterAttack : MonoBehaviour
+    {
+        [SerializeField, Range(1, 6)] private float rangeCells = 5;
+        [SerializeField, Min(.2f)] private float acquisitionInterval = .5f;
+        [SerializeField, Min(1)] private float cooldown = 5;
+        [SerializeField, Min(1)] private int damage = 24;
+        [SerializeField, Min(.1f)] private float flightSeconds = .65f;
+        [SerializeField] private Sprite glob;
+        private EnemyController enemy;
+        private GridManager grid;
+        private GameStateController game;
+        private DefenseBase target;
+        private float acquire, reload, pose;
+        private ShorelineDefense.Presentation.VfxService effects;
+        public bool IsAttacking => pose > 0;
+        public int ShotsFired { get; private set; }
+        public void Initialize(EnemyController owner, GridManager battlefield, GameStateController state)
+        { enemy = owner; grid = battlefield; game = state; target = null; acquire = 0; reload = 1.5f; pose = 0; ShotsFired = 0; effects = FindFirstObjectByType<ShorelineDefense.Presentation.VfxService>(); }
+        public bool Tick(float dt)
+        {
+            if (dt <= 0 || enemy == null || !enemy.IsCombatActive) return false;
+            pose = Mathf.Max(0, pose - dt); reload -= dt; acquire -= dt;
+            float range = rangeCells * grid.Grid.CellSize;
+            if (acquire <= 0) { acquire = acquisitionInterval; target = Acquire(range); }
+            if (reload <= 0 && target != null && target.IsAlive && target.gameObject.activeInHierarchy &&
+                ((Vector2)(target.transform.position - transform.position)).sqrMagnitude <= range * range)
+            {
+                reload = cooldown; pose = .45f; ShotsFired++;
+                enemy.Movement.FaceTowards(target.transform.position); enemy.NotifyAttack();
+                CorrosiveSpit.Launch(transform.position, target.transform.position, grid.Grid, game, glob, damage, flightSeconds, effects);
+            }
+            return pose > 0;
+        }
+        private DefenseBase Acquire(float range)
+        {
+            if (!grid.Grid.TryWorldToCell(transform.position, out var center)) return null;
+            DefenseBase best = null; float distance = range * range;
+            int radius = Mathf.CeilToInt(rangeCells);
+            for (int x = Mathf.Max(0, center.x - radius); x <= Mathf.Min(grid.Grid.Width - 1, center.x + radius); x++)
+            for (int y = Mathf.Max(0, center.y - radius); y <= Mathf.Min(grid.Grid.Height - 1, center.y + radius); y++)
+            {
+                var defense = grid.Grid.OccupantAt(new Vector2Int(x, y)) as DefenseBase;
+                if (defense == null || !defense.IsAlive || !defense.gameObject.activeInHierarchy ||
+                    defense.Definition.Id == "land-mine" || defense.Definition.Id == "barbed-wire") continue;
+                float candidate = ((Vector2)(defense.transform.position - transform.position)).sqrMagnitude;
+                if (candidate >= distance) continue;
+                distance = candidate; best = defense;
+            }
+            return best;
+        }
+    }
+}
+
+NEW SOURCE Assets/Game/Scripts/Persistence/AquaticSaveMigration.cs
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+namespace ShorelineDefense.Persistence
+{
+    /// <summary>Pure in-memory conversion; durable files change only at the next explicit checkpoint.</summary>
+    public static class AquaticSaveMigration
+    {
+        public static string EventId(string id) => id switch {
+            "pirate-raid" => "swarm-surge", "militant-assault" => "armored-migration",
+            "heavy-assault" => "deep-water-disturbance", "runner-swarm" => "brood-tide",
+            "mass-landing" => "mass-emergence", "concentrated-landing" => "concentrated-emergence", _ => id };
+        public static bool Upgrade(RunSaveData data)
+        {
+            if (!SaveGameService.Valid(data)) return false;
+            if (data.saveVersion >= 3) return true;
+            if (data.saveVersion == 1) data.mapId = ShorelineDefense.Grid.MapCatalog.OriginalId;
+            var old = data.statistics.kills;
+            long Add(long a, long b) => a > long.MaxValue - b ? long.MaxValue : a + b;
+            var next = new long[9];
+            next[0] = Add(Add(old[0], old[3]), old[6]); next[1] = Add(old[1], old[5]);
+            next[2] = Add(old[2], old[4]); next[7] = old[7]; next[8] = old[8];
+            data.statistics.kills = next;
+            var events = data.events;
+            events.currentId = EventId(events.currentId); events.mostRecent = EventId(events.mostRecent);
+            for (int i = 0; i < events.recent.Count; i++) events.recent[i] = EventId(events.recent[i]);
+            foreach (var list in new[]{events.cooldowns, events.counts, events.history}) foreach (var item in list) item.id = EventId(item.id);
+            data.saveVersion = 3; return true;
+        }
+    }
+}
+
+NEW SOURCE Assets/Game/Scripts/Presentation/AquaticCarrierPresentation.cs
+using ShorelineDefense.Enemies;
+using ShorelineDefense.Waves;
+using UnityEngine;
+namespace ShorelineDefense.Presentation
+{
+    /// <summary>Clocked by the existing arrival owner; animation never releases cargo.</summary>
+    public sealed class AquaticCarrierPresentation : MonoBehaviour
+    {
+        [SerializeField] private SpriteRenderer body;
+        [SerializeField] private Sprite[] floating, moving, arrival, release, retreat;
+        private Sprite[] emergence;
+        private ArrivalMethod method;
+        private float clock;
+        private float arrivalSeconds;
+        private int lastStage = -1;
+        public void Begin(CarrierDefinition definition, EnemyController passenger)
+        {
+            method = definition != null ? definition.method : ArrivalMethod.DriftPod;
+            arrivalSeconds = definition != null ? definition.ruptureSeconds : .4f;
+            emergence = passenger.GetComponent<EnemySpritePresentation>()?.EmergenceFrames;
+            clock = 0; lastStage = -1;
+            body.color = Color.white; body.enabled = true;
+            body.transform.localScale = Vector3.one;
+            if (method == ArrivalMethod.DirectEmergence)
+            {
+                var source = passenger.transform.Find("Visual/Body");
+                if (source != null) { body.sprite = source.GetComponent<SpriteRenderer>().sprite; body.transform.localScale = source.lossyScale; }
+                body.color = new Color(.15f, .4f, .39f, .65f);
+            }
+        }
+        public void Tick(int stage, float dt)
+        {
+            if (stage != lastStage) { lastStage = stage; clock = 0; } else clock += dt;
+            Sprite[] frames;
+            if (method == ArrivalMethod.DirectEmergence)
+            {
+                frames = emergence;
+                body.color = stage == 0 ? new Color(.12f, .35f, .36f, .65f) : Color.white;
+                if (frames != null && frames.Length > 0) body.sprite = frames[stage == 0 ? 0 : Mathf.Min(frames.Length - 1, (int)(clock * 8))];
+                body.enabled = stage < 2; return;
+            }
+            frames = stage == 0 ? moving : stage == 1 ? clock < arrivalSeconds ? arrival : release : retreat;
+            if (frames == null || frames.Length == 0) frames = floating;
+            float sequenceClock = stage == 1 && clock >= arrivalSeconds ? clock - arrivalSeconds : clock;
+            if (frames != null && frames.Length > 0) body.sprite = frames[stage == 0 ? (int)(clock * 6) % frames.Length : Mathf.Min(frames.Length - 1, (int)(sequenceClock * 8))];
+            body.color = stage == 3 ? new Color(.4f, .65f, .61f, Mathf.Clamp01(1 - clock * .7f)) : Color.white;
+        }
+    }
+}
+
+NEW SOURCE Assets/Game/Scripts/Waves/AssaultCarrierSystem.cs
+using System;
+using System.Collections.Generic;
+using ShorelineDefense.Core;
+using ShorelineDefense.Enemies;
+using ShorelineDefense.Grid;
+using ShorelineDefense.Presentation;
+using UnityEngine;
+
+namespace ShorelineDefense.Waves
+{
+    [Serializable]
+    public sealed class RiverLandingPoint
+    {
+        public Vector3 riverEntry;
+        public Vector3 berth;
+        public bool authoredSector;
+        public LandingSector sector;
+        public Vector3[] unloadingPositions = Array.Empty<Vector3>();
+    }
+
+    /// <summary>Bounded transport presentation. The spawner alone creates/initializes passengers.</summary>
+    public class AssaultCarrierSystem : MonoBehaviour
+    {
+        [SerializeField] private EnemySpawner spawner;
+        [SerializeField] private GameStateController game;
+        [SerializeField] private GameObject boatPrefab;
+        [SerializeField] private CarrierDefinition[] carriers = Array.Empty<CarrierDefinition>();
+        [SerializeField, Range(0, 1)] private float earlyDirectRatio = .6f;
+        [SerializeField, Range(0, 1)] private float lateDirectRatio = .3f;
+        [SerializeField, Range(0, 1)] private float broodRatio = .25f;
+        private int waveNumber = 1;
+        public IReadOnlyList<CarrierDefinition> Carriers => carriers;
+        public void ConfigureWave(int number) => waveNumber = Mathf.Max(1, number);
+        public event Action<ArrivalMethod> CarrierApproach;
+        public event Action<ArrivalMethod> CarrierRupture;
+        public event Action BossEmergence;
+        private readonly int[] arrivalCounts = new int[4];
+        public IReadOnlyList<int> ArrivalCounts => arrivalCounts;
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        public ArrivalMethod? ForcedArrival { get; set; }
+#endif
+        public int ActiveCarriers => boats.Count;
+        [SerializeField] private RiverLandingPoint[] landingPoints = Array.Empty<RiverLandingPoint>();
+        [SerializeField, Min(1)] private int capacity = 5;
+        [SerializeField, Min(1)] private int maximumActiveBoats = 3;
+        [SerializeField, Min(.1f)] private float moveSpeed = 2.5f;
+        [SerializeField, Min(.05f)] private float disembarkDelay = .25f;
+        [SerializeField, Min(0)] private float departureDelay = 1;
+        [SerializeField, Min(.05f)] private float arrivalInterval = 2;
+        private sealed class Transport
+        {
+            public GameObject visual;
+            public EnemyController[] cargo;
+            public int[] seatOffsets;
+            public int point, remaining, nextOffset, stage;
+            public float timer, wakeTimer;
+            public float speedMultiplier = 1;
+            public SpriteRenderer[] passengers;
+            public CarrierDefinition definition;
+            public Vector3 berth;
+            public AquaticCarrierPresentation presentation;
+        }
+        private readonly List<Transport> boats = new List<Transport>(6);
+        private readonly Dictionary<GameObject, Stack<GameObject>> visualPools = new Dictionary<GameObject, Stack<GameObject>>();
+        private readonly Dictionary<GameObject, GameObject> visualSources = new Dictionary<GameObject, GameObject>();
+        private int[] recentLandings;
+        private int landingSequence;
+        private EventModifiers eventModifiers;
+        private LandingSector targetSector;
+        private readonly int[] sectorArrivals = new int[3];
+        public IReadOnlyList<int> SectorArrivals => sectorArrivals;
+        public void ConfigureEvent(EventModifiers modifiers, LandingSector sector = LandingSector.Center)
+        { eventModifiers = modifiers; targetSector = sector; }
+        public LandingSector SectorFor(RiverLandingPoint point)
+        {
+            if (point.authoredSector) return point.sector;
+            var grid = spawner.Battlefield.Grid;
+            float fraction = (point.berth.y - grid.Origin.y) / (grid.Height * grid.CellSize);
+            return fraction < 1f / 3 ? LandingSector.South : fraction > 2f / 3 ? LandingSector.North : LandingSector.Center;
+        }
+        public int CreatedBoatVisuals { get; private set; }
+        public int ReusedBoatVisuals { get; private set; }
+        private VfxService effects;
+        public int Capacity => capacity;
+        public float MoveSpeed => moveSpeed;
+        public int ConcurrencyLimit => maximumActiveBoats;
+        public int PeakConcurrentBoats { get; private set; }
+        public void ConfigureMotion(int cargoUnits, float speed, float unloadDelay, float returnDelay) { capacity = Mathf.Clamp(cargoUnits, 3, 18); moveSpeed = Mathf.Max(.1f,speed); disembarkDelay = Mathf.Max(.05f,unloadDelay); departureDelay = Mathf.Max(0,returnDelay); }
+        public float ArrivalInterval => arrivalInterval;
+        public int ActiveBoats => boats.Count;
+        public int IncomingPassengers { get; private set; }
+        public int TotalArrivals { get; private set; }
+        public IReadOnlyList<RiverLandingPoint> LandingPoints => landingPoints;
+        public event Action<EnemyController> Unloaded;
+
+        public void Configure(EnemySpawner executor, GameStateController state, GameObject prefab, RiverLandingPoint[] points)
+        {
+            if (isActiveAndEnabled && game != null) game.StateChanged -= OnState;
+            Cancel(); spawner = executor; game = state; boatPrefab = prefab; landingPoints = points;
+            if (isActiveAndEnabled && game != null) game.StateChanged += OnState;
+        }
+        protected virtual void OnEnable() { if (game != null) game.StateChanged += OnState; effects = FindFirstObjectByType<VfxService>(); }
+        protected virtual void OnDisable() { if (game != null) game.StateChanged -= OnState; Cancel(); }
+        private void OnState(GameState state) { if (state == GameState.GameOver) Cancel(); }
+        public CarrierDefinition SelectCarrier(EnemyController first)
+        {
+            if (carriers == null || carriers.Length == 0 || first == null) return null;
+            ArrivalMethod method;
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            if (ForcedArrival.HasValue) return Array.Find(carriers, c => c != null && c.method == ForcedArrival.Value);
+#endif
+            if (first.Definition.Kind == EnemyKind.Dredger) method = ArrivalMethod.DirectEmergence;
+            else if (first.Definition is BossDefinition) method = ArrivalMethod.LeviathanCarrier;
+            else
+            {
+                float roll = ((landingSequence * 37 + waveNumber * 11) % 100) / 100f;
+                float direct = eventModifiers?.directEmergenceRatio >= 0 ? eventModifiers.directEmergenceRatio : waveNumber < 7 ? earlyDirectRatio : lateDirectRatio;
+                bool eligible = first.Definition.Kind == EnemyKind.Crawler || first.Definition.Kind == EnemyKind.Skitter || first.Definition.Kind == EnemyKind.Burrower;
+                float brood = eventModifiers?.broodCarrierRatio >= 0 ? eventModifiers.broodCarrierRatio : broodRatio;
+                method = eligible && roll < direct ? ArrivalMethod.DirectEmergence : waveNumber >= 7 && roll > 1 - brood ? ArrivalMethod.BroodCarrier : ArrivalMethod.DriftPod;
+                if (first.Definition.Kind == EnemyKind.Bulwark && waveNumber >= 15 && roll > .85f) method = ArrivalMethod.LeviathanCarrier;
+            }
+            return Array.Find(carriers, c => c != null && c.method == method);
+        }
+        public int RequestCapacityHalfUnits(EnemyController first) => SelectCarrier(first)?.capacityHalfUnits ?? capacity * 2;
+        public bool CanCarry(EnemyController first, EnemyController candidate) => SelectCarrier(first)?.Accepts(candidate.Definition) ?? true;
+        public int PassengerLimit(EnemyController prefab) => Mathf.Max(1, RequestCapacityHalfUnits(prefab) / prefab.Definition.CarrierHalfUnits);
+        public void ConfigurePressure(float interval, int concurrency)
+        { arrivalInterval = Mathf.Clamp(interval, .05f, 30); maximumActiveBoats = Mathf.Clamp(concurrency, 1, 32); }
+        public bool TryDispatch(EnemyController passenger, int count)
+        {
+            if (passenger == null || passenger.Definition == null || count <= 0 || count > PassengerLimit(passenger)) return false;
+            var cargo = new EnemyController[count]; for (int i = 0; i < count; i++) cargo[i] = passenger;
+            return TryDispatch(cargo);
+        }
+        public bool TryDispatch(IReadOnlyList<EnemyController> cargo)
+        {
+            if (!isActiveAndEnabled || game == null || !game.IsPlaying || boatPrefab == null || cargo == null || cargo.Count == 0 ||
+                landingPoints == null || landingPoints.Length == 0 || boats.Count >= maximumActiveBoats) return false;
+            var carrier = SelectCarrier(cargo[0]);
+            int units = 0;
+            foreach (var p in cargo) { if (p == null || p.Definition == null || !(carrier?.Accepts(p.Definition) ?? true)) return false; units += p.Definition.CarrierHalfUnits; }
+            if (units > (carrier?.capacityHalfUnits ?? capacity * 2)) return false;
+            if (recentLandings == null || recentLandings.Length != landingPoints.Length) recentLandings = new int[landingPoints.Length];
+            // Least occupied/recent sector with seeded-style jitter; no predictable round-robin.
+            int chosen = -1; float best = float.PositiveInfinity;
+            for (int index = 0; index < landingPoints.Length; index++)
+            {
+                var point = landingPoints[index];
+                if (!IsRiverLane(point, carrier)) continue;
+                // Four of five dispatches wait for the announced sector instead of silently spilling
+                // into every free lane. The fifth allows supporting landings elsewhere.
+                if (eventModifiers?.landingPattern == LandingPattern.Concentrated && landingSequence % 5 != 4 && SectorFor(point) != targetSector) continue;
+                bool entryOccupied = false; int laneCount = 0;
+                foreach (var active in boats) {
+                    if (active.point == index) laneCount++;
+                    if ((active.point == index || spawner.Battlefield.Definition.authoredWater) && (active.visual.transform.position - point.riverEntry).sqrMagnitude < ClearanceSquared(active.definition, carrier)) entryOccupied = true;
+                }
+                if (entryOccupied) continue;
+                float score = laneCount * 4 + recentLandings[index] / (float)Mathf.Max(1, landingSequence) +
+                    ((index * 17 + landingSequence * 13) % 23) * .025f;
+                if (eventModifiers?.landingPattern == LandingPattern.Distributed)
+                    score += (int)SectorFor(point) == landingSequence % 3 ? -20 : 0;
+                if (eventModifiers?.landingPattern == LandingPattern.Concentrated)
+                    score += SectorFor(point) == targetSector ? -20 : 0;
+                if (score < best) { best = score; chosen = index; }
+            }
+            if (chosen >= 0)
+            {
+                int index = chosen; var point = landingPoints[index]; recentLandings[index] = ++landingSequence;
+                sectorArrivals[(int)SectorFor(point)]++;
+                BossDefinition boss = null;
+                foreach (var passenger in cargo) if (passenger.Definition is BossDefinition special) { boss = special; break; }
+                var source = carrier != null ? carrier.visualPrefab : boss != null && boss.BossBoat != null ? boss.BossBoat : eventModifiers?.boatVisual != null ? eventModifiers.boatVisual : boatPrefab;
+                if (source == null) return false;
+                if (!visualPools.TryGetValue(source, out var pool)) visualPools[source] = pool = new Stack<GameObject>();
+                GameObject visual;
+                if (pool.Count > 0) { visual = pool.Pop(); ReusedBoatVisuals++; }
+                else { visual = Instantiate(source, point.riverEntry, Quaternion.identity, transform); visualSources[visual] = source; CreatedBoatVisuals++; }
+                visual.transform.SetPositionAndRotation(point.riverEntry, Quaternion.identity); visual.SetActive(true);
+                var seats = visual.GetComponentsInChildren<SpriteRenderer>(true);
+                var offsets = new int[cargo.Count]; int nextSeat = 0;
+                for (int p = 0; p < cargo.Count; p++)
+                {
+                    int weight = Mathf.Max(1, cargo[p].Definition.TransportCapacityUnits);
+                    offsets[p] = nextSeat + weight / 2; nextSeat += weight;
+                }
+                foreach (var seat in seats)
+                    if (seat.name.StartsWith("Passenger ") && int.TryParse(seat.name.Substring(10), out int seatIndex))
+                    {
+                        int passengerIndex = Array.IndexOf(offsets, seatIndex);
+                        seat.enabled = passengerIndex >= 0;
+                        if (seat.enabled)
+                        {
+                            var body = cargo[passengerIndex].transform.Find("Visual/Body");
+                            var sprite = body != null ? body.GetComponent<SpriteRenderer>() : null;
+                            if (sprite != null) seat.sprite = sprite.sprite;
+                        }
+                    }
+                var stored = new EnemyController[cargo.Count]; for (int i = 0; i < cargo.Count; i++) stored[i] = cargo[i];
+                var presentation = visual.GetComponent<AquaticCarrierPresentation>();
+                presentation?.Begin(carrier, cargo[0]);
+                boats.Add(new Transport { visual = visual, cargo = stored, seatOffsets = offsets, point = index, remaining = cargo.Count, passengers = seats, speedMultiplier = carrier != null ? carrier.speedMultiplier : boss != null ? boss.BoatSpeedMultiplier : 1,
+                    definition = carrier, berth = Berth(point, carrier), presentation = presentation });
+                IncomingPassengers += cargo.Count; TotalArrivals++;
+                if (carrier != null) { arrivalCounts[(int)carrier.method]++; CarrierApproach?.Invoke(carrier.method); }
+                PeakConcurrentBoats = Mathf.Max(PeakConcurrentBoats, boats.Count);
+                return true;
+            }
+            return false;
+        }
+        public bool IsValidApproach(RiverLandingPoint point) => IsRiverLane(point, carriers != null && carriers.Length > 0 ? Array.Find(carriers, c => c != null && c.method == ArrivalMethod.DriftPod) : null);
+        public bool IsValidApproach(RiverLandingPoint point, CarrierDefinition carrier) => IsRiverLane(point, carrier);
+        private static float ClearanceSquared(CarrierDefinition a, CarrierDefinition b)
+        { float clearance = (a != null ? a.halfExtents.x : 1.875f) + (b != null ? b.halfExtents.x : 1.875f) + .25f; return clearance * clearance; }
+        private Vector3 Berth(RiverLandingPoint point, CarrierDefinition carrier) => carrier == null ? point.berth : point.berth - Vector3.right * Mathf.Max(0, carrier.halfExtents.x - 1.875f);
+        private bool IsRiverLane(RiverLandingPoint point, CarrierDefinition carrier = null)
+        {
+            var battlefield = spawner != null ? spawner.Battlefield : null;
+            if (point == null || battlefield?.Grid == null || battlefield.Grid.Plane != GameplayPlane.XY ||
+                point.unloadingPositions == null || point.unloadingPositions.Length == 0) return false;
+            var sprite = boatPrefab.GetComponentInChildren<SpriteRenderer>()?.sprite;
+            if (sprite == null) return false;
+            var grid = battlefield.Grid;
+            Vector2 extent = carrier != null ? carrier.halfExtents : (Vector2)sprite.bounds.extents;
+            var berth = Berth(point, carrier);
+            if (battlefield.Definition.authoredWater)
+            {
+                if (!Mathf.Approximately(point.berth.z, grid.Origin.z) || !Mathf.Approximately(point.riverEntry.z, grid.Origin.z)) return false;
+                if (point.riverEntry == point.berth) return false;
+                // Sample the swept hull conservatively. Off-grid river is allowed on left/bottom only.
+                int steps = Mathf.CeilToInt(Vector3.Distance(point.riverEntry, point.berth) / (grid.CellSize * .25f));
+                for (int i = 0; i <= steps; i++)
+                {
+                    var center = Vector3.Lerp(point.riverEntry, berth, (float)i / steps);
+                    for (int x = -1; x <= 1; x++) for (int y = -1; y <= 1; y++)
+                    {
+                        var sample = center + new Vector3(x * extent.x, y * extent.y, 0);
+                        if (grid.TryWorldToCell(sample, out var cell)) { if (grid.GetCell(cell).Terrain != TerrainType.Water) return false; }
+                        else if (sample.x >= grid.Origin.x && sample.y >= grid.Origin.y) return false;
+                    }
+                }
+                return true;
+            }
+            float shore = grid.Origin.x + battlefield.Definition.WaterBandCells * grid.CellSize;
+            float halfWidth = extent.x, halfHeight = extent.y;
+            // Straight horizontal lanes only: both the hull and its full swept path stay in river space.
+            return Mathf.Approximately(point.riverEntry.y, point.berth.y) && point.riverEntry.x < point.berth.x &&
+                berth.x + halfWidth <= shore + .001f && berth.y - halfHeight >= grid.Origin.y &&
+                berth.y + halfHeight <= grid.Origin.y + grid.Height * grid.CellSize &&
+                Mathf.Approximately(point.berth.z, grid.Origin.z) && Mathf.Approximately(point.riverEntry.z, grid.Origin.z);
+        }
+        // WaveManager owns ticking so deterministic tests can advance the whole arrival sequence.
+        public void Tick(float deltaTime)
+        {
+            if (game == null || !game.IsPlaying || deltaTime <= 0 || !isActiveAndEnabled) return;
+            for (int i = boats.Count - 1; i >= 0; i--)
+            {
+                var boat = boats[i]; var point = landingPoints[boat.point];
+                boat.presentation?.Tick(boat.stage, deltaTime);
+                if (boat.stage == 0 || boat.stage == 3)
+                {
+                    // Incoming hulls queue behind an occupied berth/approach; unloading remains per boat.
+                    bool waiting = false;
+                    if (boat.stage == 0) foreach (var ahead in boats)
+                        if (ahead != boat && (ahead.point == boat.point || spawner.Battlefield.Definition.authoredWater) && ahead.stage != 3 &&
+                            ahead.visual.transform.position.x > boat.visual.transform.position.x &&
+                            (ahead.visual.transform.position - boat.visual.transform.position).sqrMagnitude < ClearanceSquared(ahead.definition, boat.definition)) { waiting = true; break; }
+                    if (waiting) continue;
+                    var destination = boat.stage == 0 ? boat.berth : point.riverEntry;
+                    var direction = destination - boat.visual.transform.position;
+                    if (direction.sqrMagnitude > .0001f)
+                        boat.visual.transform.GetChild(0).rotation = Quaternion.Euler(0, 0, Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg);
+                    boat.visual.transform.position = Vector3.MoveTowards(boat.visual.transform.position, destination, moveSpeed * boat.speedMultiplier * (eventModifiers?.boatSpeed ?? 1) * deltaTime);
+                    boat.wakeTimer -= deltaTime;
+                    if (boat.wakeTimer <= 0 && effects != null)
+                    {
+                        effects.Play(VfxId.WaterWake, boat.visual.transform.position - direction.normalized * 1.2f,
+                            Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg, 1.2f);
+                        boat.wakeTimer = .3f;
+                    }
+                    if ((boat.visual.transform.position - destination).sqrMagnitude > .0001f) continue;
+                    if (boat.stage == 3) { ReturnVisual(boat.visual); boats.RemoveAt(i); continue; }
+                    boat.stage = 1;
+                    boat.timer = boat.definition?.ruptureSeconds ?? 0;
+                    if (boat.definition?.method == ArrivalMethod.DriftPod) effects?.Play(VfxId.PodRupture, boat.berth, 0, .8f);
+                    if (boat.definition?.method == ArrivalMethod.BroodCarrier || boat.definition?.method == ArrivalMethod.LeviathanCarrier) effects?.Play(VfxId.BroodRelease, boat.berth, 0, 1);
+                    if (boat.definition != null) CarrierRupture?.Invoke(boat.definition.method);
+                    if (boat.cargo[0].Definition is BossDefinition) BossEmergence?.Invoke();
+                    effects?.Play(VfxId.SplashMedium, point.berth + Vector3.right * 1.4f, 0, .6f);
+                }
+                if (boat.stage == 1)
+                {
+                    boat.timer -= deltaTime;
+                    if (boat.timer > 0) continue;
+                    bool unloaded = false;
+                    for (int attempt = 0; attempt < point.unloadingPositions.Length; attempt++)
+                    {
+                        var position = point.unloadingPositions[boat.nextOffset];
+                        boat.nextOffset = (boat.nextOffset + 1) % point.unloadingPositions.Length;
+                        if (!spawner.TrySpawnAt(boat.cargo[boat.cargo.Length - boat.remaining], position, out var enemy)) continue;
+                        boat.remaining--; IncomingPassengers--; unloaded = true;
+                        foreach (var seat in boat.passengers)
+                            if (seat.name == "Passenger " + boat.seatOffsets[boat.cargo.Length - boat.remaining - 1]) seat.enabled = false;
+                        effects?.Play(VfxId.SplashSmall, position, 0, .4f);
+                        Unloaded?.Invoke(enemy);
+                        // Observers may cause Game Over and clear the entire transport collection.
+                        if (!game.IsPlaying || !isActiveAndEnabled) return;
+                        break;
+                    }
+                    boat.timer = unloaded ? boat.definition?.releaseInterval ?? disembarkDelay : .1f;
+                    if (boat.remaining == 0) { boat.stage = 2; boat.timer = boat.definition?.remainsSeconds ?? departureDelay; }
+                }
+                else if (boat.stage == 2)
+                {
+                    boat.timer -= deltaTime;
+                    if (boat.timer <= 0) {
+                        if (boat.definition != null && (boat.definition.method == ArrivalMethod.DriftPod || boat.definition.method == ArrivalMethod.DirectEmergence)) { ReturnVisual(boat.visual); boats.RemoveAt(i); }
+                        else boat.stage = 3;
+                    }
+                }
+            }
+        }
+        public void Cancel()
+        {
+            foreach (var boat in boats) if (boat.visual != null) ReturnVisual(boat.visual);
+            boats.Clear(); IncomingPassengers = 0;
+        }
+        private void ReturnVisual(GameObject visual)
+        { visual.SetActive(false); if (visualSources.TryGetValue(visual, out var source)) visualPools[source].Push(visual); else Destroy(visual); }
+    }
+}
+
+NEW SOURCE Assets/Game/Scripts/Waves/CarrierDefinition.cs
+using UnityEngine;
+using ShorelineDefense.Enemies;
+namespace ShorelineDefense.Waves
+{
+    public enum ArrivalMethod { DirectEmergence, DriftPod, BroodCarrier, LeviathanCarrier }
+    [CreateAssetMenu(menuName = "Shoreline Defense/Carrier Definition")]
+    public sealed class CarrierDefinition : ScriptableObject
+    {
+        public ArrivalMethod method;
+        public GameObject visualPrefab;
+        [Min(1)] public int capacityHalfUnits = 24;
+        public Vector2 halfExtents = new Vector2(1.1f, .65f);
+        [Min(.1f)] public float speedMultiplier = 1;
+        [Min(0)] public float ruptureSeconds = .35f, remainsSeconds = .7f;
+        [Min(.02f)] public float releaseInterval = .07f;
+        public bool Accepts(EnemyDefinition enemy) => enemy != null && (method != ArrivalMethod.DirectEmergence ||
+            enemy.Kind == EnemyKind.Crawler || enemy.Kind == EnemyKind.Skitter || enemy.Kind == EnemyKind.Burrower || enemy.Kind == EnemyKind.Dredger);
+    }
+}
+
+NEW SOURCE Assets/Game/Tests/EditMode/AquaticRulesTests.cs
+using System;
+using System.Linq;
+using NUnit.Framework;
+using UnityEditor;
+using ShorelineDefense.Enemies;
+using ShorelineDefense.Persistence;
+using ShorelineDefense.Waves;
+namespace ShorelineDefense.Tests
+{
+    public sealed class AquaticRulesTests
+    {
+        [TestCase(1)] [TestCase(2)]
+        public void LegacySnapshotsMigrateDeterministicallyWithoutLosingTotals(int version)
+        {
+            var d=new RunSaveData{saveVersion=version,mapId=version==1?null:"industrial_port",runId=Guid.NewGuid().ToString(),wave=24,completedWaves=23,money=1577,maxHomicides=1000};
+            d.statistics.kills=new long[]{1,2,3,4,5,6,7,8,9};d.events.currentId="pirate-raid";d.events.mostRecent="militant-assault";d.events.wave=24;d.events.wavesRemaining=1;d.events.nextWave=27;d.events.supplyReceived=292;
+            d.events.recent.Add("mass-landing");d.events.cooldowns.Add(new EventCounter("militant-assault",20));d.events.history.Add(new EventCounter("pirate-raid",24));
+            Assert.IsTrue(AquaticSaveMigration.Upgrade(d));Assert.AreEqual(3,d.saveVersion);Assert.AreEqual(version==1?"river_border":"industrial_port",d.mapId);
+            CollectionAssert.AreEqual(new long[]{12,8,8,0,0,0,0,8,9},d.statistics.kills);Assert.AreEqual(45,d.statistics.kills.Sum());Assert.AreEqual(1577,d.money);
+            Assert.AreEqual("swarm-surge",d.events.currentId);Assert.AreEqual("armored-migration",d.events.mostRecent);Assert.AreEqual("mass-emergence",d.events.recent[0]);Assert.AreEqual(292,d.events.supplyReceived);Assert.AreEqual(27,d.events.nextWave);
+            Assert.IsTrue(AquaticSaveMigration.Upgrade(d));Assert.AreEqual(45,d.statistics.kills.Sum());
+        }
+        [Test]
+        public void RosterUnlocksHalfCostsFamiliesAndCarrierCompatibilityAreExplicit()
+        {
+            var s=AssetDatabase.LoadAssetAtPath<EndlessWaveSettings>("Assets/Game/Data/Waves/EndlessSurvival.asset");
+            Assert.AreEqual(6,s.enemies.Length);Assert.AreEqual(6,s.enemies.Select(e=>e.Definition.Kind).Distinct().Count());
+            var unlocks=new[]{1,3,7,10,5,15};for(int i=0;i<6;i++)Assert.AreEqual(unlocks[i],s.enemies[i].Definition.UnlockWave);
+            var larva=s.enemies.Single(e=>e.Definition.Kind==EnemyKind.Broodling).Definition;Assert.AreEqual(1,larva.WaveCostHalfUnits);Assert.AreEqual(1,larva.CarrierHalfUnits);Assert.LessOrEqual(larva.KillReward,2);
+            var direct=AssetDatabase.LoadAssetAtPath<CarrierDefinition>("Assets/Game/Data/Carriers/direct_emergence.asset");Assert.IsFalse(direct.Accepts(s.enemies.Single(e=>e.Definition.Kind==EnemyKind.Bulwark).Definition));Assert.IsTrue(direct.Accepts(s.enemies[0].Definition));
+            foreach(var p in s.enemies)Assert.IsFalse(p.Definition.DisplayName.ToLowerInvariant().Contains("infected"));
+            Assert.AreEqual(EnemyKind.Dredger,s.bossEncounters.ForWave(25).Definition.Kind);Assert.AreEqual(EnemyKind.Broodmother,s.bossEncounters.ForWave(50).Definition.Kind);
+        }
+        [TestCase(25)] [TestCase(50)]
+        public void EncounterCostAccountsForLightweightBroodlingEscorts(int number)
+        {
+            var s=AssetDatabase.LoadAssetAtPath<EndlessWaveSettings>("Assets/Game/Data/Waves/EndlessSurvival.asset");var wave=new EndlessWaveGenerator(s,1977).Generate(number);
+            try { int expected=wave.Encounter.DifficultyCost+wave.Encounter.Escorts.Sum(g=>UnityEngine.Mathf.CeilToInt(g.Count*s.enemyQuantityMultiplier*g.Prefab.Definition.WaveCostHalfUnits/2f));Assert.AreEqual(expected,wave.EncounterCost); }
+            finally { UnityEngine.Object.DestroyImmediate(wave); }
+        }
+    }
+}
+
+NEW SOURCE Assets/Game/Tests/PlayMode/AquaticPlayTests.cs
+using System;
+using System.Collections;
+using System.Linq;
+using NUnit.Framework;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.TestTools;
+using ShorelineDefense.Building;
+using ShorelineDefense.Core;
+using ShorelineDefense.Defenses;
+using ShorelineDefense.Enemies;
+using ShorelineDefense.Persistence;
+using ShorelineDefense.Presentation;
+using ShorelineDefense.UI;
+using ShorelineDefense.Waves;
+using Object=UnityEngine.Object;
+namespace ShorelineDefense.Tests
+{
+    public sealed class AquaticPlayTests
+    {
+        static T Find<T>()where T:Object=>Object.FindFirstObjectByType<T>();
+        EnemySpawner Spawn=>Find<EnemySpawner>();WaveManager Waves=>Find<WaveManager>();
+        EnemyController Prefab(EnemyKind kind)=>Waves.EndlessSettings.enemies.Concat(Waves.EndlessSettings.bossEncounters.bosses).Single(e=>e.Definition.Kind==kind);
+        Vector3 At(int x,int y)=>Spawn.Battlefield.Grid.CellToWorld(new Vector2Int(x,y));
+        IEnumerator Load(string map){RunSession.Pending=null;yield return SceneManager.LoadSceneAsync(map);yield return null;Time.timeScale=0;Find<BorderBreachService>().ConfigureThreshold(0);}
+        [UnityTearDown]public IEnumerator Cleanup(){Time.timeScale=1;yield return SceneManager.LoadSceneAsync("CoastalDefense_TopDown");yield return null;}
+        [UnityTest]public IEnumerator AllArrivalTypesFitBothMapsAndResolveWithoutTargetableWaterCargo()
+        {
+            foreach(string map in new[]{"CoastalDefense_TopDown","DanubeIndustrialPort"})
+            {
+                yield return Load(map);var system=Find<AssaultCarrierSystem>();var registry=Find<EnemyRegistry>();
+                foreach(var definition in system.Carriers)
+                {
+                    Assert.IsTrue(system.LandingPoints.Any(p=>system.IsValidApproach(p,definition)),map+" "+definition.method+" clearance");
+                    system.ForcedArrival=definition.method;
+                    var prefab=Prefab(definition.method==ArrivalMethod.LeviathanCarrier?EnemyKind.Bulwark:EnemyKind.Crawler);
+                    Assert.IsTrue(system.TryDispatch(prefab,1),definition.method.ToString());Assert.Zero(registry.Count,"Water cargo must not register");
+                    int spawned=Spawn.TotalSpawned;
+                    for(int i=0;i<250&&(system.ActiveCarriers>0||registry.Count>0);i++)
+                    {system.Tick(.2f);foreach(var e in registry.Active.ToArray())e.Tick(100);yield return null;}
+                    Assert.AreEqual(spawned+1,Spawn.TotalSpawned);Assert.Zero(system.IncomingPassengers);Assert.Zero(system.ActiveCarriers);Assert.Zero(registry.Count);
+                }
+            }
+        }
+        [UnityTest]public IEnumerator SpitterDamagesNearbyStructureThroughVisibleProjectileAndRepairStillWorks()
+        {
+            foreach(string map in new[]{"CoastalDefense_TopDown","DanubeIndustrialPort"})
+            {
+                yield return Load(map);var build=Find<BuildManager>();build.Economy.AddMoney(2000);var mg=Find<BuildHud>().Defenses.Single(d=>d.Id=="machine-gun-nest");
+                Assert.AreEqual(PlacementResult.Valid,build.TryPlaceDefense(mg,new Vector2Int(13,5),out var defense));
+                Assert.IsTrue(Spawn.TrySpawnAt(Prefab(EnemyKind.Spitter),At(7,5),out var far));far.GetComponent<SpitterAttack>().Tick(2);Assert.Zero(far.GetComponent<SpitterAttack>().ShotsFired);far.Health.TakeDefenseDamage(int.MaxValue);yield return null;
+                Assert.IsTrue(Spawn.TrySpawnAt(Prefab(EnemyKind.Spitter),At(9,5),out var enemy));var attack=enemy.GetComponent<SpitterAttack>();int hp=defense.CurrentHealth;
+                attack.Tick(2);Assert.AreEqual(1,attack.ShotsFired);var shot=Find<CorrosiveSpit>();Assert.NotNull(shot);Assert.NotNull(shot.GetComponent<SpriteRenderer>().sprite);Assert.AreEqual(hp,defense.CurrentHealth);
+                shot.Tick(.7f);Assert.AreEqual(hp-24,defense.CurrentHealth);shot.Tick(10);Assert.AreEqual(hp-24,defense.CurrentHealth,"No double impact");Assert.IsTrue(build.TryRepair(defense));Assert.AreEqual(hp,defense.CurrentHealth);
+            }
+        }
+        [UnityTest]public IEnumerator BurrowerIsVisibleLimitedIgnoresWireThenEmergesBeforeBorderAndBreachesOnce()
+        {
+            foreach(string map in new[]{"CoastalDefense_TopDown","DanubeIndustrialPort"})
+            {
+                yield return Load(map);var registry=Find<EnemyRegistry>();Assert.IsTrue(Spawn.TrySpawnAt(Prefab(EnemyKind.Burrower),At(8,5),out var enemy));var ability=enemy.GetComponent<BurrowerTraversal>();
+                var burn=enemy.GetComponent<EnemyDamageOverTime>();burn.ApplyBurn(5,10);int hp=enemy.Health.CurrentHealth;
+                ability.Move(1.1f);Assert.IsTrue(ability.IsBurrowed);Assert.IsFalse(enemy.IsTargetable);Assert.IsTrue(enemy.Movement.IgnoreWireSlow);Assert.IsNull(registry.FindClosest(enemy.transform.position,20));burn.Tick(1);Assert.AreEqual(hp-10,enemy.Health.CurrentHealth,"Surface burn persists underground");yield return null;
+                var renderer=enemy.transform.Find("Visual/Body").GetComponent<SpriteRenderer>();Assert.IsTrue(renderer.enabled);Assert.That(renderer.sprite.name,Does.Contain("special").Or.Contain("underground"));
+                for(int i=0;i<400&&ability.IsBurrowed;i++)ability.Move(.02f);
+                Assert.IsFalse(ability.IsBurrowed);Assert.IsTrue(enemy.IsTargetable);Assert.IsFalse(enemy.Movement.IgnoreWireSlow);Assert.LessOrEqual(ability.DistanceBurrowed,Spawn.Battlefield.Grid.CellSize*5+.01f);Assert.GreaterOrEqual(enemy.Movement.RemainingPathDistance,Spawn.Battlefield.Grid.CellSize*8-.01f);
+                long before=Find<RunStatistics>().TotalBreaches;enemy.Tick(100);Assert.AreEqual(before+1,Find<RunStatistics>().TotalBreaches);Assert.IsFalse(Find<BorderBreachService>().TryBreach(enemy));
+            }
+        }
+        [UnityTest]public IEnumerator BroodmotherSpawnsAreCappedRegisteredAndIncludedInWaveAliveCount()
+        {
+            yield return Load("CoastalDefense_TopDown");Assert.IsTrue(Waves.TryStartWave());Assert.IsTrue(Spawn.TrySpawnReinforcement(Prefab(EnemyKind.Broodmother),At(12,9),out var mother));
+            var ability=mother.GetComponent<BroodmotherSpawn>();var registry=Find<EnemyRegistry>();
+            for(int i=0;i<4;i++)ability.Tick(8);Assert.AreEqual(18,ability.Concurrent);Assert.AreEqual(18,ability.TotalSpawned);Assert.AreEqual(19,Waves.AliveCount);Assert.AreEqual(registry.Count,Waves.AliveCount);
+            for(int iteration=0;iteration<20;iteration++)
+            {foreach(var child in registry.Active.Where(e=>e!=mother).ToArray())child.Health.TakeDefenseDamage(int.MaxValue);Assert.Zero(ability.Concurrent,"Removal updates ownership before pooled reuse");yield return null;ability.Tick(8);}
+            Assert.AreEqual(60,ability.TotalSpawned);foreach(var child in registry.Active.Where(e=>e!=mother).ToArray())child.Health.TakeDefenseDamage(int.MaxValue);mother.Health.TakeDefenseDamage(int.MaxValue);yield return null;Assert.Zero(Waves.AliveCount);
+        }
+        [UnityTest]public IEnumerator ThreeHundredFiftyBroodlingsRespectRegistryCapRewardAndPooling()
+        {
+            yield return Load("CoastalDefense_TopDown");Spawn.ConfigureWave(400,1,1);Spawn.ConfigureDeployment(.1f);var prefab=Prefab(EnemyKind.Broodling);var registry=Find<EnemyRegistry>();
+            int count=0;for(int x=6;x<30&&count<350;x++)for(int y=0;y<18&&count<350;y++)if(Spawn.TrySpawnAt(prefab,At(x,y),out _))count++;
+            Assert.AreEqual(350,count);Assert.AreEqual(350,registry.Count);Assert.AreEqual(350,Object.FindObjectsByType<EnemyController>(FindObjectsSortMode.None).Count(e=>e.IsTargetable));
+            long income=Find<RunStatistics>().TotalMoneyEarned;foreach(var enemy in registry.Active.ToArray())enemy.Health.TakeDefenseDamage(int.MaxValue);yield return null;
+            Assert.Zero(registry.Count);Assert.AreEqual(350*prefab.Definition.KillReward,Find<RunStatistics>().TotalMoneyEarned-income);Assert.LessOrEqual(Spawn.PooledEnemies,400);
+            Assert.IsTrue(Spawn.TrySpawnAt(prefab,At(8,5),out var reused));Assert.IsTrue(reused.IsTargetable);Assert.Greater(Spawn.ReusedEnemies,0);Assert.IsFalse(reused.GetComponent<EnemyDamageOverTime>().Burning);
+        }
+    }
+}

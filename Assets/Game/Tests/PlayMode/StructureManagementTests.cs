@@ -41,10 +41,10 @@ namespace ShorelineDefense.Tests
         }
         [UnityTest] public IEnumerator AllEightUpgradeRepairAndRefundPathsPreserveDefinitionsAndOccupancy()
         {
-            int x=7;
             foreach(var definition in hud.Defenses)
             {
-                var d=Place(definition.Id,x,5);x+=3;int baseDamage=definition.Damage;int balance=build.Economy.Money;
+                // Reuse a clear management fixture after each removal; the old sweep entered Command Post.
+                var d=Place(definition.Id,18,5);int baseDamage=definition.Damage;int balance=build.Economy.Money;
                 Assert.That(selection.SelectCell(d.Anchor),Is.True);Assert.That(selection.Selected,Is.SameAs(d));
                 Assert.That(build.CanRepair(d),Is.False);
                 for(int level=2;level<=3;level++)

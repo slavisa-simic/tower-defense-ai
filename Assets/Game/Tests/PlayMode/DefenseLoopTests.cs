@@ -116,9 +116,10 @@ namespace ShorelineDefense.Tests
             Assert.That(builder.TryPlaceDefense(Data, cellToBuild, out var defense), Is.EqualTo(PlacementResult.Valid));
             Assert.That(builder.TryPlaceDefense(Data, cellToBuild, out _), Is.EqualTo(PlacementResult.Occupied));
             Assert.That(Economy.Money, Is.EqualTo(350));
-            Assert.That(Grid.Revision, Is.EqualTo(navigation));
+            Assert.That(Grid.Revision, Is.EqualTo(navigation + 1), "Solid construction changes navigation once.");
             defense.TakeDamage(300);
             Assert.That(Grid.OccupantAt(cellToBuild), Is.Null);
+            Assert.That(Grid.Revision, Is.EqualTo(navigation + 2), "Destruction releases the solid footprint once.");
             yield return null;
             Assert.That(defense == null, Is.True);
             Assert.That(builder.TryPlaceDefense(Data, cellToBuild, out var replacement), Is.EqualTo(PlacementResult.Valid));

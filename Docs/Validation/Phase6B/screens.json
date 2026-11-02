@@ -1,0 +1,26 @@
+[
+  {
+    "map": "CoastalDefense_TopDown",
+    "active": 47,
+    "carriers": 10,
+    "arrivals": [
+      2,
+      11,
+      2,
+      1
+    ],
+    "resolution": "1920x1080"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "active": 43,
+    "carriers": 11,
+    "arrivals": [
+      2,
+      11,
+      3,
+      0
+    ],
+    "resolution": "1920x1080"
+  }
+]

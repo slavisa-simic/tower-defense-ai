@@ -1,5 +1,22 @@
 # Art asset register
 
+## Directional shadow revision R2 — 2026-11-02
+
+User feedback explicitly rejected the first shadow correction as too weak. Existing shared PixelShadow material GUIDs are retained and now use neutral #1F2629 with Low (+4,-3) / .36, Medium (+8,-6) / .40 and Tall (+12,-9) / .40 logical source-pixel world offsets at 51.2 PPU. Low additionally covers small static props, wire and mines; containers retain obvious rectangular Medium casts and buildings/cranes use Tall silhouettes. All remain above Environment on GroundObjects -20. No new raster asset or additional renderer/pass is introduced. Source PNGs/imports remain intact. [R2 batch](Batches/shadow_directional_002.md), [current report](../../SHADOW_AUDIT_REPORT.md), `Docs/Validation/ShadowAudit/r2-material-receipt.json`, `r2-sorting-audit.json` and `r2-before/after-*.png` record the final revision. R1 values below are historical.
+
+## Visual shadow correction — 2026-11-02
+
+User-authorized replacement of weak/inconsistent Phase 3C.1/6A contacts on both maps; no scene redesign, generated artwork or gameplay phase. Reuses approved environment master v002 and current aquatic sprite silhouettes. Existing raster sources/import settings/GUIDs remain intact. Provenance and validation: [shadow batch](Batches/shadow_audit_001.md), [audit report](../../SHADOW_AUDIT_REPORT.md), `Docs/Validation/ShadowAudit/authoring-receipt.json`.
+
+| New presentation asset | Rule / source | Consumers |
+|---|---|---|
+| `Assets/Game/Materials/PixelShadow.shader` | Code-native alpha-only silhouette, world-aligned offset, unlit flat pixel shadow | Both maps, land creatures, defense footprints, base |
+| `Assets/Game/Materials/PixelShadowLow.mat` | #1F2629 / .28; (+2,-2) pixels at 51.2 PPU | Small creatures, shrubs/reeds; disabled retired boat shadow |
+| `Assets/Game/Materials/PixelShadowMedium.mat` | Same tone / .30; (+3,-3) pixels | Ordinary props, containers, all eight defenses |
+| `Assets/Game/Materials/PixelShadowTall.mat` | Same tone / .33; (+5,-5) pixels | Buildings, cranes, command post, Dredger/Broodmother |
+
+One active shadow per raised owner, GroundObjects -20 above Environment floors. Eight enemy duplicate root shadows removed; seven previously uncovered port cargo/oil props gain contacts. Water carriers retain wake/emergence without land contacts. The original contact ellipse remains historical/legacy inventory; old entries below do not describe the current raised-object implementation. Technical integration and automated/visual review are recorded in the report; no independent human art approval is claimed.
+
 ## README documentation media — 2026-10-22
 
 The authorized README showcase reuses the approved Danube master v002, HUD font, and existing sprite pixels in five self-contained SVGs, plus fresh Unity world captures and two GIFs. Outputs live under `Docs/Readme/Media/` and have no Unity import or runtime consumers. Selection is within the user's documentation request; runtime art approval states are unchanged. Exact sources, dimensions, filenames, hashes, capture setup, warning, and validation are recorded in [the batch](Batches/readme_showcase_001.md), [media notes](../Readme/MEDIA.md), and [manifest](../Readme/media-manifest.json).
@@ -491,3 +508,44 @@ Autonomous production/selection authorized by the Phase 6A request; no independe
 | UI/map_preview_danube_border.png | Actual original-map camera capture, 960x540 | Integrated/validated DanubeBorder MapDefinition.preview |
 
 Runtime world sprites: 51.2 PPU, Sprite Single, centered, Point/uncompressed/no mips/NPOT None, retained binary alpha. Terrain Environment 0, roads 1; decoration GroundObjects 2; blockers/equipment/checkpoint 3–5. Static world-aligned contact shadows (+.04,-.04), .27 opacity, no object Update scripts. Existing water/fence/sandbag GUIDs reused. Gameplay masks live in BattlefieldIndustrialPort, with 102 water/163 static blocked/18 non-buildable pier/48 floodable cells. Scene owns geometry; art does not alter stats, economy or footprints. Evidence: `Docs/Validation/Phase6A/` and `PHASE_6A_REPORT.md`.
+
+## Phase 6B — aquatic ecosystem (2026-11-02)
+
+Authorization: the user's autonomous Phase 6B request replaces active enemy, carrier and boss identity. Three new master revisions selected by the executing agent after visual review; no separate human approval claimed. Existing environment/defense master v002 remains the palette reference, with its previous enemy imagery superseded.
+
+| Deliverable | Selected source/reference | Runtime consumer | Status |
+|---|---|---|---|
+| Six-creature master | MasterReferences/ref_aquatic_enemy_lineup_01.png | Style/anatomy reference only | Selected |
+| Carrier master | MasterReferences/ref_aquatic_carriers_01.png | Style/anatomy reference only | Selected |
+| Boss master | MasterReferences/ref_aquatic_boss_lineup_01.png | Style/anatomy reference only | Selected |
+| Crawler / Skitter / Bulwark / Spitter | SourceSheets/p6b_aquatic_001/*_raw_v001.png; creature master | Art/Enemies/Aquatic; matching active prefabs and definitions | Validated |
+| Broodling / Burrower | Same batch and creature master | Minimal larvae animation; burrow transition/trail/emerge presentation | Validated |
+| Dredger / Broodmother | Boss raw sheets and boss master | Active boss prefabs, data, encounter catalog and HUD | Validated |
+| Drift Pod / Brood Carrier / Leviathan | Carrier raw sheets and carrier master | Art/Carriers; CarrierDefinition and carrier prefabs on both maps | Validated |
+| Biological VFX | biovfx_raw_v001.png and creature master | Art/Effects/Aquatic, shared VfxCatalog, Spitter glob | Validated |
+| Direct emergence | Actual selected creature emergence frames | direct_emergence carrier presentation; no extra duplicated sheet | Validated |
+| Retired humanoid / hull assets | Original GUIDs retained through AssetDatabase moves | Art/Legacy and Game/Legacy; no active enemy/transport prefab dependency | Archived |
+
+Inventory: 12 byte-retained raw production sheets, 3 masters, 71 runtime four-frame sheets / 284 sprites, 71 sprite-only clips. Exact filenames, dimensions and SHA-256: Docs/Validation/Phase6B/art-manifest.json. Source-to-runtime frame grids and import operations: import-receipt.json, Author.cs and Finalize.cs. Exact prompts and source output locations: Batches/p6b_aquatic_001.prompts.json. Batch review: Batches/p6b_aquatic_001.md. Replacement reason: user-authorized original aquatic ecosystem, removing active human/faction enemy and boat-delivery art.
+
+Point / 51.2 PPU / uncompressed / no mipmaps / Clamp / FullRect / centered pivots / local +X. Standard 64px, larvae 32px, bosses 128px, carriers 192x96. Common-scale nearest export, hard alpha cutoff 220, five-bit channels without dithering; all runtime alpha binary. Contact shadows stay presentation-only and disable underground; water silhouettes have no land shadows. Four-frame hit feedback is .2 seconds. Art never owns damage, movement, release, reward or wave progression.
+
+Validation: both-map early waves, biological boss encounters, actual 1920x1080 Update-driven captures, all-type water clearance, Spitter/repair, visible limited Burrower, bounded/registered Broodmother larvae and 350-unit stress. Final terminal test results, Console and limits are recorded in PHASE_6B_REPORT.md; historical test attempts remain diagnostics. Audio deferred. No Phase 6C started.
+
+Danube map-card preview refreshed from the saved scene through native Unity camera rendering; original texture GUID/importer retained. Replacement removes obsolete boat imagery. Previous image: Docs/Validation/Phase6B/map-preview-before.png. Native capture receipt: preview-replacement.json.
+
+# Navigation collision integration — 2026-11-02
+
+No new art or image replacement. Existing both-map environment, six solid defense prefabs and eight creature prefabs receive navigation/collider/combat bindings under the user's collision overhaul request. Runtime image GUIDs, presentation roots, footprints, R2 shadows and sorting retained. See [integration record](Batches/navigation_collision_001.md), `NAVIGATION_COLLISION_AUDIT.md` and `COLLISION_NAVIGATION_COMBAT_REPORT.md` for scope and actual validation. Authoring receipt: `Docs/Validation/NavigationCollision/Author.cs`.
+
+# Phase 6C research UI — 2026-11-02
+
+| Deliverable | Source / selected reference | Consumer | Status |
+|---|---|---|---|
+| Five Logistics icons | `SourceSheets/p6c_research_001/logistics_raw_v001.png`; master `bd_ref_danube_master_v002.png` palette/material language | `Art/UI/Research/bd_ui_research_logistics_sheet_v001.png`; five Logistics research definitions | Integrated / visually inspected |
+| Five Engineering icons | Same batch, `engineering_raw_v001.png`, same master | Engineering strip and five Engineering definitions | Integrated / visually inspected |
+| Five Weapons icons | Same batch, `weapons_raw_v001.png`, same master | Weapons strip and five Weapons definitions | Integrated / visually inspected |
+| Five Intelligence icons | Same batch, `intelligence_raw_v001.png`, same master | Intelligence strip and five Intelligence definitions | Integrated / visually inspected |
+| RP research-file icon | Same batch, `rp_raw_v001.png`, same master | `bd_ui_research_points_v001.png`; `Resources/ResearchCatalog.asset` | Integrated / visually inspected |
+
+Twenty node sprites and one separate RP sprite, five local runtime textures. Autonomous selection authorized by the Phase 6C request; no independent human approval claimed. Existing world/UI art and GUIDs preserved. Point/uncompressed/no mips/real alpha; branch sprites use alpha-bounded rects and stable IDs. Exact prompts, returned sources, revisions, dimensions, consumers, import settings and visual evidence: [batch record](Batches/p6c_research_001.md), its two prompt JSON files, and `Docs/Validation/Phase6C/` manifests/captures. The existing UI Toolkit owns grid, links, text, affordability, selection, researched markers and gameplay bindings. No art-driven gameplay changes.

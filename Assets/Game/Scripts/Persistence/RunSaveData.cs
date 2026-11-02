@@ -5,7 +5,8 @@ namespace ShorelineDefense.Persistence
 {
     [Serializable] public sealed class RunSaveData
     {
-        public int saveVersion = 2;
+        public int saveVersion = 4;
+        public Progression.RunMetaSnapshot metaSnapshot = new Progression.RunMetaSnapshot();
         public string mapId = ShorelineDefense.Grid.MapCatalog.OriginalId;
         public string runId, savedUtc;
         public int wave, completedWaves, seed, money, maxHomicides;
@@ -50,6 +51,9 @@ namespace ShorelineDefense.Persistence
         public string mapId;
         public string runId, endedUtc;
         public int wave, peakEnemies;
+        public int completedWaves, researchEarned;
+        public bool hasResearchReward;
+        public long dredgers, broodmothers;
         public long kills, homicides, bosses, earned;
         public double duration;
     }

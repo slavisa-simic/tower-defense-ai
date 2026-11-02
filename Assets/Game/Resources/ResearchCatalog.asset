@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19a9fd33abb1b3748ad0bb6e5a300e46, type: 3}
+  m_Name: ResearchCatalog
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Progression.ResearchCatalog
+  nodes:
+  - {fileID: 11400000, guid: d9edd1497598e454fb5f8bc3dfabe349, type: 2}
+  - {fileID: 11400000, guid: 3953530bd0304a341b431c4708fcac83, type: 2}
+  - {fileID: 11400000, guid: 4f5724be3e065a3489afcd01ee43212c, type: 2}
+  - {fileID: 11400000, guid: e459ae66cef55294c8d8281a14309297, type: 2}
+  - {fileID: 11400000, guid: 1c289df1fa7f1d546bf0d7b0002f1893, type: 2}
+  - {fileID: 11400000, guid: a113041fe3c624144a6f42a473126e1e, type: 2}
+  - {fileID: 11400000, guid: af5a0d116edd5d6428a6b3542990b8cc, type: 2}
+  - {fileID: 11400000, guid: f4a6c3afea66dff45bf5e8ba57899f3e, type: 2}
+  - {fileID: 11400000, guid: 1b09c060f5767b24a879023117cdca0d, type: 2}
+  - {fileID: 11400000, guid: 24e0d3a95eacc2240b9704632876aef5, type: 2}
+  - {fileID: 11400000, guid: 9e270c74705f8ea45bfa7c0bb327aa96, type: 2}
+  - {fileID: 11400000, guid: eb79b79828fcd6745bbf37cb0d6d0dae, type: 2}
+  - {fileID: 11400000, guid: 727870ef4d2d8b447af246372debb5c9, type: 2}
+  - {fileID: 11400000, guid: a833e9ed64e1ec3409a1cf647e814bcb, type: 2}
+  - {fileID: 11400000, guid: 42067a5bba1f222428b0b5e917dcc47b, type: 2}
+  - {fileID: 11400000, guid: c789600fb9a846e4fbf7a61ea1ac744d, type: 2}
+  - {fileID: 11400000, guid: 750f9455eb28169449365693a0ae93b4, type: 2}
+  - {fileID: 11400000, guid: 40ea064385e9a21479d49d16fea47566, type: 2}
+  - {fileID: 11400000, guid: 6ce2e42f40ea41c4590440e2c89c93ad, type: 2}
+  - {fileID: 11400000, guid: 7fff908eb4a59fd4ea4d7e78c69798b3, type: 2}
+  rewards: {fileID: 11400000, guid: c0d3e67a50f165446bd88e72cdffdb75, type: 2}
+  researchPointIcon: {fileID: 21300000, guid: 77e3ef94f82c8b14294ed9f2851a6cc1, type: 3}

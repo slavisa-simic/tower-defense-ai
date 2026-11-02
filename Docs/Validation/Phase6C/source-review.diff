@@ -1,0 +1,521 @@
+diff --git "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Building_BuildManager.cs" "b/Assets\\Game\\Scripts\\Building\\BuildManager.cs"
+index 8d007fe..158cf15 100644
+--- "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Building_BuildManager.cs"
++++ "b/Assets\\Game\\Scripts\\Building\\BuildManager.cs"
+@@ -17,6 +17,8 @@ namespace ShorelineDefense.Building
+         [SerializeField] private Transform defenseParent;
+         private Transform staging;
+         private bool placing;
++        public Progression.MetaModifierService Meta { get; private set; } = Progression.MetaModifierService.Neutral;
++        public void ConfigureMeta(Progression.MetaModifierService modifiers) => Meta = modifiers;
+         private RunStatistics statistics;
+         public event Action StableActionCommitted;
+         private void Awake() => statistics = FindFirstObjectByType<RunStatistics>();
+@@ -26,10 +28,12 @@ namespace ShorelineDefense.Building
+         [SerializeField, Min(.01f)] private float waveRepairMultiplier = 1.25f;
+         public void ConfigureWaves(ShorelineDefense.Waves.WaveManager manager) => waves = manager;
+         public ShorelineDefense.Waves.EndlessEventManager Events => waves?.Events;
+-        public float RepairMultiplier => waves != null && (waves.State == ShorelineDefense.Waves.WaveState.Spawning || waves.State == ShorelineDefense.Waves.WaveState.Combat) ? waveRepairMultiplier * (Events?.Modifiers.combatRepair ?? 1) : preparationRepairMultiplier * (Events?.Modifiers.preparationRepair ?? 1);
+-        public int UpgradeCost(DefenseBase defense) => defense != null && defense.Level < 3 ? (int)Math.Min(int.MaxValue, Math.Ceiling((defense.Definition.LevelData(defense.Level + 1)?.cost ?? 0) * Math.Round((double)(Events?.Modifiers.upgradeCost ?? 1), 6))) : 0;
++        private bool CombatRepair => waves != null && (waves.State == ShorelineDefense.Waves.WaveState.Spawning || waves.State == ShorelineDefense.Waves.WaveState.Combat);
++        private double ExactRepairMultiplier => Math.Round(CombatRepair ? waveRepairMultiplier : preparationRepairMultiplier, 6) * Meta.RepairMultiplier(CombatRepair) * Math.Round(CombatRepair ? Events?.Modifiers.combatRepair ?? 1 : Events?.Modifiers.preparationRepair ?? 1, 6);
++        public float RepairMultiplier => (float)ExactRepairMultiplier;
++        public int UpgradeCost(DefenseBase defense) => defense != null && defense.Level < 3 ? Math.Max(1, (int)Math.Min(int.MaxValue, Math.Ceiling((defense.Definition.LevelData(defense.Level + 1)?.cost ?? 0) * Meta.UpgradeMultiplier * Math.Round((double)(Events?.Modifiers.upgradeCost ?? 1), 6)))) : 0;
+         public int RepairCost(DefenseBase defense) => defense != null && defense.IsAlive && defense.CurrentHealth < defense.MaxHealth ?
+-            Math.Max(1, (int)Math.Min(int.MaxValue, Math.Ceiling(defense.TotalInvestment * (double)repairBasisFraction * (defense.MaxHealth - defense.CurrentHealth) / defense.MaxHealth * RepairMultiplier))) : 0;
++            Math.Max(1, (int)Math.Min(int.MaxValue, Math.Ceiling(defense.TotalInvestment * Math.Round((double)repairBasisFraction, 6) * (defense.MaxHealth - defense.CurrentHealth) / defense.MaxHealth * ExactRepairMultiplier))) : 0;
+         public bool CanUpgrade(DefenseBase defense) => CanDismantle(defense) && defense.Level < 3 && UpgradeCost(defense) > 0 && economy.CanAfford(UpgradeCost(defense));
+         public bool CanRepair(DefenseBase defense) => CanDismantle(defense) && RepairCost(defense) > 0 && economy.CanAfford(RepairCost(defense));
+         public bool TryUpgrade(DefenseBase defense)
+@@ -47,7 +51,7 @@ namespace ShorelineDefense.Building
+             finally { placing = false; }
+         }
+         [SerializeField, Range(0, 1)] private float dismantleRefundFraction = .5f;
+-        public int RefundFor(DefenseBase defense) => defense != null ? (int)Math.Min(int.MaxValue, Math.Floor(defense.TotalInvestment * (double)(float.IsNaN(dismantleRefundFraction) ? .5f : Mathf.Clamp01(dismantleRefundFraction)))) : 0;
++        public int RefundFor(DefenseBase defense) => defense != null ? (int)Math.Min(int.MaxValue, Math.Floor(defense.TotalInvestment * Math.Min(.75, Math.Max(0, Math.Round(float.IsNaN(dismantleRefundFraction) ? .5 : dismantleRefundFraction, 6) + Meta.RefundBonus)))) : 0;
+         public bool CanDismantle(DefenseBase defense) => game != null && game.IsPlaying && defense != null && defense.Owner == this && defense.IsAlive && !defense.Dismantled && defense.gameObject.activeInHierarchy && !(defense.GetComponent<LandMine>()?.Exploded ?? false);
+         public bool TryDismantle(DefenseBase defense, out int refund) {
+             refund = 0;
+@@ -109,7 +113,7 @@ namespace ShorelineDefense.Building
+                 candidate = CreateDefense(definition, grid.Grid.FootprintCenter(cell, definition.Footprint), staging);
+                 if (candidate == null) return PlacementResult.CreationFailed;
+                 candidate.gameObject.SetActive(false);
+-                candidate.Initialize(definition, cell, grid.Grid, game, enemies);
++                candidate.Initialize(definition, cell, grid.Grid, game, enemies, Meta);
+                 result = Validate(definition, cell);
+                 if (result != PlacementResult.Valid) return result;
+                 if (!grid.Grid.TryOccupy(cell, definition.Footprint, candidate)) return PlacementResult.Occupied;
+@@ -154,7 +158,7 @@ namespace ShorelineDefense.Building
+             if (staging == null) { staging = new GameObject("Inactive Defense Staging").transform; staging.SetParent(transform, false); staging.gameObject.SetActive(false); }
+             var candidate = CreateDefense(definition, grid.Grid.FootprintCenter(cell, definition.Footprint), staging);
+             candidate.gameObject.SetActive(false);
+-            candidate.Initialize(definition, cell, grid.Grid, game, enemies);
++            candidate.Initialize(definition, cell, grid.Grid, game, enemies, Meta);
+             candidate.SetConstructionOwner(this, data.constructionCost);
+             candidate.RestoreState(data);
+             if (!grid.Grid.TryOccupy(cell, definition.Footprint, candidate)) throw new InvalidOperationException("Saved structure overlaps another structure.");
+diff --git "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Defenses_DefenseBase.cs" "b/Assets\\Game\\Scripts\\Defenses\\DefenseBase.cs"
+index d911286..e5af569 100644
+--- "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Defenses_DefenseBase.cs"
++++ "b/Assets\\Game\\Scripts\\Defenses\\DefenseBase.cs"
+@@ -11,6 +11,7 @@ namespace ShorelineDefense.Defenses
+     {
+         private Health health;
+         private bool removed;
++        public Progression.MetaModifierService Meta { get; private set; } = Progression.MetaModifierService.Neutral;
+         public ShorelineDefense.Building.BuildManager Owner { get; private set; }
+         public int ConstructionCost { get; private set; }
+         public int Level { get; private set; } = 1;
+@@ -20,17 +21,20 @@ namespace ShorelineDefense.Defenses
+         public event Action Upgraded;
+         public event Action<int> Damaged;
+         private DefenseLevelData LevelStats => Definition.LevelData(Level);
+-        public int Damage => Mathf.RoundToInt(Definition.Damage * (LevelStats?.damage ?? 1));
+-        public float FireRate => Definition.FireRate * (LevelStats?.fireRate ?? 1);
++        public int Damage => DamageAtLevel(Level);
++        public int DamageAtLevel(int level) => Mathf.RoundToInt(Definition.Damage * Meta.DamageMultiplier(Definition) * (Definition.LevelData(level)?.damage ?? 1));
++        public float FireRate => FireRateAtLevel(Level);
++        public float FireRateAtLevel(int level) => Definition.FireRate * Meta.FireRateMultiplier(Definition) * (Definition.LevelData(level)?.fireRate ?? 1);
++        public float DamageTick => Definition.HeavyWeapon.damageTick / Meta.FireRateMultiplier(Definition);
+         public float MovementMultiplier => Mathf.Max(.05f, Definition.MovementMultiplier * (LevelStats?.slow ?? 1));
+-        public float SplashRadiusInCells => Definition.HeavyWeapon.splashRadiusInCells * (LevelStats?.splash ?? 1);
+-        public float BurnDuration => Definition.HeavyWeapon.burnDuration * (LevelStats?.burnDuration ?? 1);
++        public float SplashRadiusInCells => Definition.HeavyWeapon.splashRadiusInCells * Meta.SplashMultiplier(Definition) * (LevelStats?.splash ?? 1);
++        public float BurnDuration => Definition.HeavyWeapon.burnDuration * Meta.BurnMultiplier(Definition) * (LevelStats?.burnDuration ?? 1);
+         public float BurnDps => Definition.HeavyWeapon.burnDps * (LevelStats?.burnDps ?? 1);
+         internal void ApplyUpgrade(int cost)
+         {
+             Level++;
+             TotalInvestment += cost;
+-            health.IncreaseMaximum(Mathf.RoundToInt(Definition.MaxHealth * (LevelStats?.health ?? 1)));
++            health.IncreaseMaximum(Meta.MaxHealth(Definition, Level));
+             Upgraded?.Invoke();
+             Changed?.Invoke();
+         }
+@@ -38,7 +42,7 @@ namespace ShorelineDefense.Defenses
+         internal void RestoreState(Persistence.StructureSaveData data)
+         {
+             Level = data.level; ConstructionCost = data.constructionCost; TotalInvestment = data.investment;
+-            health.IncreaseMaximum(Mathf.RoundToInt(Definition.MaxHealth * (LevelStats?.health ?? 1)));
++            health.IncreaseMaximum(Meta.MaxHealth(Definition, Level));
+             if (health.MaxHealth != data.maxHealth) throw new InvalidOperationException("Structure tuning differs from this save.");
+             health.TakeDamage(health.MaxHealth - data.health);
+         }
+@@ -62,22 +66,24 @@ namespace ShorelineDefense.Defenses
+         public Vector2Int Anchor { get; private set; }
+         public bool IsAlive => health != null && health.IsAlive && !Dismantled && !removed;
+         public int CurrentHealth => health?.CurrentHealth ?? 0;
+-        public float Range => Definition.RangeInCells * (LevelStats?.range ?? 1) * grid.CellSize *
++        public float Range => RangeAtLevel(Level);
++        public float RangeAtLevel(int level) => Definition.RangeInCells * Meta.RangeMultiplier(Definition) * (Definition.LevelData(level)?.range ?? 1) * grid.CellSize *
+             (Definition.Id == "land-mine" || Definition.Id == "barbed-wire" ? 1 : Owner?.Events?.Modifiers.defenseRange ?? 1);
+         public BattlefieldGrid Grid => grid;
+         public event Action Died;
+ 
+         public void Initialize(DefenseDefinition definition, Vector2Int anchor, BattlefieldGrid battlefield,
+-            GameStateController state, EnemyRegistry enemies)
++            GameStateController state, EnemyRegistry enemies, Progression.MetaModifierService modifiers = null)
+         {
+             if (health != null) throw new InvalidOperationException("A defense can only be initialized once.");
+             Definition = definition;
++            Meta = modifiers ?? Progression.MetaModifierService.Neutral;
+             Anchor = anchor;
+             grid = battlefield;
+             footprint = definition.Footprint;
+             Game = state;
+             Enemies = enemies;
+-            health = new Health(definition.MaxHealth);
++            health = new Health(Meta.MaxHealth(definition, 1));
+             health.Changed += HealthChanged;
+             health.Died += OnDied;
+             if (grid.Plane == GameplayPlane.XY && definition.BlocksMovement && TryGetComponent<BoxCollider2D>(out var collider))
+diff --git "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Defenses_FlameWeapon.cs" "b/Assets\\Game\\Scripts\\Defenses\\FlameWeapon.cs"
+index 3ff6919..5d5a095 100644
+--- "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Defenses_FlameWeapon.cs"
++++ "b/Assets\\Game\\Scripts\\Defenses\\FlameWeapon.cs"
+@@ -23,7 +23,7 @@ namespace ShorelineDefense.Defenses
+             timer -= dt;
+             if (timer > 0) return;
+             var data = defense.Definition.HeavyWeapon;
+-            timer = data.damageTick;
++            timer = defense.DamageTick;
+             var target = defense.Enemies.FindTarget(transform.position, defense.Range, defense.Definition.Targeting);
+             Firing = target != null;
+             if (!Firing) { AimDirection = Vector2.left; return; }
+diff --git "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Persistence_AquaticSaveMigration.cs" "b/Assets\\Game\\Scripts\\Persistence\\AquaticSaveMigration.cs"
+index cc27ed1..7029ac0 100644
+--- "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Persistence_AquaticSaveMigration.cs"
++++ "b/Assets\\Game\\Scripts\\Persistence\\AquaticSaveMigration.cs"
+@@ -13,7 +13,8 @@ namespace ShorelineDefense.Persistence
+         public static bool Upgrade(RunSaveData data)
+         {
+             if (!SaveGameService.Valid(data)) return false;
+-            if (data.saveVersion >= 3) return true;
++            if (data.saveVersion >= 4) return true;
++            if (data.saveVersion == 3) { data.metaSnapshot = new Progression.RunMetaSnapshot(); data.saveVersion = 4; return true; }
+             if (data.saveVersion == 1) data.mapId = ShorelineDefense.Grid.MapCatalog.OriginalId;
+             var old = data.statistics.kills;
+             long Add(long a, long b) => a > long.MaxValue - b ? long.MaxValue : a + b;
+@@ -25,7 +26,7 @@ namespace ShorelineDefense.Persistence
+             events.currentId = EventId(events.currentId); events.mostRecent = EventId(events.mostRecent);
+             for (int i = 0; i < events.recent.Count; i++) events.recent[i] = EventId(events.recent[i]);
+             foreach (var list in new[]{events.cooldowns, events.counts, events.history}) foreach (var item in list) item.id = EventId(item.id);
+-            data.saveVersion = 3; return true;
++            data.metaSnapshot = new Progression.RunMetaSnapshot(); data.saveVersion = 4; return true;
+         }
+     }
+ }
+diff --git "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Persistence_RunSaveCompatibility.cs" "b/Assets\\Game\\Scripts\\Persistence\\RunSaveCompatibility.cs"
+index 6eb66c8..39140e4 100644
+--- "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Persistence_RunSaveCompatibility.cs"
++++ "b/Assets\\Game\\Scripts\\Persistence\\RunSaveCompatibility.cs"
+@@ -14,11 +14,12 @@ namespace ShorelineDefense.Persistence
+         {
+             if (!SaveGameService.Valid(data) || defenses == null || map == null) return false;
+             var cells = new HashSet<Vector2Int>();
++            var meta = new Progression.MetaModifierService(data.saveVersion >= 4 ? data.metaSnapshot : new Progression.RunMetaSnapshot());
+             foreach (var item in data.structures)
+             {
+                 DefenseDefinition definition = null;
+                 foreach (var candidate in defenses) if (candidate != null && candidate.Id == item.defenseId) { definition = candidate; break; }
+-                if (definition == null || !definition.IsValid || Mathf.RoundToInt(definition.MaxHealth * (definition.LevelData(item.level)?.health ?? 1)) != item.maxHealth) return false;
++                if (definition == null || !definition.IsValid || meta.MaxHealth(definition, item.level) != item.maxHealth) return false;
+                 if (item.x < 0 || item.y < 0 || (long)item.x + definition.Footprint.x > map.Width || (long)item.y + definition.Footprint.y > map.Height) return false;
+                 for (int x = 0; x < definition.Footprint.x; x++) for (int y = 0; y < definition.Footprint.y; y++)
+                 { var cell = new Vector2Int(item.x + x, item.y + y); if (map.TerrainAt(cell) != TerrainType.Ground || Array.IndexOf(map.noBuildCells, cell) >= 0 || !cells.Add(cell)) return false; }
+diff --git "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Persistence_RunSaveData.cs" "b/Assets\\Game\\Scripts\\Persistence\\RunSaveData.cs"
+index 906870f..66deb79 100644
+--- "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Persistence_RunSaveData.cs"
++++ "b/Assets\\Game\\Scripts\\Persistence\\RunSaveData.cs"
+@@ -5,7 +5,8 @@ namespace ShorelineDefense.Persistence
+ {
+     [Serializable] public sealed class RunSaveData
+     {
+-        public int saveVersion = 3;
++        public int saveVersion = 4;
++        public Progression.RunMetaSnapshot metaSnapshot = new Progression.RunMetaSnapshot();
+         public string mapId = ShorelineDefense.Grid.MapCatalog.OriginalId;
+         public string runId, savedUtc;
+         public int wave, completedWaves, seed, money, maxHomicides;
+@@ -50,6 +51,9 @@ namespace ShorelineDefense.Persistence
+         public string mapId;
+         public string runId, endedUtc;
+         public int wave, peakEnemies;
++        public int completedWaves, researchEarned;
++        public bool hasResearchReward;
++        public long dredgers, broodmothers;
+         public long kills, homicides, bosses, earned;
+         public double duration;
+     }
+diff --git "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Persistence_RunSession.cs" "b/Assets\\Game\\Scripts\\Persistence\\RunSession.cs"
+index dfd8444..7fb908a 100644
+--- "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Persistence_RunSession.cs"
++++ "b/Assets\\Game\\Scripts\\Persistence\\RunSession.cs"
+@@ -18,6 +18,8 @@ namespace ShorelineDefense.Persistence
+         public double Duration { get; private set; }
+         public string Feedback { get; private set; }
+         public bool Ready { get; private set; }
++        public Progression.MetaModifierService Modifiers { get; private set; } = Progression.MetaModifierService.Neutral;
++        public Progression.RunAwardReceipt ResearchAward { get; private set; }
+         public event Action FeedbackChanged;
+         private BuildManager builder;
+         private WaveManager waves;
+@@ -42,7 +44,11 @@ namespace ShorelineDefense.Persistence
+             try
+             {
+                 if (data != null) Restore(data);
+-                else { RunId = Guid.NewGuid().ToString(); Duration = 0; }
++                else {
++                    RunId = Guid.NewGuid().ToString(); Duration = 0;
++                    SetModifiers(Progression.MetaModifierService.FromProfile(LocalGameData.Profile, Progression.ResearchCatalog.Load()));
++                    builder.Economy.Restore((int)Math.Min(int.MaxValue, (long)builder.Economy.Money + Modifiers.StartingRsd), 0, 0, 0, 0);
++                }
+                 Ready = true;
+             }
+             catch (Exception exception)
+@@ -62,6 +68,7 @@ namespace ShorelineDefense.Persistence
+             if ((data.saveVersion == 1 ? ShorelineDefense.Grid.MapCatalog.OriginalId : data.mapId) != MapId) throw new InvalidOperationException("Wrong map for saved run.");
+             var definitions = FindFirstObjectByType<BuildHud>().Defenses;
+             if (!RunSaveCompatibility.Valid(data, definitions, builder.Battlefield.Definition, waves.EndlessSettings.eventSettings)) throw new InvalidOperationException("Save catalog or map is incompatible.");
++            SetModifiers(data.metaSnapshot);
+             RunId = data.runId; Duration = data.duration; border.ConfigureThreshold(data.maxHomicides);
+             builder.Economy.Restore(data.money, data.earned, data.spent, data.refunds, data.dismantled);
+             waves.RestorePreparation(data);
+@@ -71,11 +78,13 @@ namespace ShorelineDefense.Persistence
+         }
+         private static DefenseDefinition FindDefinition(IReadOnlyList<DefenseDefinition> catalog, string id)
+         { foreach (var d in catalog) if (d.Id == id) return d; return null; }
++        private void SetModifiers(Progression.RunMetaSnapshot snapshot)
++        { Modifiers = new Progression.MetaModifierService(snapshot); builder.ConfigureMeta(Modifiers); waves.ConfigureMeta(Modifiers); }
+         public RunSaveData Capture()
+         {
+             if (!CanSave) throw new InvalidOperationException("Progress is saved between waves.");
+             var money = builder.Economy;
+-            var data = new RunSaveData { mapId = MapId, runId = RunId, duration = Duration, wave = waves.CurrentWaveNumber, completedWaves = waves.CompletedWaves,
++            var data = new RunSaveData { metaSnapshot = Modifiers.Capture(), mapId = MapId, runId = RunId, duration = Duration, wave = waves.CurrentWaveNumber, completedWaves = waves.CompletedWaves,
+                 seed = waves.RunSeed, money = money.Money, earned = money.TotalEarned, spent = money.TotalSpent, refunds = money.RefundIncome,
+                 dismantled = money.StructuresDismantled, maxHomicides = border.MaxHomicides, statistics = statistics.Capture(), events = waves.Events.Capture() };
+             foreach (var d in FindObjectsByType<DefenseBase>(FindObjectsSortMode.None))
+@@ -109,6 +118,7 @@ namespace ShorelineDefense.Persistence
+             dirty = false;
+             finished = new RunRecord { mapId = MapId, runId = RunId, endedUtc = DateTime.UtcNow.ToString("O"), wave = statistics.HighestWaveReached,
+                 kills = statistics.TotalKills, homicides = statistics.Homicides, bosses = statistics.BossesKilled,
++                completedWaves = waves.CompletedWaves, dredgers = statistics.DredgerKills, broodmothers = statistics.BroodmotherKills,
+                 earned = statistics.TotalMoneyEarned, duration = Duration, peakEnemies = statistics.PeakActiveEnemies };
+             FinalizeRun();
+         }
+@@ -116,7 +126,10 @@ namespace ShorelineDefense.Persistence
+         {
+             if (history == null || saves == null) return false;
+             if (finalized || finished == null) return finalized;
+-            if (!history.Record(finished, out string error)) { saves.Delete(out _); Notify("RUN HISTORY SAVE FAILED — " + error); return false; }
++            if (!LocalGameData.Profile.CompleteRun(finished, Progression.ResearchCatalog.Load()?.rewards, out var award, out string error))
++            { Notify("RESEARCH SAVE FAILED — " + error + " / Retry from this summary."); return false; }
++            ResearchAward = award; finished.hasResearchReward = true; finished.researchEarned = award.Total;
++            if (!history.Record(finished, out error)) { Notify("RUN HISTORY SAVE FAILED — " + error); return false; }
+             finalized = saves.Delete(out error);
+             Notify(finalized ? "RUN RECORDED" : "Run recorded; active save cleanup failed: " + error);
+             return finalized;
+diff --git "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Persistence_SaveGameService.cs" "b/Assets\\Game\\Scripts\\Persistence\\SaveGameService.cs"
+index 6ceb0e3..ede5b82 100644
+--- "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Persistence_SaveGameService.cs"
++++ "b/Assets\\Game\\Scripts\\Persistence\\SaveGameService.cs"
+@@ -15,11 +15,11 @@ namespace ShorelineDefense.Persistence
+             data.savedUtc = DateTime.UtcNow.ToString("O");
+             return store.Write("active_run", data, out error);
+         }
+-        public bool Load(out RunSaveData data, out string error) => store.Read("active_run", d => AquaticSaveMigration.Upgrade(d) && (compatibility == null || compatibility(d)) && !history.Contains(d.runId), out data, out error);
++        public bool Load(out RunSaveData data, out string error) => store.Read("active_run", d => AquaticSaveMigration.Upgrade(d) && (compatibility == null || compatibility(d)) && !history.Contains(d.runId) && !new Progression.PlayerProfileService(store).HasCompleted(d.runId), out data, out error);
+         public bool Delete(out string error) => store.Delete("active_run", out error);
+         public static bool Valid(RunSaveData d)
+         {
+-            if (d == null || d.saveVersion < 1 || d.saveVersion > 3 || (d.saveVersion >= 2 && string.IsNullOrEmpty(d.mapId)) || !Guid.TryParse(d.runId, out _) || d.wave < 1 || d.wave > 1000000 ||
++            if (d == null || d.saveVersion < 1 || d.saveVersion > 4 || (d.saveVersion >= 4 && !Progression.RunMetaSnapshot.Valid(d.metaSnapshot)) || (d.saveVersion >= 2 && string.IsNullOrEmpty(d.mapId)) || !Guid.TryParse(d.runId, out _) || d.wave < 1 || d.wave > 1000000 ||
+                 d.completedWaves != d.wave - 1 || d.money < 0 || d.maxHomicides < 0 || double.IsNaN(d.duration) || double.IsInfinity(d.duration) || d.duration < 0 ||
+                 d.earned < 0 || d.spent < 0 || d.refunds < 0 || d.dismantled < 0 || d.statistics?.kills?.Length != 9 || d.events == null || d.structures == null || d.structures.Count > 2048) return false;
+             var s = d.statistics;
+diff --git "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Persistence_SettingsService.cs" "b/Assets\\Game\\Scripts\\Persistence\\SettingsService.cs"
+index 026385a..77ac540 100644
+--- "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Persistence_SettingsService.cs"
++++ "b/Assets\\Game\\Scripts\\Persistence\\SettingsService.cs"
+@@ -41,11 +41,13 @@ namespace ShorelineDefense.Persistence
+     {
+         private static LocalJsonStore files;
+         private static SettingsService settings;
++        private static Progression.PlayerProfileService profile;
++        public static Progression.PlayerProfileService Profile => profile ?? (profile = new Progression.PlayerProfileService(Files));
+         public static LocalJsonStore Files => files ?? (files = new LocalJsonStore(System.IO.Path.Combine(Application.persistentDataPath, "BorderDefenders")));
+         public static SettingsService Settings => settings ?? (settings = new SettingsService(Files));
+         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
+-        private static void Reset() { files = null; settings = null; RunSession.Pending = null; }
++        private static void Reset() { files = null; settings = null; profile = null; RunSession.Pending = null; }
+         // Test fixtures redirect local storage before loading any product scene.
+-        public static void UseDirectory(string directory) { files = new LocalJsonStore(directory); settings = null; }
++        public static void UseDirectory(string directory) { files = new LocalJsonStore(directory); settings = null; profile = null; }
+     }
+ }
+diff --git "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\UI_BuildHud.cs" "b/Assets\\Game\\Scripts\\UI\\BuildHud.cs"
+index cbf91eb..fe0d96e 100644
+--- "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\UI_BuildHud.cs"
++++ "b/Assets\\Game\\Scripts\\UI\\BuildHud.cs"
+@@ -22,6 +22,10 @@ namespace ShorelineDefense.UI
+         private Label hint;
+         private Button buildButton; private Button dismantle;
+         private bool subscribed;
++        private BuildManager builder;
++        private ShorelineDefense.Waves.WaveManager waves;
++        private Progression.MetaModifierService tooltipMeta;
++        private float tooltipRange = -1;
+         private readonly List<Button> buttons = new List<Button>();
+         private readonly List<Action> selections = new List<Action>();
+         public string MoneyText => moneyLabel?.text;
+@@ -42,6 +46,7 @@ namespace ShorelineDefense.UI
+             if (moneyLabel == null || hint == null || buildButton == null)
+             { Debug.LogError("Build HUD is missing money, build-hint or build-mg in its UXML.", this); return; }
+             if (defenses == null || defenses.Length == 0) defenses = new[] { machineGun };
++            builder = FindFirstObjectByType<BuildManager>(); waves = FindFirstObjectByType<ShorelineDefense.Waves.WaveManager>();
+             var bar = buildButton.parent;
+             for (int i = 0; i < defenses.Length; i++)
+             {
+@@ -74,6 +79,7 @@ namespace ShorelineDefense.UI
+             economy.MoneyChanged += OnMoneyChanged;
+             game.StateChanged += OnStateChanged;
+             placement.Changed += Refresh;
++            if (waves != null) waves.EventChanged += Refresh;
+             subscribed = true;
+             Refresh();
+         }
+@@ -92,6 +98,8 @@ namespace ShorelineDefense.UI
+             economy.MoneyChanged -= OnMoneyChanged;
+             game.StateChanged -= OnStateChanged;
+             placement.Changed -= Refresh;
++            if (waves != null) waves.EventChanged -= Refresh;
++            tooltipMeta = null; tooltipRange = -1;
+             subscribed = false;
+         }
+         private void OnMoneyChanged(int money) => Refresh();
+@@ -113,6 +121,7 @@ namespace ShorelineDefense.UI
+         private void Update(){if(placement!=null && placement.IsDismantling && hint!=null)Refresh();}
+         private void Refresh()
+         {
++            RefreshEffectiveTooltips();
+             dismantle?.SetEnabled(game.IsPlaying);
+             dismantle?.EnableInClassList("selected",placement.IsDismantling);
+             hint.style.color=placement.RefundFeedback!=null?new Color(.65f,.9f,.55f):new Color(.65f,.67f,.58f);
+@@ -133,5 +142,20 @@ namespace ShorelineDefense.UI
+                 placement.Result == PlacementResult.OutsideGrid ? "Outside battlefield | RMB / Esc cancels" :
+                 "Build on free grass cells | RMB / Esc cancels";
+         }
++        private void RefreshEffectiveTooltips()
++        {
++            var meta = builder?.Meta ?? Progression.MetaModifierService.Neutral;
++            float range = builder?.Events?.Modifiers.defenseRange ?? 1;
++            if (ReferenceEquals(meta, tooltipMeta) && range == tooltipRange) return;
++            tooltipMeta = meta; tooltipRange = range;
++            for (int i = 0; i < buttons.Count; i++)
++            {
++                var d = defenses[i];
++                int damage = Mathf.RoundToInt(d.Damage * meta.DamageMultiplier(d));
++                float effectiveRange = d.RangeInCells * meta.RangeMultiplier(d) * (d.BlocksMovement ? range : 1);
++                buttons[i].tooltip = $"{d.DisplayName.ToUpperInvariant()}\n{d.Cost:N0} RSD\n" + Description(d.Id) +
++                    $"\nMax HP {meta.MaxHealth(d, 1)}" + (damage > 0 ? $"\nDamage {damage} / Range {effectiveRange:0.0} cells" : "");
++            }
++        }
+     }
+ }
+diff --git "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\UI_ProductMenuController.cs" "b/Assets\\Game\\Scripts\\UI\\ProductMenuController.cs"
+index bf90be5..5f5f3ac 100644
+--- "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\UI_ProductMenuController.cs"
++++ "b/Assets\\Game\\Scripts\\UI\\ProductMenuController.cs"
+@@ -69,6 +69,7 @@ namespace ShorelineDefense.UI
+         private void FeedbackChanged() { if (feedback != null) feedback.text = session.Feedback; }
+         private void Page(string title, string id)
+         {
++            card.EnableInClassList("research-card", id == "research");
+             page = id; content.Clear(); cancelDialog = null; overlay.style.display = DisplayStyle.Flex; overlay.BringToFront();
+             var heading = new Label(title); heading.AddToClassList("product-title"); content.Add(heading);
+         }
+@@ -82,11 +83,22 @@ namespace ShorelineDefense.UI
+             bool valid = saves.Load(out _, out string error);
+             ActionButton("menu-continue", "CONTINUE", Continue).SetEnabled(valid);
+             ActionButton("menu-new", "NEW GAME", NewGame);
++            ActionButton("menu-research", "RESEARCH", ShowResearch);
+             ActionButton("menu-history", "RUN HISTORY", ShowHistory);
+             ActionButton("menu-settings", "SETTINGS", ShowSettings);
+             ActionButton("menu-quit", "QUIT", () => Confirm("QUIT GAME?", "Your last Preparation save will be kept.", "QUIT", Application.Quit, ShowMain));
+             if (Notice != null) { Copy(Notice); Notice = null; }
+             else if (error != null) Copy(valid ? error : "The active save could not be loaded. You can start a new run.");
++            if (LocalGameData.Profile.Error != null) Copy("RESEARCH PROFILE: " + LocalGameData.Profile.Error);
++        }
++        public void ShowResearch()
++        {
++            if (!mainMenu || loading) return;
++            Page("QUARANTINE RESEARCH PROGRAM", "research");
++            var catalog = ShorelineDefense.Progression.ResearchCatalog.Load();
++            if (catalog == null) Copy("Research catalog unavailable.");
++            else content.Add(new ResearchTreeView(catalog, LocalGameData.Profile, () => mainMenu && !loading && page == "research"));
++            ActionButton("research-back", "BACK TO MAIN MENU", ShowMain);
+         }
+         public void NewGame()
+         {
+@@ -100,7 +112,7 @@ namespace ShorelineDefense.UI
+             {
+                 if (map == null) continue;
+                 if (map.preview != null) { var image = new Image { sprite = map.preview, scaleMode = ScaleMode.ScaleToFit }; image.style.height = 140; content.Add(image); }
+-                Copy(map.displayName + "\n" + map.description + "\n" + map.gameplayStyle);
++                Copy(map.displayName + "\n" + map.description + "\n" + map.gameplayStyle + "\nPERSONAL BEST / WAVE " + LocalGameData.Profile.BestWave(map.id));
+                 ActionButton("map-" + map.id, "SELECT " + map.displayName, () => {
+                     selectedMap = map;
+                     Page(map.displayName, "map-confirm"); Copy(map.description + "\n" + map.gameplayStyle);
+@@ -161,10 +173,11 @@ namespace ShorelineDefense.UI
+             Page("RUN HISTORY", "history");
+             var history = new RunHistoryService(LocalGameData.Files); var data = history.Load();
+             Copy(data.runs.Count == 0 ? "No completed runs yet." : "PERSONAL BEST — WAVE " + data.runs.Max(r => r.wave));
++            if (maps != null) foreach (var map in maps.maps) if (map != null) Copy(map.displayName + " / BEST WAVE " + LocalGameData.Profile.BestWave(map.id));
+             foreach (var r in data.runs)
+             {
+                 string date = DateTime.TryParse(r.endedUtc, out var ended) ? ended.ToLocalTime().ToString("yyyy-MM-dd HH:mm") : "Unknown date";
+-                Copy($"{maps?.Find(r.mapId)?.displayName ?? "DANUBE BORDER"}\n{date}\nWave {r.wave}  /  Kills {r.kills:N0}\nHomicides {r.homicides:N0}  /  Bosses {r.bosses:N0}\nEarned {r.earned:N0} RSD  /  {FormatDuration(r.duration)}");
++                Copy($"{maps?.Find(r.mapId)?.displayName ?? "DANUBE BORDER"}\n{date}\nWave {r.wave}  /  Kills {r.kills:N0}\nHomicides {r.homicides:N0}  /  Bosses {r.bosses:N0}\nEarned {r.earned:N0} RSD  /  {FormatDuration(r.duration)}" + (r.hasResearchReward ? $"\nRESEARCH EARNED +{r.researchEarned} RP" : ""));
+             }
+             if (history.Error != null) Copy("Some run history could not be loaded: " + history.Error);
+             ActionButton("history-back", "BACK", Back);
+@@ -197,10 +210,17 @@ namespace ShorelineDefense.UI
+         private void StateChanged(GameState state)
+         {
+             if (state != GameState.GameOver) return;
+-            Page("BORDER DEFENSE COLLAPSED", "over");
++            Page("RUN COMPLETE", "over");
+             var stats = FindFirstObjectByType<RunStatistics>();
+             Copy(maps?.Find(session.MapId)?.displayName ?? "DANUBE BORDER");
+             Copy($"WAVE REACHED {stats.HighestWaveReached}\nTOTAL KILLS {stats.TotalKills:N0}\nHOMICIDES {stats.Homicides:N0}\nBOSSES KILLED {stats.BossesKilled:N0}\nRSD EARNED {stats.TotalMoneyEarned:N0}\nSTRUCTURES BUILT {stats.StructuresBuilt}\nDURATION {FormatDuration(session.Duration)}");
++            var earned = new Label { name = "run-research-earned" }; earned.AddToClassList("research-balance"); content.Add(earned);
++            void RewardText() {
++                var award = session.ResearchAward;
++                earned.text = award == null ? "RESEARCH SAVE PENDING\n" + session.Feedback : $"RESEARCH EARNED  +{award.Total} RP\nTOTAL RP  {LocalGameData.Profile.ResearchPoints:N0}\n" + $"Waves {award.waveRP} / Bosses {award.bossRP} / Quality {award.qualityRP} / Milestones {award.milestoneRP}";
++            }
++            RewardText();
++            if (session.ResearchAward == null) ActionButton("over-retry", "RETRY SAVE", () => { session.FinalizeRun(); RewardText(); });
+             // Existing game-over label remains for legacy scene/tests; product overlay owns this view.
+             root.Q<Label>("game-over").style.visibility = Visibility.Hidden;
+             ActionButton("over-new", "NEW RUN", () => { if (session.FinalizeRun()) ShowMapSelect(); else Copy(session.Feedback); });
+diff --git "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\UI_StructureHud.cs" "b/Assets\\Game\\Scripts\\UI\\StructureHud.cs"
+index dd7fca1..099d916 100644
+--- "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\UI_StructureHud.cs"
++++ "b/Assets\\Game\\Scripts\\UI\\StructureHud.cs"
+@@ -71,7 +71,7 @@ namespace ShorelineDefense.UI
+             else
+             {
+                 var heavy = d.Definition.HeavyWeapon;
+-                core += d.GetComponent<ShorelineDefense.Defenses.FlameWeapon>() != null ? $"\nDPS {d.Damage / heavy.damageTick:0} / Burn {d.BurnDuration:0.0}s" : $"\nDamage {d.Damage} / Reload {1 / d.FireRate:0.00}s";
++                core += d.GetComponent<ShorelineDefense.Defenses.FlameWeapon>() != null ? $"\nDPS {d.Damage / d.DamageTick:0} / Burn {d.BurnDuration:0.0}s" : $"\nDamage {d.Damage} / Reload {1 / d.FireRate:0.00}s";
+                 core += $"\nRange {d.Range / d.Grid.CellSize:0.0} cells";
+                 if (d.GetComponent<ShorelineDefense.Defenses.AreaProjectileWeapon>() != null) core += $"\nBlast {d.SplashRadiusInCells:0.0} / Min {heavy.minimumRangeInCells:0.0} cells";
+             }
+@@ -84,11 +84,11 @@ namespace ShorelineDefense.UI
+             dismantle.tooltip = $"DISMANTLE\nRefund {builder.RefundFor(d):N0} RSD\nBased on paid construction and upgrades.";
+             var next = d.Definition.LevelData(d.Level + 1);
+             upgrade.tooltip = d.Level == 3 ? "MAX LEVEL III" : $"UPGRADE TO LEVEL {(d.Level == 1 ? "II" : "III")}\n{cost:N0} RSD\n" +
+-                $"HP capacity {d.MaxHealth} → {Mathf.RoundToInt(d.Definition.MaxHealth * (next?.health ?? 1))}\n" +
++                $"HP capacity {d.MaxHealth} → {d.Meta.MaxHealth(d.Definition, d.Level + 1)}\n" +
+                 (d.Definition.Id == "barbed-wire" ? $"Slow {(1 - d.MovementMultiplier) * 100:0}% → {(1 - d.Definition.MovementMultiplier * (next?.slow ?? 1)) * 100:0}%" :
+-                $"Damage {d.Damage} → {Mathf.RoundToInt(d.Definition.Damage * (next?.damage ?? 1))}\n" +
++                $"Damage {d.Damage} → {d.DamageAtLevel(d.Level + 1)}\n" +
+                 (d.Definition.Id == "land-mine" ? $"Blast {d.Range / d.Grid.CellSize:0.0} → {d.Definition.RangeInCells * (next?.range ?? 1):0.0} cells" :
+-                $"Fire rate {d.FireRate:0.00} → {d.Definition.FireRate * (next?.fireRate ?? 1):0.00}/s\nRange {d.Range / d.Grid.CellSize:0.0} → {d.Definition.RangeInCells * (next?.range ?? 1) * (d.Owner?.Events?.Modifiers.defenseRange ?? 1):0.0} cells"));
++                $"Fire rate {d.FireRate:0.00} → {d.FireRateAtLevel(d.Level + 1):0.00}/s\nRange {d.Range / d.Grid.CellSize:0.0} → {d.RangeAtLevel(d.Level + 1) / d.Grid.CellSize:0.0} cells"));
+             upgrade.SetEnabled(builder.CanUpgrade(d)); repair.SetEnabled(builder.CanRepair(d)); dismantle.SetEnabled(builder.CanDismantle(d));
+             status.text = $"Repair rate x{builder.RepairMultiplier:0.00}" + ((cost > builder.Economy.Money && d.Level < 3) || repairCost > builder.Economy.Money ? " / Insufficient RSD" : "");
+         }
+diff --git "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Waves_WaveManager.cs" "b/Assets\\Game\\Scripts\\Waves\\WaveManager.cs"
+index 946b0ac..30d5efe 100644
+--- "a/C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Docs\\Validation\\Phase6C\\baseline-source\\Waves_WaveManager.cs"
++++ "b/Assets\\Game\\Scripts\\Waves\\WaveManager.cs"
+@@ -25,6 +25,18 @@ namespace ShorelineDefense.Waves
+         public EndlessWaveSettings EndlessSettings => endless;
+         public EndlessEventManager Events { get; private set; }
+         public event Action EventChanged;
++        public Progression.MetaModifierService Meta { get; private set; } = Progression.MetaModifierService.Neutral;
++        public int EffectiveCompletionReward => (int)Math.Min(int.MaxValue, Math.Floor(CurrentWave.CompletionReward * Meta.WaveRewardMultiplier));
++        public void ConfigureMeta(Progression.MetaModifierService modifiers) => Meta = modifiers;
++        public EndlessEventDefinition ForecastFollowingEvent()
++        {
++            if (Events == null || endless == null) return null;
++            var preview = new EndlessEventManager(endless.eventSettings, RunSeed);
++            preview.Restore(Events.Capture()); preview.BeginWave(); preview.CompleteWave();
++            int next = PreparationWaveNumber + 1;
++            preview.Prepare(next, endless.bossEncounters?.ForWave(next) != null, null);
++            return preview.Current?.Definition;
++        }
+         private void NotifyEventChanged() {
+             // An unstarted assault is only a preview. Canceling it must restore the seeded
+             // baseline plan as well as live modifiers, or its extra cargo becomes hidden pressure.
+@@ -284,7 +296,7 @@ namespace ShorelineDefense.Waves
+             timer = completionDisplaySeconds;
+             if (CompletedWaves < int.MaxValue) CompletedWaves++;
+             SetState(WaveState.WaveComplete);
+-            if (game.IsPlaying && State == WaveState.WaveComplete) economy.AddMoney(CurrentWave.CompletionReward);
++            if (game.IsPlaying && State == WaveState.WaveComplete) economy.AddMoney(EffectiveCompletionReward);
+         }
+         private void OnGameState(GameState state)
+         {

@@ -11,15 +11,15 @@ namespace ShorelineDefense.Persistence
         public SaveGameService(LocalJsonStore files, Func<RunSaveData, bool> preflight = null) { store = files; history = new RunHistoryService(files); compatibility = preflight; }
         public bool Save(RunSaveData data, out string error)
         {
-            if (!Valid(data)) { error = "Run is not a valid Preparation snapshot."; return false; }
+            if (!AquaticSaveMigration.Upgrade(data)) { error = "Run is not a valid Preparation snapshot."; return false; }
             data.savedUtc = DateTime.UtcNow.ToString("O");
             return store.Write("active_run", data, out error);
         }
-        public bool Load(out RunSaveData data, out string error) => store.Read("active_run", d => Valid(d) && (compatibility == null || compatibility(d)) && !history.Contains(d.runId), out data, out error);
+        public bool Load(out RunSaveData data, out string error) => store.Read("active_run", d => AquaticSaveMigration.Upgrade(d) && (compatibility == null || compatibility(d)) && !history.Contains(d.runId) && !new Progression.PlayerProfileService(store).HasCompleted(d.runId), out data, out error);
         public bool Delete(out string error) => store.Delete("active_run", out error);
         public static bool Valid(RunSaveData d)
         {
-            if (d == null || (d.saveVersion != 1 && d.saveVersion != 2) || (d.saveVersion == 2 && string.IsNullOrEmpty(d.mapId)) || !Guid.TryParse(d.runId, out _) || d.wave < 1 || d.wave > 1000000 ||
+            if (d == null || d.saveVersion < 1 || d.saveVersion > 4 || (d.saveVersion >= 4 && !Progression.RunMetaSnapshot.Valid(d.metaSnapshot)) || (d.saveVersion >= 2 && string.IsNullOrEmpty(d.mapId)) || !Guid.TryParse(d.runId, out _) || d.wave < 1 || d.wave > 1000000 ||
                 d.completedWaves != d.wave - 1 || d.money < 0 || d.maxHomicides < 0 || double.IsNaN(d.duration) || double.IsInfinity(d.duration) || d.duration < 0 ||
                 d.earned < 0 || d.spent < 0 || d.refunds < 0 || d.dismantled < 0 || d.statistics?.kills?.Length != 9 || d.events == null || d.structures == null || d.structures.Count > 2048) return false;
             var s = d.statistics;

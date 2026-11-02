@@ -20,6 +20,7 @@ namespace ShorelineDefense.Grid
         public Vector2Int[] waterCells = System.Array.Empty<Vector2Int>();
         public Vector2Int[] groundCells = System.Array.Empty<Vector2Int>();
         public Vector2Int[] blockedCells = System.Array.Empty<Vector2Int>();
+        public StaticObstacleFootprint[] navigationObstacles = System.Array.Empty<StaticObstacleFootprint>();
         public Vector2Int[] noBuildCells = System.Array.Empty<Vector2Int>();
         public Vector2Int[] floodableCells = System.Array.Empty<Vector2Int>();
         public bool authoredWater;
@@ -51,6 +52,8 @@ namespace ShorelineDefense.Grid
 
         public TerrainType TerrainAt(Vector2Int cell)
         {
+            foreach (var obstacle in navigationObstacles)
+                if (obstacle != null && obstacle.Contains(cell)) return TerrainType.Blocked;
             if (System.Array.IndexOf(blockedCells, cell) >= 0) return TerrainType.Blocked;
             if (System.Array.IndexOf(waterCells, cell) >= 0) return TerrainType.Water;
             if (System.Array.IndexOf(groundCells, cell) >= 0) return TerrainType.Ground;

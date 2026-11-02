@@ -15,7 +15,7 @@ MonoBehaviour:
   id: river_border
   displayName: DANUBE BORDER
   sceneName: CoastalDefense_TopDown
-  description: An open quarantine line along the Danube.
+  description: Hold the quarantine line against organisms emerging from the Danube.
   gameplayStyle: "OPEN FIELD DEFENSE \u2014 broad building freedom"
   preview: {fileID: 21300000, guid: 8ad13e19595bd9f47b25a3950aa976fe, type: 3}
   battlefield: {fileID: 11400000, guid: 35d5deb6b1378dc4db21ebf7bb050602, type: 2}

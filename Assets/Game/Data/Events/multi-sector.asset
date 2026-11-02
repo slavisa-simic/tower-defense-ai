@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.EndlessEventDefinition
   id: multi-sector
   displayName: MULTI-SECTOR ATTACK
-  description: Concurrent landings across North, Center and South.
+  description: Biological activity detected across multiple emergence sectors.
   category: 2
   minimumWave: 8
   maximumWave: 0
@@ -38,6 +38,8 @@ MonoBehaviour:
     preparationRepair: 1
     floodedColumns: 0
     fog: 0
+    directEmergenceRatio: -1
+    broodCarrierRatio: -1
     boatVisual: {fileID: 0}
     landingPattern: 1
     composition: []

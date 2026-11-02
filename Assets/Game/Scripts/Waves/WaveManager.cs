@@ -16,7 +16,7 @@ namespace ShorelineDefense.Waves
         [SerializeField] private EnemyRegistry registry;
         [SerializeField] private EconomyManager economy;
         [SerializeField] private GameStateController game;
-        [SerializeField] private BoatLandingSystem landings;
+        [SerializeField] private AssaultCarrierSystem landings;
         [SerializeField] private EndlessWaveSettings endless;
         private EndlessWaveGenerator generator; private RunStatistics statistics;
         private WaveDefinition generated;
@@ -25,6 +25,18 @@ namespace ShorelineDefense.Waves
         public EndlessWaveSettings EndlessSettings => endless;
         public EndlessEventManager Events { get; private set; }
         public event Action EventChanged;
+        public Progression.MetaModifierService Meta { get; private set; } = Progression.MetaModifierService.Neutral;
+        public int EffectiveCompletionReward => (int)Math.Min(int.MaxValue, Math.Floor(CurrentWave.CompletionReward * Meta.WaveRewardMultiplier));
+        public void ConfigureMeta(Progression.MetaModifierService modifiers) => Meta = modifiers;
+        public EndlessEventDefinition ForecastFollowingEvent()
+        {
+            if (Events == null || endless == null) return null;
+            var preview = new EndlessEventManager(endless.eventSettings, RunSeed);
+            preview.Restore(Events.Capture()); preview.BeginWave(); preview.CompleteWave();
+            int next = PreparationWaveNumber + 1;
+            preview.Prepare(next, endless.bossEncounters?.ForWave(next) != null, null);
+            return preview.Current?.Definition;
+        }
         private void NotifyEventChanged() {
             // An unstarted assault is only a preview. Canceling it must restore the seeded
             // baseline plan as well as live modifiers, or its extra cargo becomes hidden pressure.
@@ -90,7 +102,7 @@ namespace ShorelineDefense.Waves
         private EnemyController deployedBoss;
         public AssaultPressureDirector PressureDirector => director;
         public int PendingBoats => landings == null ? 0 : Mathf.CeilToInt(Mathf.Max(0, pending - landings.IncomingPassengers) / (float)landings.Capacity);
-        public BoatLandingSystem Landings => landings;
+        public AssaultCarrierSystem Landings => landings;
         public WaveState State { get; private set; } = WaveState.Preparation;
         public IReadOnlyList<WaveDefinition> Waves => waves;
         public WaveDefinition CurrentWave { get { EnsureGenerated(); return IsEndless ? generated : waves != null && waveIndex < waves.Length ? waves[waveIndex] : null; } }
@@ -104,7 +116,7 @@ namespace ShorelineDefense.Waves
         public bool CanStart => isActiveAndEnabled && game != null && game.IsPlaying && State == WaveState.Preparation && CurrentWave != null && CurrentWave.IsValid && (Events?.CanStart ?? true);
         public event Action Changed;
         public event Action PreparationEnding;
-        public void ConfigureLandings(BoatLandingSystem transport)
+        public void ConfigureLandings(AssaultCarrierSystem transport)
         {
             if (landings != null) landings.Unloaded -= OnUnloaded;
             landings = transport;
@@ -127,16 +139,18 @@ namespace ShorelineDefense.Waves
             if (subscribed || game == null || registry == null) return;
             game.StateChanged += OnGameState;
             registry.EnemyRemoved += OnEnemyRemoved;
+            spawner.ReinforcementSpawned += OnReinforcement;
             if (landings != null) landings.Unloaded += OnUnloaded;
             subscribed = true;
             OnGameState(game.CurrentState);
         }
-        private void OnDisable() { Unsubscribe(); Events?.Cancel(); landings?.ConfigureEvent(null); landings?.Cancel(); }
+        private void OnDisable() { if (spawner != null) spawner.ReinforcementsEnabled = false; Unsubscribe(); Events?.Cancel(); landings?.ConfigureEvent(null); landings?.Cancel(); }
         private void Unsubscribe()
         {
             if (!subscribed) return;
             game.StateChanged -= OnGameState;
             registry.EnemyRemoved -= OnEnemyRemoved;
+            spawner.ReinforcementSpawned -= OnReinforcement;
             if (landings != null) landings.Unloaded -= OnUnloaded;
             subscribed = false;
         }
@@ -155,10 +169,12 @@ namespace ShorelineDefense.Waves
             PreparationEnding?.Invoke();
             if (!CanStart) return false;
             alive.Clear();
+            spawner.ReinforcementsEnabled = true;
             Events?.BeginWave();
             landings?.ConfigureEvent(Events?.Modifiers, Events?.Current?.Sector ?? LandingSector.Center);
             if (IsEndless)
             {
+                landings?.ConfigureWave(CurrentWaveNumber);
                 spawner.ConfigureWave(endless.maximumActiveEnemies, endless.RuntimeHealthMultiplier(CurrentWave.HealthMultiplier, false), CurrentWave.SpeedMultiplier,
                     endless.RuntimeHealthMultiplier(CurrentWave.HealthMultiplier, true));
                 landings?.ConfigurePressure(endless.ArrivalInterval(CurrentWaveNumber) * (generated.Encounter != null ? generated.Encounter.ArrivalMultiplier : 1) * (Events?.Modifiers.boatInterval ?? 1), Mathf.CeilToInt(endless.BoatConcurrency(CurrentWaveNumber) * (Events?.Modifiers.boatConcurrency ?? 1)));
@@ -215,9 +231,9 @@ namespace ShorelineDefense.Waves
                     while (nextGroup < CurrentWave.Groups.Count)
                     {
                         var candidate = CurrentWave.Groups[nextGroup];
-                        int weight = candidate.Prefab.Definition.TransportCapacityUnits;
+                        int weight = candidate.Prefab.Definition.CarrierHalfUnits;
                         if (cargo.Count > 0 && candidate.Prefab.Definition is BossDefinition) break;
-                        if (units + weight > landings.Capacity) break;
+                        if (units + weight > landings.RequestCapacityHalfUnits(group.Prefab) || !landings.CanCarry(group.Prefab, candidate.Prefab)) break;
                         cargo.Add(candidate.Prefab); units += weight; nextCount++;
                         if (nextCount == candidate.Count) { nextGroup++; nextCount = 0; }
                     }
@@ -268,6 +284,11 @@ namespace ShorelineDefense.Waves
             Changed?.Invoke();
             CheckCompletion();
         }
+        private void OnReinforcement(EnemyController enemy)
+        {
+            if (!game.IsPlaying || (State != WaveState.Spawning && State != WaveState.Combat)) return;
+            alive.Add(enemy); Changed?.Invoke();
+        }
         private void CheckCompletion()
         {
             if (State != WaveState.Combat || pending != 0 || alive.Count != 0 || !game.IsPlaying) return;
@@ -275,7 +296,7 @@ namespace ShorelineDefense.Waves
             timer = completionDisplaySeconds;
             if (CompletedWaves < int.MaxValue) CompletedWaves++;
             SetState(WaveState.WaveComplete);
-            if (game.IsPlaying && State == WaveState.WaveComplete) economy.AddMoney(CurrentWave.CompletionReward);
+            if (game.IsPlaying && State == WaveState.WaveComplete) economy.AddMoney(EffectiveCompletionReward);
         }
         private void OnGameState(GameState state)
         {
@@ -284,6 +305,7 @@ namespace ShorelineDefense.Waves
         }
         private void SetState(WaveState state) {
             State = state;
+            if (state == WaveState.WaveComplete || state == WaveState.GameOver) spawner.ReinforcementsEnabled = false;
             if (state == WaveState.WaveComplete) Events?.CompleteWave();
             if (state == WaveState.GameOver) Events?.Cancel();
             if (state == WaveState.WaveComplete || state == WaveState.GameOver) landings?.ConfigureEvent(null);

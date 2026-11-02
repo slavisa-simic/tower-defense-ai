@@ -18,6 +18,8 @@ namespace ShorelineDefense.Persistence
         public double Duration { get; private set; }
         public string Feedback { get; private set; }
         public bool Ready { get; private set; }
+        public Progression.MetaModifierService Modifiers { get; private set; } = Progression.MetaModifierService.Neutral;
+        public Progression.RunAwardReceipt ResearchAward { get; private set; }
         public event Action FeedbackChanged;
         private BuildManager builder;
         private WaveManager waves;
@@ -42,7 +44,11 @@ namespace ShorelineDefense.Persistence
             try
             {
                 if (data != null) Restore(data);
-                else { RunId = Guid.NewGuid().ToString(); Duration = 0; }
+                else {
+                    RunId = Guid.NewGuid().ToString(); Duration = 0;
+                    SetModifiers(Progression.MetaModifierService.FromProfile(LocalGameData.Profile, Progression.ResearchCatalog.Load()));
+                    builder.Economy.Restore((int)Math.Min(int.MaxValue, (long)builder.Economy.Money + Modifiers.StartingRsd), 0, 0, 0, 0);
+                }
                 Ready = true;
             }
             catch (Exception exception)
@@ -58,10 +64,11 @@ namespace ShorelineDefense.Persistence
         }
         private void Restore(RunSaveData data)
         {
-            if (!SaveGameService.Valid(data)) throw new InvalidOperationException("Invalid snapshot.");
+            if (!AquaticSaveMigration.Upgrade(data)) throw new InvalidOperationException("Invalid snapshot.");
             if ((data.saveVersion == 1 ? ShorelineDefense.Grid.MapCatalog.OriginalId : data.mapId) != MapId) throw new InvalidOperationException("Wrong map for saved run.");
             var definitions = FindFirstObjectByType<BuildHud>().Defenses;
             if (!RunSaveCompatibility.Valid(data, definitions, builder.Battlefield.Definition, waves.EndlessSettings.eventSettings)) throw new InvalidOperationException("Save catalog or map is incompatible.");
+            SetModifiers(data.metaSnapshot);
             RunId = data.runId; Duration = data.duration; border.ConfigureThreshold(data.maxHomicides);
             builder.Economy.Restore(data.money, data.earned, data.spent, data.refunds, data.dismantled);
             waves.RestorePreparation(data);
@@ -71,11 +78,13 @@ namespace ShorelineDefense.Persistence
         }
         private static DefenseDefinition FindDefinition(IReadOnlyList<DefenseDefinition> catalog, string id)
         { foreach (var d in catalog) if (d.Id == id) return d; return null; }
+        private void SetModifiers(Progression.RunMetaSnapshot snapshot)
+        { Modifiers = new Progression.MetaModifierService(snapshot); builder.ConfigureMeta(Modifiers); waves.ConfigureMeta(Modifiers); }
         public RunSaveData Capture()
         {
             if (!CanSave) throw new InvalidOperationException("Progress is saved between waves.");
             var money = builder.Economy;
-            var data = new RunSaveData { mapId = MapId, runId = RunId, duration = Duration, wave = waves.CurrentWaveNumber, completedWaves = waves.CompletedWaves,
+            var data = new RunSaveData { metaSnapshot = Modifiers.Capture(), mapId = MapId, runId = RunId, duration = Duration, wave = waves.CurrentWaveNumber, completedWaves = waves.CompletedWaves,
                 seed = waves.RunSeed, money = money.Money, earned = money.TotalEarned, spent = money.TotalSpent, refunds = money.RefundIncome,
                 dismantled = money.StructuresDismantled, maxHomicides = border.MaxHomicides, statistics = statistics.Capture(), events = waves.Events.Capture() };
             foreach (var d in FindObjectsByType<DefenseBase>(FindObjectsSortMode.None))
@@ -109,19 +118,24 @@ namespace ShorelineDefense.Persistence
             dirty = false;
             finished = new RunRecord { mapId = MapId, runId = RunId, endedUtc = DateTime.UtcNow.ToString("O"), wave = statistics.HighestWaveReached,
                 kills = statistics.TotalKills, homicides = statistics.Homicides, bosses = statistics.BossesKilled,
+                completedWaves = waves.CompletedWaves, dredgers = statistics.DredgerKills, broodmothers = statistics.BroodmotherKills,
                 earned = statistics.TotalMoneyEarned, duration = Duration, peakEnemies = statistics.PeakActiveEnemies };
             FinalizeRun();
         }
         public bool FinalizeRun()
         {
+            if (history == null || saves == null) return false;
             if (finalized || finished == null) return finalized;
-            if (!history.Record(finished, out string error)) { saves.Delete(out _); Notify("RUN HISTORY SAVE FAILED — " + error); return false; }
+            if (!LocalGameData.Profile.CompleteRun(finished, Progression.ResearchCatalog.Load()?.rewards, out var award, out string error))
+            { Notify("RESEARCH SAVE FAILED — " + error + " / Retry from this summary."); return false; }
+            ResearchAward = award; finished.hasResearchReward = true; finished.researchEarned = award.Total;
+            if (!history.Record(finished, out error)) { Notify("RUN HISTORY SAVE FAILED — " + error); return false; }
             finalized = saves.Delete(out error);
             Notify(finalized ? "RUN RECORDED" : "Run recorded; active save cleanup failed: " + error);
             return finalized;
         }
         private void Notify(string text) { Feedback = text; FeedbackChanged?.Invoke(); }
-        private void OnApplicationQuit() { if (CanSave) SaveNow(); else if (finished != null) FinalizeRun(); }
+        private void OnApplicationQuit() { if (!Ready) return; if (CanSave) SaveNow(); else if (finished != null) FinalizeRun(); }
         private void OnApplicationPause(bool paused) { if (paused && CanSave) SaveNow(); }
         private void OnDestroy()
         {

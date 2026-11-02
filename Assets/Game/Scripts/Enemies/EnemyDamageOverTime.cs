@@ -20,7 +20,8 @@ namespace ShorelineDefense.Enemies
         private void Update() => Tick(Time.deltaTime);
         public void Tick(float dt)
         {
-            if (!enemy.IsTargetable) { Clear(); return; }
+            // A burn committed on the surface continues during the finite burrow state.
+            if (!enemy.IsCombatActive) { Clear(); return; }
             if (!Burning || dt <= 0) return;
             float active = Mathf.Min(dt, remaining); remaining = Mathf.Max(0, remaining - dt);
             fractional += active * dps;

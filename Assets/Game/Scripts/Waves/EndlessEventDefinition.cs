@@ -24,6 +24,7 @@ namespace ShorelineDefense.Waves
         [Min(.1f)] public float upgradeCost = 1, combatRepair = 1, preparationRepair = 1;
         [Range(0, 3)] public int floodedColumns;
         public bool fog;
+        [Range(-1, 1)] public float directEmergenceRatio = -1, broodCarrierRatio = -1;
         public GameObject boatVisual;
         public LandingPattern landingPattern;
         public CompositionBias[] composition = Array.Empty<CompositionBias>();

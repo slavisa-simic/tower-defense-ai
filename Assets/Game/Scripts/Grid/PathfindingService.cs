@@ -15,6 +15,20 @@ namespace ShorelineDefense.Grid
         public int Requests { get; private set; }
         public int Searches { get; private set; }
         public int CacheHits { get; private set; }
+        public BlockingStructureResolver Obstructions { get; }
+        private int repathFrame = -1, repathsThisFrame;
+        private int contactSequence;
+        public int AllocateContactSlot() => contactSequence++ & 15;
+        public const int RepathsPerFrame = 8;
+        public int PeakRepathsPerFrame { get; private set; }
+        public bool TryReserveRepath()
+        {
+            if (repathFrame != Time.frameCount) { repathFrame = Time.frameCount; repathsThisFrame = 0; }
+            if (repathsThisFrame >= RepathsPerFrame) return false;
+            repathsThisFrame++;
+            PeakRepathsPerFrame = Mathf.Max(PeakRepathsPerFrame, repathsThisFrame);
+            return true;
+        }
         private int cachedRevision = -1;
         private readonly Dictionary<long, Vector2Int[]> routes = new Dictionary<long, Vector2Int[]>();
 
@@ -25,6 +39,7 @@ namespace ShorelineDefense.Grid
             parents = new int[grid.CellCount];
             states = new byte[grid.CellCount];
             open = new int[grid.CellCount];
+            Obstructions = new BlockingStructureResolver(grid);
         }
 
         // Caller owns the result buffer. Workspace is reused; call on one simulation thread.

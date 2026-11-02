@@ -1,0 +1,8 @@
+{
+  "diagnostics": [],
+  "compileMs": 100,
+  "executeMs": 822,
+  "assemblyName": "PipelineRunScript_FinalAudit_e7232b5a4b9945019134b627f97330ca",
+  "success": true,
+  "result": "Replaced obsolete boat-bearing map-card preview with an actual saved aquatic-era scene capture; original texture GUID/importer retained and old image archived as validation provenance."
+}

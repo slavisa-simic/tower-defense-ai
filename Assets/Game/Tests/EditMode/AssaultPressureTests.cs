@@ -6,13 +6,15 @@ namespace ShorelineDefense.Tests
 {
     public sealed class AssaultPressureTests
     {
-        [TestCase(1,16)] [TestCase(5,38)] [TestCase(10,52)] [TestCase(20,87)] [TestCase(25,139)] [TestCase(50,289)]
-        public void SeededQuantityIsFiveTimesBaselineExceptSingleBoss(int number, int baseline)
+        [TestCase(1)] [TestCase(5)] [TestCase(10)] [TestCase(20)] [TestCase(25)] [TestCase(50)]
+        public void SeededQuantityExpandsAquaticFormationsAndKeepsExactlyOneBoss(int number)
         {
             var settings = AssetDatabase.LoadAssetAtPath<EndlessWaveSettings>("Assets/Game/Data/Waves/EndlessSurvival.asset");
             var wave = new EndlessWaveGenerator(settings,1977).Generate(number);
-            try { Assert.AreEqual(baseline * 5 - (wave.Encounter == null ? 0 : 4), wave.ScheduledCount); }
-            finally { Object.DestroyImmediate(wave); }
+            var reference=Object.Instantiate(settings);reference.enemyQuantityMultiplier=1;reference.maximumEnemiesPerWave=settings.maximumEnemiesPerWave/5;
+            var single=new EndlessWaveGenerator(reference,1977).Generate(number);
+            try { Assert.AreEqual((single.ScheduledCount-(single.Encounter==null?0:1))*5+(wave.Encounter==null?0:1),wave.ScheduledCount); }
+            finally { Object.DestroyImmediate(wave);Object.DestroyImmediate(single);Object.DestroyImmediate(reference); }
         }
         [Test] public void HealthFactorsDoNotStackForBosses()
         {

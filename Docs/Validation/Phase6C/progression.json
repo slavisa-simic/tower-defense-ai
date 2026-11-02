@@ -1,0 +1,35 @@
+{
+  "method": "Three real wave-scheduler runs with accelerated ticks and explicit lethal test damage, finalized through Game Over and actual Main Menu purchase buttons. Not an earned-income balance test.",
+  "rows": [
+    {
+      "run": 1,
+      "wavesCompleted": 5,
+      "earnedRP": 10,
+      "beforePurchase": 10,
+      "target": "emergency-fund",
+      "purchased": true,
+      "remaining": 0,
+      "startingNext": 100
+    },
+    {
+      "run": 2,
+      "wavesCompleted": 10,
+      "earnedRP": 15,
+      "beforePurchase": 15,
+      "target": "river-monitoring",
+      "purchased": true,
+      "remaining": 5,
+      "startingNext": 100
+    },
+    {
+      "run": 3,
+      "wavesCompleted": 20,
+      "earnedRP": 20,
+      "beforePurchase": 25,
+      "target": "supply-contracts",
+      "purchased": true,
+      "remaining": 5,
+      "startingNext": 100
+    }
+  ]
+}

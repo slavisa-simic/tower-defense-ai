@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace ShorelineDefense.Building
 {
-    public enum PlacementResult { Valid, NotPlaying, InvalidDefinition, OutsideGrid, NotBuildable, Occupied, InsufficientMoney, CreationFailed, Busy }
+    public enum PlacementResult { Valid, NotPlaying, InvalidDefinition, OutsideGrid, NotBuildable, Occupied, InsufficientMoney, CreationFailed, Busy, EnemyInFootprint }
 
     public static class PlacementRules
     {

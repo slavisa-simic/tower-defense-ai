@@ -16,6 +16,13 @@ namespace ShorelineDefense.Building
         public Vector2Int Cell { get; private set; }
         public ShorelineDefense.Grid.BattlefieldGrid Grid => builder?.Battlefield.Grid;
         public PlacementResult Result { get; private set; }
+        private float nextContactValidation;
+        private void LateUpdate()
+        {
+            if (!IsPlacing || !hasCell || Selected == null || !Selected.BlocksMovement || Time.unscaledTime < nextContactValidation) return;
+            nextContactValidation = Time.unscaledTime + .1f;
+            if (builder.Validate(Selected, Cell) != Result) Refresh();
+        }
         public bool IsPlacing => Selected != null;
         public bool IsDismantling { get; private set; }
         public bool IsInteracting => IsPlacing || IsDismantling;

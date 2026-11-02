@@ -22,6 +22,10 @@ namespace ShorelineDefense.UI
         private Label hint;
         private Button buildButton; private Button dismantle;
         private bool subscribed;
+        private BuildManager builder;
+        private ShorelineDefense.Waves.WaveManager waves;
+        private Progression.MetaModifierService tooltipMeta;
+        private float tooltipRange = -1;
         private readonly List<Button> buttons = new List<Button>();
         private readonly List<Action> selections = new List<Action>();
         public string MoneyText => moneyLabel?.text;
@@ -42,6 +46,7 @@ namespace ShorelineDefense.UI
             if (moneyLabel == null || hint == null || buildButton == null)
             { Debug.LogError("Build HUD is missing money, build-hint or build-mg in its UXML.", this); return; }
             if (defenses == null || defenses.Length == 0) defenses = new[] { machineGun };
+            builder = FindFirstObjectByType<BuildManager>(); waves = FindFirstObjectByType<ShorelineDefense.Waves.WaveManager>();
             var bar = buildButton.parent;
             for (int i = 0; i < defenses.Length; i++)
             {
@@ -74,6 +79,7 @@ namespace ShorelineDefense.UI
             economy.MoneyChanged += OnMoneyChanged;
             game.StateChanged += OnStateChanged;
             placement.Changed += Refresh;
+            if (waves != null) waves.EventChanged += Refresh;
             subscribed = true;
             Refresh();
         }
@@ -92,13 +98,15 @@ namespace ShorelineDefense.UI
             economy.MoneyChanged -= OnMoneyChanged;
             game.StateChanged -= OnStateChanged;
             placement.Changed -= Refresh;
+            if (waves != null) waves.EventChanged -= Refresh;
+            tooltipMeta = null; tooltipRange = -1;
             subscribed = false;
         }
         private void OnMoneyChanged(int money) => Refresh();
         private static string Description(string id)
         {
             switch (id) {
-                case "barbed-wire": return "Slows infected crossing the wire.";
+                case "barbed-wire": return "Slows creatures crossing the wire.";
                 case "land-mine": return "Single-use explosive area defense.";
                 case "machine-gun-nest": return "Sustained anti-infantry fire.";
                 case "sniper-tower": return "Long-range precision fire.";
@@ -113,6 +121,7 @@ namespace ShorelineDefense.UI
         private void Update(){if(placement!=null && placement.IsDismantling && hint!=null)Refresh();}
         private void Refresh()
         {
+            RefreshEffectiveTooltips();
             dismantle?.SetEnabled(game.IsPlaying);
             dismantle?.EnableInClassList("selected",placement.IsDismantling);
             hint.style.color=placement.RefundFeedback!=null?new Color(.65f,.9f,.55f):new Color(.65f,.67f,.58f);
@@ -129,8 +138,24 @@ namespace ShorelineDefense.UI
             else if (!placement.PreviewVisible) hint.text = $"{placement.Selected.DisplayName} selected — point at ground | RMB / Esc cancels";
             else hint.text = placement.Result == PlacementResult.Valid ? "Left click to build | RMB / Esc cancels" :
                 placement.Result == PlacementResult.Occupied ? "Cell occupied | RMB / Esc cancels" :
+                placement.Result == PlacementResult.EnemyInFootprint ? "Creature in build area | RMB / Esc cancels" :
                 placement.Result == PlacementResult.OutsideGrid ? "Outside battlefield | RMB / Esc cancels" :
                 "Build on free grass cells | RMB / Esc cancels";
+        }
+        private void RefreshEffectiveTooltips()
+        {
+            var meta = builder?.Meta ?? Progression.MetaModifierService.Neutral;
+            float range = builder?.Events?.Modifiers.defenseRange ?? 1;
+            if (ReferenceEquals(meta, tooltipMeta) && range == tooltipRange) return;
+            tooltipMeta = meta; tooltipRange = range;
+            for (int i = 0; i < buttons.Count; i++)
+            {
+                var d = defenses[i];
+                int damage = Mathf.RoundToInt(d.Damage * meta.DamageMultiplier(d));
+                float effectiveRange = d.RangeInCells * meta.RangeMultiplier(d) * (d.BlocksMovement ? range : 1);
+                buttons[i].tooltip = $"{d.DisplayName.ToUpperInvariant()}\n{d.Cost:N0} RSD\n" + Description(d.Id) +
+                    $"\nMax HP {meta.MaxHealth(d, 1)}" + (damage > 0 ? $"\nDamage {damage} / Range {effectiveRange:0.0} cells" : "");
+            }
         }
     }
 }

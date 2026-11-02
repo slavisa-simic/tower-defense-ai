@@ -1,0 +1,3 @@
+CoastalDefense_TopDown: zero missing scripts, all static colliders match authored cell centers/sizes.
+DanubeIndustrialPort: zero missing scripts, all static colliders match authored cell centers/sizes.
+Six solid defense colliders match footprints; Wire/Mine nonblocking; physics layer matrix correct.

@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase6C/Live.cs",
+      "entry": "Phase6CLive.Screens",
+      "timeout_ms": "55000"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 2547,
+      "executeMs": 5567,
+      "assemblyName": "PipelineRunScript_Live_26aad20b0e7648fba766623fc8b6cf65",
+      "success": true,
+      "result": "[\r\n  {\r\n    \"width\": 1366,\r\n    \"height\": 768,\r\n    \"root\": \"(x:0.00, y:0.00, width:1280.00, height:719.65)\",\r\n    \"card\": \"(x:49.66, y:44.98, width:1180.67, height:629.69)\",\r\n    \"nodeCount\": 20,\r\n    \"back\": \"(x:83.40, y:613.76, width:1113.21, height:39.36)\"\r\n  },\r\n  {\r\n    \"width\": 1920,\r\n    \"height\": 1080,\r\n    \"root\": \"(x:0.00, y:0.00, width:1280.00, height:720.00)\",\r\n    \"card\": \"(x:50.00, y:42.67, width:1180.00, height:635.33)\",\r\n    \"nodeCount\": 20,\r\n    \"back\": \"(x:84.00, y:616.00, width:1112.00, height:40.00)\"\r\n  },\r\n  {\r\n    \"width\": 2560,\r\n    \"height\": 1440,\r\n    \"root\": \"(x:0.00, y:0.00, width:1280.00, height:720.00)\",\r\n    \"card\": \"(x:50.00, y:43.50, width:1180.00, height:633.50)\",\r\n    \"nodeCount\": 20,\r\n    \"back\": \"(x:84.00, y:615.00, width:1112.00, height:40.00)\"\r\n  }\r\n]"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

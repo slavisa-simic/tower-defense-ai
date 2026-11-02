@@ -17,6 +17,7 @@ MonoBehaviour:
   cost: 75
   prefab: {fileID: 5933419672617642675, guid: 0ab4dc049833ee24d8b0edbd22fd89be, type: 3}
   footprint: {x: 1, y: 1}
+  blocksMovement: 0
   maxHealth: 1
   rangeInCells: 1.75
   damage: 150

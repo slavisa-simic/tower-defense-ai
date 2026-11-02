@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/ShadowAudit/Audit.cs",
+      "entry": "ShadowAudit.Validate"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 193,
+      "executeMs": 1084,
+      "assemblyName": "PipelineRunScript_Audit_0c6baa56861d4ac19f2769450da4455b",
+      "success": true,
+      "result": "Both maps and all 16 active creature/defense prefabs pass shadow inventory; shader has zero compiler messages"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

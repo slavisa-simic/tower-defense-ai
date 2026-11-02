@@ -17,7 +17,7 @@ namespace ShorelineDefense.Defenses
         protected void Awake() => defense = GetComponent<DefenseBase>();
         protected void Update() => Tick(Time.deltaTime);
         protected void OnEnable() => defense.Upgraded += RefreshUpgrade;
-        protected void OnDisable() => defense.Upgraded -= RefreshUpgrade;
+        protected void OnDisable() { defense.Upgraded -= RefreshUpgrade; Target = null; }
         private void RefreshUpgrade() { cooldown = Math.Min(cooldown, 1.0 / defense.FireRate); acquisitionTimer = 0; }
 
         public bool IsValidTarget(EnemyController enemy) => enemy != null && enemy.IsTargetable &&

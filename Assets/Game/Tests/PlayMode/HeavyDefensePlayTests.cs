@@ -41,7 +41,7 @@ namespace ShorelineDefense.Tests
         }
         private EnemyController Spawn(Vector3 position, bool brute=false)
         {
-            var prefab=brute?Object.FindFirstObjectByType<WaveManager>().EndlessSettings.enemies.Single(e=>e.Definition.Kind==EnemyKind.Brute):spawner.DefaultPrefab;
+            var prefab=brute?Object.FindFirstObjectByType<WaveManager>().EndlessSettings.enemies.Single(e=>e.Definition.Kind==EnemyKind.Bulwark):spawner.DefaultPrefab;
             Assert.IsTrue(spawner.TrySpawnAt(prefab,position,out var enemy)); return enemy;
         }
         [UnityTest] public IEnumerator AllPurchasesUseCatalogFootprintsPreviewsAndRsd()
@@ -65,7 +65,8 @@ namespace ShorelineDefense.Tests
         [UnityTest] public IEnumerator MortarEnforcesAnnulusAndChoosesClusterThenImpactsOnce()
         {
             var defense=Place("mortar");var weapon=defense.GetComponent<AreaProjectileWeapon>();
-            var close=Spawn(defense.transform.position+Vector3.left*.5f);var outside=Spawn(defense.transform.position+Vector3.left*16);
+            // Stay inside the minimum firing radius, outside the now-solid 2x2 mortar footprint.
+            var close=Spawn(defense.transform.position+Vector3.left*1.5f+Vector3.up*2.5f);var outside=Spawn(defense.transform.position+Vector3.left*16);
             weapon.Tick(.1f);Assert.That(weapon.ShotsFired,Is.Zero);
             var a=Spawn(defense.transform.position+Vector3.left*6);var b=Spawn(a.transform.position+Vector3.up*.4f);var c=Spawn(a.transform.position+Vector3.down*.4f);
             Spawn(defense.transform.position+Vector3.right*5);
@@ -82,7 +83,7 @@ namespace ShorelineDefense.Tests
             var defense=Place("rocket");var a=Spawn(defense.transform.position+Vector3.left*6);var b=Spawn(a.transform.position+Vector3.up*.5f,true);
             defense.GetComponent<AreaProjectileWeapon>().Tick(.1f);var shot=Object.FindFirstObjectByType<TimedAreaProjectile>();var point=shot.ImpactPoint;
             a.Health.TakeDefenseDamage(100);shot.Tick(.3f);Assert.IsFalse(shot.Resolved);Assert.That(shot.ImpactPoint,Is.EqualTo(point));
-            shot.Tick(.4f);Assert.That(b.Health.CurrentHealth,Is.EqualTo(350));shot.Tick(1);Assert.That(b.Health.CurrentHealth,Is.EqualTo(350));yield return null;
+            shot.Tick(.4f);Assert.That(b.Health.CurrentHealth,Is.EqualTo(b.Health.MaxHealth-Mathf.CeilToInt(250*(1-b.Definition.Armor))));shot.Tick(1);Assert.That(b.Health.CurrentHealth,Is.EqualTo(b.Health.MaxHealth-Mathf.CeilToInt(250*(1-b.Definition.Armor))));yield return null;
         }
         [UnityTest] public IEnumerator FlameConeMultiHitBurnRefreshExpiryAndReward()
         {
@@ -98,7 +99,7 @@ namespace ShorelineDefense.Tests
         {
             var defense=Place("autocannon");var gun=defense.GetComponent<TurretCombat>();
             var weak=Spawn(defense.transform.position+Vector3.left*2);var heavy=Spawn(defense.transform.position+Vector3.left*4,true);
-            gun.Tick(.01f);Assert.That(gun.Target,Is.SameAs(heavy));Assert.That(heavy.Health.CurrentHealth,Is.EqualTo(545));Assert.That(weak.Health.CurrentHealth,Is.EqualTo(100));
+            gun.Tick(.01f);Assert.That(gun.Target,Is.SameAs(heavy));Assert.That(heavy.Health.CurrentHealth,Is.EqualTo(heavy.Health.MaxHealth-Mathf.CeilToInt(55*(1-heavy.Definition.Armor))));Assert.That(weak.Health.CurrentHealth,Is.EqualTo(100));
             gun.Tick(.2f);Assert.That(gun.ShotsFired,Is.EqualTo(1));gun.Tick(.3f);Assert.That(gun.ShotsFired,Is.EqualTo(2));
             heavy.Health.TakeDefenseDamage(1000);gun.Tick(.2f);Assert.That(gun.Target,Is.SameAs(weak));gun.Tick(.3f);Assert.That(weak.Health.CurrentHealth,Is.EqualTo(45));yield return null;
         }

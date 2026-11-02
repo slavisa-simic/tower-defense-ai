@@ -1,0 +1,631 @@
+[
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_crawler_idle_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_crawler_move_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_crawler_attack_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_crawler_hit_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_crawler_death_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_crawler_emergence_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/crawler_raw_v001.png",
+    "width": 1024,
+    "height": 1536,
+    "columns": 4,
+    "rows": 6,
+    "alphaCutoff": 220,
+    "scale": 0.21875,
+    "exportWidth": 64,
+    "exportHeight": 64
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_skitter_idle_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_skitter_move_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_skitter_attack_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_skitter_hit_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_skitter_death_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_skitter_emergence_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/skitter_raw_v001.png",
+    "width": 1024,
+    "height": 1536,
+    "columns": 4,
+    "rows": 6,
+    "alphaCutoff": 220,
+    "scale": 0.221343875,
+    "exportWidth": 64,
+    "exportHeight": 64
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_bulwark_idle_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_bulwark_move_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_bulwark_attack_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_bulwark_hit_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_bulwark_death_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_bulwark_emergence_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/bulwark_raw_v001.png",
+    "width": 1024,
+    "height": 1536,
+    "columns": 4,
+    "rows": 6,
+    "alphaCutoff": 220,
+    "scale": 0.230452672,
+    "exportWidth": 64,
+    "exportHeight": 64
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_spitter_idle_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_spitter_move_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_spitter_attack_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_spitter_hit_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_spitter_death_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_spitter_emergence_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/spitter_raw_v001.png",
+    "width": 1024,
+    "height": 1536,
+    "columns": 4,
+    "rows": 6,
+    "alphaCutoff": 220,
+    "scale": 0.23140496,
+    "exportWidth": 64,
+    "exportHeight": 64
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodling_move_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodling_attack_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodling_death_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/broodling_raw_v001.png",
+    "width": 1448,
+    "height": 1086,
+    "columns": 4,
+    "rows": 3,
+    "alphaCutoff": 220,
+    "scale": 0.0738461539,
+    "exportWidth": 32,
+    "exportHeight": 32
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_idle_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_move_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_attack_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_hit_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_death_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_emergence_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_special_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_underground_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_emerge_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/burrower_raw_v001.png",
+    "width": 836,
+    "height": 1881,
+    "columns": 4,
+    "rows": 9,
+    "alphaCutoff": 220,
+    "scale": 0.27722773,
+    "exportWidth": 64,
+    "exportHeight": 64
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_dredger_idle_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_dredger_move_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_dredger_attack_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_dredger_hit_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_dredger_death_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_dredger_emergence_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_dredger_special_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/dredger_raw_v001.png",
+    "width": 948,
+    "height": 1659,
+    "columns": 4,
+    "rows": 7,
+    "alphaCutoff": 220,
+    "scale": 0.5063291,
+    "exportWidth": 128,
+    "exportHeight": 128
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodmother_idle_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodmother_move_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodmother_attack_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodmother_hit_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodmother_death_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodmother_emergence_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodmother_special_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/broodmother_raw_v001.png",
+    "width": 948,
+    "height": 1660,
+    "columns": 4,
+    "rows": 7,
+    "alphaCutoff": 220,
+    "scale": 0.5063291,
+    "exportWidth": 128,
+    "exportHeight": 128
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_drift_pod_float_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_drift_pod_move_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_drift_pod_arrival_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_drift_pod_release_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_drift_pod_retreat_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/drift_pod_raw_v001.png",
+    "width": 1122,
+    "height": 1402,
+    "columns": 4,
+    "rows": 5,
+    "alphaCutoff": 220,
+    "scale": 0.313167274,
+    "exportWidth": 192,
+    "exportHeight": 96
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_brood_carrier_float_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_brood_carrier_move_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_brood_carrier_arrival_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_brood_carrier_release_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_brood_carrier_retreat_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/brood_carrier_raw_v001.png",
+    "width": 1122,
+    "height": 1402,
+    "columns": 4,
+    "rows": 5,
+    "alphaCutoff": 220,
+    "scale": 0.314285725,
+    "exportWidth": 192,
+    "exportHeight": 96
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_leviathan_carrier_float_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_leviathan_carrier_move_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_leviathan_carrier_arrival_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_leviathan_carrier_release_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_leviathan_carrier_retreat_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/leviathan_carrier_raw_v001.png",
+    "width": 1122,
+    "height": 1402,
+    "columns": 4,
+    "rows": 5,
+    "alphaCutoff": 220,
+    "scale": 0.3283582,
+    "exportWidth": 192,
+    "exportHeight": 96
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Aquatic/bd_enemy_biovfx_idle_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Aquatic/bd_enemy_biovfx_move_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Aquatic/bd_enemy_biovfx_attack_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Aquatic/bd_enemy_biovfx_hit_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Aquatic/bd_enemy_biovfx_death_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Aquatic/bd_enemy_biovfx_emergence_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "ppu": 51.2,
+    "frames": 4
+  },
+  {
+    "raw": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/biovfx_raw_v001.png",
+    "width": 1024,
+    "height": 1536,
+    "columns": 4,
+    "rows": 6,
+    "alphaCutoff": 220,
+    "scale": 0.09917355,
+    "exportWidth": 32,
+    "exportHeight": 32
+  }
+]

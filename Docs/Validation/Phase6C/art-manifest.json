@@ -1,0 +1,32 @@
+[
+  {
+    "file": "bd_ui_research_engineering_sheet_v001.png",
+    "width": 2172,
+    "height": 724,
+    "sha256": "95B8E64E4A09B1E35748A528D76F63B70236A72263282B65AF26C2CFE02B7A12"
+  },
+  {
+    "file": "bd_ui_research_intelligence_sheet_v001.png",
+    "width": 2172,
+    "height": 724,
+    "sha256": "63F8DB30FBCCD3059E2815638077F17F31FF5B1E9520847A9F4DA0D41E72F665"
+  },
+  {
+    "file": "bd_ui_research_logistics_sheet_v001.png",
+    "width": 2059,
+    "height": 764,
+    "sha256": "88B0E462C8432D47A0FE70493ED88C575B549D3B71623C192CBB8893287AF1CF"
+  },
+  {
+    "file": "bd_ui_research_points_v001.png",
+    "width": 1254,
+    "height": 1254,
+    "sha256": "4F19CA4E5E7675958BE82684A939EAD831B788216A5DAC2593C5AF3634E6F1ED"
+  },
+  {
+    "file": "bd_ui_research_weapons_sheet_v001.png",
+    "width": 2172,
+    "height": 724,
+    "sha256": "D908E18A6EA610B14AE244CE42CC8862995A9B21E8E7E308C41F98EB6B681DFE"
+  }
+]

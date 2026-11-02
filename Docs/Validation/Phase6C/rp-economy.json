@@ -1,0 +1,262 @@
+{
+  "totalTreeCost": 610,
+  "method": "Synthetic performance records through real reward, milestone, purchase and atomic profile services; no grant RP.",
+  "results": [
+    {
+      "label": "average",
+      "wave": 40,
+      "bosses": 1,
+      "homicides": 500,
+      "firstUsefulRun": 1,
+      "fullTreeRun": 14,
+      "firstTen": [
+        {
+          "run": 1,
+          "earned": 93,
+          "milestones": 53,
+          "spent": 75,
+          "remaining": 18,
+          "owned": 5,
+          "bought": [
+            "emergency-fund",
+            "river-monitoring",
+            "reinforced-emplacements",
+            "improved-ammunition",
+            "supply-contracts"
+          ]
+        },
+        {
+          "run": 2,
+          "earned": 45,
+          "milestones": 5,
+          "spent": 115,
+          "remaining": 23,
+          "owned": 7,
+          "bought": [
+            "hardened-wire",
+            "advance-warning"
+          ]
+        },
+        {
+          "run": 3,
+          "earned": 40,
+          "milestones": 0,
+          "spent": 165,
+          "remaining": 13,
+          "owned": 9,
+          "bought": [
+            "field-salvage",
+            "optical-calibration"
+          ]
+        },
+        {
+          "run": 4,
+          "earned": 40,
+          "milestones": 0,
+          "spent": 195,
+          "remaining": 23,
+          "owned": 10,
+          "bought": [
+            "field-maintenance"
+          ]
+        },
+        {
+          "run": 5,
+          "earned": 40,
+          "milestones": 0,
+          "spent": 255,
+          "remaining": 3,
+          "owned": 12,
+          "bought": [
+            "area-munitions",
+            "thermal-mixture"
+          ]
+        },
+        {
+          "run": 6,
+          "earned": 40,
+          "milestones": 0,
+          "spent": 285,
+          "remaining": 13,
+          "owned": 13,
+          "bought": [
+            "biological-analysis"
+          ]
+        },
+        {
+          "run": 7,
+          "earned": 40,
+          "milestones": 0,
+          "spent": 320,
+          "remaining": 18,
+          "owned": 14,
+          "bought": [
+            "logistics-network"
+          ]
+        },
+        {
+          "run": 8,
+          "earned": 40,
+          "milestones": 0,
+          "spent": 355,
+          "remaining": 23,
+          "owned": 15,
+          "bought": [
+            "modular-construction"
+          ]
+        },
+        {
+          "run": 9,
+          "earned": 40,
+          "milestones": 0,
+          "spent": 390,
+          "remaining": 28,
+          "owned": 16,
+          "bought": [
+            "event-forecasting"
+          ]
+        },
+        {
+          "run": 10,
+          "earned": 40,
+          "milestones": 0,
+          "spent": 440,
+          "remaining": 18,
+          "owned": 17,
+          "bought": [
+            "reserve-stockpile"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "stronger",
+      "wave": 60,
+      "bosses": 2,
+      "homicides": 400,
+      "firstUsefulRun": 1,
+      "fullTreeRun": 9,
+      "firstTen": [
+        {
+          "run": 1,
+          "earned": 148,
+          "milestones": 83,
+          "spent": 140,
+          "remaining": 8,
+          "owned": 8,
+          "bought": [
+            "emergency-fund",
+            "river-monitoring",
+            "reinforced-emplacements",
+            "improved-ammunition",
+            "supply-contracts",
+            "hardened-wire",
+            "advance-warning",
+            "field-salvage"
+          ]
+        },
+        {
+          "run": 2,
+          "earned": 70,
+          "milestones": 5,
+          "spent": 195,
+          "remaining": 23,
+          "owned": 10,
+          "bought": [
+            "optical-calibration",
+            "field-maintenance"
+          ]
+        },
+        {
+          "run": 3,
+          "earned": 65,
+          "milestones": 0,
+          "spent": 255,
+          "remaining": 28,
+          "owned": 12,
+          "bought": [
+            "area-munitions",
+            "thermal-mixture"
+          ]
+        },
+        {
+          "run": 4,
+          "earned": 65,
+          "milestones": 0,
+          "spent": 320,
+          "remaining": 28,
+          "owned": 14,
+          "bought": [
+            "biological-analysis",
+            "logistics-network"
+          ]
+        },
+        {
+          "run": 5,
+          "earned": 65,
+          "milestones": 0,
+          "spent": 390,
+          "remaining": 23,
+          "owned": 16,
+          "bought": [
+            "modular-construction",
+            "event-forecasting"
+          ]
+        },
+        {
+          "run": 6,
+          "earned": 65,
+          "milestones": 0,
+          "spent": 440,
+          "remaining": 38,
+          "owned": 17,
+          "bought": [
+            "reserve-stockpile"
+          ]
+        },
+        {
+          "run": 7,
+          "earned": 65,
+          "milestones": 0,
+          "spent": 495,
+          "remaining": 48,
+          "owned": 18,
+          "bought": [
+            "fortification-doctrine"
+          ]
+        },
+        {
+          "run": 8,
+          "earned": 65,
+          "milestones": 0,
+          "spent": 550,
+          "remaining": 58,
+          "owned": 19,
+          "bought": [
+            "deep-water-sensor-network"
+          ]
+        },
+        {
+          "run": 9,
+          "earned": 65,
+          "milestones": 0,
+          "spent": 610,
+          "remaining": 63,
+          "owned": 20,
+          "bought": [
+            "advanced-fire-control"
+          ]
+        },
+        {
+          "run": 10,
+          "earned": 65,
+          "milestones": 0,
+          "spent": 610,
+          "remaining": 128,
+          "owned": 20,
+          "bought": []
+        }
+      ]
+    }
+  ]
+}

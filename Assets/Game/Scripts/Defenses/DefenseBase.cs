@@ -11,6 +11,7 @@ namespace ShorelineDefense.Defenses
     {
         private Health health;
         private bool removed;
+        public Progression.MetaModifierService Meta { get; private set; } = Progression.MetaModifierService.Neutral;
         public ShorelineDefense.Building.BuildManager Owner { get; private set; }
         public int ConstructionCost { get; private set; }
         public int Level { get; private set; } = 1;
@@ -18,18 +19,22 @@ namespace ShorelineDefense.Defenses
         public int MaxHealth => health?.MaxHealth ?? 0;
         public event Action Changed;
         public event Action Upgraded;
+        public event Action<int> Damaged;
         private DefenseLevelData LevelStats => Definition.LevelData(Level);
-        public int Damage => Mathf.RoundToInt(Definition.Damage * (LevelStats?.damage ?? 1));
-        public float FireRate => Definition.FireRate * (LevelStats?.fireRate ?? 1);
+        public int Damage => DamageAtLevel(Level);
+        public int DamageAtLevel(int level) => Mathf.RoundToInt(Definition.Damage * Meta.DamageMultiplier(Definition) * (Definition.LevelData(level)?.damage ?? 1));
+        public float FireRate => FireRateAtLevel(Level);
+        public float FireRateAtLevel(int level) => Definition.FireRate * Meta.FireRateMultiplier(Definition) * (Definition.LevelData(level)?.fireRate ?? 1);
+        public float DamageTick => Definition.HeavyWeapon.damageTick / Meta.FireRateMultiplier(Definition);
         public float MovementMultiplier => Mathf.Max(.05f, Definition.MovementMultiplier * (LevelStats?.slow ?? 1));
-        public float SplashRadiusInCells => Definition.HeavyWeapon.splashRadiusInCells * (LevelStats?.splash ?? 1);
-        public float BurnDuration => Definition.HeavyWeapon.burnDuration * (LevelStats?.burnDuration ?? 1);
+        public float SplashRadiusInCells => Definition.HeavyWeapon.splashRadiusInCells * Meta.SplashMultiplier(Definition) * (LevelStats?.splash ?? 1);
+        public float BurnDuration => Definition.HeavyWeapon.burnDuration * Meta.BurnMultiplier(Definition) * (LevelStats?.burnDuration ?? 1);
         public float BurnDps => Definition.HeavyWeapon.burnDps * (LevelStats?.burnDps ?? 1);
         internal void ApplyUpgrade(int cost)
         {
             Level++;
             TotalInvestment += cost;
-            health.IncreaseMaximum(Mathf.RoundToInt(Definition.MaxHealth * (LevelStats?.health ?? 1)));
+            health.IncreaseMaximum(Meta.MaxHealth(Definition, Level));
             Upgraded?.Invoke();
             Changed?.Invoke();
         }
@@ -37,7 +42,7 @@ namespace ShorelineDefense.Defenses
         internal void RestoreState(Persistence.StructureSaveData data)
         {
             Level = data.level; ConstructionCost = data.constructionCost; TotalInvestment = data.investment;
-            health.IncreaseMaximum(Mathf.RoundToInt(Definition.MaxHealth * (LevelStats?.health ?? 1)));
+            health.IncreaseMaximum(Meta.MaxHealth(Definition, Level));
             if (health.MaxHealth != data.maxHealth) throw new InvalidOperationException("Structure tuning differs from this save.");
             health.TakeDamage(health.MaxHealth - data.health);
         }
@@ -45,7 +50,9 @@ namespace ShorelineDefense.Defenses
         public bool Dismantled { get; private set; }
         internal void SetConstructionOwner(ShorelineDefense.Building.BuildManager owner, int cost) { Owner = owner; ConstructionCost = cost; TotalInvestment = cost; }
         internal void RemoveByDismantle() {
+            if (!IsAlive) return;
             Dismantled = true;
+            removed = true;
             Changed?.Invoke();
             ReleaseCells();
             gameObject.SetActive(false);
@@ -59,34 +66,65 @@ namespace ShorelineDefense.Defenses
         public Vector2Int Anchor { get; private set; }
         public bool IsAlive => health != null && health.IsAlive && !Dismantled && !removed;
         public int CurrentHealth => health?.CurrentHealth ?? 0;
-        public float Range => Definition.RangeInCells * (LevelStats?.range ?? 1) * grid.CellSize *
+        public float Range => RangeAtLevel(Level);
+        public float RangeAtLevel(int level) => Definition.RangeInCells * Meta.RangeMultiplier(Definition) * (Definition.LevelData(level)?.range ?? 1) * grid.CellSize *
             (Definition.Id == "land-mine" || Definition.Id == "barbed-wire" ? 1 : Owner?.Events?.Modifiers.defenseRange ?? 1);
         public BattlefieldGrid Grid => grid;
         public event Action Died;
 
         public void Initialize(DefenseDefinition definition, Vector2Int anchor, BattlefieldGrid battlefield,
-            GameStateController state, EnemyRegistry enemies)
+            GameStateController state, EnemyRegistry enemies, Progression.MetaModifierService modifiers = null)
         {
             if (health != null) throw new InvalidOperationException("A defense can only be initialized once.");
             Definition = definition;
+            Meta = modifiers ?? Progression.MetaModifierService.Neutral;
             Anchor = anchor;
             grid = battlefield;
             footprint = definition.Footprint;
             Game = state;
             Enemies = enemies;
-            health = new Health(definition.MaxHealth);
+            health = new Health(Meta.MaxHealth(definition, 1));
             health.Changed += HealthChanged;
             health.Died += OnDied;
+            if (grid.Plane == GameplayPlane.XY && definition.BlocksMovement && TryGetComponent<BoxCollider2D>(out var collider))
+                collider.size = new Vector2(footprint.x, footprint.y) * grid.CellSize;
         }
 
-        public void TakeDamage(int amount) => health?.TakeDamage(amount);
+        public bool ActivateNavigation() => !Definition.BlocksMovement || grid.TrySetNavigationBlocker(Anchor, footprint, this);
+
+        public Vector3 ClosestFootprintPoint(Vector3 position)
+        {
+            Vector3 center = grid.FootprintCenter(Anchor, footprint);
+            var half = new Vector2(footprint.x, footprint.y) * (grid.CellSize * .5f);
+            return grid.Plane == GameplayPlane.XY
+                ? new Vector3(Mathf.Clamp(position.x, center.x - half.x, center.x + half.x), Mathf.Clamp(position.y, center.y - half.y, center.y + half.y), center.z)
+                : new Vector3(Mathf.Clamp(position.x, center.x - half.x, center.x + half.x), center.y, Mathf.Clamp(position.z, center.z - half.y, center.z + half.y));
+        }
+
+        public void TakeDamage(int amount)
+        {
+            if (!IsAlive || amount <= 0) return;
+            int before = CurrentHealth;
+            health.TakeDamage(amount);
+            if (IsAlive) Damaged?.Invoke(before - CurrentHealth);
+        }
         private void OnDied()
         {
-            Died?.Invoke();
+            if (removed) return;
+            removed = true;
             ReleaseCells();
+            Changed?.Invoke();
+            Died?.Invoke();
+            // Disable combat, targeting, smoke and selection presentation in this command, not at frame end.
+            gameObject.SetActive(false);
             Destroy(gameObject);
         }
-        private void ReleaseCells() => grid?.ClearOccupied(Anchor, footprint, this);
+        private void ReleaseCells()
+        {
+            grid?.ClearTraversalModifier(Anchor, footprint, this);
+            grid?.ClearNavigationBlocker(Anchor, footprint, this);
+            grid?.ClearOccupied(Anchor, footprint, this);
+        }
         private void OnDestroy()
         {
             removed = true;

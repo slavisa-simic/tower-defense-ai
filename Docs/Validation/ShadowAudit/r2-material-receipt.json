@@ -1,0 +1,443 @@
+[
+  {
+    "path": "Assets/Game/Materials/PixelShadowLow.mat",
+    "beforeOffset": "(4.00, -3.00, 0.00, 0.00)",
+    "beforeOpacity": 0.36,
+    "offset": "(4.00, -3.00, 0.00, 0.00)",
+    "opacity": 0.36
+  },
+  {
+    "path": "Assets/Game/Materials/PixelShadowMedium.mat",
+    "beforeOffset": "(6.00, -4.50, 0.00, 0.00)",
+    "beforeOpacity": 0.39,
+    "offset": "(8.00, -6.00, 0.00, 0.00)",
+    "opacity": 0.4
+  },
+  {
+    "path": "Assets/Game/Materials/PixelShadowTall.mat",
+    "beforeOffset": "(8.00, -6.00, 0.00, 0.00)",
+    "beforeOpacity": 0.4,
+    "offset": "(12.00, -9.00, 0.00, 0.00)",
+    "opacity": 0.4
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_oil_barrel",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "base_bunker_wall_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "base_bunker_wall_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "base_bunker_wall_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "base_bunker_wall_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "base_bunker_wall_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "base_bunker_wall_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "base_bunker_wall_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "base_bunker_wall_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "base_bunker_wall_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "base_river_checkpoint_marker",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_warning_sign",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_warning_sign",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_military_barrel",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_metal_crate",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_wooden_crate",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_quarantine_fence_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_quarantine_fence_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_quarantine_fence_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_quarantine_fence_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_quarantine_fence_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_quarantine_fence_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_quarantine_fence_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_quarantine_fence_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_sandbag_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_sandbag_segment",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_czech_hedgehog_obstacle",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "smallOwner": "prop_czech_hedgehog_obstacle",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Reinforced checkpoint barrier",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Reinforced checkpoint barrier",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Reinforced checkpoint barrier",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Reinforced checkpoint barrier",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Reinforced checkpoint barrier",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Reinforced checkpoint barrier",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Reinforced checkpoint barrier",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Reinforced checkpoint barrier",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Reinforced checkpoint barrier",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Reinforced checkpoint barrier",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Reinforced checkpoint barrier",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Reinforced checkpoint barrier",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint perimeter fence",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint sandbags",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint perimeter fence",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint sandbags",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint perimeter fence",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint sandbags",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint perimeter fence",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint sandbags",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint perimeter fence",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint sandbags",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint perimeter fence",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint sandbags",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint perimeter fence",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint sandbags",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint perimeter fence",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint sandbags",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint perimeter fence",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Checkpoint sandbags",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Pier mooring edge",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Mooring ladder",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Mooring ladder",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Mooring ladder",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Decorative cargo / oil",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Decorative cargo / oil",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Decorative cargo / oil",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Decorative cargo / oil",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Decorative cargo / oil",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Decorative cargo / oil",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Decorative cargo / oil",
+    "material": "PixelShadowLow"
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "smallOwner": "Forklift parking",
+    "material": "PixelShadowLow"
+  }
+]

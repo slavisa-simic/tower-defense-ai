@@ -1,0 +1,8 @@
+{
+  "diagnostics": [],
+  "compileMs": 1513,
+  "executeMs": 1683,
+  "assemblyName": "PipelineRunScript_FinalAudit_e1a32e0bb8d440739a2c7bb6c3f6146b",
+  "success": true,
+  "result": "{\r\n  \"runInBackground\": false,\r\n  \"rows\": [\r\n    {\r\n      \"scene\": \"MainMenu\",\r\n      \"missing\": 0,\r\n      \"legacyDependencies\": [],\r\n      \"carriers\": 0\r\n    },\r\n    {\r\n      \"scene\": \"CoastalDefense_TopDown\",\r\n      \"missing\": 0,\r\n      \"legacyDependencies\": [],\r\n      \"carriers\": 4\r\n    },\r\n    {\r\n      \"scene\": \"DanubeIndustrialPort\",\r\n      \"missing\": 0,\r\n      \"legacyDependencies\": [],\r\n      \"carriers\": 4\r\n    }\r\n  ],\r\n  \"previews\": [\r\n    {\r\n      \"id\": \"river_border\",\r\n      \"preview\": \"Assets/Game/Art/UI/map_preview_danube_border.png\"\r\n    },\r\n    {\r\n      \"id\": \"industrial_port\",\r\n      \"preview\": \"Assets/Game/Art/UI/map_preview_industrial_port.png\"\r\n    }\r\n  ]\r\n}"
+}

@@ -29,7 +29,7 @@ namespace ShorelineDefense.UI
             nextRefresh = Time.unscaledTime + .25f;
             var boats = waves.Landings; var director = waves.PressureDirector;
             label.text = $"Wave {waves.CurrentWaveNumber}  Active {waves.AliveCount}  Pending {waves.PendingCount}\n" +
-                $"Boats {boats?.ActiveBoats ?? 0}  Pending boats ~{waves.PendingBoats}  Target {director.Target}\n" +
+                $"Arrivals {boats?.ActiveBoats ?? 0}  Pending arrivals ~{waves.PendingBoats}  Target {director.Target}\n" +
                 $"{director.Mode}  Surge {director.Surging}  Peaks {statistics.PeakActiveEnemies} / {statistics.PeakConcurrentBoats}\n" +
                 $"Avg {statistics.AverageFrameTimeMs:F2} ms  Income {statistics.CurrentWaveIncome:N0} RSD";
         }

@@ -5,7 +5,7 @@ Prepared 2026-10-02 for Phase 5A. This document sets production requirements; it
 ## Formats and folders
 
 - Preserve the generator's original download unchanged in `Assets/Game/Audio/Source/<category>/`. Prefer lossless WAV PCM, 48 kHz, 24-bit source masters when the provider can actually deliver them. Retain a native MP3 if that is the only provider output; transcoding does not recover lost fidelity and must be labeled as a decoded working master.
-- Use 48 kHz PCM WAV, 16-bit or 24-bit, for processed short SFX. Mono is the default for positional weapons, impacts, enemies and boats. Stereo is appropriate for music, broad ambience and authored UI where justified.
+- Use 48 kHz PCM WAV, 16-bit or 24-bit, for processed short SFX. Mono is the default for positional weapons, impacts, creatures and carriers. Stereo is appropriate for music, broad ambience and authored UI where justified.
 - Use OGG Vorbis for approved longer music/ambience exports where useful. Unity can also compress a WAV during import; avoid double lossy compression. Choose runtime import settings after target-device profiling.
 - Categories for Source and Processed: Weapons, Explosions, Impacts, Enemies, Bosses, Boats, Environment, UI, Music, Radio. Create a category folder when it receives its first asset; only Environment currently contains test clips. Likewise, create Mixers and Definitions when actual assets need them. Keep prompts/receipts/license records in `Docs/Audio/`, not runtime folders. Preserve existing asset GUIDs and do not relocate working assets without AssetDatabase.
 
@@ -31,7 +31,7 @@ Use original recordings, legitimate generation services or sources with explicit
 
 ## Future runtime performance contract
 
-100+ infected, simultaneous boats, automatic weapons, explosions and flamethrowers require a bounded presentation system. Gameplay must never wait for or depend on audio. Reuse committed gameplay events; keep damage, spawns, rewards and wave state in their existing owners. Do not add one unrestricted AudioSource per gameplay event.
+100+ aquatic creatures, simultaneous organic carriers, automatic weapons, explosions and flamethrowers require a bounded presentation system. Gameplay must never wait for or depend on audio. Reuse committed gameplay events; keep damage, spawns, rewards and wave state in their existing owners. Do not add one unrestricted AudioSource per gameplay event.
 
 Phase 5A must establish pooling, global and category voice caps, priorities, steal/drop rules, per-emitter cooldowns, distance culling, nearby-event aggregation, variation selection and profiling counters. Suggested initial planning budget: at most 24 simultaneous SFX, including four reserved UI/critical slots; at most two ambience, two music crossfade and one radio voice (29 total). This is a design starting point, not an implemented guarantee. Critical UI/radio/boss warnings should outrank distant repetitive shots. Automatic fire and flame need bounded bursts/loops rather than unlimited per-bullet voices. Do not suppress gameplay events to meet the audio budget.
 

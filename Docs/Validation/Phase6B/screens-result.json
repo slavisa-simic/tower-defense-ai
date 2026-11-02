@@ -1,0 +1,8 @@
+{
+  "diagnostics": [],
+  "compileMs": 191,
+  "executeMs": 22370,
+  "assemblyName": "PipelineRunScript_Live_fc8575b82cb549e799477f3f14a78825",
+  "success": true,
+  "result": "[\r\n  {\r\n    \"map\": \"CoastalDefense_TopDown\",\r\n    \"active\": 47,\r\n    \"carriers\": 10,\r\n    \"arrivals\": [\r\n      2,\r\n      11,\r\n      2,\r\n      1\r\n    ],\r\n    \"resolution\": \"1920x1080\"\r\n  },\r\n  {\r\n    \"map\": \"DanubeIndustrialPort\",\r\n    \"active\": 43,\r\n    \"carriers\": 11,\r\n    \"arrivals\": [\r\n      2,\r\n      11,\r\n      3,\r\n      0\r\n    ],\r\n    \"resolution\": \"1920x1080\"\r\n  }\r\n]"
+}

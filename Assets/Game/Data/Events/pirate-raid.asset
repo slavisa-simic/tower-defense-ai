@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8595f4b8de5845d43ba7c711c60cb4df, type: 3}
   m_Name: pirate-raid
   m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.EndlessEventDefinition
-  id: pirate-raid
-  displayName: PIRATE RAID
-  description: Fast pirate units. Faster craft across multiple sectors.
+  id: swarm-surge
+  displayName: SWARM SURGE
+  description: Fast river organisms surge toward the quarantine line.
   category: 0
-  minimumWave: 20
+  minimumWave: 8
   maximumWave: 0
   weight: 1
   durationType: 1
@@ -38,17 +38,19 @@ MonoBehaviour:
     preparationRepair: 1
     floodedColumns: 0
     fog: 0
-    boatVisual: {fileID: 7518034814223441464, guid: 6bc74377f4a6f5e49bc0318a2338beaa, type: 3}
+    directEmergenceRatio: 0.8
+    broodCarrierRatio: -1
+    boatVisual: {fileID: 0}
     landingPattern: 1
     composition:
-    - kind: 5
-      multiplier: 5
-    - kind: 6
-      multiplier: 4
     - kind: 1
-      multiplier: 3
+      multiplier: 5
+    - kind: 4
+      multiplier: 4
     - kind: 0
-      multiplier: 0.4
+      multiplier: 1.5
+    - kind: 2
+      multiplier: 0.3
   supplyBase: 0
   supplyPerWave: 0
   supplyMaximum: 500

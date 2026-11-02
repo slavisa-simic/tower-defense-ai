@@ -4,9 +4,9 @@
 
 # Border Defenders
 
-Hold a post-nuclear Danube quarantine line against infected river landings. Build a defense network, spend earned RSD on repairs and upgrades, and survive increasingly crowded assaults across an open river border and an abandoned industrial port.
+Hold a post-nuclear Danube quarantine line against mutated aquatic organisms. Build a defense network, spend earned RSD on repairs and upgrades, and survive increasingly crowded assaults across an open river border and an abandoned industrial port.
 
-**Unity 6.3 LTS · C# · URP 2D · UI Toolkit · Single-player prototype · Phase 6A**
+**Unity 6.3 LTS · C# · URP 2D · UI Toolkit · Single-player prototype · Phase 6B**
 
 [Gameplay](#hold-the-river) · [Architecture](#inside-the-defense-line) · [Built with Codex](#built-with-codex) · [Run locally](#open-the-project)
 
@@ -14,28 +14,25 @@ Hold a post-nuclear Danube quarantine line against infected river landings. Buil
 
 ## Hold the river
 
-The water is on the left. The line you are defending is on the right. Enemies arrive in boats, unload at the shore, and follow weighted grid routes inland. Every breach increases the run's **Homicides** counter; the configured threshold ends the run.
+The water is on the left. The line you are defending is on the right. Creatures emerge through disturbed water or arrive in organic cysts and living brood carriers, then follow weighted grid routes inland. Every breach increases the run's **Homicides** counter; the configured threshold ends the run.
 
 Start with **500 RSD**, choose your first positions, then press **START WAVE**. Kill rewards and wave bonuses pay for the next construction, repair, or upgrade. Between waves, inspect the next assault and decide where the money will do the most work.
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="Docs/Readme/Media/danube-border-poster.png">
-  <img src="Docs/Readme/Media/danube-assault.gif" width="960" alt="Twelve seconds of real Danube Border gameplay: boats unload infected while three MG nests engage them.">
-</picture>
+<img src="Docs/Validation/Phase6B/aquatic-hud.png" width="960" alt="Aquatic emergence on Danube Border.">
 
-*Recorded in Unity: 12 seconds at 10 fps, normal 500 RSD start and three scripted MG placements. This is a world-camera capture; the UI is shown below. Static posters are available when reduced motion is requested.*
+*Phase 6B engine capture. Live Update-driven Wave 24 fixture uses a disclosed 20,000 RSD inspection grant; it is not an earned-income balance run.*
 
 ### Two different front lines
 
 <table>
   <tr>
     <td width="50%">
-      <a href="Docs/Readme/Media/danube-border.png"><img src="Docs/Readme/Media/danube-border.png" alt="Danube Border: an open grassy battlefield between the river and the fortified inland line."></a>
+      <a href="Docs/Validation/Phase6B/aquatic-hud.png"><img src="Docs/Validation/Phase6B/aquatic-hud.png" alt="Danube Border: an open grassy battlefield between the river and the fortified inland line."></a>
       <br><b>DANUBE BORDER</b><br>
       Broad building space, a long riverbank, and room to spread overlapping fire.
     </td>
     <td width="50%">
-      <a href="Docs/Readme/Media/industrial-port.png"><img src="Docs/Readme/Media/industrial-port.png" alt="Danube Industrial Port: three cargo docks, container blocks, service buildings, and multiple inland routes."></a>
+      <a href="Docs/Validation/Phase6B/industrial-aquatic-hud.png"><img src="Docs/Validation/Phase6B/industrial-aquatic-hud.png" alt="Danube Industrial Port: three cargo docks, container blocks, service buildings, and multiple inland routes."></a>
       <br><b>DANUBE INDUSTRIAL PORT</b><br>
       Projecting docks, container yards, split routes, and cleared concrete pockets.
     </td>
@@ -47,12 +44,9 @@ Both maps use the same placement, economy, combat, wave, and save systems. The p
 <details>
 <summary><b>Watch the Industrial Port landing sequence</b></summary>
 
-<picture>
-  <source media="(prefers-reduced-motion: reduce)" srcset="Docs/Readme/Media/industrial-port-poster.png">
-  <img src="Docs/Readme/Media/port-assault.gif" width="960" alt="Twelve seconds of real Industrial Port gameplay: infected unload between the docks and container lanes under MG fire.">
-</picture>
+<img src="Docs/Validation/Phase6B/industrial-aquatic-hud.png" width="960" alt="Aquatic organisms moving through Industrial Port.">
 
-*Another 12-second engine capture, using the same 500 RSD budget. Placement is scripted through the ordinary BuildManager API. These clips illustrate the systems; they are not human balance certification.*
+*The port shares the aquatic roster, organic arrival definitions and ordinary BuildManager API. The inspection fixture uses the same disclosed prepared-defense budget.*
 
 </details>
 
@@ -71,16 +65,16 @@ Both maps use the same placement, economy, combat, wave, and save systems. The p
 
 Structures share placement, occupancy, affordability, selection, and Level II/III upgrades. Repairs and dismantling use explicit transactions. Wire connections update their neighboring presentation without owning navigation or money.
 
-The endless system combines seeded wave generation, a pressure director, enemy transport capacity, special encounters, and **13 events**. Fog, Flooded Shore, supply drops, and sector assaults change the next decision. Boss transports use the existing landing and breach flow.
+The endless system combines seeded wave generation, a pressure director, enemy transport capacity, special encounters, and **13 events**. Fog, Flooded Shore, supply drops, and sector assaults change the next decision. The Dredger and Broodmother use the shared emergence, registry and breach flow. Spitters damage nearby defenses; visible Burrowers briefly bypass wire slowdown; Broodmother offspring are bounded and counted in the active wave.
 
 <details>
 <summary><b>HUD, structure management and encounter screenshots</b></summary>
 
-<a href="Docs/Validation/Phase5C/hud-1080.png"><img src="Docs/Validation/Phase5C/hud-1080.png" width="960" alt="Danube Border HUD with the Fog event announcement and the Level II mortar inspection panel."></a>
+<a href="Docs/Validation/Phase6B/aquatic-hud.png"><img src="Docs/Validation/Phase6B/aquatic-hud.png" width="960" alt="Danube Border HUD with the Fog event announcement and the Level II mortar inspection panel."></a>
 
 *UI Toolkit: live currency and wave counters, structure inspection, upgrade/repair actions, and event information.*
 
-<a href="Docs/Validation/Phase6A/boss-encounter-hud.png"><img src="Docs/Validation/Phase6A/boss-encounter-hud.png" width="960" alt="Industrial Port QA capture with the boss health bar, currency, build catalog and start-wave controls."></a>
+<a href="Docs/Validation/Phase6B/broodmother-hud.png"><img src="Docs/Validation/Phase6B/broodmother-hud.png" width="960" alt="Industrial Port QA capture with the boss health bar, currency, build catalog and start-wave controls."></a>
 
 *Historical QA captures include setup budgets and wave jumps. The normal starting balance is 500 RSD.*
 
@@ -123,11 +117,11 @@ flowchart TD
 ```mermaid
 flowchart TD
     accTitle: Wave planning, landing and breach ownership
-    accDescr: WaveManager owns the seeded plan and policies, dispatches boats, and delegates enemy creation to EnemySpawner. Enemies follow map routes and resolve breaches through the shared breach service and statistics.
+    accDescr: WaveManager owns the seeded plan and policies, dispatches biological arrivals, and delegates enemy creation to EnemySpawner. Enemies follow map routes and resolve breaches through the shared breach service and statistics.
     Rules["Wave / enemy / event definitions"] --> Waves["WaveManager<br/>one scheduler and wave-state owner"]
     Generator["EndlessWaveGenerator"] -->|seeded plan| Waves
     Policy["AssaultPressureDirector<br/>+ EndlessEventManager"] -->|pressure and modifiers| Waves
-    Waves -->|dispatch cargo| Boats["BoatLandingSystem"]
+    Waves -->|dispatch cargo| Boats["AssaultCarrierSystem"]
     Boats -->|unload request| Spawner["EnemySpawner<br/>initialization + pooling"]
     Spawner --> Enemies["EnemyController<br/>movement · combat · health"]
     Map["MapRuntimeContext<br/>GridManager + weighted paths"] -->|routes and destinations| Enemies
@@ -181,14 +175,15 @@ Development followed bounded phase briefs. The game owner chose the direction an
 | 5A → 5B | Structure inspection, Level II/III upgrades, repairs, game speed, and thirteen events | [Management](PHASE_5A_REPORT.md) · [Events](PHASE_5B_REPORT.md) |
 | 5C | Main menu, Preparation checkpoints, Continue, settings, and run history | [Product flow](PHASE_5C_REPORT.md) |
 | 6A | Map selection and Danube Industrial Port through reusable map data and shared services | [Second map](PHASE_6A_REPORT.md) |
+| 6B | Original aquatic creatures, organic arrivals, biological bosses and safe save/event migration | [Aquatic overhaul](PHASE_6B_REPORT.md) |
 
 These reports preserve their original status and limitations. For example, Phase 4C records an unavailable requested boss-art batch and its visual fallback. The playable implementation and the art delivery status are recorded separately.
 
 ### An art handbook before an art batch
 
-<a href="Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png"><img src="Assets/Game/Art/MasterReferences/bd_ref_danube_master_v002.png" width="960" alt="Approved Danube master reference v002: overhead riverbank, quarantine base, material palette, silhouettes and UI studies."></a>
+<a href="Assets/Game/Art/MasterReferences/ref_aquatic_enemy_lineup_01.png"><img src="Assets/Game/Art/MasterReferences/ref_aquatic_enemy_lineup_01.png" width="960" alt="Selected aquatic master lineup: six original overhead creature silhouettes."></a>
 
-*The approved visual master, v002. This is the art-direction board, not a gameplay screenshot.*
+*Phase 6B creature reference, selected by the executing agent under the autonomous brief. This is a design board, not a gameplay screenshot or independent human approval.*
 
 The [art handbook](ART_HANDBOOK.md) fixes the overhead perspective, material language, palette, scale, silhouettes, and readable UI. The [lore handbook](LORE_HANDBOOK.md) establishes the alternate post-nuclear Balkan setting. The selected master revision anchors later batches.
 
@@ -258,7 +253,7 @@ If the Unity CLI cannot find an existing Editor installation, register its execu
 
 ### Validation and current boundaries
 
-The latest code-cleanup validation, on **2026-10-22**, passed **122/122 EditMode** and **75/75 PlayMode** tests on Unity 6000.3.24f1, with no C# compiler errors or warnings. The [cleanup report](Docs/Validation/ProjectCleanup/report.md) includes the settings regression found and fixed during that run. README media were captured separately; their checks are recorded in the [media notes](Docs/Readme/MEDIA.md).
+Phase 6B validation on **2026-11-02** passed **127/127 EditMode** and **80/80 PlayMode** tests on Unity 6000.3.24f1. Both maps passed aquatic arrivals, early waves, boss encounters and save migration. The [phase report](PHASE_6B_REPORT.md) records exact fixtures, current captures, stress measurements and limits.
 
 Run both test assemblies in **Window → General → Test Runner**, or use the Unity CLI with the Editor closed:
 
@@ -267,6 +262,6 @@ unity test . --editor-version 6000.3.24f1 --mode EditMode --output TestResults/e
 unity test . --editor-version 6000.3.24f1 --mode PlayMode --output TestResults/playmode.xml
 ```
 
-Phase 6A also has a recorded successful Windows release build. This is a playable prototype with generated pixel-art exports. Human comparative balance review, earned-income midgame/boss victories, and sustained standalone profiling remain open validation work. Production audio is still at the pipeline-fixture stage; its status and provenance are in [AUDIO_LICENSES.md](AUDIO_LICENSES.md).
+Phase 6B has a successful Windows release build at `Builds/Phase6B/BorderDefenders.exe`. This is a playable prototype with generated pixel-art exports. Human comparative balance review, earned-income midgame/boss victories, and sustained standalone profiling remain open validation work. Production audio is still at the pipeline-fixture stage; its status and provenance are in [AUDIO_LICENSES.md](AUDIO_LICENSES.md).
 
-[MIT license](LICENSE) · [Project rules](AGENTS.md) · [Latest phase report](PHASE_6A_REPORT.md) · [Art register](Docs/Art/ASSET_REGISTER.md)
+[MIT license](LICENSE) · [Project rules](AGENTS.md) · [Latest phase report](PHASE_6B_REPORT.md) · [Art register](Docs/Art/ASSET_REGISTER.md)

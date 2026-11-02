@@ -1,0 +1,2 @@
+CoastalDefense_TopDown: Wave 1 resolved; 59 ticks; homicides 2000
+DanubeIndustrialPort: Wave 1 resolved; 67 ticks; homicides 2000

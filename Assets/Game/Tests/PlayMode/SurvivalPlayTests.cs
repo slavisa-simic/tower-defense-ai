@@ -22,7 +22,7 @@ namespace ShorelineDefense.Tests
         [UnityTearDown] public IEnumerator Cleanup()
         {Time.timeScale=1;var previous=SceneManager.GetActiveScene();SceneManager.SetActiveScene(SceneManager.CreateScene("Survival cleanup"));yield return SceneManager.UnloadSceneAsync(previous);LogAssert.NoUnexpectedReceived();}
         private EnemyController Spawn(EnemyController prefab)
-        {Assert.IsTrue(spawner.TrySpawnAt(prefab,spawner.Battlefield.Grid.CellToWorld(new Vector2Int(27,4)),out var enemy));return enemy;}
+        {Assert.IsTrue(spawner.TrySpawnAt(prefab,spawner.Battlefield.Grid.CellToWorld(new Vector2Int(25,4)),out var enemy));return enemy;}
         [UnityTest] public IEnumerator EachBreachResolvesOnceWithoutRewardAndThresholdStopsBoats()
         {
             int events=0;stats.OnHomicidesChanged+=_=>events++;int previousMoney=money.Money;
@@ -39,9 +39,9 @@ namespace ShorelineDefense.Tests
         {
             border.ConfigureThreshold(0);spawner.ConfigureWave(1,1.25f,1.1f);var enemy=Spawn(spawner.DefaultPrefab);Assert.That(enemy.Health.MaxHealth,Is.EqualTo(125));
             Assert.IsFalse(spawner.TrySpawnAt(spawner.DefaultPrefab,spawner.Battlefield.Grid.CellToWorld(new Vector2Int(20,9)),out _));
-            enemy.Health.TakeDefenseDamage(10000);enemy.Health.TakeDefenseDamage(10000);Assert.That(stats.TotalKills,Is.EqualTo(1));Assert.That(stats.BasicKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(25));
+            enemy.Health.TakeDefenseDamage(10000);enemy.Health.TakeDefenseDamage(10000);Assert.That(stats.TotalKills,Is.EqualTo(1));Assert.That(stats.CrawlerKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(25));
             foreach(var prefab in waves.EndlessSettings.enemies.Take(3).Skip(1)){var killed=Spawn(prefab);killed.Health.TakeDefenseDamage(10000);yield return null;}
-            Assert.That(stats.RunnerKills,Is.EqualTo(1));Assert.That(stats.BruteKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(135));
+            Assert.That(stats.SkitterKills,Is.EqualTo(1));Assert.That(stats.BulwarkKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(135));
             Assert.IsTrue(money.TrySpend(50));Assert.That(stats.TotalMoneySpent,Is.EqualTo(50));Assert.IsFalse(money.TrySpend(int.MaxValue));Assert.That(stats.TotalMoneySpent,Is.EqualTo(50));
             for(int i=0;i<45;i++){Spawn(spawner.DefaultPrefab).Tick(100);yield return null;}
             Assert.That(stats.Homicides,Is.EqualTo(1125));Assert.IsTrue(Object.FindFirstObjectByType<GameStateController>().IsPlaying);Assert.That(Object.FindFirstObjectByType<PrototypeHud>().HealthText,Does.Not.Contain("/ 0"));
@@ -97,7 +97,7 @@ namespace ShorelineDefense.Tests
         }
         [UnityTest] public IEnumerator MixedCargoCapacityAndAllTypesUseDefenseRules()
         {
-            var boats=Object.FindFirstObjectByType<BoatLandingSystem>();var roster=waves.EndlessSettings.enemies;Assert.IsFalse(boats.TryDispatch(new[]{roster[2],roster[2],roster[2]}));Assert.IsTrue(boats.TryDispatch(new[]{roster[2],roster[1],roster[0]}));
+            var boats=Object.FindFirstObjectByType<BoatLandingSystem>();var roster=waves.EndlessSettings.enemies;Assert.IsFalse(boats.TryDispatch(new[]{roster[2],roster[2],roster[2],roster[2]}));Assert.IsTrue(boats.TryDispatch(new[]{roster[2],roster[1],roster[0]}));
             for(int i=0;i<80&&boats.IncomingPassengers>0;i++){boats.Tick(.5f);foreach(var e in registry.Active)e.Movement.Tick(.5f);yield return null;}
             Assert.That(registry.Count,Is.EqualTo(3));CollectionAssert.AreEquivalent(roster.Take(3).Select(p=>p.Definition.Kind),registry.Active.Select(e=>e.Definition.Kind));
             var builder=Object.FindFirstObjectByType<BuildManager>();var hud=Object.FindFirstObjectByType<BuildHud>();money.AddMoney(1000);
@@ -105,7 +105,7 @@ namespace ShorelineDefense.Tests
             foreach(var e in registry.Active){e.transform.position=spawner.Battlefield.Grid.CellToWorld(cell);Assert.That(e.Movement.CurrentSpeed,Is.EqualTo(e.Movement.BaseSpeed*.5f).Within(.001));}
             Assert.That(builder.TryPlaceDefense(hud.Defenses[2],cell+Vector2Int.right,out var mineDefense),Is.EqualTo(PlacementResult.Valid));
             foreach(var e in registry.Active)e.transform.position=mineDefense.transform.position;
-            var mine=mineDefense.GetComponent<ShorelineDefense.Defenses.LandMine>();mine.Tick(1);Assert.That(stats.BasicKills,Is.EqualTo(1));Assert.That(stats.RunnerKills,Is.EqualTo(1));Assert.That(registry.Count,Is.EqualTo(1));Assert.That(registry.Active[0].Health.CurrentHealth,Is.EqualTo(450));
+            var mine=mineDefense.GetComponent<ShorelineDefense.Defenses.LandMine>();mine.Tick(1);Assert.That(stats.CrawlerKills,Is.EqualTo(1));Assert.That(stats.SkitterKills,Is.EqualTo(1));Assert.That(registry.Count,Is.EqualTo(1));Assert.That(registry.Active[0].Health.CurrentHealth,Is.EqualTo(registry.Active[0].Health.MaxHealth-Mathf.CeilToInt(mineDefense.Damage*(1-registry.Active[0].Definition.Armor))));
             yield return null;
         }
     }

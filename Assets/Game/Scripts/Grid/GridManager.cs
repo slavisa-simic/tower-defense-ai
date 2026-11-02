@@ -35,9 +35,11 @@ namespace ShorelineDefense.Grid
             for (int x = 0; x < definition.Width; x++)
             {
                 var cell = new Vector2Int(x, y);
-                bool blocked = Grid != null && !Grid.GetCell(cell).Walkable;
+                var terrain = definition.TerrainAt(cell);
+                bool blocked = Grid != null ? !Grid.GetCell(cell).Walkable : terrain == TerrainType.Blocked || definition.authoredWater && terrain == TerrainType.Water;
                 bool occupied = Grid != null && Grid.OccupantAt(cell) != null;
-                Gizmos.color = occupied ? Color.cyan : blocked ? Color.red : cell == definition.BaseCell ? Color.yellow : new Color(1, 1, 1, 0.35f);
+                bool structureBlocker = Grid != null && Grid.NavigationBlockerAt(cell) != null;
+                Gizmos.color = structureBlocker ? new Color(1, .35f, 0) : occupied ? Color.cyan : blocked ? Color.red : cell == definition.BaseCell ? Color.yellow : new Color(1, 1, 1, 0.35f);
                 var center = transform.position + (xy
                     ? new Vector3((x + 0.5f) * size.x, (y + 0.5f) * size.y, -0.04f)
                     : new Vector3((x + 0.5f) * size.x, 0.04f, (y + 0.5f) * size.z));

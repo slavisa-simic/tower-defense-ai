@@ -494,3 +494,87 @@ MonoBehaviour:
     opacity: 1
     fadePortion: 0.25
     drift: {x: 0, y: 0}
+  - id: 34
+    frames:
+    - {fileID: 1196642425, guid: 1e4a4c16bb7fe214b9aac01a3a377231, type: 3}
+    - {fileID: 1296574356, guid: 1e4a4c16bb7fe214b9aac01a3a377231, type: 3}
+    - {fileID: -916112719, guid: 1e4a4c16bb7fe214b9aac01a3a377231, type: 3}
+    - {fileID: 69807162, guid: 1e4a4c16bb7fe214b9aac01a3a377231, type: 3}
+    fps: 10
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 6
+    lifetime: 0.4
+    opacity: 0.8
+    fadePortion: 0.35
+    drift: {x: 0, y: 0}
+  - id: 35
+    frames:
+    - {fileID: -1325064630, guid: d532042038462e141b8034a97555e69e, type: 3}
+    - {fileID: 1879035933, guid: d532042038462e141b8034a97555e69e, type: 3}
+    - {fileID: -516741287, guid: d532042038462e141b8034a97555e69e, type: 3}
+    - {fileID: -961524407, guid: d532042038462e141b8034a97555e69e, type: 3}
+    fps: 10
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 6
+    lifetime: 0.4
+    opacity: 0.8
+    fadePortion: 0.35
+    drift: {x: 0, y: 0}
+  - id: 36
+    frames:
+    - {fileID: -1248534446, guid: fa48c273523cba84697df8d39ed47b16, type: 3}
+    - {fileID: 141254043, guid: fa48c273523cba84697df8d39ed47b16, type: 3}
+    - {fileID: -1620750803, guid: fa48c273523cba84697df8d39ed47b16, type: 3}
+    - {fileID: 321087784, guid: fa48c273523cba84697df8d39ed47b16, type: 3}
+    fps: 10
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 6
+    lifetime: 0.4
+    opacity: 0.8
+    fadePortion: 0.35
+    drift: {x: 0, y: 0}
+  - id: 37
+    frames:
+    - {fileID: -771373213, guid: 3ba9293891f4b2841bf6eb372a19eec7, type: 3}
+    - {fileID: 123915152, guid: 3ba9293891f4b2841bf6eb372a19eec7, type: 3}
+    - {fileID: 165677607, guid: 3ba9293891f4b2841bf6eb372a19eec7, type: 3}
+    - {fileID: -1395279516, guid: 3ba9293891f4b2841bf6eb372a19eec7, type: 3}
+    fps: 10
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 6
+    lifetime: 0.4
+    opacity: 0.8
+    fadePortion: 0.35
+    drift: {x: 0, y: 0}
+  - id: 38
+    frames:
+    - {fileID: 1028968243, guid: 720513e3fe9df3f4a9e7df4ec3fe577d, type: 3}
+    - {fileID: 1923343601, guid: 720513e3fe9df3f4a9e7df4ec3fe577d, type: 3}
+    - {fileID: -747558714, guid: 720513e3fe9df3f4a9e7df4ec3fe577d, type: 3}
+    - {fileID: -2047579030, guid: 720513e3fe9df3f4a9e7df4ec3fe577d, type: 3}
+    fps: 10
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 6
+    lifetime: 0.4
+    opacity: 0.8
+    fadePortion: 0.35
+    drift: {x: 0, y: 0}
+  - id: 39
+    frames:
+    - {fileID: -425335610, guid: 0d8cc35e039c6bf41a4bba5711c94c95, type: 3}
+    - {fileID: 1468692218, guid: 0d8cc35e039c6bf41a4bba5711c94c95, type: 3}
+    - {fileID: 408571367, guid: 0d8cc35e039c6bf41a4bba5711c94c95, type: 3}
+    - {fileID: 1966049148, guid: 0d8cc35e039c6bf41a4bba5711c94c95, type: 3}
+    fps: 10
+    channel: 0
+    sortingLayer: Effects
+    sortingOrder: 6
+    lifetime: 0.4
+    opacity: 0.8
+    fadePortion: 0.35
+    drift: {x: 0, y: 0}

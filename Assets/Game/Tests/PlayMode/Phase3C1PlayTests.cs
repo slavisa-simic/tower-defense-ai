@@ -64,11 +64,12 @@ namespace ShorelineDefense.Tests
         }
         [UnityTest] public IEnumerator BoatsReserveDistinctRiverLanesAndUnloadThroughNormalSpawner()
         {
-            Assert.That(boats.LandingPoints.Count,Is.EqualTo(5));Assert.That(boats.PassengerLimit(spawner.DefaultPrefab),Is.EqualTo(7));
-            Assert.That(boats.TryDispatch(spawner.DefaultPrefab,8),Is.False);
+            boats.ForcedArrival=ArrivalMethod.DriftPod;
+            Assert.That(boats.LandingPoints.Count,Is.EqualTo(5));Assert.That(boats.PassengerLimit(spawner.DefaultPrefab),Is.EqualTo(12));
+            Assert.That(boats.TryDispatch(spawner.DefaultPrefab,13),Is.False);
             Assert.That(boats.TryDispatch(spawner.DefaultPrefab,2),Is.True);Assert.That(boats.TryDispatch(spawner.DefaultPrefab,2),Is.True);
             Assert.That(boats.ActiveBoats,Is.EqualTo(2));Assert.That(enemies.Count,Is.Zero);
-            var positions=boats.GetComponentsInChildren<SpriteRenderer>().Where(r=>r.name=="Rubber Boat").Select(r=>r.transform.position.y).ToArray();
+            var positions=boats.GetComponentsInChildren<SpriteRenderer>().Where(r=>r.name=="Body").Select(r=>r.transform.position.y).ToArray();
             Assert.That(positions.Distinct().Count(),Is.EqualTo(2));
             boats.Tick(10);Assert.That(enemies.Count,Is.EqualTo(2));Assert.That(boats.IncomingPassengers,Is.EqualTo(2));
             foreach(var enemy in enemies.Active)
@@ -83,6 +84,7 @@ namespace ShorelineDefense.Tests
         }
         [UnityTest] public IEnumerator WaveKeepsIncomingPassengersPendingAndCompletesOnlyAfterLastKill()
         {
+            boats.ForcedArrival=ArrivalMethod.DriftPod;
             Assert.That(waves.TryStartWave(),Is.True);waves.Tick(.3f);
             Assert.That(waves.PendingCount,Is.EqualTo(waves.CurrentWave.ScheduledCount));Assert.That(waves.AliveCount,Is.Zero);Assert.That(boats.ActiveBoats,Is.EqualTo(1));
             waves.Tick(.1f);Assert.That(waves.State,Is.EqualTo(WaveState.Spawning));Assert.That(waves.CompletedWaves,Is.Zero);
@@ -93,7 +95,7 @@ namespace ShorelineDefense.Tests
                 foreach(var enemy in enemies.Active.ToArray())enemy.Health.TakeDefenseDamage(10000);
                 if(waves.PendingCount>0)Assert.That(waves.CompletedWaves,Is.Zero);
             }
-            Assert.That(spawner.TotalSpawned,Is.EqualTo(waves.CurrentWave.ScheduledCount));Assert.That(boats.TotalArrivals,Is.EqualTo(Mathf.CeilToInt(waves.CurrentWave.ScheduledCount/(float)boats.Capacity)));
+            Assert.That(spawner.TotalSpawned,Is.EqualTo(waves.CurrentWave.ScheduledCount));Assert.That(boats.TotalArrivals,Is.EqualTo(Mathf.CeilToInt(waves.CurrentWave.ScheduledCount/(float)boats.PassengerLimit(spawner.DefaultPrefab))));
             Assert.That(waves.CompletedWaves,Is.EqualTo(1));Assert.That(waves.PendingCount,Is.Zero);Assert.That(waves.AliveCount,Is.Zero);
             Assert.That(builder.Economy.Money,Is.EqualTo(before+count*25+reward));waves.Tick(2);Assert.That(builder.Economy.Money,Is.EqualTo(before+count*25+reward));
             yield return null;

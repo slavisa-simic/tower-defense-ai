@@ -50,6 +50,15 @@ namespace ShorelineDefense.Enemies
         public EnemyController DefaultPrefab => prefab;
         public GridManager Battlefield => grid;
         public void ConfigureRegistry(EnemyRegistry enemies) => registry = enemies;
+        public event System.Action<EnemyController> ReinforcementSpawned;
+        public bool ReinforcementsEnabled { get; set; }
+        public bool TrySpawnReinforcement(EnemyController requestedPrefab, Vector3 position, out EnemyController enemy)
+        {
+            enemy = null;
+            if (!ReinforcementsEnabled) return false;
+            if (!TrySpawnAt(requestedPrefab, position, out enemy)) return false;
+            ReinforcementSpawned?.Invoke(enemy); return true;
+        }
 
         public void Configure(EnemyController crawler, GridManager battlefield, BaseHealth target,
             GameStateController state, Transform[] points, Transform parent)
@@ -118,7 +127,7 @@ namespace ShorelineDefense.Enemies
             if (!HasSpace(position) || !grid.Grid.TryWorldToCell(playerBase.transform.position, out var goal)) return false;
             if (border != null && !border.TryGetDestination(cell, out goal)) return false;
             if (
-                !grid.Paths.TryFindPath(cell, goal, unloadingPath)) return false;
+                !grid.Paths.TryFindPath(cell, goal, unloadingPath) && !grid.Paths.Obstructions.CanReachByBreaching(cell, goal)) return false;
             if (!pools.TryGetValue(requestedPrefab, out var pool)) pools[requestedPrefab] = pool = new Stack<EnemyController>();
             EnemyController enemy;
             if (pool.Count > 0) { enemy = pool.Pop(); pooledCount--; ReusedEnemies++; enemy.transform.SetPositionAndRotation(position, Quaternion.identity); }

@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/ShadowAudit/Author.cs",
+      "entry": "ShadowAuthor.DisableOrphans"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 1462,
+      "executeMs": 1336,
+      "assemblyName": "PipelineRunScript_Author_99929cc9f4e948eeb50870d1f1e11f88",
+      "success": true,
+      "result": "Disabled 1 orphaned shadows of hidden/null retired props"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

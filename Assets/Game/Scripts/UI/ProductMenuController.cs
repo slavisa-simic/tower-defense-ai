@@ -69,6 +69,7 @@ namespace ShorelineDefense.UI
         private void FeedbackChanged() { if (feedback != null) feedback.text = session.Feedback; }
         private void Page(string title, string id)
         {
+            card.EnableInClassList("research-card", id == "research");
             page = id; content.Clear(); cancelDialog = null; overlay.style.display = DisplayStyle.Flex; overlay.BringToFront();
             var heading = new Label(title); heading.AddToClassList("product-title"); content.Add(heading);
         }
@@ -82,11 +83,22 @@ namespace ShorelineDefense.UI
             bool valid = saves.Load(out _, out string error);
             ActionButton("menu-continue", "CONTINUE", Continue).SetEnabled(valid);
             ActionButton("menu-new", "NEW GAME", NewGame);
+            ActionButton("menu-research", "RESEARCH", ShowResearch);
             ActionButton("menu-history", "RUN HISTORY", ShowHistory);
             ActionButton("menu-settings", "SETTINGS", ShowSettings);
             ActionButton("menu-quit", "QUIT", () => Confirm("QUIT GAME?", "Your last Preparation save will be kept.", "QUIT", Application.Quit, ShowMain));
             if (Notice != null) { Copy(Notice); Notice = null; }
             else if (error != null) Copy(valid ? error : "The active save could not be loaded. You can start a new run.");
+            if (LocalGameData.Profile.Error != null) Copy("RESEARCH PROFILE: " + LocalGameData.Profile.Error);
+        }
+        public void ShowResearch()
+        {
+            if (!mainMenu || loading) return;
+            Page("QUARANTINE RESEARCH PROGRAM", "research");
+            var catalog = ShorelineDefense.Progression.ResearchCatalog.Load();
+            if (catalog == null) Copy("Research catalog unavailable.");
+            else content.Add(new ResearchTreeView(catalog, LocalGameData.Profile, () => mainMenu && !loading && page == "research"));
+            ActionButton("research-back", "BACK TO MAIN MENU", ShowMain);
         }
         public void NewGame()
         {
@@ -100,7 +112,7 @@ namespace ShorelineDefense.UI
             {
                 if (map == null) continue;
                 if (map.preview != null) { var image = new Image { sprite = map.preview, scaleMode = ScaleMode.ScaleToFit }; image.style.height = 140; content.Add(image); }
-                Copy(map.displayName + "\n" + map.description + "\n" + map.gameplayStyle);
+                Copy(map.displayName + "\n" + map.description + "\n" + map.gameplayStyle + "\nPERSONAL BEST / WAVE " + LocalGameData.Profile.BestWave(map.id));
                 ActionButton("map-" + map.id, "SELECT " + map.displayName, () => {
                     selectedMap = map;
                     Page(map.displayName, "map-confirm"); Copy(map.description + "\n" + map.gameplayStyle);
@@ -161,10 +173,11 @@ namespace ShorelineDefense.UI
             Page("RUN HISTORY", "history");
             var history = new RunHistoryService(LocalGameData.Files); var data = history.Load();
             Copy(data.runs.Count == 0 ? "No completed runs yet." : "PERSONAL BEST — WAVE " + data.runs.Max(r => r.wave));
+            if (maps != null) foreach (var map in maps.maps) if (map != null) Copy(map.displayName + " / BEST WAVE " + LocalGameData.Profile.BestWave(map.id));
             foreach (var r in data.runs)
             {
                 string date = DateTime.TryParse(r.endedUtc, out var ended) ? ended.ToLocalTime().ToString("yyyy-MM-dd HH:mm") : "Unknown date";
-                Copy($"{maps?.Find(r.mapId)?.displayName ?? "DANUBE BORDER"}\n{date}\nWave {r.wave}  /  Kills {r.kills:N0}\nHomicides {r.homicides:N0}  /  Bosses {r.bosses:N0}\nEarned {r.earned:N0} RSD  /  {FormatDuration(r.duration)}");
+                Copy($"{maps?.Find(r.mapId)?.displayName ?? "DANUBE BORDER"}\n{date}\nWave {r.wave}  /  Kills {r.kills:N0}\nHomicides {r.homicides:N0}  /  Bosses {r.bosses:N0}\nEarned {r.earned:N0} RSD  /  {FormatDuration(r.duration)}" + (r.hasResearchReward ? $"\nRESEARCH EARNED +{r.researchEarned} RP" : ""));
             }
             if (history.Error != null) Copy("Some run history could not be loaded: " + history.Error);
             ActionButton("history-back", "BACK", Back);
@@ -197,10 +210,17 @@ namespace ShorelineDefense.UI
         private void StateChanged(GameState state)
         {
             if (state != GameState.GameOver) return;
-            Page("BORDER DEFENSE COLLAPSED", "over");
+            Page("RUN COMPLETE", "over");
             var stats = FindFirstObjectByType<RunStatistics>();
             Copy(maps?.Find(session.MapId)?.displayName ?? "DANUBE BORDER");
             Copy($"WAVE REACHED {stats.HighestWaveReached}\nTOTAL KILLS {stats.TotalKills:N0}\nHOMICIDES {stats.Homicides:N0}\nBOSSES KILLED {stats.BossesKilled:N0}\nRSD EARNED {stats.TotalMoneyEarned:N0}\nSTRUCTURES BUILT {stats.StructuresBuilt}\nDURATION {FormatDuration(session.Duration)}");
+            var earned = new Label { name = "run-research-earned" }; earned.AddToClassList("research-balance"); content.Add(earned);
+            void RewardText() {
+                var award = session.ResearchAward;
+                earned.text = award == null ? "RESEARCH SAVE PENDING\n" + session.Feedback : $"RESEARCH EARNED  +{award.Total} RP\nTOTAL RP  {LocalGameData.Profile.ResearchPoints:N0}\n" + $"Waves {award.waveRP} / Bosses {award.bossRP} / Quality {award.qualityRP} / Milestones {award.milestoneRP}";
+            }
+            RewardText();
+            if (session.ResearchAward == null) ActionButton("over-retry", "RETRY SAVE", () => { session.FinalizeRun(); RewardText(); });
             // Existing game-over label remains for legacy scene/tests; product overlay owns this view.
             root.Q<Label>("game-over").style.visibility = Visibility.Hidden;
             ActionButton("over-new", "NEW RUN", () => { if (session.FinalizeRun()) ShowMapSelect(); else Copy(session.Feedback); });
@@ -208,7 +228,7 @@ namespace ShorelineDefense.UI
         }
         private void Update()
         {
-            if (loading) return;
+            if (loading || root == null) return;
             if (mainMenu) { if (Input.GetKeyDown(KeyCode.Escape)) { if (page == "confirm") cancelDialog?.Invoke(); else if (page != "main") ShowMain(); } return; }
             if (game == null || !game.IsPlaying) return;
             if (Input.GetKeyDown(KeyCode.Escape))

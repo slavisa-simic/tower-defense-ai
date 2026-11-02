@@ -1,0 +1,8 @@
+{
+  "diagnostics": [],
+  "compileMs": 1877,
+  "executeMs": 5426,
+  "assemblyName": "PipelineRunScript_Live_807b1e5dee574c49b87362ab5becae1d",
+  "success": true,
+  "result": "[\r\n  {\r\n    \"map\": \"CoastalDefense_TopDown\",\r\n    \"version\": 1,\r\n    \"committedOld\": \"pirate-raid\",\r\n    \"restored\": \"swarm-surge\",\r\n    \"money\": 2049,\r\n    \"health\": 420,\r\n    \"level\": 3,\r\n    \"kills\": 450,\r\n    \"newVersion\": 3\r\n  },\r\n  {\r\n    \"map\": \"CoastalDefense_TopDown\",\r\n    \"version\": 1,\r\n    \"committedOld\": \"militant-assault\",\r\n    \"restored\": \"armored-migration\",\r\n    \"money\": 2049,\r\n    \"health\": 420,\r\n    \"level\": 3,\r\n    \"kills\": 450,\r\n    \"newVersion\": 3\r\n  },\r\n  {\r\n    \"map\": \"DanubeIndustrialPort\",\r\n    \"version\": 2,\r\n    \"committedOld\": \"pirate-raid\",\r\n    \"restored\": \"swarm-surge\",\r\n    \"money\": 2049,\r\n    \"health\": 420,\r\n    \"level\": 3,\r\n    \"kills\": 450,\r\n    \"newVersion\": 3\r\n  },\r\n  {\r\n    \"map\": \"DanubeIndustrialPort\",\r\n    \"version\": 2,\r\n    \"committedOld\": \"militant-assault\",\r\n    \"restored\": \"armored-migration\",\r\n    \"money\": 2049,\r\n    \"health\": 420,\r\n    \"level\": 3,\r\n    \"kills\": 450,\r\n    \"newVersion\": 3\r\n  }\r\n]"
+}

@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "command": "test_status",
+    "parameters": {},
+    "result": "{\r\n  \"status\": \"completed\",\r\n  \"duration\": 72.72,\r\n  \"summary\": {\r\n    \"total\": 6,\r\n    \"passed\": 6,\r\n    \"failed\": 0,\r\n    \"skipped\": 0,\r\n    \"inconclusive\": 0\r\n  },\r\n  \"results\": [\r\n    {\r\n      \"FullName\": \"ShorelineDefense.Tests.NavigationCollisionPlayTests.AllSolidDefenseTypesRepathAroundWithoutAttackingWhenAlternateRouteExists\",\r\n      \"Status\": \"Passed\",\r\n      \"Duration\": 9.9678445,\r\n      \"Message\": null,\r\n      \"StackTrace\": null\r\n    },\r\n    {\r\n      \"FullName\": \"ShorelineDefense.Tests.NavigationCollisionPlayTests.BothMapsHaveBoundBlockersAndEveryStaticLandingHasAnExit\",\r\n      \"Status\": \"Passed\",\r\n      \"Duration\": 1.0494472,\r\n      \"Message\": null,\r\n      \"StackTrace\": null\r\n    },\r\n    {\r\n      \"FullName\": \"ShorelineDefense.Tests.NavigationCollisionPlayTests.EveryArchetypeIncludingBossesBreaksWallWithoutRefundOrGhosting\",\r\n      \"Status\": \"Passed\",\r\n      \"Duration\": 14.027702,\r\n      \"Message\": null,\r\n      \"StackTrace\": null\r\n    },\r\n    {\r\n      \"FullName\": \"ShorelineDefense.Tests.NavigationCollisionPlayTests.FullWallReceivesRealDamageRepairUpgradeAndDismantleClearTargetAndSelection\",\r\n      \"Status\": \"Passed\",\r\n      \"Duration\": 1.9193431,\r\n      \"Message\": null,\r\n      \"StackTrace\": null\r\n    },\r\n    {\r\n      \"FullName\": \"ShorelineDefense.Tests.NavigationCollisionPlayTests.HundredAndTwoHundredEnemiesRepathAndBreachBothMapsWithoutSolidCellEntry\",\r\n      \"Status\": \"Passed\",\r\n      \"Duration\": 44.9828392,\r\n      \"Message\": null,\r\n      \"StackTrace\": null\r\n    },\r\n    {\r\n      \"FullName\": \"ShorelineDefense.Tests.NavigationCollisionPlayTests.WireAndMineRemainWalkableSlowAndTriggerAndPreventBuildingOnCreature\",\r\n      \"Status\": \"Passed\",\r\n      \"Duration\": 0.7337242,\r\n      \"Message\": null,\r\n      \"StackTrace\": null\r\n    }\r\n  ]\r\n}",
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

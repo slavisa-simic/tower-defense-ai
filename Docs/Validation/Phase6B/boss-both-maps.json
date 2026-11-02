@@ -1,0 +1,66 @@
+[
+  {
+    "map": "CoastalDefense_TopDown",
+    "wave": 25,
+    "tick": 571,
+    "spawned": 0,
+    "kills": 1046,
+    "breaches": 0,
+    "pending": 0,
+    "alive": 0,
+    "arrivals": [
+      19,
+      54,
+      21,
+      3
+    ]
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "wave": 50,
+    "tick": 736,
+    "spawned": 6,
+    "kills": 1447,
+    "breaches": 0,
+    "pending": 0,
+    "alive": 0,
+    "arrivals": [
+      19,
+      70,
+      25,
+      4
+    ]
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "wave": 25,
+    "tick": 721,
+    "spawned": 0,
+    "kills": 1001,
+    "breaches": 0,
+    "pending": 0,
+    "alive": 0,
+    "arrivals": [
+      15,
+      53,
+      16,
+      6
+    ]
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "wave": 50,
+    "tick": 901,
+    "spawned": 6,
+    "kills": 1447,
+    "breaches": 0,
+    "pending": 0,
+    "alive": 0,
+    "arrivals": [
+      20,
+      69,
+      24,
+      4
+    ]
+  }
+]

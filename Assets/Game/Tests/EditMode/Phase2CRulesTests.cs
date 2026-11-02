@@ -105,6 +105,9 @@ namespace ShorelineDefense.Tests
                 advanced.Tick(0.5f);
                 Assert.That(advanced.RemainingPathDistance, Is.EqualTo(previous - 0.5f).Within(0.001));
                 grid.SetCell(new Vector2Int(5, 2), new GridCell(TerrainType.Ground, true, true));
+                // Navigation edits now stagger repathing; compare refreshed route progress.
+                near.PrepareNavigation(.5f);
+                advanced.PrepareNavigation(.5f);
                 near.Tick(0.01f);
                 Assert.That(near.RemainingPathDistance, Is.LessThan(advanced.RemainingPathDistance));
             }

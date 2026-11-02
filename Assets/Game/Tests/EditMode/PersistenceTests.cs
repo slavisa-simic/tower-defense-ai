@@ -19,7 +19,7 @@ namespace ShorelineDefense.Tests
             var data = Snapshot(); data.spent = 9007199254740993; data.statistics.kills[5] = 4294967297;
             Assert.IsTrue(saves.Save(data, out _)); Assert.IsTrue(saves.Load(out var loaded, out _));
             Assert.That(loaded.spent, Is.EqualTo(data.spent)); Assert.That(loaded.statistics.kills[5], Is.EqualTo(data.statistics.kills[5]));
-            Assert.That(loaded.wave, Is.EqualTo(7)); Assert.That(loaded.duration, Is.EqualTo(84.5)); Assert.That(loaded.saveVersion, Is.EqualTo(2));
+            Assert.That(loaded.wave, Is.EqualTo(7)); Assert.That(loaded.duration, Is.EqualTo(84.5)); Assert.That(loaded.saveVersion, Is.EqualTo(4));
         }
         [Test] public void NewInstallationCanDeleteAnAbsentRunBeforeItsDirectoryExists()
         { Assert.IsFalse(Directory.Exists(directory)); Assert.IsTrue(saves.Delete(out string error), error); Assert.IsFalse(saves.Load(out _, out _)); }

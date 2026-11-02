@@ -1,0 +1,4 @@
+river_border: static blocked cells=50, container footprints=0, crane footprints=0, building footprints=1, invalid=0. 
+CoastalDefense_TopDown: inspected open routing, MG/Sniper/Flame wall contact, attack pose, live selected HP/damage, destruction and resumed border progress. All sampled cells traversable.
+industrial_port: static blocked cells=177, container footprints=6, crane footprints=4, building footprints=6, invalid=0. 
+DanubeIndustrialPort: inspected open routing, MG/Sniper/Flame wall contact, attack pose, live selected HP/damage, destruction and resumed border progress. All sampled cells traversable.

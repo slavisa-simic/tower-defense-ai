@@ -20,3 +20,58 @@ MonoBehaviour:
   beachBandCells: 2
   baseCell: {x: 29, y: 9}
   baseFootprint: {x: 3, y: 3}
+  waterCells: []
+  groundCells: []
+  blockedCells: []
+  navigationObstacles:
+  - id: command-post
+    category: 2
+    anchor: {x: 27, y: 6}
+    size: {x: 3, y: 3}
+  - id: bunker-wall-south
+    category: 3
+    anchor: {x: 26, y: 1}
+    size: {x: 2, y: 5}
+  - id: bunker-wall-north
+    category: 3
+    anchor: {x: 26, y: 13}
+    size: {x: 2, y: 4}
+  - id: bunker-gate-south-support
+    category: 3
+    anchor: {x: 26, y: 6}
+    size: {x: 1, y: 1}
+  - id: bunker-gate-north-support
+    category: 3
+    anchor: {x: 26, y: 8}
+    size: {x: 1, y: 1}
+  - id: fence-south
+    category: 3
+    anchor: {x: 27, y: 1}
+    size: {x: 5, y: 1}
+  - id: fence-north
+    category: 3
+    anchor: {x: 27, y: 17}
+    size: {x: 5, y: 1}
+  - id: checkpoint-gate-support-4
+    category: 3
+    anchor: {x: 30, y: 5}
+    size: {x: 2, y: 1}
+  - id: checkpoint-gate-support-9
+    category: 3
+    anchor: {x: 30, y: 10}
+    size: {x: 2, y: 1}
+  - id: checkpoint-gate-support-14
+    category: 3
+    anchor: {x: 30, y: 15}
+    size: {x: 2, y: 1}
+  - id: sandbags-south
+    category: 3
+    anchor: {x: 24, y: 3}
+    size: {x: 2, y: 1}
+  - id: sandbags-north
+    category: 3
+    anchor: {x: 24, y: 14}
+    size: {x: 2, y: 2}
+  noBuildCells: []
+  floodableCells: []
+  authoredWater: 0

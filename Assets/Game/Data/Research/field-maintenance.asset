@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3777ac5fbc4d04342bf89a26e6cf129c, type: 3}
+  m_Name: field-maintenance
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Progression.ResearchNodeDefinition
+  id: field-maintenance
+  displayName: Field Maintenance
+  description: Combat repairs cost 10% less. Preparation remains cheaper.
+  branch: 1
+  costRP: 30
+  tier: 2
+  maxRank: 1
+  prerequisites:
+  - {fileID: 11400000, guid: a113041fe3c624144a6f42a473126e1e, type: 2}
+  icon: {fileID: 1931173329, guid: e8c99442ad1d63744a2ce2497d260d7c, type: 3}
+  effects:
+  - kind: 6
+    amount: 0.1
+  boardPosition: {x: 0.75, y: 106}

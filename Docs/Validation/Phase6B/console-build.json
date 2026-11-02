@@ -1,0 +1,33 @@
+{
+  "entries": [
+    {
+      "seq": 150,
+      "timestampUtc": "2026-11-02T00:39:21.4231425Z",
+      "level": "warn",
+      "logType": "Warning",
+      "message": "Pipeline: RuntimePipelineConfig found, but enableInBuilds = false. Pipeline will be disabled in Player builds.",
+      "stackTrace": "UnityEngine.Debug:LogWarning (object)\nUnity.Pipeline.Editor.BuildProcessors.PipelineRuntimeBuildProcessor:OnPreprocessBuild (UnityEditor.Build.BuildCallbackContext) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/BuildProcessors/PipelineRuntimeBuildProcessor.cs:81)\nUnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)\nPhase6BBuild:Run () (at Docs/Validation/Phase6B/Build.cs:12)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/Scripts/RunScriptCommand.cs:219)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Pipeline.Editor.Commands.Scripts.RunScriptResponse>:Start<Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2> (Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2&)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand:RunEphemeral (string,string,Newtonsoft.Json.Linq.JArray,string[],string[],bool,bool,int,System.Diagnostics.Stopwatch)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/Scripts/RunScriptCommand.cs:77)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Pipeline.Editor.Commands.Scripts.RunScriptResponse>:Start<Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1> (Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1&)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand:RunScript (string,string,Newtonsoft.Json.Linq.JArray,string,string[],string[],bool,int,bool)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    }
+  ],
+  "cursor": 150,
+  "session": "3453b90a78b14d5a97629612951e81b9",
+  "returned": 1,
+  "dropped": false,
+  "reset": false,
+  "counts": {
+    "error": 0,
+    "warn": 1,
+    "log": 3
+  },
+  "groundTruth": {
+    "sampledUtc": "2026-11-02T00:40:52.4939113Z",
+    "ageMs": 283,
+    "compilationFailed": false,
+    "compiling": false,
+    "consoleErrors": 0,
+    "consoleWarnings": 1,
+    "consoleLogs": 3,
+    "seeded": true
+  }
+}

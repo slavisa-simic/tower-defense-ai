@@ -1,0 +1,4 @@
+CoastalDefense_TopDown: count=100, ticks=210, simulatedSeconds=21,0, meanTickMs=17,946, peakTickMs=26,681, AStarSearches=90, obstructionFields=4, peakRepaths=8, remaining=0
+CoastalDefense_TopDown: count=200, ticks=213, simulatedSeconds=21,3, meanTickMs=73,516, peakTickMs=103,011, AStarSearches=138, obstructionFields=4, peakRepaths=8, remaining=0
+DanubeIndustrialPort: count=100, ticks=200, simulatedSeconds=20,0, meanTickMs=18,582, peakTickMs=35,774, AStarSearches=50, obstructionFields=3, peakRepaths=8, remaining=0
+DanubeIndustrialPort: count=200, ticks=254, simulatedSeconds=25,4, meanTickMs=61,462, peakTickMs=94,581, AStarSearches=82, obstructionFields=3, peakRepaths=8, remaining=0

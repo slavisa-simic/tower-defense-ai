@@ -1,0 +1,202 @@
+[
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\AutoCannon.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\BarbedWire.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\FlamethrowerPosition.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\LandMine.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\MachineGunNest.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\MortarPosition.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\RocketLauncherPosition.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Defenses\\SniperTower.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Broodling_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      1,
+      212
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Broodmother_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      212,
+      1
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Bulwark_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      1,
+      212
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Burrower_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      212,
+      1
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Crawler_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      212,
+      1
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Dredger_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      1,
+      212
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Skitter_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      212,
+      1
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Enemies\\Spitter_TopDown.prefab",
+    "documentChanges": 6,
+    "types": [
+      4,
+      212,
+      1
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Prefabs\\Gameplay\\PlayerBase_TopDown.prefab",
+    "documentChanges": 2,
+    "types": [
+      4,
+      212
+    ],
+    "nonPresentationChanges": []
+  },
+  {
+    "file": "Assets\\Game\\Scenes\\CoastalDefense_TopDown.unity",
+    "documentChanges": 158,
+    "types": [
+      4,
+      212,
+      1001
+    ],
+    "nonPresentationChanges": [
+      {
+        "id": "789177223",
+        "type": 1001,
+        "operation": "changed",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Scenes\\DanubeIndustrialPort.unity",
+    "documentChanges": 677,
+    "types": [
+      212,
+      4,
+      1,
+      1001
+    ],
+    "nonPresentationChanges": [
+      {
+        "id": "789177223",
+        "type": 1001,
+        "operation": "changed",
+        "fields": []
+      }
+    ]
+  },
+  {
+    "file": "Assets\\Game\\Scripts\\Presentation\\EnemySpritePresentation.cs",
+    "kind": "presentation C#"
+  }
+]

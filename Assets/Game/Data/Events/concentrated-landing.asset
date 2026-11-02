@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8595f4b8de5845d43ba7c711c60cb4df, type: 3}
   m_Name: concentrated-landing
   m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.EndlessEventDefinition
-  id: concentrated-landing
-  displayName: CONCENTRATED LANDING
-  description: Most boats will focus on the announced sector.
+  id: concentrated-emergence
+  displayName: CONCENTRATED EMERGENCE
+  description: River contacts concentrate on one announced emergence sector.
   category: 2
   minimumWave: 8
   maximumWave: 0
@@ -38,6 +38,8 @@ MonoBehaviour:
     preparationRepair: 1
     floodedColumns: 0
     fog: 0
+    directEmergenceRatio: -1
+    broodCarrierRatio: -1
     boatVisual: {fileID: 0}
     landingPattern: 2
     composition: []

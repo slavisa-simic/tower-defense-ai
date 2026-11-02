@@ -1,0 +1,38 @@
+[
+  {
+    "requested": 100,
+    "min": 100,
+    "max": 100,
+    "samples": 301,
+    "medianMs": 3.2908,
+    "p95Ms": 4.2799,
+    "maxMs": 6.1218,
+    "meanGcBytes": 10310.0,
+    "created": 100,
+    "reused": 0
+  },
+  {
+    "requested": 200,
+    "min": 200,
+    "max": 200,
+    "samples": 302,
+    "medianMs": 4.3612,
+    "p95Ms": 5.5101,
+    "maxMs": 9.3918,
+    "meanGcBytes": 10459.473509933774,
+    "created": 200,
+    "reused": 0
+  },
+  {
+    "requested": 350,
+    "min": 350,
+    "max": 350,
+    "samples": 254,
+    "medianMs": 5.8451,
+    "p95Ms": 7.1299,
+    "maxMs": 14.7132,
+    "meanGcBytes": 10353.98031496063,
+    "created": 350,
+    "reused": 0
+  }
+]

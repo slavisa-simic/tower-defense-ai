@@ -1,0 +1,46 @@
+[
+  {
+    "map": "CoastalDefense_TopDown",
+    "version": 1,
+    "committedOld": "pirate-raid",
+    "restored": "swarm-surge",
+    "money": 2049,
+    "health": 420,
+    "level": 3,
+    "kills": 450,
+    "newVersion": 3
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "version": 1,
+    "committedOld": "militant-assault",
+    "restored": "armored-migration",
+    "money": 2049,
+    "health": 420,
+    "level": 3,
+    "kills": 450,
+    "newVersion": 3
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "version": 2,
+    "committedOld": "pirate-raid",
+    "restored": "swarm-surge",
+    "money": 2049,
+    "health": 420,
+    "level": 3,
+    "kills": 450,
+    "newVersion": 3
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "version": 2,
+    "committedOld": "militant-assault",
+    "restored": "armored-migration",
+    "money": 2049,
+    "health": 420,
+    "level": 3,
+    "kills": 450,
+    "newVersion": 3
+  }
+]

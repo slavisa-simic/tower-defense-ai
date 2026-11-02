@@ -15,7 +15,7 @@ MonoBehaviour:
   id: industrial_port
   displayName: DANUBE INDUSTRIAL PORT
   sceneName: DanubeIndustrialPort
-  description: Abandoned cargo docks converted into a quarantine checkpoint.
+  description: Defend narrow cargo lanes as aquatic creatures breach the docks.
   gameplayStyle: "CORRIDOR DEFENSE \u2014 split routes and cleared concrete pockets"
   preview: {fileID: 21300000, guid: 128e6e10358dbf44fb8bdada5a838528, type: 3}
   battlefield: {fileID: 11400000, guid: 5deefe6b709dd55428d7133ed9560385, type: 2}

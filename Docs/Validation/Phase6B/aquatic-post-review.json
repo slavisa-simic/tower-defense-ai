@@ -1,0 +1,48 @@
+{
+  "status": "completed",
+  "duration": 6.11,
+  "summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.AllArrivalTypesFitBothMapsAndResolveWithoutTargetableWaterCargo",
+      "Status": "Passed",
+      "Duration": 2.1685821,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.BroodmotherSpawnsAreCappedRegisteredAndIncludedInWaveAliveCount",
+      "Status": "Passed",
+      "Duration": 0.7721853,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.BurrowerIsVisibleLimitedIgnoresWireThenEmergesBeforeBorderAndBreachesOnce",
+      "Status": "Passed",
+      "Duration": 1.0932564,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.SpitterDamagesNearbyStructureThroughVisibleProjectileAndRepairStillWorks",
+      "Status": "Passed",
+      "Duration": 1.0450674,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.ThreeHundredFiftyBroodlingsRespectRegistryCapRewardAndPooling",
+      "Status": "Passed",
+      "Duration": 0.9849507,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

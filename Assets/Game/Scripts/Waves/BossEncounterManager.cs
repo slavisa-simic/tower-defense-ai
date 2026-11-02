@@ -7,7 +7,7 @@ namespace ShorelineDefense.Waves {
  public sealed class BossEncounterManager : MonoBehaviour {
   [SerializeField] private WaveManager waves;
   [SerializeField] private EnemyRegistry registry;
-  [SerializeField] private BoatLandingSystem boats;
+  [SerializeField] private AssaultCarrierSystem boats;
   [SerializeField] private BorderBreachService border;
 
   private WaveDefinition announced;
@@ -22,7 +22,7 @@ namespace ShorelineDefense.Waves {
    if(waves.State == WaveState.GameOver){ClearHealth();IncomingBoss=null;Changed?.Invoke();return;}
    if(waves.State != WaveState.Spawning || waves.CurrentWave == announced) return;
    announced=waves.CurrentWave;IncomingBoss=announced.Encounter;
-   if(IncomingBoss!=null){Message="SPECIAL LANDING DETECTED — " + IncomingBoss.DisplayName;MessageUntil=Time.time+4;Changed?.Invoke();}
+   if(IncomingBoss!=null){Message="MASSIVE BIOLOGICAL SIGNATURE — " + IncomingBoss.DisplayName;MessageUntil=Time.time+4;Changed?.Invoke();}
   }
   private void OnUnloaded(EnemyController enemy) { if(!(enemy.Definition is BossDefinition))return;ClearHealth();ActiveBoss=enemy;IncomingBoss=null;enemy.Health.Damaged += OnDamage;Changed?.Invoke(); }
   private void OnDamage(int amount)=>Changed?.Invoke();

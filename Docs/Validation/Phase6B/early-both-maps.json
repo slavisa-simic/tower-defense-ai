@@ -1,0 +1,142 @@
+[
+  {
+    "map": "CoastalDefense_TopDown",
+    "wave": 1,
+    "planned": 80,
+    "ticks": 264,
+    "kills": 60,
+    "breaches": 20,
+    "arrivals": [
+      7,
+      4,
+      0,
+      0
+    ]
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "wave": 2,
+    "planned": 120,
+    "ticks": 356,
+    "kills": 138,
+    "breaches": 62,
+    "arrivals": [
+      15,
+      10,
+      0,
+      0
+    ]
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "wave": 3,
+    "planned": 140,
+    "ticks": 368,
+    "kills": 227,
+    "breaches": 113,
+    "arrivals": [
+      26,
+      17,
+      0,
+      0
+    ]
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "wave": 4,
+    "planned": 155,
+    "ticks": 358,
+    "kills": 317,
+    "breaches": 178,
+    "arrivals": [
+      38,
+      24,
+      0,
+      0
+    ]
+  },
+  {
+    "map": "CoastalDefense_TopDown",
+    "wave": 5,
+    "planned": 260,
+    "ticks": 445,
+    "kills": 505,
+    "breaches": 250,
+    "arrivals": [
+      47,
+      37,
+      0,
+      0
+    ]
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "wave": 1,
+    "planned": 80,
+    "ticks": 319,
+    "kills": 53,
+    "breaches": 27,
+    "arrivals": [
+      7,
+      4,
+      0,
+      0
+    ]
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "wave": 2,
+    "planned": 120,
+    "ticks": 392,
+    "kills": 133,
+    "breaches": 67,
+    "arrivals": [
+      15,
+      10,
+      0,
+      0
+    ]
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "wave": 3,
+    "planned": 125,
+    "ticks": 335,
+    "kills": 208,
+    "breaches": 117,
+    "arrivals": [
+      24,
+      16,
+      0,
+      0
+    ]
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "wave": 4,
+    "planned": 160,
+    "ticks": 415,
+    "kills": 298,
+    "breaches": 187,
+    "arrivals": [
+      35,
+      24,
+      0,
+      0
+    ]
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "wave": 5,
+    "planned": 280,
+    "ticks": 499,
+    "kills": 495,
+    "breaches": 270,
+    "arrivals": [
+      44,
+      38,
+      0,
+      0
+    ]
+  }
+]

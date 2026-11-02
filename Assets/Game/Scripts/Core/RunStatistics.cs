@@ -17,8 +17,8 @@ namespace ShorelineDefense.Core
         public long TotalBreaches { get; private set; }
         public long TotalKills { get { long total = 0; foreach (long count in kills) total = SaturatingAdd(total, count); return total; } }
         public long BossesKilled => SaturatingAdd(kills[7], kills[8]);
-        public long OsamaKills => kills[7];
-        public long SomaliWarlordKills => kills[8];
+        public long DredgerKills => kills[7];
+        public long BroodmotherKills => kills[8];
         public long BossesBreached { get; private set; }
         public void RecordBossBreach() => BossesBreached = SaturatingAdd(BossesBreached, 1);
         public int PeakActiveEnemies { get; private set; }
@@ -32,9 +32,12 @@ namespace ShorelineDefense.Core
         public long LastCompletedWaveIncome { get; private set; }
         public void SamplePressure(int active, float frameSeconds) { pressureSum += active; frameTimeSum += frameSeconds * 1000; pressureSamples++; }
         public void RecordPressure(int active, int boats) { PeakActiveEnemies = Math.Max(PeakActiveEnemies, active); PeakConcurrentBoats = Math.Max(PeakConcurrentBoats, boats); }
-        public long BasicKills => kills[0];
-        public long RunnerKills => kills[1];
-        public long BruteKills => kills[2];
+        public long CrawlerKills => kills[0];
+        public long SkitterKills => kills[1];
+        public long BulwarkKills => kills[2];
+        public long SpitterKills => kills[3];
+        public long BroodlingKills => kills[4];
+        public long BurrowerKills => kills[5];
         public int CurrentWave => waves != null ? waves.CurrentWaveNumber : 0;
         public long EventsExperienced => waves?.Events?.EventsExperienced ?? 0;
         public string CurrentEvent => waves?.Events?.Current?.Definition.id;
@@ -83,6 +86,6 @@ namespace ShorelineDefense.Core
             { try { observer(Homicides); } catch (Exception exception) { Debug.LogException(exception, this); } }
         }
         private static long SaturatingAdd(long value, long amount) => value > long.MaxValue - amount ? long.MaxValue : value + amount;
-        public string Report => $"BORDER DEFENSE COLLAPSED\nWAVE REACHED {HighestWaveReached}\nHOMICIDES {Homicides:N0}    TOTAL KILLS {TotalKills:N0}\nBASIC {BasicKills:N0}    RUNNERS {RunnerKills:N0}    BRUTES {BruteKills:N0}\nTOTAL MONEY EARNED {TotalMoneyEarned:N0} RSD";
+        public string Report => $"BORDER DEFENSE COLLAPSED\nWAVE REACHED {HighestWaveReached}\nHOMICIDES {Homicides:N0}    TOTAL KILLS {TotalKills:N0}\nCRAWLER {CrawlerKills:N0}  SKITTER {SkitterKills:N0}  BULWARK {BulwarkKills:N0}\nSPITTER {SpitterKills:N0}  BROODLING {BroodlingKills:N0}  BURROWER {BurrowerKills:N0}\nDREDGER {DredgerKills:N0}  BROODMOTHER {BroodmotherKills:N0}\nTOTAL MONEY EARNED {TotalMoneyEarned:N0} RSD";
     }
 }

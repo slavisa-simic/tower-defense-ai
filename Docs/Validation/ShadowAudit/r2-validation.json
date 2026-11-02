@@ -1,0 +1,19 @@
+{
+  "scenes": [
+    {
+      "name": "CoastalDefense_TopDown",
+      "renderers": 433,
+      "shadows": 80,
+      "enabledShadows": 79
+    },
+    {
+      "name": "DanubeIndustrialPort",
+      "renderers": 803,
+      "shadows": 96,
+      "enabledShadows": 95
+    }
+  ],
+  "shaderSupported": true,
+  "shaderMessages": [],
+  "errors": []
+}

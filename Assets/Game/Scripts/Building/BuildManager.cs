@@ -17,6 +17,8 @@ namespace ShorelineDefense.Building
         [SerializeField] private Transform defenseParent;
         private Transform staging;
         private bool placing;
+        public Progression.MetaModifierService Meta { get; private set; } = Progression.MetaModifierService.Neutral;
+        public void ConfigureMeta(Progression.MetaModifierService modifiers) => Meta = modifiers;
         private RunStatistics statistics;
         public event Action StableActionCommitted;
         private void Awake() => statistics = FindFirstObjectByType<RunStatistics>();
@@ -26,10 +28,12 @@ namespace ShorelineDefense.Building
         [SerializeField, Min(.01f)] private float waveRepairMultiplier = 1.25f;
         public void ConfigureWaves(ShorelineDefense.Waves.WaveManager manager) => waves = manager;
         public ShorelineDefense.Waves.EndlessEventManager Events => waves?.Events;
-        public float RepairMultiplier => waves != null && (waves.State == ShorelineDefense.Waves.WaveState.Spawning || waves.State == ShorelineDefense.Waves.WaveState.Combat) ? waveRepairMultiplier * (Events?.Modifiers.combatRepair ?? 1) : preparationRepairMultiplier * (Events?.Modifiers.preparationRepair ?? 1);
-        public int UpgradeCost(DefenseBase defense) => defense != null && defense.Level < 3 ? (int)Math.Min(int.MaxValue, Math.Ceiling((defense.Definition.LevelData(defense.Level + 1)?.cost ?? 0) * Math.Round((double)(Events?.Modifiers.upgradeCost ?? 1), 6))) : 0;
+        private bool CombatRepair => waves != null && (waves.State == ShorelineDefense.Waves.WaveState.Spawning || waves.State == ShorelineDefense.Waves.WaveState.Combat);
+        private double ExactRepairMultiplier => Math.Round(CombatRepair ? waveRepairMultiplier : preparationRepairMultiplier, 6) * Meta.RepairMultiplier(CombatRepair) * Math.Round(CombatRepair ? Events?.Modifiers.combatRepair ?? 1 : Events?.Modifiers.preparationRepair ?? 1, 6);
+        public float RepairMultiplier => (float)ExactRepairMultiplier;
+        public int UpgradeCost(DefenseBase defense) => defense != null && defense.Level < 3 ? Math.Max(1, (int)Math.Min(int.MaxValue, Math.Ceiling((defense.Definition.LevelData(defense.Level + 1)?.cost ?? 0) * Meta.UpgradeMultiplier * Math.Round((double)(Events?.Modifiers.upgradeCost ?? 1), 6)))) : 0;
         public int RepairCost(DefenseBase defense) => defense != null && defense.IsAlive && defense.CurrentHealth < defense.MaxHealth ?
-            Math.Max(1, (int)Math.Min(int.MaxValue, Math.Ceiling(defense.TotalInvestment * (double)repairBasisFraction * (defense.MaxHealth - defense.CurrentHealth) / defense.MaxHealth * RepairMultiplier))) : 0;
+            Math.Max(1, (int)Math.Min(int.MaxValue, Math.Ceiling(defense.TotalInvestment * Math.Round((double)repairBasisFraction, 6) * (defense.MaxHealth - defense.CurrentHealth) / defense.MaxHealth * ExactRepairMultiplier))) : 0;
         public bool CanUpgrade(DefenseBase defense) => CanDismantle(defense) && defense.Level < 3 && UpgradeCost(defense) > 0 && economy.CanAfford(UpgradeCost(defense));
         public bool CanRepair(DefenseBase defense) => CanDismantle(defense) && RepairCost(defense) > 0 && economy.CanAfford(RepairCost(defense));
         public bool TryUpgrade(DefenseBase defense)
@@ -47,7 +51,7 @@ namespace ShorelineDefense.Building
             finally { placing = false; }
         }
         [SerializeField, Range(0, 1)] private float dismantleRefundFraction = .5f;
-        public int RefundFor(DefenseBase defense) => defense != null ? (int)Math.Min(int.MaxValue, Math.Floor(defense.TotalInvestment * (double)(float.IsNaN(dismantleRefundFraction) ? .5f : Mathf.Clamp01(dismantleRefundFraction)))) : 0;
+        public int RefundFor(DefenseBase defense) => defense != null ? (int)Math.Min(int.MaxValue, Math.Floor(defense.TotalInvestment * Math.Min(.75, Math.Max(0, Math.Round(float.IsNaN(dismantleRefundFraction) ? .5 : dismantleRefundFraction, 6) + Meta.RefundBonus)))) : 0;
         public bool CanDismantle(DefenseBase defense) => game != null && game.IsPlaying && defense != null && defense.Owner == this && defense.IsAlive && !defense.Dismantled && defense.gameObject.activeInHierarchy && !(defense.GetComponent<LandMine>()?.Exploded ?? false);
         public bool TryDismantle(DefenseBase defense, out int refund) {
             refund = 0;
@@ -75,7 +79,16 @@ namespace ShorelineDefense.Building
                 for (int x = 0; x < definition.Footprint.x; x++) for (int y = 0; y < definition.Footprint.y; y++)
                     if (grid.Definition.IsFloodable(cell + new Vector2Int(x,y), Events.Modifiers.floodedColumns)) return PlacementResult.NotBuildable;
             }
-            return PlacementRules.Validate(grid?.Grid, cell, definition.Footprint, definition.Cost, economy.Money);
+            var placement = PlacementRules.Validate(grid?.Grid, cell, definition.Footprint, definition.Cost, economy.Money);
+            if (placement != PlacementResult.Valid || !definition.BlocksMovement) return placement;
+            // Never materialize a solid footprint around an existing creature, including a burrower.
+            foreach (var enemy in enemies.Active)
+            {
+                if (enemy == null || !enemy.IsCombatActive || !grid.Grid.TryWorldToCell(enemy.transform.position, out var at)) continue;
+                if (at.x >= cell.x && at.y >= cell.y && at.x < cell.x + definition.Footprint.x && at.y < cell.y + definition.Footprint.y)
+                    return PlacementResult.EnemyInFootprint;
+            }
+            return placement;
         }
 
         // Explicit gameplay command: no mouse, UI, targeting, or MG-specific logic.
@@ -100,10 +113,11 @@ namespace ShorelineDefense.Building
                 candidate = CreateDefense(definition, grid.Grid.FootprintCenter(cell, definition.Footprint), staging);
                 if (candidate == null) return PlacementResult.CreationFailed;
                 candidate.gameObject.SetActive(false);
-                candidate.Initialize(definition, cell, grid.Grid, game, enemies);
+                candidate.Initialize(definition, cell, grid.Grid, game, enemies, Meta);
                 result = Validate(definition, cell);
                 if (result != PlacementResult.Valid) return result;
                 if (!grid.Grid.TryOccupy(cell, definition.Footprint, candidate)) return PlacementResult.Occupied;
+                if (!candidate.ActivateNavigation()) return PlacementResult.Occupied;
                 // All fallible creation/initialization happens before payment. No refund path is needed.
                 if (!economy.TrySpend(definition.Cost)) return game.IsPlaying ? PlacementResult.InsufficientMoney : PlacementResult.NotPlaying;
                 committed = true;
@@ -125,6 +139,7 @@ namespace ShorelineDefense.Building
                 if (!committed && candidate != null)
                 {
                     grid.Grid.ClearOccupied(cell, definition.Footprint, candidate);
+                    grid.Grid.ClearNavigationBlocker(cell, definition.Footprint, candidate);
                     if (Application.isPlaying) Destroy(candidate.gameObject);
                     else DestroyImmediate(candidate.gameObject);
                 }
@@ -143,10 +158,11 @@ namespace ShorelineDefense.Building
             if (staging == null) { staging = new GameObject("Inactive Defense Staging").transform; staging.SetParent(transform, false); staging.gameObject.SetActive(false); }
             var candidate = CreateDefense(definition, grid.Grid.FootprintCenter(cell, definition.Footprint), staging);
             candidate.gameObject.SetActive(false);
-            candidate.Initialize(definition, cell, grid.Grid, game, enemies);
+            candidate.Initialize(definition, cell, grid.Grid, game, enemies, Meta);
             candidate.SetConstructionOwner(this, data.constructionCost);
             candidate.RestoreState(data);
             if (!grid.Grid.TryOccupy(cell, definition.Footprint, candidate)) throw new InvalidOperationException("Saved structure overlaps another structure.");
+            if (!candidate.ActivateNavigation()) throw new InvalidOperationException("Saved navigation footprint is unavailable.");
             candidate.transform.SetParent(defenseParent, true);
             candidate.gameObject.SetActive(true);
             candidate.GetComponent<LandMine>()?.RestoreArming(data.mineArmingRemaining);

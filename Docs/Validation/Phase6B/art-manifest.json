@@ -1,0 +1,1025 @@
+[
+  {
+    "path": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/biovfx_raw_v001.png",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      253
+    ],
+    "alphaValues": 254,
+    "sha256": "7a1327f836288958c9b37eda45ba76ebc0e9c1cab4c4277752636c4e6a407da1"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/broodling_raw_v001.png",
+    "width": 1448,
+    "height": 1086,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 256,
+    "sha256": "1f851f72d95aa63cc0f44132cc050fdbedf2f1603aa4d7b2e273f00a45f1f7fe"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/broodmother_raw_v001.png",
+    "width": 948,
+    "height": 1660,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 256,
+    "sha256": "e88c1f402aaa670d8f4864f024a6947ecfc9ae3ca90408cba40aa074ffc2c820"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/brood_carrier_raw_v001.png",
+    "width": 1122,
+    "height": 1402,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 256,
+    "sha256": "96dbb7ffaf02f029a50b5baaafd565de56957d7bae0d8b5f99306c95e24d763c"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/bulwark_raw_v001.png",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      254
+    ],
+    "alphaValues": 255,
+    "sha256": "7c4c339717c4ab8578ee92a5a676f9addc13915624dd3772e232ae79ded6eda7"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/burrower_raw_v001.png",
+    "width": 836,
+    "height": 1881,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 256,
+    "sha256": "7c605eeec32ecb92dd67782146b22dc45254377c70890cb39a0d8ad43656c31e"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/crawler_raw_v001.png",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      254
+    ],
+    "alphaValues": 255,
+    "sha256": "554edf88e50bfa0dd413226c8564ab1a631e96c06fc926401c4105ade3de2c5c"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/dredger_raw_v001.png",
+    "width": 948,
+    "height": 1659,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 256,
+    "sha256": "cafbf8226cf46ee7685f2bcbb740e223d73c9d46a4b51614dafe8ed623092c12"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/drift_pod_raw_v001.png",
+    "width": 1122,
+    "height": 1402,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 256,
+    "sha256": "2478ee1c62bd6db2e37de76f275ac618f85a7db7789761093ef756bfa0a4665e"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/leviathan_carrier_raw_v001.png",
+    "width": 1122,
+    "height": 1402,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 256,
+    "sha256": "59dbaa65c6439baa1d681fd4f60ebef360e5d8f3faaf65057272b15822cfa640"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/skitter_raw_v001.png",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      254
+    ],
+    "alphaValues": 255,
+    "sha256": "1b744f022626169639a31878887e571395d9ecac2f66669aa3cbaceda1767bce"
+  },
+  {
+    "path": "Assets/Game/Art/SourceSheets/p6b_aquatic_001/spitter_raw_v001.png",
+    "width": 1024,
+    "height": 1536,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      254
+    ],
+    "alphaValues": 255,
+    "sha256": "5fb0d2a021942aa77a742e267895225311730ba71416cc9f7c188eafd4e21483"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/ref_aquatic_boss_lineup_01.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "alphaRange": null,
+    "alphaValues": null,
+    "sha256": "b976831cc2609561dc898d234d826a66cf38c71e306a0b250541d5d491a2ed64"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/ref_aquatic_carriers_01.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "alphaRange": null,
+    "alphaValues": null,
+    "sha256": "a946c549d03bd0de2a0f535512db70bb9def2f4d236a41b0362a9f3669a4cb77"
+  },
+  {
+    "path": "Assets/Game/Art/MasterReferences/ref_aquatic_enemy_lineup_01.png",
+    "width": 1536,
+    "height": 1024,
+    "mode": "RGB",
+    "alphaRange": null,
+    "alphaValues": null,
+    "sha256": "4bbc3d10e9d0785bc8f57e49e90175f1e72eb932a27f60ec2ddbde43b48f46ee"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodling_attack_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "136a5106dda5fa2d9fd21b47a67e86745ee419f1bfb7e88c265bc10340235cd6"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodling_death_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "06b8474138dffbe292944b80c99fc29242b8f363a928fba255f6e070e6e51383"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodling_move_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "fbbe06dfce97504006c3cb886e6640968ca4e2c3f70640c2486fc248675d53e7"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodmother_attack_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "3cdf2e8d853ddbcb2c96a63342410bdabcfde56fedfc214ad526164b63c65100"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodmother_death_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "48f5d726f92f71182f5e9957dbd1e1243ff574e702d9fde9c24d0b0b3ce25b40"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodmother_emergence_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "13541716b0c5c5d1b776259dab8fd0fec8ce4c61255cf3ed1894a59757e4f47c"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodmother_hit_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "be8a3d9f850533c3d8dc00ca4e80d8ce74c11249e9e3bcb9150c1f5917ce7ded"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodmother_idle_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "daaa4e0f57906c5bd9a4edfa63fd3837be640a42ff2afbc46e18c9ba0d671a1d"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodmother_move_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "c24e8a4723739e3b69d3f1a57b95ee6acb11fbb4447200234b3777d139e1a11f"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_broodmother_special_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "0ce399a67def1689cb7dad184d50512df5a003e4aa940964e709c6ac25ef9e15"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_bulwark_attack_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "c4d6757468df2ed5a6bb562ad246e4a1d1c218d7f5713501ff0726af7aa349e0"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_bulwark_death_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "788b34eed2b2d61e873144846051ab209be1ebc945d3000677c2278dfa9948b4"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_bulwark_emergence_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "9ccdadfbadeb97bebb70409417268e3cee8c2166ba2e955ecbcb9d70d66d32c2"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_bulwark_hit_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "2804702778c31be078d42d6b69dc9acc7875df920f0407b74d9bdf7336f5f307"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_bulwark_idle_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "6158538eb07cde3e3af6c9ec85ef74d2231f4c4912196290d2e281a1a28a5fba"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_bulwark_move_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "4134ecbf8cdef07376483ec56053b5ae01307eccee53bd2b507123cb0f6cecb1"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_attack_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "d85094d7c0ca9634a2b4d083f5f1b9545ca94d4d68df09b1e423d25c0ad89235"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_death_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "b1348e4e5bd844e4b94895e3959d575d7087fdea85132122237144d7eb8b0a85"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_emergence_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "a94afc709ed03864caf188bda395a6dd647182b6e14cfe4748e47d20fd44176f"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_emerge_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "d6962e3005d0763c11f91638581cfd9bdc625ef7b0ee24817784131f368f4324"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_hit_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "a8c0322dc54cc4b41f4e581efdb5ba883dbc09e7a0e3fcdc561f7a943803e31f"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_idle_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "304fa82d7f9cf34c086ab358288c510c71261f933ab2ae7ea99c701f049bdbc3"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_move_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "cc481888237005a68884fc9298101ec43a274801c61dd3c08829448180433267"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_special_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "50d6dc2e9030968e9791b28467089ddd84386ea585408dcdae8a5e5c862cf0c8"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_burrower_underground_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "a013ac399d4a03a17eda84861687a1ff67bf6290602fae3eda709941aa2af6e5"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_crawler_attack_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "46a52f84183961dfb26055d56f592b7da802b63ef1470d41029d08db7f0f174e"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_crawler_death_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "5b47368284dbb9827f5a3f4b4774852bfa96896d657346b81c85b2bacbb303ab"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_crawler_emergence_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "d5f3c9c7e88e6eb48d0ba40cd90633b6edb3d06663efc1b99b8432505feabdfd"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_crawler_hit_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "3126c3004aeb62a56b6a3663311344952883d721b01a73048ee19e266999827f"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_crawler_idle_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "fd921d78c42c449fd3bde142e12a873acfb251d6d49272e2c83eeb4f56f6248a"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_crawler_move_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "0e567dc7511bfb43eb55387199db7ade83f1e4904b1f1bf0dec6070e702c73a9"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_dredger_attack_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "cb1393d682fda4a910b12fd373c850fbf060fdcb9fe87242fb66a9482e45822a"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_dredger_death_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "f9e679e0294cb02d486e0b9a5cbe183cae79741c1dd8014e3a023359dc73dc82"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_dredger_emergence_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "f045e0067424bb33191e7c2a4e4c8363b3325c6eba52082f2405a3d1cc89802a"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_dredger_hit_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "73cb7881bfc4e84106bc8c69637868b8699fa7db398d538f9dfd857db8152438"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_dredger_idle_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "b73c9d1018ecf4767a16b153761ccbce821d32edbbac9b562de9f56326815d4d"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_dredger_move_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "a12dbb046a56d04a16eb4bf7543c67ffbb2a0b308b6ba1133b1b0c7dab717faf"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_dredger_special_sheet_v001.png",
+    "width": 512,
+    "height": 128,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "45f043126aa8ca6b7399b75bee127625343544b85358324c14b20120e2dcd1b2"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_skitter_attack_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "a278031e87af43276c349557de0ca4968747c91f8ce7d13983135d0885d290c1"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_skitter_death_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "6c8ee71ace6b9ea8eeef62ae7e335800ed54cfa6068efc1d2d3da04f8b8da1b7"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_skitter_emergence_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "2bc13ed3549cae1ed09a6897ea8ecf6e708e3aef2e1741420b44f55e2cdb5901"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_skitter_hit_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "3c6a0e4698489a62a8e00f851d6ce3009d9d6d1d85ff13c8a5a2e062c3318548"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_skitter_idle_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "688f46523ac2801f151e1e4941672d5dd464965bd8e13ec5660c701cc8ea96b9"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_skitter_move_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "d7666cba3ef02cae0771d7e3471964d58b33b3f7fd965a3ef554e2c27b043015"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_spitter_attack_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "bd7913eedb29c3153f1608e1b78ba301a055d427bcc113dd8c0b69969100cb0f"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_spitter_death_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "44c16c0c3734567cb9caa32fac070e1434d99dddbecef7d6b7056480591f042a"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_spitter_emergence_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "9816801d6527ad1504a1f132c9c9e77913a4fa2b800ac8668893741a3b1dbdf2"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_spitter_hit_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "e518c9e6783fb1600a61853cdd6fd9fe0c63e44a69e43a3c8fe754d5b888203f"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_spitter_idle_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "d89f34f86c520dbdf563458dcb271d6fafa0e5de9574446c7cce8ee809a856cb"
+  },
+  {
+    "path": "Assets/Game/Art/Enemies/Aquatic/bd_enemy_spitter_move_sheet_v001.png",
+    "width": 256,
+    "height": 64,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "30e1783f69b06bbe4192af06f85f0af8ad983a4e72eabc1becf2f1c79bb97b43"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_brood_carrier_arrival_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "30e5af69e1fc8e20f47d2ad47ea6775fb3c21c5eff411a5c08f2eb8a933987df"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_brood_carrier_float_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "0cb45a049d722f856b5f146641d62c6c6626c24bdd68e1dd1be35ab2694e7def"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_brood_carrier_move_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "cc23face09157ad12e6f90b7dbd03a17be846dad8b9915667c20ab5692da0cfe"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_brood_carrier_release_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "cb307aa0b6e7aa41bb4cf65d5cdf10fe1515f2527509e3a0865a58834521a38b"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_brood_carrier_retreat_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "17b7a719c03cb7b567e3d5d250634cf27fbe4700a522bccbce8984636b0b785b"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_drift_pod_arrival_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "cb6ea8e16227f1533c4eddee16284eed19e3f7398029ce2ea2e548326ee0091d"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_drift_pod_float_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "b9379e0a32a091d33c05ed600dce941af91c6f216da62edce21b3ed70b995ad9"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_drift_pod_move_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "5a933a26d424232deaa0777904397ec8dcd4b1af31a036251381c73081ea8c5b"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_drift_pod_release_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "54d0837cd0274a69e2605bf3483010c7b0cd1ec72e48cafdf3b27ad86b4a2b56"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_drift_pod_retreat_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "7b6fc07ccb09800cc20fbfbd87cc2cf7c68403bbfa1279dc4198cea920f59a24"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_leviathan_carrier_arrival_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "2ef699dc06117e5ae7026767e8911f2caae43596df046948b568ffbd9da8b8b8"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_leviathan_carrier_float_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "7a0ae1727637cbb1e0ac72524feaa11add32b6393a1f8c1d4375037b02af3767"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_leviathan_carrier_move_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "9d50bcc25e52587870860c9e98b648282da7cd830caaadee7e45d0c3ea50f8a3"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_leviathan_carrier_release_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "33a21ae96f0a3842ffd8d23030aeae40c1f2280d8747585f5745da2e50c73474"
+  },
+  {
+    "path": "Assets/Game/Art/Carriers/bd_carrier_leviathan_carrier_retreat_sheet_v001.png",
+    "width": 768,
+    "height": 96,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "4a19096eacc66ce711855f81a8f16e940a63ab36dceb8e44d2fa355d4a712802"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Aquatic/bd_fx_biological_broodrelease_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "ac55db8f5a2ddd95a6b2839f7c94a15eb964f42f8e4d4dd0dedb82c58bd0e64a"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Aquatic/bd_fx_biological_bubbles_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "f8a925e5935b310e73ad35dfa36a12e212a477f5a801ffb8189628991cbfa8c7"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Aquatic/bd_fx_biological_corrosiveglob_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "f046f75002de70222aa71b4e7e31f243e1ca984aa051aac764e14aa99868d6bb"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Aquatic/bd_fx_biological_creaturefluids_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "ff6447507ef209206604a3ab47a422a7d2dd68f0c8fbf0f3b235f36d229cc7b7"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Aquatic/bd_fx_biological_podrupture_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "04a71ae67905b7ef41e036997e0623013c8d5394d21713067a095e6d32034a18"
+  },
+  {
+    "path": "Assets/Game/Art/Effects/Aquatic/bd_fx_biological_slimeimpact_sheet_v001.png",
+    "width": 128,
+    "height": 32,
+    "mode": "RGBA",
+    "alphaRange": [
+      0,
+      255
+    ],
+    "alphaValues": 2,
+    "sha256": "d433b4a6a00f8f26ec77f3b45a2b210fffb5a855c1d6472beeedd9b11703cb01"
+  }
+]

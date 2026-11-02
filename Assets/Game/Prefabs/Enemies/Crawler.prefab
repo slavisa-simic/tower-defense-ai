@@ -103,7 +103,8 @@ GameObject:
   - component: {fileID: 4288483732420163300}
   - component: {fileID: 2560887087286131822}
   - component: {fileID: 9096308344716663755}
-  m_Layer: 0
+  - component: {fileID: 5020338484148738102}
+  m_Layer: 10
   m_Name: Crawler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,3 +176,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Enemies.EnemyController
   definition: {fileID: 11400000, guid: aaaaa2c3ee533cd4692ed482b05338c0, type: 2}
+--- !u!114 &5020338484148738102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8402122017016159428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e556d813035c9c4b8ad4606a32e2b3f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Enemies.EnemyStructureAttack

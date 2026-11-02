@@ -1,0 +1,1 @@
+Update-driven HUD: target HP 276/300, repair 5 RSD, attacks 2, render 1920x1080.

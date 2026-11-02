@@ -1,0 +1,58 @@
+[
+  {
+    "map": "CoastalDefense_TopDown",
+    "shadowCount": 79,
+    "aboveAllEnvironmentTerrain": true,
+    "layers": [
+      "GroundObjects -20"
+    ],
+    "materials": [
+      {
+        "material": "PixelShadowTall",
+        "count": 6,
+        "opacity": 0.4,
+        "offset": "(12.00, -9.00, 0.00, 0.00)"
+      },
+      {
+        "material": "PixelShadowMedium",
+        "count": 7,
+        "opacity": 0.4,
+        "offset": "(8.00, -6.00, 0.00, 0.00)"
+      },
+      {
+        "material": "PixelShadowLow",
+        "count": 66,
+        "opacity": 0.36,
+        "offset": "(4.00, -3.00, 0.00, 0.00)"
+      }
+    ]
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "shadowCount": 95,
+    "aboveAllEnvironmentTerrain": true,
+    "layers": [
+      "GroundObjects -20"
+    ],
+    "materials": [
+      {
+        "material": "PixelShadowMedium",
+        "count": 25,
+        "opacity": 0.4,
+        "offset": "(8.00, -6.00, 0.00, 0.00)"
+      },
+      {
+        "material": "PixelShadowTall",
+        "count": 14,
+        "opacity": 0.4,
+        "offset": "(12.00, -9.00, 0.00, 0.00)"
+      },
+      {
+        "material": "PixelShadowLow",
+        "count": 56,
+        "opacity": 0.36,
+        "offset": "(4.00, -3.00, 0.00, 0.00)"
+      }
+    ]
+  }
+]

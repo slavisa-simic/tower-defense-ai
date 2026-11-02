@@ -2,7 +2,9 @@ using UnityEngine;
 
 namespace ShorelineDefense.Enemies
 {
-    public enum EnemyKind { Basic, Runner, Brute, IsisBreacher, IsisHeavy, PirateRunner, PirateRaider, UndeadOsama, PirateWarlord }
+    // Explicit slots preserve serialized references. Slot six is reserved for migrated totals.
+    public enum EnemyKind { Crawler = 0, Skitter = 1, Bulwark = 2, Spitter = 3, Broodling = 4, Burrower = 5, LegacyUnclassified = 6, Dredger = 7, Broodmother = 8 }
+    public enum CreatureFamily { Swarm, Armored, Aberrant }
     [CreateAssetMenu(menuName = "Shoreline Defense/Enemy Definition")]
     public class EnemyDefinition : ScriptableObject
     {
@@ -13,8 +15,13 @@ namespace ShorelineDefense.Enemies
         [SerializeField, Min(1)] private int difficultyCost = 1;
         [SerializeField, Min(1)] private int unlockWave = 1;
         public EnemyKind Kind => kind;
+        public CreatureFamily Family => kind == EnemyKind.Bulwark || kind == EnemyKind.Dredger ? CreatureFamily.Armored :
+            kind == EnemyKind.Spitter || kind == EnemyKind.Burrower ? CreatureFamily.Aberrant : CreatureFamily.Swarm;
+        // Half-unit capacity permits two tiny Broodlings per ordinary cargo unit.
+        public int CarrierHalfUnits => kind == EnemyKind.Broodling ? 1 : TransportCapacityUnits * 2;
         public int BreachPenalty => Mathf.Max(0, breachPenalty);
         public int DifficultyCost => Mathf.Max(1, difficultyCost);
+        public int WaveCostHalfUnits => kind == EnemyKind.Broodling ? 1 : DifficultyCost * 2;
         public int UnlockWave => Mathf.Max(1, unlockWave);
         [SerializeField, Min(1)] private int transportCapacityUnits = 1;
         public int TransportCapacityUnits => Mathf.Max(1, transportCapacityUnits);
@@ -25,6 +32,13 @@ namespace ShorelineDefense.Enemies
         [SerializeField, Min(0.05f)] private float attackInterval = 1f;
         [SerializeField, Min(0.1f)] private float attackRange = 1.6f;
         [SerializeField, Min(0)] private int killReward = 25;
+        [Header("Attacks against blocking player structures")]
+        [SerializeField, Min(1)] private int structureDamage = 12;
+        [SerializeField, Min(.1f)] private float structureAttackInterval = 1;
+        [SerializeField, Range(.5f, 6)] private float structureRangeCells = .6f;
+        public int StructureDamage => Mathf.Max(1, structureDamage);
+        public float StructureAttackInterval => Mathf.Max(.1f, structureAttackInterval);
+        public float StructureRangeCells => Mathf.Max(.5f, structureRangeCells);
 
         public string DisplayName => displayName;
         public int MaxHealth => maxHealth;

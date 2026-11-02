@@ -158,6 +158,7 @@ namespace ShorelineDefense.Tests
             enemy.Tick(1);
             Assert.That(paths.Requests, Is.EqualTo(2), "An unreachable enemy must wait, without retrying every frame.");
             grid.SetCell(new Vector2Int(1, 0), new GridCell(TerrainType.Ground, true, true));
+            enemy.PrepareNavigation(.5f);
             enemy.Tick(0.01f);
             Assert.That(enemy.HasPath, Is.True);
             Assert.That(enemy.Path, Has.Member(new Vector2Int(1, 0)));

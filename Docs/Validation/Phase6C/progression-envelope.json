@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase6C/Live.cs",
+      "entry": "Phase6CLive.Progression",
+      "timeout_ms": "55000"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 370,
+      "executeMs": 10009,
+      "assemblyName": "PipelineRunScript_Live_485aef954b774a2d9618f8fb6c071215",
+      "success": true,
+      "result": "{\r\n  \"method\": \"Three real wave-scheduler runs with accelerated ticks and explicit lethal test damage, finalized through Game Over and actual Main Menu purchase buttons. Not an earned-income balance test.\",\r\n  \"rows\": [\r\n    {\r\n      \"run\": 1,\r\n      \"wavesCompleted\": 5,\r\n      \"earnedRP\": 10,\r\n      \"beforePurchase\": 10,\r\n      \"target\": \"emergency-fund\",\r\n      \"purchased\": true,\r\n      \"remaining\": 0,\r\n      \"startingNext\": 100\r\n    },\r\n    {\r\n      \"run\": 2,\r\n      \"wavesCompleted\": 10,\r\n      \"earnedRP\": 15,\r\n      \"beforePurchase\": 15,\r\n      \"target\": \"river-monitoring\",\r\n      \"purchased\": true,\r\n      \"remaining\": 5,\r\n      \"startingNext\": 100\r\n    },\r\n    {\r\n      \"run\": 3,\r\n      \"wavesCompleted\": 20,\r\n      \"earnedRP\": 20,\r\n      \"beforePurchase\": 25,\r\n      \"target\": \"supply-contracts\",\r\n      \"purchased\": true,\r\n      \"remaining\": 5,\r\n      \"startingNext\": 100\r\n    }\r\n  ]\r\n}"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

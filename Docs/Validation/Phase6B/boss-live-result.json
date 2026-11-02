@@ -1,0 +1,8 @@
+{
+  "diagnostics": [],
+  "compileMs": 162,
+  "executeMs": 4433,
+  "assemblyName": "PipelineRunScript_Live_583bba7739af4a6182d599a8a9375e4d",
+  "success": true,
+  "result": "[\r\n  {\r\n    \"map\": \"CoastalDefense_TopDown\",\r\n    \"wave\": 25,\r\n    \"tick\": 571,\r\n    \"spawned\": 0,\r\n    \"kills\": 1046,\r\n    \"breaches\": 0,\r\n    \"pending\": 0,\r\n    \"alive\": 0,\r\n    \"arrivals\": [\r\n      19,\r\n      54,\r\n      21,\r\n      3\r\n    ]\r\n  },\r\n  {\r\n    \"map\": \"CoastalDefense_TopDown\",\r\n    \"wave\": 50,\r\n    \"tick\": 736,\r\n    \"spawned\": 6,\r\n    \"kills\": 1447,\r\n    \"breaches\": 0,\r\n    \"pending\": 0,\r\n    \"alive\": 0,\r\n    \"arrivals\": [\r\n      19,\r\n      70,\r\n      25,\r\n      4\r\n    ]\r\n  },\r\n  {\r\n    \"map\": \"DanubeIndustrialPort\",\r\n    \"wave\": 25,\r\n    \"tick\": 721,\r\n    \"spawned\": 0,\r\n    \"kills\": 1001,\r\n    \"breaches\": 0,\r\n    \"pending\": 0,\r\n    \"alive\": 0,\r\n    \"arrivals\": [\r\n      15,\r\n      53,\r\n      16,\r\n      6\r\n    ]\r\n  },\r\n  {\r\n    \"map\": \"DanubeIndustrialPort\",\r\n    \"wave\": 50,\r\n    \"tick\": 901,\r\n    \"spawned\": 6,\r\n    \"kills\": 1447,\r\n    \"breaches\": 0,\r\n    \"pending\": 0,\r\n    \"alive\": 0,\r\n    \"arrivals\": [\r\n      20,\r\n      69,\r\n      24,\r\n      4\r\n    ]\r\n  }\r\n]"
+}

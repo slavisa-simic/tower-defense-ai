@@ -20,7 +20,7 @@ namespace ShorelineDefense.Tests
                 try
                 {
                     Assert.IsTrue(wave.IsValid);Assert.That(wave.ScheduledCount,Is.InRange(1,settings.maximumEnemiesPerWave + (wave.Encounter != null ? 1 + wave.Encounter.Escorts.Sum(e=>e.Count)*settings.enemyQuantityMultiplier : 0)));
-                    int cost=wave.Groups.Sum(group=>group.Count*group.Prefab.Definition.DifficultyCost);Assert.LessOrEqual(cost,g.Budget(number)+wave.EncounterCost);
+                    int cost=wave.Groups.Sum(group=>group.Count*group.Prefab.Definition.WaveCostHalfUnits)/2;Assert.LessOrEqual(cost,g.Budget(number)+wave.EncounterCost);
                     if(wave.ScheduledCount - (wave.Encounter != null ? 1 + wave.Encounter.Escorts.Sum(e=>e.Count)*settings.enemyQuantityMultiplier : 0)<settings.maximumEnemiesPerWave)Assert.Less(g.Budget(number)+wave.EncounterCost-cost,settings.enemies.Min(p=>p.Definition.DifficultyCost)*settings.enemyQuantityMultiplier);
                     Assert.That(wave.HealthMultiplier,Is.InRange(1,settings.maximumHealthMultiplier));Assert.That(wave.SpeedMultiplier,Is.InRange(1,settings.maximumSpeedMultiplier));
                     Assert.GreaterOrEqual(wave.CompletionReward,100);
@@ -40,8 +40,8 @@ namespace ShorelineDefense.Tests
         public void UnlocksEnemyStatsAndDifficultyGrowthMatchRoles()
         {
             var s=Settings;Assert.Greater(new EndlessWaveGenerator(s,0).Budget(100),new EndlessWaveGenerator(s,0).Budget(25));
-            var basic=s.enemies.First(p=>p.Definition.Kind==EnemyKind.Basic).Definition;var runner=s.enemies.First(p=>p.Definition.Kind==EnemyKind.Runner).Definition;var brute=s.enemies.First(p=>p.Definition.Kind==EnemyKind.Brute).Definition;
-            Assert.That(runner.UnlockWave,Is.EqualTo(3));Assert.That(brute.UnlockWave,Is.EqualTo(6));Assert.Less(runner.MaxHealth,basic.MaxHealth);Assert.Greater(runner.MovementSpeed,basic.MovementSpeed);Assert.Greater(brute.MaxHealth,basic.MaxHealth*5);Assert.Less(brute.MovementSpeed,basic.MovementSpeed);Assert.That(brute.TransportCapacityUnits,Is.EqualTo(3));
+            var basic=s.enemies.First(p=>p.Definition.Kind==EnemyKind.Crawler).Definition;var runner=s.enemies.First(p=>p.Definition.Kind==EnemyKind.Skitter).Definition;var brute=s.enemies.First(p=>p.Definition.Kind==EnemyKind.Bulwark).Definition;
+            Assert.That(runner.UnlockWave,Is.EqualTo(3));Assert.That(brute.UnlockWave,Is.EqualTo(7));Assert.Less(runner.MaxHealth,basic.MaxHealth);Assert.Greater(runner.MovementSpeed,basic.MovementSpeed);Assert.Greater(brute.MaxHealth,basic.MaxHealth*5);Assert.Less(brute.MovementSpeed,basic.MovementSpeed);Assert.That(brute.TransportCapacityUnits,Is.EqualTo(4));
             for(int wave=1;wave<6;wave++) {var generated=new EndlessWaveGenerator(s,42).Generate(wave);try{foreach(var g in generated.Groups)Assert.LessOrEqual(g.Prefab.Definition.UnlockWave,wave);}finally{UnityEngine.Object.DestroyImmediate(generated);}}
         }
     }

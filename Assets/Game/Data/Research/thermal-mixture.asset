@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3777ac5fbc4d04342bf89a26e6cf129c, type: 3}
+  m_Name: thermal-mixture
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Progression.ResearchNodeDefinition
+  id: thermal-mixture
+  displayName: Thermal Mixture
+  description: Flamethrower burns last 10% longer.
+  branch: 2
+  costRP: 30
+  tier: 3
+  maxRank: 1
+  prerequisites:
+  - {fileID: 11400000, guid: 9e270c74705f8ea45bfa7c0bb327aa96, type: 2}
+  icon: {fileID: -1103980196, guid: fc974e30264a4de4ab29d5308603707e, type: 3}
+  effects:
+  - kind: 11
+    amount: 0.1
+  boardPosition: {x: 0.5, y: 212}

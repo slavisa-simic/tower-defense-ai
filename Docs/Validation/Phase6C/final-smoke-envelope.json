@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase6C/Live.cs",
+      "entry": "Phase6CLive.FinalSmoke",
+      "timeout_ms": "55000"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 260,
+      "executeMs": 1623,
+      "assemblyName": "PipelineRunScript_Live_9604065a2d5b4053979071ddc9488b97",
+      "success": true,
+      "result": "{\r\n  \"researchNodes\": 20,\r\n  \"neutralStartingRsd\": 500,\r\n  \"mgHealth\": 300,\r\n  \"profileRP\": 0,\r\n  \"result\": \"Passed\"\r\n}"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

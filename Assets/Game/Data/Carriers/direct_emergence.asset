@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52bfa2f747da5524099376409287564b, type: 3}
+  m_Name: direct_emergence
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.CarrierDefinition
+  method: 0
+  visualPrefab: {fileID: 791627973201365756, guid: a902558ed50e2cc468352c4865a862b3, type: 3}
+  capacityHalfUnits: 12
+  halfExtents: {x: 1.5, y: 0.8}
+  speedMultiplier: 1
+  ruptureSeconds: 0.5
+  remainsSeconds: 0.3
+  releaseInterval: 0.07

@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase6C/Audit.cs",
+      "entry": "Phase6CAudit.SavedAssets"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 2219,
+      "executeMs": 2134,
+      "assemblyName": "PipelineRunScript_Audit_037d2a0852c04b69a55bcde20099923d",
+      "success": true,
+      "result": "Three clean scenes; 20 unique node icons plus RP; Point/uncompressed/no-mipmap imports; no missing scripts or duplicate owners."
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

@@ -38,6 +38,8 @@ MonoBehaviour:
     preparationRepair: 1
     floodedColumns: 0
     fog: 1
+    directEmergenceRatio: -1
+    broodCarrierRatio: -1
     boatVisual: {fileID: 0}
     landingPattern: 0
     composition: []

@@ -33,6 +33,9 @@ namespace ShorelineDefense.Core
                 if (cost >= best) continue;
                 best = cost; goal = cell; found = true;
             }
+            if (!found)
+                foreach (var cell in breachCells)
+                    if (grid.Paths.Obstructions.CanReachByBreaching(start, cell)) { goal = cell; return true; }
             return found;
         }
         public bool TryBreach(EnemyController enemy)

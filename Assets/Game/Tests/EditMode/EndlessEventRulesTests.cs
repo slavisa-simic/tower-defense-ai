@@ -82,7 +82,7 @@ namespace ShorelineDefense.Tests
         }
         [Test] public void MassLandingChangesQuantityAndDirectorWithoutMutatingBaseData()
         {
-            var s = Waves; var m = Settings.events.Single(e => e.id == "mass-landing").modifiers;
+            var s = Waves; var m = Settings.events.Single(e => e.id == "mass-emergence").modifiers;
             var generator = new EndlessWaveGenerator(s, 1977); var normal = generator.Generate(20); var assault = generator.Generate(20, m);
             try {
                 Assert.That(assault.ScheduledCount, Is.EqualTo(Mathf.RoundToInt(normal.ScheduledCount * 1.5f)));
@@ -94,8 +94,8 @@ namespace ShorelineDefense.Tests
                 Assert.That(d.Target, Is.EqualTo(s.PressureTarget(21))); Assert.That(d.BoatLimit, Is.EqualTo(s.BoatConcurrency(21)));
             } finally { Object.DestroyImmediate(normal); Object.DestroyImmediate(assault); }
         }
-        [TestCase("pirate-raid", EnemyKind.PirateRunner)] [TestCase("militant-assault", EnemyKind.IsisBreacher)]
-        [TestCase("heavy-assault", EnemyKind.Brute)] [TestCase("runner-swarm", EnemyKind.Runner)]
+        [TestCase("swarm-surge", EnemyKind.Skitter)] [TestCase("armored-migration", EnemyKind.Bulwark)]
+        [TestCase("deep-water-disturbance", EnemyKind.Bulwark)] [TestCase("brood-tide", EnemyKind.Broodling)]
         public void CompositionBiasChangesActualGeneratedRoster(string id, EnemyKind kind)
         {
             int baseline = 0, biased = 0;

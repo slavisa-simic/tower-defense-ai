@@ -1,0 +1,20 @@
+[
+  {
+    "scene": "CoastalDefense_TopDown",
+    "map": "Map river_border: 5 landings, 3 exits, 459 buildable, 0 blocked, 0 invalid. ",
+    "planned": 80,
+    "ticks": 57,
+    "state": "WaveComplete",
+    "spawned": 80,
+    "homicides": 2000
+  },
+  {
+    "scene": "DanubeIndustrialPort",
+    "map": "Map industrial_port: 8 landings, 2 exits, 290 buildable, 265 blocked, 0 invalid. ",
+    "planned": 80,
+    "ticks": 59,
+    "state": "WaveComplete",
+    "spawned": 80,
+    "homicides": 2000
+  }
+]

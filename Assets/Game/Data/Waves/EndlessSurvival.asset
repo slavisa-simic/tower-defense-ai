@@ -19,7 +19,6 @@ MonoBehaviour:
   - {fileID: 4395388213575324167, guid: b2c7b035517a64a49b56ecba9ca607ec, type: 3}
   - {fileID: 4395388213575324167, guid: 33a962e6960a18148bda8cdc79509b71, type: 3}
   - {fileID: 4395388213575324167, guid: 3d4c92406b4f0ba47b7386d02c79114b, type: 3}
-  - {fileID: 4395388213575324167, guid: df7f7510603bce541b16f4457403af2f, type: 3}
   baseBudget: 16
   linearGrowth: 8
   nonlinearGrowth: 0.08

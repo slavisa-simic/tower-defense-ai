@@ -1,0 +1,405 @@
+{
+  "method": "Both maps; seed 1977, real starting funds, threshold 1000 and earned income only. Shared .1s gameplay ticks and scripted MG purchases/upgrades/repairs. First 10 waves use normal earned income. Optional late checks jump the existing force to Waves 25/50/100 without additional construction, repairs or test damage: controlled research vulnerability tests, not earned-income boss victories or expert balance certification. No money grants. Not human mouse-only play.",
+  "results": [
+    {
+      "map": "CoastalDefense_TopDown",
+      "fullResearch": false,
+      "startingRsd": 500,
+      "waves": [
+        {
+          "wave": 1,
+          "state": "WaveComplete",
+          "ticks": 220,
+          "kills": 69,
+          "homicides": 275,
+          "money": 675
+        },
+        {
+          "wave": 2,
+          "state": "WaveComplete",
+          "ticks": 268,
+          "kills": 189,
+          "homicides": 275,
+          "money": 3178
+        },
+        {
+          "wave": 3,
+          "state": "WaveComplete",
+          "ticks": 136,
+          "kills": 304,
+          "homicides": 275,
+          "money": 3604
+        },
+        {
+          "wave": 4,
+          "state": "WaveComplete",
+          "ticks": 154,
+          "kills": 449,
+          "homicides": 275,
+          "money": 7292
+        },
+        {
+          "wave": 5,
+          "state": "WaveComplete",
+          "ticks": 207,
+          "kills": 689,
+          "homicides": 275,
+          "money": 11482
+        },
+        {
+          "wave": 6,
+          "state": "WaveComplete",
+          "ticks": 266,
+          "kills": 984,
+          "homicides": 275,
+          "money": 17082
+        },
+        {
+          "wave": 7,
+          "state": "WaveComplete",
+          "ticks": 325,
+          "kills": 1426,
+          "homicides": 275,
+          "money": 27470
+        },
+        {
+          "wave": 8,
+          "state": "WaveComplete",
+          "ticks": 321,
+          "kills": 1786,
+          "homicides": 275,
+          "money": 34385
+        },
+        {
+          "wave": 9,
+          "state": "WaveComplete",
+          "ticks": 341,
+          "kills": 2151,
+          "homicides": 275,
+          "money": 41880
+        },
+        {
+          "wave": 10,
+          "state": "WaveComplete",
+          "ticks": 428,
+          "kills": 2546,
+          "homicides": 275,
+          "money": 50150
+        }
+      ],
+      "late": [
+        {
+          "wave": 25,
+          "state": "GameOver",
+          "ticks": 266,
+          "initialStructures": 13,
+          "remainingStructures": 12,
+          "homicidesBefore": 275,
+          "homicides": 1000,
+          "bossesKilled": 0
+        }
+      ],
+      "earnedRP": 40
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "fullResearch": false,
+      "startingRsd": 500,
+      "waves": [
+        {
+          "wave": 1,
+          "state": "WaveComplete",
+          "ticks": 270,
+          "kills": 58,
+          "homicides": 550,
+          "money": 400
+        },
+        {
+          "wave": 2,
+          "state": "WaveComplete",
+          "ticks": 272,
+          "kills": 178,
+          "homicides": 550,
+          "money": 3204
+        },
+        {
+          "wave": 3,
+          "state": "WaveComplete",
+          "ticks": 155,
+          "kills": 293,
+          "homicides": 550,
+          "money": 3479
+        },
+        {
+          "wave": 4,
+          "state": "WaveComplete",
+          "ticks": 180,
+          "kills": 438,
+          "homicides": 550,
+          "money": 7318
+        },
+        {
+          "wave": 5,
+          "state": "WaveComplete",
+          "ticks": 219,
+          "kills": 678,
+          "homicides": 550,
+          "money": 11207
+        },
+        {
+          "wave": 6,
+          "state": "WaveComplete",
+          "ticks": 294,
+          "kills": 973,
+          "homicides": 550,
+          "money": 16807
+        },
+        {
+          "wave": 7,
+          "state": "WaveComplete",
+          "ticks": 372,
+          "kills": 1415,
+          "homicides": 550,
+          "money": 27195
+        },
+        {
+          "wave": 8,
+          "state": "WaveComplete",
+          "ticks": 367,
+          "kills": 1775,
+          "homicides": 550,
+          "money": 34110
+        },
+        {
+          "wave": 9,
+          "state": "WaveComplete",
+          "ticks": 380,
+          "kills": 2140,
+          "homicides": 550,
+          "money": 41605
+        },
+        {
+          "wave": 10,
+          "state": "WaveComplete",
+          "ticks": 408,
+          "kills": 2535,
+          "homicides": 550,
+          "money": 49875
+        }
+      ],
+      "late": [
+        {
+          "wave": 25,
+          "state": "GameOver",
+          "ticks": 288,
+          "initialStructures": 13,
+          "remainingStructures": 12,
+          "homicidesBefore": 550,
+          "homicides": 1000,
+          "bossesKilled": 0
+        }
+      ],
+      "earnedRP": 40
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "fullResearch": true,
+      "startingRsd": 750,
+      "waves": [
+        {
+          "wave": 1,
+          "state": "WaveComplete",
+          "ticks": 182,
+          "kills": 80,
+          "homicides": 0,
+          "money": 1210
+        },
+        {
+          "wave": 2,
+          "state": "WaveComplete",
+          "ticks": 209,
+          "kills": 200,
+          "homicides": 0,
+          "money": 3135
+        },
+        {
+          "wave": 3,
+          "state": "WaveComplete",
+          "ticks": 131,
+          "kills": 315,
+          "homicides": 0,
+          "money": 4479
+        },
+        {
+          "wave": 4,
+          "state": "WaveComplete",
+          "ticks": 146,
+          "kills": 460,
+          "homicides": 0,
+          "money": 8236
+        },
+        {
+          "wave": 5,
+          "state": "WaveComplete",
+          "ticks": 182,
+          "kills": 700,
+          "homicides": 0,
+          "money": 12438
+        },
+        {
+          "wave": 6,
+          "state": "WaveComplete",
+          "ticks": 233,
+          "kills": 995,
+          "homicides": 0,
+          "money": 18050
+        },
+        {
+          "wave": 7,
+          "state": "WaveComplete",
+          "ticks": 295,
+          "kills": 1437,
+          "homicides": 0,
+          "money": 28451
+        },
+        {
+          "wave": 8,
+          "state": "WaveComplete",
+          "ticks": 294,
+          "kills": 1797,
+          "homicides": 0,
+          "money": 35379
+        },
+        {
+          "wave": 9,
+          "state": "WaveComplete",
+          "ticks": 324,
+          "kills": 2162,
+          "homicides": 0,
+          "money": 42888
+        },
+        {
+          "wave": 10,
+          "state": "WaveComplete",
+          "ticks": 335,
+          "kills": 2557,
+          "homicides": 0,
+          "money": 51172
+        }
+      ],
+      "late": [
+        {
+          "wave": 25,
+          "state": "GameOver",
+          "ticks": 274,
+          "initialStructures": 13,
+          "remainingStructures": 13,
+          "homicidesBefore": 0,
+          "homicides": 1000,
+          "bossesKilled": 0
+        }
+      ],
+      "earnedRP": 40
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "fullResearch": true,
+      "startingRsd": 750,
+      "waves": [
+        {
+          "wave": 1,
+          "state": "WaveComplete",
+          "ticks": 190,
+          "kills": 80,
+          "homicides": 0,
+          "money": 1210
+        },
+        {
+          "wave": 2,
+          "state": "WaveComplete",
+          "ticks": 194,
+          "kills": 200,
+          "homicides": 0,
+          "money": 3135
+        },
+        {
+          "wave": 3,
+          "state": "WaveComplete",
+          "ticks": 129,
+          "kills": 315,
+          "homicides": 0,
+          "money": 4479
+        },
+        {
+          "wave": 4,
+          "state": "WaveComplete",
+          "ticks": 158,
+          "kills": 460,
+          "homicides": 0,
+          "money": 8236
+        },
+        {
+          "wave": 5,
+          "state": "WaveComplete",
+          "ticks": 199,
+          "kills": 700,
+          "homicides": 0,
+          "money": 12438
+        },
+        {
+          "wave": 6,
+          "state": "WaveComplete",
+          "ticks": 245,
+          "kills": 995,
+          "homicides": 0,
+          "money": 18050
+        },
+        {
+          "wave": 7,
+          "state": "WaveComplete",
+          "ticks": 355,
+          "kills": 1437,
+          "homicides": 0,
+          "money": 28451
+        },
+        {
+          "wave": 8,
+          "state": "WaveComplete",
+          "ticks": 315,
+          "kills": 1797,
+          "homicides": 0,
+          "money": 35379
+        },
+        {
+          "wave": 9,
+          "state": "WaveComplete",
+          "ticks": 335,
+          "kills": 2162,
+          "homicides": 0,
+          "money": 42888
+        },
+        {
+          "wave": 10,
+          "state": "WaveComplete",
+          "ticks": 369,
+          "kills": 2557,
+          "homicides": 0,
+          "money": 51172
+        }
+      ],
+      "late": [
+        {
+          "wave": 25,
+          "state": "GameOver",
+          "ticks": 327,
+          "initialStructures": 13,
+          "remainingStructures": 13,
+          "homicidesBefore": 0,
+          "homicides": 1000,
+          "bossesKilled": 0
+        }
+      ],
+      "earnedRP": 40
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3777ac5fbc4d04342bf89a26e6cf129c, type: 3}
+  m_Name: advanced-fire-control
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Progression.ResearchNodeDefinition
+  id: advanced-fire-control
+  displayName: Advanced Fire Control
+  description: Ranged weapon defenses fire 5% faster, including Flame damage ticks.
+    Excludes Wire and Mines.
+  branch: 2
+  costRP: 60
+  tier: 4
+  maxRank: 1
+  prerequisites:
+  - {fileID: 11400000, guid: 9e270c74705f8ea45bfa7c0bb327aa96, type: 2}
+  - {fileID: 11400000, guid: eb79b79828fcd6745bbf37cb0d6d0dae, type: 2}
+  - {fileID: 11400000, guid: 727870ef4d2d8b447af246372debb5c9, type: 2}
+  - {fileID: 11400000, guid: a833e9ed64e1ec3409a1cf647e814bcb, type: 2}
+  icon: {fileID: -2146764237, guid: fc974e30264a4de4ab29d5308603707e, type: 3}
+  effects:
+  - kind: 12
+    amount: 0.05
+  boardPosition: {x: 0.5, y: 318}

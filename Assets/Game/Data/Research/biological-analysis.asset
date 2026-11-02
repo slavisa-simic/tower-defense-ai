@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3777ac5fbc4d04342bf89a26e6cf129c, type: 3}
+  m_Name: biological-analysis
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Progression.ResearchNodeDefinition
+  id: biological-analysis
+  displayName: Biological Analysis
+  description: 'Preparation reveals approximate creature composition: High, Medium,
+    or Low.'
+  branch: 3
+  costRP: 30
+  tier: 3
+  maxRank: 1
+  prerequisites:
+  - {fileID: 11400000, guid: 750f9455eb28169449365693a0ae93b4, type: 2}
+  icon: {fileID: -1644912386, guid: 70016e66a7652ae479f0d38648f369c8, type: 3}
+  effects:
+  - kind: 15
+    amount: 1
+  boardPosition: {x: 0.25, y: 212}

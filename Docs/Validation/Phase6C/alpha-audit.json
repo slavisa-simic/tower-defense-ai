@@ -1,0 +1,42 @@
+[
+  {
+    "path": "Assets/Game/Art/UI/Research/bd_ui_research_engineering_sheet_v001.png",
+    "width": 2172,
+    "height": 724,
+    "transparentPixels": 1003066,
+    "opaquePixels": 694,
+    "partialAlphaPixels": 568768
+  },
+  {
+    "path": "Assets/Game/Art/UI/Research/bd_ui_research_intelligence_sheet_v001.png",
+    "width": 2172,
+    "height": 724,
+    "transparentPixels": 966890,
+    "opaquePixels": 1405,
+    "partialAlphaPixels": 604233
+  },
+  {
+    "path": "Assets/Game/Art/UI/Research/bd_ui_research_logistics_sheet_v001.png",
+    "width": 2059,
+    "height": 764,
+    "transparentPixels": 1020088,
+    "opaquePixels": 1378,
+    "partialAlphaPixels": 551610
+  },
+  {
+    "path": "Assets/Game/Art/UI/Research/bd_ui_research_points_v001.png",
+    "width": 1254,
+    "height": 1254,
+    "transparentPixels": 831740,
+    "opaquePixels": 1042,
+    "partialAlphaPixels": 739734
+  },
+  {
+    "path": "Assets/Game/Art/UI/Research/bd_ui_research_weapons_sheet_v001.png",
+    "width": 2172,
+    "height": 724,
+    "transparentPixels": 1060386,
+    "opaquePixels": 1120,
+    "partialAlphaPixels": 511022
+  }
+]

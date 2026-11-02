@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 945cc997ee7f0ea45a9e607def2cf0fd, type: 3}
+  m_Name: ResearchRewards
+  m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Progression.ResearchRewardSettings
+  minimumWave: 5
+  bossReward: 10
+  qualityWaveStep: 20
+  qualityPerStep: 5
+  qualityMaximum: 20
+  waveFactor: 0.5
+  qualityHomicidesMaximum: 250
+  qualityHomicidesPerWaveMaximum: 25
+  maximumStandardReward: 10000
+  milestones:
+  - id: first-wave-5
+    mapId: 
+    condition: 0
+    wave: 5
+    reward: 8
+    maxHomicides: 250
+    maxHomicidesPerWave: 0
+  - id: first-wave-10
+    mapId: 
+    condition: 0
+    wave: 10
+    reward: 5
+    maxHomicides: 250
+    maxHomicidesPerWave: 0
+  - id: first-wave-25
+    mapId: 
+    condition: 0
+    wave: 25
+    reward: 10
+    maxHomicides: 250
+    maxHomicidesPerWave: 0
+  - id: first-wave-50
+    mapId: 
+    condition: 0
+    wave: 50
+    reward: 20
+    maxHomicides: 250
+    maxHomicidesPerWave: 0
+  - id: first-boss
+    mapId: 
+    condition: 1
+    wave: 0
+    reward: 10
+    maxHomicides: 250
+    maxHomicidesPerWave: 0
+  - id: first-dredger
+    mapId: 
+    condition: 2
+    wave: 0
+    reward: 10
+    maxHomicides: 250
+    maxHomicidesPerWave: 0
+  - id: first-broodmother
+    mapId: 
+    condition: 3
+    wave: 0
+    reward: 10
+    maxHomicides: 250
+    maxHomicidesPerWave: 0
+  - id: clean-wave-10
+    mapId: 
+    condition: 4
+    wave: 10
+    reward: 5
+    maxHomicides: 250
+    maxHomicidesPerWave: 25
+  - id: border-wave-20
+    mapId: river_border
+    condition: 5
+    wave: 20
+    reward: 5
+    maxHomicides: 250
+    maxHomicidesPerWave: 0
+  - id: port-wave-20
+    mapId: industrial_port
+    condition: 5
+    wave: 20
+    reward: 5
+    maxHomicides: 250
+    maxHomicidesPerWave: 0
