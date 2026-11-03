@@ -1,0 +1,69 @@
+{
+  "status": "completed",
+  "duration": 0.48,
+  "summary": {
+    "total": 8,
+    "passed": 8,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialTests.BasicsDoNotRequireAllCreatureDiscoveries",
+      "Status": "Passed",
+      "Duration": 0.0669068,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialTests.BatchPriorityDeduplicationAndCriticalPreemptionUseOneActiveCard",
+      "Status": "Passed",
+      "Duration": 0.0396776,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialTests.CatalogHasUniqueKeysAndConciseCentralizedCopy",
+      "Status": "Passed",
+      "Duration": 0.006959,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialTests.DisabledGuidanceClearsActiveAndPendingWithoutChangingSeenProgress",
+      "Status": "Passed",
+      "Duration": 0.0231709,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialTests.IneligibleHintsWaitWithoutBeingMarkedShown",
+      "Status": "Passed",
+      "Duration": 0.0137357,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialTests.OneTimeLessonsSurviveManagerRecreationAndIndependentProfileReload",
+      "Status": "Passed",
+      "Duration": 0.0049699,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialTests.ProfileRecoversFromBackupAndReportsPersistenceFailure",
+      "Status": "Passed",
+      "Duration": 0.0237711,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialTests.ResetOnlyTouchesTutorialFileAndPreservesOffSetting",
+      "Status": "Passed",
+      "Duration": 0.0495996,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

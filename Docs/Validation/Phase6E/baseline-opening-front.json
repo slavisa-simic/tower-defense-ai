@@ -1,0 +1,38 @@
+[
+  {
+    "map": "CoastalDefense_TopDown",
+    "x": 7,
+    "result": {
+      "wave": 1,
+      "state": "GameOver",
+      "seconds": 36.2,
+      "kills": 27,
+      "homicides": 1000,
+      "spawned": 80,
+      "peak": 37,
+      "money": 725,
+      "earned": 675,
+      "spent": 0,
+      "structures": 3,
+      "stalled": false
+    }
+  },
+  {
+    "map": "DanubeIndustrialPort",
+    "x": 7,
+    "result": {
+      "wave": 1,
+      "state": "GameOver",
+      "seconds": 33.5,
+      "kills": 27,
+      "homicides": 1000,
+      "spawned": 80,
+      "peak": 38,
+      "money": 725,
+      "earned": 675,
+      "spent": 0,
+      "structures": 3,
+      "stalled": false
+    }
+  }
+]

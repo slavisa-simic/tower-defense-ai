@@ -23,10 +23,12 @@ namespace ShorelineDefense.Defenses
             timer -= dt;
             if (timer > 0) return;
             var data = defense.Definition.HeavyWeapon;
-            timer = defense.DamageTick;
+            // Preserve sub-tick remainder so a 5% cadence bonus is not rounded
+            // away by frame size. Large idle steps never bank a burst.
+            timer = Mathf.Max(0, timer + defense.DamageTick);
             var target = defense.Enemies.FindTarget(transform.position, defense.Range, defense.Definition.Targeting);
             Firing = target != null;
-            if (!Firing) { AimDirection = Vector2.left; return; }
+            if (!Firing) { timer = defense.DamageTick; AimDirection = Vector2.left; return; }
             AimDirection = ((Vector2)(target.transform.position - transform.position)).normalized;
             defense.Enemies.CollectInRadius(transform.position, defense.Range, victims);
             for (int i = 0; i < victims.Count; i++)

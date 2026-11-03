@@ -1,0 +1,145 @@
+{
+    "profile": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Temp\\Phase6DResolutionProfiles\\c4f5643f5dc547c68e0e18ffe44a36cb",
+    "active": "intro",
+    "queue": [
+        "objective",
+        "rsd",
+        "build"
+    ],
+    "width": 1280.0,
+    "height": 719.6485595703125,
+    "elements": [
+        {
+            "id": "tutorial-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 384.1873779296875,
+                "y": 199.5900421142578,
+                "width": 511.62518310546877,
+                "height": 141.49339294433595
+            }
+        },
+        {
+            "id": "tutorial-title",
+            "text": "QUARANTINE LINE",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 404.8023376464844,
+                "y": 218.3308868408203,
+                "width": 468.5212097167969,
+                "height": 22.489013671875
+            }
+        },
+        {
+            "id": "tutorial-copy",
+            "text": "Aquatic organisms are emerging from the Danube. Stop them before they cross the inland containment line.",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 404.8023376464844,
+                "y": 251.1273651123047,
+                "width": 468.5212097167969,
+                "height": 32.79649353027344
+            }
+        },
+        {
+            "id": "tutorial-detail",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 384.1873779296875,
+                "y": 199.5900421142578,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "health-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1001.6983642578125,
+                "y": 12.181550979614258,
+                "width": 262.371826171875,
+                "height": 71.21522521972656
+            }
+        },
+        {
+            "id": "money-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 15.929720878601075,
+                "y": 12.181550979614258,
+                "width": 235.19764709472657,
+                "height": 63.71888732910156
+            }
+        },
+        {
+            "id": "event-panel",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 381.3762512207031,
+                "y": 12.181550979614258,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "boss-panel",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "build-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 102.13762664794922,
+                "y": 501.31768798828127,
+                "width": 1075.7247314453125,
+                "height": 206.14935302734376
+            }
+        },
+        {
+            "id": "structure-panel",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "preparation-intelligence",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+  "method": "Prepared 9000 RSD budget ceiling (actual investment disclosed), production commands, .1s ticks with all weapon/projectile/burn clocks; yield every 5 ticks for navigation budget/pool cleanup. Wall buys a complete legal x=10 barrier and attempts repairs below 50% HP every 2 simulated seconds from remaining/earned funds. Threshold 1000, no enemy health overrides. Comparative fixture, not earned progression or native timing.",
+  "wave": 24,
+  "eventId": "armored-migration",
+  "rows": [
+    {
+      "map": "CoastalDefense_TopDown",
+      "strategy": "mixed",
+      "profile": "partial",
+      "budget": 9000,
+      "investment": 8940,
+      "result": {
+        "wave": 24,
+        "state": "WaveComplete",
+        "seconds": 69.6,
+        "kills": 330,
+        "homicides": 125,
+        "spawned": 335,
+        "peak": 87,
+        "money": 2221,
+        "earned": 2161,
+        "spent": 0,
+        "structures": 18,
+        "registry": 0,
+        "alive": 0,
+        "pending": 0,
+        "pooledEnemies": 110,
+        "managedBytes": 664924160,
+        "allocatedBytes": 534326729,
+        "stalled": false
+      }
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "strategy": "mixed",
+      "profile": "partial",
+      "budget": 9000,
+      "investment": 8940,
+      "result": {
+        "wave": 24,
+        "state": "WaveComplete",
+        "seconds": 55.7,
+        "kills": 335,
+        "homicides": 0,
+        "spawned": 335,
+        "peak": 90,
+        "money": 2226,
+        "earned": 2166,
+        "spent": 0,
+        "structures": 21,
+        "registry": 0,
+        "alive": 0,
+        "pending": 0,
+        "pooledEnemies": 131,
+        "managedBytes": 665153536,
+        "allocatedBytes": 534427281,
+        "stalled": false
+      }
+    }
+  ]
+}

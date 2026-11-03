@@ -95,9 +95,11 @@ namespace ShorelineDefense.Tests
                 foreach(var enemy in enemies.Active.ToArray())enemy.Health.TakeDefenseDamage(10000);
                 if(waves.PendingCount>0)Assert.That(waves.CompletedWaves,Is.Zero);
             }
-            Assert.That(spawner.TotalSpawned,Is.EqualTo(waves.CurrentWave.ScheduledCount));Assert.That(boats.TotalArrivals,Is.EqualTo(Mathf.CeilToInt(waves.CurrentWave.ScheduledCount/(float)boats.PassengerLimit(spawner.DefaultPrefab))));
+            Assert.That(spawner.TotalSpawned,Is.EqualTo(waves.CurrentWave.ScheduledCount));
+            // Director admission can launch a partial pod; every nonempty dispatch remains bounded.
+            Assert.That(boats.TotalArrivals,Is.InRange(Mathf.CeilToInt(count/(float)boats.PassengerLimit(spawner.DefaultPrefab)),count));
             Assert.That(waves.CompletedWaves,Is.EqualTo(1));Assert.That(waves.PendingCount,Is.Zero);Assert.That(waves.AliveCount,Is.Zero);
-            Assert.That(builder.Economy.Money,Is.EqualTo(before+count*25+reward));waves.Tick(2);Assert.That(builder.Economy.Money,Is.EqualTo(before+count*25+reward));
+            Assert.That(builder.Economy.Money,Is.EqualTo(before+count*spawner.DefaultPrefab.Definition.KillReward+reward));waves.Tick(2);Assert.That(builder.Economy.Money,Is.EqualTo(before+count*spawner.DefaultPrefab.Definition.KillReward+reward));
             yield return null;
         }
         [UnityTest] public IEnumerator BlockedLandingWaitsForValidRouteAndGameOverCancelsUnloading()

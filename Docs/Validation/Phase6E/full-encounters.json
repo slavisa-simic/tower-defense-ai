@@ -1,0 +1,65 @@
+{
+  "method": "Natural Update x2, normal 1000 Homicides threshold, full seeded Wave 25/50 including normal units and escorts. Disclosed 9000 RSD preparation budget, zero research. No test damage, HP, income or movement changes. Failures and unresolved bosses are retained.",
+  "rows": [
+    {
+      "map": "CoastalDefense_TopDown",
+      "wave": 25,
+      "paid": 8775,
+      "result": "GameOver",
+      "bossSpawned": true,
+      "ttkSeconds": 13.456535339355469,
+      "bossHealth": 0,
+      "peak": 112,
+      "kills": 735,
+      "homicides": 1000,
+      "children": null,
+      "p95Ms": 4.6786,
+      "secondsReal": 40.6653604
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "wave": 50,
+      "paid": 8775,
+      "result": "GameOver",
+      "bossSpawned": true,
+      "ttkSeconds": 11.604278564453125,
+      "bossHealth": 0,
+      "peak": 202,
+      "kills": 1061,
+      "homicides": 1025,
+      "children": 12,
+      "p95Ms": 5.4991,
+      "secondsReal": 43.853614199999996
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "wave": 25,
+      "paid": 8775,
+      "result": "WaveComplete",
+      "bossSpawned": true,
+      "ttkSeconds": 14.136245727539063,
+      "bossHealth": 0,
+      "peak": 83,
+      "kills": 954,
+      "homicides": 510,
+      "children": null,
+      "p95Ms": 4.5343,
+      "secondsReal": 62.8086097
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "wave": 50,
+      "paid": 8775,
+      "result": "GameOver",
+      "bossSpawned": true,
+      "ttkSeconds": 11.931915283203125,
+      "bossHealth": 0,
+      "peak": 119,
+      "kills": 1155,
+      "homicides": 1025,
+      "children": 12,
+      "p95Ms": 4.8726,
+      "secondsReal": 58.078159299999996
+    }
+  ]
+}

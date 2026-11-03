@@ -73,6 +73,7 @@ namespace ShorelineDefense.UI
                 var heavy = d.Definition.HeavyWeapon;
                 core += d.GetComponent<ShorelineDefense.Defenses.FlameWeapon>() != null ? $"\nDPS {d.Damage / d.DamageTick:0} / Burn {d.BurnDuration:0.0}s" : $"\nDamage {d.Damage} / Reload {1 / d.FireRate:0.00}s";
                 core += $"\nRange {d.Range / d.Grid.CellSize:0.0} cells";
+                if (d.Definition.ArmorPenetration > 0) core += $" / Pierce {d.Definition.ArmorPenetration:P0}";
                 if (d.GetComponent<ShorelineDefense.Defenses.AreaProjectileWeapon>() != null) core += $"\nBlast {d.SplashRadiusInCells:0.0} / Min {heavy.minimumRangeInCells:0.0} cells";
             }
             stats.text = core;

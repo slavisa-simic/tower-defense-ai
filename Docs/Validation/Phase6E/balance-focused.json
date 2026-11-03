@@ -1,0 +1,41 @@
+{
+  "status": "completed",
+  "duration": 3.52,
+  "summary": {
+    "total": 4,
+    "passed": 4,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.BalanceLogIncludesCommittedManagementAndCompletionRewardOnlyOnce",
+      "Status": "Passed",
+      "Duration": 1.8635167,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.BroodmotherFirstBroodArrivesEarlyAndStillRespectsTheConcurrentCap",
+      "Status": "Passed",
+      "Duration": 0.4893706,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.EarlyCargoAdmissionCannotOvershootWithAFullDriftPod",
+      "Status": "Passed",
+      "Duration": 0.6867867,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.PrecisionFireSelectsHeavyOverAdvancedLarvaAndActuallyPiercesArmor",
+      "Status": "Passed",
+      "Duration": 0.4140419,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

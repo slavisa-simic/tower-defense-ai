@@ -108,8 +108,9 @@ namespace ShorelineDefense.Tests
             Assert.That(build.UpgradeCost(d), Is.EqualTo(System.Math.Ceiling(upgrade * 1.2))); // includes exact 225 -> 270 rounding
             Assert.That(build.RepairCost(d), Is.EqualTo(repair)); Assert.That(build.RefundFor(d), Is.EqualTo(refund));
             var root = hud.GetComponent<UIDocument>().rootVisualElement;
-            Assert.That(root.Q<Button>("structure-upgrade").text, Does.Contain("270"));
-            int balance = build.Economy.Money; Assert.IsTrue(build.TryUpgrade(d)); Assert.That(build.Economy.Money, Is.EqualTo(balance - 270));
+            int eventUpgrade=build.UpgradeCost(d);
+            Assert.That(root.Q<Button>("structure-upgrade").text, Does.Contain(eventUpgrade.ToString()));
+            int balance = build.Economy.Money; Assert.IsTrue(build.TryUpgrade(d)); Assert.That(build.Economy.Money, Is.EqualTo(balance - eventUpgrade));
             Assert.IsTrue(waves.TryStartWave()); int combatRepair = build.RepairCost(d); Assert.That(build.RepairMultiplier, Is.EqualTo(1.5f));
             Assert.That(root.Q<Button>("structure-repair").text, Does.Contain(combatRepair.ToString()));
             balance = build.Economy.Money; Assert.IsTrue(build.TryRepair(d)); Assert.That(build.Economy.Money, Is.EqualTo(balance - combatRepair));

@@ -1,0 +1,767 @@
+{
+  "method": "Synthetic failed runs at 1000 Homicides through actual reward/milestone/purchase/persistence services, 610 RP tree. Zero values mean not reached in 40 runs. No Grant RP.",
+  "rows": [
+    {
+      "label": "weak",
+      "wave": 3,
+      "bosses": 0,
+      "firstNodeRun": 0,
+      "firstTier3Run": 0,
+      "firstCapstoneRun": 0,
+      "fullTreeRun": 0,
+      "awards": [
+        {
+          "run": 1,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 2,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 3,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 4,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 5,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 6,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 7,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 8,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 9,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 10,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 11,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 12,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 13,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 14,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 15,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 16,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 17,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 18,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 19,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        },
+        {
+          "run": 20,
+          "Total": 0,
+          "bought": [],
+          "remaining": 0
+        }
+      ]
+    },
+    {
+      "label": "average",
+      "wave": 15,
+      "bosses": 0,
+      "firstNodeRun": 1,
+      "firstTier3Run": 35,
+      "firstCapstoneRun": 0,
+      "fullTreeRun": 0,
+      "awards": [
+        {
+          "run": 1,
+          "Total": 20,
+          "bought": [
+            "emergency-fund",
+            "river-monitoring"
+          ],
+          "remaining": 0
+        },
+        {
+          "run": 2,
+          "Total": 7,
+          "bought": [],
+          "remaining": 7
+        },
+        {
+          "run": 3,
+          "Total": 7,
+          "bought": [],
+          "remaining": 14
+        },
+        {
+          "run": 4,
+          "Total": 7,
+          "bought": [
+            "reinforced-emplacements"
+          ],
+          "remaining": 6
+        },
+        {
+          "run": 5,
+          "Total": 7,
+          "bought": [],
+          "remaining": 13
+        },
+        {
+          "run": 6,
+          "Total": 7,
+          "bought": [
+            "improved-ammunition"
+          ],
+          "remaining": 0
+        },
+        {
+          "run": 7,
+          "Total": 7,
+          "bought": [],
+          "remaining": 7
+        },
+        {
+          "run": 8,
+          "Total": 7,
+          "bought": [],
+          "remaining": 14
+        },
+        {
+          "run": 9,
+          "Total": 7,
+          "bought": [
+            "supply-contracts"
+          ],
+          "remaining": 1
+        },
+        {
+          "run": 10,
+          "Total": 7,
+          "bought": [],
+          "remaining": 8
+        },
+        {
+          "run": 11,
+          "Total": 7,
+          "bought": [],
+          "remaining": 15
+        },
+        {
+          "run": 12,
+          "Total": 7,
+          "bought": [
+            "hardened-wire"
+          ],
+          "remaining": 2
+        },
+        {
+          "run": 13,
+          "Total": 7,
+          "bought": [],
+          "remaining": 9
+        },
+        {
+          "run": 14,
+          "Total": 7,
+          "bought": [],
+          "remaining": 16
+        },
+        {
+          "run": 15,
+          "Total": 7,
+          "bought": [
+            "advance-warning"
+          ],
+          "remaining": 3
+        },
+        {
+          "run": 16,
+          "Total": 7,
+          "bought": [],
+          "remaining": 10
+        },
+        {
+          "run": 17,
+          "Total": 7,
+          "bought": [],
+          "remaining": 17
+        },
+        {
+          "run": 18,
+          "Total": 7,
+          "bought": [],
+          "remaining": 24
+        },
+        {
+          "run": 19,
+          "Total": 7,
+          "bought": [
+            "field-salvage"
+          ],
+          "remaining": 6
+        },
+        {
+          "run": 20,
+          "Total": 7,
+          "bought": [],
+          "remaining": 13
+        }
+      ]
+    },
+    {
+      "label": "boss",
+      "wave": 25,
+      "bosses": 1,
+      "firstNodeRun": 1,
+      "firstTier3Run": 10,
+      "firstCapstoneRun": 18,
+      "fullTreeRun": 26,
+      "awards": [
+        {
+          "run": 1,
+          "Total": 70,
+          "bought": [
+            "emergency-fund",
+            "river-monitoring",
+            "reinforced-emplacements",
+            "improved-ammunition"
+          ],
+          "remaining": 15
+        },
+        {
+          "run": 2,
+          "Total": 27,
+          "bought": [
+            "supply-contracts",
+            "hardened-wire"
+          ],
+          "remaining": 2
+        },
+        {
+          "run": 3,
+          "Total": 22,
+          "bought": [
+            "advance-warning"
+          ],
+          "remaining": 4
+        },
+        {
+          "run": 4,
+          "Total": 22,
+          "bought": [
+            "field-salvage"
+          ],
+          "remaining": 1
+        },
+        {
+          "run": 5,
+          "Total": 22,
+          "bought": [],
+          "remaining": 23
+        },
+        {
+          "run": 6,
+          "Total": 22,
+          "bought": [
+            "optical-calibration"
+          ],
+          "remaining": 20
+        },
+        {
+          "run": 7,
+          "Total": 22,
+          "bought": [
+            "field-maintenance"
+          ],
+          "remaining": 12
+        },
+        {
+          "run": 8,
+          "Total": 22,
+          "bought": [
+            "area-munitions"
+          ],
+          "remaining": 4
+        },
+        {
+          "run": 9,
+          "Total": 22,
+          "bought": [],
+          "remaining": 26
+        },
+        {
+          "run": 10,
+          "Total": 22,
+          "bought": [
+            "thermal-mixture"
+          ],
+          "remaining": 18
+        },
+        {
+          "run": 11,
+          "Total": 22,
+          "bought": [
+            "biological-analysis"
+          ],
+          "remaining": 10
+        },
+        {
+          "run": 12,
+          "Total": 22,
+          "bought": [],
+          "remaining": 32
+        },
+        {
+          "run": 13,
+          "Total": 22,
+          "bought": [
+            "logistics-network"
+          ],
+          "remaining": 19
+        },
+        {
+          "run": 14,
+          "Total": 22,
+          "bought": [
+            "modular-construction"
+          ],
+          "remaining": 6
+        },
+        {
+          "run": 15,
+          "Total": 22,
+          "bought": [],
+          "remaining": 28
+        },
+        {
+          "run": 16,
+          "Total": 22,
+          "bought": [
+            "event-forecasting"
+          ],
+          "remaining": 15
+        },
+        {
+          "run": 17,
+          "Total": 22,
+          "bought": [],
+          "remaining": 37
+        },
+        {
+          "run": 18,
+          "Total": 22,
+          "bought": [
+            "reserve-stockpile"
+          ],
+          "remaining": 9
+        },
+        {
+          "run": 19,
+          "Total": 22,
+          "bought": [],
+          "remaining": 31
+        },
+        {
+          "run": 20,
+          "Total": 22,
+          "bought": [],
+          "remaining": 53
+        }
+      ]
+    },
+    {
+      "label": "good",
+      "wave": 40,
+      "bosses": 1,
+      "firstNodeRun": 1,
+      "firstTier3Run": 5,
+      "firstCapstoneRun": 10,
+      "fullTreeRun": 14,
+      "awards": [
+        {
+          "run": 1,
+          "Total": 93,
+          "bought": [
+            "emergency-fund",
+            "river-monitoring",
+            "reinforced-emplacements",
+            "improved-ammunition",
+            "supply-contracts"
+          ],
+          "remaining": 18
+        },
+        {
+          "run": 2,
+          "Total": 45,
+          "bought": [
+            "hardened-wire",
+            "advance-warning"
+          ],
+          "remaining": 23
+        },
+        {
+          "run": 3,
+          "Total": 40,
+          "bought": [
+            "field-salvage",
+            "optical-calibration"
+          ],
+          "remaining": 13
+        },
+        {
+          "run": 4,
+          "Total": 40,
+          "bought": [
+            "field-maintenance"
+          ],
+          "remaining": 23
+        },
+        {
+          "run": 5,
+          "Total": 40,
+          "bought": [
+            "area-munitions",
+            "thermal-mixture"
+          ],
+          "remaining": 3
+        },
+        {
+          "run": 6,
+          "Total": 40,
+          "bought": [
+            "biological-analysis"
+          ],
+          "remaining": 13
+        },
+        {
+          "run": 7,
+          "Total": 40,
+          "bought": [
+            "logistics-network"
+          ],
+          "remaining": 18
+        },
+        {
+          "run": 8,
+          "Total": 40,
+          "bought": [
+            "modular-construction"
+          ],
+          "remaining": 23
+        },
+        {
+          "run": 9,
+          "Total": 40,
+          "bought": [
+            "event-forecasting"
+          ],
+          "remaining": 28
+        },
+        {
+          "run": 10,
+          "Total": 40,
+          "bought": [
+            "reserve-stockpile"
+          ],
+          "remaining": 18
+        },
+        {
+          "run": 11,
+          "Total": 40,
+          "bought": [
+            "fortification-doctrine"
+          ],
+          "remaining": 3
+        },
+        {
+          "run": 12,
+          "Total": 40,
+          "bought": [],
+          "remaining": 43
+        },
+        {
+          "run": 13,
+          "Total": 40,
+          "bought": [
+            "deep-water-sensor-network"
+          ],
+          "remaining": 28
+        },
+        {
+          "run": 14,
+          "Total": 40,
+          "bought": [
+            "advanced-fire-control"
+          ],
+          "remaining": 8
+        },
+        {
+          "run": 15,
+          "Total": 40,
+          "bought": [],
+          "remaining": 48
+        },
+        {
+          "run": 16,
+          "Total": 40,
+          "bought": [],
+          "remaining": 88
+        },
+        {
+          "run": 17,
+          "Total": 40,
+          "bought": [],
+          "remaining": 128
+        },
+        {
+          "run": 18,
+          "Total": 40,
+          "bought": [],
+          "remaining": 168
+        },
+        {
+          "run": 19,
+          "Total": 40,
+          "bought": [],
+          "remaining": 208
+        },
+        {
+          "run": 20,
+          "Total": 40,
+          "bought": [],
+          "remaining": 248
+        }
+      ]
+    },
+    {
+      "label": "late",
+      "wave": 60,
+      "bosses": 2,
+      "firstNodeRun": 1,
+      "firstTier3Run": 3,
+      "firstCapstoneRun": 6,
+      "fullTreeRun": 9,
+      "awards": [
+        {
+          "run": 1,
+          "Total": 148,
+          "bought": [
+            "emergency-fund",
+            "river-monitoring",
+            "reinforced-emplacements",
+            "improved-ammunition",
+            "supply-contracts",
+            "hardened-wire",
+            "advance-warning",
+            "field-salvage"
+          ],
+          "remaining": 8
+        },
+        {
+          "run": 2,
+          "Total": 70,
+          "bought": [
+            "optical-calibration",
+            "field-maintenance"
+          ],
+          "remaining": 23
+        },
+        {
+          "run": 3,
+          "Total": 65,
+          "bought": [
+            "area-munitions",
+            "thermal-mixture"
+          ],
+          "remaining": 28
+        },
+        {
+          "run": 4,
+          "Total": 65,
+          "bought": [
+            "biological-analysis",
+            "logistics-network"
+          ],
+          "remaining": 28
+        },
+        {
+          "run": 5,
+          "Total": 65,
+          "bought": [
+            "modular-construction",
+            "event-forecasting"
+          ],
+          "remaining": 23
+        },
+        {
+          "run": 6,
+          "Total": 65,
+          "bought": [
+            "reserve-stockpile"
+          ],
+          "remaining": 38
+        },
+        {
+          "run": 7,
+          "Total": 65,
+          "bought": [
+            "fortification-doctrine"
+          ],
+          "remaining": 48
+        },
+        {
+          "run": 8,
+          "Total": 65,
+          "bought": [
+            "deep-water-sensor-network"
+          ],
+          "remaining": 58
+        },
+        {
+          "run": 9,
+          "Total": 65,
+          "bought": [
+            "advanced-fire-control"
+          ],
+          "remaining": 63
+        },
+        {
+          "run": 10,
+          "Total": 65,
+          "bought": [],
+          "remaining": 128
+        },
+        {
+          "run": 11,
+          "Total": 65,
+          "bought": [],
+          "remaining": 193
+        },
+        {
+          "run": 12,
+          "Total": 65,
+          "bought": [],
+          "remaining": 258
+        },
+        {
+          "run": 13,
+          "Total": 65,
+          "bought": [],
+          "remaining": 323
+        },
+        {
+          "run": 14,
+          "Total": 65,
+          "bought": [],
+          "remaining": 388
+        },
+        {
+          "run": 15,
+          "Total": 65,
+          "bought": [],
+          "remaining": 453
+        },
+        {
+          "run": 16,
+          "Total": 65,
+          "bought": [],
+          "remaining": 518
+        },
+        {
+          "run": 17,
+          "Total": 65,
+          "bought": [],
+          "remaining": 583
+        },
+        {
+          "run": 18,
+          "Total": 65,
+          "bought": [],
+          "remaining": 648
+        },
+        {
+          "run": 19,
+          "Total": 65,
+          "bought": [],
+          "remaining": 713
+        },
+        {
+          "run": 20,
+          "Total": 65,
+          "bought": [],
+          "remaining": 778
+        }
+      ]
+    }
+  ]
+}

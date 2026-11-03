@@ -228,7 +228,10 @@ namespace ShorelineDefense.Waves
                 {
                     cargo.Clear();
                     int units = 0, nextGroup = groupIndex, nextCount = spawnedInGroup;
-                    while (nextGroup < CurrentWave.Groups.Count)
+                    int admission = endless.pressureDirectorEnabled
+                        ? director.RemainingAdmission(endless, registry.Count, landings.IncomingPassengers) : int.MaxValue;
+                    if (admission == 0) return;
+                    while (nextGroup < CurrentWave.Groups.Count && cargo.Count < admission)
                     {
                         var candidate = CurrentWave.Groups[nextGroup];
                         int weight = candidate.Prefab.Definition.CarrierHalfUnits;

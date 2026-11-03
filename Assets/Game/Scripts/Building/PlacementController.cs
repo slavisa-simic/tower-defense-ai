@@ -113,9 +113,12 @@ namespace ShorelineDefense.Building
             {
                 Result = builder.Validate(Selected, Cell);
                 var grid = builder.Battlefield.Grid;
-                preview.transform.position = grid.FootprintCenter(Cell, Selected.Footprint);
-                preview.transform.localScale = new Vector3(Selected.Footprint.x * grid.CellSize, Selected.Footprint.y * grid.CellSize, 1);
-                preview.color = Result == PlacementResult.Valid ? new Color(0.2f, 1, 0.35f, 0.6f) : new Color(1, 0.15f, 0.15f, 0.6f);
+                // Scene unload may destroy the ghost before occupied defenses release their cells.
+                if (preview != null) {
+                    preview.transform.position = grid.FootprintCenter(Cell, Selected.Footprint);
+                    preview.transform.localScale = new Vector3(Selected.Footprint.x * grid.CellSize, Selected.Footprint.y * grid.CellSize, 1);
+                    preview.color = Result == PlacementResult.Valid ? new Color(0.2f, 1, 0.35f, 0.6f) : new Color(1, 0.15f, 0.15f, 0.6f);
+                }
             }
             Changed?.Invoke();
         }

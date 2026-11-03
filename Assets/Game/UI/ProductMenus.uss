@@ -43,3 +43,20 @@
 .research-detail-copy { font-size: 12px; white-space: normal; color: rgb(180, 195, 182); margin-bottom: 10px; }
 .research-detail .product-button { margin: 4px 0; font-size: 12px; }
 .preparation-intelligence { position: absolute; top: 134px; left: 16px; max-width: 255px; padding: 9px; background-color: rgba(15, 31, 33, 0.92); border-width: 1px; border-color: rgb(72, 124, 127); font-size: 10px; color: rgb(170, 214, 206); white-space: normal; }
+.tutorial-panel {
+    position: absolute; top: 200px; left: 30%; right: 30%;
+    padding: 14px 18px; background-color: rgb(22, 32, 29);
+    background-image: url("../Art/UI/bd_ui_hud_panel_medium_v001.png");
+    -unity-slice-left: 16; -unity-slice-right: 16; -unity-slice-top: 16; -unity-slice-bottom: 16;
+    border-width: 1px; border-color: rgb(149, 130, 80); color: rgb(211, 207, 183);
+}
+.tutorial-panel.tutorial-inline { position: relative; top: auto; left: auto; right: auto; margin: 4px 0 12px 0; flex-shrink: 0; }
+.tutorial-title { font-size: 14px; color: rgb(227, 197, 123); white-space: normal; margin-bottom: 7px; }
+.tutorial-copy { font-size: 12px; white-space: normal; }
+.tutorial-detail { font-size: 11px; color: rgb(164, 203, 167); white-space: normal; margin-top: 6px; }
+.tutorial-actions { flex-direction: row; flex-wrap: wrap; margin-top: 8px; }
+.tutorial-actions .management-button { font-size: 10px; height: 28px; flex-grow: 1; margin: 2px; padding: 5px 10px; border-radius: 0; border-width: 1px; border-color: rgb(93, 105, 76); background-color: rgb(33, 41, 36); color: rgb(211, 207, 183); }
+.tutorial-actions .management-button:hover, .tutorial-actions .management-button:focus { border-color: rgb(227, 197, 123); background-color: rgb(53, 62, 42); }
+.tutorial-highlight { border-width: 2px; border-color: rgb(220, 191, 106); }
+.tutorial-highlight.tutorial-pulse { border-color: rgb(255, 226, 150); }
+.tutorial-world-highlight { position: absolute; border-width: 2px; border-color: rgb(238, 199, 109); }

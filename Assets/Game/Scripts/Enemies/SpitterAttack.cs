@@ -31,14 +31,18 @@ namespace ShorelineDefense.Enemies
             float range = rangeCells * grid.Grid.CellSize;
             if (obstruction != null) target = obstruction;
             else if (acquire <= 0) { acquire = acquisitionInterval; target = Acquire(range); }
-            if (reload <= 0 && target != null && target.IsAlive && target.gameObject.activeInHierarchy &&
-                ((Vector2)(target.ClosestFootprintPoint(transform.position) - transform.position)).sqrMagnitude <= range * range)
+            bool inRange = target != null && target.IsAlive && target.gameObject.activeInHierarchy &&
+                ((Vector2)(target.ClosestFootprintPoint(transform.position) - transform.position)).sqrMagnitude <= range * range;
+            if (inRange) enemy.Movement.FaceTowards(target.transform.position);
+            if (reload <= 0 && inRange)
             {
                 reload = cooldown; pose = .45f; ShotsFired++;
                 enemy.Movement.FaceTowards(target.transform.position); enemy.NotifyAttack();
                 CorrosiveSpit.Launch(transform.position, target.transform.position, grid.Grid, game, glob, damage, flightSeconds, effects);
             }
-            return pose > 0;
+            // A ranged organism holds its firing position through reload rather than
+            // walking into short-range fire between shots. Losing the target resumes the route.
+            return pose > 0 || inRange;
         }
         private DefenseBase Acquire(float range)
         {

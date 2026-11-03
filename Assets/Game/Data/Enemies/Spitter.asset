@@ -24,7 +24,7 @@ MonoBehaviour:
   attackDamage: 10
   attackInterval: 1
   attackRange: 1.6
-  killReward: 55
+  killReward: 4
   structureDamage: 24
   structureAttackInterval: 5
-  structureRangeCells: 5
+  structureRangeCells: 6

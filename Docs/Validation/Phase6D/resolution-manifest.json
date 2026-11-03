@@ -1,0 +1,110 @@
+[
+  {
+    "file": "boss-1366x768.json",
+    "active": "boss",
+    "panelWidth": 1280.0,
+    "panelHeight": 719.6485595703125
+  },
+  {
+    "file": "boss-1600x900.json",
+    "active": "boss",
+    "panelWidth": 1280.0,
+    "panelHeight": 720.0
+  },
+  {
+    "file": "boss-1920x1080.json",
+    "active": "boss",
+    "panelWidth": 1280.0,
+    "panelHeight": 720.0
+  },
+  {
+    "file": "intro-1366x768.json",
+    "active": "intro",
+    "panelWidth": 1280.0,
+    "panelHeight": 719.6485595703125
+  },
+  {
+    "file": "intro-1600x900.json",
+    "active": "intro",
+    "panelWidth": 1280.0,
+    "panelHeight": 720.0
+  },
+  {
+    "file": "intro-1920x1080.json",
+    "active": "intro",
+    "panelWidth": 1280.0,
+    "panelHeight": 720.0
+  },
+  {
+    "file": "port-1366x768.json",
+    "active": "port",
+    "panelWidth": 1280.0,
+    "panelHeight": 719.6485595703125
+  },
+  {
+    "file": "port-1600x900.json",
+    "active": "port",
+    "panelWidth": 1280.0,
+    "panelHeight": 720.0
+  },
+  {
+    "file": "port-1920x1080.json",
+    "active": "port",
+    "panelWidth": 1280.0,
+    "panelHeight": 720.0
+  },
+  {
+    "file": "repair-1366x768.json",
+    "active": "repair",
+    "panelWidth": 1280.0,
+    "panelHeight": 719.6485595703125
+  },
+  {
+    "file": "repair-1600x900.json",
+    "active": "repair",
+    "panelWidth": 1280.0,
+    "panelHeight": 720.0
+  },
+  {
+    "file": "repair-1920x1080.json",
+    "active": "repair",
+    "panelWidth": 1280.0,
+    "panelHeight": 720.0
+  },
+  {
+    "file": "research-tree-1366x768.json",
+    "active": "research-tree",
+    "panelWidth": 1280.0,
+    "panelHeight": 719.6485595703125
+  },
+  {
+    "file": "research-tree-1600x900.json",
+    "active": "research-tree",
+    "panelWidth": 1280.0,
+    "panelHeight": 720.0
+  },
+  {
+    "file": "research-tree-1920x1080.json",
+    "active": "research-tree",
+    "panelWidth": 1280.0,
+    "panelHeight": 720.0
+  },
+  {
+    "file": "rp-1366x768.json",
+    "active": "rp",
+    "panelWidth": 1280.0,
+    "panelHeight": 719.6485595703125
+  },
+  {
+    "file": "rp-1600x900.json",
+    "active": "rp",
+    "panelWidth": 1280.0,
+    "panelHeight": 720.0
+  },
+  {
+    "file": "rp-1920x1080.json",
+    "active": "rp",
+    "panelWidth": 1280.0,
+    "panelHeight": 720.0
+  }
+]

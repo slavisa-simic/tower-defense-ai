@@ -51,6 +51,8 @@ namespace ShorelineDefense.Waves
         [Min(1)] public float surgeDuration = 7;
         [Range(0, 8)] public int surgeExtraBoats = 3;
         public bool showPressureDebug;
+        [Tooltip("Editor/development only: write local per-wave balance CSVs. No production UI or telemetry.")]
+        public bool writeBalanceLog;
         public int PressureTarget(int wave) => (int)Math.Min(Mathf.Clamp(maximumPressureTarget, 1, 400),
             Math.Max(1, earlyPressureTarget) + Math.Max(0, (double)wave - 1) * EndlessWaveGenerator.Safe(pressureGrowthPerWave, 6));
         // Boss tuning replaces the ordinary global factor, rather than multiplying it again.

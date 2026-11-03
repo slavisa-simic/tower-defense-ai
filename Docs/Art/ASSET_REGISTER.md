@@ -549,3 +549,7 @@ No new art or image replacement. Existing both-map environment, six solid defens
 | RP research-file icon | Same batch, `rp_raw_v001.png`, same master | `bd_ui_research_points_v001.png`; `Resources/ResearchCatalog.asset` | Integrated / visually inspected |
 
 Twenty node sprites and one separate RP sprite, five local runtime textures. Autonomous selection authorized by the Phase 6C request; no independent human approval claimed. Existing world/UI art and GUIDs preserved. Point/uncompressed/no mips/real alpha; branch sprites use alpha-bounded rects and stable IDs. Exact prompts, returned sources, revisions, dimensions, consumers, import settings and visual evidence: [batch record](Batches/p6c_research_001.md), its two prompt JSON files, and `Docs/Validation/Phase6C/` manifests/captures. The existing UI Toolkit owns grid, links, text, affordability, selection, researched markers and gameplay bindings. No art-driven gameplay changes.
+
+# Phase 6D contextual tutorial UI — 2026-11-02
+
+No generated art or texture replacement. Existing `bd_ui_hud_panel_medium_v001.png` and pixel font are reused by the runtime tutorial card; UI/world highlights use temporary UI Toolkit outlines. `ProductMenus.uss` owns styles and `TutorialView.cs` owns presentation. Existing art GUIDs/import settings, gameplay bindings and prefabs remain unchanged. Integration record: [p6d_tutorial_001](Batches/p6d_tutorial_001.md). Actual validation is recorded in `PHASE_6D_TUTORIAL_REPORT.md` and `Docs/Validation/Phase6D/`.

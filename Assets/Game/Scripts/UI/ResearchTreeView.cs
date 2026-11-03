@@ -19,8 +19,10 @@ namespace ShorelineDefense.UI
         private readonly Dictionary<ResearchNodeDefinition, Button> buttons = new Dictionary<ResearchNodeDefinition, Button>();
         private readonly List<ResearchBranchBoard> boards = new List<ResearchBranchBoard>();
         private ResearchNodeDefinition selected;
-        public ResearchTreeView(ResearchCatalog definitions, PlayerProfileService player, Func<bool> betweenRuns)
+        private readonly Action onPurchased;
+        public ResearchTreeView(ResearchCatalog definitions, PlayerProfileService player, Func<bool> betweenRuns, Action purchased = null)
         {
+            onPurchased = purchased;
             catalog = definitions; profile = player; tree = new ResearchTreeService(player, definitions, betweenRuns);
             name = "research-tree";
             var header = new VisualElement(); header.AddToClassList("research-balance-row"); Add(header);
@@ -33,6 +35,7 @@ namespace ShorelineDefense.UI
             {
                 var column = new VisualElement(); column.AddToClassList("research-column"); branches.Add(column);
                 var title = new Label(branch == ResearchBranch.Weapons ? "WEAPONS" : branch.ToString().ToUpperInvariant()); title.AddToClassList("research-branch-title"); column.Add(title);
+                title.tooltip = ShorelineDefense.Tutorial.TutorialCatalog.BranchHint(branch.ToString());
                 var board = new ResearchBranchBoard(definitions.nodes.Where(n => n.branch == branch).ToArray(), n => tree.Status(n));
                 boards.Add(board); column.Add(board);
                 foreach (var node in board.Nodes)
@@ -66,6 +69,7 @@ namespace ShorelineDefense.UI
             string name = selected.displayName;
             bool ok = tree.TryPurchase(selected.id, out string error);
             Refresh(); result.text = ok ? "RESEARCH COMPLETE\n" + name + "\nApplies to new runs." : error;
+            if (ok) onPurchased?.Invoke();
         }
         public void Refresh()
         {

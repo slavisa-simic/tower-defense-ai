@@ -48,7 +48,9 @@ namespace ShorelineDefense.Tests
             {
                 yield return Load(map);var build=Find<BuildManager>();build.Economy.AddMoney(2000);var mg=Find<BuildHud>().Defenses.Single(d=>d.Id=="machine-gun-nest");
                 Assert.AreEqual(PlacementResult.Valid,build.TryPlaceDefense(mg,new Vector2Int(13,5),out var defense));
-                Assert.IsTrue(Spawn.TrySpawnAt(Prefab(EnemyKind.Spitter),At(7,5),out var far));far.GetComponent<SpitterAttack>().Tick(2);Assert.Zero(far.GetComponent<SpitterAttack>().ShotsFired);far.Health.TakeDefenseDamage(int.MaxValue);yield return null;
+                Assert.IsTrue(Spawn.TrySpawnAt(Prefab(EnemyKind.Spitter),At(7,5),out var far));
+                far.transform.position=defense.transform.position+Vector3.left*(far.Definition.StructureRangeCells+1)*defense.Grid.CellSize;
+                far.GetComponent<SpitterAttack>().Tick(2);Assert.Zero(far.GetComponent<SpitterAttack>().ShotsFired);far.Health.TakeDefenseDamage(int.MaxValue);yield return null;
                 Assert.IsTrue(Spawn.TrySpawnAt(Prefab(EnemyKind.Spitter),At(9,5),out var enemy));var attack=enemy.GetComponent<SpitterAttack>();int hp=defense.CurrentHealth;
                 attack.Tick(2);Assert.AreEqual(1,attack.ShotsFired);var shot=Find<CorrosiveSpit>();Assert.NotNull(shot);Assert.NotNull(shot.GetComponent<SpriteRenderer>().sprite);Assert.AreEqual(hp,defense.CurrentHealth);
                 shot.Tick(.7f);Assert.AreEqual(hp-24,defense.CurrentHealth);shot.Tick(10);Assert.AreEqual(hp-24,defense.CurrentHealth,"No double impact");Assert.IsTrue(build.TryRepair(defense));Assert.AreEqual(hp,defense.CurrentHealth);

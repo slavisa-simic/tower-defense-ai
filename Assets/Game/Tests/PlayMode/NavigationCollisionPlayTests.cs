@@ -122,6 +122,13 @@ namespace ShorelineDefense.Tests
                 Assert.AreEqual(1,deaths,kind.ToString());Assert.AreEqual(money,Build.Economy.Money,"Enemy destruction must not refund");Assert.Greater(Grid.Revision,revision);
                 Assert.IsNull(Grid.OccupantAt(anchor));Assert.IsNull(Grid.NavigationBlockerAt(anchor));Assert.IsNull(Find<StructureSelection>().Selected);Assert.IsNull(enemy.StructureAttack.Target);
                 Assert.IsFalse(enemy.IsBurrowed);Assert.IsFalse(Build.TryDismantle(target,out _));
+                // A ranged Spitter now holds position against other surviving wall sections.
+                // Remove those valid ranged targets before checking that its route resumes.
+                if(kind==EnemyKind.Spitter)
+                {
+                    foreach(var remaining in Object.FindObjectsByType<DefenseBase>(FindObjectsSortMode.None))remaining.TakeDamage(int.MaxValue);
+                    Assert.AreEqual(money,Build.Economy.Money,"Clearing ranged targets must not refund");
+                }
                 for(int i=0;i<400&&enemy.gameObject.activeInHierarchy;i++){Tick(enemy,.1f);yield return null;}Assert.IsFalse(enemy.gameObject.activeInHierarchy,kind+" must continue after wall");
             }
         }

@@ -42,12 +42,14 @@ namespace ShorelineDefense.Persistence
         private static LocalJsonStore files;
         private static SettingsService settings;
         private static Progression.PlayerProfileService profile;
+        private static Tutorial.TutorialProfileService tutorial;
+        public static Tutorial.TutorialProfileService Tutorial => tutorial ?? (tutorial = new Tutorial.TutorialProfileService(Files));
         public static Progression.PlayerProfileService Profile => profile ?? (profile = new Progression.PlayerProfileService(Files));
         public static LocalJsonStore Files => files ?? (files = new LocalJsonStore(System.IO.Path.Combine(Application.persistentDataPath, "BorderDefenders")));
         public static SettingsService Settings => settings ?? (settings = new SettingsService(Files));
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
-        private static void Reset() { files = null; settings = null; profile = null; RunSession.Pending = null; }
+        private static void Reset() { files = null; settings = null; profile = null; tutorial = null; RunSession.Pending = null; }
         // Test fixtures redirect local storage before loading any product scene.
-        public static void UseDirectory(string directory) { files = new LocalJsonStore(directory); settings = null; profile = null; }
+        public static void UseDirectory(string directory) { files = new LocalJsonStore(directory); settings = null; profile = null; tutorial = null; }
     }
 }

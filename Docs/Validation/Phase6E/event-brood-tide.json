@@ -1,0 +1,61 @@
+{
+  "method": "Prepared 9000 RSD budget ceiling (actual investment disclosed), production commands, .1s ticks with all weapon/projectile/burn clocks; yield every 5 ticks for navigation budget/pool cleanup. Wall buys a complete legal x=10 barrier and attempts repairs below 50% HP every 2 simulated seconds from remaining/earned funds. Threshold 1000, no enemy health overrides. Comparative fixture, not earned progression or native timing.",
+  "wave": 24,
+  "eventId": "brood-tide",
+  "rows": [
+    {
+      "map": "CoastalDefense_TopDown",
+      "strategy": "mixed",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 8940,
+      "result": {
+        "wave": 24,
+        "state": "WaveComplete",
+        "seconds": 71.6,
+        "kills": 1200,
+        "homicides": 0,
+        "spawned": 1200,
+        "peak": 62,
+        "money": 1971,
+        "earned": 1911,
+        "spent": 0,
+        "structures": 21,
+        "registry": 0,
+        "alive": 0,
+        "pending": 0,
+        "pooledEnemies": 91,
+        "managedBytes": 665530368,
+        "allocatedBytes": 536194096,
+        "stalled": false
+      }
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "strategy": "mixed",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 8940,
+      "result": {
+        "wave": 24,
+        "state": "WaveComplete",
+        "seconds": 91.5,
+        "kills": 1200,
+        "homicides": 0,
+        "spawned": 1200,
+        "peak": 41,
+        "money": 1971,
+        "earned": 1911,
+        "spent": 0,
+        "structures": 22,
+        "registry": 0,
+        "alive": 0,
+        "pending": 0,
+        "pooledEnemies": 74,
+        "managedBytes": 665526272,
+        "allocatedBytes": 536228151,
+        "stalled": false
+      }
+    }
+  ]
+}

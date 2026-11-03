@@ -127,9 +127,9 @@ namespace ShorelineDefense.Tests
                 Assert.That(data.Footprint, Is.EqualTo(Vector2Int.one));
             }
             var sniper = AssetDatabase.LoadAssetAtPath<DefenseDefinition>("Assets/Game/Data/Defenses/SniperTower.asset");
-            Assert.That(sniper.Targeting, Is.EqualTo(TargetingMode.ClosestToBase));
+            Assert.That(sniper.Targeting, Is.EqualTo(TargetingMode.HighValue));
             Assert.That(sniper.RangeInCells, Is.InRange(10, 12));
-            Assert.That(sniper.Damage, Is.EqualTo(100));
+            Assert.That(sniper.Damage, Is.EqualTo(180));
             Assert.That(sniper.FireRate, Is.EqualTo(0.5f));
             for (int i = 1; i <= 5; i++)
             {

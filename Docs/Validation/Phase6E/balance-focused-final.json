@@ -1,0 +1,62 @@
+{
+  "status": "completed",
+  "duration": 4.78,
+  "summary": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.ArmoredBurnDamageDoesNotDependOnTickSize",
+      "Status": "Passed",
+      "Duration": 1.3886669,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.BalanceLogIncludesCommittedManagementAndCompletionRewardOnlyOnce",
+      "Status": "Passed",
+      "Duration": 0.8396995,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.BroodmotherFirstBroodArrivesEarlyAndStillRespectsTheConcurrentCap",
+      "Status": "Passed",
+      "Duration": 0.480236,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.EarlyCargoAdmissionCannotOvershootWithAFullDriftPod",
+      "Status": "Passed",
+      "Duration": 0.6491016,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.FlameResearchCadenceSurvivesFixedSmallTicks",
+      "Status": "Passed",
+      "Duration": 0.4596145,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.PrecisionFireSelectsHeavyOverAdvancedLarvaAndActuallyPiercesArmor",
+      "Status": "Passed",
+      "Duration": 0.4341592,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.SpitterHoldsRangeWhileReloadingAndResumesAfterTargetRemoval",
+      "Status": "Passed",
+      "Duration": 0.4222349,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

@@ -7,7 +7,8 @@ namespace ShorelineDefense.Enemies
     public sealed class EnemyDamageOverTime : MonoBehaviour
     {
         private EnemyController enemy;
-        private float remaining, dps, fractional;
+        private float remaining, dps;
+        private double fractional;
         public bool Burning => remaining > 0;
         public float Remaining => remaining;
         public float Dps => dps;
@@ -24,13 +25,15 @@ namespace ShorelineDefense.Enemies
             if (!enemy.IsCombatActive) { Clear(); return; }
             if (!Burning || dt <= 0) return;
             float active = Mathf.Min(dt, remaining); remaining = Mathf.Max(0, remaining - dt);
-            fractional += active * dps;
-            int amount = Mathf.FloorToInt(fractional + .00001f);
+            // Mitigate before integer accumulation. Rounding every tiny frame's
+            // damage up to one otherwise lets high-frame-rate burns bypass armor.
+            fractional += active * dps * enemy.Health.ArmorDamageMultiplier;
+            int amount = (int)System.Math.Floor(fractional + .00001);
             fractional -= amount;
-            if (amount > 0) enemy.Health.TakeDefenseDamage(amount);
+            if (amount > 0) enemy.Health.TakeDefenseDamage(amount, 1); // Armor already applied above.
             if (!Burning) Clear();
         }
         private void OnDisable() => Clear();
-        public void Clear() { remaining = dps = fractional = 0; }
+        public void Clear() { remaining = dps = 0; fractional = 0; }
     }
 }

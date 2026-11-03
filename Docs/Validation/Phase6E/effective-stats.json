@@ -1,0 +1,119 @@
+{
+  "method": "Real HUD and runtime PointerOver bindings, upgraded Level III Sniper selection, native Game View resolutions; no desktop input.",
+  "rows": [
+    {
+      "width": 1366,
+      "height": 768,
+      "id": "sniper-tower",
+      "tooltip": "SNIPER TOWER\n300 RSD\nLong-range precision; prioritizes high-HP organisms.\nPierces armor. Slow reload is vulnerable to swarms.\nMax HP 250\nDamage 180 / Range 11,0 cells\nIgnores 100% of armor\nFire rate 0,5/s",
+      "selected": "HP 375 / 375\nDamage 360 / Reload 1,67s\nRange 12,7 cells / Pierce 100%",
+      "bounds": {
+        "x": 786.1786,
+        "y": 360.761322,
+        "width": 344.831665,
+        "height": 163.982452
+      },
+      "viewport": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1280.0,
+        "height": 719.64856
+      }
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "id": "flamethrower",
+      "tooltip": "FLAMETHROWER\n300 RSD\nShort-range swarm control and lingering burns.\nArmor and ranged Spitters pressure this position.\nMax HP 350\nDamage 12 / Range 3,5 cells\nDirect DPS 60 / Burn 15/s",
+      "selected": "HP 375 / 375\nDamage 360 / Reload 1,67s\nRange 12,7 cells / Pierce 100%",
+      "bounds": {
+        "x": 344.8316,
+        "y": 432.9136,
+        "width": 349.516846,
+        "height": 148.0527
+      },
+      "viewport": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1280.0,
+        "height": 719.64856
+      }
+    },
+    {
+      "width": 1600,
+      "height": 900,
+      "id": "sniper-tower",
+      "tooltip": "SNIPER TOWER\n300 RSD\nLong-range precision; prioritizes high-HP organisms.\nPierces armor. Slow reload is vulnerable to swarms.\nMax HP 250\nDamage 180 / Range 11,0 cells\nIgnores 100% of armor\nFire rate 0,5/s",
+      "selected": "HP 375 / 375\nDamage 360 / Reload 1,67s\nRange 12,7 cells / Pierce 100%",
+      "bounds": {
+        "x": 786.4,
+        "y": 360.8,
+        "width": 348.799927,
+        "height": 160.0
+      },
+      "viewport": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1280.0,
+        "height": 720.0
+      }
+    },
+    {
+      "width": 1600,
+      "height": 900,
+      "id": "flamethrower",
+      "tooltip": "FLAMETHROWER\n300 RSD\nShort-range swarm control and lingering burns.\nArmor and ranged Spitters pressure this position.\nMax HP 350\nDamage 12 / Range 3,5 cells\nDirect DPS 60 / Burn 15/s",
+      "selected": "HP 375 / 375\nDamage 360 / Reload 1,67s\nRange 12,7 cells / Pierce 100%",
+      "bounds": {
+        "x": 345.6,
+        "y": 432.8,
+        "width": 348.800018,
+        "height": 144.0
+      },
+      "viewport": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1280.0,
+        "height": 720.0
+      }
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "id": "sniper-tower",
+      "tooltip": "SNIPER TOWER\n300 RSD\nLong-range precision; prioritizes high-HP organisms.\nPierces armor. Slow reload is vulnerable to swarms.\nMax HP 250\nDamage 180 / Range 11,0 cells\nIgnores 100% of armor\nFire rate 0,5/s",
+      "selected": "HP 375 / 375\nDamage 360 / Reload 1,67s\nRange 12,7 cells / Pierce 100%",
+      "bounds": {
+        "x": 786.0,
+        "y": 361.333344,
+        "width": 347.333374,
+        "height": 166.666656
+      },
+      "viewport": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1280.0,
+        "height": 720.0
+      }
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "id": "flamethrower",
+      "tooltip": "FLAMETHROWER\n300 RSD\nShort-range swarm control and lingering burns.\nArmor and ranged Spitters pressure this position.\nMax HP 350\nDamage 12 / Range 3,5 cells\nDirect DPS 60 / Burn 15/s",
+      "selected": "HP 375 / 375\nDamage 360 / Reload 1,67s\nRange 12,7 cells / Pierce 100%",
+      "bounds": {
+        "x": 344.666656,
+        "y": 433.333344,
+        "width": 339.333344,
+        "height": 149.999969
+      },
+      "viewport": {
+        "x": 0.0,
+        "y": 0.0,
+        "width": 1280.0,
+        "height": 720.0
+      }
+    }
+  ]
+}

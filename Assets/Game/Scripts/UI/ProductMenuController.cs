@@ -30,6 +30,9 @@ namespace ShorelineDefense.UI
         public static string Notice;
         public bool ModalOpen => overlay != null && overlay.style.display != DisplayStyle.None;
         public bool IsLoading => loading;
+        public string CurrentPage => page;
+        public event Action<string> PageChanged;
+        public event Action ResearchPurchased;
         private VisualElement root, overlay, card, content;
         private Label feedback;
         private GameSpeedController speed;
@@ -51,7 +54,7 @@ namespace ShorelineDefense.UI
             overlay = new VisualElement { name = "product-overlay" }; overlay.AddToClassList("product-overlay");
             card = new VisualElement { name = "product-card" }; card.AddToClassList("product-card");
             var scroll = new ScrollView(ScrollViewMode.Vertical); scroll.AddToClassList("product-scroll");
-            content = scroll.contentContainer; card.Add(scroll); overlay.Add(card); root.Add(overlay);
+            content = scroll.contentContainer; content.name = "product-content"; card.Add(scroll); overlay.Add(card); root.Add(overlay);
             feedback = new Label { name = "save-feedback", pickingMode = PickingMode.Ignore }; feedback.AddToClassList("save-feedback"); root.Add(feedback);
             SettingsService.Instance.Apply();
             if (mainMenu) ShowMain();
@@ -63,6 +66,7 @@ namespace ShorelineDefense.UI
                 Hide(); FeedbackChanged();
             }
             gameObject.AddComponent<RuntimeTooltips>();
+            gameObject.AddComponent<ShorelineDefense.Tutorial.TutorialRuntime>();
         }
         private void OnDestroy()
         { if (speed != null) speed.Changed -= SpeedChanged; if (game != null) game.StateChanged -= StateChanged; if (session != null) session.FeedbackChanged -= FeedbackChanged; }
@@ -72,6 +76,7 @@ namespace ShorelineDefense.UI
             card.EnableInClassList("research-card", id == "research");
             page = id; content.Clear(); cancelDialog = null; overlay.style.display = DisplayStyle.Flex; overlay.BringToFront();
             var heading = new Label(title); heading.AddToClassList("product-title"); content.Add(heading);
+            PageChanged?.Invoke(id);
         }
         private void Copy(string text) { var label = new Label(text); label.AddToClassList("product-copy"); content.Add(label); }
         private Button ActionButton(string id, string text, Action action)
@@ -97,7 +102,7 @@ namespace ShorelineDefense.UI
             Page("QUARANTINE RESEARCH PROGRAM", "research");
             var catalog = ShorelineDefense.Progression.ResearchCatalog.Load();
             if (catalog == null) Copy("Research catalog unavailable.");
-            else content.Add(new ResearchTreeView(catalog, LocalGameData.Profile, () => mainMenu && !loading && page == "research"));
+            else content.Add(new ResearchTreeView(catalog, LocalGameData.Profile, () => mainMenu && !loading && page == "research", () => ResearchPurchased?.Invoke()));
             ActionButton("research-back", "BACK TO MAIN MENU", ShowMain);
         }
         public void NewGame()
@@ -144,7 +149,7 @@ namespace ShorelineDefense.UI
         }
         private void Load(string scene)
         { if (loading) return; loading = true; Time.timeScale = 1; Page("LOADING...", "loading"); SceneManager.LoadSceneAsync(scene); }
-        private void Hide() { overlay.style.display = DisplayStyle.None; page = null; }
+        private void Hide() { overlay.style.display = DisplayStyle.None; page = null; PageChanged?.Invoke(null); }
         private void Back() { if (mainMenu) ShowMain(); else ShowPause(); }
         public void ShowPause()
         {
@@ -198,6 +203,15 @@ namespace ShorelineDefense.UI
             Copy("VFX density limits secondary effects and blood decals.\nGameplay damage and enemy counts stay the same.");
             if (Application.isEditor) Copy("Display mode applies in the standalone game. Editor Game View is controlled separately.");
             var result = new Label { name = "settings-result" }; result.AddToClassList("product-copy"); content.Add(result);
+            var tutorial = new Toggle("Tutorial ON / OFF") { name = "settings-tutorial", value = LocalGameData.Tutorial.Enabled }; content.Add(tutorial);
+            tutorial.RegisterValueChangedCallback(e => {
+                if (!LocalGameData.Tutorial.SetEnabled(e.newValue)) { tutorial.SetValueWithoutNotify(LocalGameData.Tutorial.Enabled); result.text = LocalGameData.Tutorial.Error; }
+            });
+            ActionButton("settings-reset-tutorial", "RESET TUTORIAL PROGRESS", () => Confirm("RESET TUTORIAL PROGRESS?", "Reset tutorial lessons only. Research, RP, Run History and settings are kept.", "RESET TUTORIAL", () => {
+                bool ok = LocalGameData.Tutorial.ResetProgress(); ShowSettings();
+                if (!ok) Copy(LocalGameData.Tutorial.Error);
+            }, ShowSettings));
+            if (LocalGameData.Tutorial.Error != null) Copy("TUTORIAL PROFILE: " + LocalGameData.Tutorial.Error);
             ActionButton("settings-apply", "APPLY & SAVE", () => {
                 var size = resolutions[resolution.index];
                 bool ok = SettingsService.Instance.Save(new GameSettings { width = size.x, height = size.y, fullscreen = fullscreen.value, vsync = vsync.value, vfxDensity = density.index, rewardPopups = rewards.value });
@@ -241,7 +255,7 @@ namespace ShorelineDefense.UI
                 else ShowPause();
                 return;
             }
-            if (Input.GetKeyDown(KeyCode.Space) && (page == null || page == "pause"))
+            if (Input.GetKeyDown(KeyCode.Space) && !ShorelineDefense.Tutorial.TutorialView.ConsumesSpace && (page == null || page == "pause"))
             { if (speed.Speed == GameSpeed.Pause) { Hide(); speed.Resume(); } else ShowPause(); }
             if (ModalOpen) return;
             var buttons = root.Q("defense-buttons");

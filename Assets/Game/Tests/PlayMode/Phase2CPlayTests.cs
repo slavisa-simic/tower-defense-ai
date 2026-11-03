@@ -157,7 +157,7 @@ namespace ShorelineDefense.Tests
             Assert.That(trigger.Health.IsAlive, Is.False);
             Assert.That(inside.Health.CurrentHealth, Is.EqualTo(50));
             Assert.That(outside.Health.CurrentHealth, Is.EqualTo(100));
-            Assert.That(Money.Money, Is.EqualTo(balance + 25));
+            Assert.That(Money.Money, Is.EqualTo(balance + trigger.Definition.KillReward));
             Assert.That(detonations, Is.EqualTo(1));
             Assert.That(Grid.OccupantAt(cell), Is.Null);
             mine.Tick(100);
@@ -183,7 +183,7 @@ namespace ShorelineDefense.Tests
         }
 
         [UnityTest]
-        public IEnumerator SniperPrioritizesRouteProgressAndHonorsRangeCooldownAndDeadTargetRelease()
+        public IEnumerator SniperPrioritizesHighHealthAndHonorsRangeCooldownAndDeadTargetRelease()
         {
             var defense = Build(3, new Vector2Int(18, 9));
             var turret = defense.GetComponent<TurretCombat>();
@@ -195,7 +195,7 @@ namespace ShorelineDefense.Tests
             closestToBase.Health.Initialize(200);
             turret.Tick(0.2f);
             Assert.That(turret.Target, Is.SameAs(closestToBase));
-            Assert.That(closestToBase.Health.CurrentHealth, Is.EqualTo(100));
+            Assert.That(closestToBase.Health.CurrentHealth, Is.EqualTo(200 - defense.Damage));
             Assert.That(closestToTower.Health.CurrentHealth, Is.EqualTo(100));
             Assert.That(outside.Health.CurrentHealth, Is.EqualTo(100));
             turret.Tick(1.7f);
@@ -208,7 +208,7 @@ namespace ShorelineDefense.Tests
             turret.Tick(1.8f);
             Assert.That(closestToTower.Health.IsAlive, Is.False);
             Assert.That(turret.ShotsFired, Is.EqualTo(3));
-            Assert.That(Money.Money, Is.EqualTo(250));
+            Assert.That(Money.Money, Is.EqualTo(500 - defense.Definition.Cost + 2 * spawner.DefaultPrefab.Definition.KillReward));
             Assert.That(defense.transform.rotation, Is.EqualTo(Quaternion.identity));
             yield return null;
         }
@@ -257,11 +257,11 @@ namespace ShorelineDefense.Tests
                 spawned[count - 1].Health.TakeDefenseDamage(100);
                 Assert.That(waves.State, Is.EqualTo(WaveState.WaveComplete));
                 Assert.That(waves.EnemiesRemaining, Is.Zero);
-                Assert.That(Money.Money, Is.EqualTo(balance + count * 25 + 100));
+                Assert.That(Money.Money, Is.EqualTo(balance + count * spawner.DefaultPrefab.Definition.KillReward + 100));
                 Assert.That(unrelated.Health.IsAlive, Is.True, "Unrelated enemies must not hold a wave open.");
                 waves.Tick(2);
                 Assert.That(waves.State, Is.EqualTo(wave == 4 ? WaveState.AllWavesComplete : WaveState.Preparation));
-                Assert.That(Money.Money, Is.EqualTo(balance + count * 25 + 100));
+                Assert.That(Money.Money, Is.EqualTo(balance + count * spawner.DefaultPrefab.Definition.KillReward + 100));
                 yield return null;
             }
             Assert.That(waves.CompletedWaves, Is.EqualTo(5));
@@ -332,7 +332,7 @@ namespace ShorelineDefense.Tests
             Assert.That(waves.State, Is.EqualTo(WaveState.Preparation));
             Assert.That(waves.CompletedWaves, Is.EqualTo(1));
             Assert.That(spawner.TotalSpawned, Is.EqualTo(10));
-            Assert.That(Money.Money, Is.EqualTo(350));
+            Assert.That(Money.Money, Is.EqualTo(10*spawner.DefaultPrefab.Definition.KillReward+100));
             Assert.That(Object.FindFirstObjectByType<WaveHud>().StartAvailable, Is.True);
         }
     }

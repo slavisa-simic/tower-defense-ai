@@ -17,16 +17,17 @@ MonoBehaviour:
   cost: 300
   prefab: {fileID: 2199032802214248607, guid: 1b5d3a115e5d1cf42b7bdf94d45445ff, type: 3}
   footprint: {x: 1, y: 1}
+  blocksMovement: 1
   maxHealth: 250
   rangeInCells: 11
-  damage: 100
+  damage: 180
   fireRate: 0.5
-  targetingMode: 1
+  targetingMode: 4
   heavyWeapon: {fileID: 0}
   levelII:
-    cost: 225
+    cost: 150
     health: 1.25
-    damage: 1.25
+    damage: 1.4
     fireRate: 1
     range: 1.1
     splash: 1
@@ -35,9 +36,9 @@ MonoBehaviour:
     burnDps: 1
     overlay: {fileID: 886236539, guid: 402dd86e22f1f014a8e12e5bd6c9d6d3, type: 3}
   levelIII:
-    cost: 375
+    cost: 225
     health: 1.5
-    damage: 1.6
+    damage: 2
     fireRate: 1.2
     range: 1.15
     splash: 1
@@ -49,3 +50,4 @@ MonoBehaviour:
   traversalMultiplier: 2
   triggerRadiusInCells: 0.55
   armingDelay: 0.35
+  armorPenetration: 1

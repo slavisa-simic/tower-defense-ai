@@ -1,0 +1,141 @@
+{
+    "profile": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Temp\\Phase6DResolutionProfiles\\c4f5643f5dc547c68e0e18ffe44a36cb",
+    "active": "research-tree",
+    "queue": [],
+    "width": 1280.0,
+    "height": 720.0,
+    "elements": [
+        {
+            "id": "tutorial-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 68.80000305175781,
+                "y": 98.4000015258789,
+                "width": 1119.199951171875,
+                "height": 132.79998779296876
+            }
+        },
+        {
+            "id": "tutorial-title",
+            "text": "TECH TREE",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 90.4000015258789,
+                "y": 117.5999984741211,
+                "width": 1074.4000244140625,
+                "height": 23.20000457763672
+            }
+        },
+        {
+            "id": "tutorial-copy",
+            "text": "Nodes cost RP. Prerequisites unlock deeper research. Purchases apply to future runs.",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 90.4000015258789,
+                "y": 152.0,
+                "width": 1074.4000244140625,
+                "height": 20.800003051757814
+            }
+        },
+        {
+            "id": "tutorial-detail",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 68.80000305175781,
+                "y": 98.4000015258789,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "health-panel",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "money-panel",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "event-panel",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "boss-panel",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "build-panel",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "structure-panel",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "preparation-intelligence",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+{
+  "status": "Failed QA assertion",
+  "reason": "Restart probe expected old 13 RP; final fresh run earned 18 RP and spent 10. Updated the external probe to read its receipt dynamically; production persistence was not changed."
+}

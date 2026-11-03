@@ -92,11 +92,12 @@ namespace ShorelineDefense.Tests
             Assert.That(sawDamage, Is.True);
             Assert.That(combat.ShotsFired, Is.EqualTo(5));
             Assert.That(enemies.Count, Is.Zero);
-            Assert.That(Economy.Money, Is.EqualTo(375));
-            Assert.That(hud.MoneyText, Is.EqualTo("RSD 375"));
+            int afterKill = 500 - Data.Cost + spawner.DefaultPrefab.Definition.KillReward;
+            Assert.That(Economy.Money, Is.EqualTo(afterKill));
+            Assert.That(hud.MoneyText, Is.EqualTo($"RSD {afterKill:N0}"));
             Assert.That(combat.Target == null, Is.True);
             Assert.That(builder.TryPlaceDefense(Data, new Vector2Int(8, 6), out _), Is.EqualTo(PlacementResult.Valid));
-            Assert.That(Economy.Money, Is.EqualTo(225));
+            Assert.That(Economy.Money, Is.EqualTo(afterKill - Data.Cost));
         }
 
         [UnityTest]
@@ -147,7 +148,7 @@ namespace ShorelineDefense.Tests
             enemy.Health.TakeDefenseDamage(100);
             Assert.That(deaths, Is.EqualTo(1));
             Assert.That(enemy.IsTargetable, Is.False);
-            Assert.That(Economy.Money, Is.EqualTo(balance + 25));
+            Assert.That(Economy.Money, Is.EqualTo(balance + spawner.DefaultPrefab.Definition.KillReward));
             yield return null;
             Assert.That(enemy == null || !enemy.gameObject.activeInHierarchy, Is.True);
             spawner.enabled = true;
@@ -155,7 +156,7 @@ namespace ShorelineDefense.Tests
             spawner.enabled = false;
             enemy = Object.FindFirstObjectByType<EnemyController>();
             enemy.Health.TakeDamage(100);
-            Assert.That(Economy.Money, Is.EqualTo(balance + 25), "Unattributed damage/despawn must not produce income.");
+            Assert.That(Economy.Money, Is.EqualTo(balance + spawner.DefaultPrefab.Definition.KillReward), "Unattributed damage/despawn must not produce income.");
             yield return null;
             spawner.enabled = true;
             yield return new WaitForSeconds(3.1f);

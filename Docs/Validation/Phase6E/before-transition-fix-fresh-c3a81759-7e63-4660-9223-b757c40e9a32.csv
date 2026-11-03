@@ -1,0 +1,8 @@
+map,wave,result,spawned,killed,breaches,homicides,earned,spent,repair,upgrade,destroyed,peak,boss_ttk_seconds
+river_border,1,WaveComplete,80,68,12,300,368,450,0,0,0,10,
+river_border,3,WaveComplete,120,117,3,75,419,750,0,0,0,13,
+river_border,4,WaveComplete,260,260,0,0,1070,450,0,0,0,19,
+river_border,6,WaveComplete,240,240,0,0,668,1350,0,150,0,24,
+river_border,8,WaveComplete,737,737,0,0,1621,1575,0,75,0,39,
+river_border,10,WaveComplete,725,725,0,0,1755,1745,0,345,0,36,
+river_border,11,GameOver,395,395,0,0,978,0,0,0,0,39,

@@ -18,6 +18,7 @@ namespace ShorelineDefense.Persistence
         public double Duration { get; private set; }
         public string Feedback { get; private set; }
         public bool Ready { get; private set; }
+        public bool RestoredRun { get; private set; }
         public Progression.MetaModifierService Modifiers { get; private set; } = Progression.MetaModifierService.Neutral;
         public Progression.RunAwardReceipt ResearchAward { get; private set; }
         public event Action FeedbackChanged;
@@ -32,6 +33,9 @@ namespace ShorelineDefense.Persistence
         private float saveAfter;
         private WaveState lastWaveState;
         private RunRecord finished;
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        private Core.BalanceRunLog balanceLog;
+#endif
         public string MapId => FindFirstObjectByType<ShorelineDefense.Grid.MapRuntimeContext>()?.MapId ?? ShorelineDefense.Grid.MapCatalog.OriginalId;
         public bool CanSave => Ready && game.IsPlaying && waves.IsEndless && waves.State == WaveState.Preparation && waves.CompletedWaves == waves.PreparationWaveNumber - 1;
         private void Start()
@@ -41,6 +45,7 @@ namespace ShorelineDefense.Persistence
             saves = new SaveGameService(LocalGameData.Files); history = new RunHistoryService(LocalGameData.Files);
             SettingsService.Instance.Apply();
             var data = Pending; Pending = null;
+            RestoredRun = data != null;
             try
             {
                 if (data != null) Restore(data);
@@ -61,6 +66,10 @@ namespace ShorelineDefense.Persistence
             waves.Changed += WaveChanged; waves.EventChanged += QueueSave; builder.StableActionCommitted += QueueSave; game.StateChanged += StateChanged;
             waves.PreparationEnding += BeforeWave;
             SaveNow();
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            if (waves.EndlessSettings != null && waves.EndlessSettings.writeBalanceLog)
+                balanceLog = new Core.BalanceRunLog(this, builder, waves, statistics, FindFirstObjectByType<Enemies.EnemyRegistry>());
+#endif
         }
         private void Restore(RunSaveData data)
         {
@@ -109,6 +118,9 @@ namespace ShorelineDefense.Persistence
         private void Update()
         {
             if (!Ready) return;
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            balanceLog?.Tick(Time.deltaTime);
+#endif
             if (game.IsPlaying) Duration += Time.deltaTime;
             if (dirty && Time.unscaledTime >= saveAfter) SaveNow();
         }
@@ -139,6 +151,9 @@ namespace ShorelineDefense.Persistence
         private void OnApplicationPause(bool paused) { if (paused && CanSave) SaveNow(); }
         private void OnDestroy()
         {
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            balanceLog?.Dispose();
+#endif
             if (waves == null) return;
             waves.Changed -= WaveChanged; waves.EventChanged -= QueueSave;
             waves.PreparationEnding -= BeforeWave;

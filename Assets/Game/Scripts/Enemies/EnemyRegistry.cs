@@ -13,9 +13,10 @@ namespace ShorelineDefense.Enemies
         public IReadOnlyList<EnemyController> Active => enemies;
         public event Action<EnemyController> EnemyKilled;
         public event Action<EnemyController> EnemyRemoved;
+        public event Action<EnemyController> EnemyRegistered;
         public void Register(EnemyController enemy)
         {
-            if (enemy != null && !enemies.Contains(enemy)) enemies.Add(enemy);
+            if (enemy != null && !enemies.Contains(enemy)) { enemies.Add(enemy); EnemyRegistered?.Invoke(enemy); }
         }
         public void Unregister(EnemyController enemy)
         {
@@ -39,7 +40,8 @@ namespace ShorelineDefense.Enemies
                 if (enemy == null || !enemy.IsTargetable) continue;
                 float candidate = ((Vector2)(enemy.transform.position - position)).sqrMagnitude;
                 if (candidate > rangeSquared) continue;
-                float score = mode == TargetingMode.HighestHealth ? -enemy.Health.CurrentHealth :
+                float score = mode == TargetingMode.HighValue ? -enemy.Health.MaxHealth :
+                    mode == TargetingMode.HighestHealth ? -enemy.Health.CurrentHealth :
                     mode == TargetingMode.ClosestToBase ? enemy.Movement.RemainingPathDistance : candidate;
                 if (score >= bestScore) continue;
                 bestScore = score;

@@ -26,6 +26,7 @@ namespace ShorelineDefense.UI
         private ShorelineDefense.Waves.WaveManager waves;
         private Progression.MetaModifierService tooltipMeta;
         private float tooltipRange = -1;
+        private string lastRefundFeedback;
         private readonly List<Button> buttons = new List<Button>();
         private readonly List<Action> selections = new List<Action>();
         public string MoneyText => moneyLabel?.text;
@@ -106,21 +107,28 @@ namespace ShorelineDefense.UI
         private static string Description(string id)
         {
             switch (id) {
-                case "barbed-wire": return "Slows creatures crossing the wire.";
-                case "land-mine": return "Single-use explosive area defense.";
-                case "machine-gun-nest": return "Sustained anti-infantry fire.";
-                case "sniper-tower": return "Long-range precision fire.";
-                case "mortar": return "Indirect explosive fire against groups.";
-                case "flamethrower": return "Close-range fire and lingering burns.";
-                case "autocannon": return "Heavy direct fire against armored targets.";
-                case "rocket": return "Powerful explosive area strikes.";
+                case "barbed-wire": return "Control: slows creatures while crossing.\nWalkable; deals no damage. Burrowers can bypass the slow.";
+                case "land-mine": return "Emergency burst against clusters.\nSingle charge; consumed on detonation.";
+                case "machine-gun-nest": return "Sustained fire against light organisms.\nShorter coverage; armor reduces its damage.";
+                case "sniper-tower": return "Long-range precision; prioritizes high-HP organisms.\nPierces armor. Slow reload is vulnerable to swarms.";
+                case "mortar": return "Long-range area damage against dense groups.\nCannot target close organisms; shells take time to arrive.";
+                case "flamethrower": return "Short-range swarm control and lingering burns.\nArmor and ranged Spitters pressure this position.";
+                case "autocannon": return "Sustained heavy fire; prioritizes high-HP organisms.\nArmor-piercing direct hits; expensive, no area damage.";
+                case "rocket": return "Heavy burst and area damage against groups.\nExpensive; long reload and travel time.";
                 default: return "Defend the quarantine line.";
             }
         }
         private void OnStateChanged(GameState state) => Refresh();
-        private void Update(){if(placement!=null && placement.IsDismantling && hint!=null)Refresh();}
+        private void Update()
+        {
+            // Placement/money events already refresh the panel. Only the unscaled
+            // refund-message expiry needs polling; do not rebuild the HUD every frame.
+            if (placement != null && placement.IsDismantling && hint != null &&
+                lastRefundFeedback != placement.RefundFeedback) Refresh();
+        }
         private void Refresh()
         {
+            lastRefundFeedback = placement.RefundFeedback;
             RefreshEffectiveTooltips();
             dismantle?.SetEnabled(game.IsPlaying);
             dismantle?.EnableInClassList("selected",placement.IsDismantling);
@@ -140,7 +148,7 @@ namespace ShorelineDefense.UI
                 placement.Result == PlacementResult.Occupied ? "Cell occupied | RMB / Esc cancels" :
                 placement.Result == PlacementResult.EnemyInFootprint ? "Creature in build area | RMB / Esc cancels" :
                 placement.Result == PlacementResult.OutsideGrid ? "Outside battlefield | RMB / Esc cancels" :
-                "Build on free grass cells | RMB / Esc cancels";
+                "Build on free ground cells | RMB / Esc cancels";
         }
         private void RefreshEffectiveTooltips()
         {
@@ -154,7 +162,10 @@ namespace ShorelineDefense.UI
                 int damage = Mathf.RoundToInt(d.Damage * meta.DamageMultiplier(d));
                 float effectiveRange = d.RangeInCells * meta.RangeMultiplier(d) * (d.BlocksMovement ? range : 1);
                 buttons[i].tooltip = $"{d.DisplayName.ToUpperInvariant()}\n{d.Cost:N0} RSD\n" + Description(d.Id) +
-                    $"\nMax HP {meta.MaxHealth(d, 1)}" + (damage > 0 ? $"\nDamage {damage} / Range {effectiveRange:0.0} cells" : "");
+                    $"\nMax HP {meta.MaxHealth(d, 1)}" + (damage > 0 ? $"\nDamage {damage} / Range {effectiveRange:0.0} cells" : "") +
+                    (d.ArmorPenetration > 0 ? $"\nIgnores {d.ArmorPenetration:P0} of armor" : "") +
+                    (d.Id == "flamethrower" ? $"\nDirect DPS {damage * meta.FireRateMultiplier(d) / d.HeavyWeapon.damageTick:0.#} / Burn {d.HeavyWeapon.burnDps:0.#}/s" :
+                     d.BlocksMovement ? $"\nFire rate {d.FireRate * meta.FireRateMultiplier(d):0.##}/s" : "");
             }
         }
     }

@@ -1,0 +1,141 @@
+{
+    "profile": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Temp\\Phase6EResolutionProfiles\\956a029a39d641b9a6f8626b82baee47",
+    "active": "repair",
+    "queue": [],
+    "width": 1280.0,
+    "height": 720.0,
+    "elements": [
+        {
+            "id": "tutorial-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 384.0,
+                "y": 200.0,
+                "width": 512.0,
+                "height": 173.60000610351563
+            }
+        },
+        {
+            "id": "tutorial-title",
+            "text": "REPAIR",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 405.6000061035156,
+                "y": 219.1999969482422,
+                "width": 467.1999816894531,
+                "height": 23.199996948242189
+            }
+        },
+        {
+            "id": "tutorial-copy",
+            "text": "Repairing during Preparation is cheaper than during an active Wave. Select REPAIR to restore full HP.",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 405.6000061035156,
+                "y": 253.60000610351563,
+                "width": 467.1999816894531,
+                "height": 32.79998779296875
+            }
+        },
+        {
+            "id": "tutorial-detail",
+            "text": "HP 150 / 300  /  REPAIR 29 RSD",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 405.6000061035156,
+                "y": 295.20001220703127,
+                "width": 467.1999816894531,
+                "height": 20.0
+            }
+        },
+        {
+            "id": "health-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 999.2000122070313,
+                "y": 12.0,
+                "width": 264.79998779296877,
+                "height": 72.80000305175781
+            }
+        },
+        {
+            "id": "money-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 16.0,
+                "y": 12.0,
+                "width": 235.1999969482422,
+                "height": 65.5999984741211
+            }
+        },
+        {
+            "id": "event-panel",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 380.0,
+                "y": 12.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "boss-panel",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "build-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 102.4000015258789,
+                "y": 500.79998779296877,
+                "width": 1075.199951171875,
+                "height": 207.20001220703126
+            }
+        },
+        {
+            "id": "structure-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1004.0,
+                "y": 135.1999969482422,
+                "width": 260.0,
+                "height": 268.0
+            }
+        },
+        {
+            "id": "preparation-intelligence",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        }
+    ]
+}

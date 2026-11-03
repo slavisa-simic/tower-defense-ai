@@ -1,0 +1,33 @@
+{
+  "entries": [
+    {
+      "seq": 738,
+      "timestampUtc": "2026-11-02T23:10:52.9878312Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Waves.WaveManager.EnsureGenerated () (at Assets/Game/Scripts/Waves/WaveManager.cs:76)\nShorelineDefense.Waves.WaveManager.get_CurrentWave () (at Assets/Game/Scripts/Waves/WaveManager.cs:108)\nShorelineDefense.Waves.WaveManager.get_CurrentWaveNumber () (at Assets/Game/Scripts/Waves/WaveManager.cs:109)\nShorelineDefense.Core.BalanceRunLog.Flush (System.String result) (at Assets/Game/Scripts/Core/BalanceRunLog.cs:82)\nShorelineDefense.Core.BalanceRunLog.Dispose () (at Assets/Game/Scripts/Core/BalanceRunLog.cs:100)\nShorelineDefense.Persistence.RunSession.OnDestroy () (at Assets/Game/Scripts/Persistence/RunSession.cs:155)\n",
+      "seeded": false
+    }
+  ],
+  "cursor": 738,
+  "session": "c7a8fd9f515d437e9f58b76de74a2cef",
+  "returned": 1,
+  "dropped": false,
+  "reset": false,
+  "counts": {
+    "error": 1,
+    "warn": 0,
+    "log": 0
+  },
+  "groundTruth": {
+    "sampledUtc": "2026-11-02T23:14:45.3337702Z",
+    "ageMs": 124,
+    "compilationFailed": false,
+    "compiling": false,
+    "consoleErrors": 0,
+    "consoleWarnings": 0,
+    "consoleLogs": 0,
+    "seeded": true
+  }
+}

@@ -1,0 +1,734 @@
+{
+  "status": "completed",
+  "duration": 363.5,
+  "summary": {
+    "total": 103,
+    "passed": 103,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.AllArrivalTypesFitBothMapsAndResolveWithoutTargetableWaterCargo",
+      "Status": "Passed",
+      "Duration": 2.4942234,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.BroodmotherSpawnsAreCappedRegisteredAndIncludedInWaveAliveCount",
+      "Status": "Passed",
+      "Duration": 0.9025394,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.BurrowerIsVisibleLimitedIgnoresWireThenEmergesBeforeBorderAndBreachesOnce",
+      "Status": "Passed",
+      "Duration": 1.1870325,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.SpitterDamagesNearbyStructureThroughVisibleProjectileAndRepairStillWorks",
+      "Status": "Passed",
+      "Duration": 1.2546107,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.ThreeHundredFiftyBroodlingsRespectRegistryCapRewardAndPooling",
+      "Status": "Passed",
+      "Duration": 1.3996187,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.ArtIntegrationTests.HitPoseEndsWithoutInterruptingAuthoritativeMovement",
+      "Status": "Passed",
+      "Duration": 0.6835717,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.ArtIntegrationTests.HudReenableKeepsNamedMgBindingAndAllCellsAccessible",
+      "Status": "Passed",
+      "Duration": 0.4970969,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.AssaultPoolTests.ReusedEnemyResetsHealthBurnPresentationRegistrationAndBreach",
+      "Status": "Passed",
+      "Duration": 0.4659056,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.DefenseLoopTests.CreationFailureAndMultiCellPlacementKeepTransactionsConsistent",
+      "Status": "Passed",
+      "Duration": 0.4909925,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.DefenseLoopTests.DeathRewardOnceAndNoRewardForCleanupOrPostGameDamage",
+      "Status": "Passed",
+      "Duration": 7.8568291,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.DefenseLoopTests.RejectedPlacementsCancelPreviewAndOccupancyCleanupNeverSpend",
+      "Status": "Passed",
+      "Duration": 0.4077763,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.DefenseLoopTests.SpawnPlaceShootKillRewardAndBuyAgain",
+      "Status": "Passed",
+      "Duration": 3.3854692,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.DefenseLoopTests.TargetingRangeDisabledTargetsAimAndStableCooldown",
+      "Status": "Passed",
+      "Duration": 1.5196189,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.EndlessEventPlayTests.CostEventsRefreshPanelAndDeductExactlyWithoutChangingRefundRules",
+      "Status": "Passed",
+      "Duration": 1.6902723,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.EndlessEventPlayTests.EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats",
+      "Status": "Passed",
+      "Duration": 15.7566008,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.EndlessEventPlayTests.FogRestoresUpgradedRangeAndFloodNeverChangesTerrainOrExistingStructures",
+      "Status": "Passed",
+      "Duration": 1.2962772,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.EndlessEventPlayTests.LandingPatternsChangeActualDispatchSectorsAndMassConcurrency",
+      "Status": "Passed",
+      "Duration": 6.3828673,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.EndlessEventPlayTests.ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage",
+      "Status": "Passed",
+      "Duration": 26.7379649,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.EndlessEventPlayTests.TimedEventsAndCalmWarningsUsePauseAndDoubleSpeedAndGameOverClears",
+      "Status": "Passed",
+      "Duration": 2.4002199,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.HeavyDefensePlayTests.AllPurchasesUseCatalogFootprintsPreviewsAndRsd",
+      "Status": "Passed",
+      "Duration": 0.4170586,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.HeavyDefensePlayTests.AreaAndBurnCancelOnGameOverWithoutDamageOrRewards",
+      "Status": "Passed",
+      "Duration": 0.4268209,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.HeavyDefensePlayTests.CannonPrioritizesHealthCooldownAndReacquiresAfterLoss",
+      "Status": "Passed",
+      "Duration": 0.4436662,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.HeavyDefensePlayTests.FlameConeMultiHitBurnRefreshExpiryAndReward",
+      "Status": "Passed",
+      "Duration": 0.4142485,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.HeavyDefensePlayTests.MortarEnforcesAnnulusAndChoosesClusterThenImpactsOnce",
+      "Status": "Passed",
+      "Duration": 0.4110886,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.HeavyDefensePlayTests.RocketRetainsPointAfterTargetDeathAndDamageIgnoresVisuals",
+      "Status": "Passed",
+      "Duration": 0.3956363,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.IndustrialPortPlayTests.AllDefensesManageSaveAndContinueOnSelectedMap",
+      "Status": "Passed",
+      "Duration": 1.8853123,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.IndustrialPortPlayTests.AllLandingPathsAndBothBossCargoBreachThroughSharedService",
+      "Status": "Passed",
+      "Duration": 0.8638284,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.IndustrialPortPlayTests.EarlyAndMidgameWavesCompleteWithRealBoatsAndSharedBreach",
+      "Status": "Passed",
+      "Duration": 11.4269047,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.IndustrialPortPlayTests.EveryEventWorksAndFloodUsesAuthoredDockCells",
+      "Status": "Passed",
+      "Duration": 6.9296025,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.MetaProgressionPlayTests.ContinueFreezesOldResearchAndNewRunReceivesLaterPurchases",
+      "Status": "Passed",
+      "Duration": 3.3840739,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.MetaProgressionPlayTests.DuplicateGameOverPaysOnceAndShowsPersistentRewardInSummaryAndHistory",
+      "Status": "Passed",
+      "Duration": 1.7616046,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.MetaProgressionPlayTests.FogReducesResearchedSniperRangeAndRestoresWithoutMutatingTuning",
+      "Status": "Passed",
+      "Duration": 1.2054368,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.MetaProgressionPlayTests.FullResearchSaveRestoresHealthMoneyAndEffectiveWeaponStats",
+      "Status": "Passed",
+      "Duration": 2.3911256,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.MetaProgressionPlayTests.IntelRevealsProgressivelyAndForecastMatchesCommittedEventWithoutSideEffects",
+      "Status": "Passed",
+      "Duration": 1.1465904,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.MetaProgressionPlayTests.RepairUpgradeAndDismantleUseExactDisplayedPricesWithEvents",
+      "Status": "Passed",
+      "Duration": 1.1861601,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.NavigationCollisionPlayTests.AllSolidDefenseTypesRepathAroundWithoutAttackingWhenAlternateRouteExists",
+      "Status": "Passed",
+      "Duration": 11.3476263,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.NavigationCollisionPlayTests.BothMapsHaveBoundBlockersAndEveryStaticLandingHasAnExit",
+      "Status": "Passed",
+      "Duration": 1.2289024,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.NavigationCollisionPlayTests.BurrowerRoutesAroundPermanentCraneContainersAndWarehouse",
+      "Status": "Passed",
+      "Duration": 1.2535457,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.NavigationCollisionPlayTests.EveryArchetypeIncludingBossesBreaksWallWithoutRefundOrGhosting",
+      "Status": "Passed",
+      "Duration": 16.991408,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.NavigationCollisionPlayTests.FullWallReceivesRealDamageRepairUpgradeAndDismantleClearTargetAndSelection",
+      "Status": "Passed",
+      "Duration": 2.4115794,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.NavigationCollisionPlayTests.HundredAndTwoHundredEnemiesRepathAndBreachBothMapsWithoutSolidCellEntry",
+      "Status": "Passed",
+      "Duration": 7.7960574,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.NavigationCollisionPlayTests.SeveralAttackersShareFrontierWithDistinctSafeContactPositions",
+      "Status": "Passed",
+      "Duration": 1.1165776,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.NavigationCollisionPlayTests.WireAndMineRemainWalkableSlowAndTriggerAndPreventBuildingOnCreature",
+      "Status": "Passed",
+      "Duration": 0.7799352,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PersistencePlayTests.AnnouncedFogAndNextBossPlanSurviveReloadWithSameSeed",
+      "Status": "Passed",
+      "Duration": 2.0322888,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PersistencePlayTests.CorruptAndUnsupportedSavesKeepMenuUsableAndBackupRecoverable",
+      "Status": "Passed",
+      "Duration": 2.6056426,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PersistencePlayTests.FullMenuBuildWaveAutosaveContinueDeathHistoryAndFreshRunJourney",
+      "Status": "Passed",
+      "Duration": 3.5514931,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PersistencePlayTests.PausePreservesDoubleSpeedAndActiveQuitUsesPreparationCheckpoint",
+      "Status": "Passed",
+      "Duration": 2.7993801,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PersistencePlayTests.SettingsApplyLivePresentationCapsAndPersistAcrossScene",
+      "Status": "Passed",
+      "Duration": 1.4768188,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PersistencePlayTests.StructuresEconomyWireEventsAndStatisticsRestoreWithoutRerollOrPayment",
+      "Status": "Passed",
+      "Duration": 1.9988231,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.AllFiveWavesCountPendingAndLivingEnemiesAndRewardExactlyOnce",
+      "Status": "Passed",
+      "Duration": 0.4200509,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.FailedSpawnRetriesWithoutLosingPendingEnemiesAndGameOverStopsEverything",
+      "Status": "Passed",
+      "Duration": 0.4124422,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.FourButtonsSwitchOnePreviewAndEnforceCostsOccupancyAndTerrain",
+      "Status": "Passed",
+      "Duration": 0.3630092,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.MineArmsIgnoresDeadTargetsDamagesAreaOnceAndUsesGenericRewards",
+      "Status": "Passed",
+      "Duration": 0.3802239,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.SceneSmokeBuildFightEarnCompleteAndPrepareNextWave",
+      "Status": "Passed",
+      "Duration": 5.3717286,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.SniperPrioritizesRouteProgressAndHonorsRangeCooldownAndDeadTargetRelease",
+      "Status": "Passed",
+      "Duration": 0.3925419,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.UnarmedMineWaitsAndGameOverStopsIt",
+      "Status": "Passed",
+      "Duration": 0.4144275,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase2CPlayTests.WirePlacementSlowsRecoversAndCleansUpNavigation",
+      "Status": "Passed",
+      "Duration": 0.3669489,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase3C1PlayTests.BlockedLandingWaitsForValidRouteAndGameOverCancelsUnloading",
+      "Status": "Passed",
+      "Duration": 0.4099771,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase3C1PlayTests.BoatsReserveDistinctRiverLanesAndUnloadThroughNormalSpawner",
+      "Status": "Passed",
+      "Duration": 0.3721581,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase3C1PlayTests.IdleWeaponsStartLeftAndCameraAndVegetationStayOverhead",
+      "Status": "Passed",
+      "Duration": 2.5766595,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase3C1PlayTests.InvalidRiverLanesAndActiveLimitPreventBadArrivalsAndGameOverCancelsIncoming",
+      "Status": "Passed",
+      "Duration": 0.4128305,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase3C1PlayTests.WaveKeepsIncomingPassengersPendingAndCompletesOnlyAfterLastKill",
+      "Status": "Passed",
+      "Duration": 0.4198676,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase3C1PlayTests.WirePlacementRemovalAndPreviewKeepTopologyAndSlowdown",
+      "Status": "Passed",
+      "Duration": 0.3877696,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase4CPlayTests.BossKillArmorHudRewardAndBreachResolveOnce",
+      "Status": "Passed",
+      "Duration": 0.4287591,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase4CPlayTests.DismantleEveryDefenseRefundsPaidCostOnceAndClearsFootprint",
+      "Status": "Passed",
+      "Duration": 0.4115913,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase4CPlayTests.InvalidConsumedAndGameOverTargetsCannotRefund",
+      "Status": "Passed",
+      "Duration": 0.4146786,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase4CPlayTests.OverlappingBoatsRespectCapAndWaitForCargo",
+      "Status": "Passed",
+      "Duration": 0.5058767,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.Phase4CPlayTests.WireNeighborsNavigationAndSelectionCleanUpDuringCombat",
+      "Status": "Passed",
+      "Duration": 0.3881975,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PrototypePlayTests.LethalBaseDamageSignalsGameOverOnceAndSceneReloadResetsRuntimeState",
+      "Status": "Passed",
+      "Duration": 0.7049704,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PrototypePlayTests.MovementRepathsOnlyOnGridChangeAndResumesWhenRouteReopens",
+      "Status": "Passed",
+      "Duration": 0.0130218,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PrototypePlayTests.PersistedSceneRunsFromSeaToGameOverAndStopsSpawningAndMovement",
+      "Status": "Passed",
+      "Duration": 5.783502,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.PrototypePlayTests.SpawnedEnemiesOwnIndependentHealthAndDeadEnemyIsRemoved",
+      "Status": "Passed",
+      "Duration": 1.4121267,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.ShadowPresentationTests.BothMapsHaveOneNeutralAnimatedShadowPerCreatureAndReuseRestoresIt",
+      "Status": "Passed",
+      "Duration": 1.5140263,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.ShadowPresentationTests.LandContactDisappearsInWaterAndWhileBurrowedThenReturnsOnLand",
+      "Status": "Passed",
+      "Duration": 1.1693671,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.StructureManagementTests.AllEightUpgradeRepairAndRefundPathsPreserveDefinitionsAndOccupancy",
+      "Status": "Passed",
+      "Duration": 0.3900341,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.StructureManagementTests.ExternalRemovalClosesPanelWithoutCurrencyOrInputRefresh",
+      "Status": "Passed",
+      "Duration": 0.3805045,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.StructureManagementTests.InsufficientFundsAndForeignDeadTargetsCannotMutate",
+      "Status": "Passed",
+      "Duration": 0.3810382,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.StructureManagementTests.PreparationAndWaveRepairCostsDifferAndMoneyIsExact",
+      "Status": "Passed",
+      "Duration": 0.3991324,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.StructureManagementTests.SelectionPanelActionsAndInputModesStayDistinct",
+      "Status": "Passed",
+      "Duration": 0.378079,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.StructureManagementTests.SpeedButtonsPauseRealBoatWaveAndUiRemainsUsable",
+      "Status": "Passed",
+      "Duration": 1.3752689,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.StructureManagementTests.UpgradedWeaponsApplyActualDamageAndConsumedMinesClearSelection",
+      "Status": "Passed",
+      "Duration": 0.4045686,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.StructureManagementTests.WireUpgradeKeepsAdjacencyAndRefreshesSlowAndRemoval",
+      "Status": "Passed",
+      "Duration": 0.4064438,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.SurvivalPlayTests.BothTurretsTargetEveryEnemyKindAndPresentationUsesItsOwnArt",
+      "Status": "Passed",
+      "Duration": 0.4003574,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.SurvivalPlayTests.EachBreachResolvesOnceWithoutRewardAndThresholdStopsBoats",
+      "Status": "Passed",
+      "Duration": 0.4492213,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.SurvivalPlayTests.HundredAcceleratedBoatWavesCompleteAndReleaseTransientObjects",
+      "Status": "Passed",
+      "Duration": 137.0831014,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.SurvivalPlayTests.MixedCargoCapacityAndAllTypesUseDefenseRules",
+      "Status": "Passed",
+      "Duration": 0.4193238,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.SurvivalPlayTests.ThresholdOnFinalWaveMemberNeverPaysCompletionReward",
+      "Status": "Passed",
+      "Duration": 0.5448961,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.SurvivalPlayTests.UnlimitedModeKillsMoneyAndActiveCapRemainCorrect",
+      "Status": "Passed",
+      "Duration": 0.5743883,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TopDownPlayTests.LethalBaseDamageSignalsGameOverOnceAndSceneReloadResetsRuntimeState",
+      "Status": "Passed",
+      "Duration": 0.7750885,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TopDownPlayTests.MovementRepathsOnlyOnGridChangeAndResumesWhenRouteReopens",
+      "Status": "Passed",
+      "Duration": 0.0070825,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TopDownPlayTests.OccupiedAndBlockedSpawnPointsAreSkippedAndReopenedLaneResumes",
+      "Status": "Passed",
+      "Duration": 2.2252269,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TopDownPlayTests.PersistedSceneRunsFromSeaToGameOverAndStopsSpawningAndMovement",
+      "Status": "Passed",
+      "Duration": 10.0954028,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TopDownPlayTests.SpawnedEnemiesOwnIndependentHealthAndDeadEnemyIsRemoved",
+      "Status": "Passed",
+      "Duration": 1.3972739,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialPlayTests.BossPreemptsSpeedAndNeverOverlapsBossOrCoreHud",
+      "Status": "Passed",
+      "Duration": 0.9166257,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialPlayTests.DamageRepairUpgradeAndDismantleUseRealSelectedControlsAndRefund",
+      "Status": "Passed",
+      "Duration": 1.7522661,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialPlayTests.DisabledGuidanceSkipConfirmationAndResetKeepGameAndResearch",
+      "Status": "Passed",
+      "Duration": 0.8148095,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialPlayTests.EveryCreatureDiscoveryAndActualBlockadeAttackTriggerOnce",
+      "Status": "Passed",
+      "Duration": 1.049719,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialPlayTests.FreshRunIntroPlacementAndContinuePersistWithoutAffectingClock",
+      "Status": "Passed",
+      "Duration": 1.9674006,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialPlayTests.MenuGuidanceDoesNotMoveTargetsOnTimeoutAndCombatTimingIgnoresX2",
+      "Status": "Passed",
+      "Duration": 0.9749325,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialPlayTests.SummaryResearchAndPortHintsAreContextualAndPersistAcrossLoss",
+      "Status": "Passed",
+      "Duration": 2.2508103,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.VfxIntegrationTests.GameOverClearsPresentationAndRejectsFurtherEffects",
+      "Status": "Passed",
+      "Duration": 0.4241263,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.VfxIntegrationTests.ReenabledObserversPayOnceAndDeathOutlivesTarget",
+      "Status": "Passed",
+      "Duration": 0.3683503,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.VfxIntegrationTests.WaterExitStopsWakeAndEmitsOneSplash",
+      "Status": "Passed",
+      "Duration": 0.399342,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

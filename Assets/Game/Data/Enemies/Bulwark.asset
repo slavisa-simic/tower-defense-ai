@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f40a841e78dd0459454a9c25516d4d, type: 3}
   m_Name: Bulwark
   m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Enemies.EnemyDefinition
-  armor: 0.25
+  armor: 0.5
   kind: 2
   breachPenalty: 100
   difficultyCost: 5
@@ -24,7 +24,7 @@ MonoBehaviour:
   attackDamage: 10
   attackInterval: 1
   attackRange: 1.6
-  killReward: 75
+  killReward: 8
   structureDamage: 45
   structureAttackInterval: 1
   structureRangeCells: 0.6

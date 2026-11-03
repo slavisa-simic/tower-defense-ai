@@ -1,0 +1,93 @@
+{
+  "method": "Natural Update x1, zero research. Moving isolated boss at authored base HP, normal armor/structure attacks and real defense payments. Excludes escorts/other-wave damage competition; functional encounter suites test both maps separately. Midgame and specialized fixtures disclose granted budgets.",
+  "rows": [
+    {
+      "map": "CoastalDefense_TopDown",
+      "kind": "Dredger",
+      "force": "midgame",
+      "paid": 4725,
+      "hp": 8500,
+      "ttkSeconds": 11.183469884097576,
+      "alive": false,
+      "children": null,
+      "breaches": 0
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "kind": "Dredger",
+      "force": "specialized",
+      "paid": 11700,
+      "hp": 8500,
+      "ttkSeconds": 5.7306814193725586,
+      "alive": false,
+      "children": null,
+      "breaches": 0
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "kind": "Broodmother",
+      "force": "midgame",
+      "paid": 4725,
+      "hp": 8250,
+      "ttkSeconds": 9.9066829681396484,
+      "alive": false,
+      "children": 6,
+      "breaches": 0
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "kind": "Broodmother",
+      "force": "specialized",
+      "paid": 11700,
+      "hp": 8250,
+      "ttkSeconds": 4.7755889892578125,
+      "alive": false,
+      "children": 6,
+      "breaches": 0
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "kind": "Dredger",
+      "force": "midgame",
+      "paid": 4725,
+      "hp": 8500,
+      "ttkSeconds": 11.407005310058594,
+      "alive": false,
+      "children": null,
+      "breaches": 0
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "kind": "Dredger",
+      "force": "specialized",
+      "paid": 11700,
+      "hp": 8500,
+      "ttkSeconds": 5.6521186828613281,
+      "alive": false,
+      "children": null,
+      "breaches": 0
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "kind": "Broodmother",
+      "force": "midgame",
+      "paid": 4725,
+      "hp": 8250,
+      "ttkSeconds": 9.8890151977539063,
+      "alive": false,
+      "children": 6,
+      "breaches": 0
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "kind": "Broodmother",
+      "force": "specialized",
+      "paid": 11700,
+      "hp": 8250,
+      "ttkSeconds": 4.7193870544433594,
+      "alive": false,
+      "children": 6,
+      "breaches": 0
+    }
+  ]
+}

@@ -14,6 +14,11 @@ namespace ShorelineDefense.Waves
         public float ArrivalInterval { get; private set; }
         public int BoatLimit { get; private set; }
         public bool DeploymentPaused { get; private set; }
+        // Admission uses current counts between policy evaluations. A full carrier must not
+        // overshoot a small early-wave target by its entire passenger capacity.
+        public int RemainingAdmission(EndlessWaveSettings settings, int active, int incoming) =>
+            Mathf.Max(0, Mathf.Min(settings.maximumActiveEnemies,
+                Mathf.CeilToInt(Target * (1 + Mathf.Clamp(settings.pressureHysteresis, .05f, .4f)))) - active - incoming);
         public void Reset() { untilEvaluation = elapsed = 0; Mode = AssaultPressure.Normal; Surging = DeploymentPaused = false; }
         public bool Tick(float dt, EndlessWaveSettings settings, int wave, int activeEnemies,
             int pendingEnemies, int activeBoats, int incomingPassengers, bool bossPendingOrAlive, EventModifiers modifiers = null)

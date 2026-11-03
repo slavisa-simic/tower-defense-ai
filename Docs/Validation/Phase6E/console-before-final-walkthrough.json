@@ -1,0 +1,2697 @@
+{
+  "entries": [
+    {
+      "seq": 441,
+      "timestampUtc": "2026-11-02T14:06:55.3608459Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "1 URP assets included in build\r\n- PC_RPAsset - Assets/Settings/PC_RPAsset.asset\r\n\t - PC_Renderer - Assets/Settings/PC_Renderer.asset - UnityEngine.Rendering.Universal.UniversalRendererData\r\n\t - TopDown_Renderer - Assets/Settings/TopDown_Renderer.asset - UnityEngine.Rendering.Universal.Renderer2DData\r\n",
+      "stackTrace": "UnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)\nPhase6DBuild:Run () (at Docs/Validation/Phase6D/Build.cs:12)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/Scripts/RunScriptCommand.cs:219)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Pipeline.Editor.Commands.Scripts.RunScriptResponse>:Start<Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2> (Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2&)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand:RunEphemeral (string,string,Newtonsoft.Json.Linq.JArray,string[],string[],bool,bool,int,System.Diagnostics.Stopwatch)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/Scripts/RunScriptCommand.cs:77)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Pipeline.Editor.Commands.Scripts.RunScriptResponse>:Start<Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1> (Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1&)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand:RunScript (string,string,Newtonsoft.Json.Linq.JArray,string,string[],string[],bool,int,bool)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 442,
+      "timestampUtc": "2026-11-02T14:06:55.4585159Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestRunBuilder] Creating new file 'Assets/Resources/PerformanceTestRunInfo.json' (1769 bytes)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.PerformanceTesting.Editor.TestRunBuilder:SaveToStorage (object,string) (at ./Library/PackageCache/com.unity.test-framework.performance@8b56083ec0f0/Editor/TestRunBuilder.cs:242)\nUnity.PerformanceTesting.Editor.TestRunBuilder:OnPreprocessBuild (UnityEditor.Build.Reporting.BuildReport) (at ./Library/PackageCache/com.unity.test-framework.performance@8b56083ec0f0/Editor/TestRunBuilder.cs:35)\nUnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)\nPhase6DBuild:Run () (at Docs/Validation/Phase6D/Build.cs:12)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/Scripts/RunScriptCommand.cs:219)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Pipeline.Editor.Commands.Scripts.RunScriptResponse>:Start<Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2> (Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2&)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand:RunEphemeral (string,string,Newtonsoft.Json.Linq.JArray,string[],string[],bool,bool,int,System.Diagnostics.Stopwatch)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/Scripts/RunScriptCommand.cs:77)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Pipeline.Editor.Commands.Scripts.RunScriptResponse>:Start<Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1> (Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1&)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand:RunScript (string,string,Newtonsoft.Json.Linq.JArray,string,string[],string[],bool,int,bool)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 443,
+      "timestampUtc": "2026-11-02T14:06:55.460512Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestRunBuilder] Creating new file 'Assets/Resources/PerformanceTestRunSettings.json' (23 bytes)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.PerformanceTesting.Editor.TestRunBuilder:SaveToStorage (object,string) (at ./Library/PackageCache/com.unity.test-framework.performance@8b56083ec0f0/Editor/TestRunBuilder.cs:242)\nUnity.PerformanceTesting.Editor.TestRunBuilder:OnPreprocessBuild (UnityEditor.Build.Reporting.BuildReport) (at ./Library/PackageCache/com.unity.test-framework.performance@8b56083ec0f0/Editor/TestRunBuilder.cs:38)\nUnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)\nPhase6DBuild:Run () (at Docs/Validation/Phase6D/Build.cs:12)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/Scripts/RunScriptCommand.cs:219)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Pipeline.Editor.Commands.Scripts.RunScriptResponse>:Start<Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2> (Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2&)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand:RunEphemeral (string,string,Newtonsoft.Json.Linq.JArray,string[],string[],bool,bool,int,System.Diagnostics.Stopwatch)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/Scripts/RunScriptCommand.cs:77)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Pipeline.Editor.Commands.Scripts.RunScriptResponse>:Start<Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1> (Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1&)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand:RunScript (string,string,Newtonsoft.Json.Linq.JArray,string,string[],string[],bool,int,bool)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 444,
+      "timestampUtc": "2026-11-02T14:06:55.5756568Z",
+      "level": "warn",
+      "logType": "Warning",
+      "message": "Pipeline: RuntimePipelineConfig found, but enableInBuilds = false. Pipeline will be disabled in Player builds.",
+      "stackTrace": "UnityEngine.Debug:LogWarning (object)\nUnity.Pipeline.Editor.BuildProcessors.PipelineRuntimeBuildProcessor:OnPreprocessBuild (UnityEditor.Build.BuildCallbackContext) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/BuildProcessors/PipelineRuntimeBuildProcessor.cs:81)\nUnityEditor.BuildPipeline:BuildPlayer (UnityEditor.BuildPlayerOptions)\nPhase6DBuild:Run () (at Docs/Validation/Phase6D/Build.cs:12)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/Scripts/RunScriptCommand.cs:219)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Pipeline.Editor.Commands.Scripts.RunScriptResponse>:Start<Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2> (Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunEphemeral>d__2&)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand:RunEphemeral (string,string,Newtonsoft.Json.Linq.JArray,string[],string[],bool,bool,int,System.Diagnostics.Stopwatch)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/Scripts/RunScriptCommand.cs:77)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<Unity.Pipeline.Editor.Commands.Scripts.RunScriptResponse>:Start<Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1> (Unity.Pipeline.Editor.Commands.Scripts.RunScriptCommand/<RunScript>d__1&)\nUnity.Pipeline.Editor.Commands.Scripts.RunScriptCommand:RunScript (string,string,Newtonsoft.Json.Linq.JArray,string,string[],string[],bool,int,bool)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 445,
+      "timestampUtc": "2026-11-02T14:38:55.6882137Z",
+      "level": "error",
+      "logType": "Error",
+      "message": "ExecuteCommandByName: No command named 'editor status' is available. Available: [add_animator_layer, get_tags_layers, editor_focus, remove_scene_from_build, get_animator_controller, get_serialized_fields, get_authoring_root, list_shaders, remove_component, move_asset, set_active_scene, remove_animation_curve, add_timeline_track, cancel_occlusion_bake, set_transform, get_material_properties, add_animator_parameter, list_build_targets, occlusion_bake_status, get_runtime_pipeline_settings, get_player_settings, cancel_lighting_bake, audit_status, clear_baked_lighting, clear_occlusion_culling, add_animator_transition, list_tests, get_time_settings, batch, set_tag, get_import_settings, set_material_properties, delete_gameobject, package_list, wait_status, wait_cancel, add_scene_to_build, bake_lighting, bake_occlusion_culling, set_authoring_root, get_input_settings, set_input_settings, add_component, switch_build_target, rename_asset, package_remove, set_player_settings, list_build_profiles, set_parent, package_resolve, save_all, import_asset, get_quality_settings, save_prefab_contents, set_component_properties, set_autotick, set_animation_curve, cancel_navmesh_bake, bake_navmesh_surfaces, set_quality_settings, set_runtime_pipeline_settings, create_script, create_folder, create_animation_clip, get_graphics_settings, capture_game_view, create_gameobject, lighting_bake_status, get_scene_hierarchy, get_lighting_settings, read_text_file, delete_asset, get_performance_stats, recompile, set_time_settings, recompile_status, add_timeline_clip, set_active, package_search, bake_navmesh, set_graphics_settings, package_add, set_navmesh_settings, get_physics_settings, instantiate_prefab, screenshot, set_physics_settings, get_build_settings, open_scene, wait_for, search, set_serialized_field, create_scene, switch_build_target_status, build_status, add_animator_state, attach_script, set_audio_settings, set_tags_layers, rename_gameobject, clear_navmesh, run_script, create_prefab, revert_prefab_overrides, copy_asset, get_shader_properties, set_lighting_settings, menu, create_prefab_variant, set_import_settings, navmesh_bake_status, write_text_file, editor_play, list_open_scenes, set_selection, get_component_properties, find_gameobjects, build, set_build_settings, create_animator_controller, test_status, set_layer, create_timeline, create_asset, get_selection, package_status, cancel_tests, save_scene, capture_scene_view, editor_stop, audit, unpack_prefab, editor_pause, run_tests, apply_prefab_overrides, get_navmesh_settings, get_audio_settings, create_gameobjects, get_timeline, reload_file_player_interpreter, find_assets, get_animation_clip, editor_status, simulate_key, cleanup_codereload, runtime_status, set_timescale, log, console, codereload_status, console_status, eval_file, reload_file, clear_console, simulate_pointer, eval, reload_file_editor_interpreter, set_target_framerate, quit, report_evals]",
+      "stackTrace": "UnityEngine.Debug:LogError (object)\nUnity.Pipeline.BasePipelineServer:ResolveCommand (string) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2436)\nUnity.Pipeline.BasePipelineServer/<HandleExecRequest>d__115:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:1899)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder`1<int>:SetResult (int)\nUnity.Pipeline.MaxLengthStream/<ReadAsync>d__6:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/MaxLengthStream.cs:46)\nSystem.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 446,
+      "timestampUtc": "2026-11-02T14:48:45.5137264Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 447,
+      "timestampUtc": "2026-11-02T14:48:45.769454Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run started: 168 test(s)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 448,
+      "timestampUtc": "2026-11-02T14:48:46.5726167Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "InvalidOperationException: Expected observer failure",
+      "stackTrace": "ShorelineDefense.Tests.EconomyAndPlacementTests+<>c.<BrokenObserverCannotTurnCommittedPaymentIntoFailure>b__0_0 (System.Int32 _) (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:18)\nShorelineDefense.Economy.EconomyManager.NotifyMoneyChanged () (at Assets/Game/Scripts/Economy/EconomyManager.cs:60)\nUnityEngine.Debug:LogException(Exception, Object)\nShorelineDefense.Economy.EconomyManager:NotifyMoneyChanged() (at Assets/Game/Scripts/Economy/EconomyManager.cs:61)\nShorelineDefense.Economy.EconomyManager:TrySpend(Int32) (at Assets/Game/Scripts/Economy/EconomyManager.cs:39)\nShorelineDefense.Tests.EconomyAndPlacementTests:BrokenObserverCannotTurnCommittedPaymentIntoFailure() (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:21)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+      "seeded": false
+    },
+    {
+      "seq": 449,
+      "timestampUtc": "2026-11-02T14:48:49.5106833Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+      "stackTrace": "",
+      "seeded": false
+    },
+    {
+      "seq": 450,
+      "timestampUtc": "2026-11-02T14:48:49.5829883Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run finished: 168 total, 167 passed, 1 failed",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 451,
+      "timestampUtc": "2026-11-02T14:48:49.7193613Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 452,
+      "timestampUtc": "2026-11-02T14:53:17.4470568Z",
+      "level": "error",
+      "logType": "Error",
+      "message": "Failed to handle /api/exec request: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine.\r\n",
+      "stackTrace": "UnityEngine.Debug:LogError (object)\nUnity.Pipeline.BasePipelineServer/<HandleExecRequest>d__115:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2071)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<SendExecResponse>d__119:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2162)\nSystem.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 453,
+      "timestampUtc": "2026-11-02T14:53:17.4548764Z",
+      "level": "error",
+      "logType": "Error",
+      "message": "Pipeline: unhandled error serving POST /api/exec: System.InvalidOperationException: Cannot be changed after headers are sent.\r\n  at System.Net.HttpListenerResponse.set_StatusCode (System.Int32 value) [0x00021] in <0acc3e6edc9c46189b27d1ec0227196c>:0 \r\n  at Unity.Pipeline.BasePipelineServer.SendExecResponse (System.Net.HttpListenerResponse response, System.Int32 statusCode, Unity.Pipeline.Models.BaseResponse body, System.String requestJson, System.Boolean verbose, System.Boolean omitNulls, Unity.Pipeline.Commands.CommandInfo executedCommand, System.Boolean executedSuccess, System.Int64 executedDurationMs, Newtonsoft.Json.Linq.JObject executedParameters) [0x00014] in .\\Library\\PackageCache\\com.unity.pipeline@ab05e9cd7f74\\Runtime\\Common\\BasePipelineServer.cs:2150 \r\n  at Unity.Pipeline.BasePipelineServer.HandleExecRequest (System.Net.HttpListenerRequest request, System.Net.HttpListenerResponse response) [0x014f1] in .\\Library\\PackageCache\\com.unity.pipeline@ab05e9cd7f74\\Runtime\\Common\\BasePipelineServer.cs:2072 \r\n  at Unity.Pipeline.BasePipelineServer.ProcessRequest (System.Net.HttpListenerContext context) [0x0069b] in .\\Library\\PackageCache\\com.unity.pipeline@ab05e9cd7f74\\Runtime\\Common\\BasePipelineServer.cs:596 ",
+      "stackTrace": "UnityEngine.Debug:LogError (object)\nUnity.Pipeline.BasePipelineServer/<ProcessRequest>d__77:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:629)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<HandleExecRequest>d__115:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2072)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<SendExecResponse>d__119:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2162)\nSystem.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 454,
+      "timestampUtc": "2026-11-02T15:03:48.3062211Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 455,
+      "timestampUtc": "2026-11-02T15:03:55.9197922Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 456,
+      "timestampUtc": "2026-11-02T15:03:55.9812255Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run started: 107 test(s)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 457,
+      "timestampUtc": "2026-11-02T15:03:59.5096537Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+      "stackTrace": "",
+      "seeded": false
+    },
+    {
+      "seq": 458,
+      "timestampUtc": "2026-11-02T15:03:59.55077Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run finished: 4 total, 4 passed, 0 failed",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 459,
+      "timestampUtc": "2026-11-02T15:04:00.2023248Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 460,
+      "timestampUtc": "2026-11-02T15:04:18.0849809Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 461,
+      "timestampUtc": "2026-11-02T15:04:25.482095Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 462,
+      "timestampUtc": "2026-11-02T15:04:25.5361243Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run started: 107 test(s)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 463,
+      "timestampUtc": "2026-11-02T15:04:54.7292841Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: mass-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 464,
+      "timestampUtc": "2026-11-02T15:04:56.3181424Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: swarm-surge",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 465,
+      "timestampUtc": "2026-11-02T15:04:57.0473298Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: armored-migration",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 466,
+      "timestampUtc": "2026-11-02T15:04:57.7521007Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: deep-water-disturbance",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 467,
+      "timestampUtc": "2026-11-02T15:04:59.6229352Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: brood-tide",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 468,
+      "timestampUtc": "2026-11-02T15:05:00.8710496Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: fog",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 469,
+      "timestampUtc": "2026-11-02T15:05:02.103036Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: flooded-shore",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 470,
+      "timestampUtc": "2026-11-02T15:05:03.2971685Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: ammunition-shortage",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 471,
+      "timestampUtc": "2026-11-02T15:05:04.3998532Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: emergency-supply",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 472,
+      "timestampUtc": "2026-11-02T15:05:05.5610848Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: field-engineers",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 473,
+      "timestampUtc": "2026-11-02T15:05:07.0440404Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: calm-before-storm",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 474,
+      "timestampUtc": "2026-11-02T15:05:08.3298436Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: multi-sector",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 475,
+      "timestampUtc": "2026-11-02T15:05:10.5612126Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: concentrated-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 476,
+      "timestampUtc": "2026-11-02T15:05:22.5138527Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 5: fog",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 477,
+      "timestampUtc": "2026-11-02T15:05:23.5275995Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 7: mass-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 478,
+      "timestampUtc": "2026-11-02T15:05:25.7357784Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 10: ammunition-shortage",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 479,
+      "timestampUtc": "2026-11-02T15:05:28.5528806Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 14: brood-tide",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 480,
+      "timestampUtc": "2026-11-02T15:05:31.8722271Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 17: emergency-supply",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 481,
+      "timestampUtc": "2026-11-02T15:05:34.9098962Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 20: concentrated-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 482,
+      "timestampUtc": "2026-11-02T15:05:41.8404167Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 24: multi-sector",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 483,
+      "timestampUtc": "2026-11-02T15:05:45.9704187Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 27: ammunition-shortage",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:154)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 484,
+      "timestampUtc": "2026-11-02T15:05:51.2723888Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 30 waves: Wave 5 — fog, Wave 7 — mass-emergence, Wave 10 — ammunition-shortage, Wave 14 — brood-tide, Wave 17 — emergency-supply, Wave 20 — concentrated-emergence, Wave 24 — multi-sector, Wave 27 — ammunition-shortage, Wave 31 — deep-water-disturbance",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:161)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 485,
+      "timestampUtc": "2026-11-02T15:11:00.4982389Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase4A 100 real boat waves: breaches=98241, homicides=4193160, earned=37142, peak enemies=5, peak boats=32",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.SurvivalPlayTests/<HundredAcceleratedBoatWavesCompleteAndReleaseTransientObjects>d__11:MoveNext () (at Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs:73)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 486,
+      "timestampUtc": "2026-11-02T15:11:30.5812561Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+      "stackTrace": "",
+      "seeded": false
+    },
+    {
+      "seq": 487,
+      "timestampUtc": "2026-11-02T15:11:30.6463514Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run finished: 107 total, 102 passed, 5 failed",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 488,
+      "timestampUtc": "2026-11-02T15:11:31.2672871Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 489,
+      "timestampUtc": "2026-11-02T17:08:34.5409769Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.EndlessEventPresentation.Refresh () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:50)\nShorelineDefense.Presentation.EndlessEventPresentation.OnEnable () (at Assets/Game/Scripts/Presentation/EndlessEventPresentation.cs:37)\n",
+      "seeded": false
+    },
+    {
+      "seq": 490,
+      "timestampUtc": "2026-11-02T17:08:37.4141232Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 491,
+      "timestampUtc": "2026-11-02T17:08:38.0646312Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 492,
+      "timestampUtc": "2026-11-02T17:08:38.7173287Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 493,
+      "timestampUtc": "2026-11-02T17:08:39.3699666Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 494,
+      "timestampUtc": "2026-11-02T17:08:40.0225507Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 495,
+      "timestampUtc": "2026-11-02T17:08:40.6766594Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 496,
+      "timestampUtc": "2026-11-02T17:08:41.3303589Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 497,
+      "timestampUtc": "2026-11-02T17:08:41.9827176Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 498,
+      "timestampUtc": "2026-11-02T17:08:42.6350763Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 499,
+      "timestampUtc": "2026-11-02T17:08:43.2878929Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 500,
+      "timestampUtc": "2026-11-02T17:08:43.9398663Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 501,
+      "timestampUtc": "2026-11-02T17:08:44.5920414Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 502,
+      "timestampUtc": "2026-11-02T17:08:45.2442947Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 503,
+      "timestampUtc": "2026-11-02T17:08:45.8978859Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 504,
+      "timestampUtc": "2026-11-02T17:08:46.5549226Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 505,
+      "timestampUtc": "2026-11-02T17:08:47.2972527Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 506,
+      "timestampUtc": "2026-11-02T17:08:47.944699Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 507,
+      "timestampUtc": "2026-11-02T17:08:48.6017127Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 508,
+      "timestampUtc": "2026-11-02T17:08:49.2594402Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 509,
+      "timestampUtc": "2026-11-02T17:08:49.9128826Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 510,
+      "timestampUtc": "2026-11-02T17:08:50.5652691Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 511,
+      "timestampUtc": "2026-11-02T17:08:51.2180818Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 512,
+      "timestampUtc": "2026-11-02T17:08:51.8717335Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 513,
+      "timestampUtc": "2026-11-02T17:08:52.5229315Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 514,
+      "timestampUtc": "2026-11-02T17:08:53.1760604Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 515,
+      "timestampUtc": "2026-11-02T17:08:53.8296043Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 516,
+      "timestampUtc": "2026-11-02T17:08:54.4869991Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 517,
+      "timestampUtc": "2026-11-02T17:08:55.1378055Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 518,
+      "timestampUtc": "2026-11-02T17:08:55.7898386Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 519,
+      "timestampUtc": "2026-11-02T17:08:56.441517Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 520,
+      "timestampUtc": "2026-11-02T17:08:57.0950317Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 521,
+      "timestampUtc": "2026-11-02T17:08:57.7495718Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 522,
+      "timestampUtc": "2026-11-02T17:08:58.3999207Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 523,
+      "timestampUtc": "2026-11-02T17:08:59.0535204Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 524,
+      "timestampUtc": "2026-11-02T17:08:59.7055199Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 525,
+      "timestampUtc": "2026-11-02T17:09:00.357419Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 526,
+      "timestampUtc": "2026-11-02T17:09:01.0075055Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 527,
+      "timestampUtc": "2026-11-02T17:09:01.6587835Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 528,
+      "timestampUtc": "2026-11-02T17:09:02.3109649Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 529,
+      "timestampUtc": "2026-11-02T17:09:02.9630577Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 530,
+      "timestampUtc": "2026-11-02T17:09:03.6136449Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 531,
+      "timestampUtc": "2026-11-02T17:09:04.2670421Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 532,
+      "timestampUtc": "2026-11-02T17:09:04.9169134Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 533,
+      "timestampUtc": "2026-11-02T17:09:05.5664918Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 534,
+      "timestampUtc": "2026-11-02T17:09:06.2181943Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 535,
+      "timestampUtc": "2026-11-02T17:09:06.8700753Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 536,
+      "timestampUtc": "2026-11-02T17:09:07.5208438Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 537,
+      "timestampUtc": "2026-11-02T17:09:08.1731941Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 538,
+      "timestampUtc": "2026-11-02T17:09:08.8252457Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 539,
+      "timestampUtc": "2026-11-02T17:09:09.4768086Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 540,
+      "timestampUtc": "2026-11-02T17:09:10.1277646Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 541,
+      "timestampUtc": "2026-11-02T17:09:10.7790028Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 542,
+      "timestampUtc": "2026-11-02T17:09:11.4314099Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 543,
+      "timestampUtc": "2026-11-02T17:09:12.0832786Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 544,
+      "timestampUtc": "2026-11-02T17:09:12.737074Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 545,
+      "timestampUtc": "2026-11-02T17:09:13.3901089Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 546,
+      "timestampUtc": "2026-11-02T17:09:14.041311Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 547,
+      "timestampUtc": "2026-11-02T17:09:14.6910503Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 548,
+      "timestampUtc": "2026-11-02T17:09:15.3429917Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 549,
+      "timestampUtc": "2026-11-02T17:09:15.9947548Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 550,
+      "timestampUtc": "2026-11-02T17:09:16.6446997Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 551,
+      "timestampUtc": "2026-11-02T17:09:17.297724Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 552,
+      "timestampUtc": "2026-11-02T17:09:17.9510169Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 553,
+      "timestampUtc": "2026-11-02T17:09:18.6033847Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 554,
+      "timestampUtc": "2026-11-02T17:09:19.2551531Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 555,
+      "timestampUtc": "2026-11-02T17:09:19.9049869Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 556,
+      "timestampUtc": "2026-11-02T17:09:20.5574802Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 557,
+      "timestampUtc": "2026-11-02T17:09:21.2086733Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 558,
+      "timestampUtc": "2026-11-02T17:09:21.860287Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 559,
+      "timestampUtc": "2026-11-02T17:09:22.5123738Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 560,
+      "timestampUtc": "2026-11-02T17:09:23.1633292Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 561,
+      "timestampUtc": "2026-11-02T17:09:23.8155594Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 562,
+      "timestampUtc": "2026-11-02T17:09:24.4672408Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 563,
+      "timestampUtc": "2026-11-02T17:09:25.1181523Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 564,
+      "timestampUtc": "2026-11-02T17:09:25.7693513Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 565,
+      "timestampUtc": "2026-11-02T17:09:26.4218115Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 566,
+      "timestampUtc": "2026-11-02T17:09:27.0741872Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 567,
+      "timestampUtc": "2026-11-02T17:09:27.7244868Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 568,
+      "timestampUtc": "2026-11-02T17:09:28.3768231Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 569,
+      "timestampUtc": "2026-11-02T17:09:29.0281988Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 570,
+      "timestampUtc": "2026-11-02T17:09:29.6842813Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 571,
+      "timestampUtc": "2026-11-02T17:09:30.3375649Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 572,
+      "timestampUtc": "2026-11-02T17:09:30.9892856Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 573,
+      "timestampUtc": "2026-11-02T17:09:31.6406351Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 574,
+      "timestampUtc": "2026-11-02T17:09:32.2927161Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 575,
+      "timestampUtc": "2026-11-02T17:09:32.9444133Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 576,
+      "timestampUtc": "2026-11-02T17:09:33.5984414Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 577,
+      "timestampUtc": "2026-11-02T17:09:34.2483316Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 578,
+      "timestampUtc": "2026-11-02T17:09:34.8991578Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 579,
+      "timestampUtc": "2026-11-02T17:09:35.5525762Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 580,
+      "timestampUtc": "2026-11-02T17:09:36.2044729Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 581,
+      "timestampUtc": "2026-11-02T17:09:36.8568187Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 582,
+      "timestampUtc": "2026-11-02T17:09:37.5056599Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 583,
+      "timestampUtc": "2026-11-02T17:09:38.1606797Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 584,
+      "timestampUtc": "2026-11-02T17:09:38.811673Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 585,
+      "timestampUtc": "2026-11-02T17:09:39.462521Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 586,
+      "timestampUtc": "2026-11-02T17:09:40.11344Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 587,
+      "timestampUtc": "2026-11-02T17:09:40.7651372Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 588,
+      "timestampUtc": "2026-11-02T17:09:41.4167203Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 589,
+      "timestampUtc": "2026-11-02T17:09:42.0688717Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 590,
+      "timestampUtc": "2026-11-02T17:09:42.7199659Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 591,
+      "timestampUtc": "2026-11-02T17:09:43.3698121Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 592,
+      "timestampUtc": "2026-11-02T17:09:44.0195192Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 593,
+      "timestampUtc": "2026-11-02T17:09:44.6709568Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 594,
+      "timestampUtc": "2026-11-02T17:09:45.3231254Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 595,
+      "timestampUtc": "2026-11-02T17:09:45.9747921Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 596,
+      "timestampUtc": "2026-11-02T17:09:46.6267938Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 597,
+      "timestampUtc": "2026-11-02T17:09:47.2811269Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 598,
+      "timestampUtc": "2026-11-02T17:09:47.9332155Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 599,
+      "timestampUtc": "2026-11-02T17:09:48.5869363Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 600,
+      "timestampUtc": "2026-11-02T17:09:49.2374696Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 601,
+      "timestampUtc": "2026-11-02T17:09:49.8894173Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 602,
+      "timestampUtc": "2026-11-02T17:09:50.5395962Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 603,
+      "timestampUtc": "2026-11-02T17:09:51.1902422Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Presentation.WorldWaterPresentation.Update () (at Assets/Game/Scripts/Presentation/WorldWaterPresentation.cs:43)\n",
+      "seeded": false
+    },
+    {
+      "seq": 604,
+      "timestampUtc": "2026-11-02T17:09:51.2429595Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Persistence.RunSession.Capture () (at Assets/Game/Scripts/Persistence/RunSession.cs:96)\nShorelineDefense.Persistence.RunSession.SaveNow () (at Assets/Game/Scripts/Persistence/RunSession.cs:113)\nShorelineDefense.Persistence.RunSession.OnApplicationQuit () (at Assets/Game/Scripts/Persistence/RunSession.cs:150)\n",
+      "seeded": false
+    },
+    {
+      "seq": 605,
+      "timestampUtc": "2026-11-02T17:25:31.7769137Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 606,
+      "timestampUtc": "2026-11-02T17:25:39.1641692Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 607,
+      "timestampUtc": "2026-11-02T17:25:39.2129543Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run started: 108 test(s)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 608,
+      "timestampUtc": "2026-11-02T17:25:43.4558629Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+      "stackTrace": "",
+      "seeded": false
+    },
+    {
+      "seq": 609,
+      "timestampUtc": "2026-11-02T17:25:43.4971131Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run finished: 5 total, 5 passed, 0 failed",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 610,
+      "timestampUtc": "2026-11-02T17:25:44.0915465Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 611,
+      "timestampUtc": "2026-11-02T18:06:17.1525618Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 612,
+      "timestampUtc": "2026-11-02T18:06:25.0677054Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 613,
+      "timestampUtc": "2026-11-02T18:06:25.1427075Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run started: 110 test(s)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 614,
+      "timestampUtc": "2026-11-02T18:06:29.9402348Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+      "stackTrace": "",
+      "seeded": false
+    },
+    {
+      "seq": 615,
+      "timestampUtc": "2026-11-02T18:06:29.9782844Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run finished: 7 total, 7 passed, 0 failed",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 616,
+      "timestampUtc": "2026-11-02T18:06:30.5553337Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 617,
+      "timestampUtc": "2026-11-02T18:25:44.4457113Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 618,
+      "timestampUtc": "2026-11-02T18:25:44.6763764Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run started: 168 test(s)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 619,
+      "timestampUtc": "2026-11-02T18:25:45.3325456Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "InvalidOperationException: Expected observer failure",
+      "stackTrace": "ShorelineDefense.Tests.EconomyAndPlacementTests+<>c.<BrokenObserverCannotTurnCommittedPaymentIntoFailure>b__0_0 (System.Int32 _) (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:18)\nShorelineDefense.Economy.EconomyManager.NotifyMoneyChanged () (at Assets/Game/Scripts/Economy/EconomyManager.cs:60)\nUnityEngine.Debug:LogException(Exception, Object)\nShorelineDefense.Economy.EconomyManager:NotifyMoneyChanged() (at Assets/Game/Scripts/Economy/EconomyManager.cs:61)\nShorelineDefense.Economy.EconomyManager:TrySpend(Int32) (at Assets/Game/Scripts/Economy/EconomyManager.cs:39)\nShorelineDefense.Tests.EconomyAndPlacementTests:BrokenObserverCannotTurnCommittedPaymentIntoFailure() (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:21)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+      "seeded": false
+    },
+    {
+      "seq": 620,
+      "timestampUtc": "2026-11-02T18:25:47.973182Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+      "stackTrace": "",
+      "seeded": false
+    },
+    {
+      "seq": 621,
+      "timestampUtc": "2026-11-02T18:25:48.0355133Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run finished: 168 total, 168 passed, 0 failed",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 622,
+      "timestampUtc": "2026-11-02T18:25:48.1571077Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 623,
+      "timestampUtc": "2026-11-02T18:26:03.5302664Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 624,
+      "timestampUtc": "2026-11-02T18:26:10.1932029Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 625,
+      "timestampUtc": "2026-11-02T18:26:10.2410196Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run started: 110 test(s)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 626,
+      "timestampUtc": "2026-11-02T18:26:38.3044907Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: mass-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 627,
+      "timestampUtc": "2026-11-02T18:26:39.4973665Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: swarm-surge",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 628,
+      "timestampUtc": "2026-11-02T18:26:39.9857498Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: armored-migration",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 629,
+      "timestampUtc": "2026-11-02T18:26:40.4496076Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: deep-water-disturbance",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 630,
+      "timestampUtc": "2026-11-02T18:26:41.9779573Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: brood-tide",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 631,
+      "timestampUtc": "2026-11-02T18:26:43.0587023Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: fog",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 632,
+      "timestampUtc": "2026-11-02T18:26:44.1196867Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: flooded-shore",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 633,
+      "timestampUtc": "2026-11-02T18:26:45.1150943Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: ammunition-shortage",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 634,
+      "timestampUtc": "2026-11-02T18:26:46.0982354Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: emergency-supply",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 635,
+      "timestampUtc": "2026-11-02T18:26:47.1339826Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: field-engineers",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 636,
+      "timestampUtc": "2026-11-02T18:26:48.3160974Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: calm-before-storm",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 637,
+      "timestampUtc": "2026-11-02T18:26:49.6084591Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: multi-sector",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 638,
+      "timestampUtc": "2026-11-02T18:26:51.3508125Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: concentrated-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 639,
+      "timestampUtc": "2026-11-02T18:26:58.7838768Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 5: fog",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 640,
+      "timestampUtc": "2026-11-02T18:26:59.5503926Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 7: mass-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 641,
+      "timestampUtc": "2026-11-02T18:27:01.1483829Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 10: ammunition-shortage",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 642,
+      "timestampUtc": "2026-11-02T18:27:03.2572659Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 14: brood-tide",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 643,
+      "timestampUtc": "2026-11-02T18:27:05.6817694Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 17: emergency-supply",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 644,
+      "timestampUtc": "2026-11-02T18:27:07.8724206Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 20: concentrated-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 645,
+      "timestampUtc": "2026-11-02T18:27:12.8530363Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 24: multi-sector",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 646,
+      "timestampUtc": "2026-11-02T18:27:16.0075381Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 27: ammunition-shortage",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 647,
+      "timestampUtc": "2026-11-02T18:27:20.0505497Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 30 waves: Wave 5 — fog, Wave 7 — mass-emergence, Wave 10 — ammunition-shortage, Wave 14 — brood-tide, Wave 17 — emergency-supply, Wave 20 — concentrated-emergence, Wave 24 — multi-sector, Wave 27 — ammunition-shortage, Wave 31 — deep-water-disturbance",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:162)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 648,
+      "timestampUtc": "2026-11-02T18:31:18.7780607Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase4A 100 real boat waves: breaches=100409, homicides=4342990, earned=41484, peak enemies=5, peak boats=32",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.SurvivalPlayTests/<HundredAcceleratedBoatWavesCompleteAndReleaseTransientObjects>d__11:MoveNext () (at Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs:73)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 649,
+      "timestampUtc": "2026-11-02T18:31:45.9862984Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+      "stackTrace": "",
+      "seeded": false
+    },
+    {
+      "seq": 650,
+      "timestampUtc": "2026-11-02T18:31:46.0377246Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run finished: 110 total, 109 passed, 1 failed",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 651,
+      "timestampUtc": "2026-11-02T18:31:46.4795774Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 652,
+      "timestampUtc": "2026-11-02T18:33:28.5284221Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 653,
+      "timestampUtc": "2026-11-02T18:33:34.5194369Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 654,
+      "timestampUtc": "2026-11-02T18:33:34.5666134Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run started: 110 test(s)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 655,
+      "timestampUtc": "2026-11-02T18:33:50.3643963Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+      "stackTrace": "",
+      "seeded": false
+    },
+    {
+      "seq": 656,
+      "timestampUtc": "2026-11-02T18:33:50.4009454Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run finished: 1 total, 1 passed, 0 failed",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 657,
+      "timestampUtc": "2026-11-02T18:33:50.8698314Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 658,
+      "timestampUtc": "2026-11-02T18:43:23.7188226Z",
+      "level": "error",
+      "logType": "Error",
+      "message": "Failed to handle /api/exec request: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine.\r\n",
+      "stackTrace": "UnityEngine.Debug:LogError (object)\nUnity.Pipeline.BasePipelineServer/<HandleExecRequest>d__115:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2071)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<SendExecResponse>d__119:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2162)\nSystem.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 659,
+      "timestampUtc": "2026-11-02T18:43:23.7262687Z",
+      "level": "error",
+      "logType": "Error",
+      "message": "Pipeline: unhandled error serving POST /api/exec: System.InvalidOperationException: Cannot be changed after headers are sent.\r\n  at System.Net.HttpListenerResponse.set_StatusCode (System.Int32 value) [0x00021] in <0acc3e6edc9c46189b27d1ec0227196c>:0 \r\n  at Unity.Pipeline.BasePipelineServer.SendExecResponse (System.Net.HttpListenerResponse response, System.Int32 statusCode, Unity.Pipeline.Models.BaseResponse body, System.String requestJson, System.Boolean verbose, System.Boolean omitNulls, Unity.Pipeline.Commands.CommandInfo executedCommand, System.Boolean executedSuccess, System.Int64 executedDurationMs, Newtonsoft.Json.Linq.JObject executedParameters) [0x00014] in .\\Library\\PackageCache\\com.unity.pipeline@ab05e9cd7f74\\Runtime\\Common\\BasePipelineServer.cs:2150 \r\n  at Unity.Pipeline.BasePipelineServer.HandleExecRequest (System.Net.HttpListenerRequest request, System.Net.HttpListenerResponse response) [0x014f1] in .\\Library\\PackageCache\\com.unity.pipeline@ab05e9cd7f74\\Runtime\\Common\\BasePipelineServer.cs:2072 \r\n  at Unity.Pipeline.BasePipelineServer.ProcessRequest (System.Net.HttpListenerContext context) [0x0069b] in .\\Library\\PackageCache\\com.unity.pipeline@ab05e9cd7f74\\Runtime\\Common\\BasePipelineServer.cs:596 ",
+      "stackTrace": "UnityEngine.Debug:LogError (object)\nUnity.Pipeline.BasePipelineServer/<ProcessRequest>d__77:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:629)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<HandleExecRequest>d__115:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2072)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<SendExecResponse>d__119:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2162)\nSystem.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 660,
+      "timestampUtc": "2026-11-02T22:51:55.6897172Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Waves.WaveManager.EnsureGenerated () (at Assets/Game/Scripts/Waves/WaveManager.cs:76)\nShorelineDefense.Waves.WaveManager.get_CurrentWave () (at Assets/Game/Scripts/Waves/WaveManager.cs:108)\nShorelineDefense.Waves.WaveManager.get_CurrentWaveNumber () (at Assets/Game/Scripts/Waves/WaveManager.cs:109)\nShorelineDefense.Core.BalanceRunLog.Flush (System.String result) (at Assets/Game/Scripts/Core/BalanceRunLog.cs:79)\nShorelineDefense.Core.BalanceRunLog.Dispose () (at Assets/Game/Scripts/Core/BalanceRunLog.cs:95)\nShorelineDefense.Persistence.RunSession.OnDestroy () (at Assets/Game/Scripts/Persistence/RunSession.cs:155)\n",
+      "seeded": false
+    },
+    {
+      "seq": 661,
+      "timestampUtc": "2026-11-02T22:52:12.4414547Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "NullReferenceException: Object reference not set to an instance of an object",
+      "stackTrace": "ShorelineDefense.Waves.WaveManager.EnsureGenerated () (at Assets/Game/Scripts/Waves/WaveManager.cs:76)\nShorelineDefense.Waves.WaveManager.get_CurrentWave () (at Assets/Game/Scripts/Waves/WaveManager.cs:108)\nShorelineDefense.Waves.WaveManager.get_CurrentWaveNumber () (at Assets/Game/Scripts/Waves/WaveManager.cs:109)\nShorelineDefense.Core.BalanceRunLog.Flush (System.String result) (at Assets/Game/Scripts/Core/BalanceRunLog.cs:79)\nShorelineDefense.Core.BalanceRunLog.Dispose () (at Assets/Game/Scripts/Core/BalanceRunLog.cs:95)\nShorelineDefense.Persistence.RunSession.OnDestroy () (at Assets/Game/Scripts/Persistence/RunSession.cs:155)\n",
+      "seeded": false
+    },
+    {
+      "seq": 662,
+      "timestampUtc": "2026-11-02T22:52:37.3167187Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 663,
+      "timestampUtc": "2026-11-02T22:52:46.0357083Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 664,
+      "timestampUtc": "2026-11-02T22:52:46.1233233Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run started: 110 test(s)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 665,
+      "timestampUtc": "2026-11-02T22:53:21.5353343Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: mass-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 666,
+      "timestampUtc": "2026-11-02T22:53:23.3086873Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: swarm-surge",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 667,
+      "timestampUtc": "2026-11-02T22:53:24.1979629Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: armored-migration",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 668,
+      "timestampUtc": "2026-11-02T22:53:25.1068311Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: deep-water-disturbance",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 669,
+      "timestampUtc": "2026-11-02T22:53:27.530491Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: brood-tide",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 670,
+      "timestampUtc": "2026-11-02T22:53:29.0384839Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: fog",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 671,
+      "timestampUtc": "2026-11-02T22:53:30.5845068Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: flooded-shore",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 672,
+      "timestampUtc": "2026-11-02T22:53:31.9113841Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: ammunition-shortage",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 673,
+      "timestampUtc": "2026-11-02T22:53:33.0232434Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: emergency-supply",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 674,
+      "timestampUtc": "2026-11-02T22:53:34.2668533Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: field-engineers",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 675,
+      "timestampUtc": "2026-11-02T22:53:35.8275796Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: calm-before-storm",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 676,
+      "timestampUtc": "2026-11-02T22:53:37.1158664Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: multi-sector",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 677,
+      "timestampUtc": "2026-11-02T22:53:40.8813403Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: concentrated-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 678,
+      "timestampUtc": "2026-11-02T22:53:56.0887682Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 5: fog",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 679,
+      "timestampUtc": "2026-11-02T22:53:57.3837847Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 7: mass-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 680,
+      "timestampUtc": "2026-11-02T22:54:00.5248986Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 10: ammunition-shortage",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 681,
+      "timestampUtc": "2026-11-02T22:54:04.6079729Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 14: brood-tide",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 682,
+      "timestampUtc": "2026-11-02T22:54:09.1422881Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 17: emergency-supply",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 683,
+      "timestampUtc": "2026-11-02T22:54:13.3454964Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 20: concentrated-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 684,
+      "timestampUtc": "2026-11-02T22:54:23.7567739Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 24: multi-sector",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 685,
+      "timestampUtc": "2026-11-02T22:54:29.9623169Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 27: ammunition-shortage",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 686,
+      "timestampUtc": "2026-11-02T22:54:37.8487Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 30 waves: Wave 5 — fog, Wave 7 — mass-emergence, Wave 10 — ammunition-shortage, Wave 14 — brood-tide, Wave 17 — emergency-supply, Wave 20 — concentrated-emergence, Wave 24 — multi-sector, Wave 27 — ammunition-shortage, Wave 31 — deep-water-disturbance",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:162)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 687,
+      "timestampUtc": "2026-11-02T22:59:57.1354422Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase4A 100 real boat waves: breaches=99462, homicides=4397985, earned=42464, peak enemies=5, peak boats=32",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.SurvivalPlayTests/<HundredAcceleratedBoatWavesCompleteAndReleaseTransientObjects>d__11:MoveNext () (at Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs:73)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 688,
+      "timestampUtc": "2026-11-02T23:00:25.5794606Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+      "stackTrace": "",
+      "seeded": false
+    },
+    {
+      "seq": 689,
+      "timestampUtc": "2026-11-02T23:00:25.6348221Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run finished: 110 total, 109 passed, 1 failed",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 690,
+      "timestampUtc": "2026-11-02T23:00:26.2503149Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 691,
+      "timestampUtc": "2026-11-02T23:02:16.2151325Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 692,
+      "timestampUtc": "2026-11-02T23:02:22.7905116Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 693,
+      "timestampUtc": "2026-11-02T23:02:22.8341334Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run started: 110 test(s)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 694,
+      "timestampUtc": "2026-11-02T23:02:26.8455604Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+      "stackTrace": "",
+      "seeded": false
+    },
+    {
+      "seq": 695,
+      "timestampUtc": "2026-11-02T23:02:26.8786745Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run finished: 7 total, 7 passed, 0 failed",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 696,
+      "timestampUtc": "2026-11-02T23:02:27.3169552Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 697,
+      "timestampUtc": "2026-11-02T23:02:42.309616Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 698,
+      "timestampUtc": "2026-11-02T23:02:48.2762208Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 699,
+      "timestampUtc": "2026-11-02T23:02:48.3228961Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run started: 110 test(s)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 700,
+      "timestampUtc": "2026-11-02T23:02:59.3062566Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+      "stackTrace": "",
+      "seeded": false
+    },
+    {
+      "seq": 701,
+      "timestampUtc": "2026-11-02T23:02:59.3385481Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run finished: 1 total, 1 passed, 0 failed",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 702,
+      "timestampUtc": "2026-11-02T23:02:59.7952076Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 703,
+      "timestampUtc": "2026-11-02T23:03:23.2589432Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 704,
+      "timestampUtc": "2026-11-02T23:03:23.2874879Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run started: 168 test(s)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 705,
+      "timestampUtc": "2026-11-02T23:03:23.3359495Z",
+      "level": "error",
+      "logType": "Exception",
+      "message": "InvalidOperationException: Expected observer failure",
+      "stackTrace": "ShorelineDefense.Tests.EconomyAndPlacementTests+<>c.<BrokenObserverCannotTurnCommittedPaymentIntoFailure>b__0_0 (System.Int32 _) (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:18)\nShorelineDefense.Economy.EconomyManager.NotifyMoneyChanged () (at Assets/Game/Scripts/Economy/EconomyManager.cs:60)\nUnityEngine.Debug:LogException(Exception, Object)\nShorelineDefense.Economy.EconomyManager:NotifyMoneyChanged() (at Assets/Game/Scripts/Economy/EconomyManager.cs:61)\nShorelineDefense.Economy.EconomyManager:TrySpend(Int32) (at Assets/Game/Scripts/Economy/EconomyManager.cs:39)\nShorelineDefense.Tests.EconomyAndPlacementTests:BrokenObserverCannotTurnCommittedPaymentIntoFailure() (at Assets/Game/Tests/EditMode/EconomyAndPlacementTests.cs:21)\nSystem.Reflection.MethodBase:Invoke(Object, Object[])\nNUnit.Framework.Internal.Reflect:InvokeMethod(MethodInfo, Object, Object[])\nNUnit.Framework.Internal.MethodWrapper:Invoke(Object, Object[])\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunNonAsyncTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:RunTestMethod(ITestExecutionContext)\nNUnit.Framework.Internal.Commands.TestMethodCommand:Execute(ITestExecutionContext)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions()\n",
+      "seeded": false
+    },
+    {
+      "seq": 706,
+      "timestampUtc": "2026-11-02T23:03:24.8441839Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+      "stackTrace": "",
+      "seeded": false
+    },
+    {
+      "seq": 707,
+      "timestampUtc": "2026-11-02T23:03:24.8808118Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run finished: 168 total, 168 passed, 0 failed",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 708,
+      "timestampUtc": "2026-11-02T23:03:24.8998989Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 709,
+      "timestampUtc": "2026-11-02T23:03:41.4167299Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPrebuildSetup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 710,
+      "timestampUtc": "2026-11-02T23:03:47.9497856Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[PipelineTestRunner] Reattaching result collector after domain reload",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.PipelineTestRunner:CheckForPendingTests () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/PipelineTestRunner.cs:500)\nUnityEditor.EditorApplication:Internal_CallDelayFunctions ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 711,
+      "timestampUtc": "2026-11-02T23:03:48.0030037Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run started: 110 test(s)",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunStarted (UnityEditor.TestTools.TestRunner.Api.ITestAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:54)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 712,
+      "timestampUtc": "2026-11-02T23:04:15.9011074Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: mass-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 713,
+      "timestampUtc": "2026-11-02T23:04:17.0947176Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: swarm-surge",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 714,
+      "timestampUtc": "2026-11-02T23:04:17.4905652Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: armored-migration",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 715,
+      "timestampUtc": "2026-11-02T23:04:17.8953241Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: deep-water-disturbance",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 716,
+      "timestampUtc": "2026-11-02T23:04:19.1867365Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: brood-tide",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 717,
+      "timestampUtc": "2026-11-02T23:04:19.9160907Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: fog",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 718,
+      "timestampUtc": "2026-11-02T23:04:20.6226812Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: flooded-shore",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 719,
+      "timestampUtc": "2026-11-02T23:04:21.4146963Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: ammunition-shortage",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 720,
+      "timestampUtc": "2026-11-02T23:04:22.1554522Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: emergency-supply",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 721,
+      "timestampUtc": "2026-11-02T23:04:22.928624Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: field-engineers",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 722,
+      "timestampUtc": "2026-11-02T23:04:23.8944558Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: calm-before-storm",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 723,
+      "timestampUtc": "2026-11-02T23:04:24.689892Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: multi-sector",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 724,
+      "timestampUtc": "2026-11-02T23:04:25.8969084Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B forced event passed: concentrated-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<EveryEventCanBeForcedTelegraphedAppliedAndClearedThroughRealBoats>d__10:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:78)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 725,
+      "timestampUtc": "2026-11-02T23:04:33.0600758Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 5: fog",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 726,
+      "timestampUtc": "2026-11-02T23:04:33.7713904Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 7: mass-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 727,
+      "timestampUtc": "2026-11-02T23:04:35.2545199Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 10: ammunition-shortage",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 728,
+      "timestampUtc": "2026-11-02T23:04:37.2084836Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 14: brood-tide",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 729,
+      "timestampUtc": "2026-11-02T23:04:39.4392586Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 17: emergency-supply",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 730,
+      "timestampUtc": "2026-11-02T23:04:41.4384781Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 20: concentrated-emergence",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 731,
+      "timestampUtc": "2026-11-02T23:04:45.9198872Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 24: multi-sector",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 732,
+      "timestampUtc": "2026-11-02T23:04:48.9253214Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 27: ammunition-shortage",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:155)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 733,
+      "timestampUtc": "2026-11-02T23:04:52.7451747Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase5B natural 30 waves: Wave 5 — fog, Wave 7 — mass-emergence, Wave 10 — ammunition-shortage, Wave 14 — brood-tide, Wave 17 — emergency-supply, Wave 20 — concentrated-emergence, Wave 24 — multi-sector, Wave 27 — ammunition-shortage, Wave 31 — deep-water-disturbance",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.EndlessEventPlayTests/<ThirtyNaturalEventWavesCompleteWithCooldownsBossSuppressionAndNoLeakage>d__15:MoveNext () (at Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs:162)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 734,
+      "timestampUtc": "2026-11-02T23:08:49.1467921Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Phase4A 100 real boat waves: breaches=100528, homicides=4338605, earned=41208, peak enemies=5, peak boats=32",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nShorelineDefense.Tests.SurvivalPlayTests/<HundredAcceleratedBoatWavesCompleteAndReleaseTransientObjects>d__11:MoveNext () (at Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs:73)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 735,
+      "timestampUtc": "2026-11-02T23:09:16.0468324Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Saving results to: C:/Users/Slavisa/AppData/LocalLow/Border Defenders/Shoreline Defense\\TestResults.xml",
+      "stackTrace": "",
+      "seeded": false
+    },
+    {
+      "seq": 736,
+      "timestampUtc": "2026-11-02T23:09:16.0949343Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "[TestResultCollector] Run finished: 110 total, 110 passed, 0 failed",
+      "stackTrace": "UnityEngine.Debug:Log (object)\nUnity.Pipeline.Editor.Testing.TestResultCollector:RunFinished (UnityEditor.TestTools.TestRunner.Api.ITestResultAdaptor) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Testing/TestResultCollector.cs:106)\nUnityEngine.SetupCoroutine:InvokeMoveNext (System.Collections.IEnumerator,intptr)\n",
+      "seeded": false
+    },
+    {
+      "seq": 737,
+      "timestampUtc": "2026-11-02T23:09:16.6699886Z",
+      "level": "log",
+      "logType": "Log",
+      "message": "Executing IPostBuildCleanup for: Unity.PerformanceTesting.Editor.TestRunBuilder.",
+      "stackTrace": "UnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    }
+  ],
+  "cursor": 737,
+  "session": "c7a8fd9f515d437e9f58b76de74a2cef",
+  "returned": 297,
+  "dropped": false,
+  "reset": false,
+  "counts": {
+    "error": 126,
+    "warn": 1,
+    "log": 170
+  },
+  "groundTruth": {
+    "sampledUtc": "2026-11-02T23:09:22.1888922Z",
+    "ageMs": 288,
+    "compilationFailed": false,
+    "compiling": false,
+    "consoleErrors": 0,
+    "consoleWarnings": 0,
+    "consoleLogs": 28,
+    "seeded": true
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "entries": [
+    {
+      "seq": 739,
+      "timestampUtc": "2026-11-02T23:20:03.868187Z",
+      "level": "error",
+      "logType": "Error",
+      "message": "Failed to handle /api/exec request: Unable to write data to the transport connection: An established connection was aborted by the software in your host machine.\r\n",
+      "stackTrace": "UnityEngine.Debug:LogError (object)\nUnity.Pipeline.BasePipelineServer/<HandleExecRequest>d__115:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2071)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<SendExecResponse>d__119:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2162)\nSystem.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 740,
+      "timestampUtc": "2026-11-02T23:20:03.870701Z",
+      "level": "error",
+      "logType": "Error",
+      "message": "Pipeline: unhandled error serving POST /api/exec: System.InvalidOperationException: Cannot be changed after headers are sent.\r\n  at System.Net.HttpListenerResponse.set_StatusCode (System.Int32 value) [0x00021] in <0acc3e6edc9c46189b27d1ec0227196c>:0 \r\n  at Unity.Pipeline.BasePipelineServer.SendExecResponse (System.Net.HttpListenerResponse response, System.Int32 statusCode, Unity.Pipeline.Models.BaseResponse body, System.String requestJson, System.Boolean verbose, System.Boolean omitNulls, Unity.Pipeline.Commands.CommandInfo executedCommand, System.Boolean executedSuccess, System.Int64 executedDurationMs, Newtonsoft.Json.Linq.JObject executedParameters) [0x00014] in .\\Library\\PackageCache\\com.unity.pipeline@ab05e9cd7f74\\Runtime\\Common\\BasePipelineServer.cs:2150 \r\n  at Unity.Pipeline.BasePipelineServer.HandleExecRequest (System.Net.HttpListenerRequest request, System.Net.HttpListenerResponse response) [0x014f1] in .\\Library\\PackageCache\\com.unity.pipeline@ab05e9cd7f74\\Runtime\\Common\\BasePipelineServer.cs:2072 \r\n  at Unity.Pipeline.BasePipelineServer.ProcessRequest (System.Net.HttpListenerContext context) [0x0069b] in .\\Library\\PackageCache\\com.unity.pipeline@ab05e9cd7f74\\Runtime\\Common\\BasePipelineServer.cs:596 ",
+      "stackTrace": "UnityEngine.Debug:LogError (object)\nUnity.Pipeline.BasePipelineServer/<ProcessRequest>d__77:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:629)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<HandleExecRequest>d__115:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2072)\nSystem.Runtime.CompilerServices.AsyncTaskMethodBuilder:SetException (System.Exception)\nUnity.Pipeline.BasePipelineServer/<SendExecResponse>d__119:MoveNext () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2162)\nSystem.Threading._ThreadPoolWaitCallback:PerformWaitCallback ()\n",
+      "seeded": false
+    },
+    {
+      "seq": 741,
+      "timestampUtc": "2026-11-02T23:21:06.0893539Z",
+      "level": "warn",
+      "logType": "Warning",
+      "message": "Editor is already in edit mode",
+      "stackTrace": "UnityEngine.Debug:LogWarning (object)\nUnity.Pipeline.Editor.Commands.PlayModeCommands:ExitPlayMode () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Editor/Commands/PlayModeCommands.cs:33)\nSystem.Reflection.MethodBase:Invoke (object,object[])\nUnity.Pipeline.BasePipelineServer:ExecuteCommandDirect (Unity.Pipeline.Commands.CommandInfo,object[]) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2634)\nUnity.Pipeline.BasePipelineServer/<>c__DisplayClass134_0:<ExecuteCommand>b__1 () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/BasePipelineServer.cs:2508)\nUnity.Pipeline.Threading.Dispatcher/WorkItem`1<object>:ExecuteCore () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:284)\nUnity.Pipeline.Threading.Dispatcher/WorkItem:Execute () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:229)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue (int) (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:195)\nUnity.Pipeline.Threading.Dispatcher:ProcessWorkQueue () (at ./Library/PackageCache/com.unity.pipeline@ab05e9cd7f74/Runtime/Common/Dispatcher.cs:210)\nUnityEditor.EditorApplication:Internal_CallUpdateFunctions ()\n",
+      "seeded": false
+    }
+  ],
+  "cursor": 741,
+  "session": "c7a8fd9f515d437e9f58b76de74a2cef",
+  "returned": 3,
+  "dropped": false,
+  "reset": false,
+  "counts": {
+    "error": 2,
+    "warn": 1,
+    "log": 0
+  },
+  "groundTruth": {
+    "sampledUtc": "2026-11-02T23:21:07.8609201Z",
+    "ageMs": 180,
+    "compilationFailed": false,
+    "compiling": false,
+    "consoleErrors": 2,
+    "consoleWarnings": 1,
+    "consoleLogs": 0,
+    "seeded": true
+  }
+}

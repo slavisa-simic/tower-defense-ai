@@ -1,0 +1,22 @@
+[
+  {
+    "file": "Assets/Game/Scripts/Building/PlacementController.cs",
+    "preserved": true
+  },
+  {
+    "file": "Assets/Game/Scripts/Persistence/SettingsService.cs",
+    "preserved": true
+  },
+  {
+    "file": "Assets/Game/Scripts/UI/ProductMenuController.cs",
+    "preserved": true
+  },
+  {
+    "file": "Assets/Game/Scripts/UI/ResearchTreeView.cs",
+    "preserved": true
+  },
+  {
+    "file": "Assets/Game/Scripts/UI/RuntimeTooltips.cs",
+    "preserved": true
+  }
+]

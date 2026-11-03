@@ -39,9 +39,9 @@ namespace ShorelineDefense.Tests
         {
             border.ConfigureThreshold(0);spawner.ConfigureWave(1,1.25f,1.1f);var enemy=Spawn(spawner.DefaultPrefab);Assert.That(enemy.Health.MaxHealth,Is.EqualTo(125));
             Assert.IsFalse(spawner.TrySpawnAt(spawner.DefaultPrefab,spawner.Battlefield.Grid.CellToWorld(new Vector2Int(20,9)),out _));
-            enemy.Health.TakeDefenseDamage(10000);enemy.Health.TakeDefenseDamage(10000);Assert.That(stats.TotalKills,Is.EqualTo(1));Assert.That(stats.CrawlerKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(25));
+            enemy.Health.TakeDefenseDamage(10000);enemy.Health.TakeDefenseDamage(10000);Assert.That(stats.TotalKills,Is.EqualTo(1));Assert.That(stats.CrawlerKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(spawner.DefaultPrefab.Definition.KillReward));
             foreach(var prefab in waves.EndlessSettings.enemies.Take(3).Skip(1)){var killed=Spawn(prefab);killed.Health.TakeDefenseDamage(10000);yield return null;}
-            Assert.That(stats.SkitterKills,Is.EqualTo(1));Assert.That(stats.BulwarkKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(135));
+            Assert.That(stats.SkitterKills,Is.EqualTo(1));Assert.That(stats.BulwarkKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(waves.EndlessSettings.enemies.Take(3).Sum(p=>p.Definition.KillReward)));
             Assert.IsTrue(money.TrySpend(50));Assert.That(stats.TotalMoneySpent,Is.EqualTo(50));Assert.IsFalse(money.TrySpend(int.MaxValue));Assert.That(stats.TotalMoneySpent,Is.EqualTo(50));
             for(int i=0;i<45;i++){Spawn(spawner.DefaultPrefab).Tick(100);yield return null;}
             Assert.That(stats.Homicides,Is.EqualTo(1125));Assert.IsTrue(Object.FindFirstObjectByType<GameStateController>().IsPlaying);Assert.That(Object.FindFirstObjectByType<PrototypeHud>().HealthText,Does.Not.Contain("/ 0"));

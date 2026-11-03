@@ -8,6 +8,7 @@ using UnityEngine;
 
 namespace ShorelineDefense.Building
 {
+    public enum StructureManagementAction { Upgrade, Repair }
     public class BuildManager : MonoBehaviour
     {
         [SerializeField] private GridManager grid;
@@ -21,6 +22,8 @@ namespace ShorelineDefense.Building
         public void ConfigureMeta(Progression.MetaModifierService modifiers) => Meta = modifiers;
         private RunStatistics statistics;
         public event Action StableActionCommitted;
+        public event Action<DefenseBase> DefensePlaced;
+        public event Action<DefenseBase, StructureManagementAction, int> ManagementCommitted;
         private void Awake() => statistics = FindFirstObjectByType<RunStatistics>();
         [SerializeField] private ShorelineDefense.Waves.WaveManager waves;
         [SerializeField, Min(.01f)] private float repairBasisFraction = .5f;
@@ -40,14 +43,14 @@ namespace ShorelineDefense.Building
         {
             if (placing || !CanUpgrade(defense)) return false;
             placing = true;
-            try { int cost = UpgradeCost(defense); if (!economy.TrySpend(cost)) return false; defense.ApplyUpgrade(cost); statistics?.RecordUpgrade(); StableActionCommitted?.Invoke(); return true; }
+            try { int cost = UpgradeCost(defense); if (!economy.TrySpend(cost)) return false; defense.ApplyUpgrade(cost); statistics?.RecordUpgrade(); ManagementCommitted?.Invoke(defense, StructureManagementAction.Upgrade, cost); StableActionCommitted?.Invoke(); return true; }
             finally { placing = false; }
         }
         public bool TryRepair(DefenseBase defense)
         {
             if (placing || !CanRepair(defense)) return false;
             placing = true;
-            try { if (!economy.TrySpend(RepairCost(defense))) return false; defense.Repair(); statistics?.RecordRepair(); StableActionCommitted?.Invoke(); return true; }
+            try { int cost = RepairCost(defense); if (!economy.TrySpend(cost)) return false; defense.Repair(); statistics?.RecordRepair(); ManagementCommitted?.Invoke(defense, StructureManagementAction.Repair, cost); StableActionCommitted?.Invoke(); return true; }
             finally { placing = false; }
         }
         [SerializeField, Range(0, 1)] private float dismantleRefundFraction = .5f;
@@ -127,6 +130,7 @@ namespace ShorelineDefense.Building
                 defense = candidate;
                 statistics?.RecordBuild();
                 StableActionCommitted?.Invoke();
+                DefensePlaced?.Invoke(candidate);
                 return PlacementResult.Valid;
             }
             catch (Exception exception)

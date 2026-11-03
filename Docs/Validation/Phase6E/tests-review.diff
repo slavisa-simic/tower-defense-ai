@@ -1,0 +1,282 @@
+diff --git a/Assets/Game/Tests/EditMode/Phase2CRulesTests.cs b/Assets/Game/Tests/EditMode/Phase2CRulesTests.cs
+index 4b84377..d828567 100644
+--- a/Assets/Game/Tests/EditMode/Phase2CRulesTests.cs
++++ b/Assets/Game/Tests/EditMode/Phase2CRulesTests.cs
+@@ -127,9 +127,9 @@ namespace ShorelineDefense.Tests
+                 Assert.That(data.Footprint, Is.EqualTo(Vector2Int.one));
+             }
+             var sniper = AssetDatabase.LoadAssetAtPath<DefenseDefinition>("Assets/Game/Data/Defenses/SniperTower.asset");
+-            Assert.That(sniper.Targeting, Is.EqualTo(TargetingMode.ClosestToBase));
++            Assert.That(sniper.Targeting, Is.EqualTo(TargetingMode.HighValue));
+             Assert.That(sniper.RangeInCells, Is.InRange(10, 12));
+-            Assert.That(sniper.Damage, Is.EqualTo(100));
++            Assert.That(sniper.Damage, Is.EqualTo(180));
+             Assert.That(sniper.FireRate, Is.EqualTo(0.5f));
+             for (int i = 1; i <= 5; i++)
+             {
+diff --git a/Assets/Game/Tests/PlayMode/AquaticPlayTests.cs b/Assets/Game/Tests/PlayMode/AquaticPlayTests.cs
+index e133851..d7ca04f 100644
+--- a/Assets/Game/Tests/PlayMode/AquaticPlayTests.cs
++++ b/Assets/Game/Tests/PlayMode/AquaticPlayTests.cs
+@@ -48,7 +48,9 @@ namespace ShorelineDefense.Tests
+             {
+                 yield return Load(map);var build=Find<BuildManager>();build.Economy.AddMoney(2000);var mg=Find<BuildHud>().Defenses.Single(d=>d.Id=="machine-gun-nest");
+                 Assert.AreEqual(PlacementResult.Valid,build.TryPlaceDefense(mg,new Vector2Int(13,5),out var defense));
+-                Assert.IsTrue(Spawn.TrySpawnAt(Prefab(EnemyKind.Spitter),At(7,5),out var far));far.GetComponent<SpitterAttack>().Tick(2);Assert.Zero(far.GetComponent<SpitterAttack>().ShotsFired);far.Health.TakeDefenseDamage(int.MaxValue);yield return null;
++                Assert.IsTrue(Spawn.TrySpawnAt(Prefab(EnemyKind.Spitter),At(7,5),out var far));
++                far.transform.position=defense.transform.position+Vector3.left*(far.Definition.StructureRangeCells+1)*defense.Grid.CellSize;
++                far.GetComponent<SpitterAttack>().Tick(2);Assert.Zero(far.GetComponent<SpitterAttack>().ShotsFired);far.Health.TakeDefenseDamage(int.MaxValue);yield return null;
+                 Assert.IsTrue(Spawn.TrySpawnAt(Prefab(EnemyKind.Spitter),At(9,5),out var enemy));var attack=enemy.GetComponent<SpitterAttack>();int hp=defense.CurrentHealth;
+                 attack.Tick(2);Assert.AreEqual(1,attack.ShotsFired);var shot=Find<CorrosiveSpit>();Assert.NotNull(shot);Assert.NotNull(shot.GetComponent<SpriteRenderer>().sprite);Assert.AreEqual(hp,defense.CurrentHealth);
+                 shot.Tick(.7f);Assert.AreEqual(hp-24,defense.CurrentHealth);shot.Tick(10);Assert.AreEqual(hp-24,defense.CurrentHealth,"No double impact");Assert.IsTrue(build.TryRepair(defense));Assert.AreEqual(hp,defense.CurrentHealth);
+diff --git a/Assets/Game/Tests/PlayMode/DefenseLoopTests.cs b/Assets/Game/Tests/PlayMode/DefenseLoopTests.cs
+index d8f584f..1e2cb90 100644
+--- a/Assets/Game/Tests/PlayMode/DefenseLoopTests.cs
++++ b/Assets/Game/Tests/PlayMode/DefenseLoopTests.cs
+@@ -92,11 +92,12 @@ namespace ShorelineDefense.Tests
+             Assert.That(sawDamage, Is.True);
+             Assert.That(combat.ShotsFired, Is.EqualTo(5));
+             Assert.That(enemies.Count, Is.Zero);
+-            Assert.That(Economy.Money, Is.EqualTo(375));
+-            Assert.That(hud.MoneyText, Is.EqualTo("RSD 375"));
++            int afterKill = 500 - Data.Cost + spawner.DefaultPrefab.Definition.KillReward;
++            Assert.That(Economy.Money, Is.EqualTo(afterKill));
++            Assert.That(hud.MoneyText, Is.EqualTo($"RSD {afterKill:N0}"));
+             Assert.That(combat.Target == null, Is.True);
+             Assert.That(builder.TryPlaceDefense(Data, new Vector2Int(8, 6), out _), Is.EqualTo(PlacementResult.Valid));
+-            Assert.That(Economy.Money, Is.EqualTo(225));
++            Assert.That(Economy.Money, Is.EqualTo(afterKill - Data.Cost));
+         }
+ 
+         [UnityTest]
+@@ -147,7 +148,7 @@ namespace ShorelineDefense.Tests
+             enemy.Health.TakeDefenseDamage(100);
+             Assert.That(deaths, Is.EqualTo(1));
+             Assert.That(enemy.IsTargetable, Is.False);
+-            Assert.That(Economy.Money, Is.EqualTo(balance + 25));
++            Assert.That(Economy.Money, Is.EqualTo(balance + spawner.DefaultPrefab.Definition.KillReward));
+             yield return null;
+             Assert.That(enemy == null || !enemy.gameObject.activeInHierarchy, Is.True);
+             spawner.enabled = true;
+@@ -155,7 +156,7 @@ namespace ShorelineDefense.Tests
+             spawner.enabled = false;
+             enemy = Object.FindFirstObjectByType<EnemyController>();
+             enemy.Health.TakeDamage(100);
+-            Assert.That(Economy.Money, Is.EqualTo(balance + 25), "Unattributed damage/despawn must not produce income.");
++            Assert.That(Economy.Money, Is.EqualTo(balance + spawner.DefaultPrefab.Definition.KillReward), "Unattributed damage/despawn must not produce income.");
+             yield return null;
+             spawner.enabled = true;
+             yield return new WaitForSeconds(3.1f);
+diff --git a/Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs b/Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs
+index eb1c922..8a62bb7 100644
+--- a/Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs
++++ b/Assets/Game/Tests/PlayMode/EndlessEventPlayTests.cs
+@@ -108,8 +108,9 @@ namespace ShorelineDefense.Tests
+             Assert.That(build.UpgradeCost(d), Is.EqualTo(System.Math.Ceiling(upgrade * 1.2))); // includes exact 225 -> 270 rounding
+             Assert.That(build.RepairCost(d), Is.EqualTo(repair)); Assert.That(build.RefundFor(d), Is.EqualTo(refund));
+             var root = hud.GetComponent<UIDocument>().rootVisualElement;
+-            Assert.That(root.Q<Button>("structure-upgrade").text, Does.Contain("270"));
+-            int balance = build.Economy.Money; Assert.IsTrue(build.TryUpgrade(d)); Assert.That(build.Economy.Money, Is.EqualTo(balance - 270));
++            int eventUpgrade=build.UpgradeCost(d);
++            Assert.That(root.Q<Button>("structure-upgrade").text, Does.Contain(eventUpgrade.ToString()));
++            int balance = build.Economy.Money; Assert.IsTrue(build.TryUpgrade(d)); Assert.That(build.Economy.Money, Is.EqualTo(balance - eventUpgrade));
+             Assert.IsTrue(waves.TryStartWave()); int combatRepair = build.RepairCost(d); Assert.That(build.RepairMultiplier, Is.EqualTo(1.5f));
+             Assert.That(root.Q<Button>("structure-repair").text, Does.Contain(combatRepair.ToString()));
+             balance = build.Economy.Money; Assert.IsTrue(build.TryRepair(d)); Assert.That(build.Economy.Money, Is.EqualTo(balance - combatRepair));
+diff --git a/Assets/Game/Tests/PlayMode/HeavyDefensePlayTests.cs b/Assets/Game/Tests/PlayMode/HeavyDefensePlayTests.cs
+index ce521a0..afa678a 100644
+--- a/Assets/Game/Tests/PlayMode/HeavyDefensePlayTests.cs
++++ b/Assets/Game/Tests/PlayMode/HeavyDefensePlayTests.cs
+@@ -83,7 +83,8 @@ namespace ShorelineDefense.Tests
+             var defense=Place("rocket");var a=Spawn(defense.transform.position+Vector3.left*6);var b=Spawn(a.transform.position+Vector3.up*.5f,true);
+             defense.GetComponent<AreaProjectileWeapon>().Tick(.1f);var shot=Object.FindFirstObjectByType<TimedAreaProjectile>();var point=shot.ImpactPoint;
+             a.Health.TakeDefenseDamage(100);shot.Tick(.3f);Assert.IsFalse(shot.Resolved);Assert.That(shot.ImpactPoint,Is.EqualTo(point));
+-            shot.Tick(.4f);Assert.That(b.Health.CurrentHealth,Is.EqualTo(b.Health.MaxHealth-Mathf.CeilToInt(250*(1-b.Definition.Armor))));shot.Tick(1);Assert.That(b.Health.CurrentHealth,Is.EqualTo(b.Health.MaxHealth-Mathf.CeilToInt(250*(1-b.Definition.Armor))));yield return null;
++            int expectedDamage=Mathf.CeilToInt(defense.Damage*(1-b.Definition.Armor));
++            shot.Tick(.4f);Assert.That(b.Health.CurrentHealth,Is.EqualTo(b.Health.MaxHealth-expectedDamage));shot.Tick(1);Assert.That(b.Health.CurrentHealth,Is.EqualTo(b.Health.MaxHealth-expectedDamage));yield return null;
+         }
+         [UnityTest] public IEnumerator FlameConeMultiHitBurnRefreshExpiryAndReward()
+         {
+@@ -92,16 +93,16 @@ namespace ShorelineDefense.Tests
+             flame.Tick(.2f);Assert.That(a.Health.CurrentHealth,Is.EqualTo(88));Assert.That(b.Health.CurrentHealth,Is.EqualTo(88));Assert.That(outside.Health.CurrentHealth,Is.EqualTo(100));
+             var burn=a.GetComponent<EnemyDamageOverTime>();for(int i=0;i<100;i++)burn.ApplyBurn(2,15);Assert.That(burn.Dps,Is.EqualTo(15));
+             burn.Tick(1);Assert.That(a.Health.CurrentHealth,Is.EqualTo(73));burn.Tick(5);Assert.That(a.Health.CurrentHealth,Is.EqualTo(58));Assert.IsFalse(burn.Burning);
+-            int money=build.Economy.Money;a.Health.TakeDamage(50);burn.ApplyBurn(2,15);burn.Tick(1);Assert.IsFalse(a.IsTargetable);Assert.That(build.Economy.Money,Is.EqualTo(money+25));
+-            burn.Tick(2);Assert.That(build.Economy.Money,Is.EqualTo(money+25));yield return null;
++            int money=build.Economy.Money,reward=a.Definition.KillReward;a.Health.TakeDamage(50);burn.ApplyBurn(2,15);burn.Tick(1);Assert.IsFalse(a.IsTargetable);Assert.That(build.Economy.Money,Is.EqualTo(money+reward));
++            burn.Tick(2);Assert.That(build.Economy.Money,Is.EqualTo(money+reward));yield return null;
+         }
+         [UnityTest] public IEnumerator CannonPrioritizesHealthCooldownAndReacquiresAfterLoss()
+         {
+             var defense=Place("autocannon");var gun=defense.GetComponent<TurretCombat>();
+             var weak=Spawn(defense.transform.position+Vector3.left*2);var heavy=Spawn(defense.transform.position+Vector3.left*4,true);
+-            gun.Tick(.01f);Assert.That(gun.Target,Is.SameAs(heavy));Assert.That(heavy.Health.CurrentHealth,Is.EqualTo(heavy.Health.MaxHealth-Mathf.CeilToInt(55*(1-heavy.Definition.Armor))));Assert.That(weak.Health.CurrentHealth,Is.EqualTo(100));
++            gun.Tick(.01f);Assert.That(gun.Target,Is.SameAs(heavy));Assert.That(heavy.Health.CurrentHealth,Is.EqualTo(heavy.Health.MaxHealth-Mathf.CeilToInt(defense.Damage*(1-heavy.Definition.Armor*(1-defense.Definition.ArmorPenetration)))));Assert.That(weak.Health.CurrentHealth,Is.EqualTo(100));
+             gun.Tick(.2f);Assert.That(gun.ShotsFired,Is.EqualTo(1));gun.Tick(.3f);Assert.That(gun.ShotsFired,Is.EqualTo(2));
+-            heavy.Health.TakeDefenseDamage(1000);gun.Tick(.2f);Assert.That(gun.Target,Is.SameAs(weak));gun.Tick(.3f);Assert.That(weak.Health.CurrentHealth,Is.EqualTo(45));yield return null;
++            heavy.Health.TakeDefenseDamage(int.MaxValue);gun.Tick(.2f);Assert.That(gun.Target,Is.SameAs(weak));gun.Tick(.3f);Assert.That(weak.Health.CurrentHealth,Is.EqualTo(Mathf.Max(0,100-defense.Damage)));yield return null;
+         }
+         [UnityTest] public IEnumerator AreaAndBurnCancelOnGameOverWithoutDamageOrRewards()
+         {
+diff --git a/Assets/Game/Tests/PlayMode/MetaProgressionPlayTests.cs b/Assets/Game/Tests/PlayMode/MetaProgressionPlayTests.cs
+index a6522b6..41c4489 100644
+--- a/Assets/Game/Tests/PlayMode/MetaProgressionPlayTests.cs
++++ b/Assets/Game/Tests/PlayMode/MetaProgressionPlayTests.cs
+@@ -58,7 +58,7 @@ namespace ShorelineDefense.Tests
+             Assert.IsTrue(b.TryUpgrade(mg));Assert.IsTrue(b.TryUpgrade(mg));mg.TakeDamage(70);Assert.That(mg.MaxHealth,Is.EqualTo(540));var snapshot=Find<RunSession>().Capture();
+             Assert.IsTrue(Find<RunSession>().SaveNow());yield return Scene("MainMenu");Click("menu-continue");yield return Arrive("DanubeIndustrialPort");
+             mg=Object.FindObjectsByType<DefenseBase>(FindObjectsSortMode.None).Single();Assert.That(mg.MaxHealth,Is.EqualTo(540));Assert.That(mg.CurrentHealth,Is.EqualTo(470));Assert.That(Find<BuildManager>().Economy.Money,Is.EqualTo(snapshot.money));
+-            Assert.That(mg.TotalInvestment,Is.EqualTo(snapshot.structures[0].investment));Assert.That(mg.Damage,Is.EqualTo(34));
++            Assert.That(mg.TotalInvestment,Is.EqualTo(snapshot.structures[0].investment));Assert.That(mg.Damage,Is.EqualTo(Mathf.RoundToInt(mg.Definition.Damage*1.05f*mg.Definition.LevelData(3).damage)));
+         }
+         [UnityTest] public IEnumerator RepairUpgradeAndDismantleUseExactDisplayedPricesWithEvents()
+         {
+@@ -69,7 +69,7 @@ namespace ShorelineDefense.Tests
+             int expected=(int)Math.Ceiling(mg.TotalInvestment*.5*.5*.75*.9*Math.Round(w.Events.Modifiers.preparationRepair,6));
+             Assert.That(b.RepairCost(mg),Is.EqualTo(expected));Assert.That(Root.Q<Button>("structure-repair").text,Does.Contain(expected.ToString()));
+             int money=b.Economy.Money;Assert.IsTrue(b.TryRepair(mg));Assert.That(money-b.Economy.Money,Is.EqualTo(expected));Assert.That(mg.CurrentHealth,Is.EqualTo(mg.MaxHealth));
+-            int upgrade=b.UpgradeCost(mg);Assert.That(upgrade,Is.EqualTo((int)Math.Ceiling(113*.9*Math.Round(w.Events.Modifiers.upgradeCost,6))));
++            int upgrade=b.UpgradeCost(mg);Assert.That(upgrade,Is.EqualTo((int)Math.Ceiling(mg.Definition.LevelData(2).cost*.9*Math.Round(w.Events.Modifiers.upgradeCost,6))));
+             Assert.IsTrue(b.TryUpgrade(mg));Assert.That(mg.TotalInvestment,Is.EqualTo(150+upgrade));int refund=b.RefundFor(mg);Assert.That(refund,Is.EqualTo((int)Math.Floor(mg.TotalInvestment*.55)));
+             money=b.Economy.Money;Assert.IsTrue(b.TryDismantle(mg,out int actual));Assert.That(actual,Is.EqualTo(refund));Assert.That(b.Economy.Money-money,Is.EqualTo(refund));Assert.IsFalse(b.TryDismantle(mg,out _));
+             mg=Place("machine-gun-nest",new Vector2Int(14,8));mg.TakeDamage(180);w.Events.Tick(100);Assert.IsTrue(w.TryStartWave());Assert.That(b.RepairCost(mg),Is.EqualTo((int)Math.Ceiling(150*.5*.5*1.25*.9)));
+diff --git a/Assets/Game/Tests/PlayMode/NavigationCollisionPlayTests.cs b/Assets/Game/Tests/PlayMode/NavigationCollisionPlayTests.cs
+index 116c91c..c180251 100644
+--- a/Assets/Game/Tests/PlayMode/NavigationCollisionPlayTests.cs
++++ b/Assets/Game/Tests/PlayMode/NavigationCollisionPlayTests.cs
+@@ -122,6 +122,13 @@ namespace ShorelineDefense.Tests
+                 Assert.AreEqual(1,deaths,kind.ToString());Assert.AreEqual(money,Build.Economy.Money,"Enemy destruction must not refund");Assert.Greater(Grid.Revision,revision);
+                 Assert.IsNull(Grid.OccupantAt(anchor));Assert.IsNull(Grid.NavigationBlockerAt(anchor));Assert.IsNull(Find<StructureSelection>().Selected);Assert.IsNull(enemy.StructureAttack.Target);
+                 Assert.IsFalse(enemy.IsBurrowed);Assert.IsFalse(Build.TryDismantle(target,out _));
++                // A ranged Spitter now holds position against other surviving wall sections.
++                // Remove those valid ranged targets before checking that its route resumes.
++                if(kind==EnemyKind.Spitter)
++                {
++                    foreach(var remaining in Object.FindObjectsByType<DefenseBase>(FindObjectsSortMode.None))remaining.TakeDamage(int.MaxValue);
++                    Assert.AreEqual(money,Build.Economy.Money,"Clearing ranged targets must not refund");
++                }
+                 for(int i=0;i<400&&enemy.gameObject.activeInHierarchy;i++){Tick(enemy,.1f);yield return null;}Assert.IsFalse(enemy.gameObject.activeInHierarchy,kind+" must continue after wall");
+             }
+         }
+diff --git a/Assets/Game/Tests/PlayMode/Phase2CPlayTests.cs b/Assets/Game/Tests/PlayMode/Phase2CPlayTests.cs
+index 93f8f1d..17d1103 100644
+--- a/Assets/Game/Tests/PlayMode/Phase2CPlayTests.cs
++++ b/Assets/Game/Tests/PlayMode/Phase2CPlayTests.cs
+@@ -157,7 +157,7 @@ namespace ShorelineDefense.Tests
+             Assert.That(trigger.Health.IsAlive, Is.False);
+             Assert.That(inside.Health.CurrentHealth, Is.EqualTo(50));
+             Assert.That(outside.Health.CurrentHealth, Is.EqualTo(100));
+-            Assert.That(Money.Money, Is.EqualTo(balance + 25));
++            Assert.That(Money.Money, Is.EqualTo(balance + trigger.Definition.KillReward));
+             Assert.That(detonations, Is.EqualTo(1));
+             Assert.That(Grid.OccupantAt(cell), Is.Null);
+             mine.Tick(100);
+@@ -183,7 +183,7 @@ namespace ShorelineDefense.Tests
+         }
+ 
+         [UnityTest]
+-        public IEnumerator SniperPrioritizesRouteProgressAndHonorsRangeCooldownAndDeadTargetRelease()
++        public IEnumerator SniperPrioritizesHighHealthAndHonorsRangeCooldownAndDeadTargetRelease()
+         {
+             var defense = Build(3, new Vector2Int(18, 9));
+             var turret = defense.GetComponent<TurretCombat>();
+@@ -195,7 +195,7 @@ namespace ShorelineDefense.Tests
+             closestToBase.Health.Initialize(200);
+             turret.Tick(0.2f);
+             Assert.That(turret.Target, Is.SameAs(closestToBase));
+-            Assert.That(closestToBase.Health.CurrentHealth, Is.EqualTo(100));
++            Assert.That(closestToBase.Health.CurrentHealth, Is.EqualTo(200 - defense.Damage));
+             Assert.That(closestToTower.Health.CurrentHealth, Is.EqualTo(100));
+             Assert.That(outside.Health.CurrentHealth, Is.EqualTo(100));
+             turret.Tick(1.7f);
+@@ -208,7 +208,7 @@ namespace ShorelineDefense.Tests
+             turret.Tick(1.8f);
+             Assert.That(closestToTower.Health.IsAlive, Is.False);
+             Assert.That(turret.ShotsFired, Is.EqualTo(3));
+-            Assert.That(Money.Money, Is.EqualTo(250));
++            Assert.That(Money.Money, Is.EqualTo(500 - defense.Definition.Cost + 2 * spawner.DefaultPrefab.Definition.KillReward));
+             Assert.That(defense.transform.rotation, Is.EqualTo(Quaternion.identity));
+             yield return null;
+         }
+@@ -257,11 +257,11 @@ namespace ShorelineDefense.Tests
+                 spawned[count - 1].Health.TakeDefenseDamage(100);
+                 Assert.That(waves.State, Is.EqualTo(WaveState.WaveComplete));
+                 Assert.That(waves.EnemiesRemaining, Is.Zero);
+-                Assert.That(Money.Money, Is.EqualTo(balance + count * 25 + 100));
++                Assert.That(Money.Money, Is.EqualTo(balance + count * spawner.DefaultPrefab.Definition.KillReward + 100));
+                 Assert.That(unrelated.Health.IsAlive, Is.True, "Unrelated enemies must not hold a wave open.");
+                 waves.Tick(2);
+                 Assert.That(waves.State, Is.EqualTo(wave == 4 ? WaveState.AllWavesComplete : WaveState.Preparation));
+-                Assert.That(Money.Money, Is.EqualTo(balance + count * 25 + 100));
++                Assert.That(Money.Money, Is.EqualTo(balance + count * spawner.DefaultPrefab.Definition.KillReward + 100));
+                 yield return null;
+             }
+             Assert.That(waves.CompletedWaves, Is.EqualTo(5));
+@@ -332,7 +332,7 @@ namespace ShorelineDefense.Tests
+             Assert.That(waves.State, Is.EqualTo(WaveState.Preparation));
+             Assert.That(waves.CompletedWaves, Is.EqualTo(1));
+             Assert.That(spawner.TotalSpawned, Is.EqualTo(10));
+-            Assert.That(Money.Money, Is.EqualTo(350));
++            Assert.That(Money.Money, Is.EqualTo(10*spawner.DefaultPrefab.Definition.KillReward+100));
+             Assert.That(Object.FindFirstObjectByType<WaveHud>().StartAvailable, Is.True);
+         }
+     }
+diff --git a/Assets/Game/Tests/PlayMode/Phase3C1PlayTests.cs b/Assets/Game/Tests/PlayMode/Phase3C1PlayTests.cs
+index d824aba..3f47560 100644
+--- a/Assets/Game/Tests/PlayMode/Phase3C1PlayTests.cs
++++ b/Assets/Game/Tests/PlayMode/Phase3C1PlayTests.cs
+@@ -95,9 +95,11 @@ namespace ShorelineDefense.Tests
+                 foreach(var enemy in enemies.Active.ToArray())enemy.Health.TakeDefenseDamage(10000);
+                 if(waves.PendingCount>0)Assert.That(waves.CompletedWaves,Is.Zero);
+             }
+-            Assert.That(spawner.TotalSpawned,Is.EqualTo(waves.CurrentWave.ScheduledCount));Assert.That(boats.TotalArrivals,Is.EqualTo(Mathf.CeilToInt(waves.CurrentWave.ScheduledCount/(float)boats.PassengerLimit(spawner.DefaultPrefab))));
++            Assert.That(spawner.TotalSpawned,Is.EqualTo(waves.CurrentWave.ScheduledCount));
++            // Director admission can launch a partial pod; every nonempty dispatch remains bounded.
++            Assert.That(boats.TotalArrivals,Is.InRange(Mathf.CeilToInt(count/(float)boats.PassengerLimit(spawner.DefaultPrefab)),count));
+             Assert.That(waves.CompletedWaves,Is.EqualTo(1));Assert.That(waves.PendingCount,Is.Zero);Assert.That(waves.AliveCount,Is.Zero);
+-            Assert.That(builder.Economy.Money,Is.EqualTo(before+count*25+reward));waves.Tick(2);Assert.That(builder.Economy.Money,Is.EqualTo(before+count*25+reward));
++            Assert.That(builder.Economy.Money,Is.EqualTo(before+count*spawner.DefaultPrefab.Definition.KillReward+reward));waves.Tick(2);Assert.That(builder.Economy.Money,Is.EqualTo(before+count*spawner.DefaultPrefab.Definition.KillReward+reward));
+             yield return null;
+         }
+         [UnityTest] public IEnumerator BlockedLandingWaitsForValidRouteAndGameOverCancelsUnloading()
+diff --git a/Assets/Game/Tests/PlayMode/PrototypePlayTests.cs b/Assets/Game/Tests/PlayMode/PrototypePlayTests.cs
+index 66a6f49..8d604f7 100644
+--- a/Assets/Game/Tests/PlayMode/PrototypePlayTests.cs
++++ b/Assets/Game/Tests/PlayMode/PrototypePlayTests.cs
+@@ -37,6 +37,12 @@ namespace ShorelineDefense.Tests
+             yield return SceneManager.LoadSceneAsync(ScenePath, LoadSceneMode.Single);
+             yield return null;
+             PrepareSpawner();
++            // This legacy fixture observes world motion, not the product menu. Keep
++            // live desktop keys from navigating away during its Game Over wait.
++            var menuInput=Object.FindFirstObjectByType<ProductMenuController>();
++            if(menuInput!=null)menuInput.enabled=false;
++            var uiInput=Object.FindFirstObjectByType<UnityEngine.EventSystems.EventSystem>();
++            if(uiInput!=null)uiInput.enabled=false;
+             var playerBase = Object.FindFirstObjectByType<BaseHealth>();
+             var game = Object.FindFirstObjectByType<GameStateController>();
+             var spawner = Object.FindFirstObjectByType<EnemySpawner>();
+@@ -112,6 +118,7 @@ namespace ShorelineDefense.Tests
+             var positions = new Vector3[enemies.Length];
+             for (int i = 0; i < enemies.Length; i++) positions[i] = enemies[i].transform.position;
+             yield return new WaitForSeconds(4);
++            Assert.That(SceneManager.GetActiveScene().path,Is.EqualTo(ScenePath),"Legacy world-freeze fixture left its scene");
+             Assert.That(spawner.TotalSpawned, Is.EqualTo(count));
+             for (int i = 0; i < enemies.Length; i++) Assert.That(enemies[i].transform.position, Is.EqualTo(positions[i]));
+             playerBase.TakeDamage(100);
+diff --git a/Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs b/Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs
+index 9f37e31..0839237 100644
+--- a/Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs
++++ b/Assets/Game/Tests/PlayMode/SurvivalPlayTests.cs
+@@ -39,9 +39,9 @@ namespace ShorelineDefense.Tests
+         {
+             border.ConfigureThreshold(0);spawner.ConfigureWave(1,1.25f,1.1f);var enemy=Spawn(spawner.DefaultPrefab);Assert.That(enemy.Health.MaxHealth,Is.EqualTo(125));
+             Assert.IsFalse(spawner.TrySpawnAt(spawner.DefaultPrefab,spawner.Battlefield.Grid.CellToWorld(new Vector2Int(20,9)),out _));
+-            enemy.Health.TakeDefenseDamage(10000);enemy.Health.TakeDefenseDamage(10000);Assert.That(stats.TotalKills,Is.EqualTo(1));Assert.That(stats.CrawlerKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(25));
++            enemy.Health.TakeDefenseDamage(10000);enemy.Health.TakeDefenseDamage(10000);Assert.That(stats.TotalKills,Is.EqualTo(1));Assert.That(stats.CrawlerKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(spawner.DefaultPrefab.Definition.KillReward));
+             foreach(var prefab in waves.EndlessSettings.enemies.Take(3).Skip(1)){var killed=Spawn(prefab);killed.Health.TakeDefenseDamage(10000);yield return null;}
+-            Assert.That(stats.SkitterKills,Is.EqualTo(1));Assert.That(stats.BulwarkKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(135));
++            Assert.That(stats.SkitterKills,Is.EqualTo(1));Assert.That(stats.BulwarkKills,Is.EqualTo(1));Assert.That(stats.TotalMoneyEarned,Is.EqualTo(waves.EndlessSettings.enemies.Take(3).Sum(p=>p.Definition.KillReward)));
+             Assert.IsTrue(money.TrySpend(50));Assert.That(stats.TotalMoneySpent,Is.EqualTo(50));Assert.IsFalse(money.TrySpend(int.MaxValue));Assert.That(stats.TotalMoneySpent,Is.EqualTo(50));
+             for(int i=0;i<45;i++){Spawn(spawner.DefaultPrefab).Tick(100);yield return null;}
+             Assert.That(stats.Homicides,Is.EqualTo(1125));Assert.IsTrue(Object.FindFirstObjectByType<GameStateController>().IsPlaying);Assert.That(Object.FindFirstObjectByType<PrototypeHud>().HealthText,Does.Not.Contain("/ 0"));

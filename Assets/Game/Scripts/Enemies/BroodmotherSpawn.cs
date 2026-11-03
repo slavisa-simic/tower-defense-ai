@@ -8,6 +8,7 @@ namespace ShorelineDefense.Enemies
     {
         [SerializeField] private EnemyController broodling;
         [SerializeField, Min(1)] private float spawnInterval = 8;
+        [SerializeField, Min(1)] private float initialSpawnDelay = 3;
         [SerializeField, Range(1, 12)] private int broodlingsPerSpawn = 6;
         [SerializeField, Range(0, 120)] private int maxTotalBroodlingsSpawned = 60;
         [SerializeField, Range(1, 40)] private int maxConcurrentSpawnedBroodlings = 18;
@@ -25,7 +26,7 @@ namespace ShorelineDefense.Enemies
             enemy = owner; grid = battlefield; spawner = FindFirstObjectByType<EnemySpawner>();
             registry = FindFirstObjectByType<EnemyRegistry>();
             if (isActiveAndEnabled && registry != null) registry.EnemyRemoved += ChildRemoved;
-            children.Clear(); timer = spawnInterval; TotalSpawned = 0;
+            children.Clear(); timer = initialSpawnDelay; TotalSpawned = 0;
         }
         public void Tick(float dt)
         {

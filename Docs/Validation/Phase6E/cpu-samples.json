@@ -1,0 +1,41 @@
+{
+  "method": "Warm subsystem microbenchmarks in the 400-unit stress fixture, TimeScale 0. Movement/attack steps advance only .0001s per iteration. Stopwatch and calling harness are included; these are query/batch costs, not whole-frame attribution. Allocation includes stopwatch object; no claim of zero whole-game allocations.",
+  "rows": [
+    {
+      "label": "Registry acquisition, 400 mixed targets",
+      "iterations": 1000,
+      "meanMs": 0.084305,
+      "allocatedBytes": 0
+    },
+    {
+      "label": "Cluster selection, up to 16 candidates x 400 targets",
+      "iterations": 200,
+      "meanMs": 0.31088150000000003,
+      "allocatedBytes": 0
+    },
+    {
+      "label": "Cached route request",
+      "iterations": 1000,
+      "meanMs": 0.0001017,
+      "allocatedBytes": 0
+    },
+    {
+      "label": "Movement batch, 400 organisms",
+      "iterations": 100,
+      "meanMs": 0.83381300000000014,
+      "allocatedBytes": 0
+    },
+    {
+      "label": "Structure attack batch, 400 organisms",
+      "iterations": 100,
+      "meanMs": 1.028685,
+      "allocatedBytes": 0
+    },
+    {
+      "label": "Pressure policy",
+      "iterations": 1000,
+      "meanMs": 0.00021200000000000003,
+      "allocatedBytes": 0
+    }
+  ]
+}

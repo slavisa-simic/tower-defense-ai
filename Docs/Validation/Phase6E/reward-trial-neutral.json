@@ -1,0 +1,131 @@
+{
+  "profile": "none",
+  "rows": [
+    {
+      "map": "CoastalDefense_TopDown",
+      "profile": "none",
+      "rounds": [
+        {
+          "wave": 1,
+          "state": "WaveComplete",
+          "seconds": 47.6000023,
+          "kills": 72,
+          "homicides": 200,
+          "spawned": 80,
+          "peak": 10,
+          "money": 294,
+          "earned": 244,
+          "spent": 0,
+          "structures": 3,
+          "stalled": false
+        },
+        {
+          "wave": 2,
+          "state": "WaveComplete",
+          "seconds": 42.9,
+          "kills": 112,
+          "homicides": 200,
+          "spawned": 120,
+          "peak": 17,
+          "money": 398,
+          "earned": 329,
+          "spent": 0,
+          "structures": 4,
+          "stalled": false
+        },
+        {
+          "wave": 3,
+          "state": "WaveComplete",
+          "seconds": 26.1,
+          "kills": 105,
+          "homicides": 400,
+          "spawned": 115,
+          "peak": 21,
+          "money": 460,
+          "earned": 437,
+          "spent": 0,
+          "structures": 5,
+          "stalled": false
+        },
+        {
+          "wave": 4,
+          "state": "GameOver",
+          "seconds": 9.400001,
+          "kills": 31,
+          "homicides": 200,
+          "spawned": 56,
+          "peak": 28,
+          "money": 124,
+          "earned": 104,
+          "spent": 0,
+          "structures": 8,
+          "stalled": false
+        }
+      ],
+      "rp": 0
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "profile": "none",
+      "rounds": [
+        {
+          "wave": 1,
+          "state": "WaveComplete",
+          "seconds": 39.3,
+          "kills": 76,
+          "homicides": 100,
+          "spawned": 80,
+          "peak": 10,
+          "money": 302,
+          "earned": 252,
+          "spent": 0,
+          "structures": 3,
+          "stalled": false
+        },
+        {
+          "wave": 2,
+          "state": "WaveComplete",
+          "seconds": 42.6000023,
+          "kills": 119,
+          "homicides": 25,
+          "spawned": 120,
+          "peak": 15,
+          "money": 345,
+          "earned": 343,
+          "spent": 0,
+          "structures": 5,
+          "stalled": false
+        },
+        {
+          "wave": 3,
+          "state": "WaveComplete",
+          "seconds": 32.8,
+          "kills": 99,
+          "homicides": 525,
+          "spawned": 115,
+          "peak": 22,
+          "money": 473,
+          "earned": 428,
+          "spent": 0,
+          "structures": 6,
+          "stalled": false
+        },
+        {
+          "wave": 4,
+          "state": "GameOver",
+          "seconds": 12.7,
+          "kills": 55,
+          "homicides": 350,
+          "spawned": 71,
+          "peak": 24,
+          "money": 196,
+          "earned": 188,
+          "spent": 0,
+          "structures": 9,
+          "stalled": false
+        }
+      ],
+      "rp": 0
+    }
+  ]
+}

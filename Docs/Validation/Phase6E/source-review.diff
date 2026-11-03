@@ -1,0 +1,538 @@
+diff --git a/Assets/Game/Scripts/Building/BuildManager.cs b/Assets/Game/Scripts/Building/BuildManager.cs
+index b20a5d5..5eb88c9 100644
+--- a/Assets/Game/Scripts/Building/BuildManager.cs
++++ b/Assets/Game/Scripts/Building/BuildManager.cs
+@@ -8,6 +8,7 @@ using UnityEngine;
+ 
+ namespace ShorelineDefense.Building
+ {
++    public enum StructureManagementAction { Upgrade, Repair }
+     public class BuildManager : MonoBehaviour
+     {
+         [SerializeField] private GridManager grid;
+@@ -22,6 +23,7 @@ namespace ShorelineDefense.Building
+         private RunStatistics statistics;
+         public event Action StableActionCommitted;
+         public event Action<DefenseBase> DefensePlaced;
++        public event Action<DefenseBase, StructureManagementAction, int> ManagementCommitted;
+         private void Awake() => statistics = FindFirstObjectByType<RunStatistics>();
+         [SerializeField] private ShorelineDefense.Waves.WaveManager waves;
+         [SerializeField, Min(.01f)] private float repairBasisFraction = .5f;
+@@ -41,14 +43,14 @@ namespace ShorelineDefense.Building
+         {
+             if (placing || !CanUpgrade(defense)) return false;
+             placing = true;
+-            try { int cost = UpgradeCost(defense); if (!economy.TrySpend(cost)) return false; defense.ApplyUpgrade(cost); statistics?.RecordUpgrade(); StableActionCommitted?.Invoke(); return true; }
++            try { int cost = UpgradeCost(defense); if (!economy.TrySpend(cost)) return false; defense.ApplyUpgrade(cost); statistics?.RecordUpgrade(); ManagementCommitted?.Invoke(defense, StructureManagementAction.Upgrade, cost); StableActionCommitted?.Invoke(); return true; }
+             finally { placing = false; }
+         }
+         public bool TryRepair(DefenseBase defense)
+         {
+             if (placing || !CanRepair(defense)) return false;
+             placing = true;
+-            try { if (!economy.TrySpend(RepairCost(defense))) return false; defense.Repair(); statistics?.RecordRepair(); StableActionCommitted?.Invoke(); return true; }
++            try { int cost = RepairCost(defense); if (!economy.TrySpend(cost)) return false; defense.Repair(); statistics?.RecordRepair(); ManagementCommitted?.Invoke(defense, StructureManagementAction.Repair, cost); StableActionCommitted?.Invoke(); return true; }
+             finally { placing = false; }
+         }
+         [SerializeField, Range(0, 1)] private float dismantleRefundFraction = .5f;
+diff --git a/Assets/Game/Scripts/Defenses/DefenseDefinition.cs b/Assets/Game/Scripts/Defenses/DefenseDefinition.cs
+index da3255e..94057af 100644
+--- a/Assets/Game/Scripts/Defenses/DefenseDefinition.cs
++++ b/Assets/Game/Scripts/Defenses/DefenseDefinition.cs
+@@ -2,7 +2,7 @@ using UnityEngine;
+ 
+ namespace ShorelineDefense.Defenses
+ {
+-    public enum TargetingMode { Closest, ClosestToBase, HighestHealth, BestCluster }
++    public enum TargetingMode { Closest, ClosestToBase, HighestHealth, BestCluster, HighValue }
+ 
+     [CreateAssetMenu(menuName = "Shoreline Defense/Defense Definition")]
+     public sealed class DefenseDefinition : ScriptableObject
+@@ -40,6 +40,9 @@ namespace ShorelineDefense.Defenses
+         public float RangeInCells => rangeInCells;
+         public int Damage => damage;
+         public float FireRate => fireRate;
++        [SerializeField, Range(0, 1)] private float armorPenetration;
++        /// <summary>Fraction of armor ignored by direct hits; does not multiply unarmored damage.</summary>
++        public float ArmorPenetration => armorPenetration;
+         public TargetingMode Targeting => targetingMode;
+         public float MovementMultiplier => movementMultiplier;
+         public float TraversalMultiplier => traversalMultiplier;
+@@ -50,6 +53,7 @@ namespace ShorelineDefense.Defenses
+             rangeInCells > 0 && !float.IsInfinity(rangeInCells) && fireRate > 0 && !float.IsInfinity(fireRate) &&
+             movementMultiplier > 0 && movementMultiplier <= 1 && traversalMultiplier >= 1 && !float.IsInfinity(traversalMultiplier) &&
+             triggerRadiusInCells > 0 && !float.IsInfinity(triggerRadiusInCells) && armingDelay >= 0 && !float.IsInfinity(armingDelay) &&
++            float.IsFinite(armorPenetration) && armorPenetration >= 0 && armorPenetration <= 1 &&
+             (heavyWeapon == null || heavyWeapon.IsValid(rangeInCells));
+     }
+ }
+diff --git a/Assets/Game/Scripts/Defenses/FlameWeapon.cs b/Assets/Game/Scripts/Defenses/FlameWeapon.cs
+index 5d5a095..b131fb9 100644
+--- a/Assets/Game/Scripts/Defenses/FlameWeapon.cs
++++ b/Assets/Game/Scripts/Defenses/FlameWeapon.cs
+@@ -23,10 +23,12 @@ namespace ShorelineDefense.Defenses
+             timer -= dt;
+             if (timer > 0) return;
+             var data = defense.Definition.HeavyWeapon;
+-            timer = defense.DamageTick;
++            // Preserve sub-tick remainder so a 5% cadence bonus is not rounded
++            // away by frame size. Large idle steps never bank a burst.
++            timer = Mathf.Max(0, timer + defense.DamageTick);
+             var target = defense.Enemies.FindTarget(transform.position, defense.Range, defense.Definition.Targeting);
+             Firing = target != null;
+-            if (!Firing) { AimDirection = Vector2.left; return; }
++            if (!Firing) { timer = defense.DamageTick; AimDirection = Vector2.left; return; }
+             AimDirection = ((Vector2)(target.transform.position - transform.position)).normalized;
+             defense.Enemies.CollectInRadius(transform.position, defense.Range, victims);
+             for (int i = 0; i < victims.Count; i++)
+diff --git a/Assets/Game/Scripts/Defenses/TurretCombat.cs b/Assets/Game/Scripts/Defenses/TurretCombat.cs
+index 5a30e51..72f312b 100644
+--- a/Assets/Game/Scripts/Defenses/TurretCombat.cs
++++ b/Assets/Game/Scripts/Defenses/TurretCombat.cs
+@@ -48,7 +48,7 @@ namespace ShorelineDefense.Defenses
+             {
+                 cooldown += interval;
+                 Vector3 impact = Target.transform.position;
+-                Target.Health.TakeDefenseDamage(defense.Damage);
++                Target.Health.TakeDefenseDamage(defense.Damage, defense.Definition.ArmorPenetration);
+                 ShotsFired++;
+                 Fired?.Invoke(impact);
+             }
+diff --git a/Assets/Game/Scripts/Enemies/BroodmotherSpawn.cs b/Assets/Game/Scripts/Enemies/BroodmotherSpawn.cs
+index 25b170c..ece204c 100644
+--- a/Assets/Game/Scripts/Enemies/BroodmotherSpawn.cs
++++ b/Assets/Game/Scripts/Enemies/BroodmotherSpawn.cs
+@@ -8,6 +8,7 @@ namespace ShorelineDefense.Enemies
+     {
+         [SerializeField] private EnemyController broodling;
+         [SerializeField, Min(1)] private float spawnInterval = 8;
++        [SerializeField, Min(1)] private float initialSpawnDelay = 3;
+         [SerializeField, Range(1, 12)] private int broodlingsPerSpawn = 6;
+         [SerializeField, Range(0, 120)] private int maxTotalBroodlingsSpawned = 60;
+         [SerializeField, Range(1, 40)] private int maxConcurrentSpawnedBroodlings = 18;
+@@ -25,7 +26,7 @@ namespace ShorelineDefense.Enemies
+             enemy = owner; grid = battlefield; spawner = FindFirstObjectByType<EnemySpawner>();
+             registry = FindFirstObjectByType<EnemyRegistry>();
+             if (isActiveAndEnabled && registry != null) registry.EnemyRemoved += ChildRemoved;
+-            children.Clear(); timer = spawnInterval; TotalSpawned = 0;
++            children.Clear(); timer = initialSpawnDelay; TotalSpawned = 0;
+         }
+         public void Tick(float dt)
+         {
+diff --git a/Assets/Game/Scripts/Enemies/EnemyDamageOverTime.cs b/Assets/Game/Scripts/Enemies/EnemyDamageOverTime.cs
+index f1b0ceb..96a59ec 100644
+--- a/Assets/Game/Scripts/Enemies/EnemyDamageOverTime.cs
++++ b/Assets/Game/Scripts/Enemies/EnemyDamageOverTime.cs
+@@ -7,7 +7,8 @@ namespace ShorelineDefense.Enemies
+     public sealed class EnemyDamageOverTime : MonoBehaviour
+     {
+         private EnemyController enemy;
+-        private float remaining, dps, fractional;
++        private float remaining, dps;
++        private double fractional;
+         public bool Burning => remaining > 0;
+         public float Remaining => remaining;
+         public float Dps => dps;
+@@ -24,13 +25,15 @@ namespace ShorelineDefense.Enemies
+             if (!enemy.IsCombatActive) { Clear(); return; }
+             if (!Burning || dt <= 0) return;
+             float active = Mathf.Min(dt, remaining); remaining = Mathf.Max(0, remaining - dt);
+-            fractional += active * dps;
+-            int amount = Mathf.FloorToInt(fractional + .00001f);
++            // Mitigate before integer accumulation. Rounding every tiny frame's
++            // damage up to one otherwise lets high-frame-rate burns bypass armor.
++            fractional += active * dps * enemy.Health.ArmorDamageMultiplier;
++            int amount = (int)System.Math.Floor(fractional + .00001);
+             fractional -= amount;
+-            if (amount > 0) enemy.Health.TakeDefenseDamage(amount);
++            if (amount > 0) enemy.Health.TakeDefenseDamage(amount, 1); // Armor already applied above.
+             if (!Burning) Clear();
+         }
+         private void OnDisable() => Clear();
+-        public void Clear() { remaining = dps = fractional = 0; }
++        public void Clear() { remaining = dps = 0; fractional = 0; }
+     }
+ }
+diff --git a/Assets/Game/Scripts/Enemies/EnemyHealth.cs b/Assets/Game/Scripts/Enemies/EnemyHealth.cs
+index da4d768..17a545e 100644
+--- a/Assets/Game/Scripts/Enemies/EnemyHealth.cs
++++ b/Assets/Game/Scripts/Enemies/EnemyHealth.cs
+@@ -9,7 +9,9 @@ namespace ShorelineDefense.Enemies
+         private Health health;
+         private float armor;
+         public void ConfigureArmor(float fraction) => armor = Mathf.Clamp(fraction, 0, .9f);
+-        private int Mitigate(int amount) => amount <= 0 ? 0 : (int)Math.Min(int.MaxValue, Math.Max(1, Math.Ceiling(amount * (1.0 - Math.Round(armor, 6)))));
++        public double ArmorDamageMultiplier => 1 - Math.Round(armor, 6);
++        private int Mitigate(int amount, float armorPenetration = 0) => amount <= 0 ? 0 : (int)Math.Min(int.MaxValue,
++            Math.Max(1, Math.Ceiling(amount * (1.0 - Math.Round(armor, 6) * (1 - Math.Round(float.IsFinite(armorPenetration) ? Mathf.Clamp01(armorPenetration) : 0, 6))))));
+         public bool IsAlive => health != null && health.IsAlive;
+         public int CurrentHealth => health?.CurrentHealth ?? 0;
+         public int MaxHealth => health?.MaxHealth ?? 0;
+@@ -34,11 +36,14 @@ namespace ShorelineDefense.Enemies
+             Damaged?.Invoke(applied);
+         }
+         // Attribution belongs to the lethal damage operation, never to a specific turret type.
+-        public void TakeDefenseDamage(int amount)
++        public void TakeDefenseDamage(int amount, float armorPenetration = 0)
+         {
+             if (!IsAlive || amount <= 0) return;
+-            if (Mitigate(amount) >= CurrentHealth) KilledByDefense = true;
+-            TakeDamage(amount);
++            int mitigated = Mitigate(amount, armorPenetration);
++            if (mitigated >= CurrentHealth) KilledByDefense = true;
++            int applied = Math.Min(mitigated, CurrentHealth);
++            health.TakeDamage(mitigated);
++            Damaged?.Invoke(applied);
+         }
+         private void OnDied() => Died?.Invoke();
+     }
+diff --git a/Assets/Game/Scripts/Enemies/EnemyRegistry.cs b/Assets/Game/Scripts/Enemies/EnemyRegistry.cs
+index 4b3f62a..348263c 100644
+--- a/Assets/Game/Scripts/Enemies/EnemyRegistry.cs
++++ b/Assets/Game/Scripts/Enemies/EnemyRegistry.cs
+@@ -40,7 +40,8 @@ namespace ShorelineDefense.Enemies
+                 if (enemy == null || !enemy.IsTargetable) continue;
+                 float candidate = ((Vector2)(enemy.transform.position - position)).sqrMagnitude;
+                 if (candidate > rangeSquared) continue;
+-                float score = mode == TargetingMode.HighestHealth ? -enemy.Health.CurrentHealth :
++                float score = mode == TargetingMode.HighValue ? -enemy.Health.MaxHealth :
++                    mode == TargetingMode.HighestHealth ? -enemy.Health.CurrentHealth :
+                     mode == TargetingMode.ClosestToBase ? enemy.Movement.RemainingPathDistance : candidate;
+                 if (score >= bestScore) continue;
+                 bestScore = score;
+diff --git a/Assets/Game/Scripts/Enemies/SpitterAttack.cs b/Assets/Game/Scripts/Enemies/SpitterAttack.cs
+index f4f4d00..9218b68 100644
+--- a/Assets/Game/Scripts/Enemies/SpitterAttack.cs
++++ b/Assets/Game/Scripts/Enemies/SpitterAttack.cs
+@@ -31,14 +31,18 @@ namespace ShorelineDefense.Enemies
+             float range = rangeCells * grid.Grid.CellSize;
+             if (obstruction != null) target = obstruction;
+             else if (acquire <= 0) { acquire = acquisitionInterval; target = Acquire(range); }
+-            if (reload <= 0 && target != null && target.IsAlive && target.gameObject.activeInHierarchy &&
+-                ((Vector2)(target.ClosestFootprintPoint(transform.position) - transform.position)).sqrMagnitude <= range * range)
++            bool inRange = target != null && target.IsAlive && target.gameObject.activeInHierarchy &&
++                ((Vector2)(target.ClosestFootprintPoint(transform.position) - transform.position)).sqrMagnitude <= range * range;
++            if (inRange) enemy.Movement.FaceTowards(target.transform.position);
++            if (reload <= 0 && inRange)
+             {
+                 reload = cooldown; pose = .45f; ShotsFired++;
+                 enemy.Movement.FaceTowards(target.transform.position); enemy.NotifyAttack();
+                 CorrosiveSpit.Launch(transform.position, target.transform.position, grid.Grid, game, glob, damage, flightSeconds, effects);
+             }
+-            return pose > 0;
++            // A ranged organism holds its firing position through reload rather than
++            // walking into short-range fire between shots. Losing the target resumes the route.
++            return pose > 0 || inRange;
+         }
+         private DefenseBase Acquire(float range)
+         {
+diff --git a/Assets/Game/Scripts/Persistence/RunSession.cs b/Assets/Game/Scripts/Persistence/RunSession.cs
+index 7bb88b1..2fd8ebc 100644
+--- a/Assets/Game/Scripts/Persistence/RunSession.cs
++++ b/Assets/Game/Scripts/Persistence/RunSession.cs
+@@ -33,6 +33,9 @@ namespace ShorelineDefense.Persistence
+         private float saveAfter;
+         private WaveState lastWaveState;
+         private RunRecord finished;
++#if UNITY_EDITOR || DEVELOPMENT_BUILD
++        private Core.BalanceRunLog balanceLog;
++#endif
+         public string MapId => FindFirstObjectByType<ShorelineDefense.Grid.MapRuntimeContext>()?.MapId ?? ShorelineDefense.Grid.MapCatalog.OriginalId;
+         public bool CanSave => Ready && game.IsPlaying && waves.IsEndless && waves.State == WaveState.Preparation && waves.CompletedWaves == waves.PreparationWaveNumber - 1;
+         private void Start()
+@@ -63,6 +66,10 @@ namespace ShorelineDefense.Persistence
+             waves.Changed += WaveChanged; waves.EventChanged += QueueSave; builder.StableActionCommitted += QueueSave; game.StateChanged += StateChanged;
+             waves.PreparationEnding += BeforeWave;
+             SaveNow();
++#if UNITY_EDITOR || DEVELOPMENT_BUILD
++            if (waves.EndlessSettings != null && waves.EndlessSettings.writeBalanceLog)
++                balanceLog = new Core.BalanceRunLog(this, builder, waves, statistics, FindFirstObjectByType<Enemies.EnemyRegistry>());
++#endif
+         }
+         private void Restore(RunSaveData data)
+         {
+@@ -111,6 +118,9 @@ namespace ShorelineDefense.Persistence
+         private void Update()
+         {
+             if (!Ready) return;
++#if UNITY_EDITOR || DEVELOPMENT_BUILD
++            balanceLog?.Tick(Time.deltaTime);
++#endif
+             if (game.IsPlaying) Duration += Time.deltaTime;
+             if (dirty && Time.unscaledTime >= saveAfter) SaveNow();
+         }
+@@ -141,6 +151,9 @@ namespace ShorelineDefense.Persistence
+         private void OnApplicationPause(bool paused) { if (paused && CanSave) SaveNow(); }
+         private void OnDestroy()
+         {
++#if UNITY_EDITOR || DEVELOPMENT_BUILD
++            balanceLog?.Dispose();
++#endif
+             if (waves == null) return;
+             waves.Changed -= WaveChanged; waves.EventChanged -= QueueSave;
+             waves.PreparationEnding -= BeforeWave;
+diff --git a/Assets/Game/Scripts/UI/BuildHud.cs b/Assets/Game/Scripts/UI/BuildHud.cs
+index fe0d96e..ed847ca 100644
+--- a/Assets/Game/Scripts/UI/BuildHud.cs
++++ b/Assets/Game/Scripts/UI/BuildHud.cs
+@@ -26,6 +26,7 @@ namespace ShorelineDefense.UI
+         private ShorelineDefense.Waves.WaveManager waves;
+         private Progression.MetaModifierService tooltipMeta;
+         private float tooltipRange = -1;
++        private string lastRefundFeedback;
+         private readonly List<Button> buttons = new List<Button>();
+         private readonly List<Action> selections = new List<Action>();
+         public string MoneyText => moneyLabel?.text;
+@@ -106,21 +107,28 @@ namespace ShorelineDefense.UI
+         private static string Description(string id)
+         {
+             switch (id) {
+-                case "barbed-wire": return "Slows creatures crossing the wire.";
+-                case "land-mine": return "Single-use explosive area defense.";
+-                case "machine-gun-nest": return "Sustained anti-infantry fire.";
+-                case "sniper-tower": return "Long-range precision fire.";
+-                case "mortar": return "Indirect explosive fire against groups.";
+-                case "flamethrower": return "Close-range fire and lingering burns.";
+-                case "autocannon": return "Heavy direct fire against armored targets.";
+-                case "rocket": return "Powerful explosive area strikes.";
++                case "barbed-wire": return "Control: slows creatures while crossing.\nWalkable; deals no damage. Burrowers can bypass the slow.";
++                case "land-mine": return "Emergency burst against clusters.\nSingle charge; consumed on detonation.";
++                case "machine-gun-nest": return "Sustained fire against light organisms.\nShorter coverage; armor reduces its damage.";
++                case "sniper-tower": return "Long-range precision; prioritizes high-HP organisms.\nPierces armor. Slow reload is vulnerable to swarms.";
++                case "mortar": return "Long-range area damage against dense groups.\nCannot target close organisms; shells take time to arrive.";
++                case "flamethrower": return "Short-range swarm control and lingering burns.\nArmor and ranged Spitters pressure this position.";
++                case "autocannon": return "Sustained heavy fire; prioritizes high-HP organisms.\nArmor-piercing direct hits; expensive, no area damage.";
++                case "rocket": return "Heavy burst and area damage against groups.\nExpensive; long reload and travel time.";
+                 default: return "Defend the quarantine line.";
+             }
+         }
+         private void OnStateChanged(GameState state) => Refresh();
+-        private void Update(){if(placement!=null && placement.IsDismantling && hint!=null)Refresh();}
++        private void Update()
++        {
++            // Placement/money events already refresh the panel. Only the unscaled
++            // refund-message expiry needs polling; do not rebuild the HUD every frame.
++            if (placement != null && placement.IsDismantling && hint != null &&
++                lastRefundFeedback != placement.RefundFeedback) Refresh();
++        }
+         private void Refresh()
+         {
++            lastRefundFeedback = placement.RefundFeedback;
+             RefreshEffectiveTooltips();
+             dismantle?.SetEnabled(game.IsPlaying);
+             dismantle?.EnableInClassList("selected",placement.IsDismantling);
+@@ -140,7 +148,7 @@ namespace ShorelineDefense.UI
+                 placement.Result == PlacementResult.Occupied ? "Cell occupied | RMB / Esc cancels" :
+                 placement.Result == PlacementResult.EnemyInFootprint ? "Creature in build area | RMB / Esc cancels" :
+                 placement.Result == PlacementResult.OutsideGrid ? "Outside battlefield | RMB / Esc cancels" :
+-                "Build on free grass cells | RMB / Esc cancels";
++                "Build on free ground cells | RMB / Esc cancels";
+         }
+         private void RefreshEffectiveTooltips()
+         {
+@@ -154,7 +162,10 @@ namespace ShorelineDefense.UI
+                 int damage = Mathf.RoundToInt(d.Damage * meta.DamageMultiplier(d));
+                 float effectiveRange = d.RangeInCells * meta.RangeMultiplier(d) * (d.BlocksMovement ? range : 1);
+                 buttons[i].tooltip = $"{d.DisplayName.ToUpperInvariant()}\n{d.Cost:N0} RSD\n" + Description(d.Id) +
+-                    $"\nMax HP {meta.MaxHealth(d, 1)}" + (damage > 0 ? $"\nDamage {damage} / Range {effectiveRange:0.0} cells" : "");
++                    $"\nMax HP {meta.MaxHealth(d, 1)}" + (damage > 0 ? $"\nDamage {damage} / Range {effectiveRange:0.0} cells" : "") +
++                    (d.ArmorPenetration > 0 ? $"\nIgnores {d.ArmorPenetration:P0} of armor" : "") +
++                    (d.Id == "flamethrower" ? $"\nDirect DPS {damage * meta.FireRateMultiplier(d) / d.HeavyWeapon.damageTick:0.#} / Burn {d.HeavyWeapon.burnDps:0.#}/s" :
++                     d.BlocksMovement ? $"\nFire rate {d.FireRate * meta.FireRateMultiplier(d):0.##}/s" : "");
+             }
+         }
+     }
+diff --git a/Assets/Game/Scripts/UI/StructureHud.cs b/Assets/Game/Scripts/UI/StructureHud.cs
+index 099d916..11cb2b3 100644
+--- a/Assets/Game/Scripts/UI/StructureHud.cs
++++ b/Assets/Game/Scripts/UI/StructureHud.cs
+@@ -73,6 +73,7 @@ namespace ShorelineDefense.UI
+                 var heavy = d.Definition.HeavyWeapon;
+                 core += d.GetComponent<ShorelineDefense.Defenses.FlameWeapon>() != null ? $"\nDPS {d.Damage / d.DamageTick:0} / Burn {d.BurnDuration:0.0}s" : $"\nDamage {d.Damage} / Reload {1 / d.FireRate:0.00}s";
+                 core += $"\nRange {d.Range / d.Grid.CellSize:0.0} cells";
++                if (d.Definition.ArmorPenetration > 0) core += $" / Pierce {d.Definition.ArmorPenetration:P0}";
+                 if (d.GetComponent<ShorelineDefense.Defenses.AreaProjectileWeapon>() != null) core += $"\nBlast {d.SplashRadiusInCells:0.0} / Min {heavy.minimumRangeInCells:0.0} cells";
+             }
+             stats.text = core;
+diff --git a/Assets/Game/Scripts/Waves/AssaultPressureDirector.cs b/Assets/Game/Scripts/Waves/AssaultPressureDirector.cs
+index 39bf211..6fa4174 100644
+--- a/Assets/Game/Scripts/Waves/AssaultPressureDirector.cs
++++ b/Assets/Game/Scripts/Waves/AssaultPressureDirector.cs
+@@ -14,6 +14,11 @@ namespace ShorelineDefense.Waves
+         public float ArrivalInterval { get; private set; }
+         public int BoatLimit { get; private set; }
+         public bool DeploymentPaused { get; private set; }
++        // Admission uses current counts between policy evaluations. A full carrier must not
++        // overshoot a small early-wave target by its entire passenger capacity.
++        public int RemainingAdmission(EndlessWaveSettings settings, int active, int incoming) =>
++            Mathf.Max(0, Mathf.Min(settings.maximumActiveEnemies,
++                Mathf.CeilToInt(Target * (1 + Mathf.Clamp(settings.pressureHysteresis, .05f, .4f)))) - active - incoming);
+         public void Reset() { untilEvaluation = elapsed = 0; Mode = AssaultPressure.Normal; Surging = DeploymentPaused = false; }
+         public bool Tick(float dt, EndlessWaveSettings settings, int wave, int activeEnemies,
+             int pendingEnemies, int activeBoats, int incomingPassengers, bool bossPendingOrAlive, EventModifiers modifiers = null)
+diff --git a/Assets/Game/Scripts/Waves/EndlessWaveGenerator.cs b/Assets/Game/Scripts/Waves/EndlessWaveGenerator.cs
+index 6980c85..3340374 100644
+--- a/Assets/Game/Scripts/Waves/EndlessWaveGenerator.cs
++++ b/Assets/Game/Scripts/Waves/EndlessWaveGenerator.cs
+@@ -72,13 +72,16 @@ namespace ShorelineDefense.Waves
+         }
+         private static int Weight(EnemyKind kind, int wave) {
+             int themed = wave % 7;
++            // Spend more of the existing late-wave budget on complementary threats.
++            // The shift saturates at wave 60; base HP and formation quantity are unchanged.
++            float late = Mathf.Clamp01((wave - 20f) / 40f);
+             switch(kind) {
+-                case EnemyKind.Crawler: return 70;
++                case EnemyKind.Crawler: return 70 - Mathf.RoundToInt(20 * late);
+                 case EnemyKind.Skitter: return themed == 5 ? 38 : 25;
+-                case EnemyKind.Bulwark: return themed == 3 ? 20 : Math.Min(14, 5 + wave / 5);
+-                case EnemyKind.Spitter: return themed == 2 ? 20 : 8;
++                case EnemyKind.Bulwark: return (themed == 3 ? 20 : Math.Min(14, 5 + wave / 5)) + Mathf.RoundToInt(25 * late);
++                case EnemyKind.Spitter: return (themed == 2 ? 20 : 8) + Mathf.RoundToInt(12 * late);
+                 case EnemyKind.Broodling: return themed == 5 ? 50 : 25;
+-                case EnemyKind.Burrower: return themed == 2 ? 16 : 6;
++                case EnemyKind.Burrower: return (themed == 2 ? 16 : 6) + Mathf.RoundToInt(8 * late);
+                 default: return 0;
+             }
+         }
+diff --git a/Assets/Game/Scripts/Waves/EndlessWaveSettings.cs b/Assets/Game/Scripts/Waves/EndlessWaveSettings.cs
+index 2d82ab7..4e081ee 100644
+--- a/Assets/Game/Scripts/Waves/EndlessWaveSettings.cs
++++ b/Assets/Game/Scripts/Waves/EndlessWaveSettings.cs
+@@ -51,6 +51,8 @@ namespace ShorelineDefense.Waves
+         [Min(1)] public float surgeDuration = 7;
+         [Range(0, 8)] public int surgeExtraBoats = 3;
+         public bool showPressureDebug;
++        [Tooltip("Editor/development only: write local per-wave balance CSVs. No production UI or telemetry.")]
++        public bool writeBalanceLog;
+         public int PressureTarget(int wave) => (int)Math.Min(Mathf.Clamp(maximumPressureTarget, 1, 400),
+             Math.Max(1, earlyPressureTarget) + Math.Max(0, (double)wave - 1) * EndlessWaveGenerator.Safe(pressureGrowthPerWave, 6));
+         // Boss tuning replaces the ordinary global factor, rather than multiplying it again.
+diff --git a/Assets/Game/Scripts/Waves/WaveManager.cs b/Assets/Game/Scripts/Waves/WaveManager.cs
+index 30d5efe..5dae949 100644
+--- a/Assets/Game/Scripts/Waves/WaveManager.cs
++++ b/Assets/Game/Scripts/Waves/WaveManager.cs
+@@ -228,7 +228,10 @@ namespace ShorelineDefense.Waves
+                 {
+                     cargo.Clear();
+                     int units = 0, nextGroup = groupIndex, nextCount = spawnedInGroup;
+-                    while (nextGroup < CurrentWave.Groups.Count)
++                    int admission = endless.pressureDirectorEnabled
++                        ? director.RemainingAdmission(endless, registry.Count, landings.IncomingPassengers) : int.MaxValue;
++                    if (admission == 0) return;
++                    while (nextGroup < CurrentWave.Groups.Count && cargo.Count < admission)
+                     {
+                         var candidate = CurrentWave.Groups[nextGroup];
+                         int weight = candidate.Prefab.Definition.CarrierHalfUnits;
+diff --git a/Assets/Game/Scripts/Core/BalanceRunLog.cs b/Assets/Game/Scripts/Core/BalanceRunLog.cs
+index e69de29..ff96d1e 100644
+--- /dev/null
++++ b/Assets/Game/Scripts/Core/BalanceRunLog.cs
+@@ -0,0 +1,107 @@
++#if UNITY_EDITOR || DEVELOPMENT_BUILD
++using System;
++using System.Collections.Generic;
++using System.Globalization;
++using System.IO;
++using ShorelineDefense.Building;
++using ShorelineDefense.Defenses;
++using ShorelineDefense.Enemies;
++using ShorelineDefense.Persistence;
++using ShorelineDefense.Waves;
++using UnityEngine;
++
++namespace ShorelineDefense.Core
++{
++    /// <summary>Opt-in local development observer. Never changes combat, saves, prices or profile data.</summary>
++    public sealed class BalanceRunLog : IDisposable
++    {
++        private readonly RunSession session;
++        private readonly BuildManager builder;
++        private readonly WaveManager waves;
++        private readonly RunStatistics statistics;
++        private readonly EnemyRegistry enemies;
++        private readonly string path;
++        private readonly Dictionary<DefenseBase, Action[]> watched = new Dictionary<DefenseBase, Action[]>();
++        private readonly Dictionary<EnemyController, double> bosses = new Dictionary<EnemyController, double>();
++        private double clock;
++        private long earned, spent, kills, breaches, homicides, repair, upgrade;
++        private int spawned, destroyed, peak, writtenWave, pendingWave;
++        private readonly List<string> bossTimes = new List<string>(2);
++        private bool failed;
++        private bool pendingFlush;
++
++        public BalanceRunLog(RunSession run, BuildManager build, WaveManager manager, RunStatistics stats, EnemyRegistry registry)
++        {
++            session = run; builder = build; waves = manager; statistics = stats; enemies = registry;
++            string folder = Path.Combine(LocalGameData.Files.Root, "BalanceLogs");
++            path = Path.Combine(folder, session.RunId + ".csv");
++            earned = builder.Economy.TotalEarned; spent = builder.Economy.TotalSpent;
++            kills = stats.TotalKills; breaches = stats.TotalBreaches; homicides = stats.Homicides;
++            try { Directory.CreateDirectory(folder); File.WriteAllText(path, "map,wave,result,spawned,killed,breaches,homicides,earned,spent,repair,upgrade,destroyed,peak,boss_ttk_seconds\n"); }
++            catch (Exception e) { Fail(e); }
++            builder.DefensePlaced += Observe; builder.ManagementCommitted += Management;
++            enemies.EnemyRegistered += Registered; enemies.EnemyKilled += Killed; enemies.EnemyRemoved += Removed;
++            waves.Changed += WaveChanged;
++            foreach (var d in UnityEngine.Object.FindObjectsByType<DefenseBase>(FindObjectsSortMode.None)) Observe(d);
++            foreach (var e in enemies.Active) Registered(e);
++        }
++        public void Tick(float dt)
++        {
++            if (builder.Game.IsPlaying) clock += dt;
++            peak = Math.Max(peak, enemies.Count);
++            if (pendingFlush) Flush("WaveComplete");
++        }
++        private void Registered(EnemyController e) { spawned++; if (e.Definition is BossDefinition) bosses[e] = clock; }
++        private void Killed(EnemyController e) { if (bosses.TryGetValue(e, out double start)) bossTimes.Add((clock - start).ToString("0.00", CultureInfo.InvariantCulture)); }
++        private void Removed(EnemyController e) => bosses.Remove(e);
++        private void Management(DefenseBase d, StructureManagementAction action, int cost)
++        { if (action == StructureManagementAction.Repair) repair += cost; else upgrade += cost; }
++        private void Observe(DefenseBase d)
++        {
++            if (d == null || d.Owner != builder || watched.ContainsKey(d)) return;
++            Action died = () => { if (!(d.GetComponent<LandMine>()?.Exploded ?? false)) destroyed++; Forget(d); };
++            Action changed = () => { if (d.Dismantled) Forget(d); };
++            watched.Add(d, new[] { died, changed }); d.Died += died; d.Changed += changed;
++        }
++        private void Forget(DefenseBase d)
++        { if (!watched.TryGetValue(d, out var handlers)) return; d.Died -= handlers[0]; d.Changed -= handlers[1]; watched.Remove(d); }
++        private void WaveChanged()
++        {
++            // Explicit simulation clocks can advance Preparation before the next Update.
++            // Commit the completed wave before that transition's purchases can occur.
++            if (pendingFlush && waves.State != WaveState.WaveComplete) Flush("WaveComplete");
++            if (waves.State != WaveState.WaveComplete && waves.State != WaveState.GameOver ||
++                writtenWave == waves.CurrentWaveNumber) return;
++            // Wave completion notification precedes the completion payment; the run's next
++            // Update flushes after that transaction, including the real completion reward.
++            if (waves.State == WaveState.WaveComplete) { pendingFlush = true; pendingWave = waves.CurrentWaveNumber; }
++            if (waves.State == WaveState.GameOver) Flush("GameOver");
++        }
++        public void Flush(string result = "Checkpoint")
++        {
++            int wave = pendingFlush ? pendingWave : waves.CurrentWaveNumber;
++            pendingFlush = false;
++            if (writtenWave == wave || wave < 1) return;
++            writtenWave = wave;
++            if (!failed) try
++            {
++                File.AppendAllText(path, string.Join(",", session.MapId, writtenWave, result, spawned,
++                    statistics.TotalKills-kills, statistics.TotalBreaches-breaches, statistics.Homicides-homicides,
++                    builder.Economy.TotalEarned-earned, builder.Economy.TotalSpent-spent, repair, upgrade,
++                    destroyed, peak, string.Join(";", bossTimes)) + "\n");
++            } catch (Exception e) { Fail(e); }
++            earned = builder.Economy.TotalEarned; spent = builder.Economy.TotalSpent;
++            kills = statistics.TotalKills; breaches = statistics.TotalBreaches; homicides = statistics.Homicides;
++            spawned = destroyed = peak = 0; repair = upgrade = 0; bossTimes.Clear();
++        }
++        private void Fail(Exception e) { failed = true; Debug.LogWarning("Balance log unavailable: " + e.Message); }
++        public void Dispose()
++        {
++            Flush(waves.State.ToString()); builder.DefensePlaced -= Observe; builder.ManagementCommitted -= Management;
++            enemies.EnemyRegistered -= Registered; enemies.EnemyKilled -= Killed; enemies.EnemyRemoved -= Removed; waves.Changed -= WaveChanged;
++            foreach (var pair in watched) if (pair.Key != null) { pair.Key.Died -= pair.Value[0]; pair.Key.Changed -= pair.Value[1]; }
++            watched.Clear(); bosses.Clear();
++        }
++    }
++}
++#endif

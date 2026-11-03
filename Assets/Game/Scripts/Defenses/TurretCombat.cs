@@ -48,7 +48,7 @@ namespace ShorelineDefense.Defenses
             {
                 cooldown += interval;
                 Vector3 impact = Target.transform.position;
-                Target.Health.TakeDefenseDamage(defense.Damage);
+                Target.Health.TakeDefenseDamage(defense.Damage, defense.Definition.ArmorPenetration);
                 ShotsFired++;
                 Fired?.Invoke(impact);
             }

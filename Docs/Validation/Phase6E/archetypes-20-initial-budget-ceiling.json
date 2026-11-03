@@ -1,0 +1,259 @@
+{
+  "method": "Prepared 9000 RSD budget ceiling (actual investment disclosed), production commands, .1s ticks with all weapon/projectile/burn clocks; yield every 5 ticks for navigation budget/pool cleanup. Wall buys a complete legal x=10 barrier and attempts repairs below 50% HP every 2 simulated seconds from remaining/earned funds. Threshold 1000, no enemy health overrides. Comparative fixture, not earned progression or native timing.",
+  "wave": 20,
+  "eventId": "",
+  "rows": [
+    {
+      "map": "CoastalDefense_TopDown",
+      "strategy": "mg",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 4500,
+      "result": {
+        "wave": 20,
+        "state": "GameOver",
+        "seconds": 73.5,
+        "kills": 679,
+        "homicides": 1000,
+        "spawned": 690,
+        "peak": 66,
+        "money": 7625,
+        "earned": 3125,
+        "spent": 0,
+        "structures": 12,
+        "stalled": false
+      }
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "strategy": "wire-flame",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 6390,
+      "result": {
+        "wave": 20,
+        "state": "GameOver",
+        "seconds": 37.7,
+        "kills": 536,
+        "homicides": 1000,
+        "spawned": 583,
+        "peak": 69,
+        "money": 4708,
+        "earned": 2098,
+        "spent": 0,
+        "structures": 24,
+        "stalled": false
+      }
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "strategy": "precision",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 5850,
+      "result": {
+        "wave": 20,
+        "state": "GameOver",
+        "seconds": 22.0,
+        "kills": 169,
+        "homicides": 1070,
+        "spawned": 282,
+        "peak": 87,
+        "money": 4213,
+        "earned": 1063,
+        "spent": 0,
+        "structures": 9,
+        "stalled": false
+      }
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "strategy": "area",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 5850,
+      "result": {
+        "wave": 20,
+        "state": "GameOver",
+        "seconds": 21.1,
+        "kills": 228,
+        "homicides": 1005,
+        "spawned": 308,
+        "peak": 85,
+        "money": 4200,
+        "earned": 1050,
+        "spent": 0,
+        "structures": 6,
+        "stalled": false
+      }
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "strategy": "mixed",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 6615,
+      "result": {
+        "wave": 20,
+        "state": "WaveComplete",
+        "seconds": 49.2,
+        "kills": 687,
+        "homicides": 15,
+        "spawned": 690,
+        "peak": 62,
+        "money": 5922,
+        "earned": 3537,
+        "spent": 0,
+        "structures": 18,
+        "stalled": false
+      }
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "strategy": "wall",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 7140,
+      "result": {
+        "wave": 20,
+        "state": "WaveComplete",
+        "seconds": 48.7,
+        "kills": 690,
+        "homicides": 0,
+        "spawned": 690,
+        "peak": 39,
+        "money": 5275,
+        "earned": 3540,
+        "spent": 125,
+        "structures": 21,
+        "stalled": false
+      }
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "strategy": "mg",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 4500,
+      "result": {
+        "wave": 20,
+        "state": "WaveComplete",
+        "seconds": 71.2000046,
+        "kills": 689,
+        "homicides": 100,
+        "spawned": 690,
+        "peak": 58,
+        "money": 8020,
+        "earned": 3520,
+        "spent": 0,
+        "structures": 12,
+        "stalled": false
+      }
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "strategy": "wire-flame",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 6390,
+      "result": {
+        "wave": 20,
+        "state": "WaveComplete",
+        "seconds": 68.9,
+        "kills": 690,
+        "homicides": 0,
+        "spawned": 690,
+        "peak": 58,
+        "money": 6150,
+        "earned": 3540,
+        "spent": 0,
+        "structures": 24,
+        "stalled": false
+      }
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "strategy": "precision",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 5850,
+      "result": {
+        "wave": 20,
+        "state": "GameOver",
+        "seconds": 77.7000046,
+        "kills": 620,
+        "homicides": 1065,
+        "spawned": 690,
+        "peak": 81,
+        "money": 6338,
+        "earned": 3188,
+        "spent": 0,
+        "structures": 8,
+        "stalled": false
+      }
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "strategy": "area",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 5850,
+      "result": {
+        "wave": 20,
+        "state": "WaveComplete",
+        "seconds": 62.6000023,
+        "kills": 667,
+        "homicides": 485,
+        "spawned": 690,
+        "peak": 55,
+        "money": 6618,
+        "earned": 3468,
+        "spent": 0,
+        "structures": 6,
+        "stalled": false
+      }
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "strategy": "mixed",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 6615,
+      "result": {
+        "wave": 20,
+        "state": "WaveComplete",
+        "seconds": 70.0,
+        "kills": 690,
+        "homicides": 0,
+        "spawned": 690,
+        "peak": 43,
+        "money": 5925,
+        "earned": 3540,
+        "spent": 0,
+        "structures": 18,
+        "stalled": false
+      }
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "strategy": "wall",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 3765,
+      "result": {
+        "wave": 20,
+        "state": "GameOver",
+        "seconds": 36.5,
+        "kills": 288,
+        "homicides": 1010,
+        "spawned": 370,
+        "peak": 66,
+        "money": 6310,
+        "earned": 1219,
+        "spent": 144,
+        "structures": 11,
+        "stalled": false
+      }
+    }
+  ]
+}

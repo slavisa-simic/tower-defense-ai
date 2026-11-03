@@ -37,6 +37,12 @@ namespace ShorelineDefense.Tests
             yield return SceneManager.LoadSceneAsync(ScenePath, LoadSceneMode.Single);
             yield return null;
             PrepareSpawner();
+            // This legacy fixture observes world motion, not the product menu. Keep
+            // live desktop keys from navigating away during its Game Over wait.
+            var menuInput=Object.FindFirstObjectByType<ProductMenuController>();
+            if(menuInput!=null)menuInput.enabled=false;
+            var uiInput=Object.FindFirstObjectByType<UnityEngine.EventSystems.EventSystem>();
+            if(uiInput!=null)uiInput.enabled=false;
             var playerBase = Object.FindFirstObjectByType<BaseHealth>();
             var game = Object.FindFirstObjectByType<GameStateController>();
             var spawner = Object.FindFirstObjectByType<EnemySpawner>();
@@ -112,6 +118,7 @@ namespace ShorelineDefense.Tests
             var positions = new Vector3[enemies.Length];
             for (int i = 0; i < enemies.Length; i++) positions[i] = enemies[i].transform.position;
             yield return new WaitForSeconds(4);
+            Assert.That(SceneManager.GetActiveScene().path,Is.EqualTo(ScenePath),"Legacy world-freeze fixture left its scene");
             Assert.That(spawner.TotalSpawned, Is.EqualTo(count));
             for (int i = 0; i < enemies.Length; i++) Assert.That(enemies[i].transform.position, Is.EqualTo(positions[i]));
             playerBase.TakeDamage(100);

@@ -1,0 +1,141 @@
+{
+    "profile": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders\\Temp\\Phase6EResolutionProfiles\\956a029a39d641b9a6f8626b82baee47",
+    "active": "rp",
+    "queue": [],
+    "width": 1280.0,
+    "height": 720.0,
+    "elements": [
+        {
+            "id": "tutorial-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 394.3999938964844,
+                "y": 125.5999984741211,
+                "width": 492.0000305175781,
+                "height": 174.39999389648438
+            }
+        },
+        {
+            "id": "tutorial-title",
+            "text": "RESEARCH EARNED",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 416.0,
+                "y": 144.8000030517578,
+                "width": 447.20001220703127,
+                "height": 23.199996948242189
+            }
+        },
+        {
+            "id": "tutorial-copy",
+            "text": "Research Points persist between runs. Review this run's RP award in the summary.",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 416.0,
+                "y": 179.1999969482422,
+                "width": 447.20001220703127,
+                "height": 33.600006103515628
+            }
+        },
+        {
+            "id": "tutorial-detail",
+            "text": "+50 RP / PERSISTS BETWEEN RUNS",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 416.0,
+                "y": 221.60000610351563,
+                "width": 447.20001220703127,
+                "height": 20.0
+            }
+        },
+        {
+            "id": "health-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 999.2000122070313,
+                "y": 12.0,
+                "width": 264.79998779296877,
+                "height": 72.80000305175781
+            }
+        },
+        {
+            "id": "money-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 16.0,
+                "y": 12.0,
+                "width": 235.1999969482422,
+                "height": 65.5999984741211
+            }
+        },
+        {
+            "id": "event-panel",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 380.0,
+                "y": 12.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "boss-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 358.3999938964844,
+                "y": 104.80000305175781,
+                "width": 563.199951171875,
+                "height": 29.599990844726564
+            }
+        },
+        {
+            "id": "build-panel",
+            "text": "",
+            "visible": true,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 102.4000015258789,
+                "y": 500.79998779296877,
+                "width": 1075.199951171875,
+                "height": 207.20001220703126
+            }
+        },
+        {
+            "id": "structure-panel",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 1004.0,
+                "y": 135.3333282470703,
+                "width": 0.0,
+                "height": 0.0
+            }
+        },
+        {
+            "id": "preparation-intelligence",
+            "text": "",
+            "visible": false,
+            "bounds": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 0.0,
+                "height": 0.0
+            }
+        }
+    ]
+}

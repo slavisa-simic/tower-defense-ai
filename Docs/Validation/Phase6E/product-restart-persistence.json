@@ -1,0 +1,7 @@
+{
+  "method": "Exit/re-enter Unity Play Mode; independent services reload disk files. This resets game runtime state, not the Unity application process.",
+  "researchRank": 1,
+  "rp": 8,
+  "runId": "36ab4307-2a0e-4910-accb-50fe1939a1a3",
+  "money": 600
+}

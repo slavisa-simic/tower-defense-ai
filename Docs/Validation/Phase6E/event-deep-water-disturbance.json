@@ -1,0 +1,61 @@
+{
+  "method": "Prepared 9000 RSD budget ceiling (actual investment disclosed), production commands, .1s ticks with all weapon/projectile/burn clocks; yield every 5 ticks for navigation budget/pool cleanup. Wall buys a complete legal x=10 barrier and attempts repairs below 50% HP every 2 simulated seconds from remaining/earned funds. Threshold 1000, no enemy health overrides. Comparative fixture, not earned progression or native timing.",
+  "wave": 24,
+  "eventId": "deep-water-disturbance",
+  "rows": [
+    {
+      "map": "CoastalDefense_TopDown",
+      "strategy": "mixed",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 8940,
+      "result": {
+        "wave": 24,
+        "state": "WaveComplete",
+        "seconds": 67.8,
+        "kills": 361,
+        "homicides": 550,
+        "spawned": 370,
+        "peak": 90,
+        "money": 2192,
+        "earned": 2132,
+        "spent": 0,
+        "structures": 19,
+        "registry": 0,
+        "alive": 0,
+        "pending": 0,
+        "pooledEnemies": 127,
+        "managedBytes": 665239552,
+        "allocatedBytes": 537785768,
+        "stalled": false
+      }
+    },
+    {
+      "map": "DanubeIndustrialPort",
+      "strategy": "mixed",
+      "profile": "none",
+      "budget": 9000,
+      "investment": 8940,
+      "result": {
+        "wave": 24,
+        "state": "WaveComplete",
+        "seconds": 53.8,
+        "kills": 369,
+        "homicides": 25,
+        "spawned": 370,
+        "peak": 86,
+        "money": 2215,
+        "earned": 2155,
+        "spent": 0,
+        "structures": 21,
+        "registry": 0,
+        "alive": 0,
+        "pending": 0,
+        "pooledEnemies": 134,
+        "managedBytes": 665645056,
+        "allocatedBytes": 536861938,
+        "stalled": false
+      }
+    }
+  ]
+}

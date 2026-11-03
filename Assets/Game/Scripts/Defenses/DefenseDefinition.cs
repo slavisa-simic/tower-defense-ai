@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace ShorelineDefense.Defenses
 {
-    public enum TargetingMode { Closest, ClosestToBase, HighestHealth, BestCluster }
+    public enum TargetingMode { Closest, ClosestToBase, HighestHealth, BestCluster, HighValue }
 
     [CreateAssetMenu(menuName = "Shoreline Defense/Defense Definition")]
     public sealed class DefenseDefinition : ScriptableObject
@@ -40,6 +40,9 @@ namespace ShorelineDefense.Defenses
         public float RangeInCells => rangeInCells;
         public int Damage => damage;
         public float FireRate => fireRate;
+        [SerializeField, Range(0, 1)] private float armorPenetration;
+        /// <summary>Fraction of armor ignored by direct hits; does not multiply unarmored damage.</summary>
+        public float ArmorPenetration => armorPenetration;
         public TargetingMode Targeting => targetingMode;
         public float MovementMultiplier => movementMultiplier;
         public float TraversalMultiplier => traversalMultiplier;
@@ -50,6 +53,7 @@ namespace ShorelineDefense.Defenses
             rangeInCells > 0 && !float.IsInfinity(rangeInCells) && fireRate > 0 && !float.IsInfinity(fireRate) &&
             movementMultiplier > 0 && movementMultiplier <= 1 && traversalMultiplier >= 1 && !float.IsInfinity(traversalMultiplier) &&
             triggerRadiusInCells > 0 && !float.IsInfinity(triggerRadiusInCells) && armingDelay >= 0 && !float.IsInfinity(armingDelay) &&
+            float.IsFinite(armorPenetration) && armorPenetration >= 0 && armorPenetration <= 1 &&
             (heavyWeapon == null || heavyWeapon.IsValid(rangeInCells));
     }
 }

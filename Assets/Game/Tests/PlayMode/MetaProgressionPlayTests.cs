@@ -58,7 +58,7 @@ namespace ShorelineDefense.Tests
             Assert.IsTrue(b.TryUpgrade(mg));Assert.IsTrue(b.TryUpgrade(mg));mg.TakeDamage(70);Assert.That(mg.MaxHealth,Is.EqualTo(540));var snapshot=Find<RunSession>().Capture();
             Assert.IsTrue(Find<RunSession>().SaveNow());yield return Scene("MainMenu");Click("menu-continue");yield return Arrive("DanubeIndustrialPort");
             mg=Object.FindObjectsByType<DefenseBase>(FindObjectsSortMode.None).Single();Assert.That(mg.MaxHealth,Is.EqualTo(540));Assert.That(mg.CurrentHealth,Is.EqualTo(470));Assert.That(Find<BuildManager>().Economy.Money,Is.EqualTo(snapshot.money));
-            Assert.That(mg.TotalInvestment,Is.EqualTo(snapshot.structures[0].investment));Assert.That(mg.Damage,Is.EqualTo(34));
+            Assert.That(mg.TotalInvestment,Is.EqualTo(snapshot.structures[0].investment));Assert.That(mg.Damage,Is.EqualTo(Mathf.RoundToInt(mg.Definition.Damage*1.05f*mg.Definition.LevelData(3).damage)));
         }
         [UnityTest] public IEnumerator RepairUpgradeAndDismantleUseExactDisplayedPricesWithEvents()
         {
@@ -69,7 +69,7 @@ namespace ShorelineDefense.Tests
             int expected=(int)Math.Ceiling(mg.TotalInvestment*.5*.5*.75*.9*Math.Round(w.Events.Modifiers.preparationRepair,6));
             Assert.That(b.RepairCost(mg),Is.EqualTo(expected));Assert.That(Root.Q<Button>("structure-repair").text,Does.Contain(expected.ToString()));
             int money=b.Economy.Money;Assert.IsTrue(b.TryRepair(mg));Assert.That(money-b.Economy.Money,Is.EqualTo(expected));Assert.That(mg.CurrentHealth,Is.EqualTo(mg.MaxHealth));
-            int upgrade=b.UpgradeCost(mg);Assert.That(upgrade,Is.EqualTo((int)Math.Ceiling(113*.9*Math.Round(w.Events.Modifiers.upgradeCost,6))));
+            int upgrade=b.UpgradeCost(mg);Assert.That(upgrade,Is.EqualTo((int)Math.Ceiling(mg.Definition.LevelData(2).cost*.9*Math.Round(w.Events.Modifiers.upgradeCost,6))));
             Assert.IsTrue(b.TryUpgrade(mg));Assert.That(mg.TotalInvestment,Is.EqualTo(150+upgrade));int refund=b.RefundFor(mg);Assert.That(refund,Is.EqualTo((int)Math.Floor(mg.TotalInvestment*.55)));
             money=b.Economy.Money;Assert.IsTrue(b.TryDismantle(mg,out int actual));Assert.That(actual,Is.EqualTo(refund));Assert.That(b.Economy.Money-money,Is.EqualTo(refund));Assert.IsFalse(b.TryDismantle(mg,out _));
             mg=Place("machine-gun-nest",new Vector2Int(14,8));mg.TakeDamage(180);w.Events.Tick(100);Assert.IsTrue(w.TryStartWave());Assert.That(b.RepairCost(mg),Is.EqualTo((int)Math.Ceiling(150*.5*.5*1.25*.9)));

@@ -1,0 +1,23 @@
+{
+    "version": 1,
+    "enabled": false,
+    "runCompleted": true,
+    "shown": [
+        "maps",
+        "intro",
+        "objective",
+        "rsd",
+        "build",
+        "placement",
+        "defense-machine-gun-nest",
+        "start-wave",
+        "emergence",
+        "creature-Crawler",
+        "breach",
+        "upgrade",
+        "rp",
+        "research-intro",
+        "research-tree",
+        "port"
+    ]
+}

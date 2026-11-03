@@ -26,8 +26,8 @@ MonoBehaviour:
   maximumActiveEnemies: 400
   seed: 1977
   randomizeSeed: 1
-  baseReward: 100
-  rewardGrowth: 5
+  baseReward: 300
+  rewardGrowth: 2
   scalingStartWave: 20
   healthGrowth: 0.0125
   speedGrowth: 0.002
@@ -45,8 +45,8 @@ MonoBehaviour:
   globalEnemyHealthMultiplier: 1
   bossHealthMultiplier: 1
   pressureDirectorEnabled: 1
-  earlyPressureTarget: 25
-  maximumPressureTarget: 160
+  earlyPressureTarget: 8
+  maximumPressureTarget: 240
   pressureGrowthPerWave: 4
   pressureHysteresis: 0.2
   directorEvaluationInterval: 0.2
@@ -62,3 +62,4 @@ MonoBehaviour:
   surgeDuration: 7
   surgeExtraBoats: 3
   showPressureDebug: 0
+  writeBalanceLog: 0

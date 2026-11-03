@@ -72,13 +72,16 @@ namespace ShorelineDefense.Waves
         }
         private static int Weight(EnemyKind kind, int wave) {
             int themed = wave % 7;
+            // Spend more of the existing late-wave budget on complementary threats.
+            // The shift saturates at wave 60; base HP and formation quantity are unchanged.
+            float late = Mathf.Clamp01((wave - 20f) / 40f);
             switch(kind) {
-                case EnemyKind.Crawler: return 70;
+                case EnemyKind.Crawler: return 70 - Mathf.RoundToInt(20 * late);
                 case EnemyKind.Skitter: return themed == 5 ? 38 : 25;
-                case EnemyKind.Bulwark: return themed == 3 ? 20 : Math.Min(14, 5 + wave / 5);
-                case EnemyKind.Spitter: return themed == 2 ? 20 : 8;
+                case EnemyKind.Bulwark: return (themed == 3 ? 20 : Math.Min(14, 5 + wave / 5)) + Mathf.RoundToInt(25 * late);
+                case EnemyKind.Spitter: return (themed == 2 ? 20 : 8) + Mathf.RoundToInt(12 * late);
                 case EnemyKind.Broodling: return themed == 5 ? 50 : 25;
-                case EnemyKind.Burrower: return themed == 2 ? 16 : 6;
+                case EnemyKind.Burrower: return (themed == 2 ? 16 : 6) + Mathf.RoundToInt(8 * late);
                 default: return 0;
             }
         }

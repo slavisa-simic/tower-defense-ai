@@ -1,0 +1,62 @@
+{
+  "status": "completed",
+  "duration": 10.8,
+  "summary": {
+    "total": 7,
+    "passed": 7,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialPlayTests.BossPreemptsSpeedAndNeverOverlapsBossOrCoreHud",
+      "Status": "Passed",
+      "Duration": 1.7305945,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialPlayTests.DamageRepairUpgradeAndDismantleUseRealSelectedControlsAndRefund",
+      "Status": "Passed",
+      "Duration": 1.7727882,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialPlayTests.DisabledGuidanceSkipConfirmationAndResetKeepGameAndResearch",
+      "Status": "Passed",
+      "Duration": 0.8043296,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialPlayTests.EveryCreatureDiscoveryAndActualBlockadeAttackTriggerOnce",
+      "Status": "Passed",
+      "Duration": 1.0386706,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialPlayTests.FreshRunIntroPlacementAndContinuePersistWithoutAffectingClock",
+      "Status": "Passed",
+      "Duration": 1.9840497,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialPlayTests.MenuGuidanceDoesNotMoveTargetsOnTimeoutAndCombatTimingIgnoresX2",
+      "Status": "Passed",
+      "Duration": 1.1803402,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.TutorialPlayTests.SummaryResearchAndPortHintsAreContextualAndPersistAcrossLoss",
+      "Status": "Passed",
+      "Duration": 2.2250261,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

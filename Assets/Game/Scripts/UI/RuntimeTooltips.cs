@@ -19,14 +19,20 @@ namespace ShorelineDefense.UI
         {
             target = e.target as VisualElement;
             while (target != null && string.IsNullOrEmpty(target.tooltip)) target = target.parent;
-            if (target == null) return;
+            if (target == null) { tooltip.style.display = DisplayStyle.None; return; }
             tooltip.text = target.tooltip; tooltip.style.display = DisplayStyle.Flex; tooltip.BringToFront();
             float width = root.resolvedStyle.width, height = root.resolvedStyle.height;
             tooltip.style.left = Mathf.Clamp(target.worldBound.xMin, 12, Mathf.Max(12, width - 370));
             tooltip.style.top = Mathf.Clamp(target.worldBound.yMin - 160, 12, Mathf.Max(12, height - 170));
         }
         private void Out(PointerOutEvent e) { target = null; tooltip.style.display = DisplayStyle.None; }
-        private void LateUpdate() { if (target != null && tooltip != null) tooltip.text = target.tooltip; }
+        private void LateUpdate()
+        {
+            if (target == null || tooltip == null) return;
+            // Menu navigation can detach a hovered tree without delivering PointerOut.
+            if (target.panel != root.panel) { target = null; tooltip.style.display = DisplayStyle.None; }
+            else tooltip.text = target.tooltip;
+        }
         private void OnDestroy() { root?.UnregisterCallback<PointerOverEvent>(Over); root?.UnregisterCallback<PointerOutEvent>(Out); tooltip?.RemoveFromHierarchy(); }
     }
 }
