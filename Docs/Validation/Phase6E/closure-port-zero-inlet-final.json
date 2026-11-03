@@ -1,0 +1,1414 @@
+{
+  "profile": "none",
+  "rows": [
+    {
+      "map": "DanubeIndustrialPort",
+      "profile": "none",
+      "rounds": [
+        {
+          "wave": 1,
+          "state": "WaveComplete",
+          "seconds": 44.4,
+          "kills": 74,
+          "homicides": 150,
+          "spawned": 80,
+          "peak": 10,
+          "money": 424,
+          "earned": 374,
+          "spent": 0,
+          "structures": 3,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            8,
+            11,
+            12
+          ],
+          "arrivals": [
+            19,
+            12,
+            0,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 2,
+          "state": "WaveComplete",
+          "seconds": 43.4,
+          "kills": 118,
+          "homicides": 50,
+          "spawned": 120,
+          "peak": 13,
+          "money": 544,
+          "earned": 420,
+          "spent": 0,
+          "structures": 5,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            16,
+            23,
+            22
+          ],
+          "arrivals": [
+            37,
+            24,
+            0,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 3,
+          "state": "WaveComplete",
+          "seconds": 30.6,
+          "kills": 115,
+          "homicides": 0,
+          "spawned": 115,
+          "peak": 17,
+          "money": 603,
+          "earned": 509,
+          "spent": 0,
+          "structures": 8,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            22,
+            33,
+            31
+          ],
+          "arrivals": [
+            51,
+            35,
+            0,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 4,
+          "state": "WaveComplete",
+          "seconds": 27.9,
+          "kills": 145,
+          "homicides": 0,
+          "spawned": 145,
+          "peak": 20,
+          "money": 714,
+          "earned": 561,
+          "spent": 0,
+          "structures": 11,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            29,
+            41,
+            41
+          ],
+          "arrivals": [
+            67,
+            44,
+            0,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 5,
+          "state": "WaveComplete",
+          "seconds": 38.0,
+          "kills": 240,
+          "homicides": 0,
+          "spawned": 240,
+          "peak": 22,
+          "money": 707,
+          "earned": 668,
+          "spent": 0,
+          "structures": 13,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            40,
+            58,
+            60
+          ],
+          "arrivals": [
+            78,
+            80,
+            0,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 6,
+          "state": "WaveComplete",
+          "seconds": 39.5,
+          "kills": 295,
+          "homicides": 0,
+          "spawned": 295,
+          "peak": 21,
+          "money": 717,
+          "earned": 685,
+          "spent": 0,
+          "structures": 15,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            54,
+            77,
+            82
+          ],
+          "arrivals": [
+            101,
+            112,
+            0,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 7,
+          "state": "WaveComplete",
+          "seconds": 44.8,
+          "kills": 442,
+          "homicides": 0,
+          "spawned": 442,
+          "peak": 39,
+          "money": 978,
+          "earned": 936,
+          "spent": 0,
+          "structures": 17,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            76,
+            107,
+            114
+          ],
+          "arrivals": [
+            139,
+            138,
+            20,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 8,
+          "state": "WaveComplete",
+          "seconds": 43.0,
+          "kills": 360,
+          "homicides": 0,
+          "spawned": 360,
+          "peak": 35,
+          "money": 832,
+          "earned": 829,
+          "spent": 0,
+          "structures": 20,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            93,
+            132,
+            139
+          ],
+          "arrivals": [
+            160,
+            167,
+            37,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 9,
+          "state": "WaveComplete",
+          "seconds": 41.8,
+          "kills": 365,
+          "homicides": 0,
+          "spawned": 365,
+          "peak": 29,
+          "money": 958,
+          "earned": 926,
+          "spent": 0,
+          "structures": 22,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            111,
+            151,
+            161
+          ],
+          "arrivals": [
+            178,
+            194,
+            51,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 10,
+          "state": "WaveComplete",
+          "seconds": 44.9,
+          "kills": 395,
+          "homicides": 0,
+          "spawned": 395,
+          "peak": 35,
+          "money": 1066,
+          "earned": 978,
+          "spent": 0,
+          "structures": 23,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            125,
+            178,
+            188
+          ],
+          "arrivals": [
+            201,
+            224,
+            66,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 11,
+          "state": "WaveComplete",
+          "seconds": 36.9,
+          "kills": 363,
+          "homicides": 55,
+          "spawned": 365,
+          "peak": 29,
+          "money": 1028,
+          "earned": 1023,
+          "spent": 0,
+          "structures": 23,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            147,
+            197,
+            204
+          ],
+          "arrivals": [
+            218,
+            250,
+            80,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 12,
+          "state": "WaveComplete",
+          "seconds": 38.1000023,
+          "kills": 485,
+          "homicides": 0,
+          "spawned": 485,
+          "peak": 29,
+          "money": 1109,
+          "earned": 1045,
+          "spent": 0,
+          "structures": 24,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            171,
+            216,
+            222
+          ],
+          "arrivals": [
+            239,
+            275,
+            95,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 13,
+          "state": "WaveComplete",
+          "seconds": 35.9,
+          "kills": 450,
+          "homicides": 0,
+          "spawned": 450,
+          "peak": 46,
+          "money": 1161,
+          "earned": 1099,
+          "spent": 0,
+          "structures": 24,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            193,
+            236,
+            243
+          ],
+          "arrivals": [
+            256,
+            306,
+            110,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 14,
+          "state": "WaveComplete",
+          "seconds": 51.6000023,
+          "kills": 1125,
+          "homicides": 0,
+          "spawned": 1125,
+          "peak": 28,
+          "money": 1564,
+          "earned": 1488,
+          "spent": 0,
+          "structures": 24,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            229,
+            269,
+            274
+          ],
+          "arrivals": [
+            256,
+            326,
+            190,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 15,
+          "state": "WaveComplete",
+          "seconds": 38.4,
+          "kills": 540,
+          "homicides": 0,
+          "spawned": 540,
+          "peak": 41,
+          "money": 1151,
+          "earned": 1087,
+          "spent": 0,
+          "structures": 26,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            256,
+            292,
+            297
+          ],
+          "arrivals": [
+            278,
+            359,
+            208,
+            0
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 16,
+          "state": "WaveComplete",
+          "seconds": 31.7,
+          "kills": 370,
+          "homicides": 0,
+          "spawned": 370,
+          "peak": 48,
+          "money": 1185,
+          "earned": 1015,
+          "spent": 0,
+          "structures": 25,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            279,
+            307,
+            310
+          ],
+          "arrivals": [
+            293,
+            382,
+            220,
+            1
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 17,
+          "state": "WaveComplete",
+          "seconds": 34.0,
+          "kills": 420,
+          "homicides": 0,
+          "spawned": 420,
+          "peak": 62,
+          "money": 1220,
+          "earned": 1108,
+          "spent": 0,
+          "structures": 23,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            301,
+            326,
+            327
+          ],
+          "arrivals": [
+            311,
+            409,
+            233,
+            1
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 18,
+          "state": "WaveComplete",
+          "seconds": 35.1000023,
+          "kills": 630,
+          "homicides": 0,
+          "spawned": 630,
+          "peak": 51,
+          "money": 1380,
+          "earned": 1172,
+          "spent": 0,
+          "structures": 23,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            326,
+            345,
+            345
+          ],
+          "arrivals": [
+            334,
+            432,
+            249,
+            1
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 19,
+          "state": "WaveComplete",
+          "seconds": 37.8,
+          "kills": 775,
+          "homicides": 0,
+          "spawned": 775,
+          "peak": 43,
+          "money": 1343,
+          "earned": 1255,
+          "spent": 0,
+          "structures": 23,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            353,
+            370,
+            372
+          ],
+          "arrivals": [
+            362,
+            464,
+            267,
+            2
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 20,
+          "state": "WaveComplete",
+          "seconds": 60.0,
+          "kills": 690,
+          "homicides": 0,
+          "spawned": 690,
+          "peak": 42,
+          "money": 1391,
+          "earned": 1278,
+          "spent": 0,
+          "structures": 25,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            363,
+            371,
+            420
+          ],
+          "arrivals": [
+            380,
+            492,
+            278,
+            4
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 21,
+          "state": "WaveComplete",
+          "seconds": 35.2,
+          "kills": 640,
+          "homicides": 0,
+          "spawned": 640,
+          "peak": 73,
+          "money": 1460,
+          "earned": 1166,
+          "spent": 0,
+          "structures": 24,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            388,
+            396,
+            439
+          ],
+          "arrivals": [
+            408,
+            517,
+            290,
+            8
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 22,
+          "state": "WaveComplete",
+          "seconds": 35.0,
+          "kills": 645,
+          "homicides": 0,
+          "spawned": 645,
+          "peak": 76,
+          "money": 1129,
+          "earned": 699,
+          "spent": 0,
+          "structures": 24,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            418,
+            417,
+            459
+          ],
+          "arrivals": [
+            429,
+            549,
+            307,
+            9
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 23,
+          "state": "WaveComplete",
+          "seconds": 33.6000023,
+          "kills": 665,
+          "homicides": 0,
+          "spawned": 665,
+          "peak": 69,
+          "money": 1172,
+          "earned": 687,
+          "spent": 0,
+          "structures": 22,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            445,
+            437,
+            479
+          ],
+          "arrivals": [
+            451,
+            579,
+            319,
+            12
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 24,
+          "state": "WaveComplete",
+          "seconds": 38.0,
+          "kills": 695,
+          "homicides": 0,
+          "spawned": 695,
+          "peak": 109,
+          "money": 1727,
+          "earned": 689,
+          "spent": 0,
+          "structures": 20,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            477,
+            458,
+            504
+          ],
+          "arrivals": [
+            468,
+            622,
+            329,
+            20
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 25,
+          "state": "WaveComplete",
+          "seconds": 53.1000023,
+          "kills": 966,
+          "homicides": 0,
+          "spawned": 966,
+          "peak": 97,
+          "money": 3508,
+          "earned": 3247,
+          "spent": 0,
+          "structures": 23,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            519,
+            489,
+            533
+          ],
+          "arrivals": [
+            489,
+            679,
+            349,
+            24
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 26,
+          "state": "WaveComplete",
+          "seconds": 48.5,
+          "kills": 965,
+          "homicides": 0,
+          "spawned": 965,
+          "peak": 76,
+          "money": 3428,
+          "earned": 595,
+          "spent": 0,
+          "structures": 23,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            552,
+            512,
+            559
+          ],
+          "arrivals": [
+            506,
+            724,
+            369,
+            24
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 27,
+          "state": "WaveComplete",
+          "seconds": 44.9,
+          "kills": 790,
+          "homicides": 0,
+          "spawned": 790,
+          "peak": 81,
+          "money": 4000,
+          "earned": 572,
+          "spent": 0,
+          "structures": 23,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            585,
+            532,
+            582
+          ],
+          "arrivals": [
+            528,
+            759,
+            383,
+            29
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 28,
+          "state": "WaveComplete",
+          "seconds": 43.6000023,
+          "kills": 840,
+          "homicides": 0,
+          "spawned": 840,
+          "peak": 73,
+          "money": 4579,
+          "earned": 579,
+          "spent": 0,
+          "structures": 23,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            619,
+            554,
+            606
+          ],
+          "arrivals": [
+            549,
+            798,
+            402,
+            30
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 29,
+          "state": "WaveComplete",
+          "seconds": 50.0,
+          "kills": 840,
+          "homicides": 0,
+          "spawned": 840,
+          "peak": 76,
+          "money": 5190,
+          "earned": 611,
+          "spent": 0,
+          "structures": 23,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            654,
+            580,
+            631
+          ],
+          "arrivals": [
+            577,
+            835,
+            417,
+            36
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 30,
+          "state": "WaveComplete",
+          "seconds": 46.7,
+          "kills": 935,
+          "homicides": 0,
+          "spawned": 935,
+          "peak": 69,
+          "money": 2864,
+          "earned": 374,
+          "spent": 0,
+          "structures": 26,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            693,
+            605,
+            656
+          ],
+          "arrivals": [
+            606,
+            874,
+            437,
+            37
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 31,
+          "state": "WaveComplete",
+          "seconds": 33.2,
+          "kills": 465,
+          "homicides": 0,
+          "spawned": 465,
+          "peak": 114,
+          "money": 1998,
+          "earned": 484,
+          "spent": 0,
+          "structures": 26,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            720,
+            625,
+            672
+          ],
+          "arrivals": [
+            608,
+            895,
+            469,
+            45
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 32,
+          "state": "WaveComplete",
+          "seconds": 53.4,
+          "kills": 1040,
+          "homicides": 0,
+          "spawned": 1040,
+          "peak": 75,
+          "money": 2333,
+          "earned": 369,
+          "spent": 0,
+          "structures": 26,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            765,
+            652,
+            701
+          ],
+          "arrivals": [
+            630,
+            949,
+            491,
+            48
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 33,
+          "state": "WaveComplete",
+          "seconds": 48.2,
+          "kills": 1200,
+          "homicides": 0,
+          "spawned": 1200,
+          "peak": 75,
+          "money": 2537,
+          "earned": 204,
+          "spent": 0,
+          "structures": 26,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            787,
+            667,
+            715
+          ],
+          "arrivals": [
+            630,
+            958,
+            533,
+            48
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 34,
+          "state": "WaveComplete",
+          "seconds": 56.5,
+          "kills": 1080,
+          "homicides": 0,
+          "spawned": 1080,
+          "peak": 75,
+          "money": 2916,
+          "earned": 379,
+          "spent": 0,
+          "structures": 26,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            830,
+            703,
+            747
+          ],
+          "arrivals": [
+            657,
+            1016,
+            556,
+            51
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 35,
+          "state": "WaveComplete",
+          "seconds": 54.7,
+          "kills": 1060,
+          "homicides": 0,
+          "spawned": 1060,
+          "peak": 92,
+          "money": 1975,
+          "earned": 409,
+          "spent": 0,
+          "structures": 29,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            878,
+            730,
+            777
+          ],
+          "arrivals": [
+            687,
+            1065,
+            578,
+            55
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 36,
+          "state": "WaveComplete",
+          "seconds": 60.6000023,
+          "kills": 1195,
+          "homicides": 0,
+          "spawned": 1195,
+          "peak": 88,
+          "money": 1714,
+          "earned": 414,
+          "spent": 0,
+          "structures": 29,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            925,
+            765,
+            808
+          ],
+          "arrivals": [
+            717,
+            1121,
+            601,
+            59
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 37,
+          "state": "WaveComplete",
+          "seconds": 55.1000023,
+          "kills": 1040,
+          "homicides": 0,
+          "spawned": 1040,
+          "peak": 78,
+          "money": 2193,
+          "earned": 479,
+          "spent": 0,
+          "structures": 29,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            969,
+            799,
+            839
+          ],
+          "arrivals": [
+            754,
+            1167,
+            624,
+            62
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 38,
+          "state": "WaveComplete",
+          "seconds": 75.1,
+          "kills": 1372,
+          "homicides": 0,
+          "spawned": 1372,
+          "peak": 82,
+          "money": 2755,
+          "earned": 562,
+          "spent": 0,
+          "structures": 29,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            1031,
+            852,
+            874
+          ],
+          "arrivals": [
+            791,
+            1242,
+            655,
+            69
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 39,
+          "state": "WaveComplete",
+          "seconds": 64.9,
+          "kills": 1185,
+          "homicides": 0,
+          "spawned": 1185,
+          "peak": 85,
+          "money": 3239,
+          "earned": 484,
+          "spent": 0,
+          "structures": 29,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            1083,
+            888,
+            907
+          ],
+          "arrivals": [
+            820,
+            1305,
+            677,
+            76
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 40,
+          "state": "WaveComplete",
+          "seconds": 71.6,
+          "kills": 1200,
+          "homicides": 0,
+          "spawned": 1200,
+          "peak": 83,
+          "money": 1839,
+          "earned": 434,
+          "spent": 0,
+          "structures": 31,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            1131,
+            924,
+            943
+          ],
+          "arrivals": [
+            849,
+            1368,
+            699,
+            82
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 41,
+          "state": "WaveComplete",
+          "seconds": 46.6000023,
+          "kills": 730,
+          "homicides": 0,
+          "spawned": 730,
+          "peak": 109,
+          "money": 1528,
+          "earned": 589,
+          "spent": 0,
+          "structures": 31,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            1167,
+            951,
+            968
+          ],
+          "arrivals": [
+            851,
+            1397,
+            749,
+            89
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 42,
+          "state": "WaveComplete",
+          "seconds": 69.9,
+          "kills": 1195,
+          "homicides": 0,
+          "spawned": 1195,
+          "peak": 84,
+          "money": 1965,
+          "earned": 499,
+          "spent": 0,
+          "structures": 31,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            1218,
+            987,
+            1007
+          ],
+          "arrivals": [
+            879,
+            1464,
+            774,
+            95
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 43,
+          "state": "WaveComplete",
+          "seconds": 63.5,
+          "kills": 1200,
+          "homicides": 0,
+          "spawned": 1200,
+          "peak": 89,
+          "money": 2514,
+          "earned": 549,
+          "spent": 0,
+          "structures": 31,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            1271,
+            1024,
+            1048
+          ],
+          "arrivals": [
+            906,
+            1536,
+            802,
+            99
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 44,
+          "state": "WaveComplete",
+          "seconds": 59.1000023,
+          "kills": 1190,
+          "homicides": 0,
+          "spawned": 1190,
+          "peak": 83,
+          "money": 3560,
+          "earned": 594,
+          "spent": 0,
+          "structures": 31,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            1323,
+            1066,
+            1085
+          ],
+          "arrivals": [
+            940,
+            1602,
+            830,
+            102
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 45,
+          "state": "WaveComplete",
+          "seconds": 68.4,
+          "kills": 1200,
+          "homicides": 0,
+          "spawned": 1200,
+          "peak": 81,
+          "money": 2741,
+          "earned": 549,
+          "spent": 0,
+          "structures": 34,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            1382,
+            1105,
+            1122
+          ],
+          "arrivals": [
+            974,
+            1670,
+            854,
+            111
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 46,
+          "state": "WaveComplete",
+          "seconds": 66.6,
+          "kills": 1200,
+          "homicides": 0,
+          "spawned": 1200,
+          "peak": 78,
+          "money": 2627,
+          "earned": 579,
+          "spent": 0,
+          "structures": 34,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            1441,
+            1144,
+            1159
+          ],
+          "arrivals": [
+            1002,
+            1744,
+            882,
+            116
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 47,
+          "state": "WaveComplete",
+          "seconds": 63.4,
+          "kills": 1200,
+          "homicides": 0,
+          "spawned": 1200,
+          "peak": 87,
+          "money": 3101,
+          "earned": 474,
+          "spent": 0,
+          "structures": 34,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            1487,
+            1178,
+            1200
+          ],
+          "arrivals": [
+            1027,
+            1811,
+            908,
+            119
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 48,
+          "state": "WaveComplete",
+          "seconds": 85.2000046,
+          "kills": 1560,
+          "homicides": 0,
+          "spawned": 1560,
+          "peak": 92,
+          "money": 3757,
+          "earned": 674,
+          "spent": 0,
+          "structures": 34,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            1553,
+            1233,
+            1256
+          ],
+          "arrivals": [
+            1060,
+            1913,
+            944,
+            125
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 49,
+          "state": "WaveComplete",
+          "seconds": 66.0,
+          "kills": 1200,
+          "homicides": 0,
+          "spawned": 1200,
+          "peak": 79,
+          "money": 4273,
+          "earned": 524,
+          "spent": 0,
+          "structures": 34,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            1607,
+            1273,
+            1290
+          ],
+          "arrivals": [
+            1087,
+            1983,
+            965,
+            135
+          ],
+          "stalled": false
+        },
+        {
+          "wave": 50,
+          "state": "WaveComplete",
+          "seconds": 84.7000046,
+          "kills": 1452,
+          "homicides": 0,
+          "spawned": 1452,
+          "peak": 83,
+          "money": 4322,
+          "earned": 2749,
+          "spent": 0,
+          "structures": 35,
+          "registry": 0,
+          "alive": 0,
+          "pending": 0,
+          "sectors": [
+            1673,
+            1319,
+            1324
+          ],
+          "arrivals": [
+            1120,
+            2060,
+            993,
+            143
+          ],
+          "stalled": false
+        }
+      ],
+      "totalEarned": 40361,
+      "totalSpent": 36539,
+      "rp": 138
+    }
+  ]
+}

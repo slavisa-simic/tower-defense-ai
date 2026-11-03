@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "duration": 1.6,
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "ShorelineDefense.Tests.IndustrialPortPlayTests.LegacySavedApronStructuresRemainCompatibleAndBlockedLandingDoesNotStallCargo",
+      "Status": "Passed",
+      "Duration": 1.5648011,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

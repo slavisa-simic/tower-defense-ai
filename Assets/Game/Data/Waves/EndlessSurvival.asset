@@ -28,6 +28,10 @@ MonoBehaviour:
   randomizeSeed: 1
   baseReward: 300
   rewardGrowth: 2
+  incomeTaperStartWave: 10
+  incomeTaperEndWave: 30
+  lateKillIncome: 0.12
+  lateWaveIncome: 0.5
   scalingStartWave: 20
   healthGrowth: 0.0125
   speedGrowth: 0.002

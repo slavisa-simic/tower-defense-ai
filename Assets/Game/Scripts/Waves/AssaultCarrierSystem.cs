@@ -15,7 +15,9 @@ namespace ShorelineDefense.Waves
         public Vector3 berth;
         public bool authoredSector;
         public LandingSector sector;
+        [Min(1)] public int minimumWave = 1;
         public Vector3[] unloadingPositions = Array.Empty<Vector3>();
+        public Vector3[] lateUnloadingPositions = Array.Empty<Vector3>();
     }
 
     /// <summary>Bounded transport presentation. The spawner alone creates/initializes passengers.</summary>
@@ -28,6 +30,51 @@ namespace ShorelineDefense.Waves
         [SerializeField, Range(0, 1)] private float earlyDirectRatio = .6f;
         [SerializeField, Range(0, 1)] private float lateDirectRatio = .3f;
         [SerializeField, Range(0, 1)] private float broodRatio = .25f;
+        [SerializeField, Min(0)] private int distributedPressureFromWave;
+        [SerializeField, Range(1, 4)] private float lateReleaseRate = 1;
+        [SerializeField, Range(1, 3)] private float latePressureMultiplier = 1;
+        [SerializeField, Range(.25f, 1)] private float lateArrivalMultiplier = 1;
+        [SerializeField, Range(0, 8)] private int lateExtraCarriers;
+        [SerializeField, Range(1, 4)] private float lateSpitterWeight = 1;
+        [SerializeField, Range(1, 4)] private float lateBurrowerWeight = 1;
+        [SerializeField, Range(1, 3)] private float lateFormationMultiplier = 1;
+        private float SplitPressureAgeAt(int wave) => distributedPressureFromWave > 0 ? Mathf.Clamp01((wave - distributedPressureFromWave) / 20f) : 0;
+        private float SplitPressureAge => SplitPressureAgeAt(waveNumber);
+        public float CargoWeight(EnemyKind kind, int wave) => Mathf.Lerp(1,
+            kind == EnemyKind.Spitter ? lateSpitterWeight : kind == EnemyKind.Burrower ? lateBurrowerWeight : 1, SplitPressureAgeAt(wave));
+        public int FormationQuantity(int wave, int baseline) => Mathf.Clamp(Mathf.RoundToInt(baseline *
+            Mathf.Lerp(1, lateFormationMultiplier, SplitPressureAgeAt(wave))), 1, 20);
+        public float PressureMultiplier => Mathf.Lerp(1, latePressureMultiplier, SplitPressureAge);
+        public float ArrivalMultiplier => Mathf.Lerp(1, lateArrivalMultiplier, SplitPressureAge);
+        public int ExtraCarriers => Mathf.RoundToInt(lateExtraCarriers * SplitPressureAge);
+        public Vector3[] PositionsFor(RiverLandingPoint point) => distributedPressureFromWave > 0 && waveNumber >= distributedPressureFromWave &&
+            point.lateUnloadingPositions != null && point.lateUnloadingPositions.Length > 0 ? point.lateUnloadingPositions : point.unloadingPositions;
+        public bool IntersectsReleaseCells(Vector2Int anchor, Vector2Int footprint)
+        {
+            var grid = spawner?.Battlefield?.Grid;
+            if (distributedPressureFromWave <= 0 || grid == null) return false;
+            foreach (var point in landingPoints)
+            {
+                if (point == null) continue;
+                if (Intersects(point.unloadingPositions) || Intersects(point.lateUnloadingPositions)) return true;
+            }
+            return false;
+            bool Intersects(Vector3[] positions)
+            {
+                if (positions == null) return false;
+                foreach (var position in positions)
+                    if (grid.TryWorldToCell(position, out var cell) && cell.x >= anchor.x && cell.y >= anchor.y &&
+                        cell.x < anchor.x + footprint.x && cell.y < anchor.y + footprint.y) return true;
+                return false;
+            }
+        }
+        private bool HasWalkableRelease(RiverLandingPoint point)
+        {
+            var grid = spawner.Battlefield.Grid;
+            foreach (var position in PositionsFor(point))
+                if (grid.TryWorldToCell(position, out var cell) && grid.IsTraversable(cell)) return true;
+            return false;
+        }
         private int waveNumber = 1;
         public IReadOnlyList<CarrierDefinition> Carriers => carriers;
         public void ConfigureWave(int number) => waveNumber = Mathf.Max(1, number);
@@ -147,7 +194,8 @@ namespace ShorelineDefense.Waves
             for (int index = 0; index < landingPoints.Length; index++)
             {
                 var point = landingPoints[index];
-                if (!IsRiverLane(point, carrier)) continue;
+                if (point == null || waveNumber < point.minimumWave) continue;
+                if (!IsRiverLane(point, carrier) || !HasWalkableRelease(point)) continue;
                 // Four of five dispatches wait for the announced sector instead of silently spilling
                 // into every free lane. The fifth allows supporting landings elsewhere.
                 if (eventModifiers?.landingPattern == LandingPattern.Concentrated && landingSequence % 5 != 4 && SectorFor(point) != targetSector) continue;
@@ -159,7 +207,8 @@ namespace ShorelineDefense.Waves
                 if (entryOccupied) continue;
                 float score = laneCount * 4 + recentLandings[index] / (float)Mathf.Max(1, landingSequence) +
                     ((index * 17 + landingSequence * 13) % 23) * .025f;
-                if (eventModifiers?.landingPattern == LandingPattern.Distributed)
+                if (eventModifiers?.landingPattern == LandingPattern.Distributed ||
+                    distributedPressureFromWave > 0 && waveNumber >= distributedPressureFromWave && eventModifiers?.landingPattern != LandingPattern.Concentrated)
                     score += (int)SectorFor(point) == landingSequence % 3 ? -20 : 0;
                 if (eventModifiers?.landingPattern == LandingPattern.Concentrated)
                     score += SectorFor(point) == targetSector ? -20 : 0;
@@ -293,23 +342,32 @@ namespace ShorelineDefense.Waves
                 {
                     boat.timer -= deltaTime;
                     if (boat.timer > 0) continue;
-                    bool unloaded = false;
-                    for (int attempt = 0; attempt < point.unloadingPositions.Length; attempt++)
+                    float rate = distributedPressureFromWave > 0 && waveNumber >= distributedPressureFromWave ? lateReleaseRate : 1;
+                    // Late split-route pressure can release more than one passenger per frame.
+                    // Retain the interval remainder; every release still uses spawner admission.
+                    do
                     {
-                        var position = point.unloadingPositions[boat.nextOffset];
-                        boat.nextOffset = (boat.nextOffset + 1) % point.unloadingPositions.Length;
-                        if (!spawner.TrySpawnAt(boat.cargo[boat.cargo.Length - boat.remaining], position, out var enemy)) continue;
-                        boat.remaining--; IncomingPassengers--; unloaded = true;
-                        foreach (var seat in boat.passengers)
-                            if (seat.name == "Passenger " + boat.seatOffsets[boat.cargo.Length - boat.remaining - 1]) seat.enabled = false;
-                        effects?.Play(VfxId.SplashSmall, position, 0, .4f);
-                        Unloaded?.Invoke(enemy);
-                        // Observers may cause Game Over and clear the entire transport collection.
-                        if (!game.IsPlaying || !isActiveAndEnabled) return;
-                        break;
-                    }
-                    boat.timer = unloaded ? boat.definition?.releaseInterval ?? disembarkDelay : .1f;
-                    if (boat.remaining == 0) { boat.stage = 2; boat.timer = boat.definition?.remainsSeconds ?? departureDelay; }
+                        bool unloaded = false;
+                        var positions = PositionsFor(point);
+                        for (int attempt = 0; attempt < positions.Length; attempt++)
+                        {
+                            var position = positions[boat.nextOffset];
+                            boat.nextOffset = (boat.nextOffset + 1) % positions.Length;
+                            if (!spawner.TrySpawnAt(boat.cargo[boat.cargo.Length - boat.remaining], position, out var enemy)) continue;
+                            boat.remaining--; IncomingPassengers--; unloaded = true;
+                            foreach (var seat in boat.passengers)
+                                if (seat.name == "Passenger " + boat.seatOffsets[boat.cargo.Length - boat.remaining - 1]) seat.enabled = false;
+                            effects?.Play(VfxId.SplashSmall, position, 0, .4f);
+                            Unloaded?.Invoke(enemy);
+                            // Observers may cause Game Over and clear the entire transport collection.
+                            if (!game.IsPlaying || !isActiveAndEnabled) return;
+                            break;
+                        }
+                        float interval = (boat.definition?.releaseInterval ?? disembarkDelay) / Mathf.Max(1, rate);
+                        boat.timer = unloaded ? rate > 1 ? boat.timer + interval : interval : .1f;
+                        if (boat.remaining == 0) { boat.stage = 2; boat.timer = boat.definition?.remainsSeconds ?? departureDelay; }
+                        if (!unloaded || rate <= 1) break;
+                    } while (boat.stage == 1 && boat.timer <= 0);
                 }
                 else if (boat.stage == 2)
                 {

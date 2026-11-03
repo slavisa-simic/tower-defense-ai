@@ -44,6 +44,37 @@ namespace ShorelineDefense.Tests
             heavy.Health.TakeDefenseDamage(heavy.Health.CurrentHealth-10,1);
             weapon.Tick(.2f);Assert.That(weapon.Target,Is.SameAs(heavy),"Precision priority must not abandon a wounded heavy for healthy larvae");yield return null;
         }
+        [UnityTest] public IEnumerator HardenedWireImprovesOnlyLevelIIIAndLeavesTheRouteWalkable()
+        {
+            var b=Find<BuildManager>();b.Economy.AddMoney(1000);
+            LocalGameData.Profile.DebugGrantRP(100,out _);
+            var tree=new ResearchTreeService(LocalGameData.Profile,ResearchCatalog.Load(),()=>true);
+            Assert.IsTrue(tree.TryPurchase("reinforced-emplacements",out _));Assert.IsTrue(tree.TryPurchase("hardened-wire",out _));
+            var researched=new MetaModifierService(MetaModifierService.FromProfile(LocalGameData.Profile,ResearchCatalog.Load()));
+            var wire=Find<BuildHud>().Defenses.Single(d=>d.Id=="barbed-wire");
+            Assert.That(researched.MovementMultiplier(wire,1),Is.EqualTo(.5f).Within(.001));
+            Assert.That(researched.MovementMultiplier(wire,2),Is.EqualTo(.4f).Within(.001));
+            Assert.That(MetaModifierService.Neutral.MovementMultiplier(wire,3),Is.EqualTo(.35f).Within(.001));
+            b.ConfigureMeta(researched);var cell=new Vector2Int(12,8);
+            Assert.That(b.TryPlaceDefense(wire,cell,out var placed),Is.EqualTo(PlacementResult.Valid));
+            Assert.IsTrue(b.TryUpgrade(placed));Assert.IsTrue(b.TryUpgrade(placed));
+            Assert.That(placed.MaxHealth,Is.EqualTo(400),"The new node must not retain the redundant HP bonus");
+            Assert.That(placed.Grid.MovementMultiplierAt(placed.transform.position),Is.EqualTo(.3f).Within(.001));
+            Assert.IsTrue(placed.Grid.IsTraversable(cell));
+            Assert.That(placed.Grid.MovementMultiplierAt(placed.Grid.CellToWorld(cell+Vector2Int.right)),Is.EqualTo(1));
+            Assert.IsTrue(b.TryDismantle(placed,out _));Assert.That(b.Battlefield.Grid.MovementMultiplierAt(b.Battlefield.Grid.CellToWorld(cell)),Is.EqualTo(1));
+            yield return null;
+        }
+        [UnityTest] public IEnumerator LateKillsCreditAndDisplayTheSameReducedReward()
+        {
+            var w=Find<WaveManager>();var data=Find<RunSession>().Capture();data.wave=40;data.completedWaves=39;w.RestorePreparation(data);
+            var sp=Find<EnemySpawner>();var prefab=w.EndlessSettings.enemies.Single(p=>p.Definition.Kind==EnemyKind.Bulwark);
+            Assert.IsTrue(sp.TrySpawnAt(prefab,sp.Battlefield.Grid.CellToWorld(new Vector2Int(12,8)),out var enemy));
+            var money=Find<BuildManager>().Economy;int before=money.Money,expected=w.KillRewardFor(enemy.Definition);
+            Assert.That(expected,Is.LessThan(enemy.Definition.KillReward));enemy.Health.TakeDefenseDamage(int.MaxValue,1);
+            Assert.That(money.Money-before,Is.EqualTo(expected));
+            Assert.That(Find<CombatFeedbackHud>().LastRewardText,Is.EqualTo("+"+expected+" RSD"));yield return null;
+        }
         [UnityTest] public IEnumerator EarlyCargoAdmissionCannotOvershootWithAFullDriftPod()
         {
             var w=Find<WaveManager>();var registry=Find<EnemyRegistry>();w.Landings.ForcedArrival=ArrivalMethod.DriftPod;Assert.IsTrue(w.TryStartWave());

@@ -27,7 +27,9 @@ namespace ShorelineDefense.Tests
         {
             var context=Find<MapRuntimeContext>(); string report=context.Validate(out int invalid); Assert.Zero(invalid,report);
             var boats=Find<BoatLandingSystem>(); var waves=Find<WaveManager>(); var registry=Find<EnemyRegistry>();
-            Assert.That(boats.LandingPoints.Count,Is.EqualTo(8)); Assert.That(boats.LandingPoints.Select(p=>boats.SectorFor(p)).Distinct().Count(),Is.EqualTo(3));
+            Assert.That(boats.LandingPoints.Count,Is.EqualTo(9)); Assert.That(boats.LandingPoints.Count(p=>p.minimumWave<=1),Is.EqualTo(8)); Assert.That(boats.LandingPoints.Select(p=>boats.SectorFor(p)).Distinct().Count(),Is.EqualTo(3));
+            foreach(var point in boats.LandingPoints)foreach(var position in point.unloadingPositions.Concat(point.lateUnloadingPositions))
+            {Assert.IsTrue(context.grid.Grid.TryWorldToCell(position,out var cell));Assert.IsTrue(boats.IntersectsReleaseCells(cell,Vector2Int.one),"New construction must keep carrier release positions clear");}
             foreach(var prefab in waves.EndlessSettings.bossEncounters.bosses)
             {
                 long before=Find<RunStatistics>().BossesBreached;
@@ -35,6 +37,27 @@ namespace ShorelineDefense.Tests
                 for(int i=0;i<500&&(boats.ActiveBoats>0||registry.Count>0);i++) { boats.Tick(.5f); foreach(var e in registry.Active.ToArray())e.Tick(100); yield return null; }
                 Assert.That(Find<RunStatistics>().BossesBreached,Is.EqualTo(before+1)); Assert.Zero(boats.IncomingPassengers);
             }
+        }
+        [UnityTest] public IEnumerator LegacySavedApronStructuresRemainCompatibleAndBlockedLandingDoesNotStallCargo()
+        {
+            var b=Find<BuildManager>();var w=Find<WaveManager>();var boats=Find<BoatLandingSystem>();var mg=Find<BuildHud>().Defenses.Single(d=>d.Id=="machine-gun-nest");
+            var data=Find<RunSession>().Capture();int health=b.Meta.MaxHealth(mg,1);
+            foreach(int x in new[]{12,13})foreach(int y in new[]{0,1})
+                data.structures.Add(new StructureSaveData{defenseId=mg.Id,x=x,y=y,level=1,health=health,maxHealth=health,constructionCost=mg.Cost,investment=mg.Cost});
+            Assert.IsTrue(RunSaveCompatibility.Valid(data,Find<BuildHud>().Defenses,b.Battlefield.Definition,w.EndlessSettings.eventSettings));
+            foreach(var item in data.structures)Assert.IsNotNull(b.RestoreDefense(mg,item));
+            Assert.That(b.Validate(mg,new Vector2Int(6,4)),Is.EqualTo(PlacementResult.NotBuildable));
+            Find<MapRuntimeContext>().Validate(out int invalid);Assert.Zero(invalid,"Restored apron defenses must not invalidate the map");
+            boats.ConfigureWave(35);boats.ForcedArrival=ArrivalMethod.DriftPod;boats.ConfigurePressure(.1f,8);
+            var registry=Find<EnemyRegistry>();var spawner=Find<EnemySpawner>();int before=spawner.TotalSpawned;
+            for(int batch=0;batch<12;batch++)
+            {
+                Assert.IsTrue(boats.TryDispatch(spawner.DefaultPrefab,1));
+                for(int i=0;i<300&&(boats.ActiveCarriers>0||registry.Count>0);i++)
+                {boats.Tick(.1f);foreach(var e in registry.Active.ToArray())e.Tick(100);if(i%5==0)yield return null;}
+                Assert.Zero(boats.IncomingPassengers);Assert.Zero(boats.ActiveCarriers);
+            }
+            Assert.That(spawner.TotalSpawned-before,Is.EqualTo(12));
         }
         [UnityTest] public IEnumerator AllDefensesManageSaveAndContinueOnSelectedMap()
         {

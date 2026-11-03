@@ -1,0 +1,98 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "command": "run_tests",
+    "parameters": {
+      "mode": "editor",
+      "filter": "EndlessWaveTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 9,
+        "Passed": 9,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.CompositionIsValidBudgetedBoundedAndNumericallySafe(1)",
+          "Status": "Passed",
+          "Duration": 0.0544473,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.CompositionIsValidBudgetedBoundedAndNumericallySafe(10)",
+          "Status": "Passed",
+          "Duration": 0.0031815,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.CompositionIsValidBudgetedBoundedAndNumericallySafe(25)",
+          "Status": "Passed",
+          "Duration": 0.0072082,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.CompositionIsValidBudgetedBoundedAndNumericallySafe(50)",
+          "Status": "Passed",
+          "Duration": 0.0092522,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.CompositionIsValidBudgetedBoundedAndNumericallySafe(100)",
+          "Status": "Passed",
+          "Duration": 0.0054754,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.CompositionIsValidBudgetedBoundedAndNumericallySafe(1000)",
+          "Status": "Passed",
+          "Duration": 0.0053701,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.CompositionIsValidBudgetedBoundedAndNumericallySafe(int.MaxValue)",
+          "Status": "Passed",
+          "Duration": 0.0053759,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.SeedReproducesCompositionAndOtherSeedsVary",
+          "Status": "Passed",
+          "Duration": 0.0035566,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.EndlessWaveTests.UnlocksEnemyStatsAndDifficultyGrowthMatchRoles",
+          "Status": "Passed",
+          "Duration": 0.001256,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 0.29,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: EndlessWaveTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

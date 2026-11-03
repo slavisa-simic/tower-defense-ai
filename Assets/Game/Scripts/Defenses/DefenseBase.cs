@@ -26,7 +26,7 @@ namespace ShorelineDefense.Defenses
         public float FireRate => FireRateAtLevel(Level);
         public float FireRateAtLevel(int level) => Definition.FireRate * Meta.FireRateMultiplier(Definition) * (Definition.LevelData(level)?.fireRate ?? 1);
         public float DamageTick => Definition.HeavyWeapon.damageTick / Meta.FireRateMultiplier(Definition);
-        public float MovementMultiplier => Mathf.Max(.05f, Definition.MovementMultiplier * (LevelStats?.slow ?? 1));
+        public float MovementMultiplier => Meta.MovementMultiplier(Definition, Level);
         public float SplashRadiusInCells => Definition.HeavyWeapon.splashRadiusInCells * Meta.SplashMultiplier(Definition) * (LevelStats?.splash ?? 1);
         public float BurnDuration => Definition.HeavyWeapon.burnDuration * Meta.BurnMultiplier(Definition) * (LevelStats?.burnDuration ?? 1);
         public float BurnDps => Definition.HeavyWeapon.burnDps * (LevelStats?.burnDps ?? 1);

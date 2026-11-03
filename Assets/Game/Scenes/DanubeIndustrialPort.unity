@@ -17869,65 +17869,156 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 11f86419cca45444ab53d82d86b0e79e, type: 2}
   - {fileID: 11400000, guid: dcae0ed90c7dd1d45a973fb637f39226, type: 2}
   earlyDirectRatio: 0.6
-  lateDirectRatio: 0.3
+  lateDirectRatio: 0.55
   broodRatio: 0.25
+  distributedPressureFromWave: 11
+  lateReleaseRate: 3
+  latePressureMultiplier: 2.25
+  lateArrivalMultiplier: 0.5
+  lateExtraCarriers: 6
+  lateSpitterWeight: 3
+  lateBurrowerWeight: 4
+  lateFormationMultiplier: 2.4
   landingPoints:
   - riverEntry: {x: -25, y: -7.75, z: 0}
     berth: {x: -17.1875, y: -7.75, z: 0}
     authoredSector: 1
     sector: 0
+    minimumWave: 1
     unloadingPositions:
     - {x: -14.375, y: -8.125, z: 0}
     - {x: -13.125, y: -8.125, z: 0}
+    lateUnloadingPositions:
+    - {x: -14.375, y: -8.125, z: 0}
+    - {x: -13.125, y: -8.125, z: 0}
+    - {x: -11.875, y: -8.125, z: 0}
+    - {x: -14.375, y: -6.875, z: 0}
+    - {x: -13.125, y: -6.875, z: 0}
+    - {x: -11.875, y: -6.875, z: 0}
   - riverEntry: {x: -25, y: -6.125, z: 0}
     berth: {x: -17.1875, y: -6.125, z: 0}
     authoredSector: 1
     sector: 0
+    minimumWave: 1
     unloadingPositions:
     - {x: -14.375, y: -5.625, z: 0}
     - {x: -13.125, y: -5.625, z: 0}
+    lateUnloadingPositions:
+    - {x: -14.375, y: -6.875, z: 0}
+    - {x: -13.125, y: -6.875, z: 0}
+    - {x: -11.875, y: -6.875, z: 0}
+    - {x: -14.375, y: -5.625, z: 0}
+    - {x: -13.125, y: -5.625, z: 0}
+    - {x: -11.875, y: -5.625, z: 0}
+    - {x: -11.875, y: -4.375, z: 0}
   - riverEntry: {x: -25, y: -1.5, z: 0}
     berth: {x: -17.1875, y: -1.5, z: 0}
     authoredSector: 1
     sector: 1
+    minimumWave: 1
     unloadingPositions:
     - {x: -14.375, y: -1.875, z: 0}
     - {x: -13.125, y: -1.875, z: 0}
+    lateUnloadingPositions:
+    - {x: -11.875, y: -3.125, z: 0}
+    - {x: -14.375, y: -1.875, z: 0}
+    - {x: -13.125, y: -1.875, z: 0}
+    - {x: -11.875, y: -1.875, z: 0}
+    - {x: -14.375, y: -0.625, z: 0}
+    - {x: -13.125, y: -0.625, z: 0}
+    - {x: -11.875, y: -0.625, z: 0}
   - riverEntry: {x: -25, y: 0.125, z: 0}
     berth: {x: -17.1875, y: 0.125, z: 0}
     authoredSector: 1
     sector: 1
+    minimumWave: 1
     unloadingPositions:
     - {x: -14.375, y: 0.625, z: 0}
     - {x: -13.125, y: 0.625, z: 0}
+    lateUnloadingPositions:
+    - {x: -14.375, y: -0.625, z: 0}
+    - {x: -13.125, y: -0.625, z: 0}
+    - {x: -11.875, y: -0.625, z: 0}
+    - {x: -14.375, y: 0.625, z: 0}
+    - {x: -13.125, y: 0.625, z: 0}
+    - {x: -11.875, y: 0.625, z: 0}
+    - {x: -11.875, y: 1.875, z: 0}
   - riverEntry: {x: -25, y: 3.125, z: 0}
     berth: {x: -14.6875, y: 3.125, z: 0}
     authoredSector: 1
     sector: 1
+    minimumWave: 1
     unloadingPositions:
     - {x: -11.875, y: 3.125, z: 0}
     - {x: -10.625, y: 3.125, z: 0}
+    lateUnloadingPositions:
+    - {x: -11.875, y: 1.875, z: 0}
+    - {x: -10.625, y: 1.875, z: 0}
+    - {x: -9.375, y: 1.875, z: 0}
+    - {x: -11.875, y: 3.125, z: 0}
+    - {x: -10.625, y: 3.125, z: 0}
+    - {x: -9.375, y: 3.125, z: 0}
+    - {x: -11.875, y: 4.375, z: 0}
+    - {x: -10.625, y: 4.375, z: 0}
+    - {x: -9.375, y: 4.375, z: 0}
   - riverEntry: {x: -25, y: 6, z: 0}
     berth: {x: -17.1875, y: 6, z: 0}
     authoredSector: 1
     sector: 2
+    minimumWave: 1
     unloadingPositions:
     - {x: -14.375, y: 5.625, z: 0}
     - {x: -13.125, y: 5.625, z: 0}
+    lateUnloadingPositions:
+    - {x: -11.875, y: 4.375, z: 0}
+    - {x: -14.375, y: 5.625, z: 0}
+    - {x: -13.125, y: 5.625, z: 0}
+    - {x: -11.875, y: 5.625, z: 0}
+    - {x: -14.375, y: 6.875, z: 0}
+    - {x: -13.125, y: 6.875, z: 0}
+    - {x: -11.875, y: 6.875, z: 0}
   - riverEntry: {x: -25, y: 7.625, z: 0}
     berth: {x: -17.1875, y: 7.625, z: 0}
     authoredSector: 1
     sector: 2
+    minimumWave: 1
     unloadingPositions:
     - {x: -14.375, y: 8.125, z: 0}
     - {x: -13.125, y: 8.125, z: 0}
+    lateUnloadingPositions:
+    - {x: -14.375, y: 6.875, z: 0}
+    - {x: -13.125, y: 6.875, z: 0}
+    - {x: -11.875, y: 6.875, z: 0}
+    - {x: -14.375, y: 8.125, z: 0}
+    - {x: -13.125, y: 8.125, z: 0}
+    - {x: -11.875, y: 8.125, z: 0}
+    - {x: -11.875, y: 9.375, z: 0}
   - riverEntry: {x: -25, y: 10.125, z: 0}
     berth: {x: -14.6875, y: 10.125, z: 0}
     authoredSector: 1
     sector: 2
+    minimumWave: 1
     unloadingPositions:
     - {x: -11.875, y: 10.625, z: 0}
     - {x: -11.875, y: 9.375, z: 0}
+    lateUnloadingPositions:
+    - {x: -13.125, y: 8.125, z: 0}
+    - {x: -11.875, y: 8.125, z: 0}
+    - {x: -11.875, y: 9.375, z: 0}
+    - {x: -11.875, y: 10.625, z: 0}
+  - riverEntry: {x: -25, y: -10, z: 0}
+    berth: {x: -7.5, y: -10, z: 0}
+    authoredSector: 1
+    sector: 0
+    minimumWave: 11
+    unloadingPositions:
+    - {x: -4.375, y: -10.625, z: 0}
+    - {x: -4.375, y: -9.375, z: 0}
+    lateUnloadingPositions:
+    - {x: -4.375, y: -10.625, z: 0}
+    - {x: -3.125, y: -10.625, z: 0}
+    - {x: -4.375, y: -9.375, z: 0}
+    - {x: -3.125, y: -9.375, z: 0}
   capacity: 7
   maximumActiveBoats: 3
   moveSpeed: 5

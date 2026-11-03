@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Text;
 using ShorelineDefense.Core;
 using ShorelineDefense.Waves;
@@ -56,7 +57,7 @@ namespace ShorelineDefense.Grid
             foreach (var p in boats.LandingPoints)
             {
                 if (p?.unloadingPositions == null) { invalid++; continue; }
-                foreach (var position in p.unloadingPositions)
+                foreach (var position in p.unloadingPositions.Concat(p.lateUnloadingPositions ?? Array.Empty<Vector3>()))
                 {
                     bool found = false;
                     if (terrain.TryWorldToCell(position, out var start))
@@ -78,8 +79,9 @@ namespace ShorelineDefense.Grid
             {
                 if (!boats.IsValidApproach(p)) { invalid++; text.Append("Invalid boat approach; "); }
                 if (p == null || p.unloadingPositions == null || p.unloadingPositions.Length == 0) { invalid++; continue; }
-                foreach (var position in p.unloadingPositions)
-                    if (!grid.Grid.TryWorldToCell(position, out var cell) || !border.TryGetDestination(cell, out _))
+                foreach (var position in p.unloadingPositions.Concat(p.lateUnloadingPositions ?? Array.Empty<Vector3>()))
+                    if (!grid.Grid.TryWorldToCell(position, out var cell) ||
+                        grid.Grid.NavigationBlockerAt(cell) == null && !border.TryGetDestination(cell, out _))
                     { invalid++; text.Append("Unreachable landing " + position + "; "); }
             }
             foreach (var carrier in boats.Carriers)

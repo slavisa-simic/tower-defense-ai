@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase6E/Closure.cs",
+      "entry": "Phase6E1Closure.Progress",
+      "args": "[\"port-zero-final\",\"none\",50,\"lean\",\"DanubeIndustrialPort\"]",
+      "timeout_ms": "1800000"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 3771,
+      "executeMs": 86682,
+      "assemblyName": "PipelineRunScript_Closure_07b01a3172d64607af06ec8eef8c7654",
+      "success": true,
+      "result": "Written port-zero-final"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

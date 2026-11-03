@@ -12,20 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67a846c42faee184d9fb31ebe778f6fa, type: 3}
   m_Name: Dredger
   m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.BossDefinition
-  armor: 0.35
+  armor: 0.6
   kind: 7
   breachPenalty: 1000
   difficultyCost: 20
   unlockWave: 25
   transportCapacityUnits: 4
   displayName: THE DREDGER
-  maxHealth: 8000
-  movementSpeed: 1.15
+  maxHealth: 18000
+  movementSpeed: 0.9
   attackDamage: 10
   attackInterval: 1
   attackRange: 1.6
   killReward: 2500
-  structureDamage: 120
+  structureDamage: 150
   structureAttackInterval: 1.2
   structureRangeCells: 0.6
   bossArt: {fileID: 114792545, guid: 1162a58b2f3aac0489964821781bc881, type: 3}

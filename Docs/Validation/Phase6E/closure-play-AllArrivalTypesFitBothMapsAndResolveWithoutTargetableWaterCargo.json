@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "duration": 1.92,
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "ShorelineDefense.Tests.AquaticPlayTests.AllArrivalTypesFitBothMapsAndResolveWithoutTargetableWaterCargo",
+      "Status": "Passed",
+      "Duration": 1.8966554,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

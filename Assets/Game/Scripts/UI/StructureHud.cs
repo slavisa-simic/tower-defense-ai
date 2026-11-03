@@ -86,7 +86,7 @@ namespace ShorelineDefense.UI
             var next = d.Definition.LevelData(d.Level + 1);
             upgrade.tooltip = d.Level == 3 ? "MAX LEVEL III" : $"UPGRADE TO LEVEL {(d.Level == 1 ? "II" : "III")}\n{cost:N0} RSD\n" +
                 $"HP capacity {d.MaxHealth} → {d.Meta.MaxHealth(d.Definition, d.Level + 1)}\n" +
-                (d.Definition.Id == "barbed-wire" ? $"Slow {(1 - d.MovementMultiplier) * 100:0}% → {(1 - d.Definition.MovementMultiplier * (next?.slow ?? 1)) * 100:0}%" :
+                (d.Definition.Id == "barbed-wire" ? $"Slow {(1 - d.MovementMultiplier) * 100:0}% → {(1 - d.Meta.MovementMultiplier(d.Definition, d.Level + 1)) * 100:0}%" :
                 $"Damage {d.Damage} → {d.DamageAtLevel(d.Level + 1)}\n" +
                 (d.Definition.Id == "land-mine" ? $"Blast {d.Range / d.Grid.CellSize:0.0} → {d.Definition.RangeInCells * (next?.range ?? 1):0.0} cells" :
                 $"Fire rate {d.FireRate:0.00} → {d.FireRateAtLevel(d.Level + 1):0.00}/s\nRange {d.Range / d.Grid.CellSize:0.0} → {d.RangeAtLevel(d.Level + 1) / d.Grid.CellSize:0.0} cells"));

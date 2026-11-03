@@ -1,0 +1,950 @@
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Data\\Enemies\\Broodmother.asset" "b/Assets\\Game\\Data\\Enemies\\Broodmother.asset"
+index 392feb3..44aebe0 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Data\\Enemies\\Broodmother.asset"
++++ "b/Assets\\Game\\Data\\Enemies\\Broodmother.asset"
+@@ -12,15 +12,15 @@ MonoBehaviour:
+   m_Script: {fileID: 11500000, guid: 67a846c42faee184d9fb31ebe778f6fa, type: 3}
+   m_Name: Broodmother
+   m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.BossDefinition
+-  armor: 0.15
++  armor: 0.55
+   kind: 8
+   breachPenalty: 900
+   difficultyCost: 18
+   unlockWave: 25
+   transportCapacityUnits: 4
+   displayName: THE BROODMOTHER
+-  maxHealth: 6000
+-  movementSpeed: 1.65
++  maxHealth: 13500
++  movementSpeed: 0.9
+   attackDamage: 10
+   attackInterval: 1
+   attackRange: 1.6
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Data\\Enemies\\Dredger.asset" "b/Assets\\Game\\Data\\Enemies\\Dredger.asset"
+index eb4687b..5cc5094 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Data\\Enemies\\Dredger.asset"
++++ "b/Assets\\Game\\Data\\Enemies\\Dredger.asset"
+@@ -12,20 +12,20 @@ MonoBehaviour:
+   m_Script: {fileID: 11500000, guid: 67a846c42faee184d9fb31ebe778f6fa, type: 3}
+   m_Name: Dredger
+   m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Waves.BossDefinition
+-  armor: 0.35
++  armor: 0.6
+   kind: 7
+   breachPenalty: 1000
+   difficultyCost: 20
+   unlockWave: 25
+   transportCapacityUnits: 4
+   displayName: THE DREDGER
+-  maxHealth: 8000
+-  movementSpeed: 1.15
++  maxHealth: 18000
++  movementSpeed: 0.9
+   attackDamage: 10
+   attackInterval: 1
+   attackRange: 1.6
+   killReward: 2500
+-  structureDamage: 120
++  structureDamage: 150
+   structureAttackInterval: 1.2
+   structureRangeCells: 0.6
+   bossArt: {fileID: 114792545, guid: 1162a58b2f3aac0489964821781bc881, type: 3}
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Data\\Research\\hardened-wire.asset" "b/Assets\\Game\\Data\\Research\\hardened-wire.asset"
+index d50aa5e..eccad36 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Data\\Research\\hardened-wire.asset"
++++ "b/Assets\\Game\\Data\\Research\\hardened-wire.asset"
+@@ -14,7 +14,8 @@ MonoBehaviour:
+   m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Progression.ResearchNodeDefinition
+   id: hardened-wire
+   displayName: Hardened Wire
+-  description: Barbed Wire gains +20% Max HP. Slow strength is unchanged.
++  description: Level III Barbed Wire slows creatures by 70% instead of 65%. Walkable;
++    overlapping Wire does not stack.
+   branch: 1
+   costRP: 20
+   tier: 2
+@@ -23,6 +24,6 @@ MonoBehaviour:
+   - {fileID: 11400000, guid: a113041fe3c624144a6f42a473126e1e, type: 2}
+   icon: {fileID: -2116602131, guid: e8c99442ad1d63744a2ce2497d260d7c, type: 3}
+   effects:
+-  - kind: 5
+-    amount: 0.2
++  - kind: 18
++    amount: 0.05
+   boardPosition: {x: 0.25, y: 106}
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Data\\Waves\\EndlessSurvival.asset" "b/Assets\\Game\\Data\\Waves\\EndlessSurvival.asset"
+index 438c368..4bd2e5d 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Data\\Waves\\EndlessSurvival.asset"
++++ "b/Assets\\Game\\Data\\Waves\\EndlessSurvival.asset"
+@@ -28,6 +28,10 @@ MonoBehaviour:
+   randomizeSeed: 1
+   baseReward: 300
+   rewardGrowth: 2
++  incomeTaperStartWave: 10
++  incomeTaperEndWave: 30
++  lateKillIncome: 0.12
++  lateWaveIncome: 0.5
+   scalingStartWave: 20
+   healthGrowth: 0.0125
+   speedGrowth: 0.002
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scenes\\DanubeIndustrialPort.unity" "b/Assets\\Game\\Scenes\\DanubeIndustrialPort.unity"
+index 5b16369..48a1a5a 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scenes\\DanubeIndustrialPort.unity"
++++ "b/Assets\\Game\\Scenes\\DanubeIndustrialPort.unity"
+@@ -17869,65 +17869,156 @@ MonoBehaviour:
+   - {fileID: 11400000, guid: 11f86419cca45444ab53d82d86b0e79e, type: 2}
+   - {fileID: 11400000, guid: dcae0ed90c7dd1d45a973fb637f39226, type: 2}
+   earlyDirectRatio: 0.6
+-  lateDirectRatio: 0.3
++  lateDirectRatio: 0.55
+   broodRatio: 0.25
++  distributedPressureFromWave: 11
++  lateReleaseRate: 3
++  latePressureMultiplier: 2.25
++  lateArrivalMultiplier: 0.5
++  lateExtraCarriers: 6
++  lateSpitterWeight: 3
++  lateBurrowerWeight: 4
++  lateFormationMultiplier: 2.4
+   landingPoints:
+   - riverEntry: {x: -25, y: -7.75, z: 0}
+     berth: {x: -17.1875, y: -7.75, z: 0}
+     authoredSector: 1
+     sector: 0
++    minimumWave: 1
+     unloadingPositions:
+     - {x: -14.375, y: -8.125, z: 0}
+     - {x: -13.125, y: -8.125, z: 0}
++    lateUnloadingPositions:
++    - {x: -14.375, y: -8.125, z: 0}
++    - {x: -13.125, y: -8.125, z: 0}
++    - {x: -11.875, y: -8.125, z: 0}
++    - {x: -14.375, y: -6.875, z: 0}
++    - {x: -13.125, y: -6.875, z: 0}
++    - {x: -11.875, y: -6.875, z: 0}
+   - riverEntry: {x: -25, y: -6.125, z: 0}
+     berth: {x: -17.1875, y: -6.125, z: 0}
+     authoredSector: 1
+     sector: 0
++    minimumWave: 1
+     unloadingPositions:
+     - {x: -14.375, y: -5.625, z: 0}
+     - {x: -13.125, y: -5.625, z: 0}
++    lateUnloadingPositions:
++    - {x: -14.375, y: -6.875, z: 0}
++    - {x: -13.125, y: -6.875, z: 0}
++    - {x: -11.875, y: -6.875, z: 0}
++    - {x: -14.375, y: -5.625, z: 0}
++    - {x: -13.125, y: -5.625, z: 0}
++    - {x: -11.875, y: -5.625, z: 0}
++    - {x: -11.875, y: -4.375, z: 0}
+   - riverEntry: {x: -25, y: -1.5, z: 0}
+     berth: {x: -17.1875, y: -1.5, z: 0}
+     authoredSector: 1
+     sector: 1
++    minimumWave: 1
+     unloadingPositions:
+     - {x: -14.375, y: -1.875, z: 0}
+     - {x: -13.125, y: -1.875, z: 0}
++    lateUnloadingPositions:
++    - {x: -11.875, y: -3.125, z: 0}
++    - {x: -14.375, y: -1.875, z: 0}
++    - {x: -13.125, y: -1.875, z: 0}
++    - {x: -11.875, y: -1.875, z: 0}
++    - {x: -14.375, y: -0.625, z: 0}
++    - {x: -13.125, y: -0.625, z: 0}
++    - {x: -11.875, y: -0.625, z: 0}
+   - riverEntry: {x: -25, y: 0.125, z: 0}
+     berth: {x: -17.1875, y: 0.125, z: 0}
+     authoredSector: 1
+     sector: 1
++    minimumWave: 1
+     unloadingPositions:
+     - {x: -14.375, y: 0.625, z: 0}
+     - {x: -13.125, y: 0.625, z: 0}
++    lateUnloadingPositions:
++    - {x: -14.375, y: -0.625, z: 0}
++    - {x: -13.125, y: -0.625, z: 0}
++    - {x: -11.875, y: -0.625, z: 0}
++    - {x: -14.375, y: 0.625, z: 0}
++    - {x: -13.125, y: 0.625, z: 0}
++    - {x: -11.875, y: 0.625, z: 0}
++    - {x: -11.875, y: 1.875, z: 0}
+   - riverEntry: {x: -25, y: 3.125, z: 0}
+     berth: {x: -14.6875, y: 3.125, z: 0}
+     authoredSector: 1
+     sector: 1
++    minimumWave: 1
+     unloadingPositions:
+     - {x: -11.875, y: 3.125, z: 0}
+     - {x: -10.625, y: 3.125, z: 0}
++    lateUnloadingPositions:
++    - {x: -11.875, y: 1.875, z: 0}
++    - {x: -10.625, y: 1.875, z: 0}
++    - {x: -9.375, y: 1.875, z: 0}
++    - {x: -11.875, y: 3.125, z: 0}
++    - {x: -10.625, y: 3.125, z: 0}
++    - {x: -9.375, y: 3.125, z: 0}
++    - {x: -11.875, y: 4.375, z: 0}
++    - {x: -10.625, y: 4.375, z: 0}
++    - {x: -9.375, y: 4.375, z: 0}
+   - riverEntry: {x: -25, y: 6, z: 0}
+     berth: {x: -17.1875, y: 6, z: 0}
+     authoredSector: 1
+     sector: 2
++    minimumWave: 1
+     unloadingPositions:
+     - {x: -14.375, y: 5.625, z: 0}
+     - {x: -13.125, y: 5.625, z: 0}
++    lateUnloadingPositions:
++    - {x: -11.875, y: 4.375, z: 0}
++    - {x: -14.375, y: 5.625, z: 0}
++    - {x: -13.125, y: 5.625, z: 0}
++    - {x: -11.875, y: 5.625, z: 0}
++    - {x: -14.375, y: 6.875, z: 0}
++    - {x: -13.125, y: 6.875, z: 0}
++    - {x: -11.875, y: 6.875, z: 0}
+   - riverEntry: {x: -25, y: 7.625, z: 0}
+     berth: {x: -17.1875, y: 7.625, z: 0}
+     authoredSector: 1
+     sector: 2
++    minimumWave: 1
+     unloadingPositions:
+     - {x: -14.375, y: 8.125, z: 0}
+     - {x: -13.125, y: 8.125, z: 0}
++    lateUnloadingPositions:
++    - {x: -14.375, y: 6.875, z: 0}
++    - {x: -13.125, y: 6.875, z: 0}
++    - {x: -11.875, y: 6.875, z: 0}
++    - {x: -14.375, y: 8.125, z: 0}
++    - {x: -13.125, y: 8.125, z: 0}
++    - {x: -11.875, y: 8.125, z: 0}
++    - {x: -11.875, y: 9.375, z: 0}
+   - riverEntry: {x: -25, y: 10.125, z: 0}
+     berth: {x: -14.6875, y: 10.125, z: 0}
+     authoredSector: 1
+     sector: 2
++    minimumWave: 1
+     unloadingPositions:
+     - {x: -11.875, y: 10.625, z: 0}
+     - {x: -11.875, y: 9.375, z: 0}
++    lateUnloadingPositions:
++    - {x: -13.125, y: 8.125, z: 0}
++    - {x: -11.875, y: 8.125, z: 0}
++    - {x: -11.875, y: 9.375, z: 0}
++    - {x: -11.875, y: 10.625, z: 0}
++  - riverEntry: {x: -25, y: -10, z: 0}
++    berth: {x: -7.5, y: -10, z: 0}
++    authoredSector: 1
++    sector: 0
++    minimumWave: 11
++    unloadingPositions:
++    - {x: -4.375, y: -10.625, z: 0}
++    - {x: -4.375, y: -9.375, z: 0}
++    lateUnloadingPositions:
++    - {x: -4.375, y: -10.625, z: 0}
++    - {x: -3.125, y: -10.625, z: 0}
++    - {x: -4.375, y: -9.375, z: 0}
++    - {x: -3.125, y: -9.375, z: 0}
+   capacity: 7
+   maximumActiveBoats: 3
+   moveSpeed: 5
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Building\\BuildManager.cs" "b/Assets\\Game\\Scripts\\Building\\BuildManager.cs"
+index 5eb88c9..ca25d97 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Building\\BuildManager.cs"
++++ "b/Assets\\Game\\Scripts\\Building\\BuildManager.cs"
+@@ -78,6 +78,9 @@ namespace ShorelineDefense.Building
+         {
+             if (game == null || !game.IsPlaying) return PlacementResult.NotPlaying;
+             if (definition == null || !definition.IsValid || economy == null || enemies == null) return PlacementResult.InvalidDefinition;
++            // New construction keeps landing aprons clear; historical saved footprints still
++            // restore through the existing terrain/occupancy path, just as with event flooding.
++            if (waves?.Landings != null && waves.Landings.IntersectsReleaseCells(cell, definition.Footprint)) return PlacementResult.NotBuildable;
+             if (grid?.Grid != null && Events?.Modifiers.floodedColumns > 0 && grid.Grid.Plane == GameplayPlane.XY) {
+                 for (int x = 0; x < definition.Footprint.x; x++) for (int y = 0; y < definition.Footprint.y; y++)
+                     if (grid.Definition.IsFloodable(cell + new Vector2Int(x,y), Events.Modifiers.floodedColumns)) return PlacementResult.NotBuildable;
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Defenses\\DefenseBase.cs" "b/Assets\\Game\\Scripts\\Defenses\\DefenseBase.cs"
+index e5af569..2dfd919 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Defenses\\DefenseBase.cs"
++++ "b/Assets\\Game\\Scripts\\Defenses\\DefenseBase.cs"
+@@ -26,7 +26,7 @@ namespace ShorelineDefense.Defenses
+         public float FireRate => FireRateAtLevel(Level);
+         public float FireRateAtLevel(int level) => Definition.FireRate * Meta.FireRateMultiplier(Definition) * (Definition.LevelData(level)?.fireRate ?? 1);
+         public float DamageTick => Definition.HeavyWeapon.damageTick / Meta.FireRateMultiplier(Definition);
+-        public float MovementMultiplier => Mathf.Max(.05f, Definition.MovementMultiplier * (LevelStats?.slow ?? 1));
++        public float MovementMultiplier => Meta.MovementMultiplier(Definition, Level);
+         public float SplashRadiusInCells => Definition.HeavyWeapon.splashRadiusInCells * Meta.SplashMultiplier(Definition) * (LevelStats?.splash ?? 1);
+         public float BurnDuration => Definition.HeavyWeapon.burnDuration * Meta.BurnMultiplier(Definition) * (LevelStats?.burnDuration ?? 1);
+         public float BurnDps => Definition.HeavyWeapon.burnDps * (LevelStats?.burnDps ?? 1);
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Economy\\EnemyRewardService.cs" "b/Assets\\Game\\Scripts\\Economy\\EnemyRewardService.cs"
+index 072ea69..16c12a7 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Economy\\EnemyRewardService.cs"
++++ "b/Assets\\Game\\Scripts\\Economy\\EnemyRewardService.cs"
+@@ -9,6 +9,8 @@ namespace ShorelineDefense.Economy
+         [SerializeField] private EnemyRegistry enemies;
+         [SerializeField] private EconomyManager economy;
+         [SerializeField] private GameStateController game;
++        private Waves.WaveManager waves;
++        private void Start() => waves = FindFirstObjectByType<Waves.WaveManager>();
+         public void Configure(EnemyRegistry registry, EconomyManager money, GameStateController state)
+         { enemies = registry; economy = money; game = state; }
+         private void OnEnable() { if (enemies != null) enemies.EnemyKilled += OnKilled; }
+@@ -16,7 +18,7 @@ namespace ShorelineDefense.Economy
+         private void OnKilled(EnemyController enemy)
+         {
+             if (game != null && game.IsPlaying && enemy.Health.KilledByDefense)
+-                economy.AddMoney(enemy.Definition.KillReward);
++                economy.AddMoney(waves != null ? waves.KillRewardFor(enemy.Definition) : enemy.Definition.KillReward);
+         }
+     }
+ }
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Grid\\MapRuntimeContext.cs" "b/Assets\\Game\\Scripts\\Grid\\MapRuntimeContext.cs"
+index aeb3f53..3d2e657 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Grid\\MapRuntimeContext.cs"
++++ "b/Assets\\Game\\Scripts\\Grid\\MapRuntimeContext.cs"
+@@ -1,4 +1,5 @@
+ using System;
++using System.Linq;
+ using System.Text;
+ using ShorelineDefense.Core;
+ using ShorelineDefense.Waves;
+@@ -56,7 +57,7 @@ namespace ShorelineDefense.Grid
+             foreach (var p in boats.LandingPoints)
+             {
+                 if (p?.unloadingPositions == null) { invalid++; continue; }
+-                foreach (var position in p.unloadingPositions)
++                foreach (var position in p.unloadingPositions.Concat(p.lateUnloadingPositions ?? Array.Empty<Vector3>()))
+                 {
+                     bool found = false;
+                     if (terrain.TryWorldToCell(position, out var start))
+@@ -78,8 +79,9 @@ namespace ShorelineDefense.Grid
+             {
+                 if (!boats.IsValidApproach(p)) { invalid++; text.Append("Invalid boat approach; "); }
+                 if (p == null || p.unloadingPositions == null || p.unloadingPositions.Length == 0) { invalid++; continue; }
+-                foreach (var position in p.unloadingPositions)
+-                    if (!grid.Grid.TryWorldToCell(position, out var cell) || !border.TryGetDestination(cell, out _))
++                foreach (var position in p.unloadingPositions.Concat(p.lateUnloadingPositions ?? Array.Empty<Vector3>()))
++                    if (!grid.Grid.TryWorldToCell(position, out var cell) ||
++                        grid.Grid.NavigationBlockerAt(cell) == null && !border.TryGetDestination(cell, out _))
+                     { invalid++; text.Append("Unreachable landing " + position + "; "); }
+             }
+             foreach (var carrier in boats.Carriers)
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Progression\\ResearchNodeDefinition.cs" "b/Assets\\Game\\Scripts\\Progression\\ResearchNodeDefinition.cs"
+index 475b5de..c643343 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Progression\\ResearchNodeDefinition.cs"
++++ "b/Assets\\Game\\Scripts\\Progression\\ResearchNodeDefinition.cs"
+@@ -9,7 +9,7 @@ namespace ShorelineDefense.Progression
+         StartingRsd, PreparationRepairDiscount, RefundBonus, WaveRewardBonus, BlockingHealthBonus,
+         WireHealthBonus, CombatRepairDiscount, UpgradeDiscount, BallisticDamageBonus, SniperRangeBonus,
+         AreaRadiusBonus, BurnDurationBonus, FireRateBonus, EnemyCountIntel, ThreatIntel, CompositionIntel,
+-        EventForecast, DeepWaterIntel
++        EventForecast, DeepWaterIntel, WireSlowBonus
+     }
+     [Serializable] public sealed class ResearchEffectDefinition
+     {
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Progression\\RunMetaSnapshot.cs" "b/Assets\\Game\\Scripts\\Progression\\RunMetaSnapshot.cs"
+index fe2797b..d806176 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Progression\\RunMetaSnapshot.cs"
++++ "b/Assets\\Game\\Scripts\\Progression\\RunMetaSnapshot.cs"
+@@ -10,6 +10,7 @@ namespace ShorelineDefense.Progression
+         public int version = 1, startingRsd;
+         public float preparationRepair = 1, combatRepair = 1, upgradeCost = 1, refundBonus, waveReward = 1;
+         public float blockingHealth = 1, wireHealth = 1, ballisticDamage = 1, sniperRange = 1, areaRadius = 1, burnDuration = 1, fireRate = 1;
++        public float wireSlowBonus;
+         public bool countIntel, threatIntel, compositionIntel, eventForecast, deepWaterIntel;
+         public RunMetaSnapshot Copy() => (RunMetaSnapshot)MemberwiseClone();
+         public static bool Valid(RunMetaSnapshot s)
+@@ -18,7 +19,8 @@ namespace ShorelineDefense.Progression
+             foreach (float f in new[] { s.preparationRepair, s.combatRepair, s.upgradeCost }) if (!float.IsFinite(f) || f < .5f || f > 1) return false;
+             foreach (float f in new[] { s.waveReward, s.blockingHealth, s.wireHealth, s.ballisticDamage, s.sniperRange, s.areaRadius, s.burnDuration, s.fireRate })
+                 if (!float.IsFinite(f) || f < 1 || f > 1.5f) return false;
+-            return float.IsFinite(s.refundBonus) && s.refundBonus >= 0 && s.refundBonus <= .15f;
++            return float.IsFinite(s.wireSlowBonus) && s.wireSlowBonus >= 0 && s.wireSlowBonus <= .05f &&
++                float.IsFinite(s.refundBonus) && s.refundBonus >= 0 && s.refundBonus <= .15f;
+         }
+     }
+     /// <summary>Immutable cached run queries. No disk/profile access in gameplay.</summary>
+@@ -41,6 +43,8 @@ namespace ShorelineDefense.Progression
+         public bool DeepWaterIntel => values.deepWaterIntel;
+         public float HealthMultiplier(DefenseDefinition d) => d.Id == "barbed-wire" ? values.wireHealth : d.BlocksMovement && d.Id != "land-mine" ? values.blockingHealth : 1;
+         public int MaxHealth(DefenseDefinition d, int level) => Mathf.Max(1, Mathf.RoundToInt(d.MaxHealth * HealthMultiplier(d) * (d.LevelData(level)?.health ?? 1)));
++        public float MovementMultiplier(DefenseDefinition d, int level) => Mathf.Max(.05f,
++            d.MovementMultiplier * (d.LevelData(level)?.slow ?? 1) - (d.Id == "barbed-wire" && level == 3 ? values.wireSlowBonus : 0));
+         public float DamageMultiplier(DefenseDefinition d) => d.Id == "machine-gun-nest" || d.Id == "autocannon" ? values.ballisticDamage : 1;
+         public float RangeMultiplier(DefenseDefinition d) => d.Id == "sniper-tower" ? values.sniperRange : 1;
+         public float SplashMultiplier(DefenseDefinition d) => d.Id == "mortar" || d.Id == "rocket" ? values.areaRadius : 1;
+@@ -66,6 +70,7 @@ namespace ShorelineDefense.Progression
+                         case ResearchEffectKind.WaveRewardBonus: s.waveReward += a; break;
+                         case ResearchEffectKind.BlockingHealthBonus: s.blockingHealth += a; break;
+                         case ResearchEffectKind.WireHealthBonus: s.wireHealth += a; break;
++                        case ResearchEffectKind.WireSlowBonus: s.wireSlowBonus += a; break;
+                         case ResearchEffectKind.UpgradeDiscount: s.upgradeCost -= a; break;
+                         case ResearchEffectKind.BallisticDamageBonus: s.ballisticDamage += a; break;
+                         case ResearchEffectKind.SniperRangeBonus: s.sniperRange += a; break;
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\UI\\CombatFeedbackHud.cs" "b/Assets\\Game\\Scripts\\UI\\CombatFeedbackHud.cs"
+index a36ceeb..43ec139 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\UI\\CombatFeedbackHud.cs"
++++ "b/Assets\\Game\\Scripts\\UI\\CombatFeedbackHud.cs"
+@@ -76,12 +76,13 @@ namespace ShorelineDefense.UI
+         }
+         private void OnKilled(EnemyController enemy)
+         {
+-            if (!game.IsPlaying || !enemy.Health.KilledByDefense || enemy.Definition.KillReward <= 0 || !Persistence.SettingsService.Instance.Current.rewardPopups) return;
+-            LastRewardText = "+" + enemy.Definition.KillReward + " RSD";
++            int reward = waves.KillRewardFor(enemy.Definition);
++            if (!game.IsPlaying || !enemy.Health.KilledByDefense || reward <= 0 || !Persistence.SettingsService.Instance.Current.rewardPopups) return;
++            LastRewardText = "+" + reward + " RSD";
+             foreach (var popup in popups)
+                 if (popup.active && !popup.breach && popup.age < .2f && (popup.world - enemy.transform.position).sqrMagnitude < 25)
+-                { popup.reward += enemy.Definition.KillReward; popup.label.text = "+" + popup.reward + " RSD"; return; }
+-            ShowPopup(enemy.transform.position, LastRewardText, new Color(.72f, .88f, .6f)).reward = enemy.Definition.KillReward;
++                { popup.reward += reward; popup.label.text = "+" + popup.reward + " RSD"; return; }
++            ShowPopup(enemy.transform.position, LastRewardText, new Color(.72f, .88f, .6f)).reward = reward;
+         }
+         private void OnBreach(Vector3 position, int penalty)
+         { if (game.IsPlaying) ShowPopup(position, "+" + penalty + " HOMICIDES", new Color(.95f, .35f, .3f), true); }
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\UI\\StructureHud.cs" "b/Assets\\Game\\Scripts\\UI\\StructureHud.cs"
+index 11cb2b3..8654f02 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\UI\\StructureHud.cs"
++++ "b/Assets\\Game\\Scripts\\UI\\StructureHud.cs"
+@@ -86,7 +86,7 @@ namespace ShorelineDefense.UI
+             var next = d.Definition.LevelData(d.Level + 1);
+             upgrade.tooltip = d.Level == 3 ? "MAX LEVEL III" : $"UPGRADE TO LEVEL {(d.Level == 1 ? "II" : "III")}\n{cost:N0} RSD\n" +
+                 $"HP capacity {d.MaxHealth} → {d.Meta.MaxHealth(d.Definition, d.Level + 1)}\n" +
+-                (d.Definition.Id == "barbed-wire" ? $"Slow {(1 - d.MovementMultiplier) * 100:0}% → {(1 - d.Definition.MovementMultiplier * (next?.slow ?? 1)) * 100:0}%" :
++                (d.Definition.Id == "barbed-wire" ? $"Slow {(1 - d.MovementMultiplier) * 100:0}% → {(1 - d.Meta.MovementMultiplier(d.Definition, d.Level + 1)) * 100:0}%" :
+                 $"Damage {d.Damage} → {d.DamageAtLevel(d.Level + 1)}\n" +
+                 (d.Definition.Id == "land-mine" ? $"Blast {d.Range / d.Grid.CellSize:0.0} → {d.Definition.RangeInCells * (next?.range ?? 1):0.0} cells" :
+                 $"Fire rate {d.FireRate:0.00} → {d.FireRateAtLevel(d.Level + 1):0.00}/s\nRange {d.Range / d.Grid.CellSize:0.0} → {d.RangeAtLevel(d.Level + 1) / d.Grid.CellSize:0.0} cells"));
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Waves\\AssaultCarrierSystem.cs" "b/Assets\\Game\\Scripts\\Waves\\AssaultCarrierSystem.cs"
+index 00950a2..bd0c2d8 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Waves\\AssaultCarrierSystem.cs"
++++ "b/Assets\\Game\\Scripts\\Waves\\AssaultCarrierSystem.cs"
+@@ -15,7 +15,9 @@ namespace ShorelineDefense.Waves
+         public Vector3 berth;
+         public bool authoredSector;
+         public LandingSector sector;
++        [Min(1)] public int minimumWave = 1;
+         public Vector3[] unloadingPositions = Array.Empty<Vector3>();
++        public Vector3[] lateUnloadingPositions = Array.Empty<Vector3>();
+     }
+ 
+     /// <summary>Bounded transport presentation. The spawner alone creates/initializes passengers.</summary>
+@@ -28,6 +30,51 @@ namespace ShorelineDefense.Waves
+         [SerializeField, Range(0, 1)] private float earlyDirectRatio = .6f;
+         [SerializeField, Range(0, 1)] private float lateDirectRatio = .3f;
+         [SerializeField, Range(0, 1)] private float broodRatio = .25f;
++        [SerializeField, Min(0)] private int distributedPressureFromWave;
++        [SerializeField, Range(1, 4)] private float lateReleaseRate = 1;
++        [SerializeField, Range(1, 3)] private float latePressureMultiplier = 1;
++        [SerializeField, Range(.25f, 1)] private float lateArrivalMultiplier = 1;
++        [SerializeField, Range(0, 8)] private int lateExtraCarriers;
++        [SerializeField, Range(1, 4)] private float lateSpitterWeight = 1;
++        [SerializeField, Range(1, 4)] private float lateBurrowerWeight = 1;
++        [SerializeField, Range(1, 3)] private float lateFormationMultiplier = 1;
++        private float SplitPressureAgeAt(int wave) => distributedPressureFromWave > 0 ? Mathf.Clamp01((wave - distributedPressureFromWave) / 20f) : 0;
++        private float SplitPressureAge => SplitPressureAgeAt(waveNumber);
++        public float CargoWeight(EnemyKind kind, int wave) => Mathf.Lerp(1,
++            kind == EnemyKind.Spitter ? lateSpitterWeight : kind == EnemyKind.Burrower ? lateBurrowerWeight : 1, SplitPressureAgeAt(wave));
++        public int FormationQuantity(int wave, int baseline) => Mathf.Clamp(Mathf.RoundToInt(baseline *
++            Mathf.Lerp(1, lateFormationMultiplier, SplitPressureAgeAt(wave))), 1, 20);
++        public float PressureMultiplier => Mathf.Lerp(1, latePressureMultiplier, SplitPressureAge);
++        public float ArrivalMultiplier => Mathf.Lerp(1, lateArrivalMultiplier, SplitPressureAge);
++        public int ExtraCarriers => Mathf.RoundToInt(lateExtraCarriers * SplitPressureAge);
++        public Vector3[] PositionsFor(RiverLandingPoint point) => distributedPressureFromWave > 0 && waveNumber >= distributedPressureFromWave &&
++            point.lateUnloadingPositions != null && point.lateUnloadingPositions.Length > 0 ? point.lateUnloadingPositions : point.unloadingPositions;
++        public bool IntersectsReleaseCells(Vector2Int anchor, Vector2Int footprint)
++        {
++            var grid = spawner?.Battlefield?.Grid;
++            if (distributedPressureFromWave <= 0 || grid == null) return false;
++            foreach (var point in landingPoints)
++            {
++                if (point == null) continue;
++                if (Intersects(point.unloadingPositions) || Intersects(point.lateUnloadingPositions)) return true;
++            }
++            return false;
++            bool Intersects(Vector3[] positions)
++            {
++                if (positions == null) return false;
++                foreach (var position in positions)
++                    if (grid.TryWorldToCell(position, out var cell) && cell.x >= anchor.x && cell.y >= anchor.y &&
++                        cell.x < anchor.x + footprint.x && cell.y < anchor.y + footprint.y) return true;
++                return false;
++            }
++        }
++        private bool HasWalkableRelease(RiverLandingPoint point)
++        {
++            var grid = spawner.Battlefield.Grid;
++            foreach (var position in PositionsFor(point))
++                if (grid.TryWorldToCell(position, out var cell) && grid.IsTraversable(cell)) return true;
++            return false;
++        }
+         private int waveNumber = 1;
+         public IReadOnlyList<CarrierDefinition> Carriers => carriers;
+         public void ConfigureWave(int number) => waveNumber = Mathf.Max(1, number);
+@@ -147,7 +194,8 @@ namespace ShorelineDefense.Waves
+             for (int index = 0; index < landingPoints.Length; index++)
+             {
+                 var point = landingPoints[index];
+-                if (!IsRiverLane(point, carrier)) continue;
++                if (point == null || waveNumber < point.minimumWave) continue;
++                if (!IsRiverLane(point, carrier) || !HasWalkableRelease(point)) continue;
+                 // Four of five dispatches wait for the announced sector instead of silently spilling
+                 // into every free lane. The fifth allows supporting landings elsewhere.
+                 if (eventModifiers?.landingPattern == LandingPattern.Concentrated && landingSequence % 5 != 4 && SectorFor(point) != targetSector) continue;
+@@ -159,7 +207,8 @@ namespace ShorelineDefense.Waves
+                 if (entryOccupied) continue;
+                 float score = laneCount * 4 + recentLandings[index] / (float)Mathf.Max(1, landingSequence) +
+                     ((index * 17 + landingSequence * 13) % 23) * .025f;
+-                if (eventModifiers?.landingPattern == LandingPattern.Distributed)
++                if (eventModifiers?.landingPattern == LandingPattern.Distributed ||
++                    distributedPressureFromWave > 0 && waveNumber >= distributedPressureFromWave && eventModifiers?.landingPattern != LandingPattern.Concentrated)
+                     score += (int)SectorFor(point) == landingSequence % 3 ? -20 : 0;
+                 if (eventModifiers?.landingPattern == LandingPattern.Concentrated)
+                     score += SectorFor(point) == targetSector ? -20 : 0;
+@@ -293,23 +342,32 @@ namespace ShorelineDefense.Waves
+                 {
+                     boat.timer -= deltaTime;
+                     if (boat.timer > 0) continue;
+-                    bool unloaded = false;
+-                    for (int attempt = 0; attempt < point.unloadingPositions.Length; attempt++)
++                    float rate = distributedPressureFromWave > 0 && waveNumber >= distributedPressureFromWave ? lateReleaseRate : 1;
++                    // Late split-route pressure can release more than one passenger per frame.
++                    // Retain the interval remainder; every release still uses spawner admission.
++                    do
+                     {
+-                        var position = point.unloadingPositions[boat.nextOffset];
+-                        boat.nextOffset = (boat.nextOffset + 1) % point.unloadingPositions.Length;
+-                        if (!spawner.TrySpawnAt(boat.cargo[boat.cargo.Length - boat.remaining], position, out var enemy)) continue;
+-                        boat.remaining--; IncomingPassengers--; unloaded = true;
+-                        foreach (var seat in boat.passengers)
+-                            if (seat.name == "Passenger " + boat.seatOffsets[boat.cargo.Length - boat.remaining - 1]) seat.enabled = false;
+-                        effects?.Play(VfxId.SplashSmall, position, 0, .4f);
+-                        Unloaded?.Invoke(enemy);
+-                        // Observers may cause Game Over and clear the entire transport collection.
+-                        if (!game.IsPlaying || !isActiveAndEnabled) return;
+-                        break;
+-                    }
+-                    boat.timer = unloaded ? boat.definition?.releaseInterval ?? disembarkDelay : .1f;
+-                    if (boat.remaining == 0) { boat.stage = 2; boat.timer = boat.definition?.remainsSeconds ?? departureDelay; }
++                        bool unloaded = false;
++                        var positions = PositionsFor(point);
++                        for (int attempt = 0; attempt < positions.Length; attempt++)
++                        {
++                            var position = positions[boat.nextOffset];
++                            boat.nextOffset = (boat.nextOffset + 1) % positions.Length;
++                            if (!spawner.TrySpawnAt(boat.cargo[boat.cargo.Length - boat.remaining], position, out var enemy)) continue;
++                            boat.remaining--; IncomingPassengers--; unloaded = true;
++                            foreach (var seat in boat.passengers)
++                                if (seat.name == "Passenger " + boat.seatOffsets[boat.cargo.Length - boat.remaining - 1]) seat.enabled = false;
++                            effects?.Play(VfxId.SplashSmall, position, 0, .4f);
++                            Unloaded?.Invoke(enemy);
++                            // Observers may cause Game Over and clear the entire transport collection.
++                            if (!game.IsPlaying || !isActiveAndEnabled) return;
++                            break;
++                        }
++                        float interval = (boat.definition?.releaseInterval ?? disembarkDelay) / Mathf.Max(1, rate);
++                        boat.timer = unloaded ? rate > 1 ? boat.timer + interval : interval : .1f;
++                        if (boat.remaining == 0) { boat.stage = 2; boat.timer = boat.definition?.remainsSeconds ?? departureDelay; }
++                        if (!unloaded || rate <= 1) break;
++                    } while (boat.stage == 1 && boat.timer <= 0);
+                 }
+                 else if (boat.stage == 2)
+                 {
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Waves\\AssaultPressureDirector.cs" "b/Assets\\Game\\Scripts\\Waves\\AssaultPressureDirector.cs"
+index 6fa4174..321b7b8 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Waves\\AssaultPressureDirector.cs"
++++ "b/Assets\\Game\\Scripts\\Waves\\AssaultPressureDirector.cs"
+@@ -21,12 +21,13 @@ namespace ShorelineDefense.Waves
+                 Mathf.CeilToInt(Target * (1 + Mathf.Clamp(settings.pressureHysteresis, .05f, .4f)))) - active - incoming);
+         public void Reset() { untilEvaluation = elapsed = 0; Mode = AssaultPressure.Normal; Surging = DeploymentPaused = false; }
+         public bool Tick(float dt, EndlessWaveSettings settings, int wave, int activeEnemies,
+-            int pendingEnemies, int activeBoats, int incomingPassengers, bool bossPendingOrAlive, EventModifiers modifiers = null)
++            int pendingEnemies, int activeBoats, int incomingPassengers, bool bossPendingOrAlive, EventModifiers modifiers = null,
++            float mapPressure = 1, float mapArrival = 1, int extraCarriers = 0)
+         {
+             elapsed += dt; untilEvaluation -= dt;
+             if (untilEvaluation > 0) return false;
+             untilEvaluation = Mathf.Clamp(settings.directorEvaluationInterval, .1f, .25f);
+-            Target = Mathf.Clamp(Mathf.CeilToInt(settings.PressureTarget(wave) * (modifiers?.pressure ?? 1)), 1, Mathf.Min(400, settings.maximumActiveEnemies));
++            Target = Mathf.Clamp(Mathf.CeilToInt(settings.PressureTarget(wave) * (modifiers?.pressure ?? 1) * Mathf.Clamp(mapPressure, 1, 3)), 1, Mathf.Min(400, settings.maximumActiveEnemies));
+             float band = Mathf.Clamp(settings.pressureHysteresis, .05f, .4f);
+             // Cargo committed to the river is pressure in flight: do not overfill a full battlefield.
+             int committed = activeEnemies + incomingPassengers;
+@@ -39,13 +40,13 @@ namespace ShorelineDefense.Waves
+             float period = Mathf.Max(1, settings.surgePeriod);
+             Surging = settings.assaultSurgesEnabled && wave >= 5 && pendingEnemies > incomingPassengers &&
+                 elapsed >= period && elapsed % period < Mathf.Min(period * .5f, Mathf.Max(1, settings.surgeDuration));
+-            BoatLimit = Mathf.Clamp(Mathf.CeilToInt(settings.BoatConcurrency(wave) * (modifiers?.boatConcurrency ?? 1)) + (Surging ? settings.surgeExtraBoats : 0), 1, 32);
++            BoatLimit = Mathf.Clamp(Mathf.CeilToInt(settings.BoatConcurrency(wave) * (modifiers?.boatConcurrency ?? 1)) + (Surging ? settings.surgeExtraBoats : 0) + Mathf.Clamp(extraCarriers, 0, 8), 1, 32);
+             ArrivalInterval = settings.ArrivalInterval(wave);
+             if (bossPendingOrAlive) ArrivalInterval *= .8f;
+             if ((Mode == AssaultPressure.Accelerated || Surging) && activeBoats < BoatLimit)
+                 ArrivalInterval = Mathf.Min(ArrivalInterval, Mathf.Max(.05f, settings.acceleratedArrivalInterval));
+             else if (Mode == AssaultPressure.Throttled) ArrivalInterval *= 1.5f;
+-            ArrivalInterval = Mathf.Max(.05f, ArrivalInterval * (modifiers?.boatInterval ?? 1));
++            ArrivalInterval = Mathf.Max(.05f, ArrivalInterval * (modifiers?.boatInterval ?? 1) * Mathf.Clamp(mapArrival, .25f, 1));
+             return true;
+         }
+     }
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Waves\\EndlessWaveGenerator.cs" "b/Assets\\Game\\Scripts\\Waves\\EndlessWaveGenerator.cs"
+index 3340374..6795be0 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Waves\\EndlessWaveGenerator.cs"
++++ "b/Assets\\Game\\Scripts\\Waves\\EndlessWaveGenerator.cs"
+@@ -10,13 +10,14 @@ namespace ShorelineDefense.Waves
+         private readonly EndlessWaveSettings settings;
+         private readonly int seed;
+         public EndlessWaveGenerator(EndlessWaveSettings tuning, int runSeed) { settings = tuning; seed = runSeed; }
+-        public int Budget(int wave)
++        public int Budget(int wave) => Budget(wave, 0);
++        public int Budget(int wave, int quantityOverride)
+         {
+             double age = Math.Max(0, (double)wave - 1);
+             double budget = Math.Max(1, settings.baseBudget) + age * Safe(settings.linearGrowth, 3) + age * age * Safe(settings.nonlinearGrowth, .015f);
+-            return (int)Math.Min(100000000, Math.Max(1, (int)Math.Min(100000000, budget)) * (long)Mathf.Clamp(settings.enemyQuantityMultiplier, 1, 20));
++            return (int)Math.Min(100000000, Math.Max(1, (int)Math.Min(100000000, budget)) * (long)Mathf.Clamp(quantityOverride > 0 ? quantityOverride : settings.enemyQuantityMultiplier, 1, 20));
+         }
+-        public WaveDefinition Generate(int number, EventModifiers modifiers = null)
++        public WaveDefinition Generate(int number, EventModifiers modifiers = null, float spitterWeight = 1, float burrowerWeight = 1, int quantityOverride = 0)
+         {
+             if (number < 1) throw new ArgumentOutOfRangeException(nameof(number));
+             var available = new List<EnemyController>();
+@@ -24,8 +25,8 @@ namespace ShorelineDefense.Waves
+                 if (prefab != null && prefab.Definition != null && prefab.Definition.UnlockWave <= number) available.Add(prefab);
+             if (available.Count == 0) throw new InvalidOperationException("No unlocked valid endless enemy prefab.");
+             var random = new System.Random(unchecked(seed * 397 ^ number));
+-            int quantity = Mathf.Clamp(settings.enemyQuantityMultiplier, 1, 20);
+-            int remaining = Budget(number) / quantity, cap = Mathf.Clamp(settings.maximumEnemiesPerWave / quantity, 1, 300);
++            int quantity = Mathf.Clamp(quantityOverride > 0 ? quantityOverride : settings.enemyQuantityMultiplier, 1, 20);
++            int remaining = Budget(number, quantity) / quantity, cap = Mathf.Clamp(settings.maximumEnemiesPerWave / quantity, 1, 300);
+             var groups = new List<WaveEnemyGroup>();
+             int eventQuantitySoFar = 0;
+             int baseQuantitySoFar = 0;
+@@ -33,13 +34,13 @@ namespace ShorelineDefense.Waves
+             for (int count = 0; count < cap; count++)
+             {
+                 int totalWeight = 0;
+-                foreach (var p in available) if (p.Definition.DifficultyCost <= remaining) totalWeight += EffectiveWeight(p.Definition.Kind, number, modifiers);
++                foreach (var p in available) if (p.Definition.DifficultyCost <= remaining) totalWeight += EffectiveWeight(p.Definition.Kind, number, modifiers, spitterWeight, burrowerWeight);
+                 if (totalWeight == 0) break;
+                 int roll = random.Next(totalWeight); EnemyController selected = null;
+                 foreach (var p in available)
+                 {
+                     if (p.Definition.DifficultyCost > remaining) continue;
+-                    roll -= EffectiveWeight(p.Definition.Kind, number, modifiers); if (roll < 0) { selected = p; break; }
++                    roll -= EffectiveWeight(p.Definition.Kind, number, modifiers, spitterWeight, burrowerWeight); if (roll < 0) { selected = p; break; }
+                 }
+                 remaining -= selected.Definition.DifficultyCost;
+                 baseQuantitySoFar += quantity * (selected.Definition.Kind == EnemyKind.Broodling ? 2 : 1);
+@@ -52,7 +53,7 @@ namespace ShorelineDefense.Waves
+             double age = Math.Max(0, (double)number - Math.Max(1, settings.scalingStartWave));
+             float health = (float)Math.Min(Math.Max(1, Safe(settings.maximumHealthMultiplier, 20)), 1 + age * Safe(settings.healthGrowth, .0125f));
+             float speed = (float)Math.Min(Math.Max(1, Safe(settings.maximumSpeedMultiplier, 1.6f)), 1 + age * Safe(settings.speedGrowth, .002f));
+-            int reward = (int)Math.Min(int.MaxValue, Math.Max(0, settings.baseReward) + ((long)number - 1) * Math.Max(0, settings.rewardGrowth));
++            int reward = settings.CompletionReward(number);
+             var wave = ScriptableObject.CreateInstance<WaveDefinition>(); wave.hideFlags = HideFlags.DontSave;
+             var boss = settings.bossEncounters != null ? settings.bossEncounters.ForWave(number) : null;
+             if (boss != null && boss.Definition is BossDefinition encounter) {
+@@ -85,8 +86,9 @@ namespace ShorelineDefense.Waves
+                 default: return 0;
+             }
+         }
+-        private static int EffectiveWeight(EnemyKind kind, int wave, EventModifiers modifiers) =>
+-            Mathf.RoundToInt(Weight(kind, wave) * Mathf.Clamp(modifiers?.Weight(kind) ?? 1, 0, 20));
++        private static int EffectiveWeight(EnemyKind kind, int wave, EventModifiers modifiers, float spitterWeight, float burrowerWeight) =>
++            Mathf.RoundToInt(Weight(kind, wave) * Mathf.Clamp(modifiers?.Weight(kind) ?? 1, 0, 20) *
++                Mathf.Clamp(kind == EnemyKind.Spitter ? spitterWeight : kind == EnemyKind.Burrower ? burrowerWeight : 1, 1, 4));
+         internal static float Safe(float value, float fallback) => float.IsNaN(value) || float.IsInfinity(value) ? fallback : Mathf.Max(0, value);
+     }
+ }
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Waves\\EndlessWaveSettings.cs" "b/Assets\\Game\\Scripts\\Waves\\EndlessWaveSettings.cs"
+index 4e081ee..40390e6 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Waves\\EndlessWaveSettings.cs"
++++ "b/Assets\\Game\\Scripts\\Waves\\EndlessWaveSettings.cs"
+@@ -16,6 +16,23 @@ namespace ShorelineDefense.Waves
+         public bool randomizeSeed = true;
+         [Min(0)] public int baseReward = 100;
+         [Min(0)] public int rewardGrowth = 5;
++        [Header("Late economy (opening rewards are preserved)")]
++        [Min(1)] public int incomeTaperStartWave = 10;
++        [Min(1)] public int incomeTaperEndWave = 30;
++        [Range(0, 1)] public float lateKillIncome = 1;
++        [Range(0, 1)] public float lateWaveIncome = 1;
++        private float IncomeFactor(int wave, float late) => Mathf.Lerp(1, Mathf.Clamp01(late),
++            Mathf.Clamp01((float)(((double)wave - incomeTaperStartWave) / Math.Max(1, (double)incomeTaperEndWave - incomeTaperStartWave))));
++        public int KillReward(EnemyDefinition enemy, int wave) => enemy is BossDefinition ? enemy.KillReward :
++            Mathf.RoundToInt(enemy.KillReward * IncomeFactor(wave, lateKillIncome));
++        public int CompletionReward(int wave)
++        {
++            double reward = Math.Max(0, baseReward) + ((long)Math.Max(1, wave) - 1) * Math.Max(0, rewardGrowth);
++            // Once the taper closes, the grant stays flat instead of growing forever.
++            if (wave > incomeTaperEndWave && lateWaveIncome < 1)
++                reward = Math.Max(0, baseReward) + ((long)Math.Max(1, incomeTaperEndWave) - 1) * Math.Max(0, rewardGrowth);
++            return (int)Math.Min(int.MaxValue, Math.Floor(reward * IncomeFactor(wave, lateWaveIncome)));
++        }
+         [Min(1)] public int scalingStartWave = 20;
+         [Min(0)] public float healthGrowth = .0125f;
+         [Min(0)] public float speedGrowth = .002f;
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Waves\\WaveManager.cs" "b/Assets\\Game\\Scripts\\Waves\\WaveManager.cs"
+index 5dae949..5433272 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Scripts\\Waves\\WaveManager.cs"
++++ "b/Assets\\Game\\Scripts\\Waves\\WaveManager.cs"
+@@ -27,6 +27,7 @@ namespace ShorelineDefense.Waves
+         public event Action EventChanged;
+         public Progression.MetaModifierService Meta { get; private set; } = Progression.MetaModifierService.Neutral;
+         public int EffectiveCompletionReward => (int)Math.Min(int.MaxValue, Math.Floor(CurrentWave.CompletionReward * Meta.WaveRewardMultiplier));
++        public int KillRewardFor(EnemyDefinition enemy) => endless != null ? endless.KillReward(enemy, PreparationWaveNumber) : enemy.KillReward;
+         public void ConfigureMeta(Progression.MetaModifierService modifiers) => Meta = modifiers;
+         public EndlessEventDefinition ForecastFollowingEvent()
+         {
+@@ -41,7 +42,7 @@ namespace ShorelineDefense.Waves
+             // An unstarted assault is only a preview. Canceling it must restore the seeded
+             // baseline plan as well as live modifiers, or its extra cargo becomes hidden pressure.
+             if (generated != null && generator != null && State == WaveState.Preparation && Events?.Current == null) {
+-                var replacement = generator.Generate(waveIndex + 1);
++                var replacement = GenerateWave(waveIndex + 1);
+                 ReleaseGenerated(); generated = replacement;
+             }
+             if (generated != null && endless != null) {
+@@ -53,6 +54,10 @@ namespace ShorelineDefense.Waves
+             EventChanged?.Invoke(); if (generated != null) Changed?.Invoke();
+         }
+         private void ReleaseEvents() { if (Events != null) { Events.Cancel(); Events.Changed -= NotifyEventChanged; Events = null; } }
++        private WaveDefinition GenerateWave(int number, EventModifiers modifiers = null) => generator.Generate(number, modifiers,
++            landings != null ? landings.CargoWeight(EnemyKind.Spitter, number) : 1,
++            landings != null ? landings.CargoWeight(EnemyKind.Burrower, number) : 1,
++            landings != null ? landings.FormationQuantity(number, endless.enemyQuantityMultiplier) : 0);
+         public void ConfigureEndless(EndlessWaveSettings settings)
+         { ReleaseEvents(); ReleaseGenerated(); endless = settings; generator = null; waveIndex = 0; EnsureGenerated(); Changed?.Invoke(); }
+         public void RestorePreparation(Persistence.RunSaveData data)
+@@ -62,7 +67,7 @@ namespace ShorelineDefense.Waves
+             generator = new EndlessWaveGenerator(endless, RunSeed);
+             Events = new EndlessEventManager(endless.eventSettings, RunSeed); Events.Restore(data.events); Events.Changed += NotifyEventChanged;
+             // The announced event is already committed; never call Prepare or credit its supply again.
+-            generated = generator.Generate(data.wave, Events.Current?.Definition.modifiers);
++            generated = GenerateWave(data.wave, Events.Current?.Definition.modifiers);
+             NotifyEventChanged(); Changed?.Invoke();
+         }
+         private void EnsureGenerated()
+@@ -74,7 +79,7 @@ namespace ShorelineDefense.Waves
+             }
+             bool boss = endless.bossEncounters != null && endless.bossEncounters.ForWave(waveIndex + 1) != null;
+             Events.Prepare(waveIndex + 1, boss, economy);
+-            generated = generator.Generate(waveIndex + 1, Events.Current?.Definition.modifiers);
++            generated = GenerateWave(waveIndex + 1, Events.Current?.Definition.modifiers);
+         }
+ #if UNITY_EDITOR || DEVELOPMENT_BUILD
+         public bool ForceEvent(string id)
+@@ -82,7 +87,7 @@ namespace ShorelineDefense.Waves
+             if (State != WaveState.Preparation || endless?.eventSettings == null) return false;
+             var definition = Array.Find(endless.eventSettings.events, e => e != null && e.id == id);
+             if (!Events.Force(definition, CurrentWaveNumber, CurrentWave.Encounter != null, economy)) return false;
+-            ReleaseGenerated(); generated = generator.Generate(waveIndex + 1, definition.modifiers);
++            ReleaseGenerated(); generated = GenerateWave(waveIndex + 1, definition.modifiers);
+             Changed?.Invoke(); return true;
+         }
+ #endif
+@@ -211,7 +216,8 @@ namespace ShorelineDefense.Waves
+             }
+             if (State != WaveState.Spawning) return;
+             if (IsEndless && endless.pressureDirectorEnabled && landings != null && director.Tick(deltaTime, endless, CurrentWaveNumber,
+-                registry.Count, pending, landings.ActiveBoats, landings.IncomingPassengers, bossAwaitingDeployment || deployedBoss != null && deployedBoss.IsTargetable, Events?.Modifiers))
++                registry.Count, pending, landings.ActiveBoats, landings.IncomingPassengers, bossAwaitingDeployment || deployedBoss != null && deployedBoss.IsTargetable, Events?.Modifiers,
++                landings.PressureMultiplier, landings.ArrivalMultiplier, landings.ExtraCarriers))
+             {
+                 landings.ConfigurePressure(director.ArrivalInterval, director.BoatLimit);
+                 if (landings.TotalArrivals > 0 && director.Mode == AssaultPressure.Accelerated)
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Tests\\EditMode\\BalanceRulesTests.cs" "b/Assets\\Game\\Tests\\EditMode\\BalanceRulesTests.cs"
+index b066364..1b9439b 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Tests\\EditMode\\BalanceRulesTests.cs"
++++ "b/Assets\\Game\\Tests\\EditMode\\BalanceRulesTests.cs"
+@@ -1,4 +1,5 @@
+ using NUnit.Framework;
++using System.Linq;
+ using ShorelineDefense.Enemies;
+ using ShorelineDefense.Waves;
+ using UnityEngine;
+@@ -7,6 +8,59 @@ namespace ShorelineDefense.Tests
+ {
+     public sealed class BalanceRulesTests
+     {
++        [Test] public void FlankingCargoChangesLateCompositionWithoutChangingOpeningHealthOrBudget()
++        {
++            var s=UnityEditor.AssetDatabase.LoadAssetAtPath<EndlessWaveSettings>("Assets/Game/Data/Waves/EndlessSurvival.asset");
++            var go=new GameObject("Port cargo tuning");
++            try
++            {
++                var arrivals=go.AddComponent<AssaultCarrierSystem>();var data=new UnityEditor.SerializedObject(arrivals);
++                data.FindProperty("distributedPressureFromWave").intValue=11;data.FindProperty("lateSpitterWeight").floatValue=3;data.FindProperty("lateBurrowerWeight").floatValue=4;data.FindProperty("lateFormationMultiplier").floatValue=2.4f;data.ApplyModifiedPropertiesWithoutUndo();
++                int ordinaryFlankers=0,portFlankers=0;
++                for(int wave=1;wave<=50;wave++)
++                {
++                    var generator=new EndlessWaveGenerator(s,1977);
++                    int quantity=arrivals.FormationQuantity(wave,s.enemyQuantityMultiplier);
++                    var ordinary=generator.Generate(wave);var port=generator.Generate(wave,null,arrivals.CargoWeight(EnemyKind.Spitter,wave),arrivals.CargoWeight(EnemyKind.Burrower,wave),quantity);
++                    try
++                    {
++                        Assert.That(port.HealthMultiplier,Is.EqualTo(ordinary.HealthMultiplier));Assert.That(port.SpeedMultiplier,Is.EqualTo(ordinary.SpeedMultiplier));
++                        Assert.That(port.Groups.Sum(g=>g.Count*g.Prefab.Definition.WaveCostHalfUnits)/2,Is.LessThanOrEqualTo(generator.Budget(wave,quantity)+port.EncounterCost));
++                        if(wave<=10)CollectionAssert.AreEqual(ordinary.Groups.Select(g=>(g.Prefab,g.Count)).ToArray(),port.Groups.Select(g=>(g.Prefab,g.Count)).ToArray());
++                        if(wave>=31)
++                        {
++                            ordinaryFlankers+=ordinary.Groups.Where(g=>g.Prefab.Definition.Kind==EnemyKind.Spitter||g.Prefab.Definition.Kind==EnemyKind.Burrower).Sum(g=>g.Count);
++                            portFlankers+=port.Groups.Where(g=>g.Prefab.Definition.Kind==EnemyKind.Spitter||g.Prefab.Definition.Kind==EnemyKind.Burrower).Sum(g=>g.Count);
++                        }
++                    }
++                    finally{Object.DestroyImmediate(ordinary);Object.DestroyImmediate(port);}
++                }
++                Assert.That(portFlankers,Is.GreaterThan(ordinaryFlankers*1.5f));
++            }
++            finally{Object.DestroyImmediate(go);}
++        }
++        [Test] public void LateIncomePreservesOpeningAndCapsGrantGrowth()
++        {
++            var s=UnityEditor.AssetDatabase.LoadAssetAtPath<EndlessWaveSettings>("Assets/Game/Data/Waves/EndlessSurvival.asset");
++            foreach(var enemy in s.enemies)
++            {
++                for(int wave=1;wave<=10;wave++)Assert.That(s.KillReward(enemy.Definition,wave),Is.EqualTo(enemy.Definition.KillReward));
++                int previous=enemy.Definition.KillReward;
++                for(int wave=11;wave<=100;wave++){int reward=s.KillReward(enemy.Definition,wave);Assert.That(reward,Is.InRange(0,previous));previous=reward;}
++            }
++            for(int wave=1;wave<=10;wave++)Assert.That(s.CompletionReward(wave),Is.EqualTo(s.baseReward+(wave-1)*s.rewardGrowth));
++            Assert.That(s.CompletionReward(50),Is.EqualTo(s.CompletionReward(30)));
++            Assert.That(s.CompletionReward(int.MaxValue),Is.EqualTo(s.CompletionReward(30)));
++            foreach(var boss in s.bossEncounters.bosses)Assert.That(s.KillReward(boss.Definition,50),Is.EqualTo(boss.Definition.KillReward));
++        }
++        [Test] public void SplitRoutePressureStillAdmitsOnlyTheRemainingHardCap()
++        {
++            var s=UnityEditor.AssetDatabase.LoadAssetAtPath<EndlessWaveSettings>("Assets/Game/Data/Waves/EndlessSurvival.asset");
++            var director=new AssaultPressureDirector();director.Tick(.2f,s,50,350,1000,4,49,false,null,2.25f,.5f,6);
++            Assert.That(director.Target,Is.EqualTo(400));Assert.That(director.RemainingAdmission(s,350,49),Is.EqualTo(1));
++            Assert.That(director.RemainingAdmission(s,350,50),Is.Zero);
++            Assert.That(director.BoatLimit,Is.EqualTo(Mathf.Min(s.BoatConcurrency(50)+6,32)));
++        }
+         [TestCase(0f, 50)]
+         [TestCase(.75f, 88)]
+         [TestCase(1f, 100)]
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Tests\\EditMode\\MetaProgressionTests.cs" "b/Assets\\Game\\Tests\\EditMode\\MetaProgressionTests.cs"
+index bcba130..b102ddf 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Tests\\EditMode\\MetaProgressionTests.cs"
++++ "b/Assets\\Game\\Tests\\EditMode\\MetaProgressionTests.cs"
+@@ -121,7 +121,7 @@ namespace ShorelineDefense.Tests
+                 Assert.That(m.SplashMultiplier(d),Is.EqualTo(name=="MortarPosition"||name=="RocketLauncherPosition"?1.1f:1).Within(.001));
+                 Assert.That(m.BurnMultiplier(d),Is.EqualTo(name=="FlamethrowerPosition"?1.1f:1).Within(.001));
+                 Assert.That(m.FireRateMultiplier(d),Is.EqualTo(name=="BarbedWire"||name=="LandMine"?1:1.05f).Within(.001));
+-                Assert.That(m.HealthMultiplier(d),Is.EqualTo(name=="LandMine"?1:1.2f).Within(.001));
++                Assert.That(m.HealthMultiplier(d),Is.EqualTo(name=="LandMine"||name=="BarbedWire"?1:1.2f).Within(.001));
+             }
+             Assert.That(m.MaxHealth(Defense("MachineGunNest"),1),Is.EqualTo(360));Assert.That(m.MaxHealth(Defense("MachineGunNest"),3),Is.EqualTo(540));
+             Assert.That(m.RefundBonus,Is.EqualTo(.05));Assert.That(m.RepairMultiplier(false),Is.EqualTo(.9));
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Tests\\PlayMode\\AquaticPlayTests.cs" "b/Assets\\Game\\Tests\\PlayMode\\AquaticPlayTests.cs"
+index d7ca04f..81023ce 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Tests\\PlayMode\\AquaticPlayTests.cs"
++++ "b/Assets\\Game\\Tests\\PlayMode\\AquaticPlayTests.cs"
+@@ -29,16 +29,18 @@ namespace ShorelineDefense.Tests
+             foreach(string map in new[]{"CoastalDefense_TopDown","DanubeIndustrialPort"})
+             {
+                 yield return Load(map);var system=Find<AssaultCarrierSystem>();var registry=Find<EnemyRegistry>();
++                system.ConfigureWave(map=="DanubeIndustrialPort"?35:1);
+                 foreach(var definition in system.Carriers)
+                 {
+                     Assert.IsTrue(system.LandingPoints.Any(p=>system.IsValidApproach(p,definition)),map+" "+definition.method+" clearance");
+                     system.ForcedArrival=definition.method;
+                     var prefab=Prefab(definition.method==ArrivalMethod.LeviathanCarrier?EnemyKind.Bulwark:EnemyKind.Crawler);
+-                    Assert.IsTrue(system.TryDispatch(prefab,1),definition.method.ToString());Assert.Zero(registry.Count,"Water cargo must not register");
++                    int cargo=system.PassengerLimit(prefab);
++                    Assert.IsTrue(system.TryDispatch(prefab,cargo),definition.method.ToString());Assert.Zero(registry.Count,"Water cargo must not register");
+                     int spawned=Spawn.TotalSpawned;
+                     for(int i=0;i<250&&(system.ActiveCarriers>0||registry.Count>0);i++)
+                     {system.Tick(.2f);foreach(var e in registry.Active.ToArray())e.Tick(100);yield return null;}
+-                    Assert.AreEqual(spawned+1,Spawn.TotalSpawned);Assert.Zero(system.IncomingPassengers);Assert.Zero(system.ActiveCarriers);Assert.Zero(registry.Count);
++                    Assert.AreEqual(spawned+cargo,Spawn.TotalSpawned);Assert.Zero(system.IncomingPassengers);Assert.Zero(system.ActiveCarriers);Assert.Zero(registry.Count);
+                 }
+             }
+         }
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Tests\\PlayMode\\BalancePlayTests.cs" "b/Assets\\Game\\Tests\\PlayMode\\BalancePlayTests.cs"
+index de252e6..c083c3e 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Tests\\PlayMode\\BalancePlayTests.cs"
++++ "b/Assets\\Game\\Tests\\PlayMode\\BalancePlayTests.cs"
+@@ -44,6 +44,37 @@ namespace ShorelineDefense.Tests
+             heavy.Health.TakeDefenseDamage(heavy.Health.CurrentHealth-10,1);
+             weapon.Tick(.2f);Assert.That(weapon.Target,Is.SameAs(heavy),"Precision priority must not abandon a wounded heavy for healthy larvae");yield return null;
+         }
++        [UnityTest] public IEnumerator HardenedWireImprovesOnlyLevelIIIAndLeavesTheRouteWalkable()
++        {
++            var b=Find<BuildManager>();b.Economy.AddMoney(1000);
++            LocalGameData.Profile.DebugGrantRP(100,out _);
++            var tree=new ResearchTreeService(LocalGameData.Profile,ResearchCatalog.Load(),()=>true);
++            Assert.IsTrue(tree.TryPurchase("reinforced-emplacements",out _));Assert.IsTrue(tree.TryPurchase("hardened-wire",out _));
++            var researched=new MetaModifierService(MetaModifierService.FromProfile(LocalGameData.Profile,ResearchCatalog.Load()));
++            var wire=Find<BuildHud>().Defenses.Single(d=>d.Id=="barbed-wire");
++            Assert.That(researched.MovementMultiplier(wire,1),Is.EqualTo(.5f).Within(.001));
++            Assert.That(researched.MovementMultiplier(wire,2),Is.EqualTo(.4f).Within(.001));
++            Assert.That(MetaModifierService.Neutral.MovementMultiplier(wire,3),Is.EqualTo(.35f).Within(.001));
++            b.ConfigureMeta(researched);var cell=new Vector2Int(12,8);
++            Assert.That(b.TryPlaceDefense(wire,cell,out var placed),Is.EqualTo(PlacementResult.Valid));
++            Assert.IsTrue(b.TryUpgrade(placed));Assert.IsTrue(b.TryUpgrade(placed));
++            Assert.That(placed.MaxHealth,Is.EqualTo(400),"The new node must not retain the redundant HP bonus");
++            Assert.That(placed.Grid.MovementMultiplierAt(placed.transform.position),Is.EqualTo(.3f).Within(.001));
++            Assert.IsTrue(placed.Grid.IsTraversable(cell));
++            Assert.That(placed.Grid.MovementMultiplierAt(placed.Grid.CellToWorld(cell+Vector2Int.right)),Is.EqualTo(1));
++            Assert.IsTrue(b.TryDismantle(placed,out _));Assert.That(b.Battlefield.Grid.MovementMultiplierAt(b.Battlefield.Grid.CellToWorld(cell)),Is.EqualTo(1));
++            yield return null;
++        }
++        [UnityTest] public IEnumerator LateKillsCreditAndDisplayTheSameReducedReward()
++        {
++            var w=Find<WaveManager>();var data=Find<RunSession>().Capture();data.wave=40;data.completedWaves=39;w.RestorePreparation(data);
++            var sp=Find<EnemySpawner>();var prefab=w.EndlessSettings.enemies.Single(p=>p.Definition.Kind==EnemyKind.Bulwark);
++            Assert.IsTrue(sp.TrySpawnAt(prefab,sp.Battlefield.Grid.CellToWorld(new Vector2Int(12,8)),out var enemy));
++            var money=Find<BuildManager>().Economy;int before=money.Money,expected=w.KillRewardFor(enemy.Definition);
++            Assert.That(expected,Is.LessThan(enemy.Definition.KillReward));enemy.Health.TakeDefenseDamage(int.MaxValue,1);
++            Assert.That(money.Money-before,Is.EqualTo(expected));
++            Assert.That(Find<CombatFeedbackHud>().LastRewardText,Is.EqualTo("+"+expected+" RSD"));yield return null;
++        }
+         [UnityTest] public IEnumerator EarlyCargoAdmissionCannotOvershootWithAFullDriftPod()
+         {
+             var w=Find<WaveManager>();var registry=Find<EnemyRegistry>();w.Landings.ForcedArrival=ArrivalMethod.DriftPod;Assert.IsTrue(w.TryStartWave());
+diff --git "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Tests\\PlayMode\\IndustrialPortPlayTests.cs" "b/Assets\\Game\\Tests\\PlayMode\\IndustrialPortPlayTests.cs"
+index 5de8f66..a053d72 100644
+--- "a/C:\\Users\\Slavisa\\AppData\\Local\\Temp\\BorderDefenders6E1-baseline-3fe1f070-03a2-412e-98e7-74fcebdb066d\\Assets\\Game\\Tests\\PlayMode\\IndustrialPortPlayTests.cs"
++++ "b/Assets\\Game\\Tests\\PlayMode\\IndustrialPortPlayTests.cs"
+@@ -27,7 +27,9 @@ namespace ShorelineDefense.Tests
+         {
+             var context=Find<MapRuntimeContext>(); string report=context.Validate(out int invalid); Assert.Zero(invalid,report);
+             var boats=Find<BoatLandingSystem>(); var waves=Find<WaveManager>(); var registry=Find<EnemyRegistry>();
+-            Assert.That(boats.LandingPoints.Count,Is.EqualTo(8)); Assert.That(boats.LandingPoints.Select(p=>boats.SectorFor(p)).Distinct().Count(),Is.EqualTo(3));
++            Assert.That(boats.LandingPoints.Count,Is.EqualTo(9)); Assert.That(boats.LandingPoints.Count(p=>p.minimumWave<=1),Is.EqualTo(8)); Assert.That(boats.LandingPoints.Select(p=>boats.SectorFor(p)).Distinct().Count(),Is.EqualTo(3));
++            foreach(var point in boats.LandingPoints)foreach(var position in point.unloadingPositions.Concat(point.lateUnloadingPositions))
++            {Assert.IsTrue(context.grid.Grid.TryWorldToCell(position,out var cell));Assert.IsTrue(boats.IntersectsReleaseCells(cell,Vector2Int.one),"New construction must keep carrier release positions clear");}
+             foreach(var prefab in waves.EndlessSettings.bossEncounters.bosses)
+             {
+                 long before=Find<RunStatistics>().BossesBreached;
+@@ -36,6 +38,27 @@ namespace ShorelineDefense.Tests
+                 Assert.That(Find<RunStatistics>().BossesBreached,Is.EqualTo(before+1)); Assert.Zero(boats.IncomingPassengers);
+             }
+         }
++        [UnityTest] public IEnumerator LegacySavedApronStructuresRemainCompatibleAndBlockedLandingDoesNotStallCargo()
++        {
++            var b=Find<BuildManager>();var w=Find<WaveManager>();var boats=Find<BoatLandingSystem>();var mg=Find<BuildHud>().Defenses.Single(d=>d.Id=="machine-gun-nest");
++            var data=Find<RunSession>().Capture();int health=b.Meta.MaxHealth(mg,1);
++            foreach(int x in new[]{12,13})foreach(int y in new[]{0,1})
++                data.structures.Add(new StructureSaveData{defenseId=mg.Id,x=x,y=y,level=1,health=health,maxHealth=health,constructionCost=mg.Cost,investment=mg.Cost});
++            Assert.IsTrue(RunSaveCompatibility.Valid(data,Find<BuildHud>().Defenses,b.Battlefield.Definition,w.EndlessSettings.eventSettings));
++            foreach(var item in data.structures)Assert.IsNotNull(b.RestoreDefense(mg,item));
++            Assert.That(b.Validate(mg,new Vector2Int(6,4)),Is.EqualTo(PlacementResult.NotBuildable));
++            Find<MapRuntimeContext>().Validate(out int invalid);Assert.Zero(invalid,"Restored apron defenses must not invalidate the map");
++            boats.ConfigureWave(35);boats.ForcedArrival=ArrivalMethod.DriftPod;boats.ConfigurePressure(.1f,8);
++            var registry=Find<EnemyRegistry>();var spawner=Find<EnemySpawner>();int before=spawner.TotalSpawned;
++            for(int batch=0;batch<12;batch++)
++            {
++                Assert.IsTrue(boats.TryDispatch(spawner.DefaultPrefab,1));
++                for(int i=0;i<300&&(boats.ActiveCarriers>0||registry.Count>0);i++)
++                {boats.Tick(.1f);foreach(var e in registry.Active.ToArray())e.Tick(100);if(i%5==0)yield return null;}
++                Assert.Zero(boats.IncomingPassengers);Assert.Zero(boats.ActiveCarriers);
++            }
++            Assert.That(spawner.TotalSpawned-before,Is.EqualTo(12));
++        }
+         [UnityTest] public IEnumerator AllDefensesManageSaveAndContinueOnSelectedMap()
+         {
+             var builder=Find<BuildManager>(); builder.Economy.AddMoney(50000); var catalog=Find<BuildHud>().Defenses;

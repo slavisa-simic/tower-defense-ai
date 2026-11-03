@@ -293,3 +293,29 @@ Continue Phase 6E balance work before Phase 6F: address late RSD accumulation an
 |Density|Port|None|100/200/300/400; mixed roster, weapons and carriers|Natural Update x1, stress-only HP/movement|
 |Onboarding/product/persistence|Border, then map tests|Fresh → Emergency Fund|Tutorial → 1–10 → summary → research → new run → Continue|UI bindings, normal first wave then explicit clocks|
 |UI|Both contexts|Fresh / actual context|768p, 900p, 1080p; six key contexts|Actual Game View layout/captures|
+
+## Phase 6E.1 Balance Closure
+
+- **Economy:** Waves 1–10 retain their starting funds and income. Between Waves 10–30, ordinary kill income tapers to 12% before integer rounding, and grants taper to 50%; grants then stay at 179 RSD (196 with full research), replacing continued growth to 398/437 at Wave 50. Boss bounties remain 2500/2200. This limits income from larger late formations while retaining repair and upgrade pressure.
+- **Port:** eligible direct emergence 30% → 55%; ninth southern inlet and wider dock release positions activate at Wave 11. From Waves 11–31, formation quantity ramps ×5 → ×12, Spitter/Burrower weights ×1 → ×3/×4, pressure ×1 → ×2.25, arrival interval ×1 → ×0.5, with up to six additional carrier slots (32 limit). Late release rate ×3 retains cadence remainder. These increase ranged, bypass and simultaneous pressure across existing chokepoints. Enemy HP remains shared across maps; active cap remains 400. Landing cells reject new construction through the existing placement owner; historical saved structures restore and blocked landing points are skipped.
+- **Boss values:** Dredger HP 8000 → 18000, armor 35% → 60%, speed 1.15 → 0.9, siege damage 120 → 150. Broodmother HP 6000 → 13500, armor 15% → 55%, speed 1.65 → 0.9. Moderate combined durability and movement changes extend exposure and allow repeated broods; existing brood cadence and 18-concurrent/60-lifetime caps remain.
+
+Same earned-income light-first plan, seed 1977, 0.1-second production ticks and between-wave purchases; no run-money or enemy-HP grants. All four runs cleared Waves 1–10. Results are representative scripted runs.
+
+|Map / research|Phase 6E result → closure result|Cumulative Homicides before → after|Unused RSD before → after|
+|---|---|---:|---:|
+|Border / zero|Loss W31 → loss W38|1065 → 1035|17326 → 155|
+|Border / full|Clear W50 → loss W41|175 → 1005|76574 → 137|
+|Port / zero|Clear W50 → loss W50|100 → 1000|77875 → 2504|
+|Port / full|Clear W50 → clear W50|75 → 200|81564 → 7009|
+
+Boss TTK uses the same isolated moving-boss fixtures, zero research, normal Update ×1, and 4725/11700 RSD paid midgame/specialized forces on Border.
+
+|Boss|Midgame TTK before → after|Specialized TTK before → after|Brood releases after, midgame / specialized|
+|---|---:|---:|---:|
+|Dredger|11.18 → 26.00 s|5.73 → 12.00 s|—|
+|Broodmother|9.91 → 24.00 s|4.78 → 11.46 s|3 / 2 (18 / 12 Broodlings)|
+
+**Hardened Wire:** replaces +20% HP with Level III slow 65% → 70%. Levels I/II remain 50%/60%. The focused test verified the actual walkable grid multiplier 0.30, normal speed outside Wire, and cleanup after removal. Existing frozen research snapshots retain their prior values.
+
+Evidence: `Docs/Validation/Phase6E/closure-zero-closure.json`, `closure-full-closure.json`, `closure-boss-ttk.json` (Dredger), `closure-boss-ttkBroodmother.json`, and `closure-play-BalancePlayTests.json`.

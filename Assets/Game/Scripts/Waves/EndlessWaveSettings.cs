@@ -16,6 +16,23 @@ namespace ShorelineDefense.Waves
         public bool randomizeSeed = true;
         [Min(0)] public int baseReward = 100;
         [Min(0)] public int rewardGrowth = 5;
+        [Header("Late economy (opening rewards are preserved)")]
+        [Min(1)] public int incomeTaperStartWave = 10;
+        [Min(1)] public int incomeTaperEndWave = 30;
+        [Range(0, 1)] public float lateKillIncome = 1;
+        [Range(0, 1)] public float lateWaveIncome = 1;
+        private float IncomeFactor(int wave, float late) => Mathf.Lerp(1, Mathf.Clamp01(late),
+            Mathf.Clamp01((float)(((double)wave - incomeTaperStartWave) / Math.Max(1, (double)incomeTaperEndWave - incomeTaperStartWave))));
+        public int KillReward(EnemyDefinition enemy, int wave) => enemy is BossDefinition ? enemy.KillReward :
+            Mathf.RoundToInt(enemy.KillReward * IncomeFactor(wave, lateKillIncome));
+        public int CompletionReward(int wave)
+        {
+            double reward = Math.Max(0, baseReward) + ((long)Math.Max(1, wave) - 1) * Math.Max(0, rewardGrowth);
+            // Once the taper closes, the grant stays flat instead of growing forever.
+            if (wave > incomeTaperEndWave && lateWaveIncome < 1)
+                reward = Math.Max(0, baseReward) + ((long)Math.Max(1, incomeTaperEndWave) - 1) * Math.Max(0, rewardGrowth);
+            return (int)Math.Min(int.MaxValue, Math.Floor(reward * IncomeFactor(wave, lateWaveIncome)));
+        }
         [Min(1)] public int scalingStartWave = 20;
         [Min(0)] public float healthGrowth = .0125f;
         [Min(0)] public float speedGrowth = .002f;

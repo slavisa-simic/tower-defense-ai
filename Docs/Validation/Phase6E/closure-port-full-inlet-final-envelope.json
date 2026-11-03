@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase6E/Closure.cs",
+      "entry": "Phase6E1Closure.Progress",
+      "args": "[\"port-full-inlet-final\",\"full\",50,\"lean\",\"DanubeIndustrialPort\"]",
+      "timeout_ms": "1800000"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 170,
+      "executeMs": 94226,
+      "assemblyName": "PipelineRunScript_Closure_b10111413b824c0ca6621d95f4ba8f95",
+      "success": true,
+      "result": "Written port-full-inlet-final"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

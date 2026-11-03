@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: ShorelineDefense.Runtime::ShorelineDefense.Progression.ResearchNodeDefinition
   id: hardened-wire
   displayName: Hardened Wire
-  description: Barbed Wire gains +20% Max HP. Slow strength is unchanged.
+  description: Level III Barbed Wire slows creatures by 70% instead of 65%. Walkable;
+    overlapping Wire does not stack.
   branch: 1
   costRP: 20
   tier: 2
@@ -23,6 +24,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a113041fe3c624144a6f42a473126e1e, type: 2}
   icon: {fileID: -2116602131, guid: e8c99442ad1d63744a2ce2497d260d7c, type: 3}
   effects:
-  - kind: 5
-    amount: 0.2
+  - kind: 18
+    amount: 0.05
   boardPosition: {x: 0.25, y: 106}

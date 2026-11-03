@@ -78,6 +78,9 @@ namespace ShorelineDefense.Building
         {
             if (game == null || !game.IsPlaying) return PlacementResult.NotPlaying;
             if (definition == null || !definition.IsValid || economy == null || enemies == null) return PlacementResult.InvalidDefinition;
+            // New construction keeps landing aprons clear; historical saved footprints still
+            // restore through the existing terrain/occupancy path, just as with event flooding.
+            if (waves?.Landings != null && waves.Landings.IntersectsReleaseCells(cell, definition.Footprint)) return PlacementResult.NotBuildable;
             if (grid?.Grid != null && Events?.Modifiers.floodedColumns > 0 && grid.Grid.Plane == GameplayPlane.XY) {
                 for (int x = 0; x < definition.Footprint.x; x++) for (int y = 0; y < definition.Footprint.y; y++)
                     if (grid.Definition.IsFloodable(cell + new Vector2Int(x,y), Events.Modifiers.floodedColumns)) return PlacementResult.NotBuildable;

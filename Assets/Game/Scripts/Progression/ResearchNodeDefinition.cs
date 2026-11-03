@@ -9,7 +9,7 @@ namespace ShorelineDefense.Progression
         StartingRsd, PreparationRepairDiscount, RefundBonus, WaveRewardBonus, BlockingHealthBonus,
         WireHealthBonus, CombatRepairDiscount, UpgradeDiscount, BallisticDamageBonus, SniperRangeBonus,
         AreaRadiusBonus, BurnDurationBonus, FireRateBonus, EnemyCountIntel, ThreatIntel, CompositionIntel,
-        EventForecast, DeepWaterIntel
+        EventForecast, DeepWaterIntel, WireSlowBonus
     }
     [Serializable] public sealed class ResearchEffectDefinition
     {

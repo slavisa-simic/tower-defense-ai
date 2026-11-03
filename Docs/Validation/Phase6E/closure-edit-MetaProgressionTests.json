@@ -1,0 +1,140 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "command": "run_tests",
+    "parameters": {
+      "mode": "editor",
+      "filter": "MetaProgressionTests"
+    },
+    "result": {
+      "Summary": {
+        "Total": 15,
+        "Passed": 15,
+        "Failed": 0,
+        "Skipped": 0,
+        "Inconclusive": 0
+      },
+      "Results": [
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.AwardAndMilestonesCommitOnceAcrossSessionsAndHistoryEviction",
+          "Status": "Passed",
+          "Duration": 0.4134152,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.CatalogHasTwentyUniqueBoundedNodesAndAcyclicPrerequisites",
+          "Status": "Passed",
+          "Duration": 0.0023637,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.EarlyDeathsCannotFarmAndFirstDecentRunBuysUsefulResearch",
+          "Status": "Passed",
+          "Duration": 0.0686084,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.FailedAtomicPurchaseDoesNotSpendOrUnlock",
+          "Status": "Passed",
+          "Duration": 0.0120022,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.FrozenSnapshotRemainsIndependentOfProfileAndSerializedSource",
+          "Status": "Passed",
+          "Duration": 0.0121403,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.FullTreeEffectsTargetOnlyIntendedWeaponsAndRemainModerate",
+          "Status": "Passed",
+          "Duration": 0.0257704,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.InvalidSnapshotNumbersAreRejected",
+          "Status": "Passed",
+          "Duration": 0.0006005,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.LongFailedRunCanEarnQualityAtTheNormalHomicidesLossThreshold",
+          "Status": "Passed",
+          "Duration": 0.0005741,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.NeutralLegacySnapshotCannotAcquireCurrentResearch",
+          "Status": "Passed",
+          "Duration": 0.0073213,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.ProfileCorruptionRecoversBackupAndPreservesReceipts",
+          "Status": "Passed",
+          "Duration": 0.0192479,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.ProfileMapBestsOutliveRunDeletionAndHistory",
+          "Status": "Passed",
+          "Duration": 0.0230331,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.PurchasesEnforceCurrencyPrerequisitesAndRankAndPersistImmediately",
+          "Status": "Passed",
+          "Duration": 0.0291404,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.ResearchDuringGameplayIsRejectedByService",
+          "Status": "Passed",
+          "Duration": 0.0062603,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.RewardsAreConfigurableBoundedAndDoNotPayOrdinaryKills",
+          "Status": "Passed",
+          "Duration": 0.0009656,
+          "Message": null,
+          "StackTrace": null
+        },
+        {
+          "FullName": "ShorelineDefense.Tests.MetaProgressionTests.UnrecoverableProfileFailsGracefullyWithoutOverwritingOrDeletingRun",
+          "Status": "Passed",
+          "Duration": 0.0089942,
+          "Message": null,
+          "StackTrace": null
+        }
+      ],
+      "Duration": 3.13,
+      "StatusPath": null,
+      "Mode": "EditMode",
+      "FilterApplied": "testname: MetaProgressionTests",
+      "success": true,
+      "result": null
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

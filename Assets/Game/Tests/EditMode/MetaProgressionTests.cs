@@ -121,7 +121,7 @@ namespace ShorelineDefense.Tests
                 Assert.That(m.SplashMultiplier(d),Is.EqualTo(name=="MortarPosition"||name=="RocketLauncherPosition"?1.1f:1).Within(.001));
                 Assert.That(m.BurnMultiplier(d),Is.EqualTo(name=="FlamethrowerPosition"?1.1f:1).Within(.001));
                 Assert.That(m.FireRateMultiplier(d),Is.EqualTo(name=="BarbedWire"||name=="LandMine"?1:1.05f).Within(.001));
-                Assert.That(m.HealthMultiplier(d),Is.EqualTo(name=="LandMine"?1:1.2f).Within(.001));
+                Assert.That(m.HealthMultiplier(d),Is.EqualTo(name=="LandMine"||name=="BarbedWire"?1:1.2f).Within(.001));
             }
             Assert.That(m.MaxHealth(Defense("MachineGunNest"),1),Is.EqualTo(360));Assert.That(m.MaxHealth(Defense("MachineGunNest"),3),Is.EqualTo(540));
             Assert.That(m.RefundBonus,Is.EqualTo(.05));Assert.That(m.RepairMultiplier(false),Is.EqualTo(.9));

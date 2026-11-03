@@ -1,0 +1,27 @@
+{
+  "method": "Natural Update x1, zero research. Moving isolated boss at authored base HP, normal armor/structure attacks and real defense payments. Excludes escorts/other-wave damage competition; functional encounter suites test both maps separately. Midgame and specialized fixtures disclose granted budgets.",
+  "rows": [
+    {
+      "map": "CoastalDefense_TopDown",
+      "kind": "Broodmother",
+      "force": "midgame",
+      "paid": 4725,
+      "hp": 18563,
+      "ttkSeconds": 24.000144138932228,
+      "alive": false,
+      "children": 18,
+      "breaches": 8
+    },
+    {
+      "map": "CoastalDefense_TopDown",
+      "kind": "Broodmother",
+      "force": "specialized",
+      "paid": 11700,
+      "hp": 18563,
+      "ttkSeconds": 11.459165573120117,
+      "alive": false,
+      "children": 12,
+      "breaches": 0
+    }
+  ]
+}

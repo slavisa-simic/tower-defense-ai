@@ -29,16 +29,18 @@ namespace ShorelineDefense.Tests
             foreach(string map in new[]{"CoastalDefense_TopDown","DanubeIndustrialPort"})
             {
                 yield return Load(map);var system=Find<AssaultCarrierSystem>();var registry=Find<EnemyRegistry>();
+                system.ConfigureWave(map=="DanubeIndustrialPort"?35:1);
                 foreach(var definition in system.Carriers)
                 {
                     Assert.IsTrue(system.LandingPoints.Any(p=>system.IsValidApproach(p,definition)),map+" "+definition.method+" clearance");
                     system.ForcedArrival=definition.method;
                     var prefab=Prefab(definition.method==ArrivalMethod.LeviathanCarrier?EnemyKind.Bulwark:EnemyKind.Crawler);
-                    Assert.IsTrue(system.TryDispatch(prefab,1),definition.method.ToString());Assert.Zero(registry.Count,"Water cargo must not register");
+                    int cargo=system.PassengerLimit(prefab);
+                    Assert.IsTrue(system.TryDispatch(prefab,cargo),definition.method.ToString());Assert.Zero(registry.Count,"Water cargo must not register");
                     int spawned=Spawn.TotalSpawned;
                     for(int i=0;i<250&&(system.ActiveCarriers>0||registry.Count>0);i++)
                     {system.Tick(.2f);foreach(var e in registry.Active.ToArray())e.Tick(100);yield return null;}
-                    Assert.AreEqual(spawned+1,Spawn.TotalSpawned);Assert.Zero(system.IncomingPassengers);Assert.Zero(system.ActiveCarriers);Assert.Zero(registry.Count);
+                    Assert.AreEqual(spawned+cargo,Spawn.TotalSpawned);Assert.Zero(system.IncomingPassengers);Assert.Zero(system.ActiveCarriers);Assert.Zero(registry.Count);
                 }
             }
         }

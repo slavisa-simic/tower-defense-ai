@@ -76,12 +76,13 @@ namespace ShorelineDefense.UI
         }
         private void OnKilled(EnemyController enemy)
         {
-            if (!game.IsPlaying || !enemy.Health.KilledByDefense || enemy.Definition.KillReward <= 0 || !Persistence.SettingsService.Instance.Current.rewardPopups) return;
-            LastRewardText = "+" + enemy.Definition.KillReward + " RSD";
+            int reward = waves.KillRewardFor(enemy.Definition);
+            if (!game.IsPlaying || !enemy.Health.KilledByDefense || reward <= 0 || !Persistence.SettingsService.Instance.Current.rewardPopups) return;
+            LastRewardText = "+" + reward + " RSD";
             foreach (var popup in popups)
                 if (popup.active && !popup.breach && popup.age < .2f && (popup.world - enemy.transform.position).sqrMagnitude < 25)
-                { popup.reward += enemy.Definition.KillReward; popup.label.text = "+" + popup.reward + " RSD"; return; }
-            ShowPopup(enemy.transform.position, LastRewardText, new Color(.72f, .88f, .6f)).reward = enemy.Definition.KillReward;
+                { popup.reward += reward; popup.label.text = "+" + popup.reward + " RSD"; return; }
+            ShowPopup(enemy.transform.position, LastRewardText, new Color(.72f, .88f, .6f)).reward = reward;
         }
         private void OnBreach(Vector3 position, int penalty)
         { if (game.IsPlaying) ShowPopup(position, "+" + penalty + " HOMICIDES", new Color(.95f, .35f, .3f), true); }

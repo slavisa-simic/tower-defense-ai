@@ -21,12 +21,13 @@ namespace ShorelineDefense.Waves
                 Mathf.CeilToInt(Target * (1 + Mathf.Clamp(settings.pressureHysteresis, .05f, .4f)))) - active - incoming);
         public void Reset() { untilEvaluation = elapsed = 0; Mode = AssaultPressure.Normal; Surging = DeploymentPaused = false; }
         public bool Tick(float dt, EndlessWaveSettings settings, int wave, int activeEnemies,
-            int pendingEnemies, int activeBoats, int incomingPassengers, bool bossPendingOrAlive, EventModifiers modifiers = null)
+            int pendingEnemies, int activeBoats, int incomingPassengers, bool bossPendingOrAlive, EventModifiers modifiers = null,
+            float mapPressure = 1, float mapArrival = 1, int extraCarriers = 0)
         {
             elapsed += dt; untilEvaluation -= dt;
             if (untilEvaluation > 0) return false;
             untilEvaluation = Mathf.Clamp(settings.directorEvaluationInterval, .1f, .25f);
-            Target = Mathf.Clamp(Mathf.CeilToInt(settings.PressureTarget(wave) * (modifiers?.pressure ?? 1)), 1, Mathf.Min(400, settings.maximumActiveEnemies));
+            Target = Mathf.Clamp(Mathf.CeilToInt(settings.PressureTarget(wave) * (modifiers?.pressure ?? 1) * Mathf.Clamp(mapPressure, 1, 3)), 1, Mathf.Min(400, settings.maximumActiveEnemies));
             float band = Mathf.Clamp(settings.pressureHysteresis, .05f, .4f);
             // Cargo committed to the river is pressure in flight: do not overfill a full battlefield.
             int committed = activeEnemies + incomingPassengers;
@@ -39,13 +40,13 @@ namespace ShorelineDefense.Waves
             float period = Mathf.Max(1, settings.surgePeriod);
             Surging = settings.assaultSurgesEnabled && wave >= 5 && pendingEnemies > incomingPassengers &&
                 elapsed >= period && elapsed % period < Mathf.Min(period * .5f, Mathf.Max(1, settings.surgeDuration));
-            BoatLimit = Mathf.Clamp(Mathf.CeilToInt(settings.BoatConcurrency(wave) * (modifiers?.boatConcurrency ?? 1)) + (Surging ? settings.surgeExtraBoats : 0), 1, 32);
+            BoatLimit = Mathf.Clamp(Mathf.CeilToInt(settings.BoatConcurrency(wave) * (modifiers?.boatConcurrency ?? 1)) + (Surging ? settings.surgeExtraBoats : 0) + Mathf.Clamp(extraCarriers, 0, 8), 1, 32);
             ArrivalInterval = settings.ArrivalInterval(wave);
             if (bossPendingOrAlive) ArrivalInterval *= .8f;
             if ((Mode == AssaultPressure.Accelerated || Surging) && activeBoats < BoatLimit)
                 ArrivalInterval = Mathf.Min(ArrivalInterval, Mathf.Max(.05f, settings.acceleratedArrivalInterval));
             else if (Mode == AssaultPressure.Throttled) ArrivalInterval *= 1.5f;
-            ArrivalInterval = Mathf.Max(.05f, ArrivalInterval * (modifiers?.boatInterval ?? 1));
+            ArrivalInterval = Mathf.Max(.05f, ArrivalInterval * (modifiers?.boatInterval ?? 1) * Mathf.Clamp(mapArrival, .25f, 1));
             return true;
         }
     }

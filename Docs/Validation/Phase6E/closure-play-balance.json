@@ -1,0 +1,76 @@
+{
+  "status": "completed",
+  "duration": 5.49,
+  "summary": {
+    "total": 9,
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.ArmoredBurnDamageDoesNotDependOnTickSize",
+      "Status": "Passed",
+      "Duration": 1.5175821,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.BalanceLogIncludesCommittedManagementAndCompletionRewardOnlyOnce",
+      "Status": "Passed",
+      "Duration": 0.8297656,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.BroodmotherFirstBroodArrivesEarlyAndStillRespectsTheConcurrentCap",
+      "Status": "Passed",
+      "Duration": 0.436363,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.EarlyCargoAdmissionCannotOvershootWithAFullDriftPod",
+      "Status": "Passed",
+      "Duration": 0.5851528,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.FlameResearchCadenceSurvivesFixedSmallTicks",
+      "Status": "Passed",
+      "Duration": 0.4217586,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.HardenedWireImprovesOnlyLevelIIIAndLeavesTheRouteWalkable",
+      "Status": "Passed",
+      "Duration": 0.4756195,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.LateKillsCreditAndDisplayTheSameReducedReward",
+      "Status": "Passed",
+      "Duration": 0.3708034,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.PrecisionFireSelectsHeavyOverAdvancedLarvaAndActuallyPiercesArmor",
+      "Status": "Passed",
+      "Duration": 0.3779591,
+      "Message": null,
+      "StackTrace": null
+    },
+    {
+      "FullName": "ShorelineDefense.Tests.BalancePlayTests.SpitterHoldsRangeWhileReloadingAndResumesAfterTargetRemoval",
+      "Status": "Passed",
+      "Duration": 0.3822827,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

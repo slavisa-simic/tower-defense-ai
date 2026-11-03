@@ -9,6 +9,8 @@ namespace ShorelineDefense.Economy
         [SerializeField] private EnemyRegistry enemies;
         [SerializeField] private EconomyManager economy;
         [SerializeField] private GameStateController game;
+        private Waves.WaveManager waves;
+        private void Start() => waves = FindFirstObjectByType<Waves.WaveManager>();
         public void Configure(EnemyRegistry registry, EconomyManager money, GameStateController state)
         { enemies = registry; economy = money; game = state; }
         private void OnEnable() { if (enemies != null) enemies.EnemyKilled += OnKilled; }
@@ -16,7 +18,7 @@ namespace ShorelineDefense.Economy
         private void OnKilled(EnemyController enemy)
         {
             if (game != null && game.IsPlaying && enemy.Health.KilledByDefense)
-                economy.AddMoney(enemy.Definition.KillReward);
+                economy.AddMoney(waves != null ? waves.KillRewardFor(enemy.Definition) : enemy.Definition.KillReward);
         }
     }
 }

@@ -27,6 +27,7 @@ namespace ShorelineDefense.Waves
         public event Action EventChanged;
         public Progression.MetaModifierService Meta { get; private set; } = Progression.MetaModifierService.Neutral;
         public int EffectiveCompletionReward => (int)Math.Min(int.MaxValue, Math.Floor(CurrentWave.CompletionReward * Meta.WaveRewardMultiplier));
+        public int KillRewardFor(EnemyDefinition enemy) => endless != null ? endless.KillReward(enemy, PreparationWaveNumber) : enemy.KillReward;
         public void ConfigureMeta(Progression.MetaModifierService modifiers) => Meta = modifiers;
         public EndlessEventDefinition ForecastFollowingEvent()
         {
@@ -41,7 +42,7 @@ namespace ShorelineDefense.Waves
             // An unstarted assault is only a preview. Canceling it must restore the seeded
             // baseline plan as well as live modifiers, or its extra cargo becomes hidden pressure.
             if (generated != null && generator != null && State == WaveState.Preparation && Events?.Current == null) {
-                var replacement = generator.Generate(waveIndex + 1);
+                var replacement = GenerateWave(waveIndex + 1);
                 ReleaseGenerated(); generated = replacement;
             }
             if (generated != null && endless != null) {
@@ -53,6 +54,10 @@ namespace ShorelineDefense.Waves
             EventChanged?.Invoke(); if (generated != null) Changed?.Invoke();
         }
         private void ReleaseEvents() { if (Events != null) { Events.Cancel(); Events.Changed -= NotifyEventChanged; Events = null; } }
+        private WaveDefinition GenerateWave(int number, EventModifiers modifiers = null) => generator.Generate(number, modifiers,
+            landings != null ? landings.CargoWeight(EnemyKind.Spitter, number) : 1,
+            landings != null ? landings.CargoWeight(EnemyKind.Burrower, number) : 1,
+            landings != null ? landings.FormationQuantity(number, endless.enemyQuantityMultiplier) : 0);
         public void ConfigureEndless(EndlessWaveSettings settings)
         { ReleaseEvents(); ReleaseGenerated(); endless = settings; generator = null; waveIndex = 0; EnsureGenerated(); Changed?.Invoke(); }
         public void RestorePreparation(Persistence.RunSaveData data)
@@ -62,7 +67,7 @@ namespace ShorelineDefense.Waves
             generator = new EndlessWaveGenerator(endless, RunSeed);
             Events = new EndlessEventManager(endless.eventSettings, RunSeed); Events.Restore(data.events); Events.Changed += NotifyEventChanged;
             // The announced event is already committed; never call Prepare or credit its supply again.
-            generated = generator.Generate(data.wave, Events.Current?.Definition.modifiers);
+            generated = GenerateWave(data.wave, Events.Current?.Definition.modifiers);
             NotifyEventChanged(); Changed?.Invoke();
         }
         private void EnsureGenerated()
@@ -74,7 +79,7 @@ namespace ShorelineDefense.Waves
             }
             bool boss = endless.bossEncounters != null && endless.bossEncounters.ForWave(waveIndex + 1) != null;
             Events.Prepare(waveIndex + 1, boss, economy);
-            generated = generator.Generate(waveIndex + 1, Events.Current?.Definition.modifiers);
+            generated = GenerateWave(waveIndex + 1, Events.Current?.Definition.modifiers);
         }
 #if UNITY_EDITOR || DEVELOPMENT_BUILD
         public bool ForceEvent(string id)
@@ -82,7 +87,7 @@ namespace ShorelineDefense.Waves
             if (State != WaveState.Preparation || endless?.eventSettings == null) return false;
             var definition = Array.Find(endless.eventSettings.events, e => e != null && e.id == id);
             if (!Events.Force(definition, CurrentWaveNumber, CurrentWave.Encounter != null, economy)) return false;
-            ReleaseGenerated(); generated = generator.Generate(waveIndex + 1, definition.modifiers);
+            ReleaseGenerated(); generated = GenerateWave(waveIndex + 1, definition.modifiers);
             Changed?.Invoke(); return true;
         }
 #endif
@@ -211,7 +216,8 @@ namespace ShorelineDefense.Waves
             }
             if (State != WaveState.Spawning) return;
             if (IsEndless && endless.pressureDirectorEnabled && landings != null && director.Tick(deltaTime, endless, CurrentWaveNumber,
-                registry.Count, pending, landings.ActiveBoats, landings.IncomingPassengers, bossAwaitingDeployment || deployedBoss != null && deployedBoss.IsTargetable, Events?.Modifiers))
+                registry.Count, pending, landings.ActiveBoats, landings.IncomingPassengers, bossAwaitingDeployment || deployedBoss != null && deployedBoss.IsTargetable, Events?.Modifiers,
+                landings.PressureMultiplier, landings.ArrivalMultiplier, landings.ExtraCarriers))
             {
                 landings.ConfigurePressure(director.ArrivalInterval, director.BoatLimit);
                 if (landings.TotalArrivals > 0 && director.Mode == AssaultPressure.Accelerated)

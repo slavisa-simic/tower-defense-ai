@@ -1,0 +1,20 @@
+{
+  "status": "completed",
+  "duration": 2.13,
+  "summary": {
+    "total": 1,
+    "passed": 1,
+    "failed": 0,
+    "skipped": 0,
+    "inconclusive": 0
+  },
+  "results": [
+    {
+      "FullName": "ShorelineDefense.Tests.IndustrialPortPlayTests.AllLandingPathsAndBothBossCargoBreachThroughSharedService",
+      "Status": "Passed",
+      "Duration": 2.0327814,
+      "Message": null,
+      "StackTrace": null
+    }
+  ]
+}

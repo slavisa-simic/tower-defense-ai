@@ -1,0 +1,41 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "command": "console",
+    "parameters": {
+      "level": "warn",
+      "tail": "50"
+    },
+    "result": {
+      "entries": [],
+      "cursor": 86,
+      "session": "dbc659c6b5eb4b7fa73a04881d4c1aac",
+      "returned": 0,
+      "dropped": false,
+      "reset": false,
+      "counts": {
+        "error": 0,
+        "warn": 0,
+        "log": 42
+      },
+      "groundTruth": {
+        "sampledUtc": "2026-11-03T10:02:38.6638351Z",
+        "ageMs": 144,
+        "compilationFailed": false,
+        "compiling": false,
+        "consoleErrors": 0,
+        "consoleWarnings": 0,
+        "consoleLogs": 6,
+        "seeded": true
+      }
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

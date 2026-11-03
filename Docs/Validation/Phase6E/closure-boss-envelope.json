@@ -1,0 +1,27 @@
+{
+  "success": true,
+  "command": "command",
+  "data": {
+    "command": "run_script",
+    "parameters": {
+      "file": "Docs/Validation/Phase6E/Closure.cs",
+      "entry": "Phase6E1Closure.Bosses",
+      "timeout_ms": "600000"
+    },
+    "result": {
+      "diagnostics": [],
+      "compileMs": 3740,
+      "executeMs": 74821,
+      "assemblyName": "PipelineRunScript_Closure_437c600e9d714dbba7863a61b566ce17",
+      "success": true,
+      "result": "Completed boss TTK"
+    },
+    "target": {
+      "host": "127.0.0.1",
+      "port": 7800,
+      "projectPath": "C:\\Users\\Slavisa\\Documents\\ChatGPT\\border-defenders"
+    }
+  },
+  "errors": [],
+  "warnings": []
+}
